@@ -18,7 +18,7 @@
     </Entities>
   </Builder>
   <Health>
-    <Max op="mul">1.4</Max>
+    <Max op="add">10</Max>
   </Health>
   <Loot>
     <xp op="add">1</xp>
