@@ -1,0 +1,17 @@
+{
+	"genericName": "execptional javelineers",
+	"autoResearch": true,
+	"description": "Athenian Pelast.",
+	"requirements": { "civ": "athen" },
+	"icon": "wooden_walls.png",
+	"tooltip": "Infantry Javelineer .3 faster run/walk and +2 range, but -1p/h armor and -5 crush.",
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "add": 0.3 },
+		{ "value": "Attack/Ranged/MaxRange", "add": 2 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": -5 }
+
+	],
+	"affects": ["Infantry Javelineer"]
+}

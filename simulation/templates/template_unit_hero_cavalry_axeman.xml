@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_hero_cavalry">
+  <Attack>
+    <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Hack>36</Hack>
+        <Crush>18</Crush>
+        <Pierce>6</CPierce>
+      </Damage>
+     <MaxRange>5</MaxRange>
+     <PrepareTime>300</PrepareTime>
+     <RepeatTime>1250</RepeatTime>
+     <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Identity>
+    <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>
+    <GenericName>Hero Cavalry Axeman</GenericName>
+  </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">4.5</Hacke>
+        <Pierce op="add">4.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+</Entity>

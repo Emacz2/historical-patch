@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+  <Melee merge="">
+	<Damage>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
+    </Damage>
+  </Melee>
+  <Ranged merge="">
+	<Damage>
+	  <Hack op="mul">1.03</Hack>
+      <Pierce op="mul">1.03</Pierce>
+      <Crush op="mul">1.03</Crush>
+    </Damage>
+   <MaxRange op="add">2.0</MaxRange>
+  </Ranged>
+</Attack>
+  <Cost>
+    <BuildTime op="mul">1.05</BuildTime>
+  </Cost>
+  <Identity>
+    <Classes datatype="tokens">Greek Olympian</Classes>
+  </Identity>
+ <UnitMotion>
+    <WalkSpeed op="mul">1.02</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
+  </UnitMotion>
+</Entity>

@@ -1,0 +1,10 @@
+{
+	"type": "global",
+	"affects": ["Swordsman"],
+	"affectedPlayers": ["MutualAlly"],
+	"modifications": [
+		{ "value": "Cost/BuildTime", "multiply": 0.9 }
+	],
+	"auraName": "Conscription",
+	"auraDescription": "Swordsman −10% training time."
+}

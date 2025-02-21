@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_cavalry">
+  <Identity>
+    <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
+    <GenericName>Ranged Cavalry</GenericName>
+  </Identity>
+  <UnitAI>
+    <Formations datatype="tokens">
+      special/formations/skirmish
+    </Formations>
+  </UnitAI>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>1.0</Hack>
+        <Pierce>1.0</Pierce>
+        <Crush>10</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+</Entity>

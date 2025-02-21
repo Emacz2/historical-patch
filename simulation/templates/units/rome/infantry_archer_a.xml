@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_ranged_archer">
+<Cost>
+    <Resources>
+      <metal>15</metal>
+      <food>50</food>
+      <wood>50</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Civ>rome</Civ>
+    <Lang>latin</Lang>
+    <SelectionGroupName>units/rome/infantry_archer_b</SelectionGroupName>
+    <GenericName>Roman Archer</GenericName>
+    <Icon>units/rome/rome_infantry_archer.png</Icon>
+     <Rank>Advanced</Rank>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+    <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/romans/infantry_archer.xml</Actor>
+  </VisualActor>
+</Entity>

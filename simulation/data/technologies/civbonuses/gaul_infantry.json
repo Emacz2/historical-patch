@@ -1,0 +1,17 @@
+{
+	"genericName": "Woad Warriors",
+	"autoResearch": true,
+	"description": "Gauls paint their bodies with Woad, which produces a blue color and gives them a fiercesome appearance in battle.",
+	"icon": "woad_warriors.png",
+	"tooltip": "All Citizen Infantry Units +5% movement speed and 15 vision, but -1hack and 1.5pierce resistance.",
+	"requirements": { "civ": "gaul" },
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 },
+		{ "value": "Vision/Range", "add": 15 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1.5 }
+
+	],
+	"affects": ["Citizen Infantry"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

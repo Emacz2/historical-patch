@@ -1,0 +1,22 @@
+{
+	"genericName": "Unlock pikeman",
+	"description": "",
+	"cost": {
+		"food": 180,
+		"wood": 180,
+		"metal": 40
+		
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_village" },
+			{ "civ": "kush" },
+			{ "civ": "sele" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in village Phase.",
+	"icon": "helmet_corinthian_bronze_old.png",
+	"researchTime": 25,
+	"tooltip": "Unlock the ability to train pikeman from baracks.",
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

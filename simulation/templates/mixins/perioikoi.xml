@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+  <Melee merge="">
+  <PrepareTime op="add">500</PrepareTime>
+  <RepeatTime op="add">400</RepeatTime>
+  </Melee>
+  <Ranged merge="">
+  <PrepareTime op="add">500</PrepareTime>
+  <RepeatTime op="add">500</RepeatTime>
+</Ranged>
+</Attack>
+  <Cost>
+    <BuildTime op="mul">0.85</BuildTime>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Perioikoi</VisibleClasses>
+  </Identity>
+</Entity>

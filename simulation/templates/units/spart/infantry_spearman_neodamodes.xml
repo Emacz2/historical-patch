@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="hoplite|template_unit_infantry_melee_spearman">
+<Auras datatype="tokens">
+    units/spartan_phalanx
+  </Auras>
+  <Builder>
+    <Entities datatype="tokens">
+      structures/spart/gerousia
+      structures/spart/syssiton
+      -structures/{civ}/wallset_stone
+      -structures/{civ}/barracks
+      -structures/{civ}/stable
+    </Entities>
+  </Builder>
+  <Cost>
+    <BuildTime>12</BuildTime>
+    <Resources>
+      <food>30</food>
+      <wood>30</wood>
+      <metal>15</metal>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/spart/infantry_spearman_neodamodes</SelectionGroupName>
+    <GenericName>Neodamodes Hoplite</GenericName>
+    <SpecificName>Neodamōdeis</SpecificName>
+    <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
+    <Rank>Advanced</Rank>
+    <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+  <Loot>
+    <food>3</food>
+    <wood>0</wood>
+    <metal>2</metal>
+  </Loot>
+  <ResourceGatherer disable=""/>
+  <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/spartans/infantry_spearman_neodamodes.xml</Actor>
+  </VisualActor>
+</Entity>

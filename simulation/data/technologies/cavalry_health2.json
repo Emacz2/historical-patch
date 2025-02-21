@@ -1,0 +1,18 @@
+{
+	"genericName": "Horse Breeding",
+	"description": "Selectively breed better war horses.",
+	"cost": {
+		"food": 400,
+		"metal": 150
+	},
+	"requirements": { "tech": "phase_city" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "horse_trainer.png",
+	"researchTime": 35,
+	"tooltip": "Non citizen cav gain 25 health.",
+	"modifications": [
+		{ "value": "Health/Max", "add": 25 }
+	],
+	"affects": ["Cavalry !Citizen"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_structure_military_embassy">
+  <Auras datatype="tokens"> structures/xp_trickle </Auras>
+  <Cost>
+    <Resources>
+      <stone>50</stone>
+      <metal>100</metal>
+      <wood>100</wood>
+    </Resources>
+  <BuildTime>120</BuildTime>
+  </Cost>
+  <Health>
+    <Max>1200</Max>
+  </Health>
+   <Population>
+    <Bonus>5</Bonus>
+  </Population>
+  <Identity>
+    <Civ>cart</Civ>
+    <SpecificName>Italic Village Embassy</SpecificName>
+    <Tooltip>Train Italic Mercenaries.</Tooltip>
+    <Classes datatype="tokens">CivSpecific</Classes>
+    <VisibleClasses datatype="tokens">Village</VisibleClasses>
+    <Icon>structures/embassy_italic.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">-phase_town phase_village</Techs>
+     </Requirements>
+  </Identity>
+  <Loot>
+    <metal>40</metal>
+  </Loot>
+  <Obstruction>
+    <Static width="11.0" depth="14.0"/>
+  </Obstruction>
+  <Trainer>
+    <Entities datatype="tokens">
+      units/{native}/infantry_swordsman_ital_b
+      units/{native}/cavalry_spearman_ital_b
+    </Entities>
+  </Trainer>
+  <VisualActor>
+    <Actor>structures/carthaginians/embassy_italic.xml</Actor>
+  </VisualActor>
+</Entity>

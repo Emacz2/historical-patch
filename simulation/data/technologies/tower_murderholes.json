@@ -1,0 +1,19 @@
+{
+	"genericName": "Murder Holes",
+	"description": "Murder holes allow hitting enemies at the foot of the tower.Reinforce base of Fotress.",
+	"cost": {
+		"wood": 200,
+		"stone": 300
+	},
+	"requirements": { "tech": "phase_city" },
+	"requirementsTooltip": "Unlocked in City Phase.",
+	"icon": "murder_holes.png",
+	"researchTime": 40,
+	"tooltip": "Fortresses, Sentry Towers, and Stone Towers have 0 minimum attack range. Fortress gains 5 crush resistance.",
+	"modifications": [
+		{ "value": "Attack/Ranged/MinRange", "replace": 0 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 5, "affects": "Fortress" }
+	],
+	"affects": ["SentryTower", "StoneTower", "GreatTower","Fortress"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee_axeman">
+  <Cost>
+    <Resources>
+    <wood op="add">-5</wood>
+    <metal op="add">20</metal>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Rank>Elite</Rank>
+    <Civ>brit</Civ>
+    <SelectionGroupName>units/brit/infantry_axeman</SelectionGroupName>
+    <GenericName>Celtic Axeman</GenericName>
+    <SpecificName>Catucos</SpecificName>
+    <Icon>units/brit/brit_infantry_axe.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+  <Promotion disable=""/>
+ <VisualActor>
+    <Actor>units/brits/infantry_axeman.xml</Actor>
+  </VisualActor>
+</Entity>

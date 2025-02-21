@@ -1,0 +1,45 @@
+{
+	"genericName": "Town Phase",
+	"specificName": {
+		"spart": "Kōmopolis"
+	},
+	"description": "Advances from a small village to a bustling town, ready to expand rapidly.",
+	"cost": {
+		"food": 500,
+		"wood": 550,
+		"stone": 100,
+		"metal": 100
+	},
+
+	"requirements": {
+		"entity": {
+			"class": "Village",
+			"number": 6
+		}
+	},
+
+	"requirementsTooltip": "Requires six Village Structures.",
+	"supersedes": "phase_village",
+	"replaces": ["phase_town"],
+	"icon": "town_phase.png",
+	"researchTime": 30,
+	"tooltip": "Advance to town Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +1 capture points regeneration rate for garrisoned units.  Civ Center 25% more garrison capacity and 5 more range. Spartiates cost 15 more metal/wood and take 5% longer but gain 10% Hack/Pierce DMG.  All Infantry 0.5H/P resistance. ",
+	"modifications": [
+		{ "value": "Capturable/GarrisonRegenRate", "add": 0.5, "affects": "Structure" },
+		{ "value": "TerritoryInfluence/Radius", "multiply": 1.25, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "multiply": 1.25, "affects": "CivCentre" },
+        { "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Cost/Resources/metal", "add": 15, "affects": "Champion Spearman"},
+		{ "value": "Cost/Resources/wood", "add": 15, "affects": "Champion Spearman"},
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman"},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.10, "affects": "Champion Spearman" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.10, "affects": "Champion Spearman" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects":  "Champion Spearman"},
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Champion Spearman"}
+
+	],
+	"soundComplete": "interface/alarm/alarm_phase.xml"
+}

@@ -1,0 +1,14 @@
+{
+	"type": "range",
+	"radius": 45,
+	"affects": ["Soldier"],
+	"affectedPlayers": ["Enemy"],
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": -1 }
+	
+	],
+	"auraName": "Guerrilla Chief",
+	"auraDescription": "Enemy soldiers -1 of each resistance"
+}

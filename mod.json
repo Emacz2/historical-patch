@@ -1,0 +1,8 @@
+{
+	"name": "historical-patch",
+	"version": "0.1.0",
+	"label": "historical-patch",
+	"url": "https://github.com/Emacz2/Historical-rebalance-patch", 
+	"description": "This patch is an effort to make civs a little historically more accurate, promoting different styles of play.",
+	"dependencies": [ "0ad=0.27.0" ]
+}

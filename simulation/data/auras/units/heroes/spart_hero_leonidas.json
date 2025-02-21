@@ -1,0 +1,18 @@
+{
+	"type": "range",
+	"radius": 30,
+	"affects": ["Infantry"],
+	"affectedPlayers": ["Ally"],
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 5 }
+		
+	],
+	"auraName": "Last Stand",
+	"auraDescription": "Own and allied infantry +10% melee attack, all Infantry +1.5Hack/Pierce resistance and +5 Crush.",
+	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
+}

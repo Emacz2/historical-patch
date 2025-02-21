@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_cavalry_melee_swordsman">
+  <Attack>
+    <Melee>
+      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+      <Damage>
+        <Hack>13</Hack>
+	<Pierce>6</Pierce>
+      </Damage>
+      <MaxRange>3</MaxRange>
+      <PrepareTime>525</PrepareTime>
+      <RepeatTime>1200</RepeatTime>
+      <Bonuses>
+        <BonusMelee>
+          <Classes>Ranged Infantry</Classes>
+          <Multiplier>1.25</Multiplier>
+        </BonusMelee>
+      </Bonuses>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Cost>
+    <Resources>
+      <wood>25</wood>
+      <metal>25</metal>
+    </Resources>
+  </Cost>
+<Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Identity>
+    <GenericName>Cavalry Heavy Swordsman</GenericName>
+    <VisibleClasses datatype="tokens">Swordsman</VisibleClasses>
+    <Tooltip>Counters: 1.25× vs Ranged Infantry.</Tooltip>
+  </Identity>
+  <Loot>
+    <wood>4</wood>
+    <metal>1</metal>
+  </Loot>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.94</WalkSpeed>
+    <RunMultiplier>0.9</RunMultiplier>
+    <Acceleration op="mul">0.94</Acceleration>
+  </UnitMotion>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+</Entity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="perioikoi|template_unit_cavalry_melee_spearman_hunt">
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/spart/cavalry_spearman_b</SelectionGroupName>
+    <GenericName>Greek Hunting Spear Cavalry</GenericName>
+    <SpecificName>Hippeús Symmakhikós</SpecificName>
+    <Icon>units/spart/cavalry_spearman.png</Icon>
+  </Identity>
+  <Promotion>
+    <Entity>units/spart/cavalry_spearman_a</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/spartans/cavalry_spearman_b_m.xml</Actor>
+  </VisualActor>
+</Entity>

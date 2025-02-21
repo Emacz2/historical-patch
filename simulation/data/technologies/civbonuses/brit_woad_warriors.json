@@ -1,0 +1,20 @@
+{
+	"genericName": "Woad Warriors",
+	"autoResearch": true,
+	"description": "Britons paint their bodies with Woad, which produces a blue color and gives them a fiercesome appearance in battle.",
+	"icon": "woad_warriors.png",
+	"tooltip": "All Citizen Infantry Units +5% movement speed and gain +2 loot taking, but -1 hack and -1.5 pierce resistance.",
+	"requirements": { "civ": "brit" },
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 },
+		{ "value": "Looter/Resource/metal", "add": 2 },
+		{ "value": "Looter/Resource/stone", "add": 2 },
+		{ "value": "Looter/Resource/food", "add": 2 },
+		{ "value": "Looter/Resource/wood", "add": 2 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1.5 }
+
+	],
+	"affects": ["Citizen Infantry"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
