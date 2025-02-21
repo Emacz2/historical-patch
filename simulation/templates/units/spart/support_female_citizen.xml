@@ -11,8 +11,10 @@
        <Entities datatype="tokens">
       structures/spart/gerousia
       structures/spart/syssiton
+      structures/spart/camp
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
+      -structures/{civ}/stable
     </Entities>
   </Builder>
   <Health>
