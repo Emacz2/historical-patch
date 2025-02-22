@@ -11,6 +11,14 @@
   <Obstruction>
     <Static width="17.5" depth="30.0"/>
   </Obstruction>
+   <Upgrade>
+   <Plundered_temple>
+      <Entity>structures/sele/temple_plundered</Entity>
+      <Tooltip>Start plundering the temple. Allows training of cartaphracts.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>2</Time>
+   </Plundered_temple>
+  </Upgrade>
   <VisualActor>
     <Actor>structures/seleucids/temple.xml</Actor>
     <FoundationActor>structures/fndn_5x8.xml</FoundationActor>

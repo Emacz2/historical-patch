@@ -22,7 +22,7 @@
     <metal op="add">5</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
     <RunMultiplier>1.6</RunMultiplier>
   </UnitMotion>
   <Promotion disable=""/>

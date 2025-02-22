@@ -54,6 +54,7 @@
       tower_range
       tower_murderholes
       tower_health
+      tower_vision
     </Technologies>
   </Researcher>
   <TerritoryInfluence>
