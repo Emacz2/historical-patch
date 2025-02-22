@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_elephant_archer">
+ <Attack>
+    <Ranged>
+      <AttackName>Bow</AttackName>
+      <Damage>
+        <Pierce>7.5</Pierce>
+      </Damage>
+      <MaxRange>61</MaxRange>
+      <PrepareTime>750</PrepareTime>
+      <RepeatTime>1315</RepeatTime>
+      <Projectile>
+        <Spread>2</Spread>
+        <FriendlyFire>false</FriendlyFire>
+        <LaunchPoint y="9"/>
+      </Projectile>
+      <PreferredClasses datatype="tokens">Human</PreferredClasses>
+    </Ranged>
+  </Attack>
+  <BuildingAI>
+    <DefaultArrowCount>3</DefaultArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <MaxArrowCount>3</MaxArrowCount>
+    <GarrisonArrowClasses>Infantry</GarrisonArrowClasses>
+  </BuildingAI>
+  <Cost>
+    <Population>2</Population>
+    <BuildTime>20</BuildTime>
+    <Resources>
+      <food>150</food>
+      <wood>100</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>maur</Civ>
     <GenericName>Elephant Archer</GenericName>

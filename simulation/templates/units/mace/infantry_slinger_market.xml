@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="greek_olympian|merc_inf_market|template_unit_infantry_ranged_archer">
+   <Identity>
+    <Civ>mace</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/mace/infantry_slinger_b</SelectionGroupName>
+    <GenericName>Rhodian Slinger</GenericName>
+    <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
+    <Icon>units/mace/infantry_slinger.png</Icon>
+  </Identity>
+  <Promotion disable=""/>
+  <VisualActor>
+     <Actor>units/macedonians/infantry_slinger_b.xml</Actor>
+  </VisualActor>
+</Entity>
