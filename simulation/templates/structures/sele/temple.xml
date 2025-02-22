@@ -11,6 +11,9 @@
   <Obstruction>
     <Static width="17.5" depth="30.0"/>
   </Obstruction>
+    <Population>
+    <Bonus>5</Bonus>
+  </Population>
    <Upgrade>
    <Plundered_temple>
       <Entity>structures/sele/temple_plundered</Entity>
