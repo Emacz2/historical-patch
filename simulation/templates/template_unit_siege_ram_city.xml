@@ -4,21 +4,21 @@
     <Melee>
       <AttackName>Ram</AttackName>
       <Damage>
-        <Crush>70</Crush>
+        <Crush>120</Crush>
       </Damage>
       <MaxRange>6.5</MaxRange>
       <PrepareTime>1000</PrepareTime>
-      <RepeatTime>2000</RepeatTime>
+      <RepeatTime>1500</RepeatTime>
       <PreferredClasses datatype="tokens">Structure</PreferredClasses>
       <RestrictedClasses datatype="tokens">Field Organic</RestrictedClasses>
     </Melee>
   </Attack>
   <Cost>
-    <BuildTime>24</BuildTime>
+    <BuildTime>30</BuildTime>
     <Population>2</Population>
     <Resources>
       <wood>250</wood>
-      <metal>100</metal>
+      <metal>150</metal>
     </Resources>
   </Cost>
   <Footprint replace="">
@@ -26,7 +26,7 @@
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>6</Max>
+    <Max>8</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Support Infantry</List>
@@ -34,25 +34,25 @@
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
   <Health>
-    <Max>200</Max>
+    <Max>400</Max>
   </Health>
   <Identity>
     <GenericName>Battering Ram</GenericName>
     <Tooltip>Cannot attack Fields or Organic Units.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Ram</VisibleClasses>
      <Requirements>
-      <Techs datatype="tokens">-phase_city phase_town</Techs>
+      <Techs datatype="tokens">-phase_town phase_city</Techs>
     </Requirements>
   </Identity>
   <Loot>
-    <xp>200</xp>
-    <wood>60</wood>
-    <metal>30</metal>
+    <xp>250</xp>
+    <wood>75</wood>
+    <metal>35</metal>
   </Loot>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>5</Hack>
+        <Hack>7.5</Hack>
         <Pierce>25</Pierce>
 	      <Crush>5</Crush>
       </Damage>
@@ -68,8 +68,8 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">0.55</WalkSpeed>
-    <Acceleration op="mul">0.55</Acceleration>
+    <WalkSpeed op="mul">0.65</WalkSpeed>
+    <Acceleration op="mul">0.65</Acceleration>
   </UnitMotion>
   <Vision>
     <Range>80</Range>

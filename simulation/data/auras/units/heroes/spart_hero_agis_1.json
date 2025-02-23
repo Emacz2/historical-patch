@@ -4,7 +4,7 @@
 	"modifications": [
 		{
 			"value": "Cost/BuildTime",
-			"multiply": 0.80
+			"multiply": 0.75
 		},
 		{
 			"value": "Cost/Resources/metal",
@@ -12,5 +12,5 @@
 		}
 	],
 	"auraName": "Great Revolt",
-	"auraDescription": "Own and allied Soldiers −40% metal cost, and -20% training time."
+	"auraDescription": "Own and allied Soldiers −40% metal cost, and -25% training time."
 }

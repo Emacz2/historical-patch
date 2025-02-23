@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_siege_ram_city">
+  <Identity>
+    <Civ>spart</Civ>
+    <SpecificName>Krios</SpecificName>
+    <Icon>units/spart/siege_ram.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
+  </Identity>
+  <VisualActor>
+    <Actor>structures/spartans/siege_ram.xml</Actor>
+  </VisualActor>
+</Entity>

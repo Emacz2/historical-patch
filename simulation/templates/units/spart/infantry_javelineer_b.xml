@@ -20,6 +20,7 @@
   </Identity>
   <Promotion>
     <Entity>units/spart/infantry_javelineer_a</Entity>
+    <RequiredXp>300</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_javelinist_b.xml</Actor>

@@ -17,8 +17,8 @@
     <BuildTime>24</BuildTime>
     <Population>2</Population>
     <Resources>
-      <wood>250</wood>
-      <metal>100</metal>
+      <wood>200</wood>
+      <metal>50</metal>
     </Resources>
   </Cost>
   <Footprint replace="">
@@ -26,7 +26,7 @@
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>6</Max>
+    <Max>5</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Support Infantry</List>
@@ -45,9 +45,9 @@
     </Requirements>
   </Identity>
   <Loot>
-    <xp>200</xp>
-    <wood>60</wood>
-    <metal>30</metal>
+    <xp>150</xp>
+    <wood>45</wood>
+    <metal>20</metal>
   </Loot>
   <Resistance>
     <Entity>
