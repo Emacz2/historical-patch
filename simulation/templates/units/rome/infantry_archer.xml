@@ -2,7 +2,7 @@
 <Entity parent="template_unit_infantry_ranged_archer">
 <Cost>
     <Resources>
-      <metal>15</metal>
+      <metal>10</metal>
       <food>50</food>
       <wood>50</wood>
     </Resources>
@@ -10,7 +10,7 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <SelectionGroupName>units/rome/infantry_archer_b</SelectionGroupName>
+    <SelectionGroupName>units/rome/infantry_archer</SelectionGroupName>
     <GenericName>Roman Archer</GenericName>
     <Icon>units/rome/rome_infantry_archer.png</Icon>
      <Rank>Advanced</Rank>
