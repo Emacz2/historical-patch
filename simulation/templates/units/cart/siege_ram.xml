@@ -4,6 +4,21 @@
     <Civ>cart</Civ>
     <Icon>units/iber/siege_ram.png</Icon>
   </Identity>
+  <Upgrade>
+      <ram_city>
+      <Entity>units/cart/siege_ram_city</Entity>
+      <Tooltip>upgrade to city ram.</Tooltip>
+        <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
+      <Cost>
+        <wood>50</wood>
+        <metal>100</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </ram_city>
+  </Upgrade>
   <VisualActor>
     <Actor>structures/iberians/siege_ram.xml</Actor>
   </VisualActor>
