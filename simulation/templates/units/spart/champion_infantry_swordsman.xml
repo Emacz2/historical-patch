@@ -1,28 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="greek_olympian|template_unit_champion_infantry_swordsman_light">
+<Entity parent="greek_olympian|template_unit_infantry_melee_swordsman">
+<Builder>
+    <Entities datatype="tokens">
+      structures/spart/gerousia
+      structures/spart/syssiton
+      structures/spart/camp
+      -structures/{civ}/wallset_stone
+      -structures/{civ}/barracks
+      -structures/{civ}/stable
+    </Entities>
+  </Builder>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Skiritai Commando</GenericName>
     <SpecificName>Ékdromos Skirítēs</SpecificName>
     <Icon>units/spart/champion_infantry_sword.png</Icon>
+    <Rank>Elite</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+   <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="add">3</Hack>
+        <Pierce op="add">1.5</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-2</Hack>
-        <Pierce op="add">-3</Pierce>
+        <Hack op="add">-4</Hack>
+        <Pierce op="add">-4.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
+   <Health>
+    <Max op="add">25</Max>
+  </Health>
   <Loot>
     <metal op="add">5</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">1.1</WalkSpeed>
+    <WalkSpeed op="mul">1.25</WalkSpeed>
     <RunMultiplier>1.6</RunMultiplier>
   </UnitMotion>
   <Promotion disable=""/>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+<Builder>
+    <Rate>1.25</Rate>
+</Builder>
+ <Cost>
+    <BuildTime>10</BuildTime>
+    <Resources>
+      <food op="add">10</food>
+      <wood op="add">15</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Neodamodes</VisibleClasses>
+    <Rank>Advanced</Rank>
+  </Identity>
+</Entity>

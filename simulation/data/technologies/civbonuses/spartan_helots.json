@@ -4,14 +4,17 @@
 	"description": "The Helots where Spartans slaves. They were forced to do manual labor while the Spartiates trained.  Yet they were still forced to fight despite having no training and no armor",
 	"requirements": { "civ": "spart" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Helot units 15% faster gathering, +0.3 movement speed and 15% less train time but, attack 20% slower, have no armor and ranged units 25% less accurate.",
+	"tooltip": "Helot units 15% faster gathering 20% less train time and 10% less resource cost but, attack 20% slower, 10% less dmg, ranged units 25% less accurate and have no armor and only 80 health.",
 	"modifications": [
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.15},
 		{ "value": "Attack/Ranged/Spread", "multiply": 1.25 },
-		{ "value": "Resistance/Entity/Damage/Hack", "replace": 0},
-		{ "value": "Resistance/Entity/Damage/Pierce", "replace": 0},
-		{ "value": "Resistance/Entity/Damage/Crush", "replace": 0},
-		{ "value": "UnitMotion/WalkSpeed", "add": 0.3}
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 0.9 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.9},
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 0.9 },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 0.9 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.9},
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.9 }
+		
 
 	],
 	"affects": ["Helot"]

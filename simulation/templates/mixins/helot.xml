@@ -10,9 +10,25 @@
   <RepeatTime op="add">500</RepeatTime>
 </Ranged>
 </Attack>
-  <Cost>
-    <BuildTime op="mul">0.85</BuildTime>
+ <Cost>
+    <BuildTime>8</BuildTime>
+    <Resources>
+      <food>45</food>
+      <wood>45</wood>
+    </Resources>
   </Cost>
+  <Health>
+    <Max>80</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0</Hack>
+        <Pierce>0</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Helot</VisibleClasses>
   </Identity>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="perioikoi|template_unit_infantry_ranged_javelineer">
+<Entity parent="helot|template_unit_infantry_ranged_javelineer">
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -18,11 +18,8 @@
     <SpecificName>Akontistḗs Heílōs</SpecificName>
     <Icon>units/spart/infantry_javelinist.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/spart/infantry_javelineer_a</Entity>
-    <RequiredXp>300</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_javelinist_b.xml</Actor>
+    <Actor>units/spartans/helot_jav.xml</Actor>
   </VisualActor>
 </Entity>

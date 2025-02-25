@@ -86,8 +86,8 @@
     <Entities datatype="tokens">
       units/{civ}/cavalry_spearman_b
       units/{civ}/infantry_spearman_b
-      units/{civ}/infantry_javelineer_b
-      units/{civ}/infantry_archer_b
+      units/{civ}/helot_javelineer
+      units/{civ}/helot_archer
     </Entities>
   </Trainer>
   <Vision>

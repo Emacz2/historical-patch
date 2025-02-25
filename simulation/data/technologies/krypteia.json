@@ -14,13 +14,16 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "skull_swords.png",
 	"researchTime": 40,
-	"tooltip": "Champions and heroes +10% melee/ranged attack damage, but all infantry 10% more train time.",
+	"tooltip": "Champions +10% melee/ranged attack damage, heroes 25% melee attack but all infantry 10% more train time and helots 50% less health.",
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Infantry !Citizen" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Infantry !Citizen" },
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1, "affects": "Infantry !Citizen" },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1, "affects": "Infantry !Citizen" },
-		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Infantry" }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.25, "affects": "Hero" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.25, "affects": "Hero" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Infantry" },
+		{ "value": "Health/Max", "multiply": 0.5, "affects": "Helot" }
 	],
     "soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

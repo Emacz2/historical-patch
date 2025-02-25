@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="neodamodes|hoplite|template_unit_infantry_melee_spearman">
-<Auras datatype="tokens">
-    units/spartan_phalanx
-  </Auras>
+<Entity parent="neodamodes|template_unit_infantry_ranged_javelineer">
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -16,14 +13,11 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <SelectionGroupName>units/spart/infantry_spearman_neodamodes</SelectionGroupName>
-    <GenericName>Neodamodes Hoplite</GenericName>
+    <SelectionGroupName>units/spart/neodamodes_jav</SelectionGroupName>
+    <GenericName>Neodamodes Skirmisher</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>
     <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <food>3</food>
@@ -33,6 +27,6 @@
   <ResourceGatherer disable=""/>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_spearman_neodamodes.xml</Actor>
+    <Actor>units/spartans/jav_neodamodes.xml</Actor>
   </VisualActor>
 </Entity>
