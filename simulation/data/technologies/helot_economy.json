@@ -16,12 +16,11 @@
 	"researchTime": 40,
 	"tooltip": "Helots +100% grain gather rate, +50% wood/metal/stone but champions take 25% longer to train.",
 	"modifications": [
-		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 2 },
-		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.5 },
-		{ "value": "ResourceGatherer/Rates/wood.tree", "multiply": 1.5 },
-		{ "value": "ResourceGatherer/Rates/stone.rock", "multiply": 1.5 },
+		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 2, "affects": "Helot" },
+		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.5, "affects": "Helot" },
+		{ "value": "ResourceGatherer/Rates/wood.tree", "multiply": 1.5, "affects": "Helot" },
+		{ "value": "ResourceGatherer/Rates/stone.rock", "multiply": 1.5, "affects": "Helot" },
 		{ "value": "Cost/BuildTime", "multiply": 1.25, "affects": "Champion" }
 	],
-	"affects": ["Helot"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
