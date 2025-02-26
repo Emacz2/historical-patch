@@ -40,9 +40,6 @@
     <GenericName>Battering Ram</GenericName>
     <Tooltip>Cannot attack Fields or Organic Units.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Ram</VisibleClasses>
-     <Requirements>
-      <Techs datatype="tokens">-phase_city phase_town</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <xp>150</xp>

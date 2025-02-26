@@ -16,7 +16,7 @@
     <SelectionGroupName>units/spart/neodamodes_jav</SelectionGroupName>
     <GenericName>Neodamodes Skirmisher</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>
-    <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
+    <Icon>units/athen/infantry_jav.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
   </Identity>
   <Loot>

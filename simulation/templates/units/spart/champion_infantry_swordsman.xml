@@ -10,7 +10,27 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
-  <Identity>
+   <Attack>
+    <Melee>
+      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+      <Damage>
+        <Hack op="add">3.0</Hack>
+	      <Pierce op="add">1.5</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-3.5</Hack>
+        <Pierce op="add">-4.0</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+   <Health>
+    <Max op="add">25</Max>
+  </Health>
+   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Skiritai Commando</GenericName>
@@ -21,25 +41,6 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-   <Attack>
-    <Melee>
-      <Damage>
-        <Hack op="add">3</Hack>
-        <Pierce op="add">1.5</Pierce>
-      </Damage>
-    </Melee>
-  </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-4</Hack>
-        <Pierce op="add">-4.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
-   <Health>
-    <Max op="add">25</Max>
-  </Health>
   <Loot>
     <metal op="add">5</metal>
   </Loot>
