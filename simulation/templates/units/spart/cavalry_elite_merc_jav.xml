@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_cav_market|template_unit_cavalry_melee_swordsman">
+<Entity parent="merc_cav_market|template_unit_cavalry_ranged_javelineer">
 <Attack>
-     <Melee>
-      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+    <Ranged>
+      <AttackName>Javelin</AttackName>
       <Damage>
         <Hack op="add">2</Hack>
-	      <Pierce op="add">1</Pierce>
+	      <Pierce op="add">2</Pierce>
       </Damage>
-    </Melee>
+    </Ranged>
   </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-3.5</Hack>
-        <Pierce op="add">-4.0</Pierce>
+        <Hack op="add">-1.5</Hack>
+        <Pierce op="add">-1.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -37,14 +37,14 @@
     <ResourceGatherer disable=""/>
  <Promotion disable=""/>
  <Upgrade>
-    <Elite_jav>
-      <Entity>units/spart/cavalry_elite_merc_jav</Entity>
-      <Tooltip>Switch to Jav.</Tooltip>
+    <Elite_sword>
+      <Entity>units/spart/cavalry_elite_merc</Entity>
+      <Tooltip>Switch to sword.</Tooltip>
       <Variant>upgrading</Variant>
-      <Time>10</Time>
-    </Elite_jav>
+      <Time>2</Time>
+    </Elite_sword>
   </Upgrade>
   <VisualActor>
-    <Actor>units/spartans/cav_elite_sword.xml</Actor>
+    <Actor>units/spartans/cav_elite_jav.xml</Actor>
   </VisualActor>
 </Entity>
