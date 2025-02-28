@@ -34,6 +34,7 @@
    <UnitMotion>
     <WalkSpeed op="mul">1.15</WalkSpeed>
   </UnitMotion>
+    <ResourceGatherer disable=""/>
  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/cavalry_melee_elite.xml</Actor>
