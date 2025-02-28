@@ -7,4 +7,11 @@
   <VisualActor>
     <Actor>structures/spartans/market.xml</Actor>
   </VisualActor>
+  <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/support_trader
+      units/{civ}/cavalry_elite_merc
+    </Entities>
+  </Trainer>
 </Entity>

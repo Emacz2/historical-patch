@@ -14,8 +14,8 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack op="add">3.0</Hack>
-	      <Pierce op="add">1.5</Pierce>
+        <Hack op="add">2</Hack>
+	      <Pierce op="add">1</Pierce>
       </Damage>
     </Melee>
   </Attack>
@@ -45,7 +45,7 @@
     <metal op="add">5</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <WalkSpeed op="mul">1.3</WalkSpeed>
     <RunMultiplier>1.6</RunMultiplier>
   </UnitMotion>
   <Promotion disable=""/>
