@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_cav_market|template_unit_cavalry_ranged_javelineer">
-<Attack>
+<Entity parent="merc_cav_market|template_unit_champion_cavalry_javelineer">
+ <Attack>
     <Ranged>
-      <AttackName>Javelin</AttackName>
-      <Damage>
-        <Hack op="add">2</Hack>
-	      <Pierce op="add">2</Pierce>
-      </Damage>
+      <MaxRange>32</MaxRange>
+      <PrepareTime>10000</PrepareTime>
+      <RepeatTime>500</RepeatTime>
+      <Projectile>
+        <Speed>350</Speed>
+        <Spread>3</Spread>
+        <Gravity>35</Gravity>
+        <FriendlyFire>false</FriendlyFire>
+        <LaunchPoint y="5"/>
+      </Projectile>
+      <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-1.5</Hack>
-        <Pierce op="add">-1.5</Pierce>
+        <Hack op="add">-2.5</Hack>
+        <Pierce op="add">-2.5</Pierce>
+        <Crush op="add">-5</Crush>
       </Damage>
     </Entity>
   </Resistance>
-   <Health>
-    <Max op="add">25</Max>
+  <Health>
+    <Max op="add">-50</Max>
   </Health>
   <Identity>
     <Civ>spart</Civ>
