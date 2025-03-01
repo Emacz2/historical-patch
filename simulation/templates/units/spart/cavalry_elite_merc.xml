@@ -18,7 +18,7 @@
     </Entity>
   </Resistance>
    <Health>
-    <Max op="add">25</Max>
+    <Max op="add">50</Max>
   </Health>
   <Identity>
     <Civ>spart</Civ>
@@ -41,7 +41,7 @@
       <Entity>units/spart/cavalry_elite_merc_jav</Entity>
       <Tooltip>Switch to Jav.</Tooltip>
       <Variant>upgrading</Variant>
-      <Time>10</Time>
+      <Time>2</Time>
     </Elite_jav>
   </Upgrade>
   <VisualActor>

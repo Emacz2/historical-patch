@@ -4,7 +4,7 @@
     <Ranged>
       <MaxRange>32</MaxRange>
       <PrepareTime>10000</PrepareTime>
-      <RepeatTime>500</RepeatTime>
+      <RepeatTime>1000</RepeatTime>
       <Projectile>
         <Speed>350</Speed>
         <Spread>3</Spread>
@@ -25,7 +25,7 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max op="add">-50</Max>
+    <Max op="add">-25</Max>
   </Health>
   <Identity>
     <Civ>spart</Civ>
@@ -33,7 +33,6 @@
     <SelectionGroupName>units/spart/cavalry_spearman_b</SelectionGroupName>
     <GenericName>Thessalian Elite Cavalry</GenericName>
     <Icon>units/spart/cavalry_spearman.png</Icon>
-    <Rank>Elite</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>

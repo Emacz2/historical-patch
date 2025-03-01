@@ -7,7 +7,6 @@
     <BuildTime>10</BuildTime>
     <Resources>
       <food op="add">10</food>
-      <wood op="add">15</wood>
     </Resources>
   </Cost>
   <Identity>

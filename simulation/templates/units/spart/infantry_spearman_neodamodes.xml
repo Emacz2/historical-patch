@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="neodamodes|hoplite|template_unit_infantry_melee_spearman">
+<Entity parent="polearm|neodamodes|hoplite|template_unit_infantry_melee_spearman">
 <Auras datatype="tokens">
     units/spartan_phalanx
   </Auras>
@@ -31,7 +31,10 @@
     <metal>2</metal>
   </Loot>
   <ResourceGatherer disable=""/>
-  <Promotion disable=""/>
+   <Promotion>
+    <Entity>units/spart/champion_infantry_spear</Entity>
+    <RequiredXp>800</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_neodamodes.xml</Actor>
   </VisualActor>

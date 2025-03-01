@@ -1,11 +1,6 @@
 {
 	"genericName": "Side Arms",
 	"specificName": {
-		"athen": "Xiphos",
-		"mace": "Xiphos",
-		"ptol": "Xiphos",
-		"rome": "Pugio",
-		"sele": "Xiphos",
 		"spart": "Xiphos"
 	},
 	"description": "Spartaites began their training at a very young age.  They were the most feared army of their time",
@@ -20,11 +15,11 @@
 	"researchTime": 20,
 	"tooltip": "All Polearm (spear/pike) +5% melee attack damage but Spartiates 10% more train time.",
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Polearm" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05,  "affects": "Polearm" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05,  "affects": "Polearm" },
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman" }
 	],
-	"affects": ["Infantry Spearman"],
+
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

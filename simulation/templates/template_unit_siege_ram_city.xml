@@ -41,7 +41,7 @@
     <Tooltip>Cannot attack Fields or Organic Units.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Ram</VisibleClasses>
      <Requirements>
-      <Techs datatype="tokens">-phase_town phase_city</Techs>
+      <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <Loot>

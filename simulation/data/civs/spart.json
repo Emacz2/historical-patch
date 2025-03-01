@@ -50,11 +50,11 @@
 		},
 		{
 			"Template": "units/spart/support_female_citizen",
-			"Count": 4
+			"Count": 3
 		},
 		{
 			"Template": "units/spart/infantry_spearman_b",
-			"Count": 1
+			"Count": 2
 		},
 		{
 			"Template": "units/spart/helot_javelineer",

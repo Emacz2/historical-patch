@@ -11,7 +11,7 @@
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/support_trader
-      units/{civ}/cavalry_elite_merc
+      units/{civ}/cavalry_elite_merc_jav
     </Entities>
   </Trainer>
 </Entity>

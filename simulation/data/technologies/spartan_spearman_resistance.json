@@ -20,12 +20,11 @@
 	"researchTime": 20,
 	"tooltip": "All Infantry Polearm (spear/pike) gain .5 Pierce and Hack armor and 1 crush armor but 1% slower walk speed and Spartiate spearman 5% longer train time.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
-		{ "value": "Resistance/Entity/Damage/Crush", "add": 5 },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.99 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Polearm" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Polearm" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 5, "affects": "Polearm" },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.99, "affects": "Polearm" },
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman" }
 	],
-	"affects": ["Infantry Spearman"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
