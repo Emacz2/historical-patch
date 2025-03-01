@@ -13,8 +13,8 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 0.9 },
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 0.9 },
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.9},
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.9 }
-		
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.9 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
 
 	],
 	"affects": ["Helot"]
