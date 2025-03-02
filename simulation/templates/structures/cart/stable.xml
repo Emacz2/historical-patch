@@ -4,9 +4,6 @@
     <Civ>cart</Civ>
   </Identity>
   <Trainer>
-    <Entities datatype="tokens">
-      -units/{civ}/champion_cavalry
-    </Entities>
   </Trainer>
   <VisualActor>
     <Actor>structures/carthaginians/stable.xml</Actor>

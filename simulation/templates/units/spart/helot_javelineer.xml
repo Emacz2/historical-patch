@@ -16,7 +16,7 @@
     <SelectionGroupName>units/spart/infantry_javelineer_b</SelectionGroupName>
     <GenericName>Helot Skirmisher</GenericName>
     <SpecificName>Akontistḗs Heílōs</SpecificName>
-    <Icon>units/spart/infantry_javelinist.png</Icon>
+    <Icon>units/spart/helot_jav.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

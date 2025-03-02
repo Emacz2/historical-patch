@@ -45,7 +45,6 @@
   <Researcher>
     <Technologies datatype="tokens">
       -barracks_batch_training
-      -unlock_champion_infantry
     </Technologies>
   </Researcher>
   <Sound>
