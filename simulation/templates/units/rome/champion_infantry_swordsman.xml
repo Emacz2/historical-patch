@@ -16,9 +16,6 @@
     <SpecificName>Extrāōrdinārius</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
     <Icon>units/rome/champion_infantry.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_city unlock_champion_infantry</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_first</Entity>

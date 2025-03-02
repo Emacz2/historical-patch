@@ -18,9 +18,6 @@
     <SpecificName>Anušiya</SpecificName>
     <VisibleClasses datatype="tokens">Immortal</VisibleClasses>
     <Icon>units/pers/champion_infantry.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_city unlock_champion_infantry</Techs>
-    </Requirements>
   </Identity>
   <Cost>
     <Resources>

@@ -8,9 +8,9 @@
   <Cost>
     <BuildTime>25</BuildTime>
     <Resources>
-      <food>150</food>
-      <wood>80</wood>
-      <metal>100</metal>
+      <food>180</food>
+      <wood>75</wood>
+      <metal>75</metal>
     </Resources>
   </Cost>
   <Footprint replace="">
@@ -24,9 +24,6 @@
     <Classes datatype="tokens">FastMoving</Classes>
     <VisibleClasses datatype="tokens">Cavalry</VisibleClasses>
     <GenericName>Champion Cavalry</GenericName>
-    <Requirements>
-      <Techs datatype="tokens">-phase_city unlock_champion_cavalry</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <xp>200</xp>

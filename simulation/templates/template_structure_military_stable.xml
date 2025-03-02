@@ -46,7 +46,6 @@
       cavalry_health
       cavalry_health2
       nisean_horses
-      unlock_champion_cavalry
       unlock_champion_chariots
     </Technologies>
   </Researcher>
@@ -65,11 +64,6 @@
       units/{civ}/cavalry_javelineer_b
       units/{civ}/cavalry_crossbowman_b
       units/{civ}/cavalry_archer_b
-      units/{civ}/champion_cavalry
-      units/{civ}/champion_cavalry_spearman
-      units/{civ}/champion_cavalry_swordsman
-      units/{civ}/champion_cavalry_javelineer
-      units/{civ}/champion_cavalry_archer
       units/{civ}/champion_chariot
     </Entities>
   </Trainer>

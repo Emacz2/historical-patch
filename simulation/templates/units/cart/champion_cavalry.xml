@@ -6,7 +6,7 @@
     <SpecificName>Sacred Band of Astarte</SpecificName>
     <Icon>units/cart/champion_cavalry.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_city -unlock_champion_cavalry</Techs>
+      <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <VisualActor>

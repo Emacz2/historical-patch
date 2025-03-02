@@ -10,9 +10,8 @@
 		"mace": "Kōmopolis",
 		"maur": "Nayara",
 		"ptol": "Kōmopolis",
-		"rome": "Oppidum",
-		"sele": "Kōmopolis",
-		"spart": "Kōmopolis"
+		"rome": "Oppidum"
+		
 	},
 	"description": "Advances from a small village to a bustling town, ready to expand rapidly.",
 	"cost": {
@@ -38,6 +37,7 @@
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.25, "affects": "CivCentre" },
 		{ "value": "GarrisonHolder/Max", "multiply": 1.25, "affects": "CivCentre" },
         { "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" }
