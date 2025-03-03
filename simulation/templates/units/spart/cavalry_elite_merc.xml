@@ -18,7 +18,7 @@
     </Entity>
   </Resistance>
    <Health>
-    <Max op="add">50</Max>
+    <Max op="add">75</Max>
   </Health>
   <Identity>
     <Civ>spart</Civ>
