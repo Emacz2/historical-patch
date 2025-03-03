@@ -3,7 +3,7 @@
   <Attack>
   <Melee merge="">
   <PrepareTime op="add">500</PrepareTime>
-  <RepeatTime op="add">400</RepeatTime>
+  <RepeatTime op="add">500</RepeatTime>
   </Melee>
   <Ranged merge="">
   <PrepareTime op="add">500</PrepareTime>
@@ -11,7 +11,13 @@
 </Ranged>
 </Attack>
   <Cost>
-    <BuildTime op="mul">0.85</BuildTime>
+    <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <food>50</food>
+      <wood>40</wood>
+      <stone>0</stone>
+      <metal>0</metal>
+    </Resources>
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Perioikoi</VisibleClasses>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="serf|template_unit_infantry_melee_spearman">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/ptol/lighthouse
+      structures/ptol/library
+      structures/ptol/temple_2
+    </Entities>
+  </Builder>
+  <Identity>
+    <Civ>ptol</Civ>
+    <SelectionGroupName>units/ptol/serf_spearman</SelectionGroupName>
+    <GenericName>Egyptian Serf</GenericName>
+    <SpecificName>Phalaggomákhimos</SpecificName>
+    <Icon>units/kush/infantry_spearman.png</Icon>
+  </Identity>
+ <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/ptolemies/serf_spearman.xml</Actor>
+  </VisualActor>
+</Entity>

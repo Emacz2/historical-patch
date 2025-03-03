@@ -16,6 +16,7 @@
       units/{civ}/infantry_pikeman_b
       units/{civ}/infantry_slinger_b
       units/{civ}/cavalry_archer_b
+      units/{civ}/serf_spearman
     </Entities>
   </Trainer>
   <VisualActor>
