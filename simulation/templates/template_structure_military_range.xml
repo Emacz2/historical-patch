@@ -50,6 +50,7 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
+      units/{civ}/kardakes_skirmisher
       units/{civ}/champion_infantry_javelineer
       units/{civ}/champion_infantry_slinger
       units/{civ}/champion_infantry_archer
