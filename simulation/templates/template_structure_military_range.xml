@@ -39,6 +39,8 @@
     <Technologies datatype="tokens">
       cavalry_health2
       unlock_champion_chariots
+      chariot_range
+      chariot_health
     </Technologies>
   </Researcher>
   <Sound>
