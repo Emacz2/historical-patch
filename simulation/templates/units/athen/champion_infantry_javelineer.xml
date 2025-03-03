@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="greek_olympian|template_unit_champion_infantry_javelineer">
+  <Identity>
+    <Civ>athen</Civ>
+    <Lang>greek</Lang>
+    <GenericName>Champion Javelineer</GenericName>
+    <SpecificName>Akontistḗ</SpecificName>
+    <SelectionGroupName>units/athen/champion_infantry_javelineer</SelectionGroupName>
+    <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
+    <Icon>units/spart/champion_ranged_polis.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">-phase_city phase_town</Techs>
+    </Requirements>
+  </Identity>
+ <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/spartans/infantry_jav_c.xml</Actor>
+  </VisualActor>
+</Entity>
+
+  
