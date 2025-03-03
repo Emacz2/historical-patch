@@ -21,11 +21,11 @@
   <Identity>
     <GenericName>Practice Range</GenericName>
     <SelectionGroupName>template_structure_military_range</SelectionGroupName>
-    <Tooltip>Train Ranged Infantry and research technologies.</Tooltip>
-    <VisibleClasses datatype="tokens">Village Range</VisibleClasses>
+    <Tooltip>Train Champion Ranged Units and research technologies.</Tooltip>
+    <VisibleClasses datatype="tokens">Town Range</VisibleClasses>
     <Icon>structures/range.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
+      <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Loot>
@@ -35,6 +35,12 @@
     <Static depth="24.0" width="24.0"/>
   </Obstruction>
   <ProductionQueue/>
+  <Researcher>
+    <Technologies datatype="tokens">
+      cavalry_health2
+      unlock_champion_chariots
+    </Technologies>
+  </Researcher>
   <Sound>
     <SoundGroups>
       <constructed>interface/complete/building/complete_range.xml</constructed>
@@ -44,14 +50,11 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/infantry_javelineer_b
-      units/{civ}/infantry_slinger_b
-      units/{civ}/infantry_archer_b
-      units/{civ}/infantry_crossbowman_b
       units/{civ}/champion_infantry_javelineer
       units/{civ}/champion_infantry_slinger
       units/{civ}/champion_infantry_archer
       units/{civ}/champion_infantry_crossbowman
+      units/{civ}/champion_chariot
     </Entities>
   </Trainer>
   <Vision>
