@@ -22,7 +22,7 @@
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/cavalry_spearman_b</SelectionGroupName>
     <GenericName>Thessalian Elite Cavalry</GenericName>
-    <Icon>units/spart/cavalry_spearman.png</Icon>
+    <Icon>units/spart/spart_merc_cav.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
