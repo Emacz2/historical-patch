@@ -11,7 +11,7 @@
     <SpecificName>Drepanèphoros</SpecificName>
     <Icon>units/sele/champion_chariot.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">-unlock_champion_cavalry unlock_champion_chariots</Techs>
+      <Techs datatype="tokens">unlock_champion_chariots</Techs>
     </Requirements>
   </Identity>
   <VisualActor>
