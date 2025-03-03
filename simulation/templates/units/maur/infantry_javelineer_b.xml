@@ -4,6 +4,7 @@
     <Entities datatype="tokens">
       structures/maur/palace
       structures/maur/pillar_ashoka
+      structures/maur/range
     </Entities>
   </Builder>
   <Identity>
