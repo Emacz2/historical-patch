@@ -1,40 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="greek_olympian|merc_cav_market|template_unit_cavalry_melee_swordsman">
+<Entity parent="greek_olympian|merc_cav_market|template_unit_champion_cavalry_swordsman">
 <Attack>
-     <Melee>
-      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+    <Melee>
       <Damage>
-        <Hack op="add">2</Hack>
-	      <Pierce op="add">1</Pierce>
+        <Hack op="add">3.0</Hack>
+        <Pierce op="add">1.0</Pierce>
       </Damage>
     </Melee>
-  </Attack>
+</Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-3.5</Hack>
-        <Pierce op="add">-4.0</Pierce>
+        <Hack op="add">-7</Hack>
+        <Pierce op="add">-7.5</Pierce>
+        <Crush op="add">-5</Crush>
       </Damage>
     </Entity>
   </Resistance>
-   <Health>
-    <Max op="add">75</Max>
-  </Health>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/cavalry_spearman_b</SelectionGroupName>
     <GenericName>Thessalian Elite Cavalry</GenericName>
     <Icon>units/spart/cavalry_spearman.png</Icon>
-    <Rank>Elite</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-   <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
+ <UnitMotion>
+    <WalkSpeed>19.5</WalkSpeed>
+    <RunMultiplier>1.8</RunMultiplier>
   </UnitMotion>
-    <ResourceGatherer disable=""/>
+<ResourceGatherer disable=""/>
  <Promotion disable=""/>
  <Upgrade>
     <Elite_jav>
