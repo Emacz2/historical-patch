@@ -10,7 +10,7 @@
     <SpecificName>Zhanche</SpecificName>
     <Icon>units/han/chariot.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">-unlock_champion_cavalry phase_city</Techs>
+      <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <VisualActor>
