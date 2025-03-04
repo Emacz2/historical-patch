@@ -23,14 +23,14 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "archery_tradition.png",
 	"researchTime": 40,
-	"tooltip": "Archers +4, Slingers +3, Crossbow/Javs +2 range, 10% more accurate but 2500 more repeat time.",
+	"tooltip": "Archers +5, Slingers +3, Crossbow/Javs +2 range, 10% more accurate but 2500 more repeat time.",
 	"modifications": [
-		{ "value": "Attack/Ranged/MaxRange", "add": 4, "affects": "Archer" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "Archer" },
 		{ "value": "Attack/Ranged/MaxRange", "add": 3, "affects": "Slinger" },
 		{ "value": "Attack/Ranged/MaxRange", "add": 2, "affects": "Crossbowman" },
 		{ "value": "Attack/Ranged/MaxRange", "add": 2, "affects": "Javelineer" },
 		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": 2500, "affects": "Ranged" }
+		{ "value": "Attack/Ranged/RepeatTime", "add": 250, "affects": "Ranged" }
 
 
 
