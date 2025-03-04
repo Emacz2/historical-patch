@@ -7,6 +7,9 @@
     <Square width="5.0" depth="10.0"/>
     <Height>6.0</Height>
   </Footprint>
+  <Cost>
+    <Population>0</Population>
+  </Cost>
   <Identity>
     <Civ>brit</Civ>
     <Phenotype>female</Phenotype>
