@@ -9,7 +9,25 @@
   </Footprint>
   <Cost>
     <Population>0</Population>
+    <BuildTime>50</BuildTime>
+    <Resources>
+      <food>300</food>
+      <wood>200</wood>
+      <metal>250</metal>
+    </Resources>
   </Cost>
+  <Health>
+    <Max>750</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>4.5</Hack>
+        <Pierce>4.5</Pierce>
+        <Crush>20</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Civ>brit</Civ>
     <Phenotype>female</Phenotype>
@@ -24,6 +42,10 @@
       </Shape>
     </Overlay>
   </Selectable>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.81</WalkSpeed>
+    <RunMultiplier>1.81</RunMultiplier>
+  </UnitMotion>
   <VisualActor>
     <Actor>units/britons/hero_chariot_javelinist_boudicca_m.xml</Actor>
   </VisualActor>
