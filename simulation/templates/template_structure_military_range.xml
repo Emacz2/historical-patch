@@ -41,6 +41,7 @@
       unlock_champion_chariots
       chariot_range
       chariot_health
+      increased_range
     </Technologies>
   </Researcher>
   <Sound>
