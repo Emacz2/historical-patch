@@ -19,24 +19,6 @@
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
-  </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">2</Hack>
-        <Pierce op="add">2</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
-  <Cost>
-    <Population>2</Population>
-    <BuildTime>25</BuildTime>
-    <Resources>
-      <food>125</food>
-      <wood>75</wood>
-      <metal>125</metal>
-    </Resources>
-  </Cost>
   <Identity>
     <GenericName>Champion Chariot Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Javelineer</VisibleClasses>
@@ -55,8 +37,4 @@
       special/formations/skirmish
     </Formations>
   </UnitAI>
-<UnitMotion>
-    <WalkSpeed op="mul">0.92</WalkSpeed>
-    <Acceleration op="mul">0.92</Acceleration>
-  </UnitMotion>
 </Entity>
