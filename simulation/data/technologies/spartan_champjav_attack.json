@@ -18,13 +18,13 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "arrow_01.png",
 	"researchTime": 20,
-	"tooltip": "Champ Javs +5% ranged attack damage but champs 10% more train time.",
+	"tooltip": "Champ Javs +5% ranged attack damage and +3 range, but champs 15% more train time.",
 	"modifications": [
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05 },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05 },
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.05 },
-		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion" }
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05, "affects": "Infantry Javelineer !Helot" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05, "affects": "Infantry Javelineer !Helot" },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.05, "affects": "Infantry Javelineer !Helot" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 3, "affects": "Infantry Javelineer !Helot" },
+		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Champion" }
 	],
-	"affects": ["Infantry Javelineer"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -22,7 +22,7 @@
 	"researchTime": 40,
 	"tooltip": "Archers +6 attack range.",
 	"modifications": [
-		{ "value": "Attack/Ranged/MaxRange", "add": 7 }
+		{ "value": "Attack/Ranged/MaxRange", "add": 6 }
 	],
 	"affects": ["Archer"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
