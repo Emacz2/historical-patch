@@ -32,7 +32,7 @@
   </Loot>
   <ResourceGatherer disable=""/>
    <Promotion>
-    <Entity>units/spart/infantry_spearman_neodamodes_b</Entity>
+    <Entity>units/spart/infantry_spearman_neodamodes_e</Entity>
     <RequiredXp>400</RequiredXp>
   </Promotion>
   <VisualActor>
