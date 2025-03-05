@@ -18,4 +18,9 @@
     <Length>24.0</Length>
     <Indent>7.6</Indent>
   </WallPiece>
+   <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/champion_infantry_javelineer
+    </Entities>
 </Entity>
