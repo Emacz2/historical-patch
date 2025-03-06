@@ -2,6 +2,7 @@
 <Entity parent="template_unit_hero_infantry_swordsman">
   <Auras datatype="tokens">
     units/heroes/rome_hero_maximus
+    units/heroes/rome_hero_maximus_2
   </Auras>
   <Identity>
     <Civ>rome</Civ>
