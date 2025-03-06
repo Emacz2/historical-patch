@@ -16,10 +16,10 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "wheel.png",
 	"researchTime": 60,
-	"tooltip": "All Land Units +5% movement speed.",
+	"tooltip": "All Land Units +4% movement speed.",
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.04 }
 	],
-	"affects": ["Unit !Ship"],
+	"affects": ["Infantry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
