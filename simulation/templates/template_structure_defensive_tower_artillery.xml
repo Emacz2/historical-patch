@@ -15,7 +15,7 @@
         <Z>0</Z>
       </Origin>
       <PrepareTime>4500</PrepareTime>
-      <RepeatTime>5000</RepeatTime>
+      <RepeatTime>3000</RepeatTime>
       <Projectile>
         <Speed>40</Speed>
         <Spread>6</Spread>
@@ -48,7 +48,7 @@
     <Max>5</Max>
   </GarrisonHolder>
   <Health>
-    <Max>1400</Max>
+    <Max>1500</Max>
   </Health>
   <Identity>
     <GenericName>Artillery Tower</GenericName>

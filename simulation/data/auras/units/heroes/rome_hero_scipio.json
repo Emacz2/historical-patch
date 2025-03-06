@@ -1,6 +1,6 @@
 {
 	"type": "range",
-	"radius": 30,
+	"radius": 45,
 	"affects": ["Soldier", "Siege"],
 	"modifications": [
 		{ "value": "Attack/Capture/Capture", "add": 2 },
