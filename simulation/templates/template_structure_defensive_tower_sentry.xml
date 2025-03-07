@@ -26,7 +26,7 @@
     <Max>4</Max>
   </GarrisonHolder>
   <Health>
-    <Max>500</Max>
+    <Max>600</Max>
   </Health>
   <Identity>
     <GenericName>Sentry Tower</GenericName>
