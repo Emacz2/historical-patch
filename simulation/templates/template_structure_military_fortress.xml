@@ -4,7 +4,7 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>2.0</Pierce>
+        <Pierce>1.8</Pierce>
         <Crush>0.25</Crush>
       </Damage>
       <MaxRange>80</MaxRange>
@@ -43,7 +43,7 @@
     </Distance>
   </BuildRestrictions>
   <BuildingAI>
-    <DefaultArrowCount>5</DefaultArrowCount>
+    <DefaultArrowCount>10</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
     <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
   </BuildingAI>
@@ -65,7 +65,7 @@
   <GarrisonHolder>
     <Max>30</Max>
     <EjectHealth>0.075</EjectHealth>
-    <List datatype="tokens">Support Infantry Cavalry Siege</List>
+    <List datatype="tokens">Support Infantry Cavalry Siege Elephant</List>
     <LoadingRange>6</LoadingRange>
   </GarrisonHolder>
 	  <Population>
