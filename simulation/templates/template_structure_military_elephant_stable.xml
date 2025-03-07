@@ -57,6 +57,11 @@
       units/{civ}/champion_elephant
     </Entities>
   </Trainer>
+  <Researcher>
+    <Technologies datatype="tokens">
+      ele_health
+    </Technologies>
+  </Researcher>
   <Vision>
     <Range>40</Range>
   </Vision>
