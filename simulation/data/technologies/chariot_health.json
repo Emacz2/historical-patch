@@ -1,7 +1,8 @@
 {
 	"genericName": "Armor Plating",
 	"cost": {
-		"metal": 400
+		"metal": 400,
+		"food": 100
 	},
 	"requirements": { "tech": "phase_city" },
 	"requirementsTooltip": "Unlocked in City Phase.",
