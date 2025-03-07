@@ -24,10 +24,10 @@
     <Height>15.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>7</Max>
+    <Max>8</Max>
   </GarrisonHolder>
   <Health>
-    <Max>1250</Max>
+    <Max>1200</Max>
   </Health>
   <Identity>
     <GenericName>Stone Tower</GenericName>

@@ -2,7 +2,8 @@
 	"genericName": "Sturdy Foundations",
 	"description": "Reinforce the foundations in preparation of an attack.",
 	"cost": {
-		"stone": 500,
+		"stone": 400,
+		"wood": 200,
 		"metal": 100
 	},
 	"requirements": { "tech": "phase_city" },
