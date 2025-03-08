@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_special">
+<Entity parent="template_structure_military_syssiton">
   <Auras datatype="tokens">
     structures/xp_trickle
   </Auras>
-  <Cost>
-    <BuildTime>150</BuildTime>
-    <Resources>
-      <stone>150</stone>
-      <metal>100</metal>
-      <wood>50</wood>
-    </Resources>
-  </Cost>
   <Footprint>
     <Square width="18.0" depth="28.0"/>
     <Height>12.0</Height>
   </Footprint>
   <GarrisonHolder>
+    <EjectHealth>0.1</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Soldier</EjectClassesOnDestroy>
+    <BuffHeal>0</BuffHeal>
     <Max>10</Max>
+    <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
   <Health>
     <Max>2000</Max>
@@ -26,13 +22,7 @@
     <Civ>spart</Civ>
     <GenericName>Military Mess Hall</GenericName>
     <SpecificName>Syssition</SpecificName>
-    <Tooltip>Train Champions and Heroes.</Tooltip>
-    <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">-Town Village Syssiton</VisibleClasses>
     <Icon>structures/syssition.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <stone>30</stone>

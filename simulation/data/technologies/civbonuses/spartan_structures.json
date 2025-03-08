@@ -1,0 +1,17 @@
+{
+	"genericName": "Hellenic Architecture",
+	"autoResearch": true,
+	"description": "The Greeks used stone construction from early Mycenaean times.",
+	"requirements": {
+		"any": [
+			{ "civ": "spart" }
+		]
+	},
+	"icon": "ionic_column.png",
+	"tooltip": "Military structures build 10% faster, defensive structures build 10% slower.",
+	"modifications": [
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Defensive" },
+		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Military"}
+	],
+	"affects": ["Structure !Wonder !Fortress"]
+}
