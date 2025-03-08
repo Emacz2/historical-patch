@@ -1,11 +1,11 @@
 {
 	"type": "range",
 	"radius": 60,
-	"affects": ["Siege", "Elephant", "Champion Infantry"],
+	"affects": ["Siege", "Elephant", "Champion"],
 	"modifications": [
 		{ "value": "Health/Max", "multiply": 1.25 }
 	],
 	"auraName": "Invader of Greece",
-	"auraDescription": "Siege Rams, Elephants, and Champion Infantry + 25% Health.",
+	"auraDescription": "Siege Rams, Elephants, and Champion + 25% Health.",
 	"overlayIcon": "art/textures/ui/session/auras/health_bonus.png"
 }
