@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_champion_infantry_javelineer">
+<Entity parent="merc_inf_market|template_unit_champion_infantry_javelineer">
   <Identity>
     <Civ>pers</Civ>
     <Lang>persian</Lang>
@@ -7,6 +7,13 @@
     <SpecificName>Peltastes Kardakes</SpecificName>
     <Icon>units/pers/kardakes_skirmisher.png</Icon>
   </Identity>
+   <Cost>
+    <Resources>
+      <food>100</food>
+      <wood>100</wood>
+      <metal>100</metal>
+    </Resources>
+  </Cost>
   <VisualActor>
     <Actor>units/persians/infantry_javelinist_c.xml</Actor>
   </VisualActor>
