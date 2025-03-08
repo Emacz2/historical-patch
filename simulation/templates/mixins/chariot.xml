@@ -4,7 +4,7 @@
     <Population>2</Population>
     <BuildTime>30</BuildTime>
     <Resources>
-      <food>125</food>
+      <food>150</food>
       <wood>75</wood>
       <metal>125</metal>
     </Resources>
