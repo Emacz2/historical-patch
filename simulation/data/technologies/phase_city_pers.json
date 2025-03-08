@@ -35,7 +35,7 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5, "affects": "Citizen Infantry" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": -0.5, "affects": "Citizen Infantry" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": -0.5, "affects": "Citizen Infantry" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Citizen Archer" },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Archer" },
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.97, "affects": "Citizen Archer" }
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
