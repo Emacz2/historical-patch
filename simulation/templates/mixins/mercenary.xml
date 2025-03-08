@@ -14,6 +14,7 @@
       <Pierce op="mul">1.05</Pierce>
       <Crush op="mul">1.05</Crush>
     </Damage>
+    <MaxRange op="add">1.0</MaxRange>
     <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
