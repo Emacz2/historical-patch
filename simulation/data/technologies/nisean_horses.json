@@ -23,10 +23,10 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "chamfron.png",
 	"researchTime": 60,
-	"tooltip": "Champion Cavalry 75 health, but +10% training time.",
+	"tooltip": "Champion Cavalry 100 health, but +10% training time.",
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 1.1 },
-		{ "value": "Health/Max", "add": 75 }
+		{ "value": "Health/Max", "add": 100 }
 	],
 	"affects": ["Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
