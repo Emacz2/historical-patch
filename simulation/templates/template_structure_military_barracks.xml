@@ -42,7 +42,6 @@
   <Researcher>
     <Technologies datatype="tokens">
       barracks_batch_training
-      unlock_champion_infantry
       pair_unlock_champions_sele
       guerilla_tatics_slinger
       guerilla_tatics_spear
