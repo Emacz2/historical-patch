@@ -39,7 +39,12 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Champion" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Champion" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Champion"},
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion"}
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion"},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1, "affects": "Neodamodes"},
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Neodamodes"},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 0.95, "affects": "Neodamodes" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.95, "affects": "Neodamodes" },
+		{ "value": "Cost/BuildTime", "multiply": 0.85, "affects": "Neodamodes"}
 		
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"

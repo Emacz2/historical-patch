@@ -22,6 +22,6 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "helmet_corinthian_crest.png",
 	"researchTime": 60,
-	"tooltip": "Unlock Champion Chariots at the Stable.",
+	"tooltip": "Unlock Champion Chariots from range.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -5,9 +5,6 @@
 </Builder>
  <Cost>
     <BuildTime>10</BuildTime>
-    <Resources>
-      <food op="add">10</food>
-    </Resources>
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Neodamodes</VisibleClasses>
