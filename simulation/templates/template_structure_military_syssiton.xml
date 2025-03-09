@@ -5,9 +5,9 @@
   </Auras>
   <Cost>
    <Resources>
-      <stone>125</stone>
-      <metal>60</metal>
-      <wood>90</wood>
+      <stone>150</stone>
+      <metal>50</metal>
+      <wood>100</wood>
     </Resources>
   </Cost>
   <Footprint>

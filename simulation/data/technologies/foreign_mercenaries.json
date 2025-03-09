@@ -2,7 +2,7 @@
 	"genericName": "Foreign mercanaries",
 	"description": ".",
 	"cost": {
-		"food": 500,
+		"food": 400,
 		"metal": 200,
 		"wood": 400
 	},
@@ -18,16 +18,16 @@
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_corinthian.png",
-	"researchTime": 30,
-	"tooltip": "Citizen Soldiers -10% train time, 5% melee/ranged dmg, +0.5 pierce/hack armor but -10% res gathering.",
+	"researchTime": 40,
+	"tooltip": "Citizen Soldiers 10% melee dmg, 5% more ranged dmg +1 range, +0.5 pierce/hack armor but -10% res gathering.",
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.9 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05},
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1},
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1},
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05 },
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05},
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.05 },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.9}
