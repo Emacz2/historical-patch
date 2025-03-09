@@ -1,0 +1,41 @@
+{
+	"genericName": "City Phase",
+	"specificName": {
+		"spart": "Megalopolis"
+	},
+
+	"description": "Advances from a bustling town to a veritable metropolis, full of the wonders of modern technology.",
+	"cost": {
+		"food": 250,
+		"wood": 250,
+		"stone": 750,
+		"metal": 750
+	},
+	"requirements": {
+		"entity": {
+			"class": "Village",
+			"number": 20
+		}
+	},
+	"requirementsTooltip": "Requires 20 village Structures.",
+	"supersedes": "phase_town_rome",
+	"replaces": ["phase_city"],
+	"icon": "city_phase.png",
+	"researchTime": 60,
+	"tooltip": "Advance to City Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +1 capture points regeneration rate for garrisoned units.  Civ Center 40% more garrison capacity and 5 more range. Spartiates cost 20 more metal/wood and take 10% longer to train but gain 25 health, 15%hack/pierce dmg and all infantry +0.5H/P Resistance.",
+	"modifications": [
+		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
+		{ "value": "TerritoryInfluence/Radius", "multiply": 1.35, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "multiply": 1.4, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.97, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Swordsman" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Swordsman"},
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Swordsman" }
+		
+	],
+	"soundComplete": "interface/alarm/alarm_phase.xml"
+}
