@@ -49,6 +49,11 @@
   <Health>
     <Max>375</Max>
   </Health>
+  <Damage>
+        <Hack>7.5</Hack>
+        <Pierce>35</Pierce>
+        <Crush>5</Crush>
+      </Damage>
   <Identity>
     <VisibleClasses datatype="tokens">Ranged StoneThrower</VisibleClasses>
     <GenericName>Siege Catapult</GenericName>

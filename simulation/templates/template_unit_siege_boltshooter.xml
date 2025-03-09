@@ -48,6 +48,11 @@
   <Health>
     <Max>200</Max>
   </Health>
+  <Damage>
+        <Hack>5</Hack>
+        <Pierce>30</Pierce>
+        <Crush>7.5</Crush>
+      </Damage>
   <Identity>
     <VisibleClasses datatype="tokens">Ranged BoltShooter</VisibleClasses>
     <GenericName>Bolt Shooter</GenericName>
