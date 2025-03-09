@@ -12,10 +12,10 @@
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Structure !Military" },
 		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Military"},
-		{ "value": "Cost/Resources/wood", "multiply": 0.9, "affects": "Military" },
-		{ "value": "Cost/Resources/food", "multiply": 0.9, "affects": "Military" },
-		{ "value": "Cost/Resources/stone", "multiply": 0.9, "affects": "Military" },
-		{ "value": "Cost/Resources/metal", "multiply": 0.9, "affects": "Military" }
+		{ "value": "Cost/Resources/wood", "multiply": 0.8, "affects": "Military" },
+		{ "value": "Cost/Resources/food", "multiply": 0.8, "affects": "Military" },
+		{ "value": "Cost/Resources/stone", "multiply": 0.8, "affects": "Military" },
+		{ "value": "Cost/Resources/metal", "multiply": 0.8, "affects": "Military" }
 	],
 	"affects": ["Structure !Wonder !Fortress"]
 }
