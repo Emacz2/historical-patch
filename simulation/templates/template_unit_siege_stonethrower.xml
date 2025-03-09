@@ -49,11 +49,21 @@
   <Health>
     <Max>375</Max>
   </Health>
-  <Damage>
-        <Hack>7.5</Hack>
-        <Pierce>35</Pierce>
-        <Crush>5</Crush>
-      </Damage>
+  <Resistance>
+    <Entity>
+        <Damage>
+          <Hack>7.5</Hack>
+          <Pierce>35</Pierce>
+          <Crush>5</Crush>
+        </Damage>
+      <ApplyStatus>
+        <Burning>
+          <Duration>0.5</Duration>
+          <BlockChance>0.4</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Ranged StoneThrower</VisibleClasses>
     <GenericName>Siege Catapult</GenericName>
