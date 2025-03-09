@@ -36,8 +36,8 @@
       <TempleOfVesta>1</TempleOfVesta>
       <Theater>1</Theater>
       <Yakhchal>5</Yakhchal>
-      <WarDog>0</WarDog>
-      <Centurion>8</Centurion>
+      <WarDog>20</WarDog>
+      <Centurion>10</Centurion>
       <Wonder>1</Wonder>
     </Limits>
     <LimitChangers>

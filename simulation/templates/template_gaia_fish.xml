@@ -28,7 +28,7 @@
     <KillBeforeGather>false</KillBeforeGather>
     <Max>1000</Max>
     <Type>food.fish</Type>
-    <MaxGatherers>4</MaxGatherers>
+    <MaxGatherers>5</MaxGatherers>
     <Change>
       <Spawn>
         <Value>1</Value>

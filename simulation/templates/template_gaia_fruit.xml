@@ -22,7 +22,7 @@
     <KillBeforeGather>false</KillBeforeGather>
     <Max>1</Max>
     <Type>food.fruit</Type>
-    <MaxGatherers>8</MaxGatherers>
+    <MaxGatherers>10</MaxGatherers>
     <Change>
       <Regrowth>
         <Value>1</Value>
