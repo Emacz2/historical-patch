@@ -11,6 +11,7 @@
 	"supersedes": "cavalry_health",
 	"requirements": {
 		"all": [
+			{ "tech": "phase_city" },
 			{
 				"any": [
 					{ "civ": "pers" },
