@@ -7,6 +7,9 @@
     <SpecificName>Rs ʿIprmk</SpecificName>
     <Classes datatype="tokens">ApedemakGuard</Classes>
     <Icon>units/kush/champion_apedemak.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/kushites/infantry_axeman_c.xml</Actor>
