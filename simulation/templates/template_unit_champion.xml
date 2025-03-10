@@ -13,9 +13,6 @@
     <Classes datatype="tokens">Human</Classes>
     <VisibleClasses datatype="tokens">Soldier Champion</VisibleClasses>
     <GenericName>Champion Unit</GenericName>
-    <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
   </Identity>
   <Position>
     <TurnRate>8</TurnRate>
