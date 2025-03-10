@@ -5,6 +5,9 @@
     <GenericName>Sacred Band Infantry</GenericName>
     <SpecificName>Sacred Band of Ba'al</SpecificName>
     <Icon>units/cart/champion_infantry.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c.xml</Actor>
