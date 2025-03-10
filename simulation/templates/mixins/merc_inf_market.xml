@@ -3,7 +3,7 @@
   <Cost>
     <BuildTime op="mul">0.5</BuildTime>
     <Resources>
-      <metal>80</metal>
+      <metal>75</metal>
     </Resources>
   </Cost>
   <Loot>
