@@ -1,0 +1,22 @@
+{
+	"genericName": "Arrow Shooters",
+	"description": "Fortress arrows shoot further.",
+	"cost": {
+		"wood": 500,
+		"metal": 250,
+		"food": 500
+	},
+	"requirements": { "tech": "phase_city" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "arrow.png",
+	"researchTime": 40,
+	"tooltip": "Fortress +10 vision, +8 attack range, but -5% pierce dmg and 1/4 second longer repeat ime. ",
+	"modifications": [
+		{ "value": "Attack/Ranged/MaxRange", "add": 8 },
+		{ "value": "Vision/Range","add": 10 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.95 },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -250}
+	],
+	"affects": ["Fortress"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
