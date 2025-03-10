@@ -15,7 +15,7 @@
 		{ "value": "Attack/Ranged/MaxRange", "add": 8 },
 		{ "value": "Vision/Range","add": 10 },
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.95 },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -250}
+		{ "value": "Attack/Ranged/RepeatTime", "add": 250}
 	],
 	"affects": ["Fortress"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
