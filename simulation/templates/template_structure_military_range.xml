@@ -58,6 +58,7 @@
       units/{civ}/champion_infantry_slinger
       units/{civ}/champion_infantry_archer
       units/{civ}/champion_infantry_crossbowman
+      units/{civ}/champion_cavalry_archer
       units/{civ}/champion_chariot
     </Entities>
   </Trainer>
