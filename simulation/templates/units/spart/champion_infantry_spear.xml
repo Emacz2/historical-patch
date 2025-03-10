@@ -9,9 +9,6 @@
     <GenericName>Spartan Hoplite</GenericName>
     <SpecificName>Spartiátēs</SpecificName>
     <Icon>units/spart/champion_infantry_spear.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_city phase_village</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/spart/champion_infantry_spear_olympian</Entity>
