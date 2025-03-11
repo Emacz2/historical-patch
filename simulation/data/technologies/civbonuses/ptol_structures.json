@@ -8,12 +8,10 @@
 		]
 	},
 	"icon": "stone_blocks_brown.png",
-	"tooltip": "Houses and Economic Structures −40% wood cost, health, and capture points as well as +20% build time.",
+	"tooltip": "Houses and Economic Structures 40% less health and capture points, but 40% less build time.",
 	"modifications": [
-		{ "value": "Cost/Resources/wood", "multiply": 0.6 },
 		{ "value": "Health/Max", "multiply": 0.6},
-		{ "value": "Loot/wood", "multiply": 0.6 },
-		{ "value": "Cost/BuildTime", "multiply": 1.2 },
+		{ "value": "Cost/BuildTime", "multiply": 0.6 },
 		{ "value": "Capturable/CapturePoints", "multiply": 0.6}
 	],
 	"affects": ["Economic !CivCentre !Naval", "House"]
