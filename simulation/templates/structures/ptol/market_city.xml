@@ -7,9 +7,9 @@
   <Identity>
     <Civ>ptol</Civ>
     <SpecificName>Emporion Town</SpecificName>
-    <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
+     <Requirements>
+      <Techs datatype="tokens">-phase_village phase_city</Techs>
+      </Requirements>
   </Identity>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
