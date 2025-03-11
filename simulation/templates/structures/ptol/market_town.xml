@@ -11,6 +11,20 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+  <Upgrade>
+   <market_town>
+      <Entity>structures/ptol/market_city</Entity>
+      <Tooltip>Upgrade your market, trains rank3 merc, faster batch training and small increase in resource trickle.</Tooltip>
+      <Cost>
+        <food>200</food>
+        <wood>200</wood>
+        <metal>25</metal>
+        <stone>25</stone>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>45</Time>
+   </market_town>
+  </Upgrade>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
   </Obstruction>
