@@ -12,6 +12,9 @@
    <market_town>
       <Entity>structures/ptol/market_town</Entity>
       <Tooltip>Upgrade your market, trains rank2 merc, faster batch training and small resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_town</Techs>
+      </Requirements>
       <Cost>
         <food>200</food>
         <wood>100</wood>

@@ -7,14 +7,14 @@
   <Identity>
     <Civ>ptol</Civ>
     <SpecificName>Emporion Town</SpecificName>
-      <Requirements>
-      <Techs datatype="tokens">-phase_village phase_town</Techs>
-      </Requirements>
   </Identity>
   <Upgrade>
    <market_town>
       <Entity>structures/ptol/market_city</Entity>
       <Tooltip>Upgrade your market, trains rank3 merc, faster batch training and small increase in resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_city</Techs>
+      </Requirements>
       <Cost>
         <food>200</food>
         <wood>200</wood>
