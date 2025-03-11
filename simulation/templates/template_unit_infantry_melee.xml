@@ -10,8 +10,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>3.5</Hack>
-        <Pierce>4</Pierce>
+        <Hack>4</Hack>
+        <Pierce>4.5</Pierce>
         <Crush>10</Crush>
       </Damage>
       <ApplyStatus>
@@ -22,9 +22,6 @@
 </ApplyStatus>
     </Entity>
   </Resistance>
-  <UnitMotion>
-    <WalkSpeed>9.9</WalkSpeed>
-  </UnitMotion>
   <UnitAI>
     <Formations datatype="tokens">
       special/formations/testudo

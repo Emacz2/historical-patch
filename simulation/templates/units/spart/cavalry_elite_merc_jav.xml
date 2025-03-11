@@ -18,6 +18,9 @@
     <GenericName>Thessalian Elite Cavalry</GenericName>
     <Icon>units/spart/cavalry_spearman.png</Icon>
     <Rank>Elite</Rank>
+     <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <UnitMotion>
     <WalkSpeed>19.5</WalkSpeed>

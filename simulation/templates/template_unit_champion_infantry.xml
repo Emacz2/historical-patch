@@ -43,6 +43,11 @@
       <death>actor/human/death/{phenotype}_death.xml</death>
     </SoundGroups>
   </Sound>
+  <UnitMotion>
+    <WalkSpeed>9.9</WalkSpeed>        
+    <RunMultiplier>1.39</RunMultiplier>
+    <Acceleration op="mul">0.99</Acceleration>
+  </UnitMotion>
   <Vision>
     <Range>80</Range>
   </Vision>

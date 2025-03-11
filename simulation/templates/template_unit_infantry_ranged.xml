@@ -10,8 +10,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>1.5</Hack>
-        <Pierce>1.5</Pierce>
+        <Hack>2.5</Hack>
+        <Pierce>2</Pierce>
         <Crush>10</Crush>
       </Damage>
       <ApplyStatus>
@@ -22,9 +22,6 @@
 </ApplyStatus>
     </Entity>
   </Resistance>
-   <UnitMotion>
-   <WalkSpeed>10</WalkSpeed>
-  </UnitMotion>
   <Turretable/>
   <UnitAI>
     <Formations datatype="tokens">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity parent="merc_inf">
   <Cost>
-    <BuildTime op="mul">0.5</BuildTime>
+    <BuildTime op="mul">1.25</BuildTime>
     <Resources>
       <metal>75</metal>
       <food op="add">-25</food>

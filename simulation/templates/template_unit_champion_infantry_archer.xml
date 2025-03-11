@@ -35,7 +35,8 @@
       special/formations/skirmish
     </Formations>
   </UnitAI>
-  <UnitMotion>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.01</WalkSpeed>
     <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
 </Entity>
