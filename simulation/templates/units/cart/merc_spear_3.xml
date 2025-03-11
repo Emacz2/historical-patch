@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/cart/merc_spear_2">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/cart/super_dock
+      structures/cart/embassy_celtic
+      structures/cart/embassy_iberian
+      structures/cart/embassy_italic
+    </Entities>
+  </Builder>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="mul">1.15</Hack>
+        <Pierce op="mul">1.15</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
+	      <Crush op="add">2.5</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.99</WalkSpeed>
+ </UnitMotion>
+  <Identity>
+    <Civ>cart</Civ>
+    <SelectionGroupName>units/cart/infantry_spearman_b</SelectionGroupName>
+    <GenericName>Carthage Serf Spearman</GenericName>
+    <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
+    <Icon>units/cart/infantry_spearman.png</Icon>
+  </Identity>
+  <Promotion>
+    <Entity>units/cart/infantry_spearman_a</Entity>
+  </Promotion>
+  <VisualActor>
+   <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>
+  </VisualActor>
+</Entity>

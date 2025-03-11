@@ -73,6 +73,7 @@
       units/{civ}/infantry_javelineer_market
       units/{civ}/infantry_slinger_market
       units/{civ}/infantry_spearman_market
+      units/{civ}/merc_spear
     </Entities>
   </Trainer>
   <Vision>
