@@ -10,8 +10,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>4</Hack>
-        <Pierce>4.5</Pierce>
+        <Hack>3.5</Hack>
+        <Pierce>4</Pierce>
         <Crush>10</Crush>
       </Damage>
       <ApplyStatus>

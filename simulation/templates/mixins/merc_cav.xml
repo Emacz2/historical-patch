@@ -10,9 +10,9 @@
   <Attack>
   <Melee merge="">
 	<Damage>
-	  <Hack op="mul">1.05</Hack>
-    <Pierce op="mul">1.05</Pierce>
-    <Crush op="mul">1.05</Crush>
+	  <Hack op="mul">1.04</Hack>
+    <Pierce op="mul">1.04</Pierce>
+    <Crush op="mul">1.04</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
