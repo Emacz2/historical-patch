@@ -42,7 +42,6 @@
   <Promotion>
     <RequiredXp>300</RequiredXp>
   </Promotion>
-</Entity>
   <Identity>
     <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
   </Identity>
