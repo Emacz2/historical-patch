@@ -1,5 +1,5 @@
 {
-	"autoResearch": true,
+	"autoResearch": false,
 	"genericName": "Expertise In War",
 	"description": "Hire professional mercenaries to fight in your army.",
 	"icon": "upgrade_advanced.png",

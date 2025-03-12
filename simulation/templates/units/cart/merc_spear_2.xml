@@ -19,10 +19,11 @@
   </Resistance>
   <Identity>
     <Civ>cart</Civ>
-    <SelectionGroupName>units/cart/infantry_spearman_b</SelectionGroupName>
+    <SelectionGroupName>units/cart/merc_spear_2</SelectionGroupName>
     <GenericName>Libyan Spearman</GenericName>
     <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-    <Icon>units/cart/infantry_spearman.png</Icon>
+     <Icon>units/samn/spearman.png</Icon>
+     <RequiredXp>450</RequiredXp>
   </Identity>
   <Promotion>
     <Entity>units/cart/merc_spear_3</Entity>

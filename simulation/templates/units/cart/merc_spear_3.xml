@@ -30,14 +30,12 @@
  </UnitMotion>
   <Identity>
     <Civ>cart</Civ>
-    <SelectionGroupName>units/cart/infantry_spearman_b</SelectionGroupName>
+    <SelectionGroupName>units/cart/merc_spear_3</SelectionGroupName>
     <GenericName>Carthage Serf Spearman</GenericName>
     <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-    <Icon>units/cart/infantry_spearman.png</Icon>
+    <Icon>units/samn/spearman.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/infantry_spearman_a</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
    <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>
   </VisualActor>
