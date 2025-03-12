@@ -29,11 +29,7 @@
     <WalkSpeed op="mul">0.99</WalkSpeed>
  </UnitMotion>
   <Identity>
-    <Civ>cart</Civ>
-    <SelectionGroupName>units/cart/merc_spear_3</SelectionGroupName>
-    <GenericName>Carthage Serf Spearman</GenericName>
-    <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-    <Icon>units/samn/spearman.png</Icon>
+    <GenericName>Merc Rank3</GenericName>
   </Identity>
 <Promotion disable=""/>
   <VisualActor>

@@ -17,16 +17,12 @@
       </Damage>
     </Entity>
   </Resistance>
-  <Identity>
-    <Civ>cart</Civ>
-    <SelectionGroupName>units/cart/merc_spear_2</SelectionGroupName>
-    <GenericName>Libyan Spearman</GenericName>
-    <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-     <Icon>units/samn/spearman.png</Icon>
-     <RequiredXp>450</RequiredXp>
+    <Identity>
+    <GenericName>Merc Rank2</GenericName>
   </Identity>
   <Promotion>
     <Entity>units/cart/merc_spear_3</Entity>
+    <RequiredXp>450</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>
