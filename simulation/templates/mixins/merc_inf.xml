@@ -38,7 +38,6 @@
   <Loot>
     <metal>10</metal>
   </Loot>
-</Entity>
   <Identity>
     <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
   </Identity>
