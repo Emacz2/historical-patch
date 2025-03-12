@@ -21,4 +21,10 @@
     <Actor>structures/carthaginians/market.xml</Actor>
     <FoundationActor>structures/fndn_7x7.xml</FoundationActor>
   </VisualActor>
+  <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/merc_spear
+    </Entities>
+  </Trainer>
 </Entity>
