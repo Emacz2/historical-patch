@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="greek_olympian|merc_cav_market|template_unit_champion_cavalry_swordsman">
+<Entity parent="greek_olympian|merc_cav|template_unit_champion_cavalry_swordsman">
 <Attack>
     <Melee>
       <Damage>
