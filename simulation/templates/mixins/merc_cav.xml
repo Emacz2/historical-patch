@@ -4,7 +4,8 @@
    <BuildTime op="mul">0.8</BuildTime>
     <Resources>
       <metal>80</metal>
-      <food>45</food>
+      <food>-100</food>
+      <food>-50</food>
     </Resources>
   </Cost>
   <Attack>
