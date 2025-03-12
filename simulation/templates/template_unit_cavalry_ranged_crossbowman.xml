@@ -7,7 +7,7 @@
         <Pierce>34</Pierce>
       </Damage>
       <MaxRange>39</MaxRange>
-      <PrepareTime>7500</PrepareTime>
+      <PrepareTime>750</PrepareTime>
       <RepeatTime>3000</RepeatTime>
       <Projectile>
         <Speed>450</Speed>
