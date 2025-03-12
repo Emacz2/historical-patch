@@ -28,12 +28,12 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Mercenary" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Mercenary"},
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "Mercenary"},
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1, "affects": "Mercenary" },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1, "affects": "Mercenary"},
-		{ "value": "Attack/RangedDamage/Crush", "multiply": 1.1, "affects": "Mercenary"}
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Mercenary" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Mercenary"},
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "Mercenary"},
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.03, "affects": "Mercenary" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.03, "affects": "Mercenary"},
+		{ "value": "Attack/RangedDamage/Crush", "multiply": 1.03, "affects": "Mercenary"}
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
 }
