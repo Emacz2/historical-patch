@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity parent="mercenary">
-  <Cost>
+   <Cost>
+   <BuildTime op="mul">0.7</BuildTime>
     <Resources>
       <metal>80</metal>
       <food>45</food>
     </Resources>
   </Cost>
-  <Loot>
+  <Attack>
+  <Melee merge="">
+	<Damage>
+	  <Hack op="mul">1.06</Hack>
+    <Pierce op="mul">1.06</Pierce>
+    <Crush op="mul">1.06</Crush>
+  </Damage>
+  </Melee>
+  <Ranged merge="">
+	<Damage>
+	  <Hack op="mul">1.03</Hack>
+      <Pierce op="mul">1.03</Pierce>
+      <Crush op="mul">1.03</Crush>
+    </Damage>
+      <MaxRange op="add">1.0</MaxRange>
+      <Projectile>
+        <Spread op="mul">0.9</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
+ <Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add"> 0.5</Hack>
+       <Pierce op="add"> 0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+ <Loot>
     <metal>15</metal>
     <food>10</food>
   </Loot>
@@ -14,3 +43,14 @@
     <RequiredXp>300</RequiredXp>
   </Promotion>
 </Entity>
+  <Identity>
+    <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
+  </Identity>
+  <Loot>
+    <food>0</food>
+    <wood>0</wood>
+    <stone>0</stone>
+  </Loot>
+  <ResourceGatherer disable=""/>
+</Entity>
+
