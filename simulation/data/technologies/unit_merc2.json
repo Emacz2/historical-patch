@@ -1,0 +1,29 @@
+{
+	"autoResearch": true,
+	"icon": "upgrade_advanced.png",
+	"tooltip": "Advanced and Elite units +20% training time and 30% slower gathering rates, but +0.5 capture attack strength, +20% loot, 10 health; Healers +5 healing strength and +3 healing range; Melee units +10% attack damage and 0.5H/P resistance; Ranged units −10% spread 5% Hack/Pierce/Crush dmg and +1 range.", 
+	"modifications": [
+		{ "value": "Attack/Capture/Capture", "add": 0.5 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.15, "affects": "Melee" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15, "affects": "Melee" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.15, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Melee"},
+		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged" },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.10, "affects": "Ranged" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1, "affects": "Ranged" },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.10, "affects": "Ranged" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1, "affects": "Ranged"  },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Melee"},
+		{ "value": "Cost/BuildTime", "multiply": 1.25 },
+		{ "value": "Health/Max", "add": 10 },
+		{ "value": "Loot/food", "multiply": 1.2 },
+		{ "value": "Loot/wood", "multiply": 1.2 },
+		{ "value": "Loot/stone", "multiply": 1.2 },
+		{ "value": "Loot/metal", "multiply": 1.2 },
+		{ "value": "Loot/xp", "multiply": 1.2 }
+	
+	],
+	"affects": ["Rank2 Unit", "Rank3 Unit"]
+}
