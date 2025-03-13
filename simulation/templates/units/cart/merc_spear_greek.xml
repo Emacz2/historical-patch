@@ -11,15 +11,11 @@
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/merc_spear</SelectionGroupName>
-    <GenericName>Libyan Spearman</GenericName>
-    <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-    <Icon>units/samn/spearman.png</Icon>
+    <GenericName>Greek Hoplite</GenericName>
+    <Icon>units/spart/infantry_spearman.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/merc_spear_2</Entity>
-    <RequiredXp>200</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
-   <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>
+   <Actor>units/spartans/infantry_spearman_b.xml</Actor>
   </VisualActor>
 </Entity>
