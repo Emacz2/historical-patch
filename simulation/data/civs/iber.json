@@ -32,7 +32,7 @@
 		{
 			"Name": "Massive Towers",
 			"History": "",
-			"Description": "Stone Towers −50% wood cost, +150% stone cost, +33% build time, +60% health, +3 garrison capacity, and +1 default arrow count."
+			"Description": "Stone Towers −50% wood cost, +150% stone cost, +33% build time, +60% health, +2 garrison, and +1 default arrow count.  Sentry towers +1 garrison"
 		}
 	],
 	"WallSets": [

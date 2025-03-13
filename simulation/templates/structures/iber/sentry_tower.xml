@@ -11,6 +11,9 @@
       <Time>120</Time>
     </Tower>
   </Upgrade>
+    <GarrisonHolder>
+    <Max>6</Max>
+  </GarrisonHolder>
   <VisualActor>
     <Actor>structures/iberians/wooden_tower.xml</Actor>
   </VisualActor>

@@ -22,6 +22,9 @@
   <Identity>
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
     <GenericName>Champion Chariot Archer</GenericName>
+     <Requirements>
+      <Techs datatype="tokens">unlock_champion_chariots</Techs>
+    </Requirements>
   </Identity>
   <Sound>
     <SoundGroups>

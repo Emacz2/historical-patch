@@ -24,7 +24,7 @@
     <GenericName>Champion Chariot Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Javelineer</VisibleClasses>
     <Requirements>
-      <Techs datatype="tokens">-phase_city unlock_champion_chariots</Techs>
+      <Techs datatype="tokens">unlock_champion_chariots</Techs>
     </Requirements>
   </Identity>
   <Sound>

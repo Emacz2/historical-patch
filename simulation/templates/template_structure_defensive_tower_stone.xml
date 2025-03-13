@@ -10,7 +10,7 @@
     </Ranged>
   </Attack>
   <BuildingAI>
-    <DefaultArrowCount op="add">2</DefaultArrowCount>
+    <DefaultArrowCount op="add">3</DefaultArrowCount>
   </BuildingAI>
   <Cost>
     <BuildTime>150</BuildTime>
@@ -24,7 +24,7 @@
     <Height>15.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>8</Max>
+    <Max>10</Max>
   </GarrisonHolder>
   <Health>
     <Max>1200</Max>
