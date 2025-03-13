@@ -45,5 +45,8 @@
     <VisibleClasses datatype="tokens">ProMerc</VisibleClasses>
   </Identity>
   <ResourceGatherer disable=""/>
+  <UnitMotion>
+    <WalkSpeed>9.9</WalkSpeed>
+  </UnitMotion>
 </Entity>
 
