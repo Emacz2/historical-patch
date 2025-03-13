@@ -23,7 +23,7 @@
   <Vision>
     <Range op="add">10</Range>
   </Vision>
-   <UnitMotion>
+  <UnitMotion merge="">
     <WalkSpeed op="mul">1.05</WalkSpeed>
   </UnitMotion>
 </Entity>
