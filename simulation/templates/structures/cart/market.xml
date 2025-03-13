@@ -11,6 +11,23 @@
     <Civ>cart</Civ>
     <SpecificName>Šūq</SpecificName>
   </Identity>
+  <Upgrade>
+   <market_town>
+      <Entity>structures/cart/market_town</Entity>
+      <Tooltip>Upgrade your market, trains rank2 merc, faster batch training and small resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_town</Techs>
+      </Requirements>
+      <Cost>
+        <food>200</food>
+        <wood>100</wood>
+        <metal>15</metal>
+        <stone>15</stone>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>30</Time>
+   </market_town>
+  </Upgrade>
   <Market>
     <InternationalBonus op="add">0.1</InternationalBonus>
   </Market>
