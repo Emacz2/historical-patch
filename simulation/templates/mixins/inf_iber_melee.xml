@@ -8,6 +8,5 @@
       </Damage>
     </Melee>
   </Attack>
-  <ResourceGatherer disable=""/>
 </Entity>
 

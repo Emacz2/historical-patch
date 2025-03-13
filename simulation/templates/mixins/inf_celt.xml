@@ -23,10 +23,6 @@
   <Vision>
     <Range op="add">10</Range>
   </Vision>
-  <ResourceGatherer disable=""/>
- <Identity>
-    <VisibleClasses datatype="tokens">Celt</VisibleClasses>
-  </Identity>
    <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
   </UnitMotion>
