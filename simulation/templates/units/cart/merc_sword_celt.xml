@@ -12,7 +12,7 @@
     <Civ>cart</Civ>
     <GenericName>Celtic Mercenary Swordsman</GenericName>
     <SpecificName>Seḫīr Ḥerev</SpecificName>
-    <SelectionGroupName>units/cart/infantry_swordsman_gaul_b</SelectionGroupName>
+    <SelectionGroupName>units/cart/merc_sword_celt</SelectionGroupName>
     <Icon>units/cart/infantry_swordsman.png</Icon>
      <Requirements>
       <Techs datatype="tokens">phase_village</Techs>

@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity parent="merc_inf">
-  <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-    <Acceleration op="mul">1.1</Acceleration>
-  </UnitMotion>
  <Resistance>
     <Entity>
       <Damage>
@@ -28,5 +24,11 @@
     <Range op="add">10</Range>
   </Vision>
   <ResourceGatherer disable=""/>
+ <Identity>
+    <VisibleClasses datatype="tokens">Celt</VisibleClasses>
+  </Identity>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+  </UnitMotion>
 </Entity>
 
