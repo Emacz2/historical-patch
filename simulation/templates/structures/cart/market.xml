@@ -24,7 +24,6 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      -units/{civ}/infantry_melee_spearman_b
       units/{civ}/merc_spear
     </Entities>
   </Trainer>
