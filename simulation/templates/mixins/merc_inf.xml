@@ -39,7 +39,7 @@
     <metal>10</metal>
   </Loot>
   <Identity>
-    <VisibleClasses datatype="tokens">-Citizen Mercenary</VisibleClasses>
+    <VisibleClasses datatype="tokens">Merc</VisibleClasses>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>
