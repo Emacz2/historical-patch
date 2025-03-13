@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<Entity parent="mercenary">
+<Entity>
    <Cost>
    <BuildTime op="mul">0.8</BuildTime>
     <Resources>
@@ -43,7 +43,7 @@
     <RequiredXp>300</RequiredXp>
   </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
+    <VisibleClasses datatype="tokens">ProMerc</VisibleClasses>
   </Identity>
   <Loot>
     <food>0</food>
