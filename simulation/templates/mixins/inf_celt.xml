@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity parent="merc_inf">
+  <UnitMotion>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
+ <Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add">-1</Hack>
+       <Pierce op="add">-1.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Attack>
+    <Melee merge="">
+	    <Damage>
+        <Hack op="mul">1.05</Hack>
+      </Damage>
+    </Melee>
+    <Ranged merge="">
+	    <Damage>
+        <Hack op="mul">1.05</Hack>
+    </Ranged>
+  </Attack>
+  <Vision>
+    <Range op="add">10</Range>
+  </Vision>
+  <ResourceGatherer disable=""/>
+</Entity>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity parent="merc_inf">
+  <Attack>
+    <Melee>
+	    <Damage>
+        <Hack op="mul">1.05</Hack>
+        <Pierce op="mul">1.05</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <ResourceGatherer disable=""/>
+</Entity>
+

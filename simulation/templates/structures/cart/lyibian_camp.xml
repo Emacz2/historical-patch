@@ -17,14 +17,11 @@
   </Population>
   <Identity>
     <Civ>cart</Civ>
-    <SpecificName>Italic Village Embassy</SpecificName>
-    <Tooltip>Train Italic Mercenaries.</Tooltip>
+    <SpecificName>Lybian Arm Camp</SpecificName>
+    <Tooltip>Train Libian Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">Village</VisibleClasses>
+    <VisibleClasses datatype="tokens">Town</VisibleClasses>
     <Icon>structures/embassy_italic.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-     </Requirements>
   </Identity>
   <Loot>
     <metal>40</metal>

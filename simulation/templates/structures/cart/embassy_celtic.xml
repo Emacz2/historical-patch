@@ -38,8 +38,8 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{native}/infantry_swordsman_gaul_b
-      units/{native}/cavalry_swordsman_gaul_b
+      units/{civ}/merc_jav_celt
+      units/{civ}/merc_sword_celt
     </Entities>
   </Trainer>
   <VisualActor>
