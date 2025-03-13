@@ -21,6 +21,7 @@
     <Ranged merge="">
 	    <Damage>
         <Hack op="mul">1.05</Hack>
+      </Damage>
     </Ranged>
   </Attack>
   <Vision>
