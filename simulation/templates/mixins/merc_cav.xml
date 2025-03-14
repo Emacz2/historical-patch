@@ -45,7 +45,7 @@
     <RequiredXp>300</RequiredXp>
   </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">ProMerc</VisibleClasses>
+    <VisibleClasses datatype="tokens">PaidMerc</VisibleClasses>
   </Identity>
   <Loot>
     <food>0</food>

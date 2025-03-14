@@ -8,6 +8,15 @@
     <Civ>cart</Civ>
     <SpecificName>Šūq City</SpecificName> 
   </Identity>
+  <Trainer>
+    <BatchTimeModifier>0.5</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/merc_slinger_iber_2
+      units/{civ}/merc_spear_greek_2
+      -units/{civ}/merc_slinger_iber
+      -units/{civ}/merc_spear_greek
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
   </Obstruction>

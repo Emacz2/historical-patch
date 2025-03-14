@@ -21,7 +21,7 @@
     <Max op="add">50</Max>
   </Health>
  <UnitMotion>
- <WalkSpeed op="mul">0.98</WalkSpeed>
+  <WalkSpeed op="mul">0.98</WalkSpeed>
  </UnitMotion>
   <Identity>
     <GenericName>Spartan Olympic Hoplite</GenericName>

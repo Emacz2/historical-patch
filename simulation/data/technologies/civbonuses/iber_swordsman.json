@@ -1,0 +1,20 @@
+{
+	"genericName": "Spanish iron",
+	"autoResearch": true,
+	"description": "The most distinctive aspect of a Celtiberian soldier, was the sword (falcata). Made of high quality Spanish iron, the weapon was superb for close quarters fighting.",
+	"requirements": {
+		"any": [
+			{ "civ": "iber" }
+			
+		]
+	},
+	"icon": "wooden_walls.png",
+	"tooltip": "Iberian Swordsman 5% more Hack and Pierce dmg.",
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 }
+
+	
+	],
+	"affects": ["Infantry Swordsman"]
+}

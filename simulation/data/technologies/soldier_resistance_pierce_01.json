@@ -13,6 +13,6 @@
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
 	],
-	"affects": ["Soldier"],
+	"affects": ["Soldier !Helot !PaidMerc !Perioikoi !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="merc_cav|template_unit_cavalry_melee_swordsman">
+  <Attack>
+    <Melee>
+	    <Damage>
+        <Hack op="mul">1.1</Hack>
+        <Pierce op="mul">1.1</Pierce>
+        <Crush op="mul">1.1</Crush>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Identity>
+    <Civ>cart</Civ>
+    <GenericName>Celtic Mercenary Cavalry</GenericName>
+    <SpecificName>Ḥayyāl Ḥerev Raḫūv</SpecificName>
+    <SelectionGroupName>units/cart/merc_swordcav_celt</SelectionGroupName>
+    <Icon>units/cart/cavalry_swordsman_2.png</Icon>
+    <Rank>Advanced</Rank>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+  <Promotion>
+    <Entity>units/cart/merc_swordcav_celt_3</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/gauls/cavalry_swordsman_a_m.xml</Actor>
+  </VisualActor>
+</Entity>

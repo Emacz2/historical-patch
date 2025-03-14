@@ -29,7 +29,7 @@
   </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
-    <GenericName>Champion Swordsman</GenericName>
+    <GenericName>Champion Heavy Swordsman</GenericName>
   </Identity>
   <Sound>
     <SoundGroups>

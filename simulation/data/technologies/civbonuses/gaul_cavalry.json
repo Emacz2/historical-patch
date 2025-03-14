@@ -10,5 +10,5 @@
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Melee" },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "Melee" }
 	],
-	"affects": ["Cavalry !Hero"]
+	"affects": ["Cavalry Hero"]
 }

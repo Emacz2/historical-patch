@@ -40,6 +40,7 @@
     <Entities datatype="tokens">
       units/{civ}/merc_jav_celt
       units/{civ}/merc_sword_celt
+      units/{civ}/merc_swordcav_celt_2
     </Entities>
   </Trainer>
   <VisualActor>

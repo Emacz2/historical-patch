@@ -25,5 +25,5 @@
 		{ "value": "Loot/xp", "multiply": 1.2 }
 	
 	],
-	"affects": ["Merc2 Unit", "Merc Unit"]
+	"affects": ["Pro Unit", "Sup Unit"]
 }

@@ -25,5 +25,5 @@
 		{ "value": "Loot/xp", "multiply": 1.2 },
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.7 }
 	],
-	"affects": ["Merc3 Unit"]
+	"affects": ["Sup Unit"]
 }

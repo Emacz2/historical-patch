@@ -42,11 +42,8 @@
     <food>5</food>
   </Loot>
   <Identity>
-    <VisibleClasses datatype="tokens">-Worker -Citizen ProMerc</VisibleClasses>
+    <VisibleClasses datatype="tokens">-Worker PaidMerc</VisibleClasses>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed>9.9</WalkSpeed>
-  </UnitMotion>
   <ResourceGatherer disable=""/>
 </Entity>
 
