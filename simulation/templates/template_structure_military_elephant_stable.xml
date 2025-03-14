@@ -60,6 +60,7 @@
   <Researcher>
     <Technologies datatype="tokens">
       ele_health
+      ele_health2
     </Technologies>
   </Researcher>
   <Vision>
