@@ -20,7 +20,7 @@
 	"replaces": ["phase_town"],
 	"icon": "town_phase.png",
 	"researchTime": 40,
-	"tooltip": "Advance to town Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +0.5 capture points regeneration rate for garrisoned units.  Civ Center 25% more garrison capacity and 5 more range. Spartiates cost 15 more metal/wood and take 5% longer but gain 10% Hack/Pierce DMG.  All Infantry 0.5H/P resistance. ",
+	"tooltip": "Advance to town Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +0.5 capture points regeneration rate for garrisoned units.  Civ Center 25% more garrison capacity, +5 range, +2.5 of each resistance but -2% peirce dmg. Citizen Infantry 3% faster movement speed.",
 	"modifications": [
 		{ "value": "Capturable/GarrisonRegenRate", "add": 0.5, "affects": "Structure" },
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.25, "affects": "CivCentre" },
