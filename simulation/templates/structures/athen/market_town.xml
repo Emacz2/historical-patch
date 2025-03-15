@@ -28,6 +28,8 @@
   <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
+    units/{civ}/infantry_archer_market2
+     -units/{civ}/infantry_archer_market
     </Entities>
   </Trainer>
   <Obstruction>
