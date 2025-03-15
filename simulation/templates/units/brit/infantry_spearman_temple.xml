@@ -35,8 +35,8 @@
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.3</WalkSpeed>
-    <Acceleration op="mul">1.3</Acceleration>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Promotion>
     <Entity>units/brit/infantry_spearman_temple_2</Entity>
