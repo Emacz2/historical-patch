@@ -4,12 +4,12 @@
     <Ranged>
       <AttackName>Fire</AttackName>
       <Damage>
-        <Fire>50</Fire>
+        <Fire>20</Fire>
       </Damage>
       <MaxRange>15</MaxRange>
       <MinRange>10</MinRange>
       <PrepareTime>2000</PrepareTime>
-      <RepeatTime>2000</RepeatTime>
+      <RepeatTime>1000</RepeatTime>
       <Projectile>
         <Speed>10</Speed>
         <Spread>2</Spread>
@@ -36,11 +36,11 @@
     <Range>20</Range>
     <FriendlyFire>true</FriendlyFire>
     <Damage>
-      <Fire>100</Fire>
+      <Fire>50</Fire>
     </Damage>
   </DeathDamage>
   <Health>
-    <Max>300</Max>
+    <Max>250</Max>
   </Health>
   <Identity>
     <GenericName>Flamethrower</GenericName>

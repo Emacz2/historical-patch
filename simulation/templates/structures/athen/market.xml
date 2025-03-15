@@ -4,6 +4,23 @@
     <Civ>athen</Civ>
     <SpecificName>Emporion</SpecificName>
   </Identity>
+   <Upgrade>
+   <market_town>
+      <Entity>structures/athen/market_town</Entity>
+      <Tooltip>Upgrade your market, trains rank2 merc, faster batch training and small resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_town</Techs>
+      </Requirements>
+      <Cost>
+        <food>200</food>
+        <wood>100</wood>
+        <metal>15</metal>
+        <stone>15</stone>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>30</Time>
+   </market_town>
+  </Upgrade>
   <VisualActor>
     <Actor>structures/hellenes/market.xml</Actor>
   </VisualActor>
