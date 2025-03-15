@@ -21,6 +21,12 @@
     <wood>60</wood>
     <stone>0</stone>
   </Loot>
+  <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_spearman_temple
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="22.5" depth="22.5"/>
   </Obstruction>

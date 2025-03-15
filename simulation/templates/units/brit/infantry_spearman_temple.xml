@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee_spearman">
+<Builder>
+  <Entities datatype="tokens">
+      structures/brit/range
+  </Entities>
+</Builder>
+<Cost>
+    <Resources>
+      <metal op="add">10</metal>
+    </Resources>
+  </Cost>
+<Attack>
+    <Melee>
+      <Damage>
+        <Hack op="add">2</Hack>
+	      <Pierce op="add">1</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Identity>
+    <Civ>brit</Civ>
+    <SelectionGroupName>units/brit/infantry_spearman_b</SelectionGroupName>
+    <GenericName>Celtic Thrusting Spearman</GenericName>
+    <SpecificName>Catucos</SpecificName>
+    <Icon>units/brit/infantry_spearman.png</Icon>
+     <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.3</WalkSpeed>
+    <Acceleration op="mul">1.3</Acceleration>
+  </UnitMotion>
+  <Promotion>
+    <Entity>units/brit/infantry_temple_2</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/britons/infantry_spearman_e.xml</Actor>
+  </VisualActor>
+</Entity>

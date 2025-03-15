@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/brit/infantry_spearman_temple">
+<Builder disable=""/>
+<Attack>
+    <Melee>
+      <Damage>
+        <Hack op="add">1</Hack>
+	      <Pierce op="add">1</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Identity>
+    <Rank>Elite</Rank>
+  </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.3</WalkSpeed>
+    <Acceleration op="mul">1.3</Acceleration>
+  </UnitMotion>
+ <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/britons/infantry_spearman_e.xml</Actor>
+  </VisualActor>
+</Entity>
