@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hoplite|spec_champ|template_unit_champion_infantry_spearman">
+<Entity parent="hoplite|template_unit_champion_infantry_spearman">
   <Identity>
     <Civ>cart</Civ>
     <GenericName>Sacred Band Infantry</GenericName>
     <SpecificName>Sacred Band of Ba'al</SpecificName>
     <Icon>units/cart/champion_infantry.png</Icon>
+    <Tooltip>Can slowly heal other soldiers.</Tooltip>
      <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+    <Heal>
+    <Range>10</Range>
+    <RangeOverlay>
+      <LineTexture>heal_overlay_range.png</LineTexture>
+      <LineTextureMask>heal_overlay_range_mask.png</LineTextureMask>
+      <LineThickness>0.35</LineThickness>
+    </RangeOverlay>
+    <Health>1</Health>
+    <Interval>1000</Interval>
+    <UnhealableClasses datatype="tokens"/>
+    <HealableClasses datatype="tokens">Soldier</HealableClasses>
+  </Heal>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c.xml</Actor>
   </VisualActor>
