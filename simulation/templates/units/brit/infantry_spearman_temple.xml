@@ -32,7 +32,6 @@
     <GenericName>Celtic Thrusting Spearman</GenericName>
     <SpecificName>Catucos</SpecificName>
     <Icon>units/brit/infantry_spearman.png</Icon>
-     <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>
