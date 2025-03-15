@@ -39,7 +39,7 @@
     <Acceleration op="mul">1.3</Acceleration>
   </UnitMotion>
   <Promotion>
-    <Entity>units/brit/infantry_temple_2</Entity>
+    <Entity>units/brit/infantry_spearman_temple_2</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/britons/infantry_spearman_e.xml</Actor>
