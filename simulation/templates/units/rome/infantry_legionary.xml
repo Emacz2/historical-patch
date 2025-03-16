@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_melee_swordsman">
-<Auras datatype="tokens">
+  <Auras datatype="tokens">
     units/testudo
   </Auras>
   <Builder>
@@ -17,7 +17,7 @@
   </Cost>
   <Loot>
     <wood>5</wood>
-    <metal>2</metal>
+    <metal>5</metal>
   </Loot>
   <Identity>
     <GenericName>Marian Legionary</GenericName>
@@ -30,6 +30,9 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.98</WalkSpeed>
+  </UnitMotion>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>
