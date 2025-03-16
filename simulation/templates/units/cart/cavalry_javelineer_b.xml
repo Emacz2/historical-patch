@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_cavalry_ranged_javelineer">
- <Health>
-    <Max op="add">-25</Max>
-  </Health>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-0.5</Hack>
-        <Pierce op="add">-0.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
-    <UnitMotion>
-    <WalkSpeed op="mul">1.1</WalkSpeed>
-    <RunMultiplier>1.25</RunMultiplier>
-  </UnitMotion>
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Numidian Cavalry</GenericName>
+    <GenericName>Liby-Phoenicians Cavalry</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/cart/cavalry_javelinist.png</Icon>
   </Identity>
