@@ -9,6 +9,18 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
+   <Heal>
+    <Range>15</Range>
+    <RangeOverlay>
+      <LineTexture>heal_overlay_range.png</LineTexture>
+      <LineTextureMask>heal_overlay_range_mask.png</LineTextureMask>
+      <LineThickness>0.35</LineThickness>
+    </RangeOverlay>
+    <Health>0.75</Health>
+    <Interval>1000</Interval>
+    <UnhealableClasses datatype="tokens"/>
+    <HealableClasses datatype="tokens">Soldier</HealableClasses>
+  </Heal>
   <VisualActor>
     <Actor>units/carthaginians/cavalry_spearman_c_m.xml</Actor>
   </VisualActor>
