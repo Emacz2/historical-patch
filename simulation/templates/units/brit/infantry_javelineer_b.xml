@@ -5,6 +5,12 @@
       structures/brit/range
   </Entities>
 </Builder>
+ <Cost>
+    <Resources>
+      <wood op="add">-5</wood>
+      <metal op="add">5</metal>
+    </Resources>
+  </Cost>
   <Health>
     <DamageVariants>
       <lightdamage>0.80</lightdamage>
