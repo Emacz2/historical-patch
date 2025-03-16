@@ -18,7 +18,7 @@
 	"replaces": ["phase_city"],
 	"icon": "city_phase.png",
 	"researchTime": 60,
-	"tooltip": "Advance to City Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +20% damage and +1 capture points regeneration rate for garrisoned units.",
+	"tooltip": "Advance to City Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +0.5 capture points regeneration rate for garrisoned units. Civ Center 40% more garrison capacity, 5 more range +7.5 pierce resistance +5 Hack resistance +2.5 Crush resistance but -3% pierce dmg.  Chariots -20% train time. Druids +15 health.",
 	"modifications": [
 		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.25, "affects": "CivCentre" },
@@ -28,8 +28,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.1, "affects": "Worker" },
-		{ "value": "Cost/BuildTime", "multiply": 0.80, "affects": "Chariot" }
+		{ "value": "Cost/BuildTime", "multiply": 0.80, "affects": "Chariot" },
+		{ "value": "Health/Max", "add": 15, "affects": "Healer"}
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
 }
