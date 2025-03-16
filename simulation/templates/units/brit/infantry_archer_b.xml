@@ -14,7 +14,7 @@
       <Techs datatype="tokens">unlock_archer</Techs>
     </Requirements>
   </Identity>
-    <Promotion disable=""/>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/brits/infantry_archer_b.xml</Actor>
   </VisualActor>
