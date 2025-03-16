@@ -11,8 +11,8 @@
   </Builder>
   <Cost>
     <Resources>
-      <metal op="add">5</metal>
-      <wood op="add">10</wood>
+      <metal op="add">10</metal>
+      <wood op="add">5</wood>
     </Resources>
   </Cost>
   <Loot>

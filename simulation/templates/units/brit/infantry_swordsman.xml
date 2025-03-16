@@ -15,7 +15,7 @@
     <Rank>Elite</Rank>
     <Civ>brit</Civ>
     <SelectionGroupName>units/brit/infantry_swordsman</SelectionGroupName>
-    <GenericName>Celtic Axeman</GenericName>
+    <GenericName>Celtic Elite Swordsman</GenericName>
     <SpecificName>Catucos</SpecificName>
     <Icon>units/brit/brit_infantry_axe.png</Icon>
      <Requirements>
