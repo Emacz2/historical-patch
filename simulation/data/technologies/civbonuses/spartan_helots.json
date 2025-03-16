@@ -4,7 +4,7 @@
 	"description": "The Helots where Spartans slaves. They were forced to do manual labor while the Spartiates trained.  Yet they were still forced to fight despite having no training and no armor",
 	"requirements": { "civ": "spart" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Helot units 15% faster gathering, train 20% faster and take 20% less food 30% less wood, but attack 20% slower, 10% less dmg, ranged units are 25% less accurated, have no armor and only 80 health.  They don't get upgrades from forge.",
+	"tooltip": "Helot units 15% faster gathering, train 10% faster and cost 15 less wood, 10 less food; but attack .5 seconds slower, 10% less dmg, ranged units are 25% less accurated. They don't wear armor and only 80 health.  They cant promote or recieve upgrades from forge.",
 	"modifications": [
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.15},
 		{ "value": "Attack/Ranged/Spread", "multiply": 1.25 },
