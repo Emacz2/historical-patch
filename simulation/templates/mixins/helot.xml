@@ -3,7 +3,7 @@
   <Attack>
   <Melee merge="">
   <PrepareTime op="add">500</PrepareTime>
-  <RepeatTime op="add">400</RepeatTime>
+  <RepeatTime op="add">500</RepeatTime>
   </Melee>
   <Ranged merge="">
   <PrepareTime op="add">500</PrepareTime>
