@@ -2,12 +2,12 @@
 <Entity>
   <Attack>
   <Melee merge="">
-  <PrepareTime op="add">500</PrepareTime>
-  <RepeatTime op="add">500</RepeatTime>
+  <PrepareTime op="add">250</PrepareTime>
+  <RepeatTime op="add">250</RepeatTime>
   </Melee>
   <Ranged merge="">
-  <PrepareTime op="add">500</PrepareTime>
-  <RepeatTime op="add">500</RepeatTime>
+  <PrepareTime op="add">250</PrepareTime>
+  <RepeatTime op="add">250</RepeatTime>
 </Ranged>
 </Attack>
   <Cost>
