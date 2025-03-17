@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
+  <Attack>
+  <Melee merge="">
+  <PrepareTime op="add">250</PrepareTime>
+  <RepeatTime op="add">250</RepeatTime>
+  </Melee>
+  <Ranged merge="">
+  <PrepareTime op="add">250</PrepareTime>
+  <RepeatTime op="add">250</RepeatTime>
+</Ranged>
+</Attack>
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
     <Resources>
-      <wood op="add">-10</wood>
+      <food>50</food>
+      <wood>40</wood>
+      <stone>0</stone>
+      <metal>0</metal>
     </Resources>
   </Cost>
   <Identity>
