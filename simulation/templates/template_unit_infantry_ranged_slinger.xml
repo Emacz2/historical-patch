@@ -7,7 +7,7 @@
         <Pierce>12.5</Pierce>
         <Crush>1.1</Crush>
       </Damage>
-      <MaxRange>50</MaxRange>
+      <MaxRange>40</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1500</RepeatTime>
       <Projectile>
@@ -22,8 +22,8 @@
   </Attack>
   <Cost>
     <Resources>
-      <stone>20</stone>
-      <wood>30</wood>
+      <stone>10</stone>
+      <wood>40</wood>
     </Resources>
   </Cost>
   <Identity>
@@ -32,7 +32,7 @@
   </Identity>
   <Loot>
     <stone>3</stone>
-    <wood>2</wood>
+    <wood>4</wood>
   </Loot>
   <Sound>
     <SoundGroups>
