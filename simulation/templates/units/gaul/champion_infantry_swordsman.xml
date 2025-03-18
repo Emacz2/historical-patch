@@ -4,6 +4,9 @@
     <Civ>gaul</Civ>
     <SpecificName>Soliduros</SpecificName>
     <Icon>units/gaul/champion_infantry.png</Icon>
+        <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/gauls/infantry_swordsman_c.xml</Actor>

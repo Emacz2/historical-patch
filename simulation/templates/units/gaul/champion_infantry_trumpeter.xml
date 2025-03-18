@@ -7,6 +7,9 @@
     <Civ>gaul</Civ>
     <SpecificName>Carnucos</SpecificName>
     <Icon>units/gaul/champion_swordsman_carnyx.png</Icon>
+        <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/gauls/infantry_carnyx_c.xml</Actor>
