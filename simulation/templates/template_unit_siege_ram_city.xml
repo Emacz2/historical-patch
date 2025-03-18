@@ -68,8 +68,8 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">0.65</WalkSpeed>
-    <Acceleration op="mul">0.65</Acceleration>
+    <WalkSpeed op="mul">0.55</WalkSpeed>
+    <Acceleration op="mul">0.55</Acceleration>
   </UnitMotion>
   <Vision>
     <Range>80</Range>

@@ -11,8 +11,8 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>5</Pierce>
-        <Crush>1.5</Crush>
+        <Pierce>1.5</Pierce>
+        <Crush>0.5</Crush>
       </Damage>
       <MaxRange>25</MaxRange>
       <Origin>
@@ -104,8 +104,8 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">0.7</WalkSpeed>
-    <Acceleration op="mul">0.7</Acceleration>
+    <WalkSpeed op="mul">0.5</WalkSpeed>
+    <Acceleration op="mul">0.5</Acceleration>
   </UnitMotion>
   <Vision>
     <Range>80</Range>

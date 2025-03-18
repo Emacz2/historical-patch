@@ -88,8 +88,8 @@
     <DefaultStance>standground</DefaultStance>
   </UnitAI>
   <UnitMotion>
-    <WalkSpeed op="mul">0.75</WalkSpeed>
-    <Acceleration op="mul">0.75</Acceleration>
+    <WalkSpeed op="mul">0.6</WalkSpeed>
+    <Acceleration op="mul">0.6</Acceleration>
   </UnitMotion>
   <Vision>
     <Range>100</Range>
