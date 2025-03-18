@@ -14,8 +14,8 @@
     <SelectionGroupName>units/brit/infantry_axeman_a</SelectionGroupName>
     <GenericName>Rhaetian Axeman</GenericName>
      <Icon>units/gaul/gaul_infantry_axe.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">unlock_axeman_gauls</Techs>
+      <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Promotion>

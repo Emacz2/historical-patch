@@ -3,10 +3,10 @@
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/infantry_archer_b</SelectionGroupName>
-    <GenericName>Gaul Archer</GenericName>
+    <GenericName>Ruthenian Archer</GenericName>
     <Icon>units/gaul/gaul_infantry_archer.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">unlock_archer</Techs>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Promotion>

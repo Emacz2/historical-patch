@@ -3,8 +3,10 @@
 	"affects": ["Swordsman"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.9 }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
+		{ "value": "Promotion/RequiredXp", "multiply": 0.85 }
 	],
 	"auraName": "Conscription",
-	"auraDescription": "Swordsman −10% training time."
+	"auraDescription": "Swordsman 5% more hack dmg, +.5 pierce resistance, and 15% faster promtion ."
 }
