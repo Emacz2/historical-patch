@@ -9,13 +9,14 @@
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_village" },
+			{ "tech": "phase_town" },
+			{ "civ": "gaul" },
 			{ "civ": "pers" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
 	"researchTime": 25,
-	"tooltip": "Unlock the ability to train axeman from baracks.",
+	"tooltip": "Unlock the ability to recruit Rhaetian Axeman from the Alps. They start at rank2, builders only and are produced from the assembly .",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
