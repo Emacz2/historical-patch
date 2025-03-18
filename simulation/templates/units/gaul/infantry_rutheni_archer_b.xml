@@ -2,15 +2,19 @@
 <Entity parent="template_unit_infantry_ranged_archer">
   <Identity>
     <Civ>gaul</Civ>
-    <SelectionGroupName>units/gaul/infantry_archer_b</SelectionGroupName>
+    <SelectionGroupName>units/gaul/infantry_rutheni_archer_b</SelectionGroupName>
     <GenericName>Ruthenian Archer</GenericName>
     <Icon>units/gaul/gaul_infantry_archer.png</Icon>
      <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <Acceleration op="add">2.5</Acceleration>
+  </UnitMotion>
   <Promotion>
-    <Entity>units/gaul/infantry_archer_a</Entity>
+    <Entity>units/gaul/infantry_rutheni_archer_a</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/gauls/infantry_archer_b.xml</Actor>

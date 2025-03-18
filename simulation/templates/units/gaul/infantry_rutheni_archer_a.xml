@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/gaul/infantry_archer_b">
+<Entity parent="units/gaul/infantry_rutheni_archer_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/gaul/infantry_archer_e</Entity>
+    <Entity>units/gaul/infantry_rutheni_archer_e</Entity>
   </Promotion>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <Acceleration op="add">2.5</Acceleration>
+  </UnitMotion>
   <VisualActor>
     <Actor>units/gauls/infantry_archer_a.xml</Actor>
   </VisualActor>
