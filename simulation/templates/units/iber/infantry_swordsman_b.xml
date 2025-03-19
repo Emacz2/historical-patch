@@ -10,9 +10,6 @@
     <SelectionGroupName>units/iber/infantry_swordsman_b</SelectionGroupName>
     <SpecificName>Ezpatari</SpecificName>
     <Icon>units/iber/infantry_swordsman.png</Icon>
-     <Requirements>
-      <Techs datatype="tokens">unlock_swordsman</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/iber/infantry_swordsman_a</Entity>
