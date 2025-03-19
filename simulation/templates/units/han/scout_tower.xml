@@ -18,7 +18,6 @@
   <Identity>
     <VisibleClasses datatype="tokens">WatchTower</VisibleClasses>
     <GenericName>Moving Tower</GenericName>
-  <RequiredTechnology>phase_village</RequiredTechnology>
   </Identity>
   <Loot>
     <xp>100</xp>
