@@ -26,7 +26,7 @@
     <Civ>gaul</Civ>
     <GenericName>Assembly of Princes</GenericName>
     <SpecificName>Remogantion</SpecificName>
-    <Tooltip>Recruit and soliders from various Celtic tribes to join your forces! Train Champion infantry and Heroies.</Tooltip>
+    <Tooltip> Train Champion infantry and Heroes.</Tooltip>
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">City Council</VisibleClasses>
     <Icon>structures/tholos.png</Icon>
@@ -70,8 +70,6 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/infantry_rhaetian_axeman
-      units/{civ}/infantry_rutheni_archer_b
       units/{civ}/champion_infantry_trumpeter
       units/{civ}/champion_infantry_swordsman
       units/{civ}/hero_brennus
