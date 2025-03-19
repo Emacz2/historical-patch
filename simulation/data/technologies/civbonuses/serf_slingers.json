@@ -13,7 +13,7 @@
 		]
 	},
 	"icon": "wooden_walls.png",
-	"tooltip": "Slingers 5% faster gathering rate, 2% faster movement speed, 10% less train time, cost 10 less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.  They do not promote.",
+	"tooltip": "Slingers 5% faster gathering rate, 2% faster movement speed, 10% less train time and 50 food 30 wood 10 stone, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.  They do not promote.",
 	"modifications": [
 		{"value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 },
 		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.10 },
@@ -22,7 +22,9 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "multiply": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "multiply": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Crush", "multiply": 0.5 },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 },
+		{ "value": "Cost/Resources/wood", "add": -10},
+		{ "value": "Cost/Resources/stone", "add": 10}
 
 
 	],
