@@ -11,6 +11,7 @@
   <Identity>
     <Civ>kush</Civ>
     <SpecificName>Pr-ỉwn n ms</SpecificName>
+    <Tooltip>May be built in own or neutral terirories. Build rams and research siege technologies.</Tooltip>
   </Identity>
   <VisualActor>
     <Actor>structures/kushites/workshop.xml</Actor>

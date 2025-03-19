@@ -10,6 +10,7 @@
   </Capturable>
   <Identity>
     <Civ>maur</Civ>
+    <Tooltip>May be built in own or neutral terirories. Build rams and research siege technologies.</Tooltip>
   </Identity>
   <VisualActor>
     <Actor>structures/mauryas/workshop.xml</Actor>

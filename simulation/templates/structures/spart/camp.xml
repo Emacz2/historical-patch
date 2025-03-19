@@ -47,7 +47,7 @@
    <Civ>spart</Civ>
     <GenericName>Perioikoi Camp</GenericName>
     <SpecificName>Castra</SpecificName>
-    <Tooltip>Needs to be built in neutral territory. Trains Periokoi units and used as a dropsite for resoruces.</Tooltip>
+    <Tooltip>May be built in own or neutral teritory. Trains Periokoi/Helot units and used as a dropsite for resoruces. Adds 5 to population.</Tooltip>
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Village Camp</VisibleClasses>
     <Icon>structures/roman_camp.png</Icon>

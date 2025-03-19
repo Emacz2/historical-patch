@@ -14,6 +14,7 @@
   <Identity>
     <Civ>brit</Civ>
     <SpecificName>Capanon</SpecificName>
+    <Tooltip>May be built in own or neutral terirories.</Tooltip>
   </Identity>
   <Obstruction>
     <Static width="16.0" depth="16.0"/>

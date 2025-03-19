@@ -11,6 +11,7 @@
   <Identity>
     <Civ>brit</Civ>
     <SpecificName>Miletucerdon</SpecificName>
+    <Tooltip>May be built in own or neutral terirories. Build rams and research siege technologies.</Tooltip>
   </Identity>
   <VisualActor>
     <Actor>structures/britons/workshop.xml</Actor>
