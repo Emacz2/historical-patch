@@ -13,13 +13,14 @@
     <Rank>Advanced</Rank>
     <SelectionGroupName>units/brit/infantry_axeman_a</SelectionGroupName>
     <GenericName>Rhaetian Axeman</GenericName>
+    <Tooltip>Rhaetian Axeman from the Alps were know for their proficiency with the Hellebardenaxt</Tooltip>
      <Icon>units/gaul/gaul_infantry_axe.png</Icon>
       <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/gaul/infantry_axeman_e</Entity>
+    <Entity>units/gaul/infantry_rhaetian_axeman_e</Entity>
   </Promotion>
  <VisualActor>
     <Actor>units/gauls/infantry_axeman_a.xml</Actor>
