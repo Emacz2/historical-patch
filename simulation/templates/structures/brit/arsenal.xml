@@ -3,6 +3,11 @@
   <BuildRestrictions>
     <Territory>own neutral</Territory>
   </BuildRestrictions>
+  <Capturable>
+    <CapturePoints op="mul">2</CapturePoints>
+    <RegenRate>7.5</RegenRate>
+    <GarrisonRegenRate>5.0</GarrisonRegenRate>
+  </Capturable>
   <Identity>
     <Civ>brit</Civ>
     <SpecificName>Miletucerdon</SpecificName>
