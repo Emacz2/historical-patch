@@ -4,7 +4,7 @@
 	"affects": ["WatchTower"],
 	"affectedPlayers": ["Player", "MutualAlly"],
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "add": 1.5 },
+		{ "value": "UnitMotion/WalkSpeed", "add": 1.25 },
 		{ "value": "UnitMotion/Acceleration", "add": 1 },
 		{ "value": "Position/TurnRate", "add": 0.5 }
 	
