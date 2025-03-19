@@ -8,8 +8,6 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "brit" },
-			{ "civ": "gaul" },
 			{ "civ": "han" }
 		]
 	},
