@@ -11,7 +11,7 @@
   <Identity>
     <Civ>gaul</Civ>
     <Rank>Advanced</Rank>
-    <SelectionGroupName>units/brit/infantry_axeman_a</SelectionGroupName>
+    <SelectionGroupName>units/brit/infantry_rhaetian_axeman_a</SelectionGroupName>
     <GenericName>Rhaetian Axeman</GenericName>
     <Tooltip>Rhaetian Axeman from the Alps were know for their proficiency with the Hellebardenaxt</Tooltip>
      <Icon>units/gaul/gaul_infantry_axe.png</Icon>
