@@ -24,12 +24,6 @@
   <Obstruction>
     <Static width="19.0" depth="19.0"/>
   </Obstruction>
-   <Trainer>
-    <BatchTimeModifier>0.8</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear_gladiator
-    </Entities>
-  </Trainer>
   <VisualActor>
     <Actor>structures/romans/temple_vesta.xml</Actor>
     <FoundationActor>structures/fndn_5x5.xml</FoundationActor>

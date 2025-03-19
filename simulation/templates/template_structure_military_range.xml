@@ -21,7 +21,7 @@
   <Identity>
     <GenericName>Practice Range</GenericName>
     <SelectionGroupName>template_structure_military_range</SelectionGroupName>
-    <Tooltip>Train Champion Ranged Units and research technologies.</Tooltip>
+    <Tooltip>Train Advanced CS and Champion Ranged Units and research technologies.</Tooltip>
     <VisibleClasses datatype="tokens">Town Range</VisibleClasses>
     <Icon>structures/range.png</Icon>
     <Requirements>
@@ -53,7 +53,9 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/kardakes_skirmisher
+      units/{civ}/infantry_javelineer_a
+      units/{civ}/infantry_archer_a
+      units/{civ}/infantry_crossbowman_a
       units/{civ}/champion_infantry_javelineer
       units/{civ}/champion_infantry_slinger
       units/{civ}/champion_infantry_archer
