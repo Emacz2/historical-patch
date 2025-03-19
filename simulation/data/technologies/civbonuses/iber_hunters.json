@@ -1,0 +1,14 @@
+{
+	"genericName": "Execellent hunters",
+	"autoResearch": true,
+	"description": "Gathers 10% faster meat garthering.",
+	"requirements": { "civ": "iber" },
+	"icon": "wooden_walls.png",
+	"tooltip": "All soldiers +15 range of site.",
+	"modifications": 
+[
+	{ "value": "ResourceGatherer/Rates/food.meat", "multiply": 1.1 }
+	
+	],
+	"affects": ["Gathers"]
+}
