@@ -43,10 +43,9 @@
     <Technologies datatype="tokens">
       barracks_batch_training
       pair_unlock_champions_sele
-      guerilla_tatics_slinger
-      guerilla_tatics_spear
-      guerilla_tatics_sword
-      guerilla_tatics_jav
+      heavy_jav
+      heavy_spear
+      heavy_sword
     </Technologies>
   </Researcher>
   <Sound>

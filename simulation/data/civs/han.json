@@ -33,9 +33,6 @@
 		},
 		{
 			"Template": "units/han/cavalry_swordsman_b"
-		},
-		{
-			"Template": "units/han/support_minister_1"
 		}
 	],
 	"AINames": [
