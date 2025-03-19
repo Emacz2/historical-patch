@@ -10,6 +10,13 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+  <Cost>
+    <Resources>
+      <food>55</food>
+      <wood>65</wood>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
   <UnitMotion>
     <WalkSpeed op="mul">1.03</WalkSpeed>
     <Acceleration op="add">2.5</Acceleration>

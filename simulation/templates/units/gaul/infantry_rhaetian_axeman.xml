@@ -4,14 +4,19 @@
     <Entities datatype="tokens">
       structures/gaul/assembly
     </Entities>
-  </Builder>
-  <Builder>
     <Rate>1.25</Rate>
   </Builder>
+  <Cost>
+    <Resources>
+      <food>60</food>
+      <wood>40</wood>
+      <metal>15</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>gaul</Civ>
     <Rank>Advanced</Rank>
-    <SelectionGroupName>units/brit/infantry_rhaetian_axeman_a</SelectionGroupName>
+    <SelectionGroupName>units/brit/infantry_rhaetian_axeman</SelectionGroupName>
     <GenericName>Rhaetian Axeman</GenericName>
     <Tooltip>Rhaetian Axeman from the Alps were know for their proficiency with the Hellebardenaxt</Tooltip>
      <Icon>units/gaul/gaul_infantry_axe.png</Icon>
@@ -20,7 +25,7 @@
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/gaul/infantry_rhaetian_axeman_e</Entity>
+    <Entity>units/gaul/infantry_rhaetian_axeman_b</Entity>
   </Promotion>
  <VisualActor>
     <Actor>units/gauls/infantry_axeman_a.xml</Actor>

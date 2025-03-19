@@ -13,9 +13,17 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
+  <Cost>
+    <Resources>
+      <food>60</food>
+      <wood>55</wood>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
+    <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/infantry_spearman_neodamodes</SelectionGroupName>
     <GenericName>Neodamodes Hoplite</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>

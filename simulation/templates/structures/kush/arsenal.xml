@@ -4,6 +4,9 @@
     <Civ>kush</Civ>
     <SpecificName>Pr-ỉwn n ms</SpecificName>
   </Identity>
+  <BuildRestrictions>
+    <Territory>own neutral enemy</Territory>
+  </BuildRestrictions>
   <VisualActor>
     <Actor>structures/kushites/workshop.xml</Actor>
   </VisualActor>

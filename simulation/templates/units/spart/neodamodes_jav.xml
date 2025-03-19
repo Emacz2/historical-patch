@@ -9,10 +9,19 @@
       -structures/{civ}/barracks
       -structures/{civ}/stable
     </Entities>
+    <Rate>1.25</Rate>
   </Builder>
+  <Cost>
+    <Resources>
+      <food>55</food>
+      <wood>60</wood>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
+    <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/neodamodes_jav</SelectionGroupName>
     <GenericName>Neodamodes Skirmisher</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>

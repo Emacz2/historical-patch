@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="polearm|neodamodes|hoplite|units/spart/infantry_spearman_neodamodes">
+  <Builder>
+    <Rate>1.0</Rate>
+  </Builder>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>

@@ -3,6 +3,9 @@
   <Identity>
     <Civ>iber</Civ>
   </Identity>
+  <BuildRestrictions>
+    <Territory>own neutral enemy</Territory>
+  </BuildRestrictions>
   <VisualActor>
     <Actor>structures/iberians/workshop.xml</Actor>
   </VisualActor>
