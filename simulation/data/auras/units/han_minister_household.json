@@ -1,0 +1,14 @@
+{
+	"type": "global",
+	"affects": ["Champion", "!ImperialMinistry"],
+	"modifications": [
+	
+		{
+			"value": "Researcher/TechCostMultiplier/time",
+			"multiply": 0.9
+		}
+	],
+	"auraName": "Excellency of Works",
+	"auraDescription": "Champions -10% train time.",
+	"stackable": true
+}

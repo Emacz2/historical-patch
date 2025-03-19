@@ -1,0 +1,29 @@
+{
+	"type": "garrison",
+	"affects": ["Structure", "!ImperialMinistry"],
+	"modifications": [
+		{
+			"value": "Researcher/TechCostMultiplier/wood",
+			"multiply": 0.90
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/food",
+			"multiply": 0.90
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/metal",
+			"multiply": 0.90
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/stone",
+			"multiply": 0.90
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/time",
+			"multiply": 0.8
+		}
+	],
+	"auraName": "Excellency of Works",
+	"auraDescription": "Tech research cost 10% less resources and -20% research time when Minister is garrisoned.",
+	"stackable": true
+}

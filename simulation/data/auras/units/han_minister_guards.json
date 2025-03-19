@@ -1,0 +1,14 @@
+{
+	"type": "global",
+	"affects": ["Citizen Infantry"],
+	"modifications": [
+	
+		{
+			"value": "Researcher/TechCostMultiplier/time",
+			"multiply": 0.9
+		}
+	],
+	"auraName": "Excellency of Works",
+	"auraDescription": "Citizen infantry -10% train time.",
+	"stackable": true
+}

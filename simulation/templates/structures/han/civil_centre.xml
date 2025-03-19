@@ -25,6 +25,7 @@
       units/{civ}/infantry_pikeman_b
       units/{civ}/infantry_crossbowman_b
       units/{civ}/cavalry_swordsman_b
+      units/{civ}/scout_tower
     </Entities>
   </Trainer>
   <Upgrade>
