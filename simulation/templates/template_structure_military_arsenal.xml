@@ -13,6 +13,9 @@
     <Square width="30.0" depth="30.0"/>
     <Height>12.0</Height>
   </Footprint>
+  <BuildRestrictions>
+    <Territory>own ally</Territory>
+  </BuildRestrictions>
   <GarrisonHolder>
     <Max>6</Max>
     <List datatype="tokens">Siege Infantry</List>
