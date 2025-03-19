@@ -9,12 +9,12 @@
 		]
 	},
 	"icon": "wooden_walls.png",
-	"tooltip": "Iberian Swordsman 5% more Hack and Pierce dmg.",
+	"tooltip": "Iberian Swordsman 5% more Hack/Pierce dmg and +0.5 Pierce resistance.",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 }
-
-	
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 }
+		
 	],
 	"affects": ["Infantry Swordsman"]
 }

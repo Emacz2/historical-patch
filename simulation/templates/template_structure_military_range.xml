@@ -39,7 +39,7 @@
     <Technologies datatype="tokens">
       cavalry_health2
       unlock_champion_chariots
-      chariot_range
+      chariot_range_jav
       chariot_health
       increased_range
     </Technologies>

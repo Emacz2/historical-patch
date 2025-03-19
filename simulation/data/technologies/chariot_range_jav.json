@@ -5,7 +5,12 @@
 		"food": 250,
 		"metal": 250
 	},
-	"requirements": { "tech": "phase_city" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "civ": "brit" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "archery_tradition.png",
 	"researchTime": 30,
