@@ -12,7 +12,7 @@
     <Height>6.0</Height>
   </Footprint>
   <Health>
-    <Max>750</Max>
+    <Max>825</Max>
   </Health>
   <Identity>
     <Classes datatype="tokens">FastMoving</Classes>

@@ -28,7 +28,7 @@
   <Guard/>
   <Health>
     <DeathType>corpse</DeathType>
-    <Max>75</Max>
+    <Max>80</Max>
     <RegenRate>-0.5</RegenRate>
     <IdleRegenRate>0.5</IdleRegenRate>
     <Unhealable>true</Unhealable>

@@ -11,7 +11,7 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>600</Max>
+    <Max>650</Max>
   </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>

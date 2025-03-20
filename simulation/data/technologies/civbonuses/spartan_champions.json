@@ -7,7 +7,7 @@
 	"requirements": { "civ": "spart" },
 	"modifications": [
 		{ "value": "Attack/Melee/RepeatTime", "add": -100},
-		{ "value": "Health/Max", "add": -25},
+		{ "value": "Health/Max", "add": -20},
 		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.85},

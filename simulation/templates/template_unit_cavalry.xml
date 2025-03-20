@@ -20,7 +20,7 @@
     </Slaughter>
   </Attack>
    <Health>
-    <Max>150</Max>
+    <Max>165</Max>
   </Health>
   <Cost>
     <BuildTime>15</BuildTime>
