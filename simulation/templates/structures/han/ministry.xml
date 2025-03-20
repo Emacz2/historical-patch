@@ -80,7 +80,15 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/support_minister
+      units/{civ}/support_minister_1
+      units/{civ}/support_minister_2
+      units/{civ}/support_minister_3
+      units/{civ}/support_minister_4
+      units/{civ}/support_minister_5
+      units/{civ}/support_minister_6
+      units/{civ}/support_minister_7
+      units/{civ}/support_minister_8     
+      units/{civ}/support_minister_9
     </Entities>
   </Trainer>
   <Vision>

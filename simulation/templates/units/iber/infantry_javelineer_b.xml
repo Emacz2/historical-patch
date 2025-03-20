@@ -10,6 +10,7 @@
     <SelectionGroupName>units/iber/infantry_javelineer_b</SelectionGroupName>
     <SpecificName>Lusitano Ezpatari</SpecificName>
     <Icon>units/iber/infantry_javelinist.png</Icon>
+    <Tooltip>Gain an additional +0.5 pierce resistance when promotes to rank 2.</Tooltip>
     <Requirements>
       <Techs datatype="tokens">unlock_skirm</Techs>
     </Requirements>
