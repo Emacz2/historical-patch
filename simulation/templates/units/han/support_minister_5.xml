@@ -23,10 +23,8 @@
     </Melee>
   </Attack>
   <Auras datatype="tokens">
-    units/han_minister_garrison
-    units/han_minister_gathering
-    units/han_minister_building
-    units/han_minister_garrison_ministry
+    units/han_minister_herald
+    units/han_minister_herald2
   </Auras>
   <Cost>
     <Population>1</Population>
@@ -42,7 +40,7 @@
   <Identity>
     <Civ>han</Civ>
     <GenericName>Imperial Minister</GenericName>
-    <SpecificName>Qīng</SpecificName>
+    <SpecificName>Minister Herald</SpecificName>
     <Tooltip>Use to boost the efficiency of nearby units and buildings. Garrison within a building to boost the efficiency of its production queue. Only Han buildings can garrison ministers.</Tooltip>
     <Classes datatype="tokens">Organic Human</Classes>
     <VisibleClasses datatype="tokens">Minister</VisibleClasses>
