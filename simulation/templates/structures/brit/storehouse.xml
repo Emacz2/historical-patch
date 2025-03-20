@@ -5,7 +5,7 @@
   </BuildRestrictions>
   <Capturable>
     <CapturePoints op="mul">2</CapturePoints>
-    <RegenRate>7.5</RegenRate>
+    <RegenRate>10</RegenRate>
     <GarrisonRegenRate>5.0</GarrisonRegenRate>
   </Capturable>
   <Footprint>
