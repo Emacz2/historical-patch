@@ -3,8 +3,8 @@
   <Cost>
     <BuildTime op="mul">0.8</BuildTime>
      <Resources>
-      <metal>50</metal>
-      <food>25</food>
+      <metal>40</metal>
+      <food>20</food>
       <wood>0</wood>
       <stone>0</stone>
     </Resources>
@@ -19,9 +19,9 @@
   </Melee>
   <Ranged merge="">
 	<Damage>
-	  <Hack op="mul">1.05</Hack>
-      <Pierce op="mul">1.05</Pierce>
-      <Crush op="mul">1.05</Crush>
+	  <Hack op="mul">1.04</Hack>
+      <Pierce op="mul">1.04</Pierce>
+      <Crush op="mul">1.04</Crush>
     </Damage>
       <MaxRange op="add">1.0</MaxRange>
       <Projectile>
@@ -42,7 +42,7 @@
     <food>5</food>
   </Loot>
   <Identity>
-    <VisibleClasses datatype="tokens">-Worker PaidMerc</VisibleClasses>
+    <VisibleClasses datatype="tokens">PaidMerc</VisibleClasses>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>
