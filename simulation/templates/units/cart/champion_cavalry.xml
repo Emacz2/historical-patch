@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="spec_champ|template_unit_champion_cavalry_spearman">
+  <Cost>
+    <BuildTime op="mul">0.8</BuildTime>
+  </Cost>
   <Identity>
     <Civ>cart</Civ>
     <GenericName>Sacred Band Cavalry</GenericName>
@@ -21,6 +24,9 @@
     <UnhealableClasses datatype="tokens"/>
     <HealableClasses datatype="tokens">Soldier</HealableClasses>
   </Heal>
+   <TrainingRestrictions>
+    <Category>SacredBandCavalry</Category>
+  </TrainingRestrictions>
   <VisualActor>
     <Actor>units/carthaginians/cavalry_spearman_c_m.xml</Actor>
   </VisualActor>

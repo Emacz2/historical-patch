@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="hoplite|template_unit_champion_infantry_spearman">
+  <Cost>
+    <BuildTime op="mul">0.8</BuildTime>
+  </Cost>
   <Identity>
     <Civ>cart</Civ>
     <GenericName>Sacred Band Infantry</GenericName>
@@ -22,6 +25,9 @@
     <UnhealableClasses datatype="tokens"/>
     <HealableClasses datatype="tokens">Soldier</HealableClasses>
   </Heal>
+   <TrainingRestrictions>
+    <Category>SacredBandInfantry</Category>
+  </TrainingRestrictions>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c.xml</Actor>
   </VisualActor>

@@ -37,7 +37,8 @@
       <Theater>1</Theater>
       <Yakhchal>5</Yakhchal>
       <WarDog>20</WarDog>
-      <SacredBandInfantry>25</SacredBandInfantry>
+      <SacredBandInfantry>30</SacredBandInfantry>
+      <SacredBandCavalry>20</SacredBandCavalry>
       <Centurion>10</Centurion>
       <Wonder>1</Wonder>
     </Limits>
