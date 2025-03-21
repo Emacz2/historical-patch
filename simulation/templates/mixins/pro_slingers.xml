@@ -8,7 +8,7 @@
         <Crush>0.5</Crush>
       </Damage>
       <MaxRange op="add">25</MaxRange>
-      <PrepareTimeop="add">250</PrepareTime>
+      <PrepareTime op="add">250</PrepareTime>
       <Projectile>
         <Speed>375</Speed>
         <Spread op="add">-1</Spread>
