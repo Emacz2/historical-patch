@@ -64,6 +64,7 @@
       units/{civ}/cavalry_javelineer_b
       units/{civ}/cavalry_crossbowman_b
       units/{civ}/cavalry_archer_b
+      units/{civ}/cavalry_spearmanH_b
     </Entities>
   </Trainer>
   <Vision>
