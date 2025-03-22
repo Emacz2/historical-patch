@@ -61,12 +61,6 @@
     <Radius>40</Radius>
     <Weight>40000</Weight>
   </TerritoryInfluence>
-  <Researcher>
-    <Technologies datatype="tokens">
-      unlock_archer_gauls
-      unlock_axeman_gauls
-    </Technologies>
-  </Researcher>
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">

@@ -6,6 +6,9 @@
     <GenericName>Liby-Phoenicians Hunting Jav cav</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/cart/cavalry_javelinist.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">unlock_javcav</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/cart/cavalry_javelineer_a</Entity>

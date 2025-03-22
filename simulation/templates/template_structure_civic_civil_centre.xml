@@ -30,6 +30,15 @@
       </RangeOverlay>
     </Ranged>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>20</Hack>
+        <Pierce>30</Pierce>
+        <Crush>5</Crush>
+      </Damage>
+    </Entity>
+  </Resistance> 
   <BuildRestrictions>
     <Territory>own neutral</Territory>
     <Category>CivilCentre</Category>
