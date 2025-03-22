@@ -14,7 +14,7 @@
     <SpecificName>Zhanche</SpecificName>
     <Icon>units/han/chariot.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
+      <Techs datatype="tokens">unlock_champion_chariots</Techs>
     </Requirements>
   </Identity>
   <VisualActor>
