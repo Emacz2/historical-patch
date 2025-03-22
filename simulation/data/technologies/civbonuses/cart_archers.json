@@ -4,7 +4,7 @@
 	"description": "Rarely did citizens of Carth fight in the army.",
 	"requirements": { "civ": "cart" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Citizen Infantry units 5% faster gathering rate, 2% faster movement speed, 10% less train time and 20% less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.",
+	"tooltip": "Citizen Archers units 5% faster gathering rate, 2% faster movement speed, 10% less train time and 20% less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.",
 	"modifications": [
 		{"value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 },
 		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.10 },
