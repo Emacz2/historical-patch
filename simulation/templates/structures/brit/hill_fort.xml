@@ -31,11 +31,15 @@
     </Ranged>
   </Attack>
   <BuildRestrictions>
-    <Territory>own neutral</Territory>
-    <Category>CivilCentre</Category>
+    <Territory>neutral</Territory>
+    <Category>HillFort</Category>
     <Distance>
       <FromClass>CivilCentre</FromClass>
-      <MinDistance>150</MinDistance>
+      <MinDistance>125</MinDistance>
+    </Distance>
+    <Distance>
+      <FromClass>HillFort</FromClass>
+      <MinDistance>100</MinDistance>
     </Distance>
   </BuildRestrictions>
   <BuildingAI>
