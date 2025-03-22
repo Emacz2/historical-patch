@@ -3,8 +3,8 @@
   <Attack>
     <Melee merge="">
       <Damage>
-        <Pierce op="mul">0.80</Pierce>
-        <Hack op="mul">0.80</Hack>
+        <Pierce op="mul">0.75</Pierce>
+        <Hack op="mul">0.75</Hack>
       </Damage>
       <Bonuses>
         <BonusCavMelee>
@@ -16,8 +16,8 @@
     </Melee>
     <Ranged merge="">
       <Damage>
-        <Pierce op="mul">0.85</Pierce>
-        <Hack op="mul">0.85</Hack>
+        <Pierce op="mul">0.80</Pierce>
+        <Hack op="mul">0.80</Hack>
       </Damage>
       <Bonuses>
         <BonusRanged>
