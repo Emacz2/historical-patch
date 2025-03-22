@@ -73,7 +73,6 @@
     <SpecificName>Hill Fort</SpecificName>
     <SelectionGroupName>template_structure_civic_civil_centre</SelectionGroupName>
     <Tooltip>Build in own or neutral territory. Acquire large tracts of territory. Territory root. Train Citizens and research technologies. Garrison Soldiers for additional arrows.</Tooltip>
-    <Classes datatype="tokens">CivCentre</Classes>
     <VisibleClasses datatype="tokens">Defensive CivilCentre</VisibleClasses>
     <Icon>structures/civic_centre.png</Icon>
   </Identity>
