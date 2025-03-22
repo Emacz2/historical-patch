@@ -25,7 +25,7 @@
     <Tooltip>Centurions may be promoted from elite melee citizen infantry, and train from the Fortress after Marian Reforms.</Tooltip>
     <VisibleClasses datatype="tokens">Centurion</VisibleClasses>
     <Requirements>
-      <Techs datatype="tokens">roman_reforms -phase_city</Techs>
+      <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
   <TrainingRestrictions>
