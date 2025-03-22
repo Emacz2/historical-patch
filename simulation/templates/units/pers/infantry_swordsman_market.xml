@@ -3,8 +3,8 @@
   <Builder>
     <Entities datatype="tokens">
       structures/pers/range
+    </Entities>
   </Builder>
-  <Identity>
     <Civ>pers</Civ>
     <Lang>persian</Lang>
     <GenericName>Mercenary Swordsman</GenericName>
