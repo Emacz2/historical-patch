@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_civic">
-  <AlertRaiser>
+<Entity parent="template_structure_civic_civil_centre">
+ <AlertRaiser>
     <List datatype="tokens">FemaleCitizen</List>
     <RaiseAlertRange>120</RaiseAlertRange>
     <EndOfAlertRange>180</EndOfAlertRange>
@@ -10,9 +10,9 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>4.2</Pierce>
+        <Pierce>3</Pierce>
       </Damage>
-      <MaxRange>65</MaxRange>
+      <MaxRange>50</MaxRange>
       <PrepareTime>400</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Projectile>
@@ -35,33 +35,29 @@
     <Category>CivilCentre</Category>
     <Distance>
       <FromClass>CivilCentre</FromClass>
-      <MinDistance>200</MinDistance>
+      <MinDistance>150</MinDistance>
     </Distance>
   </BuildRestrictions>
   <BuildingAI>
-    <DefaultArrowCount>10</DefaultArrowCount>
+    <DefaultArrowCount>5</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
     <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
   </BuildingAI>
   <Capturable>
-    <CapturePoints>2500</CapturePoints>
+    <CapturePoints>2000</CapturePoints>
     <RegenRate>5.0</RegenRate>
   </Capturable>
   <Cost>
-    <BuildTime>500</BuildTime>
+    <BuildTime>250</BuildTime>
     <Resources>
       <food>300</food>
-      <wood>300</wood>
-      <stone>300</stone>
-      <metal>300</metal>
+      <wood>150</wood>
+      <stone>150</stone>
+      <metal>150</metal>
     </Resources>
   </Cost>
-  <Footprint>
-    <Square depth="32.0" width="32.0"/>
-    <Height>8.0</Height>
-  </Footprint>
   <GarrisonHolder>
-    <Max>20</Max>
+    <Max>15</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Support Infantry Cavalry</List>
@@ -69,11 +65,12 @@
     <LoadingRange>1</LoadingRange>
   </GarrisonHolder>
   <Health>
-    <Max>3000</Max>
+    <Max>2000</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_6x6</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <GenericName>Civic Center</GenericName>
+    <Civ>brit</Civ>
+    <SpecificName>Hill Fort</SpecificName>
     <SelectionGroupName>template_structure_civic_civil_centre</SelectionGroupName>
     <Tooltip>Build in own or neutral territory. Acquire large tracts of territory. Territory root. Train Citizens and research technologies. Garrison Soldiers for additional arrows.</Tooltip>
     <Classes datatype="tokens">CivCentre</Classes>
@@ -81,39 +78,27 @@
     <Icon>structures/civic_centre.png</Icon>
   </Identity>
   <Loot>
-    <wood>60</wood>
-    <stone>60</stone>
-    <metal>50</metal>
+    <wood>15</wood>
+    <stone>15</stone>
+    <metal>15</metal>
   </Loot>
   <Minimap>
     <Type>structure</Type>
     <Icon size="16.0">civil_centre.png</Icon>
   </Minimap>
-  <Obstruction>
-    <Static depth="30.0" width="30.0"/>
-  </Obstruction>
   <Population>
-    <Bonus>20</Bonus>
+    <Bonus>10</Bonus>
   </Population>
-  <ProductionQueue/>
-  <Researcher>
-    <Technologies datatype="tokens">
-      phase_town_{civ}
-      phase_city_{civ}
-      unlock_shared_los
-      unlock_shared_dropsites
-      archery_tradition
-      hoplite_tradition
-      hellenistic_metropolis
-      roman_roads
-      unlock_spies
-      spy_counter
-      foreign_mercenaries
-      trained_cs
-      polearm_tradition
-      pheidian_workshop
-    </Technologies>
-  </Researcher>
+  <Footprint>
+    <Square width="12" depth="16.0"/>
+    <Height>10.0</Height>
+  </Footprint>
+  <Obstruction>
+    <Static width="10.0" depth="14.0"/>
+  </Obstruction>
+  <Health>
+    <SpawnEntityOnDeath>decay|rubble/rubble_brit_cc</SpawnEntityOnDeath>
+  </Health>
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
@@ -131,19 +116,21 @@
   </Sound>
   <TerritoryInfluence>
     <Root>true</Root>
-    <Radius>140</Radius>
+    <Radius>50</Radius>
     <Weight>10000</Weight>
   </TerritoryInfluence>
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/support_female_citizen
+      units/{civ}/infantry_spearman_b
+      units/{civ}/infantry_javelineer_b
     </Entities>
   </Trainer>
   <Vision>
-    <Range>90</Range>
+    <Range>75</Range>
   </Vision>
   <VisualActor>
-    <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
+     <Actor>structures/celts/longhouse.xml</Actor>
   </VisualActor>
 </Entity>
