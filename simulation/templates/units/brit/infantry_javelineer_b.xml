@@ -3,6 +3,7 @@
 <Builder>
   <Entities datatype="tokens">
       structures/brit/range
+      structures/brit/hill_fort
   </Entities>
 </Builder>
  <Cost>
