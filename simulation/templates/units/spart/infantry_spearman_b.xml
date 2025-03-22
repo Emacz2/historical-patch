@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="polearm|perioikoi|hoplite|template_unit_infantry_melee_spearman">
+<Entity parent="polearm|serf|hoplite|template_unit_infantry_melee_spearman">
   <Builder>
  <Entities datatype="tokens">
       structures/spart/gerousia
@@ -14,7 +14,7 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Gree Hoplite</GenericName>
+    <GenericName>Greek Hoplite</GenericName>
     <SpecificName>Hoplítēs Períoikos</SpecificName>
     <Icon>units/spart/infantry_spearman.png</Icon>
   </Identity>

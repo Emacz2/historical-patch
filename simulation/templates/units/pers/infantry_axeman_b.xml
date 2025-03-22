@@ -12,9 +12,6 @@
     <GenericName>Persian Axeman</GenericName>
     <SpecificName>Sagaris</SpecificName>
      <Icon>units/pers/pers_infantry_axe.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">unlock_axeman</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/pers/infantry_axeman_a</Entity>
