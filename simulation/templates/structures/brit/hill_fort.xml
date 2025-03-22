@@ -127,6 +127,22 @@
       units/{civ}/infantry_javelineer_b
     </Entities>
   </Trainer>
+  <Researcher>
+    <Technologies datatype="tokens">
+      unlock_shared_los
+      unlock_shared_dropsites
+      archery_tradition
+      hoplite_tradition
+      hellenistic_metropolis
+      roman_roads
+      unlock_spies
+      spy_counter
+      foreign_mercenaries
+      trained_cs
+      polearm_tradition
+      pheidian_workshop
+    </Technologies>
+  </Researcher>
   <Vision>
     <Range>75</Range>
   </Vision>
