@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer">
   <Identity>
     <Civ>pers</Civ>
     <Lang>persian</Lang>
     <SelectionGroupName>units/pers/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Median Hunting Jav Cavalry</GenericName>
+    <GenericName>Median Jav Cavalry</GenericName>
     <SpecificName>Asabāra Māda</SpecificName>
     <Icon>units/pers/cavalry_javelinist.png</Icon>
   </Identity>

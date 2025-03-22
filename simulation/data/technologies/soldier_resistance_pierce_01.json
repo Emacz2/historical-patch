@@ -9,10 +9,10 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "shields_generic_wood.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +1 pierce resistance.",
+	"tooltip": "Soldiers +1.5 pierce resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 }
 	],
-	"affects": ["Soldier !Helot !PaidMerc !Perioikoi !Elephant"],
+	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
