@@ -3,9 +3,6 @@
   <Builder>
     <Entities datatype="tokens">
       structures/pers/range
-      structures/pers/tower_babylon
-      -structures/pers/defense_tower
-    </Entities>
   </Builder>
   <Identity>
     <Civ>pers</Civ>

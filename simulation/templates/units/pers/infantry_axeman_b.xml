@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_melee_axeman">
-   <Builder>
+  <Builder>
     <Entities datatype="tokens">
       structures/pers/range
-      structures/pers/tower_babylon
-      -structures/pers/defense_tower
-    </Entities>
   </Builder>
   <Identity>
     <Civ>pers</Civ>

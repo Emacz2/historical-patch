@@ -8,6 +8,6 @@
     <HeightOffset>19.0</HeightOffset>
   </StatusBars>
   <VisualActor>
-    <Actor>structures/persians/scout_tower.xml</Actor>
+    <Actor>structures/persians/babylonian_tower.xml</Actor>
   </VisualActor>
 </Entity>
