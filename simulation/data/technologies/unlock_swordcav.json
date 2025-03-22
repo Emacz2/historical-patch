@@ -2,9 +2,9 @@
 	"genericName": "Unlock sword cav",
 	"description": "",
 	"cost": {
-		"food": 460,
-		"wood": 80,
-		"metal": 60
+		"food": 345,
+		"wood": 60,
+		"metal": 45
 		
 	},
 	"requirements": {

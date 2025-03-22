@@ -2,8 +2,8 @@
 	"genericName": "Unlock spearman",
 	"description": "",
 	"cost": {
-		"food": 200,
-		"wood": 200
+		"food": 150,
+		"wood": 150
 		
 	},
 	"requirements": {
@@ -17,7 +17,7 @@
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
-	"researchTime": 25,
+	"researchTime": 20,
 	"tooltip": "Unlock the ability to train spearman from baracks.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

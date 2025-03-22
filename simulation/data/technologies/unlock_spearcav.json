@@ -2,8 +2,8 @@
 	"genericName": "Unlock spear cav",
 	"description": "",
 	"cost": {
-		"food": 400,
-		"wood": 200
+		"food": 300,
+		"wood": 150
 		
 		
 	},

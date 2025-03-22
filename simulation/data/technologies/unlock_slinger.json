@@ -2,9 +2,9 @@
 	"genericName": "Unlock slinger",
 	"description": "",
 	"cost": {
-		"food": 200,
-		"wood": 120,
-		"stone": 80
+		"food": 150,
+		"wood": 90,
+		"stone": 30
 		
 	},
 	"requirements": {
@@ -17,7 +17,7 @@
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
-	"researchTime": 25,
+	"researchTime": 20,
 	"tooltip": "Unlock the ability to train slinger from baracks.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
