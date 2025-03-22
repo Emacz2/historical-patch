@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+    <Melee merge="">
+      <Damage>
+        <Pierce op="mul">0.80</Pierce>
+        <Hack op="mul">0.80</Hack>
+      </Damage>
+      <Bonuses>
+        <BonusCavMelee>
+          <Classes>Cavalry</Classes>
+          <Multiplier>2.5</Multiplier>
+        </BonusCavMelee>
+      </Bonuses>
+      <PrepareTime>0</PrepareTime>
+    </Melee>
+    <Ranged merge="">
+      <Damage>
+        <Pierce op="mul">0.85</Pierce>
+        <Hack op="mul">0.85</Hack>
+      </Damage>
+      <Bonuses>
+        <BonusRanged>
+          <Classes>Support</Classes>
+          <Multiplier>1.25</Multiplier>
+        </BonusRanged>
+      </Bonuses>
+      <MaxRange  op="add">2</MaxRange>
+      <PrepareTime>0</PrepareTime>
+      <Projectile>
+        <Spread op="add">2</Spread>
+      </Projectile>
+    </Ranged>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+	      <Hack>0</Hack>
+        <Pierce>0</Pierce>
+	      <Crush>0</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+  </Cost>
+    <UnitMotion>
+     <WalkSpeed op="mul">1.05</WalkSpeed>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
+  <Identity>
+    <VisibleClasses datatype="tokens">Hunt Cav</VisibleClasses>
+  </Identity>
+</Entity>
