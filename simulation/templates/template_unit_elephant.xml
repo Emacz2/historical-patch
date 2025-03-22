@@ -59,11 +59,11 @@
   <UnitMotion>
     <PassabilityClass>large</PassabilityClass>
     <Acceleration op="mul">0.5</Acceleration>
-      <WalkSpeed op="mul">0.95</WalkSpeed>
+    <WalkSpeed op="mul">0.93</WalkSpeed>
     <RunMultiplier>1.2</RunMultiplier>
     <Weight op="mul">5.0</Weight>
   </UnitMotion>
   <Vision>
-    <Range>100</Range>
+    <Range>80</Range>
   </Vision>
 </Entity>
