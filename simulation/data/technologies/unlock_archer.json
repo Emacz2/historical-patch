@@ -8,7 +8,8 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "han" }
+			{ "civ": "han" },
+			{ "civ": "ptol" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in Village Phase.",
