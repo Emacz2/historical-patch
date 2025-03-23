@@ -18,9 +18,9 @@
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/ptol/infantry_archer_a</Entity>
+    <Entity>units/ptol/infantry_archer_merc_a</Entity>
   </Promotion>
   <VisualActor>
-    <Actor>units/ptolemies/infantry_archer_b.xml</Actor>
+    <Actor>units/ptolemies/infantry_merc_archer_b.xml</Actor>
   </VisualActor>
 </Entity>
