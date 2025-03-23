@@ -42,6 +42,6 @@
     <WalkSpeed op="add">3.5</WalkSpeed>
   </UnitMotion>
   <VisualActor>
-    <Actor>units/brits/infantry_swordsman_berserk.xml</Actor>
+    <Actor>units/britons/infantry_swordsman_berserk.xml</Actor>
   </VisualActor>
 </Entity>
