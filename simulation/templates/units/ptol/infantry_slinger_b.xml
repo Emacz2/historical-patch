@@ -14,7 +14,7 @@
     <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
     <Icon>units/ptol/infantry_slinger.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
+      <Techs datatype="tokens">unlock_slinger</Techs>
     </Requirements>
   </Identity>
   <Promotion>
