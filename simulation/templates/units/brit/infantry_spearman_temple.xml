@@ -32,7 +32,7 @@
     <SelectionGroupName>units/brit/infantry_spearman_b</SelectionGroupName>
     <GenericName>Celtic Thrusting Spearman</GenericName>
     <SpecificName>Catucos</SpecificName>
-    <Icon>units/brit/infantry_spearman.png</Icon>
+    <Icon>units/gaul/champion_fanatic.png</Icon>
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>
@@ -43,6 +43,6 @@
     <Entity>units/brit/infantry_spearman_temple_2</Entity>
   </Promotion>
   <VisualActor>
-    <Actor>units/britons/infantry_spearman_e.xml</Actor>
+    <Actor>units/britons/infantry_spearman_temple.xml</Actor>
   </VisualActor>
 </Entity>

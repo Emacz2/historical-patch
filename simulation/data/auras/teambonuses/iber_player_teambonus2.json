@@ -4,10 +4,10 @@
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
 		{ "value": "Health/Max", "add": 10, "affects": "!Hero"},
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02}
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05}
 		
 	
 	],
 	"auraName": "Suppior horses",
-	"auraDescription": "Cavalry units 10 more health and 2% more walk speed."
+	"auraDescription": "Cavalry units 10 more health and 5% faster walk speed."
 }
