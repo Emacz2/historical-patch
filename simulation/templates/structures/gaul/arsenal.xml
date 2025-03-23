@@ -13,6 +13,13 @@
     <SpecificName>Miletucerdon</SpecificName>
     <Tooltip>May be built in own or neutral terirories. Build rams and research siege technologies.</Tooltip>
   </Identity>
+   <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_torch
+      units/{civ}/siege_ram
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/gauls/workshop.xml</Actor>
   </VisualActor>
