@@ -10,6 +10,38 @@
       </props>
     </variant>
   </group>
+   <group>
+    <variant name="pants-basic-1">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_01.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant name="pants-basic-2">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_02.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant name="pants-basic-3">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_03.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant name="pants-basic-4">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_04.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant name="pants-basic-5">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_05.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant name="pants-basic-6">
+      <textures>
+        <texture file="skeletal/gaul/pants_basic_06.png" name="baseTex"/>
+      </textures>
+    </variant>
+  </group>
   <group>
     <variant frequency="1" name="Celt-Shield-01">
       <props>
