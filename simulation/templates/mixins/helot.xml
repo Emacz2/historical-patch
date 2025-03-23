@@ -30,6 +30,6 @@
     </Entity>
   </Resistance>
   <Identity>
-    <VisibleClasses datatype="tokens">Helot</VisibleClasses>
+    <VisibleClasses datatype="tokens">Helot -Citizen</VisibleClasses>
   </Identity>
 </Entity>

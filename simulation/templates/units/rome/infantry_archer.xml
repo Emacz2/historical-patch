@@ -6,6 +6,7 @@
       structures/rome/temple_vesta
       structures/rome/tower_artillery
     </Entities>
+    <Rate>1.25</Rate>
   </Builder>
 <Cost>
     <Resources>
@@ -18,7 +19,8 @@
     <Civ>rome</Civ>
     <Lang>latin</Lang>
     <SelectionGroupName>units/rome/infantry_archer</SelectionGroupName>
-    <GenericName>Roman Archer</GenericName>
+    <GenericName>Auxiliary Archer</GenericName>
+    <VisibleClasses datatype="tokens">-Citizen -Worker Builder</VisibleClasses>
     <Icon>units/rome/rome_infantry_archer.png</Icon>
      <Rank>Advanced</Rank>
     <Requirements>
@@ -29,4 +31,5 @@
   <VisualActor>
     <Actor>units/romans/infantry_archer.xml</Actor>
   </VisualActor>
+  <ResourceGatherer disable=""/>
 </Entity>

@@ -13,10 +13,7 @@
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
     <Resources>
-      <food>50</food>
-      <wood>40</wood>
-      <stone>0</stone>
-      <metal>0</metal>
+      <wood op="add">-10</wood>
     </Resources>
   </Cost>
   <Identity>

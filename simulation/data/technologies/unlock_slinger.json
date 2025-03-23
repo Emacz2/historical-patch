@@ -12,7 +12,8 @@
 			{ "tech": "phase_village" },
 			{ "civ": "athen" },
 			{ "civ": "gaul" },
-			{ "civ": "kush" }
+			{ "civ": "kush" },
+			{ "civ": "ptol" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",

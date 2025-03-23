@@ -22,10 +22,7 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "multiply": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "multiply": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Crush", "multiply": 0.5 },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 },
-		{ "value": "Cost/Resources/wood", "add": -10},
-		{ "value": "Cost/Resources/stone", "add": 10}
-
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
 
 	],
 	"affects": ["Serf"]
