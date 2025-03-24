@@ -5,6 +5,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/ptolemies/infantry_merc_archer_e.xml</Actor>
+    <Actor>units/ptolemies/infantry_archer_merc_e.xml</Actor>
   </VisualActor>
 </Entity>
