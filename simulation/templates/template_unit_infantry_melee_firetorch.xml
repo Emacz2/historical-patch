@@ -5,21 +5,23 @@
       <ApplyStatus>
         <Burning>
           <Interval>1000</Interval>
-            <Damage>
-              <Fire>3</Fire>
-            </Damage>
+          <Damage>
+            <Fire>3</Fire>
+          </Damage>
           <Stackability>Stack</Stackability>
           <Duration>10000</Duration>
         </Burning>
       </ApplyStatus>
-      <Damage>
-        <Hack>1</Hack>
-        <MaxRange>3</MaxRange>
-        <PrepareTime>500</PrepareTime>
-        <RepeatTime>2000</RepeatTime>
-        <PreferredClasses datatype="tokens">Structure</PreferredClasses>
-        <RestrictedClasses datatype="tokens">Organic</RestrictedClasses>
-      </Damage>
+      <AttackName>Flames</AttackName>
+        <Damage>
+          <Crush>1</Crush>
+	        <Hack>1</Hack>
+        </Damage>
+      <MaxRange>3</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1500</RepeatTime>
+      <PreferredClasses datatype="tokens">Structure</PreferredClasses>
+      <RestrictedClasses datatype="tokens">Organic</RestrictedClasses>
     </Melee>
   </Attack>
   <Cost>
@@ -28,14 +30,6 @@
       <wood>25</wood>
     </Resources>
   </Cost>
-<DeathDamage>
-    <Shape>Circular</Shape>
-    <Range>5</Range>
-    <FriendlyFire>true</FriendlyFire>
-    <Damage>
-      <Fire>15</Fire>
-    </Damage>
-  </DeathDamage>
   <Identity>
     <GenericName>Infantry Torchman</GenericName>
     <VisibleClasses datatype="tokens">Torchman</VisibleClasses>
