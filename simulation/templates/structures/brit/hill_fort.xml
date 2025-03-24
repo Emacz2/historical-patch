@@ -32,7 +32,7 @@
   </Attack>
   <BuildRestrictions>
     <Territory>neutral own</Territory>
-    <Category>CivilCentre</Category>
+    <Category>Colony</Category>
     <Distance>
       <FromClass>HillFort</FromClass>
       <MinDistance>75</MinDistance>
@@ -77,7 +77,7 @@
     <SpecificName>Hill Fort</SpecificName>
     <SelectionGroupName>template_structure_civic_civil_centre</SelectionGroupName>
     <Tooltip>Build in own or neutral territory. Acquire large tracts of territory. Territory root. Train Citizens and research technologies. Garrison Soldiers for additional arrows.</Tooltip>
-    <VisibleClasses datatype="tokens">Defensive CivilCentre</VisibleClasses>
+    <VisibleClasses datatype="tokens">Defensive Colony</VisibleClasses>
     <Icon>structures/civic_centre.png</Icon>
   </Identity>
   <Loot>
