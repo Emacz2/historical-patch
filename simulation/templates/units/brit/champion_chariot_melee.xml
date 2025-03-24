@@ -4,16 +4,52 @@
     units/scythe_1
     units/scythe_2
   </Auras>
+   <Attack>
+    <Melee>
+      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+      <Damage>
+        <Hack op="add">-10</Hack>
+        <Pierce op="add">-4</Pierce>
+      </Damage>
+      <MaxRange>3</MaxRange>
+      <PrepareTime>400</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+      <Bonuses>
+        <BonusMelee>
+          <Classes>Ranged Infantry</Classes>
+          <Multiplier>1.25</Multiplier>
+        </BonusMelee>
+      </Bonuses>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">3.5</Hack>
+        <Pierce op="add">4</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <GarrisonHolder>
+    <Max>1</Max>
+    <EjectHealth>0.1</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
+    <List datatype="tokens">Infantry</List>
+    <BuffHeal>0</BuffHeal>
+    <LoadingRange>2</LoadingRange>
+  </GarrisonHolder>
   <Footprint replace="">
     <Square width="5.0" depth="10.0"/>
     <Height>6.0</Height>
   </Footprint>
   <Identity>
     <Civ>brit</Civ>
-    <GenericName>Celtic Chariot</GenericName>
+    <GenericName>Celtic Melee/Transport Chariot</GenericName>
     <SpecificName>Essedon</SpecificName>
     <SelectionGroupName>units/brit/champion_chariot</SelectionGroupName>
     <Icon>units/brit/champion_chariot.png</Icon>
+    <Tooltip>Counters: 1.25× vs Ranged Infantry.</Tooltip>
     <Requirements>
       <Techs datatype="tokens">unlock_champion_chariots</Techs>
     </Requirements>
