@@ -3,9 +3,7 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
-    <Entity>units/ptol/infantry_archer_merc_e</Entity>
-  </Promotion>
+   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/ptolemies/infantry_archer_merc_a.xml</Actor>
   </VisualActor>
