@@ -4,6 +4,15 @@
     units/scythe_1
     units/scythe_2
   </Auras>
+  <Cost>
+    <Population>1</Population>
+    <BuildTime>25</BuildTime>
+    <Resources>
+      <food>125</food>
+      <wood>50</wood>
+      <metal>175</metal>
+    </Resources>
+  </Cost>
    <Attack>
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
