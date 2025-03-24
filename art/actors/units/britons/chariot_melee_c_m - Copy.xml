@@ -18,6 +18,7 @@
         <prop actor="units/britons/chariot_javelinist_c_h1.xml" attachpoint="horse2"/>
         <prop actor="units/britons/chariot_javelinist_c_h2.xml" attachpoint="horse3"/>
         <prop actor="units/britons/chariot_javelinist_c_d.xml" attachpoint="driver2_mid"/>
+        <prop actor="units/britons/chariot_melee_c_r.xml" attachpoint="rider3"/>
       </props>
       <textures>
         <texture file="structural/celt_chariot_a.dds" name="baseTex"/>
