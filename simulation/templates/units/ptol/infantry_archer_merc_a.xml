@@ -4,7 +4,7 @@
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/ptol/infantry_merc_archer_e</Entity>
+    <Entity>units/ptol/infantry_archer_merc_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/ptolemies/infantry_merc_archer_a.xml</Actor>
