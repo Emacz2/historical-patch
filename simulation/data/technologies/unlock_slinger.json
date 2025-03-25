@@ -9,8 +9,8 @@
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_village" },
-			{ "civ": "kush" }
+			{ "tech": "phase_village" }
+		
 			
 		]
 	},
