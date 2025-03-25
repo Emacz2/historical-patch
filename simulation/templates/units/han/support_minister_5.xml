@@ -98,8 +98,9 @@
       <walk>actor/human/movement/walk.xml</walk>
     </SoundGroups>
   </Sound>
-  <TrainingRestrictions>
+    <TrainingRestrictions>
     <Category>Minister</Category>
+    <MatchLimit>1</MatchLimit>
   </TrainingRestrictions>
   <Vision>
     <Range>40</Range>
