@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/gaul/cavalry_javelineer_b">
-  <Identity>
-    <Rank>Advanced</Rank>
-  </Identity>
+  <Attack>
+    <Ranged>
+      <MaxRange op="add">1</MaxRange>
+      <RepeatTime op="add">-250</RepeatTime>
+      <Projectile>
+        <Spread op="mul">0.75</Spread>
+      </Projectile>
+      <PreferredClasses datatype="tokens">Human</PreferredClasses>
+    </Ranged>
+  </Attack>
   <Promotion>
     <Entity>units/gaul/cavalry_javelineer_e</Entity>
   </Promotion>

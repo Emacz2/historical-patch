@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/athen/cavalry_javelineer_b">
- <Attack>
+<Attack>
     <Ranged>
-      <MaxRange>32</MaxRange>
+      <MaxRange op="add">1</MaxRange>
       <RepeatTime op="add">-250</RepeatTime>
       <Projectile>
         <Spread op="mul">0.75</Spread>

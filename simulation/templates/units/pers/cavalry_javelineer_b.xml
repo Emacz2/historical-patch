@@ -7,6 +7,9 @@
     <GenericName>Median Jav Cavalry</GenericName>
     <SpecificName>Asabāra Māda</SpecificName>
     <Icon>units/pers/cavalry_javelinist.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">unlock_javcav</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/pers/cavalry_javelineer_a</Entity>
