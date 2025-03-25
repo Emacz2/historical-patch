@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
+  <Auras datatype="tokens">
+    units/han_minister_guards
+    units/han_minister_guards2
+  </Auras>
   <Attack>
     <Capture>
       <AttackName>Capture</AttackName>
@@ -26,8 +30,8 @@
     units/han_minister_guards
   </Auras>
   <Cost>
-    <Population>1</Population>
-    <BuildTime>15</BuildTime>
+    <Population>0</Population>
+    <BuildTime>25</BuildTime>
     <Resources>
       <food>100</food>
       <metal>100</metal>
@@ -99,6 +103,7 @@
   </Sound>
   <TrainingRestrictions>
     <Category>Minister</Category>
+    <MatchLimit>1</MatchLimit>
   </TrainingRestrictions>
   <Vision>
     <Range>40</Range>

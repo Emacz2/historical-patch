@@ -29,11 +29,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" },
-		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Slinger" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Slinger" },
-		{ "value": "Attack/Ranged/Spread", "multiply": 0.95, "affects": "Slinger" },
-		{ "value": "Attack/Ranged/MaxRange", "add": 1, "affects": "Slinger" }
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" }
+		
 		
 
 	],
