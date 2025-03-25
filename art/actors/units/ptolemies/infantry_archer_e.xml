@@ -67,7 +67,7 @@
     <variant file="biped/approach_praise.xml"/>
   </group>
   <group>
-    <variant frequency="1" name="Idle"/>
+     <variant frequency="1" name="Idle"/>
     <variant file="biped/attack_ranged_archer_hip.xml"/>
     <variant file="biped/attack_capture.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
@@ -81,6 +81,7 @@
     <variant file="biped/gather_praise.xml"/>
     <variant file="biped/build.xml"/>
     <variant file="biped/build_farm.xml"/>
+    <variant file="biped/death_infantry.xml"/>
   </group>
   <material>player_trans_norm_spec.xml</material>
 </actor>
