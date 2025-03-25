@@ -7,9 +7,6 @@
     <SpecificName>Iry hr ssmwtt</SpecificName>
     <GenericName>Napatan Hunting Jav Cavalry</GenericName>
     <Icon>units/kush/cavalry_javelinist.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/kush/cavalry_javelineer_a</Entity>

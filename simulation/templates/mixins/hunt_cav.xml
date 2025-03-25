@@ -25,11 +25,6 @@
           <Multiplier>1.25</Multiplier>
         </BonusRanged>
       </Bonuses>
-      <MaxRange  op="add">2</MaxRange>
-      <PrepareTime>0</PrepareTime>
-      <Projectile>
-        <Spread op="add">2</Spread>
-      </Projectile>
     </Ranged>
   </Attack>
   <Resistance>

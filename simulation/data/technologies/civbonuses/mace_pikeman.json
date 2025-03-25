@@ -4,7 +4,7 @@
 	"description": "",
 	"requirements": { "civ": "mace" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Mace citizen Infantry 5% faster gathering rate, 2% faster movement speed, 10% less train time and 20% less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.",
+	"tooltip": "Mace pikeman 5% faster gathering rate, 2% faster movement speed, 10% less train time and 20% less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.",
 	"modifications": [
 		{"value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 },
 		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.10 },
