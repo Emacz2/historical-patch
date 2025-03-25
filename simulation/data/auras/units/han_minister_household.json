@@ -4,7 +4,7 @@
 	"modifications": [
 	
 		{
-			"value": "Researcher/TechCostMultiplier/time",
+			"value": "Cost/BuildTime",
 			"multiply": 0.9
 		}
 	],
