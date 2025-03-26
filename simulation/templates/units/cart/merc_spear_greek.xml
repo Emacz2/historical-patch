@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="merc_inf_market|hoplite|template_unit_infantry_melee_spearman">
+  <Auras datatype="tokens">
+    units/spartan_phalanx
+  </Auras>
   <Builder>
     <Entities datatype="tokens">
       structures/cart/super_dock
@@ -8,6 +11,14 @@
       structures/cart/embassy_italic
     </Entities>
   </Builder>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/merc_spear</SelectionGroupName>

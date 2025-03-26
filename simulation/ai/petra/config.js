@@ -21,10 +21,10 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 	this.popScaling = 1;	// scale factor depending on the max population
 
 	this.Military = {
-		"towerLapseTime": 90,	// Time to wait between building 2 towers
+		"towerLapseTime": 270,	// Time to wait between building 2 towers
 		"fortressLapseTime": 390,	// Time to wait between building 2 fortresses
 		"popForBarracks1": 25,
-		"popForBarracks2": 95,
+		"popForBarracks2": 75,
 		"popForForge": 65,
 		"numSentryTowers": 1
 	};
@@ -37,9 +37,9 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 	};
 
 	this.Economy = {
-		"popPhase2": 38,	// How many units we want before aging to phase2.
-		"workPhase3": 65,	// How many workers we want before aging to phase3.
-		"workPhase4": 80,	// How many workers we want before aging to phase4 or higher.
+		"popPhase2": 75,	// How many units we want before aging to phase2.
+		"workPhase3": 100,	// How many workers we want before aging to phase3.
+		"workPhase4": 150,	// How many workers we want before aging to phase4 or higher.
 		"popForDock": 25,
 		"targetNumWorkers": 40,	// dummy, will be changed later
 		"targetNumTraders": 5,	// Target number of traders
@@ -119,8 +119,8 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 
 	this.priorities =
 	{
-		"villager": 30,      // should be slightly lower than the citizen soldier one to not get all the food
-		"citizenSoldier": 60,
+		"villager": 250,      // should be slightly lower than the citizen soldier one to not get all the food
+		"citizenSoldier": 300,
 		"trader": 50,
 		"healer": 20,
 		"ships": 70,
@@ -128,14 +128,14 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		"dropsites": 200,
 		"field": 400,
 		"dock": 90,
-		"corral": 100,
+		"corral": 10,
 		"economicBuilding": 90,
 		"militaryBuilding": 130,
 		"defenseBuilding": 70,
-		"civilCentre": 950,
-		"majorTech": 700,
-		"minorTech": 250,
-		"wonder": 1000,
+		"civilCentre": 300,
+		"majorTech": 400,
+		"minorTech": 500,
+		"wonder": 100,
 		"emergency": 1000    // used only in emergency situations, should be the highest one
 	};
 

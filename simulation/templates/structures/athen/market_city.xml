@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="structures/athen/market_town">
+<Entity parent="template_structure_economic_market">
   <Footprint>
     <Square width="27" depth="27"/>
     <Height>8.0</Height>
@@ -11,8 +11,9 @@
   <Trainer>
     <BatchTimeModifier>0.5</BatchTimeModifier>
     <Entities datatype="tokens">
-    units/{civ}/infantry_archer_market2
-     -units/{civ}/infantry_archer_market
+      units/{civ}/infantry_archer_market3
+      -units/{civ}/infantry_archer_market2
+      -units/{civ}/infantry_archer_market
     </Entities>
   </Trainer>
   <Obstruction>
