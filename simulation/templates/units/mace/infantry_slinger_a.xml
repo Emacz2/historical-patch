@@ -12,6 +12,10 @@
   <Promotion>
     <Entity>units/mace/infantry_slinger_e</Entity>
   </Promotion>
+   <UnitMotion>
+    <WalkSpeed op="mul">0.97</WalkSpeed>
+    <Acceleration op="mul">0.97</Acceleration>
+  </UnitMotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_a.xml</Actor>
   </VisualActor>

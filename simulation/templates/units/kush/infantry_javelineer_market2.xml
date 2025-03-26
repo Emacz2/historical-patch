@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/kush/infantry_javelineer_market">
+  <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
+<Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/kushites/infantry_javelinist_a.xml</Actor>
+  </VisualActor>
+</Entity>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="merc_inf_market|template_unit_infantry_melee_maceman">
+  <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
+<Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/kushites/infantry_maceman_a.xml</Actor>
+  </VisualActor>
+</Entity>

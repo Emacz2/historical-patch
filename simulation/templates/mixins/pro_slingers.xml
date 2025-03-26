@@ -26,6 +26,10 @@
   <Identity>
     <VisibleClasses datatype="tokens">ProSlinger</VisibleClasses>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.97</WalkSpeed>
+    <Acceleration op="mul">0.97</Acceleration>
+  </UnitMotion>
   <ResourceGatherer disable=""/>
 </Entity>
 
