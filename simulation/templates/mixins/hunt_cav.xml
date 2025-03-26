@@ -9,7 +9,7 @@
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3</Multiplier>
+          <Multiplier>2.5</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PrepareTime>0</PrepareTime>

@@ -5,24 +5,38 @@
     <Height>8.0</Height>
   </Footprint>
   <Identity>
-    <Civ>cart</Civ>
-    <SpecificName>Šūq City</SpecificName> 
+    <Civ>mace</Civ>
+    <SpecificName>Emporion Town</SpecificName>
+     <Requirements>
+      <Techs datatype="tokens">-phase_village phase_city</Techs>
+      </Requirements>
   </Identity>
-  <Trainer>
-    <BatchTimeModifier>0.5</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/merc_slinger_iber_2
-      units/{civ}/merc_spear_greek_2
-      -units/{civ}/merc_slinger_iber
-      -units/{civ}/merc_spear_greek
-    </Entities>
-  </Trainer>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
   </Obstruction>
   <VisualActor>
-      <Actor>structures/carthaginians/market.xml</Actor>
+    <Actor>structures/hellenes/market.xml</Actor>
   </VisualActor>
+  <Researcher>
+    <Technologies datatype="tokens">
+      trader_health
+      trade_gain_01
+      trade_gain_02
+      trade_commercial_treaty
+      unlock_shared_los
+    </Technologies>
+  </Researcher>
+   <Trainer>
+    <BatchTimeModifier>0.6</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/merc_slinger_iber_3
+      units/{civ}/merc_spear_greek_3
+      -units/{civ}/merc_slinger_iber_2
+      -units/{civ}/merc_spear_greek_2
+      -units/{civ}/merc_slinger_iber
+      -units/{civ}/merc_spear_greek
+    </Entities>
+  </Trainer>
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
