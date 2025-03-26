@@ -2,9 +2,9 @@
 <Entity parent="template_unit_cavalry_ranged_javelineer">
   <Attack>
     <Ranged>
-      <MaxRange>31</MaxRange>
+      <MaxRange op="mul">1.05</MaxRange>
       <Projectile>
-        <Spread op="mul">1.5</Spread>
+        <Spread op="mul">1.25</Spread>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
