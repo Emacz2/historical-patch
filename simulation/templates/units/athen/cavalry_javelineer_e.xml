@@ -2,14 +2,16 @@
 <Entity parent="units/athen/cavalry_javelineer_a">
 <Attack>
     <Ranged>
-      <MaxRange>33</MaxRange>
-      <RepeatTime op="add">-250</RepeatTime>
+      <RepeatTime op="add">-125</RepeatTime>
       <Projectile>
-        <Spread op="mul">0.75</Spread>
+        <Spread op="mul">0.7</Spread>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Identity>
+    <Rank>Elite</Rank>
+  </Identity>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/athenians/cavalry_javelinist_e_m.xml</Actor>

@@ -4,7 +4,8 @@
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Marcacos</SpecificName>
-   <GenericName>Hunting Jav Cavalry</GenericName>
+    <GenericName>Hunting Jav Cavalry</GenericName>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
     <Icon>units/gaul/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

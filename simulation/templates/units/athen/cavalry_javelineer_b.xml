@@ -4,6 +4,7 @@
     <SelectionGroupName>units/athen/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Pródromos</SpecificName>
     <Icon>units/athen/cavalry_javelinist.png</Icon>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/athen/cavalry_javelineer_a</Entity>

@@ -5,6 +5,7 @@
     <SelectionGroupName>units/brit/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Marcacos</SpecificName>
     <GenericName>Hunting Jav Cavalry</GenericName>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
     <Icon>units/brit/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

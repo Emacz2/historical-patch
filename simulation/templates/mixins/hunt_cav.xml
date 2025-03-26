@@ -44,6 +44,6 @@
     <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Hunt Cav</VisibleClasses>
+    <VisibleClasses datatype="tokens">Hunt</VisibleClasses>
   </Identity>
 </Entity>

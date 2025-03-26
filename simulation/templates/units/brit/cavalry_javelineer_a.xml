@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/brit/cavalry_javelineer_b">
- <Attack>
+<Attack>
     <Ranged>
-      <MaxRange op="add">1</MaxRange>
-      <RepeatTime op="add">-250</RepeatTime>
+      <RepeatTime op="add">-125</RepeatTime>
       <Projectile>
-        <Spread op="mul">0.75</Spread>
+        <Spread op="mul">0.8</Spread>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
   <Promotion>
     <Entity>units/brit/cavalry_javelineer_e</Entity>
   </Promotion>
