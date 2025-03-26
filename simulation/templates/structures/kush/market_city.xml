@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_structure_economic_market">
+  <Identity>
+    <Civ>kush</Civ>
+    <SpecificName>Pr-sbt</SpecificName>
+    <Tooltip>Barter resources. Establish trade routes. Train Traders and research trade and barter technologies. Recruit rank3 merc. Recieve .5 of each resource trickle per second</Tooltip>
+    <Classes datatype="tokens">Barter</Classes>
+    <VisibleClasses datatype="tokens">Trade City Market</VisibleClasses>
+  </Identity>
+  <Trainer>
+    <BatchTimeModifier>0.5</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_javelineer_market_3
+      units/{civ}/infantry_maceman_market_3
+      -units/{civ}/infantry_javelineer_market
+      -units/{civ}/infantry_maceman_market
+    </Entities>
+  </Trainer>
+  <Obstruction>
+    <Static width="25.0" depth="25.0"/>
+  </Obstruction>
+  <Footprint>
+    <Square width="27" depth="27"/>
+    <Height>8.0</Height>
+  </Footprint>
+  <VisualActor>
+      <Actor>structures/kushites/market.xml</Actor>
+  </VisualActor>
+  <ResourceDropsite>
+    <Types>food wood stone metal</Types>
+    <Sharable>true</Sharable>
+  </ResourceDropsite>
+   <ResourceTrickle>
+    <Rates>
+      <food>0.5</food>
+      <wood>0.5</wood>
+      <stone>0.5</stone>
+      <metal>0.5</metal>
+    </Rates>
+    <Interval>1000</Interval>
+  </ResourceTrickle>
+</Entity>

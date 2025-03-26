@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_economic_market">
-  <Footprint>
-    <Square width="27" depth="27"/>
-    <Height>8.0</Height>
-  </Footprint>
   <Identity>
     <Civ>athen</Civ>
     <SpecificName>Emporion</SpecificName> 
+    <Tooltip>Barter resources. Establish trade routes. Train Traders and research trade and barter technologies. Recruit rank2 merc - they can not promote</Tooltip>
+    <Classes datatype="tokens">Barter</Classes>
+    <VisibleClasses datatype="tokens">Trade Town Market</VisibleClasses>
   </Identity>
   <Upgrade>
    <market_town>

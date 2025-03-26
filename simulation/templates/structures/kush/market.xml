@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_economic_market">
-  <Footprint>
-    <Square width="32" depth="32"/>
-    <Height>8.0</Height>
-  </Footprint>
   <Identity>
     <Civ>kush</Civ>
     <SpecificName>Pr-sbt</SpecificName>
   </Identity>
-  <Obstruction>
-    <Static width="30.0" depth="30.0"/>
-  </Obstruction>
+  <Upgrade>
+   <market_town>
+      <Entity>structures/kush/market_town</Entity>
+      <Tooltip>Upgrade your market, trains rank2 merc, faster batch training and small resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_town</Techs>
+      </Requirements>
+      <Cost>
+        <food>200</food>
+        <wood>100</wood>
+        <metal>15</metal>
+        <stone>15</stone>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>30</Time>
+   </market_town>
+  </Upgrade>
   <VisualActor>
     <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
     <Actor>structures/kushites/market.xml</Actor>
   </VisualActor>
+   <Obstruction>
+    <Static width="30.0" depth="30.0"/>
+  </Obstruction>
+  <Footprint>
+    <Square width="32" depth="32"/>
+    <Height>8.0</Height>
+  </Footprint>
 </Entity>

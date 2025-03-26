@@ -33,8 +33,6 @@
       units/{civ}/merc_spear_greek_3
       -units/{civ}/merc_slinger_iber_2
       -units/{civ}/merc_spear_greek_2
-      -units/{civ}/merc_slinger_iber
-      -units/{civ}/merc_spear_greek
     </Entities>
   </Trainer>
   <ResourceDropsite>
