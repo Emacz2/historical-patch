@@ -124,10 +124,10 @@
   <UnitMotion>
     <FormationController>false</FormationController>
     <PassabilityClass>default</PassabilityClass>
-    <WalkSpeed>25</WalkSpeed>
+    <WalkSpeed>20</WalkSpeed>
     <RunMultiplier>1.0</RunMultiplier>
     <InstantTurnAngle>1.5</InstantTurnAngle>
-    <Acceleration>55</Acceleration>
+    <Acceleration>40</Acceleration>
     <Weight>10</Weight>
   </UnitMotion>
   <Visibility>
@@ -137,7 +137,7 @@
     <Preview>false</Preview>
   </Visibility>
   <Vision>
-    <Range>50</Range>
+    <Range>60</Range>
   </Vision>
   <VisionSharing>
     <Bribable>false</Bribable>
