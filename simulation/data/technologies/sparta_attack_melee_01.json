@@ -1,0 +1,28 @@
+{
+	"genericName": "Side Arms",
+	"specificName": {
+	
+		"spart": "Xiphos"
+	},
+	"description": ".",
+	"cost": {
+		"food": 200,
+		"metal": 150
+	},
+	"requirements": { "tech": "phase_village" },
+	"requirementsTooltip": "Unlocked in village.",
+	"icon": "sword_01.png",
+	"researchTime": 20,
+	"tooltip": "Soldiers +10% melee attack damage, Polearm units an additional 10%.  Champion spearman an additional 15% train time. ",
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Hack", "affects": "Polearm", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "affects": "Polearm", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "affects": "Polearm", "multiply": 1.1 },
+		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Champion Spearman" }
+	],
+	"affects": ["Soldier !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

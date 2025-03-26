@@ -3,7 +3,17 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Chalkeōn</SpecificName>
+    <VisibleClasses datatype="tokens">Town Forge</VisibleClasses>
+    <Requirements>
+        <Techs datatype="tokens">phase_town</Techs>
+      </Requirements>
   </Identity>
+   <ProductionQueue/>
+  <Researcher>
+    <Technologies datatype="tokens">
+      -soldier_attack_melee_01
+    </Technologies>
+  </Researcher>
   <VisualActor>
     <Actor>structures/spartans/blacksmith.xml</Actor>
   </VisualActor>
