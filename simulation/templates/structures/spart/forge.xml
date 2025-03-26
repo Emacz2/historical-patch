@@ -12,6 +12,8 @@
   <Researcher>
     <Technologies datatype="tokens">
       -soldier_attack_melee_01
+      -soldier_resistance_hack_01
+      -soldier_resistance_pierce_01
     </Technologies>
   </Researcher>
   <VisualActor>

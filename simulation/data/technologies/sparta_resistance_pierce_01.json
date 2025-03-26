@@ -1,0 +1,20 @@
+{
+	"genericName": "Wooden Shield",
+	"description": "Wooden shields are heavier but much better able to resist projectiles and blows than wicker-frame shields.",
+	"cost": {
+		"wood": 200,
+		"metal": 100
+	},
+	"requirements": { "tech": "phase_village" },
+	"requirementsTooltip": "Unlocked in Village Phase.",
+	"icon": "shields_generic_wood.png",
+	"researchTime": 20,
+	"tooltip": "Soldiers +1.5 pierce resistance.",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
+
+	],
+	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
