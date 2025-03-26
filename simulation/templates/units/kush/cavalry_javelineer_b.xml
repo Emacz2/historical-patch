@@ -6,6 +6,7 @@
     <SelectionGroupName>units/kush/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Iry hr ssmwtt</SpecificName>
     <GenericName>Napatan Hunting Jav Cavalry</GenericName>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
     <Icon>units/kush/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>
