@@ -6,6 +6,7 @@
     <SelectionGroupName>units/spart/cavalry_javelineer_b</SelectionGroupName>
     <GenericName>Hunting Jav Cavalry</GenericName>
     <Icon>units/spart/cavalry_javelinist.png</Icon>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/spart/cavalry_javelineer_a</Entity>

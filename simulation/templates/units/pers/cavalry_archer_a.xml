@@ -2,14 +2,16 @@
 <Entity parent="units/pers/cavalry_archer_b">
 <Attack>
     <Ranged>
-      <MaxRange op="add">1</MaxRange>
-      <RepeatTime op="add">-250</RepeatTime>
+      <RepeatTime op="add">-125</RepeatTime>
       <Projectile>
-        <Spread op="mul">0.75</Spread>
+        <Spread op="mul">0.8</Spread>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
   <Promotion>
     <Entity>units/pers/cavalry_archer_e</Entity>
   </Promotion>

@@ -17,6 +17,7 @@
     <GenericName>Nabataean Bow Hunting Camel</GenericName>
     <SpecificName>Mutsābiq Gamal Nabatu</SpecificName>
     <Icon>units/ptol/camel_archer.png</Icon>
+    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
     <Requirements>
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
