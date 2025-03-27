@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/cart/merc_slinger_iber_2">
+<Entity parent="units/cart/merc_slinger_market_b">
 <Attack>
     <Ranged>
       <AttackName>Sling</AttackName>
@@ -7,7 +7,7 @@
     </Ranged>
   </Attack>
   <Identity>
-    <Rank>Elite</Rank>
+    <Rank>Advanced</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/kush/infantry_javelineer_market">
+<Entity parent="units/kush/merc_javelineer_market_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>

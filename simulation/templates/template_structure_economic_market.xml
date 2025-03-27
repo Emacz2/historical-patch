@@ -68,13 +68,11 @@
     <Entities datatype="tokens">
       units/{civ}/support_trader
       units/{civ}/infantry_swordsman_market
-      units/{civ}/infantry_archer_market
-      units/{civ}/infantry_maceman_market
-      units/{civ}/infantry_javelineer_market
-      units/{civ}/infantry_slinger_market
-      units/{civ}/infantry_spearman_market
-      units/{civ}/merc_slinger_iber
-      units/{civ}/merc_spear_greek
+      units/{civ}/merc_archer_market_b
+      units/{civ}/merc_maceman_market_b
+      units/{civ}/merc_javelineer_market_b
+      units/{civ}/merc_slinger_market_b
+      units/{civ}/merc_spear_market_b
     </Entities>
   </Trainer>
   <Vision>
