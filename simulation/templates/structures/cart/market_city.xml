@@ -29,10 +29,10 @@
    <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/merc_slinger_iber_3
-      units/{civ}/merc_spear_greek_3
-      -units/{civ}/merc_slinger_iber_2
-      -units/{civ}/merc_spear_greek_2
+      units/{civ}/merc_slinger_market_e
+      units/{civ}/merc_spear_market_e
+      -units/{civ}/merc_slinger_market_b
+      -units/{civ}/merc_spear_market_b
     </Entities>
   </Trainer>
   <ResourceDropsite>
