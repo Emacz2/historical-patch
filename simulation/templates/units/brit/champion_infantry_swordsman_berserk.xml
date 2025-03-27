@@ -8,10 +8,10 @@
   </Identity>
   <Attack>
     <Melee>
-        <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack op="add">2.0</Hack>
-	   <Pierce op="add">1.0</Pierce>
+        <Hack op="add">4.0</Hack>
+	      <Pierce op="add">2.0</Pierce>
       </Damage>
        <RepeatTime>750</RepeatTime>
     </Melee>
@@ -24,9 +24,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-5</Hack>
-	      <Pierce op="add">-5.5</Pierce>
-	      <Crush op="add">-15</Crush>
+        <Hack op="add">-4.5</Hack>
+	      <Pierce op="add">-5.0</Pierce>
+	      <Crush op="add">-14</Crush>
       </Damage>
     </Entity>
   </Resistance>
