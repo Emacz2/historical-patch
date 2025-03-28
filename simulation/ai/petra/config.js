@@ -21,8 +21,8 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 	this.popScaling = 1;	// scale factor depending on the max population
 
 	this.Military = {
-		"towerLapseTime": 270,	// Time to wait between building 2 towers
-		"fortressLapseTime": 390,	// Time to wait between building 2 fortresses
+		"towerLapseTime": 300,	// Time to wait between building 2 towers
+		"fortressLapseTime": 360,	// Time to wait between building 2 fortresses
 		"popForBarracks1": 25,
 		"popForBarracks2": 75,
 		"popForForge": 65,
@@ -37,8 +37,8 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 	};
 
 	this.Economy = {
-		"popPhase2": 75,	// How many units we want before aging to phase2.
-		"workPhase3": 100,	// How many workers we want before aging to phase3.
+		"popPhase2": 80,	// How many units we want before aging to phase2.
+		"workPhase3": 120,	// How many workers we want before aging to phase3.
 		"workPhase4": 150,	// How many workers we want before aging to phase4 or higher.
 		"popForDock": 25,
 		"targetNumWorkers": 40,	// dummy, will be changed later
