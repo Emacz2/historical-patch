@@ -4,6 +4,7 @@
     <Entities datatype="tokens">
       structures/ptol/lighthouse
       structures/ptol/library
+      structures/ptol/temple_2
     </Entities>
   </Builder>
   <Identity>
@@ -12,7 +13,6 @@
     <SpecificName>Swordsman</SpecificName>
     <SelectionGroupName>units/pers/infantry_swordsman_merc_b</SelectionGroupName>
     <Icon>units/cart/infantry_swordsman.png</Icon>
-    <Rank>Advanced</Rank>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

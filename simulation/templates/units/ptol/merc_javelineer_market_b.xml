@@ -4,6 +4,7 @@
     <Entities datatype="tokens">
       structures/ptol/lighthouse
       structures/ptol/library
+      structures/ptol/temple_2
     </Entities>
   </Builder>
   <Identity>
@@ -12,7 +13,6 @@
     <GenericName>Mercenary Thureos Skirmisher</GenericName>
     <SpecificName>Thureophóros Akrobolistḗs</SpecificName>
     <Icon>units/ptol/infantry_javelinist_merc.png</Icon>
-    <Rank>Elite</Rank>
   </Identity>
  <Promotion disable=""/>
   <VisualActor>
