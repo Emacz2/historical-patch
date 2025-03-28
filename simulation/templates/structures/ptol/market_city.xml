@@ -30,18 +30,12 @@
     <BatchTimeModifier>0.5</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/support_trader
-      units/{civ}/infantry_swordsman_market3
-      units/{civ}/infantry_archer_market3
-      units/{civ}/infantry_maceman_market3
-      units/{civ}/infantry_javelineer_market3
-      units/{civ}/infantry_slinger_market3
-      units/{civ}/infantry_spearman_market3
-      -units/{civ}/infantry_swordsman_market2
-      -units/{civ}/infantry_archer_market2
-      -units/{civ}/infantry_maceman_market2
-      -units/{civ}/infantry_javelineer_market2
-      -units/{civ}/infantry_slinger_market2
-      -units/{civ}/infantry_spearman_market2
+      units/{civ}/merc_archer_market_e
+      units/{civ}/merc_javelineer_market_e
+      units/{civ}/merc_swordsman_market_e
+      -units/{civ}/merc_archer_market_b
+      -units/{civ}/merc_javelineer_market_b
+      -units/{civ}/merc_swordsman_market_b
     </Entities>
   </Trainer>
   <ResourceDropsite>
