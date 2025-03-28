@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
+  <Auras datatype="tokens">
+    units/han_minister_garrison
+    units/han_minister_gathering
+    units/han_minister_building
+    units/han_minister_garrison_ministry
+  </Auras>
   <Attack>
     <Capture>
       <AttackName>Capture</AttackName>
@@ -22,25 +28,21 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
-  <Auras datatype="tokens">
-    units/han_minister_herald
-    units/han_minister_herald2
-  </Auras>
   <Cost>
-    <Population>1</Population>
-    <BuildTime>15</BuildTime>
+    <Population>0</Population>
+    <BuildTime>25</BuildTime>
     <Resources>
       <food>100</food>
       <metal>100</metal>
     </Resources>
   </Cost>
   <Health>
-    <Max>220</Max>
+    <Max>200</Max>
   </Health>
   <Identity>
     <Civ>han</Civ>
     <GenericName>Imperial Minister</GenericName>
-    <SpecificName>Minister Herald</SpecificName>
+    <SpecificName>Minister Coachman</SpecificName>
     <Tooltip>Use to boost the efficiency of nearby units and buildings. Garrison within a building to boost the efficiency of its production queue. Only Han buildings can garrison ministers.</Tooltip>
     <Classes datatype="tokens">Organic Human</Classes>
     <VisibleClasses datatype="tokens">Minister</VisibleClasses>
@@ -98,7 +100,7 @@
       <walk>actor/human/movement/walk.xml</walk>
     </SoundGroups>
   </Sound>
-    <TrainingRestrictions>
+  <TrainingRestrictions>
     <Category>Minister</Category>
     <MatchLimit>1</MatchLimit>
   </TrainingRestrictions>
