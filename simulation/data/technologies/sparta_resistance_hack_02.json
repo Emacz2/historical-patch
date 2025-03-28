@@ -5,14 +5,15 @@
 	},
 	"description": "Body armor made from quilted wool, linen, cotton, or leather.",
 	"cost": {
-		"food": 200,
-		"metal": 100
+		"food": 350,
+		"metal": 250
 	},
-	"requirements": { "tech": "phase_village" },
-	"requirementsTooltip": "Unlocked in Village Phase.",
-	"icon": "armor_leather.png",
-	"researchTime": 20,
-	"tooltip": "Soldiers (accept helots) +1.5 hack resistance. (Serf's only +1)",
+	"supersedes": "sparta_resistance_hack_01",
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"researchTime": 40,
+	"icon": "armor_pteruges.png",
+	"tooltip": "Soldiers (accept helots) +1.5 hack resistance. (Serf's only +1) champion spearman 5% additional train time",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Serf" },

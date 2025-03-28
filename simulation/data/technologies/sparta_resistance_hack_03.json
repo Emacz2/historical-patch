@@ -1,0 +1,21 @@
+{
+	"genericName": "Mail Body Armor",
+	"description": "Body armor made of small metal rings linked together.",
+	"cost": {
+		"food": 500,
+		"metal": 400
+	},
+	"supersedes": "sparta_resistance_hack_02",
+	"requirements": { "tech": "phase_city" },
+	"requirementsTooltip": "Unlocked in City Phase.",
+	"icon": "armor_chain.png",
+	"researchTime": 60,
+	"tooltip": "Soldiers (accept helots) +2.5 hack resistance. (Serfs only +1) champion spearman 5% additonal train time",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5, "affects": "!Serf" },
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
+	],
+	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

@@ -13,14 +13,14 @@
 	"requirementsTooltip": "Unlocked in village.",
 	"icon": "sword_01.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +10% melee attack damage, Polearm units an additional 10%.  Champion spearman an additional 15% train time. ",
+	"tooltip": "Soldiers +10% melee attack damage, soldiers besides Serfs an additional 10%.  Champion spearman an additional 10% train time. ",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Hack", "affects": "Polearm", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Pierce", "affects": "Polearm", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Crush", "affects": "Polearm", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Serf" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "!Serf" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Serf" },
 		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
 	],
 	"affects": ["Soldier !PaidMerc !Elephant"],

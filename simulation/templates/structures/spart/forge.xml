@@ -5,15 +5,27 @@
     <SpecificName>Chalkeōn</SpecificName>
     <VisibleClasses datatype="tokens">Town Forge</VisibleClasses>
     <Requirements>
-        <Techs datatype="tokens">phase_town</Techs>
-      </Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
    <ProductionQueue/>
   <Researcher>
     <Technologies datatype="tokens">
+      sparta_attack_melee_02
+      sparta_attack_melee_03
+      sparta_resistance_hack_02
+      sparta_resistance_hack_03
+      sparta_resistance_pierce_02
+      sparta_resistance_pierce_03
       -soldier_attack_melee_01
       -soldier_resistance_hack_01
       -soldier_resistance_pierce_01
+      -soldier_attack_melee_02
+      -soldier_attack_melee_03
+      -soldier_resistance_hack_02
+      -soldier_resistance_hack_03
+      -soldier_resistance_pierce_02
+      -soldier_resistance_pierce_03
     </Technologies>
   </Researcher>
   <VisualActor>

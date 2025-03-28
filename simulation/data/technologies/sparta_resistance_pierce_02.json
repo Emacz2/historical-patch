@@ -1,14 +1,15 @@
 {
-	"genericName": "Wooden Shield",
-	"description": "Wooden shields are heavier but much better able to resist projectiles and blows than wicker-frame shields.",
+	"genericName": "Metal Rim",
+	"description": "Strengthen shields with a metal rim or spine.",
 	"cost": {
-		"wood": 200,
-		"metal": 100
+		"wood": 350,
+		"metal": 250
 	},
-	"requirements": { "tech": "phase_village" },
-	"requirementsTooltip": "Unlocked in Village Phase.",
-	"icon": "shields_generic_wood.png",
-	"researchTime": 20,
+	"supersedes": "sparta_resistance_pierce_01",
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "shields_generic_bronze.png",
+	"researchTime": 40,
 	"tooltip": "Soldiers (accept helots) +1.5 pierce resistance. (Serf's only +1)",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },

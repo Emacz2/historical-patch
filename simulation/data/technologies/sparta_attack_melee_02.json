@@ -1,0 +1,25 @@
+{
+	"genericName": "Iron Weapons",
+	"description": "Using iron instead of bronze gave weapons additional power.",
+	"cost": {
+		"food": 200,
+		"metal": 150
+	},
+	"supersedes": "sparta_attack_melee_01",
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in town phase.",
+	"icon": "sword_02.png",
+	"researchTime": 40,
+	"tooltip": "Soldiers +10% melee attack damage, all soldiers besides serfs an extra 5%, but Champion spearman an additional 10% train time. ",
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "!Serf"},
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "!Serf"},
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "!Serf"},
+		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
+	],
+	"affects": ["Soldier !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
