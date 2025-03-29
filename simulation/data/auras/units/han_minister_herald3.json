@@ -2,13 +2,12 @@
 	"type": "global",
 	"affects": ["Healer"],
 	"modifications": [
-	
 		{
-			"value": "Cost/Resources",
+			"value": "Cost/BuildTime",
 			"multiply": 0.8
 		}
 	],
 	"auraName": "Excellency of Works",
-	"auraDescription": "Healers cost 20% less resources.",
+	"auraDescription": "Healers 20% less recruit time.",
 	"stackable": true
 }

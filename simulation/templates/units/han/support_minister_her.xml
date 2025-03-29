@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
   <Auras datatype="tokens">
-    units/han_minister_garrison
-    units/han_minister_gathering
-    units/han_minister_building
-    units/han_minister_garrison_ministry
+    units/han_minister_herald
+    units/han_minister_herald2
+    units/han_minister_herald3
   </Auras>
   <Attack>
     <Capture>

@@ -1,14 +1,14 @@
 {
 	"type": "global",
-	"affects": ["Healer"],
+	"affects": ["Chariot"],
 	"modifications": [
 	
 		{
 			"value": "Cost/Resources",
-			"multiply": 0.8
+			"multiply": 0.9
 		}
 	],
 	"auraName": "Excellency of Works",
-	"auraDescription": "Healers cost 20% less resources.",
+	"auraDescription": "Chariot -10% resources.",
 	"stackable": true
 }

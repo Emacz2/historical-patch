@@ -1,0 +1,14 @@
+{
+	"type": "global",
+	"affects": ["Cavalry"],
+	"modifications": [
+	
+		{
+			"value": "Cost/BuildTime",
+			"multiply": 0.9
+		}
+	],
+	"auraName": "Excellency of Works",
+	"auraDescription": "Cavalry -10% train time.",
+	"stackable": true
+}
