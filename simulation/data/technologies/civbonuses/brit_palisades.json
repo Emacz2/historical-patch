@@ -3,7 +3,7 @@
 	"autoResearch": true,
 	"description": "The Brits often build wood fortifactions around their Hill Forts.",
 	"icon": "wall.png",
-	"tooltip": "City Walls +100% build time, +100% stone cost, and +200% health.",
+	"tooltip": "Palisades 75% less build time.",
 	"requirements": { "civ": "cart" },
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 0.25}
