@@ -17,7 +17,6 @@
     </Melee>
   </Attack>
  <Health>
-    <Max>180</Max>
     <RegenRate>-1</RegenRate>
     <Unhealable>true</Unhealable>
   </Health>
@@ -38,8 +37,9 @@
       <Time>6</Time>
     </Berserker_Rage>
   </Upgrade>
-  <UnitMotion>
-    <WalkSpeed op="add">3.5</WalkSpeed>
+<UnitMotion>
+    <WalkSpeed op="mul">1.4</WalkSpeed>
+    <Acceleration op="mul">1.5</Acceleration>
   </UnitMotion>
   <VisualActor>
     <Actor>units/britons/infantry_swordsman_berserk.xml</Actor>
