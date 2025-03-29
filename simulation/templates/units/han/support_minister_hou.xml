@@ -2,7 +2,6 @@
 <Entity parent="template_unit_support">
   <Auras datatype="tokens">
     units/han_minister_household
-    units/han_minister_household2
   </Auras>
   <Attack>
     <Capture>
