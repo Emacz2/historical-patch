@@ -80,15 +80,15 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/support_minister_1
-      units/{civ}/support_minister_2
-      units/{civ}/support_minister_3
-      units/{civ}/support_minister_4
-      units/{civ}/support_minister_5
-      units/{civ}/support_minister_6
-      units/{civ}/support_minister_7
-      units/{civ}/support_minister_8     
-      units/{civ}/support_minister_9
+      units/{civ}/support_minister_cer
+      units/{civ}/support_minister_coa
+      units/{civ}/support_minister_fin
+      units/{civ}/support_minister_gua
+      units/{civ}/support_minister_her
+      units/{civ}/support_minister_hou
+      units/{civ}/support_minister_imp
+      units/{civ}/support_minister_jus    
+      units/{civ}/support_minister_ste
     </Entities>
   </Trainer>
   <Vision>
