@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_melee_spearman">
+<Entity parent="hunt_cav|template_unit_cavalry_melee_spearman_hunt">
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/cavalry_spearmanH_b</SelectionGroupName>
     <GenericName>Liby-Phoenicians Hunting spear cav</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/cart/cavalry_javelinist.png</Icon>
-    <Tooltip>Counters: 2.5× vs Cavalry.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/cart/cavalry_spearmanH_a</Entity>

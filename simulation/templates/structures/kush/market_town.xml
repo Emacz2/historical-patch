@@ -27,10 +27,10 @@
     <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/infantry_javelineer_market_2
-      units/{civ}/infantry_maceman_market_2
-      -units/{civ}/infantry_javelineer_market
-      -units/{civ}/infantry_maceman_market
+      units/{civ}/merc_javelineer_market_a
+      units/{civ}/merc_maceman_market_a
+      -units/{civ}/merc_javelineer_market_b
+      -units/{civ}/merc_maceman_market_b
     </Entities>
   </Trainer>
   <Obstruction>
