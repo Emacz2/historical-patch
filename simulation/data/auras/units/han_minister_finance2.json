@@ -1,0 +1,15 @@
+{
+	"type": "global",
+	"affects": ["Structure"],
+	"modifications": [
+	
+		{
+			"value": "Cost/Resources",
+			"multiply": 0.95
+		}
+		
+	],
+	"auraName": "Finance",
+	"auraDescription": "All buildinings 5% less resources.",
+	"stackable": true
+}

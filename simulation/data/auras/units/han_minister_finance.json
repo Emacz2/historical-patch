@@ -1,0 +1,26 @@
+{
+	"type": "global",
+	"affects": ["Structure"],
+	"modifications": [
+		{
+			"value": "TechCostMultiplier/Food",
+			"multiply": 0.95
+		},
+		{
+			"value": "TechCostMultiplier/Metal",
+			"multiply": 0.95
+		},
+		{
+			"value": "TechCostMultiplier/Stone",
+			"multiply": 0.95
+		},
+		{
+			"value": "TechCostMultiplier/Wood",
+			"multiply": 0.95
+		}
+		
+	],
+	"auraName": "Finance",
+	"auraDescription": "All techs 5% less resources.",
+	"stackable": true
+}

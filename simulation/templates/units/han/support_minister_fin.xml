@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
   <Auras datatype="tokens">
-    units/han_minister_building
+    units/han_minister_finance
+    units/han_minister_finance2
+    units/han_minister_finance3
   </Auras>
   <Attack>
     <Capture>

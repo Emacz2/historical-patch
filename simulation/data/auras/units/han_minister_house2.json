@@ -1,0 +1,10 @@
+{
+	"type": "range",
+	"radius": 60,
+	"auraDescription": "Structures +10% capture point regeneration rate.",
+	"modifications": [
+		{ "value": "Capturable/RegenRate", "multiply": 1.1 }
+	],
+	"affects": ["Structure"],
+	"overlayIcon": "art/textures/ui/session/auras/laurel.png"
+}
