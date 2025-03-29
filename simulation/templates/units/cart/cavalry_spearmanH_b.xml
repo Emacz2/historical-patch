@@ -6,6 +6,7 @@
     <GenericName>Liby-Phoenicians Hunting spear cav</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/cart/cavalry_javelinist.png</Icon>
+    <Tooltip>Counters: 2.5× vs Cavalry.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/cart/cavalry_spearmanH_a</Entity>
