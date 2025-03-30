@@ -1,0 +1,11 @@
+{
+	"type": "global",
+	"affects": ["Heroe"],
+	"affectedPlayers": ["Ally"],
+	"modifications": [
+		{ "value": "Health/Max", "multiply": 1.2 }
+	],
+	"auraName": "",
+	"auraDescription": "Own and allied heroes 20% more health.",
+	"overlayIcon": "art/textures/ui/session/auras/health_bonus.png"
+}
