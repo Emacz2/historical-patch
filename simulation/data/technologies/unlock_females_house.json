@@ -20,7 +20,7 @@
 		]
 	},
 	"icon": "wives_festival.png",
-	"researchTime": 40,
+	"researchTime": 30,
 	"tooltip": "Unlock the ability to train women from houses.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
