@@ -39,7 +39,7 @@
   </Identity>
   <UnitMotion>
     <WalkSpeed op="mul">0.94</WalkSpeed>
-    <RunMultiplier>0.9</RunMultiplier>
+    <RunMultiplier>1.2</RunMultiplier>
     <Acceleration op="mul">0.94</Acceleration>
   </UnitMotion>
   <Sound>
