@@ -10,9 +10,9 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>4.2</Pierce>
+        <Pierce>4.5</Pierce>
       </Damage>
-      <MaxRange>65</MaxRange>
+      <MaxRange>45</MaxRange>
       <PrepareTime>400</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Projectile>
@@ -121,6 +121,7 @@
       trained_cs
       polearm_tradition
       pheidian_workshop
+      cc_range
     </Technologies>
   </Researcher>
   <ResourceDropsite>

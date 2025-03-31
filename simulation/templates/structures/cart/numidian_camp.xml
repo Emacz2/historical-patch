@@ -17,8 +17,8 @@
   </Population>
   <Identity>
     <Civ>cart</Civ>
-    <SpecificName>Lybian Arm Camp</SpecificName>
-    <Tooltip>Train Libian Mercenaries.</Tooltip>
+    <SpecificName>Numidian Camp</SpecificName>
+    <Tooltip>Numidian Mercenary Jav Cav.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Town</VisibleClasses>
     <Icon>structures/embassy_italic.png</Icon>
