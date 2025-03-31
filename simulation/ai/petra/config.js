@@ -75,10 +75,12 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 			"structures/{civ}/embassy_italic"
 		],
 		"gaul": [
-			"structures/{civ}/assembly"
+			"structures/{civ}/assembly",
+			"structures/{civ}/celtic_coalitliton"
 		],
 		"han": [
-			"structures/{civ}/academy"
+			"structures/{civ}/academy",
+			"structures/{civ}/ministry"
 		],
 		"iber": [
 			"structures/{civ}/monument"
@@ -102,7 +104,8 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		],
 		"ptol": [
 			"structures/{civ}/library",
-			"structures/{civ}/theater"
+			"structures/{civ}/theater",
+			"structures/{civ}/temple_2"
 		],
 		"rome": [
 			"structures/{civ}/army_camp",
@@ -119,22 +122,22 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 
 	this.priorities =
 	{
-		"villager": 250,      // should be slightly lower than the citizen soldier one to not get all the food
-		"citizenSoldier": 300,
+		"villager": 500,      // should be slightly lower than the citizen soldier one to not get all the food
+		"citizenSoldier": 750,
 		"trader": 50,
 		"healer": 20,
 		"ships": 70,
-		"house": 350,
-		"dropsites": 200,
+		"house": 675,
+		"dropsites": 400,
 		"field": 400,
 		"dock": 90,
 		"corral": 10,
-		"economicBuilding": 90,
-		"militaryBuilding": 130,
-		"defenseBuilding": 70,
+		"economicBuilding": 350,
+		"militaryBuilding": 400,
+		"defenseBuilding": 100,
 		"civilCentre": 300,
-		"majorTech": 400,
-		"minorTech": 500,
+		"majorTech": 600,
+		"minorTech": 700,
 		"wonder": 100,
 		"emergency": 1000    // used only in emergency situations, should be the highest one
 	};
