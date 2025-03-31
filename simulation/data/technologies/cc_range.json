@@ -9,7 +9,7 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "arrow.png",
 	"researchTime": 30,
-	"tooltip": "Fortress +10 vision, +10 attack range. ",
+	"tooltip": "Civic centers +10 vision and attack range. ",
 	"modifications": [
 		{ "value": "Attack/Ranged/MaxRange", "add": 10 },
 		{ "value": "Vision/Range","add": 10 }
