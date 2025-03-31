@@ -4,12 +4,15 @@
     <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
     <GenericName>Ranged</GenericName>
   </Identity>
+  <Health>
+    <Max>60</Max>
+  </Health>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>2.5</Hack>
-        <Pierce>2</Pierce>
-        <Crush>10</Crush>
+        <Hack>1</Hack>
+        <Pierce>1.5</Pierce>
+        <Crush>5</Crush>
       </Damage>
       <ApplyStatus>
 <Burning>

@@ -28,7 +28,7 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>65</Max>
+    <Max>40</Max>
   </Health>
   <Identity>
     <Phenotype>female</Phenotype>

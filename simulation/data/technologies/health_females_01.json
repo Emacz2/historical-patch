@@ -8,9 +8,9 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "loom.png",
 	"researchTime": 20,
-	"tooltip": "Female Citizens +15 health, +1 H/P resitance.",
+	"tooltip": "Female Citizens +10 health, +1 H/P resitance.",
 	"modifications": [
-		{ "value": "Health/Max", "add": 15 },
+		{ "value": "Health/Max", "add": 10 },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
 		

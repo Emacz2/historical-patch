@@ -4,12 +4,15 @@
     <GenericName>Melee Infantry</GenericName>
     <VisibleClasses datatype="tokens">Melee</VisibleClasses>
   </Identity>
+  <Health>
+    <Max>120</Max>
+  </Health>
   <Resistance>
     <Entity>
       <Damage>
         <Hack>3.5</Hack>
         <Pierce>4</Pierce>
-        <Crush>10</Crush>
+        <Crush>5</Crush>
       </Damage>
       <ApplyStatus>
 <Burning>

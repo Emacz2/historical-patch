@@ -17,12 +17,18 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
-  <Health>
-    <Max op="add">10</Max>
-  </Health>
   <Loot>
     <xp op="add">1</xp>
   </Loot>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.5</Hack>
+        <Pierce>0.5</Pierce>
+        <Crush>0.5</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
