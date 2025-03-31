@@ -18,7 +18,7 @@
   </Identity>
    <Promotion disable=""/>
   <UnitMotion>
-    <WalkSpeed op="mul">1.1</WalkSpeed>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
     <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
   <VisualActor>
