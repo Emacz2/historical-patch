@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/cart/merc_slinger_market_b">
-<Attack>
-    <Ranged>
-      <AttackName>Sling</AttackName>
-      <MaxRange op="add">7</MaxRange>
-    </Ranged>
-  </Attack>
   <Identity>
     <Rank>Advanced</Rank>
     <Requirements>
@@ -13,10 +7,6 @@
     </Requirements>
   </Identity>
   <Promotion disable=""/>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.98</WalkSpeed>
-    <Acceleration op="mul">0.98</Acceleration>
-  </UnitMotion>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_a.xml</Actor>
   </VisualActor>
