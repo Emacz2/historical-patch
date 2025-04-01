@@ -37,7 +37,7 @@
   <ProductionQueue/>
   <Researcher>
     <Technologies datatype="tokens">
-      cavalry_health2
+      cavalry_health
       unlock_champion_chariots
       chariot_range_jav
       chariot_health

@@ -15,11 +15,11 @@
         <Crush>5</Crush>
       </Damage>
       <ApplyStatus>
-<Burning>
-<Duration>0.5</Duration>
-<BlockChance>0.5</BlockChance>
-</Burning>
-</ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
     </Entity>
   </Resistance>
   <Turretable/>

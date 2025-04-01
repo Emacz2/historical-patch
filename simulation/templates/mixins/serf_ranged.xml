@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+    </Ranged> 
+      <Damage>
+        <Pierce op="mul">0.8</Pierce>
+        <Hack op="mul">0.8</Hack>
+        <Crush op="mul">0.8</Crush>
+      </Damage>
+      <Projectile>
+        <Spread op="mul">1.2</Spread>
+      </Projectile>
+    </Ranged>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.5</Hack>
+        <Pierce>0.5</Pierce>
+        <Crush>5</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
+  <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <wood op="add">-10</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Serf</VisibleClasses>
+    <Tooltip>Ranged Serfs 20% less dmg, 20% less accurate, 0.5H/0.5P resistances but 10% faster train time and -10 wood cost</Tooltip>
+  </Identity>
+</Entity>

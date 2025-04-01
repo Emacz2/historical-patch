@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+    </Melee> 
+      <Damage>
+        <Pierce op="mul">0.75</Pierce>
+        <Hack op="mul">0.75</Hack>
+        <Crush op="mul">0.75</Crush>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>1.5</Hack>
+        <Pierce>2</Pierce>
+        <Crush>5</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
+  <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <wood op="add">-10</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Serf</VisibleClasses>
+    <Tooltip>Melee Serfs 25% less dmg, 1.5H/2.0P resistance but 10% faster train time and -10 wood cost</Tooltip>
+  </Identity>
+  </Identity>
+</Entity>
