@@ -3,17 +3,17 @@
 	"autoResearch": true,
 	"description": "Britons paint their bodies with Woad, which produces a blue color and gives them a fiercesome appearance in battle.",
 	"icon": "woad_warriors.png",
-	"tooltip": "All Citizen Infantry Units +7% movement speed and gain +2 loot taking and Javelineers +3 range but all cs -1.5 hack and -1 pierce resistance.",
+	"tooltip": "All Citizen Infantry Units +7% movement speed and gain +2 loot taking and Javelineers +3 range but all cs -0.5H/P resistances.",
 	"requirements": { "civ": "brit" },
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.07 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 },
 		{ "value": "Attack/Ranged/MaxRange", "add": 3, "affects": "Javelineer" },
 		{ "value": "Looter/Resource/metal", "add": 2 },
 		{ "value": "Looter/Resource/stone", "add": 2 },
 		{ "value": "Looter/Resource/food", "add": 2 },
 		{ "value": "Looter/Resource/wood", "add": 2 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": -1.5 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -0.5 }
 
 	],
 	"affects": ["Citizen Infantry !Serf"],
