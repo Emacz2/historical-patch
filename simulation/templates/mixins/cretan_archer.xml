@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+  <Ranged>
+	<Damage>
+	    <Pierce op="mul">1.05</Piercek>
+  </Damage>
+    <MaxRange op="add">-10</MaxRange>
+  </Ranged>
+</Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+</Entity>
