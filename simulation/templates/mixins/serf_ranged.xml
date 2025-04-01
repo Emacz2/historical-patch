@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Attack>
-    </Ranged> 
+    <Ranged> 
       <Damage>
         <Pierce op="mul">0.8</Pierce>
         <Hack op="mul">0.8</Hack>
