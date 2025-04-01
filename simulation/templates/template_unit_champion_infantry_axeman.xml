@@ -5,11 +5,11 @@
       <AttackName>Axe</AttackName>
       <Damage>
         <Hack>15</Hack>
-        <Crush>7.5</Crush>
-        <Crush>1.5</Crush>
+        <Pierce>1.5</Pierce>
+        <Crush>6</Crush>
       </Damage>
       <MaxRange>3.5</MaxRange>
-      <PrepareTime>425</PrepareTime>
+      <PrepareTime>275</PrepareTime>
       <RepeatTime>1100</RepeatTime>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>

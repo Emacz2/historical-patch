@@ -19,9 +19,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>4</Hack>
+        <Hack>3</Hack>
         <Pierce>3.5</Pierce>
-        <Crush>15</Crush>
+        <Crush>10</Crush>
       </Damage>
     </Entity>
   </Resistance>

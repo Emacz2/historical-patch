@@ -4,12 +4,12 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack>16.5</Hack>
-        <Pierce>7.5</Pierce>
+        <Hack>14</Hack>
+        <Pierce>6</Pierce>
       </Damage>
       <MaxRange>2.75</MaxRange>
-      <PrepareTime>350</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
+      <PrepareTime>275</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
       <Bonuses>
         <BonusMelee>
           <Classes>Ranged Infantry</Classes>
@@ -22,7 +22,7 @@
     <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2.0</Hack>
+        <Hack op="add">1.5</Hack>
         <Pierce op="add">2.0</Pierce>
       </Damage>
     </Entity>
