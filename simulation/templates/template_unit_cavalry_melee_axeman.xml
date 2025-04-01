@@ -4,9 +4,9 @@
     <Melee>
       <AttackName>Axe</AttackName>
       <Damage>
-        <Hack>12</Hack>
-        <Crush>6</Crush>
+        <Hack>10</Hack>
         <Pierce>2</Pierce>
+        <Crush>6</Crush>
       </Damage>
       <MaxRange>4</MaxRange>
       <PrepareTime>600</PrepareTime>
@@ -41,3 +41,17 @@
     </SoundGroups>
   </Sound>
 </Entity>
+
+<Attack>
+    <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Hack>10</Hack>
+        <Crush>3.5</Crush>
+      </Damage>
+      <MaxRange>4</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
