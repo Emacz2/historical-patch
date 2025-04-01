@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Attack>
-    </Melee> 
+    <Melee> 
       <Damage>
         <Pierce op="mul">0.75</Pierce>
         <Hack op="mul">0.75</Hack>
@@ -33,6 +33,5 @@
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
     <Tooltip>Melee Serfs 25% less dmg, 1.5H/2.0P resistance but 10% faster train time and -10 wood cost</Tooltip>
-  </Identity>
   </Identity>
 </Entity>
