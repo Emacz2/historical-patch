@@ -4,7 +4,7 @@
     <Ranged>
       <AttackName>Javelin</AttackName>
       <Damage>
-        <Pierce>25</Pierce>
+        <Pierce>21.5</Pierce>
         <Hack>2.5</Hack>
       </Damage>
       <MaxRange>29</MaxRange>
@@ -25,7 +25,7 @@
       <wood>50</wood>
     </Resources>
   </Cost>
-  <Identity>
+  <Identity>3.
     <GenericName>Cavalry Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
