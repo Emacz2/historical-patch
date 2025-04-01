@@ -14,13 +14,6 @@
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
     </Melee>
   </Attack>
-   <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">3.5</Hack>
-        <Pierce op="add">4</Pierce>
-      </Damage>
-    </Entity>
   </Resistance>
   <Identity>
     <GenericName>Champion Cavalry Maceman</GenericName>

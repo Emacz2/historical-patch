@@ -20,6 +20,14 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-2</Hack>
+        <Pierce op="add">-2</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <GenericName>Champion Cavalry Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Javelineer</VisibleClasses>

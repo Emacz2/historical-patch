@@ -24,14 +24,6 @@
     <Tooltip>Counters: 1.75× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">3.5</Hack>
-        <Pierce op="add">4</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <UnitMotion>
     <Acceleration op="mul">1.10</Acceleration>
   </UnitMotion>
