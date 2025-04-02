@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+  <Cost>
+    <BuildTime op="mul">0.8</BuildTime>
+    <Resources>
+      <metal>100</metal>
+      <food>0</food>
+    </Resources>
+  </Cost>
+  <Loot>
+    <metal>10</metal>
+  </Loot>
+</Entity>
