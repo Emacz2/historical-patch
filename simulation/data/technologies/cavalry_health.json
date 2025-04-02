@@ -3,16 +3,16 @@
 	"description": "Selectively breed better war horses.",
 	"cost": {
 		"food": 300,
-		"metal": 100
+		"metal": 150
 	},
 	"requirements": { "tech": "phase_town" },
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "horse_trainer.png",
 	"researchTime": 35,
-	"tooltip": "Cavalry 25% more health",
+	"tooltip": "Champion Cavalry 25% more health",
 	"modifications": [
-		{ "value": "Health/Max", "multiply": 1.25 }
+		{ "value": "Health/Max", "multiply": 1.2 }
 	],
-	"affects": ["Cavalry"],
+	"affects": [" Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
