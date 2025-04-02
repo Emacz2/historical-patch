@@ -15,6 +15,6 @@
 		{ "value": "Vision/Range","add": 10 }
 	
 	],
-	"affects": ["Fortress"],
+	"affects": ["CivCentre"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
