@@ -12,7 +12,7 @@
       <Damage>
         <Pierce>3</Pierce>
       </Damage>
-      <MaxRange>50</MaxRange>
+      <MaxRange>35</MaxRange>
       <PrepareTime>400</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Projectile>
@@ -133,7 +133,7 @@
   </Trainer>
   <Researcher disable=""/>
   <Vision>
-    <Range>75</Range>
+    <Range>60</Range>
   </Vision>
   <VisualActor>
      <Actor>structures/celts/longhouse.xml</Actor>
