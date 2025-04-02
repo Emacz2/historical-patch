@@ -11,9 +11,6 @@
       <metal>80</metal>
     </Resources>
   </Cost>
-  <Health>
-    <Max>220</Max>
-  </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
     <GenericName>Champion Infantry</GenericName>

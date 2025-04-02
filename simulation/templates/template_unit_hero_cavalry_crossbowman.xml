@@ -19,6 +19,9 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Health>
+    <Max>500</Max>
+  </Health>
   <Identity>
     <GenericName>Hero Cavalry Crossbowman</GenericName>
     <VisibleClasses datatype="tokens">Ranged Crossbowman</VisibleClasses>

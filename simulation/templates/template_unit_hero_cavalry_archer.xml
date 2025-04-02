@@ -19,6 +19,9 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Health>
+    <Max>500</Max>
+  </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
     <GenericName>Hero Cavalry Archer</GenericName>

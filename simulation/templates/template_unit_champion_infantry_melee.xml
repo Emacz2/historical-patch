@@ -7,6 +7,9 @@
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
     <GenericName>Champion Melee Infantry</GenericName>
   </Identity>
+   <Health>
+    <Max>250</Max>
+  </Health>
   <Loot>
     <xp>150</xp>
     <food>8</food>
