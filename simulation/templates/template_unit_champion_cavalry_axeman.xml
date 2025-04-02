@@ -4,9 +4,9 @@
     <Melee>
       <AttackName>Axe</AttackName>
       <Damage>
-        <Hack>18</Hack>
-        <Crush>9</Crush>
-        <Pierce>3</Pierceh>
+        <Hack>20</Hack>
+        <Pierce>4</Pierce>
+        <Crush>12</Crush>
       </Damage>
       <MaxRange>4</MaxRange>
       <PrepareTime>425</PrepareTime>
@@ -21,6 +21,9 @@
       </Damage>
     </Entity>
   </Resistance>
+  <Health>
+    <Max>300</Max>
+  </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>
     <GenericName>Champion Cavalry Axeman</GenericName>
@@ -31,3 +34,16 @@
     </SoundGroups>
   </Sound>
 </Entity>
+<Attack>
+    <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Hack>20</Hack>
+        <Crush>7</Crush>
+      </Damage>
+      <MaxRange>4</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>

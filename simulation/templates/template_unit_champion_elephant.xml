@@ -13,7 +13,7 @@
     <Height>9.0</Height>
   </Footprint>
   <Health>
-    <Max>550</Max>
+    <Max>600</Max>
   </Health>
   <Identity>
     <GenericName>War Elephant</GenericName>
@@ -30,7 +30,7 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>7.5</Hack>
+        <Hack>8</Hack>
         <Pierce>8</Pierce>
         <Crush>20</Crush>
       </Damage>

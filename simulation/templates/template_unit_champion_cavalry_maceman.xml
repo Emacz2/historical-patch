@@ -4,17 +4,19 @@
     <Melee>
       <AttackName>Mace</AttackName>
       <Damage>
-        <Crush>18</Crush>
-        <Hack>9</Hack>
-        <Pierce>4.5</Pierce>
+        <Hack>8</Hack>
+        <Pierce>3</Pierce>
+        <Crush>11</Crush>
       </Damage>
       <MaxRange>3.5</MaxRange>
-      <PrepareTime>500</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
+      <PrepareTime>550</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
     </Melee>
   </Attack>
-  </Resistance>
+  <Health>
+    <Max>250</Max>
+  </Health>
   <Identity>
     <GenericName>Champion Cavalry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Melee Maceman</VisibleClasses>
@@ -25,3 +27,4 @@
     </SoundGroups>
   </Sound>
 </Entity>
+  

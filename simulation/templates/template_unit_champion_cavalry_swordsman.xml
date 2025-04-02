@@ -19,6 +19,9 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
+  <Health>
+    <Max>300</Max>
+  </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Cavalry Swordsman</GenericName>
