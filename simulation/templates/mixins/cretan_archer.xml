@@ -3,7 +3,7 @@
   <Attack>
   <Ranged>
 	<Damage>
-	    <Pierce op="mul">1.05</Piercek>
+	    <Pierce op="mul">1.05</Pierce>
   </Damage>
     <MaxRange op="add">-10</MaxRange>
   </Ranged>
