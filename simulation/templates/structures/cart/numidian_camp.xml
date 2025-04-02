@@ -20,8 +20,8 @@
     <SpecificName>Numidian Camp</SpecificName>
     <Tooltip>Numidian Mercenary Jav Cav.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">Town</VisibleClasses>
-    <Icon>structures/embassy_italic.png</Icon>
+    <VisibleClasses datatype="tokens">City</VisibleClasses>
+    <Icon>structures/mercenary_camp.png</Icon>
   </Identity>
   <Loot>
     <metal>40</metal>
@@ -31,8 +31,7 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{native}/infantry_swordsman_ital_b
-      units/{native}/cavalry_spearman_ital_b
+      units/{native}/champion_cavalry_numidian
     </Entities>
   </Trainer>
   <VisualActor>

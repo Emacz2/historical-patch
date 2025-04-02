@@ -5,9 +5,9 @@
     <variant>
       <mesh>skeletal/horse_lusitano.dae</mesh>
       <props>
-        <prop actor="units/carthaginians/cavalry_javelinist_a_r.xml" attachpoint="rider"/>
-        <prop actor="props/horse/chest_colorband_01.xml" attachpoint="root"/>
-        <prop actor="props/horse/cav_rein_leather.xml" attachpoint="root"/>
+        <prop actor="units/carthaginians/champion_cavalry_numidian_c_r.xml" attachpoint="rider"/>
+        <prop actor="props/horse/cav_peytral_sele.xml" attachpoint="root"/>
+        <prop actor="props/horse/cav_blanket_kart.xml" attachpoint="root"/>
       </props>
     </variant>
   </group>
@@ -29,7 +29,7 @@
     <variant file="quadraped/base_horse_run.xml"/>
     <variant file="quadraped/base_horse_gather_meat.xml" name="gather_meat">
       <props>
-        <prop actor="units/carthaginians/cavalry_javelinist_a_r.xml" attachpoint="rider_R"/>
+        <prop actor="units/carthaginians/champion_cavalry_numidian_c_r.xml" attachpoint="rider_R"/>
       </props>
     </variant>
   </group>
