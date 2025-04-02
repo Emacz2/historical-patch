@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="merc_inf_market|template_unit_champion_infantry_slinger">
-  <Builder>
-    <Entities datatype="tokens">
-      structures/{civ}/super_dock
-      structures/{civ}/embassy_celtic
-      structures/{civ}/embassy_iberian
-      structures/{civ}/embassy_italic
-    </Entities>
-  </Builder>
   <Identity>
     <Civ>cart</Civ>
     <GenericName>Balearic Slinger</GenericName>
