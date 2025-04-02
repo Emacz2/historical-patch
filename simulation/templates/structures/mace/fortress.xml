@@ -22,7 +22,6 @@
       units/{civ}/hero_philip_ii
       units/{civ}/hero_alexander_iii
       units/{civ}/hero_demetrius_i
-      -units/{civ}/infantry_slinger_a
     </Entities>
   </Trainer>
   <VisualActor>
