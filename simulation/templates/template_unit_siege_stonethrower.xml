@@ -4,9 +4,9 @@
     <Ranged>
       <AttackName>Stone</AttackName>
       <Damage>
-        <Crush>230</Crush>
+        <Crush>200</Crush>
       </Damage>
-      <MaxRange>85</MaxRange>
+      <MaxRange>90</MaxRange>
       <MinRange>26</MinRange>
       <PrepareTime>3000</PrepareTime>
       <RepeatTime>7000</RepeatTime>
