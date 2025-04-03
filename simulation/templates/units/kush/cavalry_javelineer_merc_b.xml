@@ -10,7 +10,7 @@
   <Footprint>
     <Height>7.5</Height>
   </Footprint>
-   <Resistance>
+  <Resistance>
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
