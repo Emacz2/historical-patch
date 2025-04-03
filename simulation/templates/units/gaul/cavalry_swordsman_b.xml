@@ -9,6 +9,14 @@
       <Techs datatype="tokens">unlock_swordcav</Techs>
     </Requirements>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Promotion>
     <Entity>units/gaul/cavalry_swordsman_a</Entity>
   </Promotion>
