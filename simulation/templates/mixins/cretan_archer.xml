@@ -5,12 +5,13 @@
 	<Damage>
 	    <Pierce op="mul">1.05</Pierce>
   </Damage>
-    <MaxRange op="add">-10</MaxRange>
+    <MaxRange op="add">-15</MaxRange>
   </Ranged>
 </Attack>
-  <Resistance>
+   <Resistance>
     <Entity>
       <Damage>
+        <Hack op="add">0.5</Hack>
         <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
