@@ -3,6 +3,14 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Promotion>
     <Entity>units/iber/cavalry_javelineer_e</Entity>
   </Promotion>
