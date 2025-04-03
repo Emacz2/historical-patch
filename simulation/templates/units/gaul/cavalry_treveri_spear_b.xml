@@ -16,6 +16,14 @@
     <Icon>units/gaul/cavalry_javelinist.png</Icon>
     <Rank>Advanced</Rank>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
    <Promotion disable=""/>
   <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
