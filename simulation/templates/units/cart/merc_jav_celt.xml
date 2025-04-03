@@ -9,12 +9,12 @@
     </Entities>
   </Builder>
   <Attack>
-    <Melee>
+    <Ranged>
       <Damage>
         <Hack op="mul">1.05</Hack>
         <Pierce op="mul">1.05</Pierce>
       </Damage>
-    </Melee>
+    </Ranged>
   </Attack>
   <Vision>
     <Range op="add">15</Range>
