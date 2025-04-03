@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_hero_infantry_swordsman">
   <Auras datatype="tokens">
-    units/heroes/iber_hero_caros_1
-    units/heroes/iber_hero_caros_2
+    units/heroes/iber_hero_corbis_1
+    units/heroes/iber_hero_corbis_2
   </Auras>
   <Identity>
     <Civ>iber</Civ>
-    <SpecificName>Caros</SpecificName>
+    <SpecificName>Corbis</SpecificName>
     <Icon>units/iber/hero_caros.png</Icon>
   </Identity>
   <VisualActor>
