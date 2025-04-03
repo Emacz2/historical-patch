@@ -5,9 +5,17 @@
     <Rank>Elite</Rank>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
-    <Acceleration op="mul">1.25</Acceleration>
+    <WalkSpeed op="mul">1.2</WalkSpeed>
+    <Acceleration op="mul">1.2</Acceleration>
   </UnitMotion>
+    <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/britons/infantry_spearman_temple_2.xml</Actor>
