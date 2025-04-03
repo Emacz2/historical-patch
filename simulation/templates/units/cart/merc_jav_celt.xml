@@ -8,32 +8,17 @@
       structures/{civ}/embassy_italic
     </Entities>
   </Builder>
-  <Resistance>
-    <Entity merge="">
-      <Damage>
-       <Hack op="add">-1.5</Hack>
-       <Pierce op="add">-1.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Attack>
-    <Melee merge="">
-	    <Damage>
+    <Melee>
+      <Damage>
         <Hack op="mul">1.05</Hack>
+        <Pierce op="mul">1.05</Pierce>
       </Damage>
     </Melee>
-    <Ranged merge="">
-	    <Damage>
-        <Hack op="mul">1.05</Hack>
-      </Damage>
-    </Ranged>
   </Attack>
   <Vision>
     <Range op="add">15</Range>
   </Vision>
-  <UnitMotion merge="">
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-  </UnitMotion>
   <Identity>
     <Civ>cart</Civ>
     <GenericName>Celtic Skirmisher</GenericName>

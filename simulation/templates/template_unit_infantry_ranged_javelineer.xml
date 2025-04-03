@@ -25,7 +25,7 @@
       <wood>50</wood>
     </Resources>
   </Cost>
-   <Resistance>
+  <Resistance>
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
