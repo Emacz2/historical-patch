@@ -11,13 +11,6 @@
     </variant>
   </group>
   <group>
-    <variant frequency="1" name="Celt-Shield-02">
-      <props>
-        <prop actor="props/units/shields/brit_shield_spear_hex_b_03.xml" attachpoint="shield"/>
-      </props>
-    </variant>
-  </group>
-  <group>
     <variant frequency="6" name="No helmet 1">
       <props>
         <prop actor="" attachpoint="helmet"/>
