@@ -30,7 +30,6 @@
       <Damage>
         <Hack op="add">0.5</Hack>
         <Pierce op="add">1</Pierce>
-        <Crush>5</Crush>
       </Damage>
     </Entity>
   </Resistance>
