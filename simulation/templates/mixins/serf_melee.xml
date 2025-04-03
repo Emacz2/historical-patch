@@ -3,18 +3,18 @@
   <Attack>
     <Melee> 
       <Damage>
-        <Pierce op="mul">0.75</Pierce>
-        <Hack op="mul">0.75</Hack>
-        <Crush op="mul">0.75</Crush>
+        <Pierce op="mul">0.8</Pierce>
+        <Hack op="mul">0.8</Hack>
+        <Crush op="mul">0.8</Crush>
       </Damage>
     </Melee>
   </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>1.5</Hack>
-        <Pierce>2</Pierce>
-        <Crush>5</Crush>
+        <Hack op="add">-2</Hack>
+        <Pierce op="add">-2</Pierce>
+        <Crush op="add">-2.5</Crush>
       </Damage>
       <ApplyStatus>
         <Burning>
@@ -32,6 +32,6 @@
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Melee Serfs 25% less dmg, 1.5H/2.0P resistance but 10% faster train time and -10 wood cost</Tooltip>
+    <Tooltip>Melee Serfs 20% less dmg, -2 Hack/Pierce and -2.5 Crush resistance but 10% faster train time and -10 wood cost</Tooltip>
   </Identity>
 </Entity>

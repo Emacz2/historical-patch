@@ -3,9 +3,9 @@
   <Attack>
     <Ranged> 
       <Damage>
-        <Pierce op="mul">0.8</Pierce>
-        <Hack op="mul">0.8</Hack>
-        <Crush op="mul">0.8</Crush>
+        <Pierce op="mul">0.85</Pierce>
+        <Hack op="mul">0.85</Hack>
+        <Crush op="mul">0.85</Crush>
       </Damage>
       <Projectile>
         <Spread op="mul">1.2</Spread>
@@ -15,9 +15,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>0.5</Hack>
-        <Pierce>0.5</Pierce>
-        <Crush>5</Crush>
+        <Hack op="add">-0.5</Hack>
+        <Pierce op="add">-1</Pierce>
+        <Crush op="add">-2.5</Crush>
       </Damage>
       <ApplyStatus>
         <Burning>
@@ -35,6 +35,6 @@
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Ranged Serfs 20% less dmg, 20% less accurate, 0.5H/0.5P resistances but 10% faster train time and -10 wood cost</Tooltip>
+    <Tooltip>Ranged Serfs 15% less dmg, 20% less accurate,-0.5 hack, -1 pierce and -2.5 crush resistances, but 10% faster train time and -10 wood cost</Tooltip>
   </Identity>
 </Entity>
