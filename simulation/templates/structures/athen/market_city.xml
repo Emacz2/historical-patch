@@ -11,9 +11,8 @@
   <Trainer>
     <BatchTimeModifier>0.5</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/infantry_archer_market3
-      -units/{civ}/infantry_archer_market2
-      -units/{civ}/infantry_archer_market
+      units/{civ}/merc_archer_market_e
+     -units/{civ}/merc_archer_market_b
     </Entities>
   </Trainer>
   <Obstruction>
