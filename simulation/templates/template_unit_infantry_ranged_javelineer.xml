@@ -32,7 +32,6 @@
         <Pierce op="add">1</Pierce>
         <Crush>5</Crush>
       </Damage>
-      <ApplyStatus>
     </Entity>
   </Resistance>
   <Identity>
