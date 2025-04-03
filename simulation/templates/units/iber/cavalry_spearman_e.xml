@@ -3,6 +3,14 @@
   <Identity>
     <Rank>Elite</Rank>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/cavalry_spearman_e_m.xml</Actor>
