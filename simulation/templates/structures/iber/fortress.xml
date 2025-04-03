@@ -10,9 +10,9 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/hero_caros
+      units/{civ}/hero_corbis
       units/{civ}/hero_indibil
-      units/{civ}/hero_viriato
+      units/{civ}/hero_orison
     </Entities>
   </Trainer>
   <VisualActor>
