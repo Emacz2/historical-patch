@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_cavalry_melee_spearman_heavy">
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Civ>kush</Civ>
     <Lang>napatan</Lang>
