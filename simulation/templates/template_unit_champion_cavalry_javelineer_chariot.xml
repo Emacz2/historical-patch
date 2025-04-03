@@ -20,6 +20,12 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+   <BuildingAI>
+    <DefaultArrowCount>1</DefaultArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Javelineer</GarrisonArrowClasses>
+    <MaxArrowCount>1</MaxArrowCount>
+  </BuildingAI>
   <Identity>
     <GenericName>Champion Chariot Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Javelineer</VisibleClasses>
