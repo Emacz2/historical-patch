@@ -4,12 +4,11 @@
 	"description": "Athenian Pelast.",
 	"requirements": { "civ": "athen" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Infantry Javelineer 3% faster run/walk and +2 range, but -0.5H/P resitances.",
+	"tooltip": "Infantry Javelineer 3% faster run/walk and +2 range",
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.03},
-		{ "value": "Attack/Ranged/MaxRange", "add": 2 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5},
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -0.5 }
+		{ "value": "Attack/Ranged/MaxRange", "add": 2 }
+		
 
 
 	],
