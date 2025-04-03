@@ -10,6 +10,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-     <Actor>units/macedonians/champion_slinger.xml</Actor>
+     <Actor>units/iberians/infantry_slinger_b.xml</Actor>
   </VisualActor>
 </Entity>
