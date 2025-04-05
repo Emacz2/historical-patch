@@ -2,6 +2,16 @@
 <Entity parent="template_unit">
   <Attack>
     <Melee>
+     <ApplyStatus>
+        <Bleeding>
+          <Interval>1000</Interval>
+          <Damage>
+            <Bleeding>1.5</Bleeding>
+          </Damage>
+          <Stackability>Stack</Stackability>
+          <Duration>2000</Duration>
+        </Burning>
+      </ApplyStatus>
       <AttackName>Fangs</AttackName>
       <Damage>
         <Hack>4</Hack>
