@@ -7,13 +7,13 @@
 		"food": 400
 	},
 	"requirements": { "tech": "phase_city" },
-	"requirementsTooltip": "Unlocked in Town Phase.",
+	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "arrow.png",
-	"researchTime": 40,
-	"tooltip": "Fortress +10 vision, +8 attack range. ",
+	"researchTime": 30,
+	"tooltip": "Fortress +15 vision, +10 attack range. ",
 	"modifications": [
-		{ "value": "Attack/Ranged/MaxRange", "add": 8 },
-		{ "value": "Vision/Range","add": 10 }
+		{ "value": "Attack/Ranged/MaxRange", "add": 10 },
+		{ "value": "Vision/Range","add": 15 }
 	
 	],
 	"affects": ["Fortress"],

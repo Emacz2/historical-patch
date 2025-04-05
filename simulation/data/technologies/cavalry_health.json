@@ -13,6 +13,6 @@
 	"modifications": [
 		{ "value": "Health/Max", "multiply": 1.2 }
 	],
-	"affects": [" Champion Cavalry"],
+	"affects": ["Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
