@@ -10,7 +10,7 @@
           </Damage>
           <Stackability>Stack</Stackability>
           <Duration>2000</Duration>
-        </Burning>
+        </Bleeding>
       </ApplyStatus>
       <AttackName>Fangs</AttackName>
       <Damage>
