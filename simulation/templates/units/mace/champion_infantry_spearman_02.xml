@@ -9,11 +9,14 @@
     </Melee>
   </Attack>
   <Health>
-    <Max op="add">25</Max>
+    <Max op="mul">1.1</Max>
   </Health>
   <Identity>
     <SpecificName>Hypaspistḗs Argyraspídi</SpecificName>
     <Icon>units/mace/argyraspidai.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

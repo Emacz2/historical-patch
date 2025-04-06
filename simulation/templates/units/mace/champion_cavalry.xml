@@ -7,6 +7,9 @@
     <SpecificName>Hetaîros</SpecificName>
     <Icon>units/mace/champion_cavalry.png</Icon>
     <SelectionGroupName>units/mace/champion_cavalry</SelectionGroupName>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/macedonians/cavalry_spearman_c_m.xml</Actor>

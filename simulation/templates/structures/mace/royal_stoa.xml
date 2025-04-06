@@ -3,14 +3,16 @@
   <Identity>
     <Civ>mace</Civ>
     <SpecificName>Stoa</SpecificName>
-    <Tooltip>Train Champion Cavalary.</Tooltip>
+    <Tooltip>Train Champion Cavalary and Infantry Spearman.  Upgrade Infantry to Silver Shields</Tooltip>
     <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
+      <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
     <Trainer>
     <Entities datatype="tokens">
       units/{civ}/champion_cavalry
+      units/{civ}/champion_infantry_spearman
+      units/{civ}/champion_infantry_spearman_02
     </Entities>
   </Trainer>
   <VisualActor>

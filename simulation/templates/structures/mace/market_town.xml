@@ -44,6 +44,7 @@
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/support_trader
+      units/{civ}/champion_infantry_swordsman
     </Entities>
   </Trainer>
   <ResourceDropsite>
