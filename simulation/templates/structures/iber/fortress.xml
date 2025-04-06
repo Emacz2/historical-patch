@@ -8,13 +8,6 @@
   <Obstruction>
     <Static width="27.0" depth="27.0"/>
   </Obstruction>
-  <Trainer>
-    <Entities datatype="tokens">
-      units/{civ}/hero_corbis
-      units/{civ}/hero_indibil
-      units/{civ}/hero_orison
-    </Entities>
-  </Trainer>
   <VisualActor>
     <Actor>structures/iberians/fortress.xml</Actor>
   </VisualActor>

@@ -16,7 +16,7 @@
     <Bonus>5</Bonus>
   </Population>
   <Identity>
-    <Civ>cart</Civ>
+    <Civ>iber</Civ>
     <SpecificName>Hall of the Heroes</SpecificName>
     <Tooltip>Train champion infantry and cavalry swordsman</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
@@ -38,6 +38,9 @@
     <Entities datatype="tokens">
       units/{civ}/champion_infantry_swordsman
       units/{civ}/champion_cavalry
+      units/{civ}/hero_corbis
+      units/{civ}/hero_indibil
+      units/{civ}/hero_orison
     </Entities>
   </Trainer>
   <VisualActor>
