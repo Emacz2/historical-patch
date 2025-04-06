@@ -12,9 +12,13 @@
     <Entities datatype="tokens">
       units/{civ}/champion_cavalry
       units/{civ}/champion_infantry_spearman
-      units/{civ}/champion_infantry_spearman_02
     </Entities>
   </Trainer>
+  <Researcher>
+    <Technologies datatype="tokens">
+      silvershields
+    </Technologies>
+  </Researcher>
   <VisualActor>
     <Actor>special/greek_stoa_great.xml</Actor>
   </VisualActor>

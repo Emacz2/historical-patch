@@ -12,11 +12,6 @@
   <Obstruction>
     <Static width="24.0" depth="26.0"/>
   </Obstruction>
-  <Researcher>
-    <Technologies datatype="tokens">
-      silvershields
-    </Technologies>
-  </Researcher>
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/hero_philip_ii
