@@ -4,12 +4,12 @@
     <Melee>
      <ApplyStatus>
         <Bleeding>
-          <Interval>1000</Interval>
+          <Interval>1500</Interval>
           <Damage>
-            <Bleeding>1.5</Bleeding>
+            <Bleeding>1</Bleeding>
           </Damage>
-          <Stackability>Stack</Stackability>
-          <Duration>2000</Duration>
+          <Stackability>Extend</Stackability>
+          <Duration>5000</Duration>
         </Bleeding>
       </ApplyStatus>
       <AttackName>Fangs</AttackName>
