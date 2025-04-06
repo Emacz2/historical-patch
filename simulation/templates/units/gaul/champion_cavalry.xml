@@ -6,6 +6,9 @@
     <SpecificName>Uerouicos</SpecificName>
     <SelectionGroupName>units/gaul/champion_cavalry</SelectionGroupName>
     <Icon>units/gaul/champion_cavalry.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/gauls/cavalry_spearman_c_m.xml</Actor>

@@ -5,6 +5,9 @@
     <GenericName>Brythonic Champion</GenericName>
     <SpecificName>Argos</SpecificName>
     <Icon>units/brit/champion_infantry.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Upgrade>
     <Berserker_Rage>

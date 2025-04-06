@@ -15,7 +15,6 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/champion_infantry
-      units/{civ}/champion_cavalry
     </Entities>
   </Trainer>
   <VisualActor>

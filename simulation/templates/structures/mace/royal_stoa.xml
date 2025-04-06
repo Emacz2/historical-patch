@@ -3,7 +3,16 @@
   <Identity>
     <Civ>mace</Civ>
     <SpecificName>Stoa</SpecificName>
+    <Tooltip>Train Champion Cavalary.</Tooltip>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
+    <Trainer>
+    <Entities datatype="tokens">
+      units/{civ}/champion_cavalry
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>special/greek_stoa_great.xml</Actor>
   </VisualActor>
