@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_civic_civil_centre">
+  <Auras datatype="tokens">
+    structures/athenians_cc_fort
+  </Auras>
   <Health>
     <SpawnEntityOnDeath>decay|rubble/rubble_hele_cc</SpawnEntityOnDeath>
   </Health>
@@ -12,6 +15,7 @@
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_slinger_b
       units/{civ}/cavalry_javelineer_b
+      units/{civ}/champion_ranged
     </Entities>
   </Trainer>
   <VisualActor>
