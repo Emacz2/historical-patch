@@ -23,7 +23,7 @@
     <VisibleClasses datatype="tokens">City</VisibleClasses>
     <Icon>structures/embassy_iberian.png</Icon>
     <Requirements>
-     <Techs datatype="tokens">phase_city</Techs>
+     <Techs datatype="tokens">phase_city -phase_town</Techs>
      </Requirements>
   </Identity>
   <Loot>
