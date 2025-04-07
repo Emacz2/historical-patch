@@ -13,6 +13,9 @@
     <GenericName>Scythian Archer</GenericName>
     <SpecificName>Speusínios</SpecificName>
     <Icon>units/athen/champion_ranged.png</Icon>
+       <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/infantry_archer_c.xml</Actor>
