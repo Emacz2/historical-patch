@@ -20,13 +20,18 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+    <Cost>
+    <Resources>
+      <metal>50</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
     <GenericName>Slinger</GenericName>
   </Identity>
   <Loot>
-    <stone>3</stone>
-    <wood>4</wood>
+    <food>5</food>
+    <metal>5</metal>
   </Loot>
   <Sound>
     <SoundGroups>
