@@ -1,0 +1,25 @@
+{
+	"genericName": "The Loom",
+	"description": "The loom allowed the creation of finer clothing for settlers. Women of the household were taught from a young age how to weave on the loom, and subsequently spent a large share of their lives working with it.",
+	"cost": {
+		"food": 200
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "civ": "pers" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in Village Phase.",
+	"icon": "loom.png",
+	"researchTime": 20,
+	"tooltip": "Female Citizens +10 health, +1 H/P resitance.",
+	"modifications": [
+		{ "value": "Health/Max", "add": 10 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
+		
+	],
+	"affects": ["FemaleCitizen"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
