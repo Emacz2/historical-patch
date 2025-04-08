@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_ranged_slinger_lead">
+  <Identity>
+    <Civ>mace</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/sele/infantry_slinger_b</SelectionGroupName>
+    <GenericName>Yavne Slinger</GenericName>
+    <Icon>units/mace/infantry_slinger.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">unlock_slinger</Techs>
+    </Requirements>
+  </Identity>
+  </Identity>
+  <Promotion>
+    <Entity>units/sele/infantry_slinger_a</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/macedonians/infantry_slinger_b.xml</Actor>
+  </VisualActor>
+</Entity>
