@@ -8,12 +8,12 @@
         <Pierce>6</Pierce>
       </Damage>
       <MaxRange>4.5</MaxRange>
-      <PrepareTime>700</PrepareTime>
-      <RepeatTime>1400</RepeatTime>
+      <PrepareTime>300</PrepareTime>
+      <RepeatTime>1250</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3.5</Multiplier>
+          <Multiplier>3</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
@@ -22,8 +22,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1.5</Hack>
-        <Pierce op="add">1.5</Pierce>
+        <Hack op="add">-0.5</Hack>
+        <Pierce op="add">-1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -33,13 +33,13 @@
     </Resources>
   </Cost>
   <Identity>
-    <GenericName>Heavy Spearman</GenericName>
-    <Tooltip>Counters: 3.5 × vs Cavalry.</Tooltip>
+    <GenericName>Spearman</GenericName>
+    <Tooltip>Counters: 3 × vs Cavalry. Light infantry spearman, without a shield</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">0.94</WalkSpeed>
-    <Acceleration op="mul">0.94</Acceleration>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
   </UnitMotion>
   <Loot>
     <wood>5</wood>
