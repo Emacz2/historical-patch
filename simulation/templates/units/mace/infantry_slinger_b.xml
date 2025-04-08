@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="serf_ranged|template_unit_infantry_ranged_slinger">
+<Entity parent="merc_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
     <Civ>mace</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/mace/infantry_slinger_b</SelectionGroupName>
-    <GenericName>Macedonian Serf Slinger</GenericName>
-    <Icon>units/mace/infantry_slinger.png</Icon>
+   <GenericName>Rhodian Slinger</GenericName>
+    <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
   </Identity>
   <Promotion>
     <Entity>units/mace/infantry_slinger_a</Entity>
