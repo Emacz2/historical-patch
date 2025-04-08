@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_ranged_slinger">
+<Entity parent="template_unit_infantry_ranged_slinger_lead">
   <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>
@@ -9,7 +9,6 @@
      <Requirements>
       <Techs datatype="tokens">unlock_slingers</Techs>
     </Requirements>
-  </Identity>
   </Identity>
   <Promotion>
     <Entity>units/sele/infantry_slinger_a</Entity>
