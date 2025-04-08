@@ -27,7 +27,7 @@
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
-    <GenericName>Slinger</GenericName>
+    <GenericName>Slinger Lead Bullets</GenericName>
   </Identity>
   <Loot>
     <food>5</food>
