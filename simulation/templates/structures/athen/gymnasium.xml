@@ -63,7 +63,6 @@
     <Entities datatype="tokens">
       units/{civ}/champion_marine
       units/{civ}/champion_infantry
-      -units/{civ}/champion_ranged
     </Entities>
   </Trainer>
   <Vision>
