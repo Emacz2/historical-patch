@@ -51,16 +51,16 @@
       archer_attack_spread
       heavy_plating
       ibersling_range
-      unlock_archer
+      unlock_archers
       unlock_bowcav
       unlock_javcav
-      unlock_pikeman
-      unlock_skirm
-      unlock_slinger
-      unlock_spearman
+      unlock_pikemen
+      unlock_skirms
+      unlock_slingers
+      unlock_spearmen
       unlock_spearcav
       unlock_swordcav
-      unlock_swordsman
+      unlock_swordsmen
     </Technologies>
   </Researcher>
   <Sound>
