@@ -60,7 +60,7 @@
     </Formations>
   </UnitAI>
   <UnitMotion>
-    <WalkSpeed op="mul">1.8</WalkSpeed>
+    <WalkSpeed op="mul">1.79</WalkSpeed>
     <RunMultiplier>1.8</RunMultiplier>
   </UnitMotion>
   <Vision>
