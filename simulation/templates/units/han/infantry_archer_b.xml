@@ -15,7 +15,7 @@
     <SpecificName>Shè Shǒu</SpecificName>
     <Icon>units/han/infantry_archer.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_archer</Techs>
+      <Techs datatype="tokens">unlock_archers</Techs>
     </Requirements>
   </Identity>
   <Promotion>

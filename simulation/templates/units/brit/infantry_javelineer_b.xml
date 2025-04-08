@@ -25,7 +25,7 @@
     <SpecificName>Adretos</SpecificName>
     <Icon>units/brit/infantry_javelinist.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_skirm</Techs>
+      <Techs datatype="tokens">unlock_skirms</Techs>
     </Requirements>
   </Identity>
   <Promotion>

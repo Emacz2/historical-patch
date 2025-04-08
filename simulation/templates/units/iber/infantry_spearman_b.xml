@@ -12,7 +12,7 @@
     <SpecificName>Ezkutari</SpecificName>
     <Icon>units/iber/infantry_spearman.png</Icon>
      <Requirements>
-      <Techs datatype="tokens">unlock_spearman</Techs>
+      <Techs datatype="tokens">unlock_spearmen</Techs>
     </Requirements>
   </Identity>
   <Promotion>

@@ -14,7 +14,7 @@
     <GenericName>Maury Skirmisher</GenericName>
     <Icon>units/maur/maury_infantry_skirm.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_skirm</Techs>
+      <Techs datatype="tokens">unlock_skirms</Techs>
     </Requirements>
   </Identity>
   <Promotion>

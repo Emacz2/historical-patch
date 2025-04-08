@@ -17,7 +17,7 @@
     <SpecificName>Knw hps</SpecificName>
     <Icon>units/kush/infantry_swordsman.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_swordsman</Techs>
+      <Techs datatype="tokens">unlock_swordsmen</Techs>
     </Requirements>
   </Identity>
   <Promotion>

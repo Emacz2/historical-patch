@@ -13,7 +13,7 @@
     <SpecificName>Phalangitēs</SpecificName>
     <Icon>units/sele/infantry_spearman.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_pikeman</Techs>
+      <Techs datatype="tokens">unlock_pikemen</Techs>
     </Requirements>
   </Identity>
   <Promotion>

@@ -22,7 +22,7 @@
     <Icon>units/rome/infantry_spearman.png</Icon>
     <Tooltip>Elite rank Spearmen can be promoted to champion Centurions.</Tooltip>
      <Requirements>
-      <Techs datatype="tokens">unlock_spearman</Techs>
+      <Techs datatype="tokens">unlock_spearmen</Techs>
     </Requirements>
   </Identity>
   <Promotion>
