@@ -66,7 +66,6 @@
       units/{civ}/infantry_swordsman_b
       units/{civ}/infantry_javelineer_b
       units/{civ}/infantry_slinger_b
-      units/{civ}/infantry_slinger_lead_b
       units/{civ}/infantry_archer_b
       units/{civ}/infantry_archer_merc_b
     </Entities>

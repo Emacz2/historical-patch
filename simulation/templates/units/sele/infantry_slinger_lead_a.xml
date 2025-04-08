@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/sele/infantry_slinger_lead_b">
+<Entity parent="units/sele/infantry_slinger_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/sele/infantry_slinger_lead_e</Entity>
+    <Entity>units/sele/infantry_slinger_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_a.xml</Actor>
