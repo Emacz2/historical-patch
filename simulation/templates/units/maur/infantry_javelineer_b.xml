@@ -9,7 +9,6 @@
   </Builder>
   <Identity>
     <Civ>maur</Civ>
-    <Lang>napatan</Lang>
     <SelectionGroupName>units/maur/infantry_javelineer_merc_b</SelectionGroupName>
     <GenericName>Maury Skirmisher</GenericName>
     <Icon>units/maur/maury_infantry_skirm.png</Icon>
