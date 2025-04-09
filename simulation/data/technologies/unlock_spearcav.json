@@ -17,7 +17,7 @@
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "horse_trainer.png",
-	"researchTime": 25,
+	"researchTime": 20,
 	"tooltip": "Unlock the ability to train spear cav from stable.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

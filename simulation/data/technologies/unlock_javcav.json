@@ -2,7 +2,7 @@
 	"genericName": "Unlock Jav Cav",
 	"description": "",
 	"cost": {
-		"food": 150,
+		"food": 300,
 		"wood": 150
 	},
 	"requirements": {
@@ -15,7 +15,7 @@
 	},
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
-	"researchTime": 25,
+	"researchTime": 20,
 	"tooltip": "Unlock the ability to train Jav Cav from stables.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
