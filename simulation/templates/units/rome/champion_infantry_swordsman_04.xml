@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/rome/champion_infantry_swordsman_03">
+  <Auras datatype="tokens">
+    units/testudo
+  </Auras>
   <Attack>
     <Melee>
       <Damage>

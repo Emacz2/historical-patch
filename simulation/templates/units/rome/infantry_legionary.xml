@@ -30,9 +30,6 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.98</WalkSpeed>
-  </UnitMotion>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_swordsman_heavy">
-<Auras datatype="tokens">
+  <Auras datatype="tokens">
     units/testudo
   </Auras>
   <Health>
