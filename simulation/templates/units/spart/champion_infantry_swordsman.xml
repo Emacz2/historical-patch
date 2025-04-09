@@ -10,20 +10,11 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
-   <Attack>
-    <Melee>
-      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
-      <Damage>
-        <Hack op="add">2</Hack>
-	      <Pierce op="add">1</Pierce>
-      </Damage>
-    </Melee>
-  </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>0.5</Hack>
-        <Pierce>1</Pierce>
+        <Hack op="add">-1.5</Hack>
+	      <Pierce op="add">-1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
