@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_ranged_javelineer">
+ <Builder>
+    <Entities datatype="tokens">
+      structures/iber/monument
+      structures/iber/hall_of_heroes
+    </Entities>
+  </Builder>
+  <Attack>
+    <Ranged>
+      <ApplyStatus>
+        <Burning>
+          <Interval>2000</Interval>
+          <Damage>
+            <Fire>1.5</Fire>
+          </Damage>
+          <Stackability>Stack</Stackability>
+          <Duration>7000</Duration>
+        </Burning>
+      </ApplyStatus>
+     <Damage>
+        <Pierce op="add">-5</Pierce>
+      </Damage>
+      <Projectile>
+        <Spread op="add">0.5</Spread>
+      </Projectile>
+    </Ranged>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Identity>
+    <Civ>iber</Civ>
+    <SelectionGroupName>units/iber/infantry_javelineer_b</SelectionGroupName>
+    <SpecificName>Burning Falarica thrower</SpecificName>
+    <Icon>units/iber/infantry_javelinist.png</Icon>
+    <Rank>Advanced</Rank>
+  </Identity>
+  <Promotion>
+    <Entity>units/iber/infantry_javelineer_e</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/iberians/infantry_javelinist_a_fire.xml</Actor>
+  </VisualActor>
+</Entity>

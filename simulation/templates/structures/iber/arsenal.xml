@@ -12,6 +12,13 @@
     <Civ>iber</Civ>
     <Tooltip>May be built in own or neutral terirories. Build rams and research siege technologies.</Tooltip>
   </Identity>
+   <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_javelineer_a_fire
+      units/{civ}/siege_ram
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/iberians/workshop.xml</Actor>
   </VisualActor>
