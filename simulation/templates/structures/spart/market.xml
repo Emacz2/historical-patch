@@ -4,7 +4,6 @@
     <Civ>spart</Civ>
     <SpecificName>Emporion</SpecificName>
   </Identity>
-  <Upgrade>
   <VisualActor>
     <Actor>structures/spartans/market.xml</Actor>
   </VisualActor>
@@ -13,6 +12,7 @@
     <Entities datatype="tokens">
       units/{civ}/support_trader
       units/{civ}/cavalry_elite_merc_jav
+      units/{civ}merc_archer_market_b
     </Entities>
   </Trainer>
 </Entity>
