@@ -4,6 +4,23 @@
     <Civ>spart</Civ>
     <SpecificName>Emporion</SpecificName>
   </Identity>
+  <Upgrade>
+   <market_city>
+      <Entity>structures/spart/market_city</Entity>
+      <Tooltip>Upgrade your market, trains rank2 merc, faster batch training and small resource trickle.</Tooltip>
+      <Requirements>
+        <Techs datatype="tokens">phase_city</Techs>
+      </Requirements>
+      <Cost>
+        <food>200</food>
+        <wood>100</wood>
+        <metal>15</metal>
+        <stone>15</stone>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>30</Time>
+   </market_city>
+  </Upgrade>
   <VisualActor>
     <Actor>structures/spartans/market.xml</Actor>
   </VisualActor>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/spart/merc_archer_market_b">
+  <Identity>
+    <Rank>Advanced</Rank>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
+  </Identity>
+  <Promotion>
+    <Entity>units/spart/merc_archer_market_e</Entity>
+  </Promotion>
+  <VisualActor>
+   <Actor>units/athenians/infantry_archer_a.xml</Actor>
+  </VisualActor>
+</Entity>

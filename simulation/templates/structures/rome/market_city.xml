@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_structure_economic_market">
+  <Footprint>
+    <Square width="27" depth="27"/>
+    <Height>8.0</Height>
+  </Footprint>
+  <Identity>
+    <Civ>rome</Civ>
+    <SpecificName>Emporion</SpecificName> 
+  </Identity>
+  <Trainer>
+    <BatchTimeModifier>0.5</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/merc_archer_market_e
+     -units/{civ}/merc_archer_market_b
+    </Entities>
+  </Trainer>
+  <Obstruction>
+    <Static width="25.0" depth="25.0"/>
+  </Obstruction>
+  <VisualActor>
+      <Actor>structures/hellenes/market.xml</Actor>
+  </VisualActor>
+  <ResourceDropsite>
+    <Types>food wood stone metal</Types>
+    <Sharable>true</Sharable>
+  </ResourceDropsite>
+   <ResourceTrickle>
+    <Rates>
+      <food>0.25</food>
+      <wood>0.25</wood>
+      <stone>0.25</stone>
+      <metal>0.25</metal>
+    </Rates>
+    <Interval>1000</Interval>
+  </ResourceTrickle>
+</Entity>
