@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity>
   <AIProxy/>
+  <Attack>
+    <Melee>
+      <AttackName>Hands</AttackName>
+      <Damage>
+        <Hack>0.25</Hack>
+      </Damage>
+      <MaxRange>1</MaxRange>
+      <PrepareTime>0</PrepareTime>
+      <RepeatTime>500</RepeatTime>
+    </Melee>
+  </Attack>
   <Cost>
     <Population>1</Population>
     <BuildTime>5</BuildTime>
@@ -28,9 +39,9 @@
   <Guard/>
   <Health>
     <DeathType>corpse</DeathType>
-    <Max>80</Max>
+    <Max>75</Max>
     <RegenRate>-0.5</RegenRate>
-    <IdleRegenRate>0.5</IdleRegenRate>
+    <IdleRegenRate>0.75</IdleRegenRate>
     <Unhealable>true</Unhealable>
   </Health>
   <Identity>
@@ -124,7 +135,7 @@
   <UnitMotion>
     <FormationController>false</FormationController>
     <PassabilityClass>default</PassabilityClass>
-    <WalkSpeed>21.5</WalkSpeed>
+    <WalkSpeed>21.0</WalkSpeed>
     <RunMultiplier>1.0</RunMultiplier>
     <InstantTurnAngle>1.5</InstantTurnAngle>
     <Acceleration>40</Acceleration>

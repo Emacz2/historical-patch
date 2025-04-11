@@ -9,7 +9,8 @@
 		"all": [
 			{ "tech": "phase_village" },
 			{ "civ": "han" },
-			{ "civ": "ptol" }
+			{ "civ": "ptol" },
+			{ "civ": "sele" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in Village Phase.",
