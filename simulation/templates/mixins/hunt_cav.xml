@@ -19,6 +19,9 @@
         <Pierce op="mul">0.80</Pierce>
         <Hack op="mul">0.80</Hack>
       </Damage>
+      <Projectile>
+        <Spread op="mul">1.2</Spread>
+      </Projectile>
       <Bonuses>
         <BonusRanged>
           <Classes>Support</Classes>

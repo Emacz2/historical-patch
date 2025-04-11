@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_cavalry_ranged_javelineer">
-  <Attack>
+<Attack>
     <Ranged>
-      <MaxRange op="mul">1.05</MaxRange>
-      <Projectile>
-        <Spread op="mul">1.25</Spread>
-      </Projectile>
-      <PreferredClasses datatype="tokens">Human</PreferredClasses>
+      <AttackName>Javelin</AttackName>
+      <MaxRange op="add">2.0</MaxRange>
     </Ranged>
   </Attack>
   <Cost>
