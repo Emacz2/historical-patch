@@ -6,6 +6,12 @@
       structures/iber/hall_of_heroes
     </Entities>
   </Builder>
+  <Cost>
+    <Resources>
+      <wood op="add">-15</wood>
+      <metal op="add">15</metal>
+    </Resources>
+  </Cost>
   <Attack>
     <Ranged>
       <ApplyStatus>
