@@ -2,6 +2,7 @@
 <Entity parent="template_unit_champion_infantry_trumpeter">
   <Auras datatype="tokens">
     units/carnyx
+    units/carnyx2
   </Auras>
   <Identity>
     <Civ>gaul</Civ>
@@ -11,6 +12,9 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+    <TrainingRestrictions>
+    <Category>Trumpeter</Category>
+    </TrainingRestrictions>
   <VisualActor>
     <Actor>units/gauls/infantry_carnyx_c.xml</Actor>
   </VisualActor>
