@@ -1,0 +1,11 @@
+{
+	"type": "global",
+	"affectedPlayers": ["MutualAlly"],
+	"modifications": [
+		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.1, "affects": "Worker" },
+		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.8, "affects": "Structure" }
+		
+	],
+	"auraName": "Spaninsh silver",
+	"auraDescription": "Workers gather metal 10% faster, techs cost 20% less metal due to suppior quality."
+}
