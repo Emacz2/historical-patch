@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_ranged">
-   <Attack>
+ <Attack>
     <Ranged>
-      <AttackName>Crossbow</AttackName>
+      <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>24</Pierce>
+        <Pierce>8</Pierce>
       </Damage>
-      <MaxRange>40</MaxRange>
+      <MaxRange>50</MaxRange>
       <PrepareTime>600</PrepareTime>
-      <RepeatTime>3000</RepeatTime>
+      <RepeatTime>1250</RepeatTime>
       <Projectile>
-        <Speed>175</Speed>
-        <Spread>1.5</Spread>
-        <Gravity>30</Gravity>
+        <Speed>150</Speed>
+        <Spread>2.0</Spread>
+        <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="3"/>
       </Projectile>
@@ -21,12 +21,13 @@
   </Attack>
   <Cost>
     <Resources>
+      <food>50</food>
       <wood>50</wood>
     </Resources>
   </Cost>
   <Identity>
-    <GenericName>Infantry Crossbowman</GenericName>
-    <VisibleClasses datatype="tokens">Crossbowman</VisibleClasses>
+    <VisibleClasses datatype="tokens">Archer</VisibleClasses>
+    <GenericName>Greek Archer</GenericName>
   </Identity>
   <Loot>
     <wood>5</wood>
@@ -38,7 +39,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.04</WalkSpeed>
-    <Acceleration op="add">3.5</Acceleration>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
 </Entity>
