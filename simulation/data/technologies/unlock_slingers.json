@@ -1,5 +1,5 @@
 {
-	"genericName": "Unlock lead bullet slingers",
+	"genericName": "Unlock skilled slingers",
 	"description": "",
 	"cost": {
 		"food": 150,
@@ -9,12 +9,13 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
+			{ "civ": "athen" },
 			{ "civ": "sele" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
 	"researchTime": 20,
-	"tooltip": "Unlock the ability to train lead bullet slingers from baracks.",
+	"tooltip": "Unlock the ability to train slingers from baracks.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
