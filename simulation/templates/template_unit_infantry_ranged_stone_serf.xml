@@ -2,33 +2,34 @@
 <Entity parent="template_unit_infantry_ranged">
   <Attack>
     <Ranged>
-      <AttackName>Slinger</AttackName>
+      <AttackName>Stone thrower</AttackName>
       <Damage>
-        <Pierce>10</Pierce>
-        <Crush>1</Crush>
+        <Pierce>2</Pierce>
+        <Crush>1.5</Crush>
       </Damage>
-      <MaxRange>55</MaxRange>
-      <PrepareTime>400</PrepareTime>
-      <RepeatTime>1500</RepeatTime>
+      <MaxRange>30</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
       <Projectile>
-        <Speed>125</Speed>
-        <Spread>2.5</Spread>
+        <Speed>70</Speed>
+        <Spread>3</Spread>
         <Gravity>45</Gravity>
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="3"/>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
+      <RestrictedClasses datatype="tokens">Structure</RestrictedClasses>
     </Ranged>
   </Attack>
   <Cost>
     <Resources>
-      <stone>20</stone>
-      <wood>30</wood>
+      <food op="add">15</food>
+      <stone>10</stone>
     </Resources>
   </Cost>
   <Identity>
-    <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
-    <GenericName>Slinger</GenericName>
+    <VisibleClasses datatype="tokens">Stone throwing serf</VisibleClasses>
+    <GenericName>Serf</GenericName>
   </Identity>
   <Loot>
     <stone>3</stone>
