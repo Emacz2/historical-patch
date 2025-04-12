@@ -2,6 +2,7 @@
 <Entity parent="builder|template_unit">
   <Auras datatype="tokens">
     units/ram_garrison
+    units/silvermine_garrison
   </Auras>
   <Attack>
     <Capture>

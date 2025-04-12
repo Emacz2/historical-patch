@@ -1,0 +1,10 @@
+{
+	"type": "garrison",
+	"affects": ["Silvermine"],
+	"modifications": [
+		{ "value": "ResourceTrickle/Rates/metal", "add": 0.75 }
+	],
+	"auraDescription" : "Garrison within a Silvermine to gain a trickle of +0.75 metal/second.",
+	"auraName": "Underground Mining",
+	"stackable": true
+}

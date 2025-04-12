@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="civ/athen|serf_ranged|template_unit_infantry_ranged_stone_serf">
+<Entity parent="civ/athen|merc_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
     <SelectionGroupName>units/athen/infantry_slinger_b</SelectionGroupName>
-    <GenericName>Athenian Slinger Militia</GenericName>
-    <SpecificName>Psilòs Athēnaîos</SpecificName>
-    <Icon>units/athen/infantry_slinger.png</Icon>
+    <GenericName>Rhodian Slinger</GenericName>
+    <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
+    <Icon>units/mace/infantry_slinger.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">unlock_slingers</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/athen/infantry_slinger_a</Entity>
   </Promotion>
   <VisualActor>
-    <Actor>units/athenians/infantry_slinger_b.xml</Actor>
+    <Actor>units/macedonians/infantry_slinger_b.xml</Actor>
   </VisualActor>
 </Entity>
