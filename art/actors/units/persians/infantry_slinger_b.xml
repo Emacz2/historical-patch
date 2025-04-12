@@ -1,28 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <actor version="1">
   <castshadow/>
-   <group>
+  <group>
     <variant frequency="1" name="Base">
       <mesh>skeletal/new/m_tunic_short.dae</mesh>
       <props>
-      <prop actor="props/units/heads/new/head_hele_b.xml" attachpoint="head"/>
+        <prop actor="props/units/heads/new/head_pers_a.xml" attachpoint="head"/>
+        <prop actor="props/units/helmets/hele_thracian_cap_leather.xml" attachpoint="helmet"/>
       </props>
     </variant>
   </group>
   <group>
-    <variant frequency="1" name="tunic_fur_01_01">
+    <variant frequency="1" name="scyth-tunic-coat-01-01">
       <textures>
-       <texture file="skeletal/hele/tunic_01_01.png" name="baseTex"/>
+        <texture file="skeletal/scyth/tunic_coat_01_01.png" name="baseTex"/>
       </textures>
     </variant>
-    <variant frequency="1" name="tunic_fur_01_02">
+    <variant frequency="1" name="scyth-tunic-coat-01-02">
       <textures>
-        <texture file="skeletal/hele/tunic_fur_01_02.png" name="baseTex"/>
+        <texture file="skeletal/scyth/tunic_coat_01_02.png" name="baseTex"/>
       </textures>
     </variant>
-    <variant frequency="1" name="tunic_fur_01_03">
+    <variant frequency="1" name="scyth-tunic-coat-01-03">
       <textures>
-        <texture file="skeletal/hele/tunic_fur_01_03.png" name="baseTex"/>
+        <texture file="skeletal/scyth/tunic_coat_01_03.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant frequency="3" name="tunic-basic-1g">
+      <textures>
+        <texture file="skeletal/pers/tunic_basic_01_07.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant frequency="3" name="tunic-basic-1h">
+      <textures>
+        <texture file="skeletal/pers/tunic_basic_01_08.png" name="baseTex"/>
       </textures>
     </variant>
   </group>
@@ -43,7 +54,7 @@
     <variant file="biped/approach_praise.xml"/>
   </group>
   <group>
-    <variant frequency="1" name="Idle"/>
+   <variant frequency="1" name="Idle"/>
     <variant file="biped/attack_ranged_slinger.xml"/>
     <variant file="biped/attack_capture.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
@@ -58,7 +69,7 @@
     <variant file="biped/build.xml"/>
     <variant file="biped/build_farm.xml"/>
     <variant file="biped/death_infantry.xml"/>
-  </group>  
+  </group>
   <group>
     <variant>
       <textures>
@@ -69,4 +80,3 @@
   </group>
   <material>player_trans_norm_spec.xml</material>
 </actor>
-
