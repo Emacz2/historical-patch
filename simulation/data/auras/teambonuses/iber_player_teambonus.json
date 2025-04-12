@@ -1,11 +1,14 @@
 {
 	"type": "global",
 	"affectedPlayers": ["MutualAlly"],
+	"affects": ["Swordsman"],
+	"description": "The most distinctive aspect of a Celtiberian soldier, was the sword (falcata). Made of high quality Spanish iron, the weapon was superb for close quarters fighting.",
 	"modifications": [
-		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.1, "affects": "Worker" },
-		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.8, "affects": "Structure" }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 },
+		{ "value": "Cost/Resources/metal", "add":-5 }
 		
 	],
 	"auraName": "Spaninsh silver",
-	"auraDescription": "Workers gather metal 10% faster, techs cost 20% less metal due to suppior quality."
+	"auraDescription": "Swordsmen 5% more hack/pierce dmg and use 5 less metal."
 }
