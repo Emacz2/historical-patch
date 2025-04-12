@@ -26,7 +26,7 @@
     </Resources>
   </Cost>
   <Identity>
-    <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
+    <VisibleClasses datatype="tokens">Slinger Lead</VisibleClasses>
     <GenericName>Slinger Lead Bullets</GenericName>
   </Identity>
   <Loot>
