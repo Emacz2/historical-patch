@@ -30,8 +30,8 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">1.4</WalkSpeed>
-    <Acceleration op="mul">1.4</Acceleration>
+    <WalkSpeed op="mul">1.14</WalkSpeed>
+    <Acceleration op="mul">1.7</Acceleration>
   </UnitMotion>
   <VisualActor>
     <Actor>units/gauls/infantry_spearman_c.xml</Actor>

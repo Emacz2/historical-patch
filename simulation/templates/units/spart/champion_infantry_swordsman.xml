@@ -36,8 +36,8 @@
     <metal op="add">5</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">1.3</WalkSpeed>
-    <RunMultiplier>1.6</RunMultiplier>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <RunMultiplier>1.1</RunMultiplier>
   </UnitMotion>
   <Promotion disable=""/>
   <VisualActor>

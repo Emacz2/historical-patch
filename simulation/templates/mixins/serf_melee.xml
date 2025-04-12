@@ -30,8 +30,29 @@
       <wood op="add">-10</wood>
     </Resources>
   </Cost>
+  <ResourceGatherer>
+    <MaxDistance>2.0</MaxDistance>
+    <BaseSpeed>1.0</BaseSpeed>
+    <Rates>
+      <food.fruit op="mul">1.15</food.fruit>
+      <food.grain op="mul">1.15</food.grain>
+      <food.meat op="mul">1.15</food.meat>
+      <wood.tree op="mul">1.15</wood.tree>
+      <wood.ruins  op="mul">1.15</wood.ruins>
+      <stone.rock  op="mul">1.15</stone.rock>
+      <stone.ruins  op="mul">1.15</stone.ruins>
+      <metal.ore  op="mul">1.15</metal.ore>
+      <metal.ruins  op="mul">1.15</metal.ruins>
+    </Rates>
+    <Capacities>
+      <food>10</food>
+      <wood>10</wood>
+      <stone>10</stone>
+      <metal>10</metal>
+    </Capacities>
+  </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Melee Serfs 20% less dmg, -2 Hack/Pierce and -2.5 Crush resistance but 10% faster train time and -10 wood cost</Tooltip>
+    <Tooltip>Melee Serfs 20% less dmg, -2 Hack/Pierce and -2.5 Crush resistance but 10% faster train time cost 10 less wood and gather resources 15% faster</Tooltip>
   </Identity>
 </Entity>

@@ -21,6 +21,6 @@
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 }
 	],
-	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
+	"affects": ["Soldier !Helot !Serf !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -28,7 +28,7 @@
 <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1.5</Hack>
+        <Hack op="add">2</Hack>
         <Pierce op="add">1.5</Pierce>
       </Damage>
     </Entity>
@@ -43,9 +43,8 @@
     <metal>1</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">0.94</WalkSpeed>
-    <RunMultiplier>0.9</RunMultiplier>
-    <Acceleration op="mul">0.94</Acceleration>
+    <WalkSpeed op="mul">0.93</WalkSpeed>
+    <Acceleration op="mul">0.97</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

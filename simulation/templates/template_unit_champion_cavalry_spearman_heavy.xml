@@ -11,7 +11,7 @@
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>1.75</Multiplier>
+          <Multiplier>2</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PrepareTime>500</PrepareTime>
@@ -21,7 +21,7 @@
   </Attack>
   <Identity>
     <GenericName>Champion Cavalry Spearman</GenericName>
-    <Tooltip>Counters: 1.75× vs Cavalry.</Tooltip>
+    <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <Resistance>
@@ -34,8 +34,7 @@
   </Resistance>
   <UnitMotion>
     <WalkSpeed op="mul">0.92</WalkSpeed>
-    <RunMultiplier>0.92</RunMultiplier>
-    <Acceleration op="mul">0.95</Acceleration>
+    <Acceleration op="mul">0.96</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>
