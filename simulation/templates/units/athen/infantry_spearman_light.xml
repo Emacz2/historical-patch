@@ -6,6 +6,14 @@
     <SpecificName>Hoplítēs Athēnaîos</SpecificName>
     <Icon>units/athen/infantry_spearman.png</Icon>
   </Identity>
+    <Upgrade>
+    <Spear_Shield>
+      <Entity>units/athen/infantry_spearman_b</Entity>
+      <Tooltip>Pick up your shield.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>8</Time>
+    </Spear_Shield>
+ </Upgrade>
 <Promotion disable=""/>
   <VisualActor>
     <Actor>units/athenians/infantry_spearman_light_b.xml</Actor>
