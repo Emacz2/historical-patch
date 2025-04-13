@@ -20,6 +20,7 @@
   </Identity>
   <TrainingRestrictions>
   <Category>Helot</Category>
+  </TrainingRestrictions>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/helot_jav.xml</Actor>

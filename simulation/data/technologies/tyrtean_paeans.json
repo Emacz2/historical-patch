@@ -14,10 +14,10 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "walk.png",
 	"researchTime": 30,
-	"tooltip": "Champion/Hero Hoplites +10% movement speed.",
+	"tooltip": "All Infantry +10% movement speed.",
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 }
 	],
-	"affects": ["Champion Melee Infantry"],
+	"affects": ["Infantry !Helot"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
