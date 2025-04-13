@@ -52,14 +52,10 @@
       heavy_plating
       ibersling_range
       unlock_archers
-      unlock_bowcav
-      unlock_javcav
       unlock_pikemen
       unlock_skirms
       unlock_slingers
       unlock_spearmen
-      unlock_spearcav
-      unlock_swordcav
       unlock_swordsmen
     </Technologies>
   </Researcher>

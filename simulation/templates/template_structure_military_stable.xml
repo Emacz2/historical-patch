@@ -46,6 +46,10 @@
       cavalry_health
       nisean_horses
       unlock_champion_chariots
+      unlock_bowcav
+      unlock_javcav
+      unlock_spearcav
+      unlock_swordcav
     </Technologies>
   </Researcher>
   <Sound>
