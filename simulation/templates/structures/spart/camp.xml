@@ -32,7 +32,7 @@
     <Max>30</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support Helot Perioikoi</List>
+    <List datatype="tokens">Support Helot Perioikoi Soldier</List>
     <BuffHeal>0</BuffHeal>
     <LoadingRange>6</LoadingRange>
   </GarrisonHolder>
@@ -84,14 +84,14 @@
   <Trainer>
     <BatchTimeModifier>0.9</BatchTimeModifier>
     <Entities datatype="tokens">
+      units/{civ}/cavalry_javelineer_b
       units/{civ}/cavalry_spearman_b
       units/{civ}/infantry_spearman_b
-      units/{civ}/helot_javelineer
-      units/{civ}/helot_archer
+      units/{civ}/infantry_javelineer_b
     </Entities>
   </Trainer>
   <Vision>
-    <Range>90</Range>
+    <Range>80</Range>
   </Vision>
   <VisualActor>
     <Actor>structures/romans/camp.xml</Actor>

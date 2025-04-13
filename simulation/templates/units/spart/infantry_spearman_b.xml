@@ -14,7 +14,7 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Greek Hoplite</GenericName>
+    <GenericName>Hoplite</GenericName>
     <SpecificName>Hoplítēs Períoikos</SpecificName>
     <Icon>units/spart/infantry_spearman.png</Icon>
   </Identity>

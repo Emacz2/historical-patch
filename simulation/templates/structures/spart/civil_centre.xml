@@ -14,9 +14,7 @@
   </Researcher>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/cavalry_javelineer_b
-      units/{civ}/infantry_spearman_b
-      units/{civ}/neodamodes_jav
+      units/{civ}/champion_infantry_spear
       units/{civ}/scout
     </Entities>
   </Trainer>
