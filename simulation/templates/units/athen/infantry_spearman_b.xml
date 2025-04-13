@@ -6,14 +6,6 @@
     <SpecificName>Hoplítēs Athēnaîos</SpecificName>
     <Icon>units/athen/infantry_spearman.png</Icon>
   </Identity>
-  <Upgrade>
-    <Spear_Light>
-      <Entity>units/athen/infantry_spearman_light</Entity>
-      <Tooltip>Drop your shield for increased mobility and agility.</Tooltip>
-      <Variant>upgrading</Variant>
-      <Time>2</Time>
-    </Spear_Light>
- </Upgrade>
   <Promotion>
     <Entity>units/athen/infantry_spearman_a</Entity>
   </Promotion>
