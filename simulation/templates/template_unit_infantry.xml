@@ -108,9 +108,9 @@
     </SoundGroups>
   </Sound>
   <Vision>
-    <Range>75</Range>
+    <Range>70</Range>
   </Vision>
   <UnitMotion>
-    <WalkSpeed>10.2</WalkSpeed>
+    <WalkSpeed>9.1</WalkSpeed>
   </UnitMotion>
 </Entity>

@@ -3,7 +3,7 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>greek</Lang>
-    <SelectionGroupName>units/spart/merc_archer_market_b</SelectionGroupName>
+    <SelectionGroupName>units/rome/merc_archer_market_b</SelectionGroupName>
     <GenericName>Cretan Mercenary Archer</GenericName>
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
