@@ -22,6 +22,7 @@
       <Animal>50</Animal>
       <CivilCentre>1</CivilCentre>
       <Gladiator>0</Gladiator>
+      <Helot>3</Helot>
       <Hero>1</Hero>
       <Juggernaut>1</Juggernaut>
       <Kennel>2</Kennel>
@@ -48,6 +49,9 @@
       <Gladiator>
         <Amphitheater>15</Amphitheater>
       </Gladiator>
+      <Helot>
+        <Champion>3</Champion>
+      </Helot>
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
       </Juggernaut>

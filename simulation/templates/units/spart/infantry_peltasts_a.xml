@@ -14,9 +14,8 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <Rank>Advanced</Rank>
-    <SelectionGroupName>units/spart/neodamodes_jav</SelectionGroupName>
-    <GenericName>Neodamodes Skirmisher</GenericName>
-    <SpecificName>Neodamōdeis</SpecificName>
+    <SelectionGroupName>units/spart/infantry_peltasts_a</SelectionGroupName>
+    <GenericName>peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
   </Identity>

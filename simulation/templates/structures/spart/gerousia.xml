@@ -36,7 +36,7 @@
       units/{civ}/hero_leonidas
       units/{civ}/hero_brasidas
       units/{civ}/hero_agis
-      units/{civ}/neodamodes_jav
+      units/{civ}/infantry_peltasts_a
       units/{civ}/champion_infantry_javelineer
       units/{civ}/champion_infantry_swordsman
     </Entities>

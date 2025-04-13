@@ -18,6 +18,8 @@
     <SpecificName>Akontistḗs Heílōs</SpecificName>
     <Icon>units/spart/helot_jav.png</Icon>
   </Identity>
+  <TrainingRestrictions>
+  <Category>Helot</Category>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/helot_jav.xml</Actor>
