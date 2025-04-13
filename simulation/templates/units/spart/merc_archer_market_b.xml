@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="merc_inf_market|cretan_archer|template_unit_infantry_ranged_archer_greek">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/spart/gerousia
+      structures/spart/syssiton
+      structures/spart/camp
+      -structures/{civ}/wallset_stone
+      -structures/{civ}/barracks
+      -structures/{civ}/stable
+    </Entities>
+  </Builder>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
