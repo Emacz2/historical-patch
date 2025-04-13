@@ -35,13 +35,13 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">3.5</Hack>
-        <Pierce op="add">4</Pierce>
+        <Hack op="add">2</Hack>
+        <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
   <GarrisonHolder>
-    <Max>1</Max>
+    <Max>2</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Infantry</List>

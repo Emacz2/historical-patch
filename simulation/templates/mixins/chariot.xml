@@ -28,8 +28,8 @@
   </Position>
   <ResourceGatherer disable=""/>
   <UnitMotion>
-    <WalkSpeed op="mul">0.90</WalkSpeed>
-    <Acceleration op="mul">0.75</Acceleration>
+    <WalkSpeed op="mul">0.92</WalkSpeed>
+    <Acceleration op="mul">0.96</Acceleration>
     <PassabilityClass>large</PassabilityClass>
     <Weight op="mul">3.0</Weight>
   </UnitMotion>
