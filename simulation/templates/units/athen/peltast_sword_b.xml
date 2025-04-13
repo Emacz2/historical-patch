@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="civ/athen|hoplite|greek_olympian|template_unit_infantry_melee_swordsman">
+  <Identity>
+    <SelectionGroupName>units/athen/peltast_sword_b</SelectionGroupName>
+    <GenericName>Peltast sword</GenericName>
+    <Icon>units/athen/infantry_jav.png</Icon>
+  </Identity>
+  <Upgrade>
+    <Jav>
+      <Entity>units/athen/infantry_javeliner_b</Entity>
+      <Tooltip>Switch to throwing javelins.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>8</Time>
+    </Jav>
+ </Upgrade>
+  <Health>
+    <Max>60</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>1.5</Hack>
+        <Pierce>2.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Promotion>
+    <Entity>units/athen/peltast_sword_a</Entity>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/athenians/peltast_sword_b.xml</Actor>
+  </VisualActor>
+</Entity>

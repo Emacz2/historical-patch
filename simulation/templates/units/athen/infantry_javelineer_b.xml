@@ -2,7 +2,7 @@
 <Entity parent="civ/athen|greek_olympian|template_unit_infantry_ranged_javelineer">
   <Cost>
     <Resources>
-      <food op="add">-5</food>
+      <wood op="add">-5</wood>
       <metal op="add">5</metal>
     </Resources>
   </Cost>
@@ -12,6 +12,14 @@
     <SpecificName>Peltastḗs Thrâx</SpecificName>
     <Icon>units/athen/infantry_jav.png</Icon>
   </Identity>
+  <Upgrade>
+    <Sword>
+      <Entity>units/athen/peltast_sword</Entity>
+      <Tooltip>Switch to using a sword.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>2</Time>
+    </Sword>
+ </Upgrade>
   <Promotion>
     <Entity>units/athen/infantry_javelineer_a</Entity>
   </Promotion>
