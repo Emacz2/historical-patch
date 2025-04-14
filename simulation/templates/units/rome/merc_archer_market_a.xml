@@ -3,9 +3,7 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
-    <Entity>units/rome/merc_archer_market_e</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_a.xml</Actor>
   </VisualActor>
