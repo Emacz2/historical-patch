@@ -8,10 +8,11 @@
     </Melee>
   </Attack>
   <Builder>
-       <Entities datatype="tokens">
+    <Entities datatype="tokens">
       structures/spart/gerousia
       structures/spart/syssiton
       structures/spart/camp
+      structures/spart/tent_helot
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
       -structures/{civ}/stable
