@@ -17,7 +17,7 @@
     <SelectionGroupName>units/spart/infantry_peltasts_b</SelectionGroupName>
     <GenericName>peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
-    <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
+    <VisibleClasses datatype="tokens">Builder</VisibleClasses>
   </Identity>
   <Loot>
     <food>5</food>
