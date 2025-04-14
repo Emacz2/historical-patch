@@ -18,6 +18,7 @@
     <Square width="9.0" depth="9.0"/>
     <Height>5.0</Height>
   </Footprint>
+  <ProductionQueue/>
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/helot_javelineer
