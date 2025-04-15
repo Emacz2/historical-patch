@@ -4,8 +4,8 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack op="multiply">1.1</Hack>
-        <Pierce op="multiply">1.1</Pierce>
+        <Hack op="mul">1.1</Hack>
+        <Pierce op="mul">1.1</Pierce>
       </Damage>
       <Bonuses>
         <BonusMelee>
