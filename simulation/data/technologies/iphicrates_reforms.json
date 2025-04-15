@@ -1,0 +1,27 @@
+{
+	"genericName": "Silver Shields Regiment",
+	"description": "The Silver Shields, or Argyraspidai, were the elite heavy infantry arm of the Macedonian army.",
+	"cost": {
+		"food": 400,
+		"wood": 600
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "civ": "athen" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in City Phase.",
+	"icon": "silvershields.png",
+	"researchTime": 60,
+	"tooltip": "Infantry spearman add 1.5 to range, all infantry 5% more movement, champion melee infantry -10% attack repeat time, melee infantry -1.5 Hack and -1 Pierce Resistance.",
+	"modifications": [
+	{ "value": "Attack/Melee/MaxRange", "add": 1.5, "affects": "Infantry Spearman" },
+	{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05, "affects": "Infantry" },
+	{ "value": "Attack/Melee/RepeatTime", "multiply": 0.9, "affects": "Infantry" },
+	{ "value": "Resistance/Entity/Damage/Hack", "add": -1.5, "affects": "Infantry Melee" },
+	{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Infantry Melee" }
+
+	],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

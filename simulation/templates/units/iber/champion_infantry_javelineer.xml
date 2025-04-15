@@ -28,7 +28,7 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/romans/infantry_champion_jav.xml</Actor>
+    <Actor>units/iberians/champ_javelinist.xml</Actor>
   </VisualActor>
 </Entity>
 
