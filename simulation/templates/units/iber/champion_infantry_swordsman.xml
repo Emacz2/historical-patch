@@ -9,6 +9,9 @@
     <Civ>iber</Civ>
     <SpecificName>Leial Ezpatari</SpecificName>
     <Icon>units/iber/champion_infantry.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/iberians/infantry_swordsman_c.xml</Actor>
