@@ -1,14 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_archer">
-  <Attack>
+    <Attack>
     <Ranged>
       <Damage>
-        <Pierce op="mul">0.85</Pierce>
+        <Pierce op="mul">0.80</Pierce>
       </Damage>
+	<ApplyStatus>
+          <Burning>
+          <Interval>1500</Interval>
+          <Damage>
+            <Fire>1</Fire>
+          </Damage>
+          <Stackability>Stack</Stackability>
+          <Duration>10000</Duration>
+        </Burning>
+      </ApplyStatus>
     </Ranged>
   </Attack>
   <Health>
-    <Max>120</Max>
+    <Max>250</Max>
   </Health>
   <Identity>
     <Civ>pers</Civ>
@@ -21,11 +31,12 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-  <Cost>
+   <Cost>
+    <BuildTime>20</BuildTime>
     <Resources>
-      <food>50</food>
-      <wood>30</wood>
-      <metal>50</metal>
+      <food>100</food>
+      <wood>70</wood>
+      <metal>80</metal>
     </Resources>
   </Cost>
   <Loot>
@@ -36,7 +47,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-1</Hack>
+        <Hack>4.5</Hack>
+        <Pierce>5.5</Pierce>
+        <Crush>10</Crush> 
       </Damage>
     </Entity>
   </Resistance>
@@ -49,7 +62,9 @@
     </Immortal_spearman>
   </Upgrade>
   <UnitMotion>
-    <WalkSpeed op="mul">0.88</WalkSpeed>
+    <WalkSpeed>8.9</WalkSpeed>        
+    <RunMultiplier>1.39</RunMultiplier>
+    <Acceleration op="mul">0.99</Acceleration>
   </UnitMotion>
   <VisualActor>
     <Actor>units/persians/infantry_archer_c.xml</Actor>
