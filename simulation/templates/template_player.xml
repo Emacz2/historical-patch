@@ -21,6 +21,7 @@
     <Limits>
       <Animal>50</Animal>
       <CivilCentre>1</CivilCentre>
+      <ConsularBodyguard>24</SConsularBodyguard>
       <Gladiator>0</Gladiator>
       <Helot>3</Helot>
       <Hero>1</Hero>

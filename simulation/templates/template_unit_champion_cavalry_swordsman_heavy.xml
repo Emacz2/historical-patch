@@ -5,9 +5,9 @@
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
         <Hack>18</Hack>
-        <Hack>7</Hack>
+        <Pierce>7</Pierce>
       </Damage>
-      <MaxRange>3.4</MaxRange>
+      <MaxRange>3.5</MaxRange>
       <PrepareTime>450</PrepareTime>
       <RepeatTime>1200</RepeatTime>
       <Bonuses>
