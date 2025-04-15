@@ -3,10 +3,7 @@
   <Identity>
     <Rank>Elite</Rank>
   </Identity>
-   <Promotion>
-    <Entity>units/athen/champion_infantry_javelineer</Entity>
-    <RequiredXp>500</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/athenians/infantry_javelinist_e.xml</Actor>
   </VisualActor>

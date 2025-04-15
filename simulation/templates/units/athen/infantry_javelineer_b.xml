@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="civ/athen|greek_olympian|template_unit_infantry_ranged_javelineer">
-  <Cost>
-    <Resources>
-      <wood op="add">-5</wood>
-      <metal op="add">5</metal>
-    </Resources>
-  </Cost>
+<Entity parent="civ/athen|merc_inf|template_unit_infantry_ranged_javelineer">
   <Identity>
     <SelectionGroupName>units/athen/infantry_javelineer_b</SelectionGroupName>
     <GenericName>Thracian Peltast</GenericName>
     <SpecificName>Peltastḗs Thrâx</SpecificName>
-    <Icon>units/athen/infantry_jav.png</Icon>
+    <Icon>units/athen/infantry_javelinist.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">unlock_skirms</Techs>
+    </Requirements>
   </Identity>
   <Upgrade>
     <Sword>
@@ -19,7 +16,7 @@
       <Variant>upgrading</Variant>
       <Time>2</Time>
     </Sword>
- </Upgrade>
+  </Upgrade>
   <Promotion>
     <Entity>units/athen/infantry_javelineer_a</Entity>
   </Promotion>
