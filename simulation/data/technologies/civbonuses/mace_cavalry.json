@@ -4,12 +4,15 @@
 	"description": "Mace cavalry were made up of noblemen while infantry were shepards.",
 	"requirements": { "civ": "mace" },
 	"icon": "sword_cavalry.png",
-	"tooltip": "Cavalry +0.5 of Hack/Pierce and 1 extra Crush resistance but 0.1 slower walk speed",
+	"tooltip": "Cavalry +0.5 of Hack/Pierce resistance and 5% more dmg but 5% longer train time",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
-		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 },
-		{ "value": "UnitMotion/WalkSpeed", "add": -0.1 }
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05},
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05},
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05},
+		{ "value": "Cost/BuildTime", "multiply": 1.05 }
 	],
 	"affects": ["Cavalry !Hero"]
 }
