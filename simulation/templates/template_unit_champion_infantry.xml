@@ -41,8 +41,8 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed>8.9</WalkSpeed>        
-    <RunMultiplier>1.39</RunMultiplier>
+    <WalkSpeed>8.8</WalkSpeed>        
+    <RunMultiplier>1.35</RunMultiplier>
     <Acceleration op="mul">0.99</Acceleration>
   </UnitMotion>
   <Vision>

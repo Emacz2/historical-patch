@@ -103,7 +103,7 @@
   </TreasureCollector>
   <UnitAI>
     <DefaultStance>aggressive</DefaultStance>
-    <FleeDistance>12.0</FleeDistance>
+    <FleeDistance>15.0</FleeDistance>
     <FormationController>false</FormationController>
     <CanGuard>true</CanGuard>
     <CanPatrol>true</CanPatrol>
