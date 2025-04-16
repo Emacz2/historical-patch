@@ -1,0 +1,12 @@
+{
+	"type": "global",
+	"affects": ["Academy"],
+	"modifications": [
+	
+		{ "value": "Cost/BuildTime", "multiply": 0.5 },
+		{ "value": "Cost/Resources", "multiply": 0.75 }
+	],
+	"auraName": "Excellency of Works",
+	"auraDescription": "Academies 50% less build time and cost 25% less resources.",
+	"stackable": true
+}

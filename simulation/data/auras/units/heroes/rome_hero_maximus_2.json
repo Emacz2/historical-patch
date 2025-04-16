@@ -1,5 +1,6 @@
 {
-	"type": "global",
+	"type": "range",
+	"radius": 45,
 	"affects": ["Human", "Structure"],
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },

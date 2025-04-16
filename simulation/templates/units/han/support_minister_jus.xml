@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
   <Auras datatype="tokens">
-  units/han_minister_building
+  units/han_minister_justice
   </Auras>
   <Attack>
     <Capture>
@@ -38,8 +38,8 @@
   </Health>
   <Identity>
     <Civ>han</Civ>
-    <GenericName>Imperial Minister</GenericName>
-    <SpecificName>Minister of Justice</SpecificName>
+    <GenericName>Minister of Justice</GenericName>
+    <SpecificName>T'ing-wei</SpecificName>
     <Tooltip>Use to boost the efficiency of nearby units and buildings. Garrison within a building to boost the efficiency of its production queue. Only Han buildings can garrison ministers.</Tooltip>
     <Classes datatype="tokens">Organic Human</Classes>
     <VisibleClasses datatype="tokens">Minister</VisibleClasses>
