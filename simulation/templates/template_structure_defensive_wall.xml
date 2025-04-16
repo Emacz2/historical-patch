@@ -24,6 +24,15 @@
   <Repairable>
     <RepairTimeRatio>4.5</RepairTimeRatio>
   </Repairable>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>30</Hack>
+        <Pierce>45</Pierce>
+        <Crush>3</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_wall.xml</select>

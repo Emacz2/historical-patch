@@ -17,6 +17,7 @@
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/infantry_torch
+      units/{civ}/infantry_fire_slinger
       units/{civ}/siege_ram
     </Entities>
   </Trainer>
