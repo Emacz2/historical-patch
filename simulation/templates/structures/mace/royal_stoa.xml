@@ -8,7 +8,8 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-    <Trainer>
+  <ProductionQueue/>
+  <Trainer>
     <Entities datatype="tokens">
       units/{civ}/champion_cavalry
       units/{civ}/champion_infantry_spearman
