@@ -2,7 +2,8 @@
 <Entity parent="template_unit_champion_infantry_javelineer">
   <Cost>
     <Resources>
-      <food>150</food>
+      <food>150</food> 
+      <wood>0</wood>
       <metal>100</metal>
     </Resources>
   </Cost>
