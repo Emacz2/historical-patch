@@ -9,7 +9,7 @@
     </Melee>
   </Attack>
   <Health>
-    <Max>250</Max>
+    <Max>150</Max>
   </Health>
   <Identity>
     <Civ>pers</Civ>
@@ -20,11 +20,11 @@
     <Icon>units/pers/champion_infantry.png</Icon>
   </Identity>
   <Cost>
-    <BuildTime>20</BuildTime>
+    <BuildTime>16</BuildTime>
     <Resources>
-      <food>100</food>
-      <wood>70</wood>
-      <metal>80</metal>
+      <food>80</food>
+      <wood>60</wood>
+      <metal>60</metal>
     </Resources>
   </Cost>
   <Resistance>
