@@ -1,16 +1,16 @@
 {
-	"genericName": "Iron Weapons",
-	"description": "Using iron instead of bronze gave weapons additional power.",
+	"genericName": "Carburization",
+	"description": "By adding a small amount of carbon during the iron smelting process, a stronger material, steel, can be forged.",
 	"cost": {
-		"food": 200,
-		"metal": 150
+		"food": 500,
+		"metal": 400
 	},
 	"supersedes": "sparta_attack_melee_02",
 	"requirements": { "tech": "phase_town" },
 	"requirementsTooltip": "Unlocked in town phase.",
 	"icon": "sword_03.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +10% melee attack damage, champions an additional 5%, but Champion spearman an additional 10% train time. ",
+	"tooltip": "Soldiers +10% melee attack damage, champions an additional 10%, but an additional 10% train time. ",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
