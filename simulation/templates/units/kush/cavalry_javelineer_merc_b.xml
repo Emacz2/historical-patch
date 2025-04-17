@@ -22,7 +22,7 @@
     <Civ>kush</Civ>
     <Lang>napatan</Lang>
     <SelectionGroupName>units/kush/cavalry_javelineer_merc_b</SelectionGroupName>
-    <GenericName>Blemmye Desert Raider</GenericName>
+    <GenericName>Blemmye Desert Raider (Jav)</GenericName>
     <SpecificName>Nhw Bulahau gml</SpecificName>
     <VisibleClasses datatype="tokens">Camel</VisibleClasses>
     <Icon>units/kush/camel_javelinist.png</Icon>

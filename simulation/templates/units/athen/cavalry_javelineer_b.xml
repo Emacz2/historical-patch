@@ -3,6 +3,7 @@
   <Identity>
     <SelectionGroupName>units/athen/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Pródromos</SpecificName>
+    <GenericName>Hunting Jav Cavalry</GenericName>
     <Icon>units/athen/cavalry_javelinist.png</Icon>
     <Tooltip>Counters: 1.25× vs Support.</Tooltip>
   </Identity>

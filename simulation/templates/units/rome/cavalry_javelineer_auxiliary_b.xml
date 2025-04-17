@@ -11,7 +11,7 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <GenericName>Auxiliary Cavalry Javelineer</GenericName>
+    <GenericName>Auxiliary Jav Cavalry</GenericName>
     <SpecificName>Eques Alaris Numidarum</SpecificName>
     <VisibleClasses datatype="tokens">Auxiliary</VisibleClasses>
     <SelectionGroupName>units/rome/cavalry_javelineer_auxiliary_b</SelectionGroupName>

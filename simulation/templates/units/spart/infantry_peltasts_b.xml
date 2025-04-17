@@ -15,7 +15,7 @@
     <Civ>spart</Civ>
     <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/infantry_peltasts_b</SelectionGroupName>
-    <GenericName>peltasts</GenericName>
+    <GenericName>Peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
     <VisibleClasses datatype="tokens">Builder</VisibleClasses>
   </Identity>

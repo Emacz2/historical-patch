@@ -7,7 +7,7 @@
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/scout</SelectionGroupName>
     <GenericName>Scout</GenericName>
-    <SpecificName>hemerodromos</SpecificName>
+    <SpecificName>Hemerodromos</SpecificName>
     <Promotion disable=""/>
     <Icon>units/spart/scout.png</Icon>
   </Identity>
