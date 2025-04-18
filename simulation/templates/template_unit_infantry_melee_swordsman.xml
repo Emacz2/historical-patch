@@ -31,6 +31,9 @@
       <metal>15</metal>
     </Resources>
   </Cost>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.901</WalkSpeed>
+  </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Swordsman</VisibleClasses>
     <Tooltip>Counters: 1.5× vs Ranged Infantry.</Tooltip>

@@ -20,14 +20,6 @@
       </Projectile>
     </Ranged>
   </Attack>
- <Resistance>
-    <Entity>
-      <Damage>
-       <Hack op="add">0.5</Hack>
-       <Pierce op="add">1</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Loot>
     <metal>10</metal>
     <food>5</food>
@@ -35,6 +27,5 @@
   <Identity>
     <VisibleClasses datatype="tokens">Peltasts</VisibleClasses>
   </Identity>
-  <ResourceGatherer disable=""/>
 </Entity>
 

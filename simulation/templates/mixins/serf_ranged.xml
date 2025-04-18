@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-0.5</Hack>
-        <Pierce op="add">-1</Pierce>
-      </Damage>
-      <ApplyStatus>
-        <Burning>
-        <Duration>0.5</Duration>
-        <BlockChance>0.5</BlockChance>
-        </Burning>
-      </ApplyStatus>
-    </Entity>
-  </Resistance>
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
   </Cost>

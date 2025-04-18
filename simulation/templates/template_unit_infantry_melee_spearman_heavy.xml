@@ -22,8 +22,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -38,8 +38,8 @@
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">0.94</WalkSpeed>
-    <Acceleration op="mul">0.97</Acceleration>
+    <WalkSpeed op="mul">0.873</WalkSpeed>
+    <Acceleration op="mul">0.9</Acceleration>
   </UnitMotion>
   <Loot>
     <wood>5</wood>
