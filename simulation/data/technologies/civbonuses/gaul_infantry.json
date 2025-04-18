@@ -7,7 +7,6 @@
 	"requirements": { "civ": "gaul" },
 	"modifications": [
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05}, 
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05},
 		{ "value": "Vision/Range", "add": 15 }
 		
 
