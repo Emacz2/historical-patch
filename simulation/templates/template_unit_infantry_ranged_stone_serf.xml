@@ -27,6 +27,21 @@
       <stone>10</stone>
     </Resources>
   </Cost>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0</Hack>
+        <Pierce>0</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.3</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Stone throwing serf</VisibleClasses>
     <GenericName>Serf</GenericName>
@@ -41,7 +56,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.06</WalkSpeed>
+    <WalkSpeed op="mul">1.021</WalkSpeed>
     <Acceleration op="add">3.0</Acceleration>
   </UnitMotion>
 </Entity>
