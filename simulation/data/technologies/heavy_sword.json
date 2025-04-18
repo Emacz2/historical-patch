@@ -1,6 +1,6 @@
 {
 	"genericName": "Heavy swordsman",
-	"description": "Add armor to your citizen swordsman",
+	"description": "Add armor to your citizen infantry swordsman",
 	"cost": {
 		"food": 350
 		
@@ -20,7 +20,7 @@
 	    { "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
 	    { "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
 	],
-	"affects": ["Citizen Swordsman"],
+	"affects": ["Citizen Infantry Swordsman"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 
 }

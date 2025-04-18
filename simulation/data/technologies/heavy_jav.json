@@ -1,6 +1,6 @@
 {
 	"genericName": "Heavy Skirmishers",
-	"description": "Add armor to your citizen skirmishers",
+	"description": "Add armor to your citizen infantry skirmishers",
 	"cost": {
 		"food": 350
 		
@@ -21,7 +21,7 @@
 	    { "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
 	    { "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
 	],
-	"affects": ["Citizen Javelineer"],
+	"affects": ["Citizen Infantry Javelineer"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 
 }

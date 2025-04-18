@@ -1,6 +1,6 @@
 {
 	"genericName": "Heavy spearman",
-	"description": "Add armor to your citizen spearman",
+	"description": "Add armor to your citizen infantry spearman",
 	"cost": {
 		"food": 350
 		
@@ -20,7 +20,7 @@
 	    { "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
 	    { "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
 	],
-	"affects": ["Citizen Spearman"],
+	"affects": ["Citizen Infantry Spearman"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 
 }
