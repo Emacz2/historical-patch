@@ -27,7 +27,7 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2.5</Hack>
+        <Hack op="add">3.5</Hack>
         <Pierce op="add">2</Pierce>
       </Damage>
     </Entity>
@@ -43,7 +43,7 @@
     </Formations>
   </UnitAI>
   <UnitMotion>
-    <WalkSpeed op="mul">0.9</WalkSpeed>
+    <WalkSpeed op="mul">0.883</WalkSpeed>
     <Acceleration op="mul">0.85</Acceleration>
   </UnitMotion>
 </Entity>

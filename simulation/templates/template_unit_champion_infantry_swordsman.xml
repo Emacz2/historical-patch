@@ -23,6 +23,9 @@
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Swordsman</GenericName>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.92</WalkSpeed>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
