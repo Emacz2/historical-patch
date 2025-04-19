@@ -3,8 +3,8 @@
 	"affects": ["Soldier"],
 	"affectedPlayers": ["Enemy"],
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.97 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1 }
 	],
 	"auraName": "Intimidation",
-	"auraDescription": "Enemy soldiers 3% slower movement speed."
+	"auraDescription": "."
 }
