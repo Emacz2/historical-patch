@@ -14,7 +14,6 @@
       <Damage>
         <Hack op="add">-2</Hack>
         <Pierce op="add">-2</Pierce>
-        <Crush op="add">-2.5</Crush>
       </Damage>
       <ApplyStatus>
         <Burning>
@@ -25,7 +24,7 @@
     </Entity>
   </Resistance>
   <Cost>
-    <BuildTime op="mul">0.9</BuildTime>
+    <BuildTime op="mul">0.85</BuildTime>
     <Resources>
       <wood op="add">-10</wood>
     </Resources>

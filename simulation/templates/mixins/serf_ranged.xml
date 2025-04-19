@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Cost>
-    <BuildTime op="mul">0.9</BuildTime>
+    <BuildTime op="mul">0.85</BuildTime>
   </Cost>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
