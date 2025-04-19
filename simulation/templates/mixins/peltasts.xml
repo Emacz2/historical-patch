@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
- <BuildTime op="mul">1.1</BuildTime>
   <Cost>
-     <Resources>
+    <BuildTime op="mul">1.1</BuildTime>
+    <Resources>
       <metal>10</metal>
       <food>50</food>
       <wood>40</wood>
