@@ -112,5 +112,6 @@
   </Vision>
   <UnitMotion>
     <WalkSpeed>9.0</WalkSpeed>
+    <RunMultiplier>1.4</RunMultiplier>
   </UnitMotion>
 </Entity>
