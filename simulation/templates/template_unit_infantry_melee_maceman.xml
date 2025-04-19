@@ -23,7 +23,7 @@
     <GenericName>Infantry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
-    <UnitMotion>
+  <UnitMotion>
     <WalkSpeed op="mul">0.901</WalkSpeed>
   </UnitMotion>
   <Loot>

@@ -26,7 +26,7 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">0.923</WalkSpeed>
+    <WalkSpeed op="mul">0.894</WalkSpeed>
   </UnitMotion>
   <Sound>
     <SoundGroups>

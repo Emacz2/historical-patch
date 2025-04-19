@@ -47,7 +47,7 @@
     <Rates>
       <food.fruit>1.00</food.fruit>
       <food.grain>0.50</food.grain>
-      <food.meat>1.00</food.meat>
+      <food.meat>2</food.meat>
       <wood.tree>0.70</wood.tree>
       <wood.ruins>5.0</wood.ruins>
       <stone.rock>0.35</stone.rock>
