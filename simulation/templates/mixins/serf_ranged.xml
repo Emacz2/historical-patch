@@ -26,6 +26,6 @@
   </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Ranged Serfs -0.5 hack, -1 pierce and -2.5 crush resistances, but 10% faster train time and gather resources 5% faster</Tooltip>
+    <Tooltip>Ranged Serfs -0.5 hack, -1 pierce and -2.5 crush resistances, but 15% faster train time and gather resources 15% faster</Tooltip>
   </Identity>
 </Entity>
