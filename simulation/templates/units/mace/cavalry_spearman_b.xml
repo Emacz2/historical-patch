@@ -2,7 +2,7 @@
 <Entity parent="template_unit_cavalry_melee_spearman">
 <Cost>
     <Resources>
-      <food>115</food>
+      <food>100</food>
       <wood>50</wood>
       <metal>10</metal>
     </Resources>
