@@ -25,12 +25,13 @@
     </Resources>
   </Cost>
   <Identity>
-    <GenericName>Cavalry Spearman</GenericName>
+    <GenericName>Shock Cavalry Spearman</GenericName>
     <Tooltip>Counters: 1.75× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <Acceleration op="mul">1.15</Acceleration>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
+    <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

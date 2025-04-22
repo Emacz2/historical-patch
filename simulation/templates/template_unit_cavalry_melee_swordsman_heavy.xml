@@ -34,7 +34,7 @@
     </Entity>
   </Resistance>
   <Identity>
-    <GenericName>Cavalry Heavy Swordsman</GenericName>
+    <GenericName>Heavy Cavalry Swordsman</GenericName>
     <VisibleClasses datatype="tokens">Swordsman</VisibleClasses>
     <Tooltip>Counters: 1.25× vs Ranged Infantry.</Tooltip>
   </Identity>
@@ -43,8 +43,8 @@
     <metal>1</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">0.93</WalkSpeed>
-    <Acceleration op="mul">0.97</Acceleration>
+    <WalkSpeed op="mul">0.9</WalkSpeed>
+    <Acceleration op="mul">0.95</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

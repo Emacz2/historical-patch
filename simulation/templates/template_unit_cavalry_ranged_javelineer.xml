@@ -26,7 +26,7 @@
     </Resources>
   </Cost>
   <Identity>3.
-    <GenericName>Cavalry Javelineer</GenericName>
+    <GenericName>Mounted Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
   <Sound>
@@ -36,7 +36,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">0.93</WalkSpeed>
+    <WalkSpeed op="mul">0.9</WalkSpeed>
     <Acceleration op="mul">0.95</Acceleration>
   </UnitMotion>
 </Entity>

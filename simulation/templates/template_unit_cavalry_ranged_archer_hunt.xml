@@ -13,8 +13,12 @@
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
-    <GenericName>Cavalry Archer Hunt</GenericName>
+    <GenericName>Parthian Style Cavalry Archer</GenericName>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.90</WalkSpeed>
+    <Acceleration op="mul">0.95</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

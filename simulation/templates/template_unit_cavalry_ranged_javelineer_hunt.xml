@@ -12,7 +12,7 @@
     </Resources>
   </Cost>
   <Identity>
-    <GenericName>Cavalry Javelineer Hunt</GenericName>
+    <GenericName>Flanking Cavalry Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
   <Sound>

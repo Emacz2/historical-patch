@@ -15,10 +15,14 @@
     </Melee>
   </Attack>
   <Identity>
-    <GenericName>Cavalry Spearman hunt</GenericName>
+    <GenericName>Flanking Cavalry Spearman</GenericName>
     <Tooltip>Counters: 2.5× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <Acceleration op="mul">1.25</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>

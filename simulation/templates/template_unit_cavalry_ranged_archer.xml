@@ -26,7 +26,7 @@
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
-    <GenericName>Cavalry Archer</GenericName>
+    <GenericName>Mounted Archer</GenericName>
   </Identity>
   <Sound>
     <SoundGroups>
@@ -35,7 +35,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">0.87</WalkSpeed>
-    <Acceleration op="mul">0.90</Acceleration>
+    <WalkSpeed op="mul">0.80</WalkSpeed>
+    <Acceleration op="mul">0.9</Acceleration>
   </UnitMotion>
 </Entity>
