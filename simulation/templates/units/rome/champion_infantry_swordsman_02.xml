@@ -7,6 +7,9 @@
     <GenericName>Marian Legionary</GenericName>
     <SpecificName>Legiōnārius</SpecificName>
     <Icon>units/rome/champion_legion_marian.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_imp</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_03</Entity>
