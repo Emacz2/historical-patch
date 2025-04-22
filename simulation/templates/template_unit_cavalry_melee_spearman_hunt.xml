@@ -20,8 +20,8 @@
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
-    <Acceleration op="mul">1.25</Acceleration>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <Acceleration op="mul">1.2</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

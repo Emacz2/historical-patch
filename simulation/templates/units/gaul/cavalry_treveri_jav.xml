@@ -28,6 +28,7 @@
     </Entity>
   </Resistance>
    <Promotion disable=""/>
+   <ResourceGatherer disable=""/>
   <VisualActor>
     <Actor>units/gauls/cavalry_treveri_jav_e_m</Actor>
   </VisualActor>

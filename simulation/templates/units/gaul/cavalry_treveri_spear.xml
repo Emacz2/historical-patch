@@ -29,8 +29,9 @@
     <WalkSpeed op="mul">1.05</WalkSpeed>
     <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
+  <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/gauls/cavalry_treveri_spear_a_m.xml</Actor>
+    <Actor>units/gauls/cavalry_treveri_spear_m.xml</Actor>
   </VisualActor>
 </Entity>
 
