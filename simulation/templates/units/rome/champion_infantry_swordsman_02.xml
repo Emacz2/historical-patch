@@ -4,8 +4,8 @@
     units/testudo
   </Auras>
   <Identity>
-    <GenericName>Marian Legionary</GenericName>
-    <SpecificName>Legiōnārius</SpecificName>
+    <GenericName>Evocati</GenericName>
+    <SpecificName>Evocati</SpecificName>
     <Icon>units/rome/champion_legion_marian.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_imp</Techs>

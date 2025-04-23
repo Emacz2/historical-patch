@@ -5,7 +5,6 @@
       <AttackName>Bow</AttackName>
       <Damage>
         <Pierce>2</Pierce>
-        <Crush>0.25</Crush>
       </Damage>
       <MaxRange>70</MaxRange>
       <MinRange>10</MinRange>
@@ -39,7 +38,7 @@
     <Category>Fortress</Category>
     <Distance>
       <FromClass>Fortress</FromClass>
-      <MinDistance>75</MinDistance>
+      <MinDistance>100</MinDistance>
     </Distance>
   </BuildRestrictions>
   <BuildingAI>
@@ -63,13 +62,13 @@
     <Height>8.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>30</Max>
+    <Max>35</Max>
     <EjectHealth>0.075</EjectHealth>
     <List datatype="tokens">Support Infantry Cavalry Siege Elephant</List>
     <LoadingRange>6</LoadingRange>
   </GarrisonHolder>
 	  <Population>
-    <Bonus>30</Bonus>
+    <Bonus>25</Bonus>
     </Population>
   <Health>
     <Max>5500</Max>
