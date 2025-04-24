@@ -7,8 +7,9 @@
 	},
 	"icon": "coinage.png",
 	"researchTime": 50,
-	"tooltip": "Garrison an additional 15 soldiers in Fortress.",
+	"tooltip": "Fortress +5 default arrows and +15 garison capacity (50 total).",
 	"modifications": [
+		{ "value": "BuildingAI/DefaultArrowCount", "add": 5, "affects": "Fortress" },
 		{ "value": "GarrisonHolder/Max", "add": 15, "affects": "Fortress" }
 		
 	],
