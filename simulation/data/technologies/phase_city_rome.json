@@ -11,9 +11,13 @@
 		"stone": 750,
 		"metal": 750
 	},
+	
 	"requirements": {
+		
 		"entity": {
+			
 			"class": "Village",
+			
 			"number": 20
 		}
 	},

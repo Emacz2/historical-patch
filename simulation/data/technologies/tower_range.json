@@ -9,10 +9,10 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "arrow.png",
 	"researchTime": 40,
-	"tooltip": "Sentry and Stone Towers +8 attack range.",
+	"tooltip": "Sentry and Stone Towers +5 attack range +10 vision.",
 	"modifications": [
-		{ "value": "Attack/Ranged/MaxRange", "add": 8 },
-		{ "value": "Vision/Range","add": 8 }
+		{ "value": "Attack/Ranged/MaxRange", "add": 5 },
+		{ "value": "Vision/Range","add": 10 }
 	],
 	"affects": ["SentryTower", "StoneTower", "GreatTower"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
