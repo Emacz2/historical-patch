@@ -17,7 +17,7 @@
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_2x2</SpawnEntityOnDeath>
   </Health>
   <Identity>
-    <GenericName>Palisade</GenericName>
+    <GenericName>Palisade Spikes</GenericName>
     <SelectionGroupName>template_structure_defensive_palisade_spikes</SelectionGroupName>
     <Tooltip>Wall off an area. Build in own or neutral territory.</Tooltip>
     <VisibleClasses datatype="tokens">Palisade Spikes</VisibleClasses>
