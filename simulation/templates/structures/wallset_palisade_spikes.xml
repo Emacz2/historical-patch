@@ -3,8 +3,8 @@
   <Identity>
     <GenericName>Palisade Spikes</GenericName>
     <Tooltip>Wall off an area. Build in own or neutral territory.</Tooltip>
-    <VisibleClasses datatype="tokens">-Wall Palisade</VisibleClasses>
-    <Icon>structures/palisade_wall.png</Icon>
+    <VisibleClasses datatype="tokens">Palisade_spikes</VisibleClasses>
+    <Icon>structures/wooden_spikes.png</Icon>
     <Requirements>
       <Techs datatype="tokens">-phase_town phase_village</Techs>
     </Requirements>

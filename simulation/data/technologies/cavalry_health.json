@@ -11,7 +11,7 @@
 	"researchTime": 35,
 	"tooltip": "Champion Cavalry 25% more health",
 	"modifications": [
-		{ "value": "Health/Max", "multiply": 1.2 }
+		{ "value": "Health/Max", "multiply": 1.25 }
 	],
 	"affects": ["Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

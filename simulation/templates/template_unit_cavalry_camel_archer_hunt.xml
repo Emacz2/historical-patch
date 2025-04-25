@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_cavalry_ranged_archer">
+<Entity parent="template_unit_cavalry_camel_archer">
  <Attack>
     <Ranged>
       <AttackName>Bow</AttackName>
       <MaxRange op="add">4.0</MaxRange>
     </Ranged>
   </Attack>
-  <Cost>
-    <Resources>
-      <wood>50</wood>
-    </Resources>
-  </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
     <GenericName>Parthian Style Cavalry Archer</GenericName>
