@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="peltasts|template_unit_infantry_ranged_javelineer">
+<Entity parent="template_unit_infantry_ranged_peltasts">
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -17,14 +17,14 @@
     <SelectionGroupName>units/spart/infantry_peltasts_b</SelectionGroupName>
     <GenericName>Peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
-    <VisibleClasses datatype="tokens">Builder</VisibleClasses>
   </Identity>
+    <Promotion>
+    <Entity>units/spart/infantry_peltasts_a</Entity>
+  </Promotion>
   <Loot>
     <food>5</food>
     <wood>5</wood>
   </Loot>
-  <ResourceGatherer disable=""/>
-  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/jav_neodamodes.xml</Actor>
   </VisualActor>

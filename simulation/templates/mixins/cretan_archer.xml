@@ -5,6 +5,7 @@
 	<Damage>
 	    <Pierce op="mul">1.05</Pierce>
   </Damage>
+  <MaxRange op="add">2.0</MaxRange>
   </Ranged>
 </Attack>
    <Resistance>
@@ -15,4 +16,8 @@
       </Damage>
     </Entity>
   </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.02</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
+  </UnitMotion>
 </Entity>
