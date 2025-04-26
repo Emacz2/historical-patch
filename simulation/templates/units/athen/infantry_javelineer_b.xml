@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="civ/athen|merc_inf|peltasts|template_unit_infantry_ranged_peltasts">
+<Entity parent="civ/athen|template_unit_infantry_ranged_javelineer">
   <Identity>
     <SelectionGroupName>units/athen/infantry_javelineer_b</SelectionGroupName>
-    <GenericName>Thracian Peltast</GenericName>
-    <SpecificName>Peltastḗs Thrâx</SpecificName>
-    <Icon>units/athen/infantry_javelinist.png</Icon>
+    <GenericName>Athenian Javelineer</GenericName>
+    <Icon>units/athen/infantry_jav.png</Icon>
     <Requirements>
       <Techs datatype="tokens">unlock_skirms</Techs>
     </Requirements>
   </Identity>
-  <Upgrade>
-    <Sword>
-      <Entity>units/athen/peltast_sword_b</Entity>
-      <Tooltip>Switch to using a sword.</Tooltip>
-      <Variant>upgrading</Variant>
-      <Time>2</Time>
-    </Sword>
-  </Upgrade>
   <Promotion>
     <Entity>units/athen/infantry_javelineer_a</Entity>
   </Promotion>

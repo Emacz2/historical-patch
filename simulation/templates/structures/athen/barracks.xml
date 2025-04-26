@@ -14,6 +14,15 @@
   <Obstruction>
     <Static width="20.0" depth="20.0"/>
   </Obstruction>
+    <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_spearman_b
+      units/{civ}/infantry_javelineer_b
+      units/{civ}/infantry_archer_b
+      units/{civ}/merc_inf_javelineer_b
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/athenians/barracks.xml</Actor>
     <FoundationActor>structures/fndn_6x6.xml</FoundationActor>
