@@ -51,6 +51,6 @@
   </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Perioikoi</VisibleClasses>
-     <Tooltip>Perioikoi were free, but not citizens of Sparta.  They were expected to harvest the resources, work the forges etc, but fight when called upon.</Tooltip>
+    <Tooltip>Perioikoi were free, but not citizens of Sparta.  They were expected to harvest the resources, work the forges etc, but fight when called upon.</Tooltip>
   </Identity>
 </Entity>

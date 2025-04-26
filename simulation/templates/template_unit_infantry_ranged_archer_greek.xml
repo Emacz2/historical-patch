@@ -26,7 +26,7 @@
     </Resources>
   </Cost>
   <Identity>
-    <VisibleClasses datatype="tokens">Archer</VisibleClasses>
+    <VisibleClasses datatype="tokens">Greek Archer</VisibleClasses>
     <GenericName>Greek Archer</GenericName>
   </Identity>
   <Loot>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="civ/athen|merc_inf|peltasts|template_unit_infantry_ranged_peltasts">
   <Identity>
-    <SelectionGroupName>units/athen/infantry_javelineer_b</SelectionGroupName>
+    <SelectionGroupName>units/athen/merc_inf_javelineer_b</SelectionGroupName>
     <GenericName>Thracian Peltast</GenericName>
     <SpecificName>Peltastḗs Thrâx</SpecificName>
     <Icon>units/athen/infantry_javelinist.png</Icon>
@@ -18,7 +18,7 @@
     </Sword>
   </Upgrade>
   <Promotion>
-    <Entity>units/athen/merc_inf_javelinist_a</Entity>
+    <Entity>units/athen/merc_inf_javelineer_a</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/athenians/merc_inf_javelinist_b.xml</Actor>
