@@ -6,11 +6,11 @@
     <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
     <Icon>units/mace/infantry_slinger.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">unlock_slingers</Techs>
+      <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/athen/infantry_slinger_a</Entity>
+    <Entity>units/athen/merc_inf_slinger_a</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_b.xml</Actor>
