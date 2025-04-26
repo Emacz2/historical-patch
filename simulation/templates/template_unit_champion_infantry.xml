@@ -41,10 +41,10 @@
     </SoundGroups>
   </Sound>
  <UnitMotion>
-    <WalkSpeed>9.0</WalkSpeed>
+    <WalkSpeed>10.3</WalkSpeed>
     <RunMultiplier>1.3</RunMultiplier>
   </UnitMotion>
   <Vision>
-    <Range>70</Range>
+    <Range>65</Range>
   </Vision>
 </Entity>

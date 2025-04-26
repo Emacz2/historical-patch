@@ -108,10 +108,10 @@
     </SoundGroups>
   </Sound>
   <Vision>
-    <Range>70</Range>
+    <Range>65</Range>
   </Vision>
   <UnitMotion>
-    <WalkSpeed>9.0</WalkSpeed>
+    <WalkSpeed>10</WalkSpeed>
     <RunMultiplier>1.4</RunMultiplier>
   </UnitMotion>
 </Entity>
