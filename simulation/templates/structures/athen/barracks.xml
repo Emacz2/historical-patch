@@ -18,10 +18,10 @@
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
       -units/{civ}/infantry_slinger_b
+      -units/{civ}/infantry_archer_b
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_javelineer_b
-      units/{civ}/infantry_archer_b
-      units/{civ}/merc_inf_javelineer_b
+      units/{civ}/merc_inf_peltast_b
       units/{civ}/merc_inf_slinger_b
     </Entities>
   </Trainer>
