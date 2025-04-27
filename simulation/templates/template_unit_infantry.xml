@@ -108,7 +108,7 @@
     </SoundGroups>
   </Sound>
   <Vision>
-    <Range>65</Range>
+    <Range>60</Range>
   </Vision>
   <UnitMotion>
     <WalkSpeed>10</WalkSpeed>
