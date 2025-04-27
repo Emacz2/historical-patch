@@ -7,6 +7,9 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
+   <Vision>
+    <Range>70</Range>
+  </Vision>
   <Promotion>
     <Entity>units/gaul/support_healer_e</Entity>
   </Promotion>

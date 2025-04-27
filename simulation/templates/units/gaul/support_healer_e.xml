@@ -3,5 +3,8 @@
   <Identity>
     <Rank>Elite</Rank>
   </Identity>
+   <Vision>
+    <Range>75</Range>
+  </Vision>
   <Promotion disable=""/>
 </Entity>
