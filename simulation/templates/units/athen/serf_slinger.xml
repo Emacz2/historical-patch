@@ -2,7 +2,7 @@
 <Entity parent="civ/athen|serf_ranged|template_unit_infantry_ranged_stone_serf">
   <Identity>
     <SelectionGroupName>units/athen/serf_slinger</SelectionGroupName>
-    <GenericName>Athenian Serf</GenericName>
+    <GenericName>Athenian Serf Stone Thrower</GenericName>
     <Icon>units/athen/infantry_slinger.png</Icon>
   </Identity>
   <Promotion disable=""/>

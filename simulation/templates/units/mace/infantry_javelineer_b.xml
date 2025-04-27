@@ -9,8 +9,8 @@
     <Civ>mace</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/mace/infantry_javelineer_b</SelectionGroupName>
-    <GenericName>Agrianian Peltast</GenericName>
-    <SpecificName>Peltastḗs Agrías</SpecificName>
+    <GenericName>Agrianian Javelineer</GenericName>
+    <SpecificName>Akontistai Agrías</SpecificName>
     <Icon>units/mace/infantry_javelinist.png</Icon>
   </Identity>
   <Promotion>

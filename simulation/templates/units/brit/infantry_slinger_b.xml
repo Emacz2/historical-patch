@@ -9,13 +9,11 @@
   <Identity>
     <Civ>brit</Civ>
     <SelectionGroupName>units/brit/infantry_slinger_b</SelectionGroupName>
-    <GenericName>Celtic Slinger</GenericName>
+    <GenericName>Celtic Serf Stone Thrower</GenericName>
     <SpecificName>Talmoris</SpecificName>
     <Icon>units/gaul/infantry_slinger.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/brit/infantry_slinger_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/britons/infantry_slinger_b.xml</Actor>
   </VisualActor>

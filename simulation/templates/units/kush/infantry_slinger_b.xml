@@ -12,13 +12,11 @@
   <Identity>
     <Civ>kush</Civ>
     <SelectionGroupName>units/kush/infantry_slinger_b</SelectionGroupName>
-    <GenericName>Judean Slinger</GenericName>
+    <GenericName>Kush Serf Stone Thrower</GenericName>
     <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
     <Icon>units/ptol/infantry_slinger.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/kush/infantry_slinger_b</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/kushites/infantry_slinger_b.xml</Actor>
   </VisualActor>
