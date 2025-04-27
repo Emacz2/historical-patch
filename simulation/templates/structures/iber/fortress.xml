@@ -5,6 +5,14 @@
     <SpecificName>Castro</SpecificName>
     <Tooltip>Train Heroes. Garrison Soldiers for additional arrows.</Tooltip>
   </Identity>
+  <Trainer>
+    <Entities datatype="tokens">
+      -units/{civ}/infantry_slinger_a
+      -units/{civ}/hero_corbis
+      -units/{civ}/hero_indibil
+      -units/{civ}/hero_orison
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="27.0" depth="27.0"/>
   </Obstruction>

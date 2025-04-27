@@ -4,6 +4,12 @@
     <Civ>iber</Civ>
     <SpecificName>Kaserna</SpecificName>
   </Identity>
+  <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/infantry_slinger_b
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/iberians/barracks.xml</Actor>
   </VisualActor>
