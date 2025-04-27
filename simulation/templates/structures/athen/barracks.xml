@@ -14,7 +14,7 @@
   <Obstruction>
     <Static width="20.0" depth="20.0"/>
   </Obstruction>
-    <Trainer>
+  <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
       -units/{civ}/infantry_slinger_b

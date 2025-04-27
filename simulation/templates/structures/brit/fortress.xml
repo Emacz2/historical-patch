@@ -23,6 +23,7 @@
   </Sound>
   <Trainer>
     <Entities datatype="tokens">
+      -units/{civ}/infantry_slinger_a
       units/{civ}/hero_boudicca
       units/{civ}/hero_caratacos
       units/{civ}/hero_cunobelin
