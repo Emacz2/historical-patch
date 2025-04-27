@@ -9,9 +9,9 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "horse_trainer.png",
 	"researchTime": 35,
-	"tooltip": "Champion Cavalry 25% more health",
+	"tooltip": "Champion Cavalry +50 health",
 	"modifications": [
-		{ "value": "Health/Max", "multiply": 1.25 }
+		{ "value": "Health/Max", "add": 50}
 	],
 	"affects": ["Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
