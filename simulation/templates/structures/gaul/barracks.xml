@@ -17,6 +17,12 @@
     <Civ>gaul</Civ>
     <SpecificName>Coriosedlon</SpecificName>
   </Identity>
+    <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/infantry_slinger_b
+    </Entities>
+  </Trainer>
   <Loot>
     <wood>60</wood>
     <stone>0</stone>

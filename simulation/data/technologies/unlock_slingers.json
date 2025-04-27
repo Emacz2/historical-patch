@@ -1,5 +1,5 @@
 {
-	"genericName": "Unlock skilled slingers",
+	"genericName": "Unlock slingers",
 	"description": "",
 	"cost": {
 		"food": 150,
@@ -9,7 +9,6 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "athen" },
 			{ "civ": "sele" }
 		]
 	},

@@ -24,9 +24,6 @@
     <SelectionGroupName>units/brit/infantry_javelineer_b</SelectionGroupName>
     <SpecificName>Adretos</SpecificName>
     <Icon>units/brit/infantry_javelinist.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">unlock_skirms</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/brit/infantry_javelineer_a</Entity>
