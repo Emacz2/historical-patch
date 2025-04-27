@@ -111,7 +111,7 @@
     <Range>60</Range>
   </Vision>
   <UnitMotion>
-    <WalkSpeed>10</WalkSpeed>
+    <WalkSpeed>10.5</WalkSpeed>
     <RunMultiplier>1.4</RunMultiplier>
   </UnitMotion>
 </Entity>
