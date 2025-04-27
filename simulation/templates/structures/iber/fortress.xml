@@ -8,9 +8,6 @@
   <Trainer>
     <Entities datatype="tokens">
       -units/{civ}/infantry_slinger_a
-      -units/{civ}/hero_corbis
-      -units/{civ}/hero_indibil
-      -units/{civ}/hero_orison
     </Entities>
   </Trainer>
   <Obstruction>
