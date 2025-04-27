@@ -14,7 +14,7 @@
   </Identity>
   <Promotion>
     <Entity>units/spart/champion_infantry_javelineer_olympian</Entity>
-    <RequiredXp>600</RequiredXp>
+    <RequiredXp>500</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_jav_c.xml</Actor>

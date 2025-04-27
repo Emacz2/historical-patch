@@ -45,9 +45,6 @@
     <GenericName>Tent</GenericName>
     <Icon>structures/mercenary_camp.png</Icon>
     <VisibleClasses datatype="tokens">Tent</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-    </Requirements>
 	<Tooltip>Train helots to harvest resources.</Tooltip>
   </Identity>
   <Obstruction>
