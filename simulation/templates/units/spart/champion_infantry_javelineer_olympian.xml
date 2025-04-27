@@ -22,10 +22,10 @@
     </Entity>
   </Resistance>
  <Health>
-    <Max op="add">50</Max>
+    <Max op="add">25</Max>
   </Health>
  <UnitMotion>
- <WalkSpeed op="add">-0.2</WalkSpeed>
+  <WalkSpeed op="mul">0.98</WalkSpeed>
  </UnitMotion>
    <Identity>
     <GenericName>Spartan Olympic Javelineer</GenericName>

@@ -12,7 +12,7 @@
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
-        <Pierce op="add">1.5</Pierce>
+        <Pierce op="add">1</Pierce>
 	      <Crush op="add">5</Crush>
       </Damage>
     </Entity>
