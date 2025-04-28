@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/spart/infantry_peltasts_b">
+<Entity parent="units/spart/infantry_peltast_b">
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
