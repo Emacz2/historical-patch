@@ -1,6 +1,6 @@
 {
 	"type": "range",
-	"radius": 40,
+	"radius": 45,
 	"affects": ["Soldier"],
 	"modifications": [
 		{ "value": "Attack/Ranged/MaxRange", "add": 3 },

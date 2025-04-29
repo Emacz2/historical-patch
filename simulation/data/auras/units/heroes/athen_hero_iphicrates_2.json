@@ -3,9 +3,9 @@
 	"affects": ["PaidMerc"],
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 },
-		{"value": "Cost/Resources/metal", "multiply": 0.75 }
+		{"value": "Cost/Resources/metal", "multiply": 0.8}
 	],
 	"auraName": "Fast reinforcements",
-	"auraDescription": "Infantry Javelineers and Cretan Archers +10% movement speed and 25% lessmetal.",
+	"auraDescription": "Infantry Mercaneries +10% movement speed and 20% less metal.",
 	"overlayIcon": "art/textures/ui/session/auras/speed_bonus.png"
 }
