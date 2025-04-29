@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="civ/athen|merc_inf|greek_olympian|template_unit_infantry_melee_swordsman">
   <Identity>
-    <SelectionGroupName>merc_inf_peltast_sw_b</SelectionGroupName>
+    <SelectionGroupName>merc_inf_peltast_sw</SelectionGroupName>
     <GenericName>Thracian Peltast</GenericName>
     <SpecificName>Peltastḗs Thrâx</SpecificName>
     <Icon>units/athen/infantry_javelinist.png</Icon>
@@ -10,13 +10,13 @@
     </Requirements>
   </Identity>
   <Health>
-    <Max>60</Max>
+    <Max>75</Max>
   </Health>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>1</Hack>
-        <Pierce>2</Pierce>
+        <Hack>2</Hack>
+        <Pierce>3</Pierce>
         <Crush>2.5</Crush>
       </Damage>
       <ApplyStatus>
@@ -29,16 +29,17 @@
   </Resistance>
   <Upgrade>
     <Sword>
-      <Entity>units/athen/merc_inf_peltast_b</Entity>
+      <Entity>units/athen/merc_inf_peltast</Entity>
       <Tooltip>Switch to using Javelins.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>8</Time>
     </Sword>
   </Upgrade>
-  <Promotion>
-    <Entity>units/athen/merc_inf_peltast_sw_a</Entity>
-  </Promotion>
+  <UnitMotion>
+    <WalkSpeed>10.2</WalkSpeed>
+  </UnitMotion>
+  <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/athenians/peltast_sword_b.xml</Actor>
+    <Actor>units/athenians/peltast_sword_a.xml</Actor>
   </VisualActor>
 </Entity>
