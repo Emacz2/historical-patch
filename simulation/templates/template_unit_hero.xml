@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit">
-  <Attack>
-    <Capture>
+ <Attack>
+  <Capture>
       <AttackName>Capture</AttackName>
       <Capture>10</Capture>
       <MaxRange>4</MaxRange>
@@ -23,6 +23,7 @@
   <Identity>
     <Classes datatype="tokens">Human</Classes>
     <VisibleClasses datatype="tokens">Soldier Hero</VisibleClasses>
+    <Tooltip>0 damage vs FemaleCitizen .</Tooltip>
     <GenericName>Hero</GenericName>
     <Icon>technologies/laurel_wreath.png</Icon>
     <Requirements>

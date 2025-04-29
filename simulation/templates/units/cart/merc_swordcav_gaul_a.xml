@@ -14,14 +14,14 @@
     <GenericName>Celtic Mercenary Cavalry</GenericName>
     <SpecificName>Ḥayyāl Ḥerev Raḫūv</SpecificName>
     <SelectionGroupName>units/cart/merc_swordcav_celt</SelectionGroupName>
-    <Icon>units/cart/cavalry_swordsman_2.png</Icon>
+    <Icon>units/gaul/cavalry_swordsman.png</Icon>
     <Rank>Advanced</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/cart/merc_swordcav_celt_3</Entity>
+    <Entity>units/cart/merc_swordcav_gaul_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/gauls/cavalry_swordsman_a_m.xml</Actor>

@@ -11,7 +11,7 @@
   </Identity>
   <Upgrade>
     <Sword>
-      <Entity>units/athen/peltast_sword_b</Entity>
+      <Entity>units/athen/merc_inf_peltast_sw_b</Entity>
       <Tooltip>Switch to using a sword.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>2</Time>
