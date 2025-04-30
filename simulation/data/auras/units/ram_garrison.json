@@ -10,6 +10,6 @@
 		{ "value": "Attack/Melee/Damage/Crush", "add": 10}
 
 	],
-	"auraName": "Battering Team",
-	"auraDescription": "Battering Rams +0.25 speed, +1 acceleration, +0.5 turn rate and 10 crush dmg for each garrisoned soldier."
+	"auraName": "Battering Team."
+
 }
