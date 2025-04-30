@@ -38,9 +38,10 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_jav_celt
-      units/{civ}/merc_sword_celt
-      units/{civ}/merc_swordcav_celt_2
+      units/{civ}/merc_inf_celt_jav_b
+      units/{civ}/merc_inf_celt_sword
+      units/{civ}/merc_inf_gaul_sword_b
+      units/{civ}/merc_swordcav_gaul_a
     </Entities>
   </Trainer>
   <VisualActor>

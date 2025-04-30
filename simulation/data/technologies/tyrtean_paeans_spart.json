@@ -14,10 +14,11 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "walk.png",
 	"researchTime": 30,
-	"tooltip": "All Infantry +10% movement speed.",
+	"tooltip": "All hoplites +15% movement speed. But Champion Spearman 10% more train time",
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.15 },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman" }
 	],
-	"affects": ["Infantry !Helot"],
+	"affects": ["Hoplites !Helot"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

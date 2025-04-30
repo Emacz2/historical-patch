@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/cart/infantry_swordsman_gaul_b">
+<Entity parent="merc_inf|template_unit_infantry_melee_swordsman">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/{civ}/super_dock
+      structures/{civ}/embassy_celtic
+      structures/{civ}/embassy_iberian
+      structures/{civ}/embassy_italic
+    </Entities>
+  </Builder>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="mul">1.05</Hack>
+        <Pierce op="mul">1.05</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Vision>
+    <Range op="add">15</Range>
+  </Vision>
   <Identity>
-    <Rank>Advanced</Rank>
+    <Civ>cart</Civ>
+    <GenericName>Celtic Mercenary Swordsman</GenericName>
+    <SpecificName>Seḫīr Ḥerev</SpecificName>
+    <SelectionGroupName>units/cart/merc_sword_celt</SelectionGroupName>
+    <Icon>units/cart/infantry_swordsman.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_village</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/cart/infantry_swordsman_gaul_e</Entity>
+    <Entity>units/cart/infantry_swordsman_gaul_a</Entity>
   </Promotion>
   <VisualActor>
-    <Actor>units/gauls/infantry_swordsman_a.xml</Actor>
+    <Actor>units/gauls/infantry_swordsman_b.xml</Actor>
   </VisualActor>
 </Entity>
