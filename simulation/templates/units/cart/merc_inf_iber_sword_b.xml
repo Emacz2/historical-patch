@@ -34,10 +34,7 @@
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.873</WalkSpeed>
-    <Acceleration op="mul">0.9</Acceleration>
-  </UnitMotion>
+  
   <Promotion>
     <Entity>units/cart/merc_inf_iber_sword_a</Entity>
   </Promotion>

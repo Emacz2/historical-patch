@@ -6,8 +6,17 @@
     <Icon>units/samn/spearman.png</Icon>
   </Identity>
   <Health>
-    <Max op="add">30</Max>
+    <Max op="add">80</Max>
   </Health>
+  <Attack>
+    <Melee>
+      <AttackName>Spear</AttackName>
+      <Damage>
+        <Hack op="mul">0.75</Hack>
+        <Pierce op="mul">0.75</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>
   </VisualActor>
