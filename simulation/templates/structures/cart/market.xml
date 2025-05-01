@@ -21,7 +21,6 @@
       <Time>30</Time>
    </market_town>
   </Upgrade>
-  </Upgrade>
     <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
