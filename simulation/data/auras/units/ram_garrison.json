@@ -10,6 +10,6 @@
 		{ "value": "Attack/Melee/Damage/Crush", "add": 10}
 
 	],
-	"auraName": "Battering Team."
-
+	"auraName": "",
+	"auraDescription": "."
 }
