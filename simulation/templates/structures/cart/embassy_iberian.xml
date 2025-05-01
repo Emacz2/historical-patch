@@ -36,8 +36,8 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_spearcav_iber
-      units/{civ}/merc_sword_iber
+      units/{civ}/merc_spearcav_iber_b
+      units/{civ}/merc_inf_iber_sword_b
     </Entities>
   </Trainer>
   <VisualActor>
