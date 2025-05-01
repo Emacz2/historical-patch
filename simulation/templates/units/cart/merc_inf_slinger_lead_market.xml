@@ -7,6 +7,17 @@
     <SelectionGroupName>units/cart/infantry_slinger_iber_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
+  <Upgrade>
+    <Stone>
+      <Entity>units/cart/merc_inf_slinger_stone</Entity>
+      <Tooltip>Switch to throwing stones.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>5</Time>
+    </Stone>
+  </Upgrade>
+  <Health>
+    <Max>75</Max>
+  </Health>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>

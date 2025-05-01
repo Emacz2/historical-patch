@@ -21,6 +21,13 @@
       <Time>30</Time>
    </market_town>
   </Upgrade>
+  </Upgrade>
+    <Trainer>
+    <BatchTimeModifier>0.6</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/merc_inf_slinger_lead_market
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/carthaginians/market.xml</Actor>
   </VisualActor>

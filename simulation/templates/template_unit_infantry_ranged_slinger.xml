@@ -17,7 +17,7 @@
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="3"/>
       </Projectile>
-      <PreferredClasses datatype="tokens">Human</PreferredClasses>
+      <RestrictedClasses datatype="tokens">Structure</RestrictedClasses>
     </Ranged>
   </Attack>
   <Cost>

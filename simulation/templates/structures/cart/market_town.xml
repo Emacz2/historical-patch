@@ -24,13 +24,6 @@
       <Time>45</Time>
    </market_town>
   </Upgrade>
-    <Trainer>
-    <BatchTimeModifier>0.6</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/merc_spear_market_a
-      -units/{civ}/merc_spear_market_b
-    </Entities>
-  </Trainer>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
   </Obstruction>
