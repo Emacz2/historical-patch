@@ -21,4 +21,7 @@
       </Damage>
     </Entity>
   </Resistance>
+  <Vision>
+    <Range>70</Range>
+  </Vision>
 </Entity>

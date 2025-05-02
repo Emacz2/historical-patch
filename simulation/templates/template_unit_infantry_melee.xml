@@ -15,13 +15,16 @@
         <Crush>2</Crush>
       </Damage>
       <ApplyStatus>
-<Burning>
-<Duration>0.5</Duration>
-<BlockChance>0.4</BlockChance>
-</Burning>
-</ApplyStatus>
+      <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.4</BlockChance>
+      </Burning>
+      </ApplyStatus>
     </Entity>
   </Resistance>
+  <Vision>
+    <Range>60</Range>
+  </Vision>
   <UnitAI>
     <Formations datatype="tokens">
       special/formations/testudo

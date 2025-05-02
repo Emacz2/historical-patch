@@ -28,6 +28,9 @@
       </Damage>
     </Entity>
   </Resistance>
+  <Vision>
+    <Range>60</Range>
+  </Vision>
   <Selectable>
     <Overlay>
       <Texture>

@@ -12,12 +12,15 @@
       special/formations/skirmish
     </Formations>
   </UnitAI>
+  <Vision>
+    <Range>70</Range>
+  </Vision>
   <Resistance>
     <Entity>
       <Damage>
         <Hack>2</Hack>
         <Pierce>1.5</Pierce>
-        <Crush>5</Crush>
+        <Crush>1.5</Crush>
       </Damage>
     </Entity>
   </Resistance>

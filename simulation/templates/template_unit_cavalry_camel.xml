@@ -94,7 +94,4 @@
     <WalkSpeed>14.5</WalkSpeed>
     <RunMultiplier>1.4</RunMultiplier>
   </UnitMotion>
-  <Vision>
-    <Range>70</Range>
-  </Vision>
 </Entity>

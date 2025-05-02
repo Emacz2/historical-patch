@@ -12,8 +12,11 @@
       <Damage>
         <Hack>3.0</Hack>
         <Pierce>2.5</Pierce>
-        <Crush>5</Crush>
+        <Crush>2.5</Crush>
       </Damage>
     </Entity>
   </Resistance>
+   <Vision>
+    <Range>65</Range>
+  </Vision>
 </Entity>

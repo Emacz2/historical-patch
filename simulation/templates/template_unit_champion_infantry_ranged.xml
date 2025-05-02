@@ -41,6 +41,9 @@
     <RunMultiplier>1.39</RunMultiplier>
     <Acceleration op="mul">0.99</Acceleration>
   </UnitMotion>
+  <Vision>
+    <Range>65</Range>
+  </Vision>
   <Sound>
     <SoundGroups>
       <trained>interface/alarm/alarm_create_infantry.xml</trained>
