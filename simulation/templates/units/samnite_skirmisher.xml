@@ -5,7 +5,6 @@
     <SpecificName>Samnite Skirmisher</SpecificName>
     <Icon>units/samn/skirmisher.png</Icon>
   </Identity>
-  <Entity>
   <Cost>
     <BuildTime op="mul">1.1</BuildTime>
   </Cost>
@@ -17,6 +16,14 @@
       </Projectile>
     </Ranged>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Health>
     <Max op="add">40</Max>
   </Health>
