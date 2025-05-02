@@ -4,10 +4,10 @@
     <Ranged>
       <AttackName>Stone thrower</AttackName>
       <Damage>
-        <Pierce>1.5</Pierce>
-        <Crush>2.5</Crush>
+        <Pierce>2</Pierce>
+        <Crush>3</Crush>
       </Damage>
-      <MaxRange>30</MaxRange>
+      <MaxRange>40</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1000</RepeatTime>
       <Projectile>
