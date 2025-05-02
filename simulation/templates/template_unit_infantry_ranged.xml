@@ -12,7 +12,7 @@
       <Damage>
         <Hack>0.5</Hack>
         <Pierce>1</Pierce>
-        <Crush>2.5</Crush>
+        <Crush>0</Crush>
       </Damage>
       <ApplyStatus>
         <Burning>

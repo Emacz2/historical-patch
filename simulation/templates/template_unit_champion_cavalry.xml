@@ -39,7 +39,7 @@
       <Damage>
         <Hack>5</Hack>
         <Pierce>5.5</Pierce>
-        <Crush>15</Crush>
+        <Crush>5</Crush>
       </Damage>
     </Entity>
   </Resistance>

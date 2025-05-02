@@ -22,6 +22,15 @@
   <Health>
     <Max>300</Max>
   </Health>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>5</Hack>
+        <Pierce>5</Pierce>
+        <Crush>5</Crush> 
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Cavalry Swordsman</GenericName>

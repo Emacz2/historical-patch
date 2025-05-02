@@ -4,8 +4,8 @@
     <Ranged>
       <AttackName>Slinger</AttackName>
       <Damage>
-        <Pierce>9</Pierce>
-        <Crush>1.5</Crush>
+        <Pierce>8</Pierce>
+        <Crush>2</Crush>
       </Damage>
       <MaxRange>55</MaxRange>
       <PrepareTime>400</PrepareTime>

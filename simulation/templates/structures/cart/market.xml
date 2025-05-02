@@ -24,7 +24,7 @@
     <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/merc_inf_slinger_lead_market
+      units/{civ}/merc_inf_slinger_stone_market
     </Entities>
   </Trainer>
   <VisualActor>

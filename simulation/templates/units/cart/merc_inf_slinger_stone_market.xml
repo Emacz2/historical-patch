@@ -11,8 +11,8 @@
     <Ranged>
       <AttackName>Slinger</AttackName>
       <Damage>
-        <Pierce op="add">-1.5</Pierce>
-        <Crush op="add">1.5</Crush>
+        <Pierce op="add">3</Pierce>
+        <Crush op="add">3</Crush>
       </Damage>
     </Ranged>
   </Attack>
@@ -20,6 +20,9 @@
     <Lead>
       <Entity>units/cart/merc_inf_slinger_lead_market</Entity>
       <Tooltip>Switch to throwing stones.</Tooltip>
+      <Cost>
+        <metal>5</metal>
+      </Cost>
       <Variant>upgrading</Variant>
       <Time>5</Time>
     </Lead>

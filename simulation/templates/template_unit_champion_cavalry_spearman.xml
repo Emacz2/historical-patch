@@ -22,6 +22,15 @@
   <Health>
     <Max>300</Max>
   </Health>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>5</Hack>
+        <Pierce>5</Pierce>
+        <Crush>5</Crush> 
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <GenericName>Champion Cavalry Spearman</GenericName>
     <Tooltip>Counters: 1.75× vs Cavalry.</Tooltip>

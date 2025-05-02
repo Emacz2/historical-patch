@@ -6,16 +6,24 @@
     <Icon>units/samn/skirmisher.png</Icon>
   </Identity>
   <Cost>
-    <BuildTime op="mul">1.1</BuildTime>
+    <BuildTime op="mul">1.2</BuildTime>
   </Cost>
   <Attack>
     <Ranged>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">5.0</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
       </Projectile>
     </Ranged>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Health>
     <Max op="add">40</Max>
   </Health>

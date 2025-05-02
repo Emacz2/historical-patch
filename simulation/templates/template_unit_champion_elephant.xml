@@ -32,7 +32,7 @@
       <Damage>
         <Hack>8</Hack>
         <Pierce>8</Pierce>
-        <Crush>20</Crush>
+        <Crush>15</Crush>
       </Damage>
     </Entity>
   </Resistance>

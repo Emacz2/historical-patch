@@ -14,10 +14,12 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
-    <Resistance>
+   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">0.5</Hack>
+        <Hack>5.5</Hack>
+        <Pierce>5</Pierce>
+        <Crush>5</Crush> 
       </Damage>
     </Entity>
   </Resistance>
