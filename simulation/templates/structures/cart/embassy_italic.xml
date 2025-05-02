@@ -24,9 +24,6 @@
     <Tooltip>Train Italic Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/embassy_italic.png</Icon>
-     <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-     </Requirements>
   </Identity>
   <Loot>
     <stone>5</stone>
@@ -39,6 +36,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/merc_inf_samnite_spearman
+      units/{civ}/merc_inf_samnite_skirmisher
     </Entities>
   </Trainer>
   <VisualActor>

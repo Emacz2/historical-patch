@@ -5,6 +5,9 @@
     <GenericName>Samnite Spearman</GenericName>
     <SpecificName>Samnite Spearman</SpecificName>
     <Icon>units/samn/spearman.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

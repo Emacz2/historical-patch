@@ -9,9 +9,9 @@
     <GarrisonRegenRate>1</GarrisonRegenRate>
   </Capturable>
   <Cost>
-    <BuildTime>20</BuildTime>
+    <BuildTime>30</BuildTime>
     <Resources>
-      <wood>50</wood>
+      <wood>75</wood>
     </Resources>
   </Cost>
   <Footprint>
@@ -33,10 +33,10 @@
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
   <Population>
-    <Bonus>3</Bonus>
+    <Bonus>2</Bonus>
   </Population>
   <Health>
-    <Max>100</Max>
+    <Max>500</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
   </Health>
   <Identity>
