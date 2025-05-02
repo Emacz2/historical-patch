@@ -20,7 +20,7 @@
         <Hack op="mul">0.80</Hack>
       </Damage>
       <Projectile>
-        <Spread op="mul">1.2</Spread>
+        <Spread op="mul">1.1</Spread>
       </Projectile>
       <Bonuses>
         <BonusRanged>
