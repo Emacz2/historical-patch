@@ -27,6 +27,7 @@
   <Health>
     <Max op="add">40</Max>
   </Health>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/carthaginians/infantry_javelinist_c_samnite.xml</Actor>
   </VisualActor>
