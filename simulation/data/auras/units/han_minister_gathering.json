@@ -5,7 +5,8 @@
 	"modifications": [
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.03 }
 	],
-	"auraName": "Minister over the Masses",
+	"auraName": "obsolete? (Minister over the Masses)",
+	"showDescription": 1,
 	"auraDescription": "Gatherers +2% gathering rate for every nearby Minister.",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
 	"stackable": true

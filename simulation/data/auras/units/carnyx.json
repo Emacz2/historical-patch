@@ -10,6 +10,7 @@
 		
 	],
 	"auraName": "Intimidating Sound",
+	"showDescription": 1,
 	"auraDescription": "Enemy Soldiers 10% less capture attack, movement speed and attack repeat time.",
 	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
 }

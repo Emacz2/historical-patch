@@ -10,6 +10,7 @@
     }
   ],
   "auraName": "Medicine Father",
+	"showDescription": 1,
   "auraDescription": "Own and Allied Healers +2 heal health.",
   "overlayIcon": "art/textures/ui/session/auras/heal.png"
 }

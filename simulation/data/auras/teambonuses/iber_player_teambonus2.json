@@ -9,5 +9,6 @@
 	
 	],
 	"auraName": "Suppior horses",
+	"showDescription": 1,
 	"auraDescription": "Cavalry units 25 more health and 5% faster walk speed but 5% longer train time."
 }

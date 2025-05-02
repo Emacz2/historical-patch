@@ -8,6 +8,7 @@
 		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.75 },
 		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.75 }
 	],
+	"showDescription": 1,
 	"auraDescription": "Structures −25% technology resource costs and research time.",
 	"auraName": "Centre of Scholarship"
 }

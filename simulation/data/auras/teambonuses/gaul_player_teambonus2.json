@@ -9,5 +9,6 @@
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
 	],
 	"auraName": "Druids",
+	"showDescription": 1,
 	"auraDescription": "Healers +15 health and 1 of each resistance."
 }

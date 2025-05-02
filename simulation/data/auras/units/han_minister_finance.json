@@ -20,7 +20,8 @@
 		}
 		
 	],
-	"auraName": "Finance",
+	"auraName": "Supreme Accounting?",
+	"showDescription": 1,
 	"auraDescription": "All techs 5% less resources.",
 	"stackable": true
 }

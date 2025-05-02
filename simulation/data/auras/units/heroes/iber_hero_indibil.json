@@ -9,5 +9,6 @@
 		{ "value": "Cost/Resources/metal", "multiply": 0.85 }
 	],
 	"auraName": "Mobilization",
+	"showDescription": 1,
 	"auraDescription": "Soldiers −15% resources costs, −20% training time."
 }

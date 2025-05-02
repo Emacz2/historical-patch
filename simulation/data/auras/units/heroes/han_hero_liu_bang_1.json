@@ -5,6 +5,7 @@
 		{ "value": "Health/RegenRate", "add": 10 }
 	],
 	"auraName": "Confucian Reforms",
+	"showDescription": 1,
 	"auraDescription": "Walls +10 health regeneration rate.",
 	"overlayIcon": "art/textures/ui/session/auras/repair.png"
 }

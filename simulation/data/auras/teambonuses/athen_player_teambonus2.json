@@ -8,5 +8,6 @@
 
 			],
 	"auraName": "Infantry Javelineer",
+	"showDescription": 1,
 	"auraDescription": "Infantry javelineers 10% more pierce dmg and 10% more accurate."
 }

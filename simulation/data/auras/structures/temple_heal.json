@@ -6,6 +6,7 @@
 		{ "value": "Health/RegenRate", "add": 1 }
 	],
 	"auraName": "Medical Treatment",
+	"showDescription": 1,
 	"auraDescription": "Humans +1 health regeneration rate.",
 	"overlayIcon": "art/textures/ui/session/auras/heal.png"
 }

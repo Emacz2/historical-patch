@@ -10,5 +10,6 @@
 		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.80 }
 	],
 	"auraName": "Products from Gaul",
+	"showDescription": 1,
 	"auraDescription": "Forges −20% technology resource costs and research time."
 }

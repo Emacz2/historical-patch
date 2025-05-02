@@ -7,6 +7,7 @@
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.15, "affects": "Builder" }
 	],
 	"auraName": "Administrator",
+	"showDescription": 1,
 	"auraDescription": "Workers +25% build rate and +15% gather speed.",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png"
 }

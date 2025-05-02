@@ -13,6 +13,7 @@
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.2 }
 	],
 	"auraName": "Tactician",
+	"showDescription": 1,
 	"auraDescription": "Own and Allied Soldiers and Siege Engines +1 capture attack strength, +20% melee and ranged attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

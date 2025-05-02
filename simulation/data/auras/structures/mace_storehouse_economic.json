@@ -6,6 +6,7 @@
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.02 }
 	],
 	"auraName": "Patriotism",
+	"showDescription": 1,
 	"auraDescription": "Workers +2% gather speed.",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png"
 }

@@ -2,6 +2,7 @@
 	"auraName": "Eternal Fire",
 	"type": "range",
 	"radius": 75,
+	"showDescription": 1,
 	"auraDescription": "Structures +50% capture points.",
 	"modifications": [
 		{ "value": "Capturable/CapturePoints", "multiply": 1.50 }

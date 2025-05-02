@@ -6,5 +6,6 @@
 		{ "value": "Cost/Resources/metal", "add": -50 }
 	],
 	"auraName": "Gift of Warships",
+	"showDescription": 1,
 	"auraDescription": "Kushite Triremes −50 wood and metal cost."
 }

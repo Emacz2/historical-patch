@@ -12,6 +12,7 @@
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.9 }
 	],
 	"auraName": "Undefeated",
+	"showDescription": 1,
 	"auraDescription": "Enemy Soldiers, Structures -10% attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
 }

@@ -10,6 +10,7 @@
 	
 	],
 	"auraName": "phalanx",
+	"showDescription": 1,
 	"auraDescription": "Spearman promote 3% faster, gain 1.0 hack resitance and 4% pierce damage, but walk speed reduced by 0.1",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
 	"stackable": true

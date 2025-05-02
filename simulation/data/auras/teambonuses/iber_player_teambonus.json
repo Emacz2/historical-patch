@@ -9,6 +9,7 @@
 		{ "value": "Cost/Resources/metal", "add":-5 }
 		
 	],
-	"auraName": "Spaninsh silver",
+	"auraName": "Spanish silver",
+	"showDescription": 1,
 	"auraDescription": "Swordsmen 5% more hack/pierce dmg and use 5 less metal."
 }

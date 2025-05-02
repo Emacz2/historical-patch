@@ -12,6 +12,7 @@
 		{ "value": "Vision/Range", "add": 15 }
 	],
 	"auraName": "Religious Fervor",
+	"showDescription": 1,
 	"auraDescription": "Soldiers +15% melee and ranged attack damage and +15 vision.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

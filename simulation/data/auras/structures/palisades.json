@@ -8,6 +8,7 @@
 
 	],
 	"auraName": "Empaling",
+	"showDescription": 1,
 	"auraDescription": "Cavalry slowed by 75% and -4.5 hp/sec",
 	"overlayIcon": "art/textures/ui/session/auras/blood.png"
 }

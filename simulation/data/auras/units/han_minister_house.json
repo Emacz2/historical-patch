@@ -8,7 +8,8 @@
 			"multiply": 0.9
 		}
 	],
-	"auraName": "Excellency of Works",
+	"auraName": "Efficient Training",
+	"showDescription": 1,
 	"auraDescription": "Champions -10% train time.",
 	"stackable": true
 }

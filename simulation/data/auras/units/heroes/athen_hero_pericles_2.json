@@ -9,5 +9,6 @@
                 { "value": "Researcher/TechCostMultiplier/time", "multiply": 0.50 }
 	],
 	"auraName": "Scholarship and the Arts",
+	"showDescription": 1,
 	"auraDescription": "Technologies -15% cost, -50% research time."
 }

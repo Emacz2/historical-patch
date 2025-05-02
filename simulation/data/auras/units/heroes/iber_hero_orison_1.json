@@ -6,6 +6,7 @@
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.2 }
 	],
 	"auraDescription": "Soldiers +20% movement speed.",
+	"showDescription": 1,
 	"auraName": "Guerrilla Tactics",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

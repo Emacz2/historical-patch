@@ -4,7 +4,8 @@
 	"modifications": [
 		{ "value": "ResourceTrickle/Rates/metal", "add": 0.75 }
 	],
-	"auraDescription" : ".",
+	"auraDescription": "Garrison within a Silvermine to gain a trickle of +0.75 metal/second.",
+	"showDescription": 0,
 	"auraName": "Underground Mining",
 	"stackable": true
 }

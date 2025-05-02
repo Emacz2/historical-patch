@@ -8,5 +8,6 @@
                 { "value": "Cost/BuildTime", "multiply": 0.8 }
 	],
 	"auraName": "Training Regimes",
+	"showDescription": 1,
 	"auraDescription": "Barracks and Stables -20% cost and build time."
 }

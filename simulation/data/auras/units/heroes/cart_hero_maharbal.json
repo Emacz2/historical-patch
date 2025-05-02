@@ -8,6 +8,7 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.3 }
 	],
 	"auraName": "Cavalry Commander",
+	"showDescription": 1,
 	"auraDescription": "Melee Cavalry +30% melee attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

@@ -8,6 +8,7 @@
         	{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
 	],
 	"auraName": "Empire Maker",
+	"showDescription": 1,
 	"auraDescription": "Elephants and Soldiers +1 crush, hack, pierce resistance.",
 	"overlayIcon": "art/textures/ui/session/auras/standground.png"
 }

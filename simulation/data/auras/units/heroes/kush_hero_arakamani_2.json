@@ -7,5 +7,6 @@
 		{ "value": "Heal/HP", "multiply": 0 }
 	],
 	"auraName": "Slaughter of the Faithful",
+	"showDescription": 1,
 	"auraDescription": "Enemy Healers −100% healing strength."
 }

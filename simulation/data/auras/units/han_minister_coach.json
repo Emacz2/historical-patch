@@ -8,7 +8,8 @@
 			"multiply": 0.9
 		}
 	],
-	"auraName": "Excellency of Works",
+	"auraName": "Efficient Horse Breeding",
+	"showDescription": 1,
 	"auraDescription": "Cavalry -10% train time.",
 	"stackable": true
 }

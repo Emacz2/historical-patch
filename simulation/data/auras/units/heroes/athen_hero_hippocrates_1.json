@@ -10,5 +10,6 @@
   ],
   "auraName": "Regeneration",
   "auraDescription": "Humans +0.5 health regeneration rate.",
+  "showDescription": 1,
   "overlayIcon": "art/textures/ui/session/auras/heal.png"
 }

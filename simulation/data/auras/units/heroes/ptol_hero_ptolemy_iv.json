@@ -6,5 +6,6 @@
 		{ "value": "Health/Max", "multiply": 1.4 }
 	],
 	"auraName": "Raphia",
+	"showDescription": 1,
 	"auraDescription": "Pikemen +40% health."
 }

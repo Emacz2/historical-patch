@@ -6,6 +6,7 @@
 		{"value": "Cost/Resources/metal", "multiply": 0.8}
 	],
 	"auraName": "Fast reinforcements",
+	"showDescription": 1,
 	"auraDescription": "Infantry Mercaneries +10% movement speed and 20% less metal.",
 	"overlayIcon": "art/textures/ui/session/auras/speed_bonus.png"
 }

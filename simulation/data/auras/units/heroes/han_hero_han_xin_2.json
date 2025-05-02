@@ -6,5 +6,6 @@
 		{ "value": "Vision/Range", "multiply": 1.25 }
 	],
 	"auraName": "Southern Army",
+	"showDescription": 1,
 	"auraDescription": "Own and Allied Soldiers +25% vision range."
 }

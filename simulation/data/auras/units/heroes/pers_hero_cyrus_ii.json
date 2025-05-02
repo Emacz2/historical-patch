@@ -12,6 +12,7 @@
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.2 }
 	],
 	"auraName": "Forefront Leader",
+	"showDescription": 1,
 	"auraDescription": "Cavalry +1 capture attack strength, +20% melee and ranged attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

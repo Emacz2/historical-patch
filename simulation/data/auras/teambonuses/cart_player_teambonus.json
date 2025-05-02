@@ -7,5 +7,6 @@
 		{ "value": "Cost/Resources/metal", "multiply": 0.80 }
 	],
 	"auraName": "Mercenary Transports",
+	"showDescription": 1,
 	"auraDescription": "Mercenaries -30% train time, -20% metal."
 }

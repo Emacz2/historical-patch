@@ -7,6 +7,7 @@
 		{ "value": "Capturable/GarrisonRegenRate", "multiply": 0.5 }
 	],
 	"auraName": "Conqueror",
+	"showDescription": 1,
 	"auraDescription": "Enemy Civic Centres −50% capture points garrisoned regeneration rate.",
 	"overlayIcon": "art/textures/ui/session/auras/laurel.png"
 }

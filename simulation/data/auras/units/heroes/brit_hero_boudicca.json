@@ -13,6 +13,7 @@
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 }
 	],
 	"auraName": "Champion Army",
+	"showDescription": 1,
 	"auraDescription": "Champions +2 capture attack strength, +20% melee and ranged attack damage, +10% movement speed.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

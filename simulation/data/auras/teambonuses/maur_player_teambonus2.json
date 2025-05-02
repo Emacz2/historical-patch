@@ -8,5 +8,6 @@
 
 			],
 	"auraName": "Archer",
+	"showDescription": 1,
 	"auraDescription": "Archers 10% more pierce dmg and and accuracy."
 }

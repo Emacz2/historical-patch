@@ -9,5 +9,6 @@
 		{ "value": "Looter/Resource/metal", "multiply": 2 }
 	],
 	"auraName": "Swag",
+	"showDescription": 1,
 	"auraDescription": "Soldiers and Siege Engines gain +100% resource loot."
 }

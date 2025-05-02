@@ -11,6 +11,7 @@
 		
 	],
 	"auraName": "Boudican revolt",
+	"showDescription": 1,
 	"auraDescription": "Women gain 25% melee attack, +1.5 pierce/hack resistance and +10 life.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

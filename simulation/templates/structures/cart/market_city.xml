@@ -26,13 +26,6 @@
       unlock_shared_los
     </Technologies>
   </Researcher>
-   <Trainer>
-    <BatchTimeModifier>0.6</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/merc_spear_market_e
-      -units/{civ}/merc_spear_market_b
-    </Entities>
-  </Trainer>
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>

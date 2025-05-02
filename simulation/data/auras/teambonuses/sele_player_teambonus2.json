@@ -6,6 +6,7 @@
 		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.15 }
 	],
 	"auraName": "Syrian Tetrapolis",
+	"showDescription": 1,
 	"auraDescription": "Workers gather grain 15% faster."
 }
 

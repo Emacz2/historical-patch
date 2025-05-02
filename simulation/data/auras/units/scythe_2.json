@@ -7,6 +7,7 @@
 		{ "value": "Health/RegenRate", "add": -2 }
 	],
 	"auraName": "Scythe",
+	"showDescription": 1,
 	"auraDescription": "Scythe attached to the wheels of the chariots, to wreak havoc on the battlefield.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png",
 	"stackable": true

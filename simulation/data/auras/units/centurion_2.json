@@ -5,7 +5,8 @@
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 }
 	],
-	"auraName": "Century Maneuvers",
+	"auraName": "Centurion Maneuvers",
+	"showDescription": 1,
 	"auraDescription": "Marian Legionaries and Centurions +10% movement speed.",
 	"overlayIcon": "art/textures/ui/session/auras/speed_bonus.png"
 }

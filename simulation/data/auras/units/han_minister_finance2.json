@@ -9,7 +9,8 @@
 		}
 		
 	],
-	"auraName": "Finance",
+	"auraName": "Supreme Accounting?",
+	"showDescription": 1,
 	"auraDescription": "All buildinings 5% less resources.",
 	"stackable": true
 }

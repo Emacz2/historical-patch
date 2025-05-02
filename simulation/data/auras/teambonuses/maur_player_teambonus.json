@@ -13,5 +13,6 @@
 		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.5 }
 	],
 	"auraName": "Ashoka's Religious Support",
+	"showDescription": 1,
 	"auraDescription": "Temples −50% resource costs and building time; Temple technologies −50% resource costs and research time."
 }

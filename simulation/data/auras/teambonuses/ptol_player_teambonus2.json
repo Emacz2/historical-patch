@@ -8,5 +8,6 @@
 		
 	],
 	"auraName": "Sundried bricks",
+	"showDescription": 1,
 	"auraDescription": "Structures 20% less wood and 10% less build time"
 }

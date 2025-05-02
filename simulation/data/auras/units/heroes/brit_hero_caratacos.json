@@ -10,5 +10,6 @@
 	
 	],
 	"auraName": "Guerrilla Chief",
+	"showDescription": 1,
 	"auraDescription": "Enemy soldiers -1 of each resistance"
 }

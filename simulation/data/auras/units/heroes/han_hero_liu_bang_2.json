@@ -8,6 +8,7 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.2 }
 	],
 	"auraName": "Confucian Reforms",
+	"showDescription": 1,
 	"auraDescription": "Cavalry +20% attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

@@ -15,6 +15,7 @@
 		{ "value": "Looter/Resource/metal", "multiply": 1.5 }
 	],
 	"auraName": "Savior of Kush",
+	"showDescription": 1,
 	"auraDescription": "Soldiers and Elephants +15% melee and ranged attack damage, gain +50% resource loot.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

@@ -7,5 +7,6 @@
                 { "value": "Cost/Resources/wood", "multiply": 0.5 }
 	],
 	"auraName": "Themistoclean Walls",
+	"showDescription": 1,
 	"auraDescription": "Walls and palisades -50% resources cost, -50% build time"
 }

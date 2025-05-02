@@ -7,6 +7,7 @@
                 { "value": "UnitMotion/WalkSpeed", "multiply": 1.10 }
 	],
 	"auraName": "Elephant Corps",
+	"showDescription": 1,
 	"auraDescription": "Elephants +15% attack rate, +10% movement speed.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

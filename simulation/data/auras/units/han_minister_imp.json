@@ -1,11 +1,12 @@
 {
 	"type": "global",
-	"affects": ["Heroe"],
+	"affects": ["Hero"],
 	"affectedPlayers": ["Ally"],
 	"modifications": [
 		{ "value": "Health/Max", "multiply": 1.2 }
 	],
-	"auraName": "",
+	"auraName": "Servitude of the Imperial Clan",
+	"showDescription": 1,
 	"auraDescription": "Own and allied heroes 20% more health.",
 	"overlayIcon": "art/textures/ui/session/auras/health_bonus.png"
 }

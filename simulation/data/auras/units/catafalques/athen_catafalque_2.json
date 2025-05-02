@@ -8,5 +8,6 @@
 		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.9 }
 	],
 	"auraName": "Economic Fortune",
+	"showDescription": 1,
 	"auraDescription": "Solon brought in a new system of weights and measures, fathers were encouraged to find trades for their sons.\nEconomic technologies −10% resource costs."
 }

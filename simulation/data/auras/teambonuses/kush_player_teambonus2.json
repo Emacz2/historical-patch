@@ -10,5 +10,6 @@
 		{ "value": "Cost/Resources/metal", "multiply": 0.8 }
 	],
 	"auraName": "Elephant Suppliers",
+	"showDescription": 1,
 	"auraDescription": "Elephants −20% resource costs and training time."
 }

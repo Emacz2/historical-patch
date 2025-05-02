@@ -12,6 +12,7 @@
 		{ "value": "Promotion/RequiredXp", "multiply": 0.75}
 	],
 	"auraName": "Deas Celtica",
+	"showDescription": 1,
 	"auraDescription": "Melee soldiers 7% more dmg, ranged soldiers 5% more dmg.  All soldiers 25% faster promotion.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

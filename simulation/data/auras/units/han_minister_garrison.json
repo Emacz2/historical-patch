@@ -23,7 +23,8 @@
 			"multiply": 0.97
 		}
 	],
-	"auraName": "Excellency of Works",
+	"auraName": "Obsolete? (Excellency of Works)",
+	"showDescription": 1,
 	"auraDescription": "Decrease resource costs and research time of technologies in a building by 3% for each Minister garrisoned within.",
 	"stackable": true
 }

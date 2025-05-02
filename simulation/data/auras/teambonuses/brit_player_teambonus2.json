@@ -6,5 +6,6 @@
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1 }
 	],
 	"auraName": "Intimidation",
+	"showDescription": 1,
 	"auraDescription": "."
 }

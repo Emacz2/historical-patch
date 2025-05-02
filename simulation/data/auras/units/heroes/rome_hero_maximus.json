@@ -9,5 +9,6 @@
 	
 	],
 	"auraName": "Shield of Rome",
+	"showDescription": 1,
 	"auraDescription": "All Humans and Structures +1 crush, hack, pierce resistance when allied with Rome."
 }

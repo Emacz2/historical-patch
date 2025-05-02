@@ -18,8 +18,8 @@
   </Attack>
    <Upgrade>
     <Lead>
-      <Entity>units/cart/merc_inf_slinger_lead_market</Entity>
-      <Tooltip>Switch to throwing stones.</Tooltip>
+      <Entity>units/cart/merc_inf_slinger_lead</Entity>
+      <Tooltip>Switch to sling lead bullets.</Tooltip>
       <Cost>
         <metal>5</metal>
       </Cost>

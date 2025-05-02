@@ -6,5 +6,6 @@
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.04 }
 	],
 	"auraName": "Roman Roads",
+	"showDescription": 1,
 	"auraDescription": "All land units 4% faster movement speed."
 }

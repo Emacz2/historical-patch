@@ -8,7 +8,8 @@
 			"multiply": 0.8
 		}
 	],
-	"auraName": "Excellency of Works",
+	"auraName": "Focus on National Health?",
+	"showDescription": 1,
 	"auraDescription": "Temple technologies -20% research time.",
 	"stackable": true
 }

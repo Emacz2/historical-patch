@@ -6,6 +6,7 @@
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.10 }
 	],
 	"auraName": "Preparation for War",
+	"showDescription": 1,
 	"auraDescription": "Own and allied Workers +10% gather speed.",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png"
 }

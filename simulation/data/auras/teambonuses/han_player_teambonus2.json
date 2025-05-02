@@ -6,5 +6,6 @@
 		{ "value": "ResourceTrickle/Rates/metal", "add": 0.75 }
 	],
 	"auraName": "Silk Road",
+	"showDescription": 1,
 	"auraDescription": "+0.75 metal trickle rate."
 }

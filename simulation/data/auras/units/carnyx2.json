@@ -8,7 +8,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.0 }
 		
 	],
-	"auraName": "Insperiational sound",
+	"auraName": "Inspiriational sound",
+	"showDescription": 1,
 	"auraDescription": "Soldiers 5% faster movement speed +1 Hack and Pierce Resitance.",
 	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
 }

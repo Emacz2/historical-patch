@@ -8,5 +8,6 @@
 		
 	],
 	"auraName": "Eperxt siege engineers",
+	"showDescription": 1,
 	"auraDescription": "Siege units 25% more crush dmg and ranged siege +5 max range."
 }

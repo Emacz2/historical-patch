@@ -11,5 +11,6 @@
 		{ "value": "Promotion/RequiredXp", "multiply": 0.75 }
 	],
 	"auraName": "Ambush Slaughter",
+	"showDescription": 1,
 	"auraDescription": "Warring with the Romans, Ambiorix realized the futility of open warfare and instead resorted to ambush tactics. The Gauls quickly learned where and when to execute surprise attacks.\nSoldiers +5% melee and ranged attack damage and −25% promotion experience."
 }

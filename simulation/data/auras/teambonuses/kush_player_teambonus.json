@@ -8,5 +8,6 @@
 		
 	],
 	"auraName": "Archer",
+	"showDescription": 1,
 	"auraDescription": "Archers 10% more accurate and 10% less train time."
 }

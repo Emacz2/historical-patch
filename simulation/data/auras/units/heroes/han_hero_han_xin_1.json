@@ -6,6 +6,7 @@
 		{ "value": "Promotion/RequiredXp", "multiply": 0.8 }
 	],
 	"auraName": "Northern Army",
+	"showDescription": 1,
 	"auraDescription": "Soldiers −20% promotion experience.",
 	"overlayIcon": "art/textures/ui/session/auras/xp.png"
 }

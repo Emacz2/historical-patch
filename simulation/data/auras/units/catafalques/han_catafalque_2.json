@@ -9,5 +9,6 @@
 		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.5 }
 	],
 	"auraName": "Imperial Music Bureau",
+	"showDescription": 1,
 	"auraDescription": "The Music Bureau was charged directly by Emperor Wu to perform various tasks related to music, poetry, entertainment, or religious worship.\nTechnologies −50% resource cost and research time."
 }
