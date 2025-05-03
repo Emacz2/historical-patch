@@ -108,6 +108,7 @@
     <variant file="biped/build.xml"/>
     <variant file="biped/build_farm.xml"/>
     <variant file="biped/death_infantry.xml"/>
+  </group>
   <group>
     <variant>
       <textures>
