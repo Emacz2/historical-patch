@@ -7,7 +7,8 @@
     <BuildTime op="mul">1.25</BuildTime>
     <Resources>
       <food op="add">25</food>
-      <metal op="add">35</metal>
+      <metal op="add">20</metal>
+      <wood op="add">-20</wood>
     </Resources>
   </Cost>
   <Identity>

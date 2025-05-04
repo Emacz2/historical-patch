@@ -17,10 +17,6 @@
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
     <Icon>units/rome/champion_infantry_first.png</Icon>
   </Identity>
-   <Promotion>
-    <Entity>units/rome/champion_infantry_swordsman_03</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c6.xml</Actor>
   </VisualActor>

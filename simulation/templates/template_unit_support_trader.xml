@@ -19,6 +19,9 @@
     <SelectionGroupName>template_unit_support_trader</SelectionGroupName>
     <Tooltip>Trade resources between your own markets and those of your allies.</Tooltip>
   </Identity>
+  <TrainingRestrictions>
+    <Category>LandTrader</Category>
+  </TrainingRestrictions>
   <Loot>
     <xp>10</xp>
     <food>10</food>
