@@ -24,4 +24,12 @@
     <Icon>formations/phalanx.png</Icon>
     <Tooltip>Compact formation of Infantry Hoplites creating a shield wall.</Tooltip>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
 </Entity>

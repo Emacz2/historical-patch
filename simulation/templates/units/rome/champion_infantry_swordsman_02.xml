@@ -8,7 +8,7 @@
     <SpecificName>Evocati</SpecificName>
     <Icon>units/rome/champion_legion_marian.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_imp</Techs>
+      <Techs datatype="tokens">phase_empi</Techs>
     </Requirements>
   </Identity>
   <Promotion>
