@@ -18,7 +18,7 @@
     <Technologies datatype="tokens">
       phase_town_{civ}
       phase_city_{civ}
-      phase_imp_{civ}
+      phase_empi_rome
       unlock_shared_los
       unlock_shared_dropsites
       roman_roads
