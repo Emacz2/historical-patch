@@ -2,17 +2,17 @@
 	"genericName": "Advanced Handicraft",
 	"description": "The progress in handicraft improves the trading profit.",
 	"cost": {
-		"wood": 300,
-		"metal": 300
+		"wood": 400,
+		"metal": 350
 	},
 	"requirements": { "tech": "phase_city" },
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"supersedes": "trade_gain_01",
 	"icon": "metal_pot.png",
 	"researchTime": 40,
-	"tooltip": "Traders +15% trade gain.",
+	"tooltip": "Traders +25% trade gain.",
 	"modifications": [
-		{ "value": "Trader/GainMultiplier", "multiply": 1.15 }
+		{ "value": "Trader/GainMultiplier", "multiply": 1.25 }
 	],
 	"affects": ["Trader"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

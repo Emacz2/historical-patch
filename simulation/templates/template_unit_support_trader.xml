@@ -2,6 +2,7 @@
 <Entity parent="template_unit_support">
   <Cost>
     <BuildTime>15</BuildTime>
+    <Population>0</Population>
     <Resources>
       <food>25</food>
       <wood>75</wood>
