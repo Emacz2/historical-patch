@@ -16,9 +16,6 @@
     <SpecificName>Cohors Prima Legiōnārius</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
     <Icon>units/rome/champion_infantry_first.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_city unlock_champion_infantry</Techs>
-    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c6.xml</Actor>
