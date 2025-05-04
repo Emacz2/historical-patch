@@ -18,7 +18,7 @@
 		}
 	},
 	"requirementsTooltip": "Requires 20 village Structures.",
-	"supersedes": "phase_city",
+	"supersedes": "phase_city_generic",
 	"replaces": ["phase_empi"],
 	"icon": "empire_phase.png",
 	"researchTime": 90,
