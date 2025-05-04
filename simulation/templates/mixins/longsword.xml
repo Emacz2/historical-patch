@@ -2,18 +2,21 @@
 <Entity>
   <Attack>
     <Melee>
+    <ApplyStatus>
+        <Bleeding>
+          <Interval>1000</Interval>
+          <Damage>
+            <Bleeding>0.5</Bleeding>
+          </Damage>
+          <Stackability>Extend</Stackability>
+          <Duration>9000</Duration>
+        </Bleeding>
+      </ApplyStatus>
       <Damage>
-        <Hack op="add">-4.0</Hack>
+        <Hack op="add">-3.0</Hack>
+        <Pierce op="add">-1.0</Pierce>
       </Damage>
-      <Splash>
-        <Damage>
-          <Hack>4.0</Hack>
-        </Damage>
-        <Shape>Circular</Shape>
-        <Range>2</Range>
-        <FriendlyFire>false</FriendlyFire>
-      </Splash>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">1.5</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1000</RepeatTime>
     </Melee>
