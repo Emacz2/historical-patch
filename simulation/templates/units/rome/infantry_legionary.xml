@@ -30,7 +30,10 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-  <Promotion disable=""/>
+  <Promotion>
+    <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>
   </VisualActor>

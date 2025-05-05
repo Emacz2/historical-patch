@@ -8,7 +8,7 @@
     </Melee>
   </Attack>
   <Health>
-    <Max op="add">50</Max>
+    <Max op="add">25</Max>
   </Health>
   <Identity>
     <GenericName>Praetorian Guard</GenericName>
@@ -26,4 +26,8 @@
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c5.xml</Actor>
   </VisualActor>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.5</WalkSpeed>
+    <Acceleration op="mul">0.5</Acceleration>
+  </UnitMotion>
 </Entity>

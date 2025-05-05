@@ -36,10 +36,7 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.03, "affects": "Swordsman" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.03, "affects": "Swordsman"},
-		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Swordsman" },
-		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Citizen Infantry !Swordsman" }
+		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Citizen Infantry" }
 		
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"

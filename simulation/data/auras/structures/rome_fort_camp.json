@@ -1,0 +1,13 @@
+{
+	"type": "range",
+	"radius": 50,
+	"affects": ["Praetorian Guard"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 2 },
+		{ "value": "Attack/Ranged/RepeatTime", "multiply": 0.75 }
+	],
+	"auraName": "Protector ",
+	"showDescription": 1,
+	"auraDescription": "Praetorian Guards 200% faster movement speed and 25% faster attack repeat when in range of Fortress or Camps.",
+	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
+}
