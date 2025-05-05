@@ -34,6 +34,7 @@
       <Palace>1</Palace>
       <Pillar>0</Pillar>
       <PyramidLarge>2</PyramidLarge>
+      <PraetorianGuard>0</PraetorianGuard>
       <TempleOfAmun>1</TempleOfAmun>
       <TempleOfIsis>1</TempleOfIsis>
       <TempleOfVesta>1</TempleOfVesta>
@@ -63,6 +64,9 @@
       <Pillar>
         <Ashoka>5</Ashoka>
       </Pillar>
+      <PraetorianGuard>
+        <Fortress>5</Fortress>
+      </PraetorianGuard>
       <WarDog>
         <Kennel>10</Kennel>
       </WarDog>

@@ -8,7 +8,11 @@
       <lightdamage>0.85</lightdamage>
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
+    <Max op="add">-50</Max>
   </Health>
+  <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+  </Cost>
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
@@ -16,7 +20,14 @@
     <SpecificName>Cohors Prima Legiōnārius</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
     <Icon>units/rome/champion_infantry_first.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">roman_reforms</Techs>
+    </Requirements>
   </Identity>
+   <Promotion>
+    <Entity>units/rome/champion_infantry_swordsman_evocati</Entity>
+    <RequiredXp>150</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c6.xml</Actor>
   </VisualActor>

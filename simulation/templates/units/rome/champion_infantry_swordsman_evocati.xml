@@ -1,27 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/rome/champion_infantry_swordsman_first">
+<Entity parent="template_unit_champion_infantry_swordsman">
   <Auras datatype="tokens">
     units/testudo
   </Auras>
    <Cost>
-    <BuildTime op="mul">1.25</BuildTime>
+    <BuildTime op="mul">1.1</BuildTime>
     <Resources>
       <food op="add">25</food>
       <metal op="add">20</metal>
       <wood op="add">-20</wood>
     </Resources>
   </Cost>
+   <Health>
+    <Max op="add">25</Max>
+  </Health>
   <Identity>
     <GenericName>Evocati</GenericName>
     <SpecificName>Evocati</SpecificName>
+    <VisibleClasses datatype="tokens">Evocati</VisibleClasses>
     <Icon>units/rome/champion_legion_marian.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_empi</Techs>
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/rome/champion_infantry_swordsman_03</Entity>
-    <RequiredXp>150</RequiredXp>
+    <Entity>units/rome/champion_infantry_swordsman_evocati_II</Entity>
+    <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>

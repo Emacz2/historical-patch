@@ -17,7 +17,7 @@
 	"modifications":[
 		{ "value": "Promotion/RequiredXp", "replace": 0 }
 	],
-	"affects": ["Structure", "Soldier !Auxiliary"],
+	"affects": ["Structure", "Citizen Infantry !Auxiliary"],
 	"tooltip": "Convert Infantry to Marian Legionaries, and cavalry to Auxiliaries, and citizen spearmen to conscript infantry. Unlock Onagers and Centurions.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

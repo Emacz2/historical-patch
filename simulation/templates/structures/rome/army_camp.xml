@@ -107,13 +107,12 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/merc_archer_market_a
-      units/{civ}/infantry_axeman_a
       units/{civ}/infantry_swordsman_a
       units/{civ}/infantry_spearman_a
-      units/{civ}/infantry_pikeman_a
       units/{civ}/infantry_legionary
       units/{civ}/infantry_antesignanus
+      units/{civ}/champion_infantry_swordsman_evocati
+      units/{civ}/champion_infantry_swordsman_guard
 	    units/{civ}/siege_onager_packed
       units/{civ}/siege_ram
     </Entities>
