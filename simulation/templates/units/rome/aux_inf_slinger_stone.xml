@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger">
+<Cost>
+    <Resources>
+      <food op="add">50</food>
+      <metal op="add">-75</metal>
+      <stone op="add">25</stone>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>rome</Civ>
     <GenericName>Balearic Slinger</GenericName>
@@ -7,7 +14,7 @@
     <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
+      <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
   <Attack>
@@ -33,10 +40,7 @@
   <Health>
     <Max>75</Max>
   </Health>
-   <Promotion>
-    <Entity>units/rome/aux_inf_slinger_stone</Entity>
-    <RequiredXp>4000</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>
   </VisualActor>

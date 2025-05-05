@@ -9,7 +9,7 @@
   </Identity>
   <Upgrade>
     <Stone>
-      <Entity>units/cart/merc_inf_slinger_stone</Entity>
+      <Entity>units/rome/aux_inf_slinger_stone</Entity>
       <Tooltip>Switch to throwing stones.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>5</Time>
