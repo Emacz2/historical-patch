@@ -17,13 +17,13 @@
     <Civ>rome</Civ>
     <Lang>latin</Lang>
     <SelectionGroupName>units/rome/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Levy Auxiliary Spearman</GenericName>
-    <SpecificName>Peditatus Auxilia</SpecificName>
+    <GenericName>Levy Spearman Serf</GenericName>
+    <SpecificName>Peditatus</SpecificName>
     <Icon>units/rome/infantry_spearman_conscript.png</Icon>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
-    <Tooltip>Conscript spearmen cannot promote.</Tooltip>
+    <Tooltip>Serfs cannot promote.</Tooltip>
   </Identity>
   <Promotion disable=""/>
   <UnitAI>
