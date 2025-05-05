@@ -32,7 +32,7 @@
   </Identity>
   <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
-    <RequiredXp>3000</RequiredXp>
+    <RequiredXp>500</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>

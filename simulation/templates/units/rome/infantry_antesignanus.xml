@@ -29,7 +29,7 @@
   </Identity>
  <Promotion>
     <Entity>units/rome/champion_infantry_javelineer</Entity>
-    <RequiredXp>3000</RequiredXp>
+    <RequiredXp>500</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_javelinist_reform.xml</Actor>
