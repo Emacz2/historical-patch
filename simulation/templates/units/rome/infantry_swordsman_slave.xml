@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_melee_swordsman">
+<Entity parent="serf_melee|template_unit_infantry_melee_swordsman">
   <Builder>
     <Entities datatype="tokens">
       structures/rome/army_camp
       structures/rome/temple_vesta
     </Entities>
   </Builder>
+  <Cost>
+    <Resources>
+      <metal op="add">-10</metal>
+    </Resources>
+  </Cost>
   <Health>
     <DamageVariants>
       <lightdamage>0.85</lightdamage>
@@ -19,6 +24,9 @@
     <GenericName>Slave</GenericName>
     <SpecificName>Servus</SpecificName>
     <Icon>units/rome/infantry_swordsman.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_empi</Techs>
+    </Requirements>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

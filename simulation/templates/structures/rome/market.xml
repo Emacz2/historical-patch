@@ -18,4 +18,9 @@
     <Actor>structures/romans/market.xml</Actor>
     <FoundationActor>structures/fndn_9x7.xml</FoundationActor>
   </VisualActor>
+   <Trainer>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_swordsman_slave
+    </Entities>
+  </Trainer>
 </Entity>
