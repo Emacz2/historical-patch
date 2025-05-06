@@ -33,7 +33,6 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/hero_leonidas
       units/{civ}/hero_brasidas
       units/{civ}/hero_agis
       units/{civ}/infantry_peltasts_a
