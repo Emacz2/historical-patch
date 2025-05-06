@@ -14,7 +14,7 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <SelectionGroupName>units/spart/infantry_javelineer_b</SelectionGroupName>
+    <SelectionGroupName>units/spart/helot_javelineer</SelectionGroupName>
     <GenericName>Helot Skirmisher</GenericName>
     <SpecificName>Akontistḗs Heílōs</SpecificName>
     <Icon>units/spart/helot_jav.png</Icon>
