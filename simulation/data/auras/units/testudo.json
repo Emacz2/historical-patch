@@ -1,18 +1,18 @@
 {
 	"type": "range",
-	"radius": 3.5,
+	"radius": 4,
 	"affects": ["Swordsman !Cavalry"],
 	"modifications": [
 		{ "value": "Promotion/RequiredXp", "multiply": 0.98 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.97 },
-		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.02}
+		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.03}
 	
 	],
 	"auraName": "testudo",
 	"showDescription": 1,
-	"auraDescription": "Infantry swordsman promote 2% faster, gain .5 Hack and 1 pierce resistance, but  walk/attack speed reduced by 3 %",
+	"auraDescription": "Infantry swordsman promote 2% faster, gain 1 of each resistance, but walk/attack speed reduced by 3%",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
-	"stackable": true
+	"stackable": false
 }

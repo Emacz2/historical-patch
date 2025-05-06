@@ -19,7 +19,7 @@
     <Icon>units/rome/champion_infantry.png</Icon>
   </Identity>
   <Promotion>
-    <Entity>units/rome/champion_infantry_swordsman_first</Entity>
+    <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
     <RequiredXp>3000</RequiredXp>
   </Promotion>
   <VisualActor>

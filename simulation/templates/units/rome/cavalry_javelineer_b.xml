@@ -3,7 +3,7 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <GenericName>Allied Jav Cavalry</GenericName>
+    <GenericName>Knight Companion Cavalry Javelineer</GenericName>
     <SpecificName>Eques Socius</SpecificName>
     <SelectionGroupName>units/rome/cavalry_javelineer_b</SelectionGroupName>
     <Icon>units/rome/cavalry_javelinist.png</Icon>

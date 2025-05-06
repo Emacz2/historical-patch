@@ -15,8 +15,7 @@
 	"requirementsTooltip": "Unlocked in Empire Phase.",
 	"icon": "shield_scutum.png",
 	"modifications":[
-		{ "value": "Promotion/RequiredXp", "replace": 0 },
-		{ "value": "Cost/Resources/metal", "add": -15, "affects": "Champion Swordsmen."}
+		{ "value": "Promotion/RequiredXp", "replace": 0 }
 
 	],
 	"affects": ["Structure", "Citizen Infantry !Legionary !Auxiliary", "Itallic"],

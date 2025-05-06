@@ -36,7 +36,6 @@
 		{ "value": "Cost/Resources/food", "add": 25, "affects": "Champion Spearman"},
 		{ "value": "Cost/Resources/metal", "add": 20, "affects": "Champion Spearman"},
 		{ "value": "Cost/Resources/wood", "add": 20, "affects": "Champion Spearman"},
-		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Champion Spearman"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Champion Spearman" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Champion Spearman" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects":  "Infantry !Helot"},
