@@ -15,9 +15,11 @@
 	"requirementsTooltip": "Unlocked in Empire Phase.",
 	"icon": "shield_scutum.png",
 	"modifications":[
-		{ "value": "Promotion/RequiredXp", "replace": 0 }
+		{ "value": "Promotion/RequiredXp", "replace": 0 },
+		{ "value": "Cost/Resources/metal", "add": -15, "affects": "Champion Swordsmen."}
+
 	],
-	"affects": ["Structure", "Citizen Infantry !Legionary !Auxiliary"],
-	"tooltip": "Convert Infantry to Marian Legionaries, and cavalry to Auxiliaries, and citizen spearmen to conscript infantry. Unlock Onagers and Centurions.",
+	"affects": ["Structure", "Citizen Infantry !Legionary !Auxiliary", "Itallic"],
+	"tooltip": "Convert Infantry to Marian Legionaries, Unlock Onagers and Centurions, Champion Swordsmen cost 15 less metal.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

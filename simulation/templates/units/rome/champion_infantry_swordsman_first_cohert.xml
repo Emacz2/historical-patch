@@ -13,6 +13,14 @@
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
   </Cost>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
