@@ -19,7 +19,7 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>60</Max>
+    <Max>50</Max>
   </Health>
   <Resistance>
     <Entity>

@@ -8,7 +8,7 @@
   </Builder>
   <Cost>
     <Resources>
-      <metal>15</metal>
+      <metal>10</metal>
     </Resources>
   </Cost>
   <Loot> 
@@ -27,7 +27,10 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
- <Promotion disable=""/>
+  <Promotion>
+    <Entity>units/rome/champion_infantry_javelineer</Entity>
+    <RequiredXp>500</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_javelinist_reform.xml</Actor>
   </VisualActor>
