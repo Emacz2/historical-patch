@@ -3,18 +3,16 @@
   <Identity>
     <Civ>pers</Civ>
     <Lang>persian</Lang>
-    <SelectionGroupName>units/pers/cavalry_spearman_b</SelectionGroupName>
-    <GenericName>Cappadocian Hunting Spear Cavalry</GenericName>
+    <SelectionGroupName>units/pers/camel_spear_b</SelectionGroupName>
+    <GenericName>Cappadocian Schock Camel</GenericName>
     <SpecificName>Asabāra Katpatuka</SpecificName>
     <Icon>units/pers/cavalry_spearman.png</Icon>
     <Requirements>
       <Techs datatype="tokens">unlock_spearcav</Techs>
     </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/pers/cavalry_spearman_a</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
-    <Actor>units/persians/cavalry_spearman_b_m.xml</Actor>
+    <Actor>units/persians/camel_spear_b_m.xml</Actor>
   </VisualActor>
 </Entity>
