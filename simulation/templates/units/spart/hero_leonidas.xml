@@ -9,7 +9,25 @@
     <GenericName>Leonidas I</GenericName>
     <SpecificName>Leōnidēs</SpecificName>
     <Icon>units/spart/hero_leonidas.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">-phase_city phase_town</Techs>
+    </Requirements>
   </Identity>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="mul">0.75</Hack>
+        <Pierce op="mul">0.75</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Health>
+    <Max op="mul">0.5</Max>
+  </Health>
+  <Promotion>
+    <Entity>units/spart/hero_leonidas_III</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/spartans/hero_infantry_spearman_leonidas.xml</Actor>
   </VisualActor>
