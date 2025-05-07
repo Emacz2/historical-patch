@@ -33,10 +33,6 @@
       </Shape>
     </Overlay>
   </Selectable>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.81</WalkSpeed>
-    <RunMultiplier>1.81</RunMultiplier>
-  </UnitMotion>
   <VisualActor>
     <Actor>units/britons/hero_chariot_javelinist_boudicca_m.xml</Actor>
   </VisualActor>
