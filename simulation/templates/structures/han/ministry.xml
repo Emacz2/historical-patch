@@ -89,6 +89,9 @@
       units/{civ}/support_minister_imp
       units/{civ}/support_minister_jus    
       units/{civ}/support_minister_ste
+      units/{civ}/hero_han_xin_horse
+      units/{civ}/hero_liu_bang_horse
+      units/{civ}/hero_wei_qing_chariot
     </Entities>
   </Trainer>
   <Vision>

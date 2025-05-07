@@ -30,7 +30,7 @@
     <Tooltip>Garrison Units for a trickle of 2 Metal/s</Tooltip>
 	<Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Economic Town Silvermine</VisibleClasses>
-    <Icon>technologies/mining_metal_03.png</Icon>
+    <Icon>structures/mining_metal.png</Icon>
     <Requirements>
      <Techs datatype="tokens">phase_town</Techs>
      </Requirements>
