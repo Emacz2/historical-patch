@@ -5,4 +5,7 @@
       special/formations/phalanx
     </Formations>
   </UnitAI>
+  <Identity>
+    <Classes datatype="tokens">Hoplite</Classes>
+  </Identity>
 </Entity>

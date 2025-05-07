@@ -22,7 +22,10 @@
   <TrainingRestrictions>
   <Category>Helot</Category>
   </TrainingRestrictions>
-  <Promotion disable=""/>
+  <Promotion>
+    <Entity>units/spart/neodamodes_jav</Entity>
+    <RequiredXp>150</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/spartans/helot_jav.xml</Actor>
   </VisualActor>
