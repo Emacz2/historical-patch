@@ -28,6 +28,7 @@
     <SpecificName>Cohors Prima Legiōnārius</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
     <Icon>units/rome/champion_infantry_first.png</Icon>
+    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>

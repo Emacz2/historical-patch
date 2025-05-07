@@ -13,7 +13,7 @@
   <Identity>
     <GenericName>Praetorian Guard</GenericName>
     <SpecificName>Praetorianus</SpecificName>
-    <VisibleClasses datatype="tokens">Praetorian Guard</VisibleClasses>
+    <VisibleClasses datatype="tokens">Praetorian Guard Rōmānī</VisibleClasses>
     <Icon>units/rome/champion_legion_centurio.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_empi</Techs>

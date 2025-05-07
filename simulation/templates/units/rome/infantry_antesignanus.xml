@@ -20,7 +20,7 @@
     <SelectionGroupName>units/rome/infantry_antesignanus</SelectionGroupName>
     <GenericName>Legionary Skirmisher</GenericName>
     <SpecificName>Antesignānus</SpecificName>
-    <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
+    <VisibleClasses datatype="tokens">Legionary Rōmānī</VisibleClasses>
     <Rank>Elite</Rank>
     <Icon>units/rome/infantry_antesignanus.png</Icon>
     <Requirements>

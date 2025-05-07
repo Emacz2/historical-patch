@@ -13,6 +13,7 @@
     <SelectionGroupName>units/rome/infantry_javelineer_b</SelectionGroupName>
     <GenericName>Roman Skirmisher</GenericName>
     <SpecificName>Vēles</SpecificName>
+    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
     <Icon>units/rome/infantry_javelinist.png</Icon>
   </Identity>
   <Promotion>

@@ -33,7 +33,7 @@
     <SpecificName>Legiōnārius</SpecificName>
     <Rank>Elite</Rank>
     <Icon>units/rome/infantry_legionary.png</Icon>
-    <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
+    <VisibleClasses datatype="tokens">Legionary Rōmānī</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
