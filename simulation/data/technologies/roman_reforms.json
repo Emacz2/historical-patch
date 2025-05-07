@@ -18,7 +18,7 @@
 		{ "value": "Promotion/RequiredXp", "replace": 0 }
 
 	],
-	"affects": ["Structure", "Citizen Infantry !Legionary !Auxiliary", "Itallic"],
+	"affects": ["Structure", "Citizen Infantry, Italic !Legionary !Auxiliary"],
 	"tooltip": "Convert Infantry to Marian Legionaries, Unlock Onagers and Centurions, Champion Swordsmen cost 15 less metal.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

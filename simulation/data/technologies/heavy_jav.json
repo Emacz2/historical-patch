@@ -15,7 +15,7 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_pteruges.png",
 	"researchTime": 45,
-	"tooltip": "Citizen swordsman +1.5 hack and +1 pierce resistance but 3% slower movement.",
+	"tooltip": "Citizen Skirmishers +1.5 hack and +1 pierce resistance but 3% slower movement.",
 	"modifications": [
 	    { "value": "UnitMotion/WalkSpeed", "multiply": 0.97 },
 	    { "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
