@@ -1,0 +1,14 @@
+{
+	"genericName": "Legacy of Marathon",
+	"autoResearch": true,
+	"description": "Athenian hoplites were know for their speed and endurance.",
+	"icon": "woad_warriors.png",
+	"tooltip": "Hoplites 5% faster movement speed, and gain additional 5% bonuses p2 and p3.",
+	"requirements": { "civ": "athen" },
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 }
+	
+	],
+	"affects": ["Hoplite"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
