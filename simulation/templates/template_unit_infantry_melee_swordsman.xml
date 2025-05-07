@@ -32,7 +32,7 @@
     </Resources>
   </Cost>
   <UnitMotion>
-    <WalkSpeed op="mul">0.901</WalkSpeed>
+    <WalkSpeed op="mul">0.90</WalkSpeed>
   </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Swordsman</VisibleClasses>

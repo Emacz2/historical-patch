@@ -92,7 +92,7 @@
   </UnitAI>
   <UnitMotion>
     <WalkSpeed>16</WalkSpeed>
-    <RunMultiplier>1.5</RunMultiplier>
+    <RunMultiplier>1.6</RunMultiplier>
   </UnitMotion>
   <Vision>
     <Range>65</Range>
