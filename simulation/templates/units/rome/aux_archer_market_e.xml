@@ -6,11 +6,7 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-  <VisibleClasses datatype="tokens">Republic</VisibleClasses>
-  <Promotion>
-    <Entity>units/rome/aux_archer_market_e</Entity>
-    <RequiredXp>4000</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_e.xml</Actor>
   </VisualActor>

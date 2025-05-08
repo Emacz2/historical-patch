@@ -38,7 +38,8 @@
 		{ "value": "Cost/Resources/wood", "add": 20, "affects": "Champion Spearman"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Champion Spearman" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Champion Spearman" },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects":  "Infantry !Helot"},
+		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Helot" },
+		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Perioikoi" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"}
 
 	],

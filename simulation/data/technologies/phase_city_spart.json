@@ -39,7 +39,10 @@
 		{ "value": "Health/Max", "add": 25, "affects": "Champion"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Champion" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Champion" },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Champion"},
+		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Helot" },
+		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Perioikoi" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects":  "Infantry !Helot"},
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"},
 		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Hero" }
 	
 		
