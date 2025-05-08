@@ -3,13 +3,22 @@
   <Attack>
     <Melee>
       <Damage>
-        <Hack op="add">5</Hack>
+        <Hack op="add">2</Hack>
+        <Pierce op="add">1</Pierce>
       </Damage>
     </Melee>
   </Attack>
   <Health>
     <Max op="add">25</Max>
   </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <GenericName>Praetorian Guard</GenericName>
     <SpecificName>Praetorianus</SpecificName>

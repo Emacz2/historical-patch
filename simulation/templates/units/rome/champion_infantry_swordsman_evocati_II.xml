@@ -20,7 +20,7 @@
   </Identity>
    <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_guard</Entity>
-    <RequiredXp>400</RequiredXp>
+    <RequiredXp>500</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c3.xml</Actor>

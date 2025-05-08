@@ -8,7 +8,7 @@
       <lightdamage>0.85</lightdamage>
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
-    <Max op="add">-50</Max>
+    <Max op="add">-25</Max>
   </Health>
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
@@ -16,8 +16,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
