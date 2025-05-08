@@ -6,6 +6,7 @@
     <SpecificName>Qallāʿ Ibušimi</SpecificName>
     <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

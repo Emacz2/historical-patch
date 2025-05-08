@@ -20,7 +20,7 @@
     <GenericName>Veteran Spearman</GenericName>
     <SpecificName>Triārius</SpecificName>
     <Icon>units/rome/infantry_spearman.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
+    <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
     <Tooltip>Elite rank Spearmen can be promoted to champion Centurions.</Tooltip>
      <Requirements>
       <Techs datatype="tokens">unlock_spearmen</Techs>
