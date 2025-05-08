@@ -17,11 +17,11 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "sword_01.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +15% melee attack damage.",
+	"tooltip": "Soldiers +10% melee attack damage.",
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.15 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.15 }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.10 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.10 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.10 }
 	],
 	"affects": ["Soldier !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

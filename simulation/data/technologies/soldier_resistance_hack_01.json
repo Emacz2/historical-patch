@@ -16,9 +16,9 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_leather.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +1.5 hack resistance.",
+	"tooltip": "Soldiers +1 hack resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 }
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Serf !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

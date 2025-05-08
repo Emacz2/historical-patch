@@ -9,11 +9,11 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "arrow_01.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +15% ranged attack damage.",
+	"tooltip": "Soldiers +10% ranged attack damage.",
 	"modifications": [
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.15 },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.15 },
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.15 }
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 }
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Serf !Perioikoi"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
