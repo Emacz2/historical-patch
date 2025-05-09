@@ -15,6 +15,6 @@
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 }
 	],
-	"affects": ["Soldier !Helot !PaidMerc !Serf !Perioikoi"],
+	"affects": ["Soldier !Helot !PaidMerc"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
