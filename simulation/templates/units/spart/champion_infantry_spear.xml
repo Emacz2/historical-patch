@@ -3,13 +3,6 @@
   <Auras datatype="tokens">
     units/spartan_phalanx
   </Auras>
-  <Cost>
-    <Resources>
-      <food>75</food>
-      <wood>50</wood>
-      <metal>50</metal>
-    </Resources>
-  </Cost>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>

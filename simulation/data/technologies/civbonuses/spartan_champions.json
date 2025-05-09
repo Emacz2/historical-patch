@@ -9,10 +9,13 @@
 		{ "value": "Attack/Melee/RepeatTime", "add": -100},
 		{ "value": "Health/Max", "add": -50},
 		{ "value": "Resistance/Entity/Damage/Hack", "add": -1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -0.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.9},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 0.9},
-		{ "value": "Cost/BuildTime", "multiply": 0.75 }
+		{ "value": "Cost/BuildTime", "multiply": 0.75 },
+		{ "value": "Cost/Resources/food", "add": -25 },
+		{ "value": "Cost/Resources/metal", "add": -30 },
+		{ "value": "Cost/Resources/wood", "add": -20 }
 		
 
 	],
