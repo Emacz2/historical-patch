@@ -38,6 +38,7 @@
 		{ "value": "Cost/Resources/wood", "add": 20, "affects": "Champion Spearman"},
 		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman"},
 		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Helot" },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
 		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Perioikoi" }
 
 	],
