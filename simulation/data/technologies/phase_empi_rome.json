@@ -21,7 +21,7 @@
 	"supersedes": "phase_city_rome",
 	"replaces": ["phase_empi"],
 	"icon": "empire_phase.png",
-	"researchTime": 90,
+	"researchTime": 75,
 	"tooltip": "Advance to the Empire Phase, which boosts max population 10% and unlocks more entities and technologies. Civic Centers +40% territory influence radius. Structures +1 capture points regeneration rate for garrisoned units.",
 	"modifications": [
 		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
