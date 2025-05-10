@@ -13,13 +13,13 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-1.5</Hack>
-	      <Pierce op="add">-1</Pierce>
+        <Hack op="add">-1</Hack>
+	      <Pierce op="add">-1.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
    <Health>
-    <Max op="add">25</Max>
+    <Max op="add">15</Max>
   </Health>
    <Identity>
     <Civ>spart</Civ>
@@ -27,7 +27,7 @@
     <GenericName>Skiritai Commando</GenericName>
     <SpecificName>Ékdromos Skirítēs</SpecificName>
     <Icon>units/spart/champion_infantry_sword.png</Icon>
-    <Rank>Elite</Rank>
+    <Rank>Advanced</Rank>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
@@ -37,9 +37,13 @@
   </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
-    <RunMultiplier>1.1</RunMultiplier>
+    <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
+  <Vision>
+    <Range op="add">15</Range>
+  </Vision>
   <Promotion disable=""/>
+  <ResourceGatherer disable=""/>
   <VisualActor>
     <Actor>units/spartans/infantry_swordsman_c.xml</Actor>
   </VisualActor>

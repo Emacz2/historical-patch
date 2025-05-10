@@ -88,6 +88,7 @@
       units/{civ}/cavalry_spearman_b
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_javelineer_b
+      units/{civ}/champion_infantry_swordsman
     </Entities>
   </Trainer>
   <Vision>

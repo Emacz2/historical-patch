@@ -6,11 +6,11 @@
 	"icon": "wooden_walls.png",
 	"tooltip": "Melee 7% less dmg, -1.5 hack and -2 pierce resistance. Ranged 7% less dmg, 10% less accurate, -0.5 hack and -1 pierce resistance. However, they gather resources 5% faster, have 5% faster walk speed, cost 10 less wood and train 10% faster.",
 	"modifications": [
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 0.93, "affects": "Melee !Hunt" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.93, "affects": "Melee !Hunt"},
-		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5, "affects": "Ranged !Hunt" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Ranged !Hunt"},
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 }
+		
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -1.5, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -2, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5, "affects": "Ranged" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Ranged" }
 
 
 	],

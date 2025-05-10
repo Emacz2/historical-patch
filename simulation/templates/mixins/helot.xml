@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Attack>
+   <Capture>
+      <Capture>0</Capture>
+      <MaxRange>0</MaxRange>
+      <RepeatTime>0</RepeatTime>
+    </Capture>
   <Melee merge="">
   <PrepareTime op="add">500</PrepareTime>
   <RepeatTime op="add">500</RepeatTime>

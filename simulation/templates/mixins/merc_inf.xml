@@ -10,6 +10,12 @@
     </Resources>
   </Cost>
   <Attack>
+   <Capture>
+      <AttackName>Capture</AttackName>
+      <Capture>1.0</Capture>
+      <MaxRange>3</MaxRange>
+      <RepeatTime>1000</RepeatTime>
+    </Capture>
   <Melee merge="">
 	<Damage>
 	  <Hack op="mul">1.05</Hack>

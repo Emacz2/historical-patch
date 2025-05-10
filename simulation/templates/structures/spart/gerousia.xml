@@ -35,9 +35,7 @@
     <Entities datatype="tokens">
       units/{civ}/hero_brasidas
       units/{civ}/hero_agis
-      units/{civ}/infantry_peltasts_a
       units/{civ}/champion_infantry_javelineer
-      units/{civ}/champion_infantry_swordsman
     </Entities>
   </Trainer>
   <Researcher>
