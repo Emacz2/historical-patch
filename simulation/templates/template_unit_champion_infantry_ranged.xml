@@ -36,11 +36,6 @@
       </Texture>
     </Overlay>
   </Selectable>
-  <UnitMotion>
-    <WalkSpeed>9.9</WalkSpeed>        
-    <RunMultiplier>1.39</RunMultiplier>
-    <Acceleration op="mul">0.99</Acceleration>
-  </UnitMotion>
   <Vision>
     <Range>65</Range>
   </Vision>

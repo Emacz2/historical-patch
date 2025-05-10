@@ -17,9 +17,10 @@
   </Identity>
   <Loot>
     <xp>150</xp>
-    <food>8</food>
-    <wood>6</wood>
-    <metal>8</metal>
+    <food>10</food>
+    <wood>10</wood>
+    <metal>5</metal>
+    <stone>5</stone>
   </Loot>
   <Position>
     <Anchor>upright</Anchor>

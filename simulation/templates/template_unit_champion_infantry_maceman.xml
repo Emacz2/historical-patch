@@ -19,7 +19,7 @@
     <VisibleClasses datatype="tokens">Melee Maceman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">0.901</WalkSpeed>
+    <WalkSpeed op="mul">0.9</WalkSpeed>
   </UnitMotion>
   <Sound>
     <SoundGroups>
