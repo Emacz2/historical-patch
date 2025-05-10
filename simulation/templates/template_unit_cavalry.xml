@@ -39,8 +39,8 @@
     <xp>130</xp>
     <food>10</food>
     <wood>5</wood>
-    <stone>0</stone>
-    <metal>0</metal>
+    <stone>2</stone>
+    <metal>2</metal>
   </Loot>
   <Position>
     <TurnRate>10</TurnRate>

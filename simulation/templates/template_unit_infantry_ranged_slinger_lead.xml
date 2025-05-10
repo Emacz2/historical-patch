@@ -29,10 +29,6 @@
     <VisibleClasses datatype="tokens">Slinger Lead</VisibleClasses>
     <GenericName>Slinger Lead Bullets</GenericName>
   </Identity>
-  <Loot>
-    <food>5</food>
-    <metal>5</metal>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/sling_attack.xml</attack_ranged>

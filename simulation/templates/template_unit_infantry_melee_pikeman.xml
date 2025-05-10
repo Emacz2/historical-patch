@@ -31,9 +31,6 @@
     <Tooltip>Counters: 3.0× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Pikeman</VisibleClasses>
   </Identity>
-  <Loot>
-    <wood>5</wood>
-  </Loot>
   <Resistance>
     <Entity>
       <Damage>

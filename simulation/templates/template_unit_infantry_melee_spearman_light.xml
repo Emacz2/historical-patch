@@ -38,11 +38,8 @@
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">0.929</WalkSpeed>
+    <WalkSpeed op="mul">0.93</WalkSpeed>
   </UnitMotion>
-  <Loot>
-    <wood>5</wood>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>

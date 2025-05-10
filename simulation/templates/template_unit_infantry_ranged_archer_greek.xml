@@ -29,9 +29,7 @@
     <VisibleClasses datatype="tokens">Greek Archer</VisibleClasses>
     <GenericName>Greek Archer</GenericName>
   </Identity>
-  <Loot>
-    <wood>5</wood>
-  </Loot>
+
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

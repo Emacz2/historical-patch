@@ -41,9 +41,6 @@
     <WalkSpeed op="mul">0.873</WalkSpeed>
     <Acceleration op="mul">0.9</Acceleration>
   </UnitMotion>
-  <Loot>
-    <wood>5</wood>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>

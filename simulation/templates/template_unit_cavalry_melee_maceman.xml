@@ -23,9 +23,6 @@
     <GenericName>Cavalry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
-  <Loot>
-    <wood>5</wood>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

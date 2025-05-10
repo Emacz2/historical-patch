@@ -46,10 +46,6 @@
     <VisibleClasses datatype="tokens">Stone throwing serf</VisibleClasses>
     <GenericName>Serf</GenericName>
   </Identity>
-  <Loot>
-    <stone>3</stone>
-    <wood>4</wood>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/sling_attack.xml</attack_ranged>

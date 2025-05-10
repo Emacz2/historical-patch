@@ -38,8 +38,7 @@
     <VisibleClasses datatype="tokens">Citizen Worker</VisibleClasses>
   </Identity>
   <Loot>
-    <xp>3</xp>
-    <food>5</food>
+    <xp>5</xp>
   </Loot>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>

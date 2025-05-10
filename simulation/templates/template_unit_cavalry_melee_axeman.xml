@@ -24,10 +24,6 @@
     <GenericName>Cavalry Axeman</GenericName>
     <VisibleClasses datatype="tokens">Axeman</VisibleClasses>
   </Identity>
-  <Loot>
-    <wood>4</wood>
-    <metal>1</metal>
-  </Loot>
   <Resistance>
     <Entity>
       <Damage>
