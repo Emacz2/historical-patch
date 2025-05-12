@@ -21,7 +21,7 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Serf" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "!Serf" },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Serf" },
-		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
 	],
 	"affects": ["Soldier !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

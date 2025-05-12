@@ -15,8 +15,8 @@
 	"tooltip": "Soldiers (accept helots) +1.5 hack resistance. (Serf's only +1)",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Serf" },
-		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Serf" }
+		
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
