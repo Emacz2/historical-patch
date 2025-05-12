@@ -2,9 +2,9 @@
 <Entity>
   <Attack>
    <Capture>
-      <Capture>0</Capture>
-      <MaxRange>0</MaxRange>
-      <RepeatTime>0</RepeatTime>
+      <Capture>0.5</Capture>
+      <MaxRange>1</MaxRange>
+      <RepeatTime>5000</RepeatTime>
     </Capture>
   <Melee merge="">
   <PrepareTime op="add">500</PrepareTime>
