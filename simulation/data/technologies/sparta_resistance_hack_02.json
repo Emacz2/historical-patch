@@ -13,10 +13,10 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"researchTime": 40,
 	"icon": "armor_pteruges.png",
-	"tooltip": "Soldiers (accept helots) +1.5 hack resistance. (Serf's only +1) champion spearman 5% additional train time",
+	"tooltip": "Soldiers +1.5 hack resistance. Neodamodes and Perioikoi +1. Champion spearman 5% additional train time",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Serf" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Neodamodes Perioikoi"},
 		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],

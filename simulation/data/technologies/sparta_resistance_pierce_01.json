@@ -9,12 +9,12 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "shields_generic_wood.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers (accept helots) +1.5 pierce resistance. (Serf's only +1)",
+	"tooltip": "Soldiers +1.5 pierce resistance. Neodamodes and Perioikoi +1. Champion Spearman take an additional 5% train time.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "!Serf" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "!Neodamodes Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
-
+		
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

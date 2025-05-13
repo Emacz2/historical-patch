@@ -12,10 +12,10 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "armor_leather.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers (accept helots) +1.5 hack resistance. (Serf's only +1)",
+	"tooltip": "Soldiers +1.5 hack resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Serf" }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 }
+		
 		
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],

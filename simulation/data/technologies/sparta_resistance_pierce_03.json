@@ -10,11 +10,11 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "shields_generic_silver.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers (accept helots) +2.5 pierce resistance. (Serfs only +1) champion spearman 5% additonal train time",
+	"tooltip": "Soldiers +2 pierce resistance. Neodamodes and Perioikoi +1. Champion Spearman take an additional 10% train time.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5, "affects": "!Serf" },
-		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman" }
 
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
