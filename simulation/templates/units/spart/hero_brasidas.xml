@@ -11,6 +11,7 @@
     <SpecificName>Brasidas</SpecificName>
     <Icon>units/spart/hero_brasidas.png</Icon>
   </Identity>
+  <ProductionQueue/>
   <Researcher>
     <Technologies datatype="tokens">
       unlock_neodamodes
