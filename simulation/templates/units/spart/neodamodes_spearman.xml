@@ -17,6 +17,9 @@
       <metal>0</metal>
     </Resources>
   </Cost>
+  <Health>
+    <Max>100</Max>
+  </Health>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
