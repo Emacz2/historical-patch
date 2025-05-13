@@ -2,7 +2,7 @@
 	"genericName": "Unlock Neodamodes",
 	"description": "In ancient Sparta, the Helots who were freed by the state in reward for military service were known as Neodamodes.",
 	"cost": {
-		"food": 500
+		"food": 100
 	},
 	"requirements": {
 		"all": [
@@ -12,7 +12,7 @@
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
-	"researchTime": 60,
-	"tooltip": "Unlock the ability to train Spearman Neodamodes at the Barracks.",
+	"researchTime": 30,
+	"tooltip": "Unlock the ability to train Spearman Neodamodes from Helot Camps.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

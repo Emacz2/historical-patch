@@ -23,6 +23,7 @@
     <Entities datatype="tokens">
       units/{civ}/helot_javelineer
       units/{civ}/helot_stone_thrower
+      units/{civ}/neodamodes_spearman
     </Entities>
   </Trainer>
   <GarrisonHolder>

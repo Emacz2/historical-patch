@@ -23,8 +23,8 @@
   <Category>Helot</Category>
   </TrainingRestrictions>
   <Promotion>
-    <Entity>units/spart/neodamodes_jav</Entity>
-    <RequiredXp>150</RequiredXp>
+    <Entity>units/spart/neodamodes_javelineer</Entity>
+    <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/helot_jav.xml</Actor>

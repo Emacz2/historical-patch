@@ -5,6 +5,7 @@
       structures/spart/gerousia
       structures/spart/syssiton
       structures/spart/camp
+      structures/spart/tent_helot
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
       -structures/{civ}/stable
@@ -17,8 +18,11 @@
     <GenericName>Helot Stone Thrower</GenericName>
     <Icon>units/spart/helot_archer.png</Icon>
   </Identity>
-    <Promotion disable=""/>
+   <Promotion>
+    <Entity>units/spart/neodamodes_archer</Entity>
+    <RequiredXp>200</RequiredXp>
+  </Promotion>
   <VisualActor>
-    <Actor>units/spartans/helot_archer.xml</Actor>
+    <Actor>units/spartans/helot_slinger.xml</Actor>
   </VisualActor>
 </Entity>

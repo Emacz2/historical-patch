@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="polearm|neodamodes|hoplite|template_unit_infantry_melee_spearman">
-<Auras datatype="tokens">
-    units/spartan_phalanx
-  </Auras>
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -15,8 +12,8 @@
   </Builder>
   <Cost>
     <Resources>
-      <food>60</food>
-      <wood>55</wood>
+      <food>40</food>
+      <wood>40</wood>
       <metal>0</metal>
     </Resources>
   </Cost>
@@ -29,19 +26,9 @@
     <SpecificName>Neodamōdeis</SpecificName>
     <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-  <Loot>
-    <food>5</food>
-    <wood>5</wood>
-  </Loot>
   <ResourceGatherer disable=""/>
-   <Promotion>
-    <Entity>units/spart/infantry_spearman_neodamodes_b</Entity>
-    <RequiredXp>400</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_neodamodes.xml</Actor>
   </VisualActor>

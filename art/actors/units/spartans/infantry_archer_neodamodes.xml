@@ -1,46 +1,32 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <actor version="1">
   <castshadow/>
   <group>
     <variant frequency="1" name="Base">
-      <mesh>skeletal/new/m_pants.dae</mesh>
+      <mesh>skeletal/new/m_tunic_short.dae</mesh>
       <props>
-        <prop actor="props/units/heads/new/head_celt.xml" attachpoint="head"/>
+        <prop actor="props/units/heads/new/head_spart_a.xml" attachpoint="head"/>
         <prop actor="props/units/weapons/arrow_back.xml" attachpoint="weapon_R"/>
-	      <prop actor="props/units/weapons/bow_short.xml" attachpoint="weapon_bow"/>
-        <prop actor="props/units/quiver_back.xml" attachpoint="back"/>
+        <prop actor="props/units/weapons/bow_short.xml" attachpoint="weapon_bow"/>
+        <prop actor="props/units/quiver_greek_back.xml" attachpoint="back"/>
+         <prop actor="props/units/helmets/hele_pilos.xml" attachpoint="helmet"/>
       </props>
     </variant>
   </group>
-   <group>
-    <variant name="pants-basic-1">
+  <group>
+    <variant frequency="1" name="tunic_fur_01_01">
       <textures>
-        <texture file="skeletal/gaul/pants_basic_01.png" name="baseTex"/>
+        <texture file="skeletal/hele/tunic_fur_01_01.png" name="baseTex"/>
       </textures>
     </variant>
-    <variant name="pants-basic-2">
+    <variant frequency="1" name="tunic_fur_01_02">
       <textures>
-        <texture file="skeletal/gaul/pants_basic_02.png" name="baseTex"/>
+        <texture file="skeletal/hele/tunic_fur_01_02.png" name="baseTex"/>
       </textures>
     </variant>
-    <variant name="pants-basic-3">
+    <variant frequency="1" name="tunic_fur_01_03">
       <textures>
-        <texture file="skeletal/gaul/pants_basic_03.png" name="baseTex"/>
-      </textures>
-    </variant>
-    <variant name="pants-basic-4">
-      <textures>
-        <texture file="skeletal/gaul/pants_basic_04.png" name="baseTex"/>
-      </textures>
-    </variant>
-    <variant name="pants-basic-5">
-      <textures>
-        <texture file="skeletal/gaul/pants_basic_05.png" name="baseTex"/>
-      </textures>
-    </variant>
-    <variant name="pants-basic-6">
-      <textures>
-        <texture file="skeletal/gaul/pants_basic_06.png" name="baseTex"/>
+        <texture file="skeletal/hele/tunic_fur_01_03.png" name="baseTex"/>
       </textures>
     </variant>
   </group>
@@ -62,7 +48,7 @@
   </group>
   <group>
     <variant frequency="1" name="Idle"/>
-   <variant file="biped/attack_ranged_archer.xml"/>
+    <variant file="biped/attack_ranged_archer_hip.xml"/>
     <variant file="biped/attack_capture.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
     <variant file="biped/gather_tree.xml"/>
@@ -76,14 +62,6 @@
     <variant file="biped/build.xml"/>
     <variant file="biped/build_farm.xml"/>
     <variant file="biped/death_infantry.xml"/>
-  </group>
-  <group>
-    <variant>
-      <textures>
-        <texture file="default_norm.png" name="normTex"/>
-        <texture file="null_black.dds" name="specTex"/>
-      </textures>
-    </variant>
   </group>
   <material>player_trans_norm_spec.xml</material>
 </actor>

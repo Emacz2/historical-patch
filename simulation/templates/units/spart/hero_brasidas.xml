@@ -2,6 +2,7 @@
 <Entity parent="greek_olympian|template_unit_hero_infantry_swordsman">
   <Auras datatype="tokens">
     units/heroes/spart_hero_brasidas
+    units/heroes/spart_hero_brasidas_2
   </Auras>
   <Identity>
     <Civ>spart</Civ>
@@ -10,6 +11,11 @@
     <SpecificName>Brasidas</SpecificName>
     <Icon>units/spart/hero_brasidas.png</Icon>
   </Identity>
+  <Researcher>
+    <Technologies datatype="tokens">
+      unlock_neodamodes
+    </Technologies>
+  </Researcher>
   <VisualActor>
     <Actor>units/spartans/hero_infantry_swordsman_brasidas.xml</Actor>
   </VisualActor>
