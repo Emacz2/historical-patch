@@ -7,6 +7,7 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
+    <Classes datatype="tokens">Brasidas</Classes>
     <GenericName>Brasidas</GenericName>
     <SpecificName>Brasidas</SpecificName>
     <Icon>units/spart/hero_brasidas.png</Icon>

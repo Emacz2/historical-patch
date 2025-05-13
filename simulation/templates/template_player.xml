@@ -30,6 +30,7 @@
       <LandTrader>5</LandTrader>
       <Library>1</Library>
       <Lighthouse>1</Lighthouse>
+      <Neodamodes>15</Neodamodes>
       <Monument>5</Monument>
       <Palace>1</Palace>
       <Pillar>0</Pillar>
@@ -61,6 +62,9 @@
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
       </Juggernaut>
+      <Neodamodes>
+        <Brasidas>30</Brasidas>
+      </Neodamodes>
       <Pillar>
         <Ashoka>5</Ashoka>
       </Pillar>

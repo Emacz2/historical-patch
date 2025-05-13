@@ -9,4 +9,7 @@
   <Identity>
     <VisibleClasses datatype="tokens">Neodamodes</VisibleClasses>
   </Identity>
+   <TrainingRestrictions>
+    <Category>Neodamodes</Category>
+  </TrainingRestrictions>
 </Entity>

@@ -29,6 +29,9 @@
     <SpecificName>Neodamōdeis</SpecificName>
     <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">unlock_neodamodes</Techs>
+    </Requirements>
   </Identity>
   <ResourceGatherer disable=""/>
   <Promotion disable=""/>
