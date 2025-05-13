@@ -2,11 +2,11 @@
 <Entity parent="units/rome/merc_archer_market_a">
   <Identity>
     <Rank>Elite</Rank>
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-  <VisibleClasses datatype="tokens">Republic</VisibleClasses>
   <Promotion>
     <Entity>units/rome/aux_archer_market_e</Entity>
     <RequiredXp>4000</RequiredXp>

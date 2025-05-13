@@ -14,10 +14,9 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "walk.png",
 	"researchTime": 30,
-	"tooltip": "Infantry Heroes and Champions +15% movement speed. But Champion Spearman 15% more train time",
+	"tooltip": "Infantry Heroes and Champions +15% movement speed.",
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.15 },
-		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Champion Spearman" }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.15 }
 	],
 	"affects": ["Champion Infantry Hero"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
