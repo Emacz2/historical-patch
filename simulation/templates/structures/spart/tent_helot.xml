@@ -22,6 +22,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/helot_javelineer
+      units/{civ}/helot_stone_thrower
     </Entities>
   </Trainer>
   <GarrisonHolder>

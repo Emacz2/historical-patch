@@ -11,6 +11,11 @@
   <Obstruction>
     <Static width="24.0" depth="26.0"/>
   </Obstruction>
+  <Researcher>
+    <Technologies datatype="tokens">
+      -attack_soldiers_will
+    </Technologies>
+  </Researcher>
   <VisualActor>
     <Actor>structures/spartans/fortress.xml</Actor>
   </VisualActor>

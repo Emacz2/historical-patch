@@ -22,23 +22,10 @@
 			"File": "Only_300_Stood.ogg",
 			"Type": "peace"
 		}
-	],
+		],
 	"CivBonuses": [
-		{
-			"Name": "Spartan Women",
-			"History": "",
-			"Description": "Female Citizens +10 health and +50% melee attack hack damage."
-		},
-		{
-			"Name": "Laws of Lycurgus",
-			"History": "Under the constitution written by the mythical lawgiver Lycurgus, society was shaped around the training and development of superior warriors in defense of the Spartan state.",
-			"Description": "Champion Hoplites are available in village phase, and can promote to highly experienced Olympic Champions."
-		},
-		{
-			"Name": "Agoge",
-			"History": "The institution of the Agoge was established to rigorously train Spartan boys from the age of 6 to be fearsome warriors.",
-			"Description": "Champion Hoplites -10% attack time."
-		}
+		
+
 	],
 	"WallSets": [
 		"structures/wallset_palisade",

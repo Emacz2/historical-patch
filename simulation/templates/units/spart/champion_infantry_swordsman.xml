@@ -13,7 +13,7 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-1</Hack>
+        <Hack op="add">-2</Hack>
 	      <Pierce op="add">-1.5</Pierce>
       </Damage>
     </Entity>
@@ -36,7 +36,7 @@
     <metal op="add">5</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
   <Vision>
