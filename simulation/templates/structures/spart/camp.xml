@@ -28,8 +28,8 @@
     <Territory>neutral</Territory>
     <Category>PerioikoiCamp</Category>
     <Distance>
-      <FromClass>ArmyCamp</FromClass>
-      <MinDistance>75</MinDistance>
+      <FromClass>PerioikoiCamp</FromClass>
+      <MinDistance>60</MinDistance>
     </Distance>
   </BuildRestrictions>
   <Capturable>
