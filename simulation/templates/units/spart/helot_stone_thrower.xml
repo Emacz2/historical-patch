@@ -14,7 +14,7 @@
   <Cost>
     <Resources>
       <food>60</food>
-      <stone>10</wood>
+      <stone>10</stone>
     </Resources>
   </Cost>
     <Identity>
@@ -24,6 +24,9 @@
     <GenericName>Helot Stone Thrower</GenericName>
     <Icon>units/spart/helot_archer.png</Icon>
   </Identity>
+  <TrainingRestrictions>
+  <Category>Helot</Category>
+  </TrainingRestrictions>
    <Promotion>
     <Entity>units/spart/neodamodes_archer</Entity>
     <RequiredXp>200</RequiredXp>
