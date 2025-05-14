@@ -11,7 +11,13 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
-      <Identity>
+  <Cost>
+    <Resources>
+      <food>60</food>
+      <stone>10</wood>
+    </Resources>
+  </Cost>
+    <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/infantry_archer_b</SelectionGroupName>

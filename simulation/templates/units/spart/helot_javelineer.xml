@@ -11,6 +11,12 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
+   <Cost>
+    <Resources>
+      <food>50</food>
+      <wood>20</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
