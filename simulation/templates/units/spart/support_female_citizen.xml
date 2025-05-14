@@ -13,6 +13,7 @@
       structures/spart/syssiton
       structures/spart/camp
       structures/spart/tent_helot
+      -structures/wallset_palisade
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
       -structures/{civ}/stable
