@@ -13,12 +13,12 @@
     <Ranged>
     <ApplyStatus>
         <Poisoned>
-          <Interval>3000</Interval>
+          <Interval>23000</Interval>
           <Damage>
             <Poison>1.0</Poison>
           </Damage>
           <Stackability>Extend</Stackability>
-          <Duration>9000</Duration>
+          <Duration>6000</Duration>
         </Poisoned>
       </ApplyStatus>
     </Ranged>

@@ -12,8 +12,8 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05},
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05},
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05},
-		{ "value": "Cost/Resources/metal", "add": 15 }
+		{ "value": "Cost/Resources/metal", "add": 15, "affects": "!Hero !Champion"  }
 		
 	],
-	"affects": ["Cavalry Hero"]
+	"affects": ["Cavalry !PaidMerc"]
 }

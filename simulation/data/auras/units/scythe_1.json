@@ -8,7 +8,7 @@
 	],
 	"auraName": "Scythe",
 	"showDescription": 1,
-	"auraDescription": "Scythe attached to the wheels of the chariots, to wreak havoc on the battlefield.",
+	"auraDescription": "Scythe attached to the wheels of the chariots, to wreak havoc on the battlefield. Chariots -2 health regeneration to enemy units within 7m",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png",
 	"stackable": true
 }
