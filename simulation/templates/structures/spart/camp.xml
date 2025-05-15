@@ -29,7 +29,7 @@
     <Category>PerioikoiCamp</Category>
     <Distance>
       <FromClass>PerioikoiCamp</FromClass>
-      <MinDistance>6</MinDistance>
+      <MinDistance>60</MinDistance>
     </Distance>
   </BuildRestrictions>
   <Capturable>
