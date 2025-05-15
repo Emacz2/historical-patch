@@ -13,7 +13,7 @@
     <Ranged>
     <ApplyStatus>
         <Poisoned>
-          <Interval>23000</Interval>
+          <Interval>2000</Interval>
           <Damage>
             <Poison>1.0</Poison>
           </Damage>
