@@ -11,6 +11,11 @@
   <Obstruction>
     <Static width="12.0" depth="14.0"/>
   </Obstruction>
+   <Researcher>
+    <Technologies datatype="tokens">
+      -gather_animals_stockbreeding
+    </Technologies>
+  </Researcher>
   <Trainer>
     <Entities datatype="tokens">
       -gaia/fauna_cattle_cow_trainable
