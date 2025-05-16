@@ -6,8 +6,8 @@
 		"metal": 400
 	},
 	"supersedes": "sparta_attack_melee_02",
-	"requirements": { "tech": "phase_town" },
-	"requirementsTooltip": "Unlocked in town phase.",
+	"requirements": { "tech": "phase_city" },
+	"requirementsTooltip": "Unlocked in city phase.",
 	"icon": "sword_03.png",
 	"researchTime": 60,
 	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 5%. Champion spearman an additional 10% train time. ",
