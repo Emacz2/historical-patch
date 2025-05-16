@@ -1,0 +1,11 @@
+{
+	"genericName": "",
+	"autoResearch": true,
+	"description": ".",
+	"requirements": { "civ": "spart" },
+	"icon": "parade_of_daphne.png",
+	"tooltip": "-10% maximum population limit.",
+	"modifications": [
+		{ "value": "Player/MaxPopulation", "multiply": 0.9 }
+	]
+}
