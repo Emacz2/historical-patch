@@ -8,7 +8,7 @@
     </Requirements>
   </Identity>
   <Promotion>
-    <Entity>units/rome/aux_archer_market_e</Entity>
+    <Entity>units/rome/aux_archer</Entity>
     <RequiredXp>4000</RequiredXp>
   </Promotion>
   <VisualActor>

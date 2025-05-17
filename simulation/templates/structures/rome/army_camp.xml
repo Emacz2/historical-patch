@@ -116,8 +116,8 @@
       units/{civ}/infantry_antesignanus
       units/{civ}/champion_infantry_swordsman_evocati
       units/{civ}/champion_infantry_swordsman_guard
-      units/{civ}/aux_inf_slinger_stone
-      units/{civ}/aux_archer_market_e
+      units/{civ}/aux_inf_samnite_spearman
+      units/{civ}/aux_inf_samnite_skirmisher
 	    units/{civ}/siege_onager_packed
       units/{civ}/siege_ram
     </Entities>

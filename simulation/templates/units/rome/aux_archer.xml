@@ -4,6 +4,7 @@
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
+    <Icon>units/mace/infantry_archer.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
