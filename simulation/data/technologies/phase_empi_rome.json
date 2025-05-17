@@ -11,13 +11,23 @@
 		"stone": 1000,
 		"metal": 1000
 	},
-	"requirements": {
-		"entity": {
-			"class": "Village",
-			"number": 20
-		}
+	 "requirements": {
+        "all": [
+            {
+                "entity": {
+                    "class": "Town",
+                    "number": 3
+                }
+            },
+            {
+                "entity": {
+                    "class": "City",
+                    "number": 2
+                }
+            }
+        ]
 	},
-	"requirementsTooltip": "Requires 20 village Structures.",
+	"requirementsTooltip": "Requires 3 town and 2 city structures.",
 	"supersedes": "phase_city_rome",
 	"replaces": ["phase_empi"],
 	"icon": "empire_phase.png",

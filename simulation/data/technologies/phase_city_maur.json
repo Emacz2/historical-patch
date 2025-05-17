@@ -7,11 +7,21 @@
 		"stone": 750,
 		"metal": 750
 	},
-	"requirements": {
-		"entity": {
-			"class": "Village",
-			"number": 20
-		}
+	 "requirements": {
+        "all": [
+            {
+                "entity": {
+                    "class": "Village",
+                    "number": 25
+                }
+            },
+            {
+                "entity": {
+                    "class": "Town",
+                    "number": 2
+                }
+            }
+        ]
 	},
 	"requirementsTooltip": "Requires twenty Village Structures.",
 	"supersedes": "phase_town_maur",
