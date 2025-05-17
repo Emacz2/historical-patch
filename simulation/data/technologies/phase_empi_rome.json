@@ -30,6 +30,7 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "Structuree" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "Structure" },
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Rōmānī" },
+		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Structuree"},
 		{ "value": "Player/MaxPopulation", "multiply": 1.1 }
 	
 		
