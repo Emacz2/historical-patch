@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Cost>
+    <BuildTime op="mul">0.8</BuildTime>
+     <Resources>
+      <food>75</food>
+      <wood>0</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
+  <Attack>
+   <Capture>
+      <AttackName>Capture</AttackName>
+      <Capture>3.0</Capture>
+      <MaxRange>4</MaxRange>
+      <RepeatTime>1000</RepeatTime>
+    </Capture>
+  </Attack>
+  <Identity>
+    <VisibleClasses datatype="tokens">Auxiliary</VisibleClasses>
+    <Rank>Elite</Rank>
+  </Identity>
+  <ResourceGatherer disable=""/>
+  <Builder disable=""/>
+</Entity>
+

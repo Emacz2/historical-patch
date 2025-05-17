@@ -37,12 +37,11 @@
 		{ "value": "Cost/Resources/metal", "add": 15, "affects": "Champion Spearman"},
 		{ "value": "Cost/Resources/wood", "add": 15, "affects": "Champion Spearman"},
 		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman"},
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.025, "affects": "Infantry" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.025, "affects": "Infantry" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Infantry" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Infantry" },
 		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Helot" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
-		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.95, "affects": "Helot"},
-		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Perioikoi" }
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" }
+		
 
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"

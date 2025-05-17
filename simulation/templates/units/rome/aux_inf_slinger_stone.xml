@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger">
-<Cost>
-    <Resources>
-      <food op="add">50</food>
-      <metal op="add">-75</metal>
-      <stone op="add">25</stone>
-    </Resources>
-  </Cost>
+<Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_slinger">
   <Identity>
     <Civ>rome</Civ>
     <GenericName>Balearic Slinger</GenericName>
@@ -17,6 +10,13 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
+    <Cost>
+     <Resources>
+      <metal>0</metal>
+      <wood>0</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
   <Attack>
     <Ranged>
       <AttackName>Slinger</AttackName>

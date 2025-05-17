@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/rome/merc_archer_market_a">
+<Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_archer_greek">
   <Identity>
-    <Rank>Elite</Rank>
     <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
+      <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
   <Promotion disable=""/>

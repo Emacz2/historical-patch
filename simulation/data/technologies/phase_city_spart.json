@@ -37,12 +37,8 @@
 		{ "value": "Cost/Resources/food", "add": 10, "affects": "Champion Spearman"},
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman"},
 		{ "value": "Health/Max", "add": 25, "affects": "Champion"},
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.025, "affects": "Infantry" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.025, "affects": "Infantry" },
 		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Helot" },
 		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
-		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.95, "affects": "Helot"},
-		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Perioikoi" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"},
 		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Hero" }
 	
