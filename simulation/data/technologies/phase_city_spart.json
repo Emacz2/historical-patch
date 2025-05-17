@@ -11,13 +11,23 @@
 		"stone": 750,
 		"metal": 750
 	},
-	"requirements": {
-		"entity": {
-			"class": "Village",
-			"number": 20
-		}
+	 "requirements": {
+        "all": [
+            {
+                "entity": {
+                    "class": "Village",
+                    "number": 20
+                }
+            },
+            {
+                "entity": {
+                    "class": "Town",
+                    "number": 2
+                }
+            }
+        ]
 	},
-	"requirementsTooltip": "Requires 20 village Structures.",
+	"requirementsTooltip": "Requires 20 village and 2 town structures.",
 	"supersedes": "phase_town_spart",
 	"replaces": ["phase_city"],
 	"icon": "city_phase.png",
