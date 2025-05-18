@@ -18,8 +18,11 @@
     <GenericName>Temple of Vesta</GenericName>
     <SpecificName>Aedēs Vestālis</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">TempleOfVesta</VisibleClasses>
+    <VisibleClasses datatype="tokens">-Village Town TempleOfVesta</VisibleClasses>
     <Icon>structures/temple_vesta.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Obstruction>
     <Static width="19.0" depth="19.0"/>

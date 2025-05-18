@@ -7,10 +7,7 @@
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Aedēs</SpecificName>
-     <VisibleClasses datatype="tokens">Town Temple</VisibleClasses>
-     <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
+     <VisibleClasses datatype="tokens">Village Temple</VisibleClasses>
   </Identity>
   <Obstruction>
     <Static width="17.5" depth="30.0"/>
