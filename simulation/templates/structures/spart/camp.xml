@@ -29,19 +29,19 @@
     <Category>PerioikoiCamp</Category>
     <Distance>
       <FromClass>PerioikoiCamp</FromClass>
-      <MinDistance>60</MinDistance>
+      <MinDistance>75</MinDistance>
     </Distance>
   </BuildRestrictions>
   <Capturable>
-    <CapturePoints op="mul">2</CapturePoints>
+    <CapturePoints op="mul">1.5</CapturePoints>
     <RegenRate>7.5</RegenRate>
     <GarrisonRegenRate>5.0</GarrisonRegenRate>
   </Capturable>
   <Cost>
     <BuildTime>100</BuildTime>
     <Resources>
-      <wood>150</wood>
-      <stone>50</stone>
+      <wood>300</wood>
+      <stone>100</stone>
     </Resources>
   </Cost>
   <Footprint>
