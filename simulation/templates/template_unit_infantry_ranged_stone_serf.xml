@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_ranged">
+<Entity parent="template_unit_infantry_ranged_slinger">
   <Attack>
     <Ranged>
       <AttackName>Stone thrower</AttackName>
       <Damage>
-        <Pierce>2</Pierce>
-        <Crush>3</Crush>
+        <Pierce op="mul">0.75</Pierce>
+        <Crush op="mul">0.75</Crush>
       </Damage>
-      <MaxRange>40</MaxRange>
-      <PrepareTime>500</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
+      <MaxRange op="add">-15</MaxRange>
+      <RepeatTime>1500</RepeatTime>
       <Projectile>
         <Speed>70</Speed>
         <Spread>3</Spread>
