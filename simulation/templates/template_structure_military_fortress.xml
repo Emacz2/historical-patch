@@ -79,7 +79,7 @@
     <SelectionGroupName>template_structure_military_fortress</SelectionGroupName>
     <Tooltip>Garrison Soldiers for additional arrows.</Tooltip>
     <Classes datatype="tokens">GarrisonFortress</Classes>
-    <VisibleClasses datatype="tokens">Fortress</VisibleClasses>
+    <VisibleClasses datatype="tokens">Fortress City</VisibleClasses>
     <Icon>structures/fortress.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
