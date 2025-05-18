@@ -6,14 +6,6 @@
 	"icon": "wooden_walls.png",
 	"tooltip": "Helot units 20% faster gathering, train 10% faster and cost 15 less wood, 10 less food; but attack .5 seconds slower, 10% less dmg, ranged units are 20% less accurated. They don't wear armor and only 50 health.  They cant promote or recieve upgrades from forge.",
 	"modifications": [
-		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.2},
-		{ "value": "Attack/Ranged/Spread", "multiply": 1.2 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 0.8 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.8},
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 0.8 },
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 0.8},
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.8},
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.8 },
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 }
 
 	],
