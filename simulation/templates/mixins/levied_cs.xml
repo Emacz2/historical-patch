@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+ <Attack>
+  <Melee merge="">
+	<Damage>
+	  <Hack op="mul">0.90</Hack>
+    <Pierce op="mul">0.90</Pierce>
+    <Crush op="mul">0.90</Crush>
+  </Damage>
+  </Melee>
+  <Ranged merge="">
+	  <Damage>
+	    <Hack op="mul">0.90</Hack>
+      <Pierce op="mul">0.90</Pierce>
+      <Crush op="mul">0.90</Crush>
+    </Damage>
+      <Projectile>
+        <Spread op="mul">1.1</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
+  <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <food>50</food>
+      <wood>40</wood>
+      <stone>0</stone>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
+  <ResourceGatherer>
+    <MaxDistance>2.0</MaxDistance>
+    <BaseSpeed>1.0</BaseSpeed>
+    <Rates>
+      <food.fruit op="mul">1.05</food.fruit>
+      <food.grain op="mul">1.05</food.grain>
+      <food.meat op="mul">1.05</food.meat>
+      <wood.tree op="mul">1.05</wood.tree>
+      <wood.ruins op="mul">1.05</wood.ruins>
+      <stone.rock op="mul">1.05</stone.rock>
+      <stone.ruins op="mul">1.05</stone.ruins>
+      <metal.ore  op="mul">1.05</metal.ore>
+      <metal.ruins op="mul">1.05</metal.ruins>
+    </Rates>
+    <Capacities>
+      <food>10</food>
+      <wood>10</wood>
+      <stone>10</stone>
+      <metal>10</metal>
+    </Capacities>
+  </ResourceGatherer>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <RunMultiplier>1.45</RunMultiplier>
+  </UnitMotion>
+  <Identity>
+    <VisibleClasses datatype="tokens">Levied</VisibleClasses>
+    <Tooltip>.</Tooltip>
+  </Identity>
+</Entity>

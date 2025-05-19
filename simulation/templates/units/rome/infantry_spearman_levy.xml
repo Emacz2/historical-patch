@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="serf_melee|template_unit_infantry_melee_spearman">
+<Entity parent="levied_cs|template_unit_infantry_melee_spearman">
   <Builder>
     <Entities datatype="tokens">
       structures/rome/army_camp
@@ -17,16 +17,14 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <SelectionGroupName>units/rome/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Levy Spearman Serf</GenericName>
+    <SelectionGroupName>units/rome/infantry_spearman_levy</SelectionGroupName>
+    <GenericName>Levy Spearman</GenericName>
     <SpecificName>Peditatus</SpecificName>
     <Icon>units/rome/infantry_spearman_conscript.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">roman_reforms</Techs>
-    </Requirements>
-    <Tooltip>Serfs cannot promote.</Tooltip>
   </Identity>
-  <Promotion disable=""/>
+   <Promotion>
+    <Entity>units/rome/infantry_spearman_b</Entity>
+  </Promotion>
   <UnitAI>
     <Formations datatype="tokens">
       special/formations/anti_cavalry

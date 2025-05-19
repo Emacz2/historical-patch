@@ -16,7 +16,7 @@
     </Centurion>
   </Upgrade>
   <Promotion>
-    <Entity>units/rome/infantry_spearman_conscript</Entity>
+    <Entity>units/rome/infantry_legionary</Entity>
     <RequiredXp>2000</RequiredXp>
   </Promotion>
   <VisualActor>

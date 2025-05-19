@@ -3,6 +3,10 @@
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Armāmentārium</SpecificName>
+    <VisibleClasses datatype="tokens">-Village Town</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>structures/romans/blacksmith.xml</Actor>
