@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Attack>
+    <Capture>
+      <Capture>1.5</Capture>
+      <MaxRange>1</MaxRange>
+      <RepeatTime>5000</RepeatTime>
+    </Capture>
     <Melee> 
       <Damage>
-        <Pierce op="mul">0.8</Pierce>
-        <Hack op="mul">0.8</Hack>
-        <Crush op="mul">0.8</Crush>
+        <Pierce op="mul">0.85</Pierce>
+        <Hack op="mul">0.85</Hack>
+        <Crush op="mul">0.85</Crush>
       </Damage>
     </Melee>
   </Attack>
@@ -33,15 +38,15 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.15</food.fruit>
-      <food.grain op="mul">1.15</food.grain>
-      <food.meat op="mul">1.15</food.meat>
-      <wood.tree op="mul">1.15</wood.tree>
-      <wood.ruins  op="mul">1.15</wood.ruins>
-      <stone.rock  op="mul">1.15</stone.rock>
-      <stone.ruins  op="mul">1.15</stone.ruins>
-      <metal.ore  op="mul">1.15</metal.ore>
-      <metal.ruins  op="mul">1.15</metal.ruins>
+      <food.fruit op="mul">1.1</food.fruit>
+      <food.grain op="mul">1.1</food.grain>
+      <food.meat op="mul">1.1</food.meat>
+      <wood.tree op="mul">1.1</wood.tree>
+      <wood.ruins  op="mul">1.1</wood.ruins>
+      <stone.rock  op="mul">1.1</stone.rock>
+      <stone.ruins  op="mul">1.1</stone.ruins>
+      <metal.ore  op="mul">1.1</metal.ore>
+      <metal.ruins  op="mul">1.1</metal.ruins>
     </Rates>
     <Capacities>
       <food>10</food>

@@ -25,15 +25,15 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.15</food.fruit>
-      <food.grain op="mul">1.15</food.grain>
-      <food.meat op="mul">1.15</food.meat>
-      <wood.tree op="mul">1.15</wood.tree>
-      <wood.ruins  op="mul">1.15</wood.ruins>
-      <stone.rock  op="mul">1.15</stone.rock>
-      <stone.ruins  op="mul">1.15</stone.ruins>
-      <metal.ore  op="mul">1.15</metal.ore>
-      <metal.ruins  op="mul">1.15</metal.ruins>
+      <food.fruit op="mul">1.1</food.fruit>
+      <food.grain op="mul">1.1</food.grain>
+      <food.meat op="mul">1.1</food.meat>
+      <wood.tree op="mul">1.1</wood.tree>
+      <wood.ruins  op="mul">1.1</wood.ruins>
+      <stone.rock  op="mul">1.1</stone.rock>
+      <stone.ruins  op="mul">1.1</stone.ruins>
+      <metal.ore  op="mul">1.1</metal.ore>
+      <metal.ruins  op="mul">1.1</metal.ruins>
     </Rates>
     <Capacities>
       <food>10</food>
@@ -44,6 +44,6 @@
   </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Ranged Serfs 15% less dmg, 10% less acurate and -5 range, but 15% faster train time and gather resources 15% faster</Tooltip>
+    <Tooltip>Ranged Serfs 15% less dmg, 10% less acurate and -5 range, but 15% faster train time and gather resources 10% faster</Tooltip>
   </Identity>
 </Entity>
