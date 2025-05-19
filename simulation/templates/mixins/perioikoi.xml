@@ -3,16 +3,16 @@
  <Attack>
   <Melee merge="">
 	<Damage>
-	  <Hack op="mul">0.93</Hack>
-    <Pierce op="mul">0.93</Pierce>
-    <Crush op="mul">0.93</Crush>
+	  <Hack op="mul">0.90</Hack>
+    <Pierce op="mul">0.90</Pierce>
+    <Crush op="mul">0.90</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
 	  <Damage>
-	    <Hack op="mul">0.93</Hack>
-      <Pierce op="mul">0.93</Pierce>
-      <Crush op="mul">0.93</Crush>
+	    <Hack op="mul">0.90</Hack>
+      <Pierce op="mul">0.90</Pierce>
+      <Crush op="mul">0.90</Crush>
     </Damage>
       <Projectile>
         <Spread op="mul">1.1</Spread>
@@ -20,7 +20,7 @@
   </Ranged>
 </Attack>
   <Cost>
-    <BuildTime op="mul">0.85</BuildTime>
+    <BuildTime op="mul">0.9</BuildTime>
     <Resources>
       <food>50</food>
       <wood>40</wood>
