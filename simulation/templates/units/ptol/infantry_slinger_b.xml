@@ -7,6 +7,13 @@
       structures/ptol/temple_2
     </Entities>
   </Builder>
+    <Cost>
+    <Resources>
+      <food>50</food>
+      <wood>15</wood>
+      <stone>10</stone>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_slinger_b</SelectionGroupName>
@@ -14,9 +21,7 @@
     <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
     <Icon>units/ptol/infantry_slinger.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/ptol/infantry_slinger_a</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
     <Actor>units/ptolemies/infantry_slinger_b.xml</Actor>
   </VisualActor>

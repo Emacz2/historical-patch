@@ -6,6 +6,13 @@
       structures/gaul/celtic_coalitliton
     </Entities>
   </Builder>
+    <Cost>
+    <Resources>
+      <food>50</food>
+      <wood>15</wood>
+      <stone>10</stone>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/infantry_slinger_b</SelectionGroupName>

@@ -9,6 +9,13 @@
       structures/kush/range
     </Entities>
   </Builder>
+    <Cost>
+    <Resources>
+      <food>50</food>
+      <wood>15</wood>
+      <stone>10</stone>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>kush</Civ>
     <SelectionGroupName>units/kush/infantry_slinger_b</SelectionGroupName>

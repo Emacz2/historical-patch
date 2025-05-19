@@ -8,7 +8,9 @@
   </Builder>
   <Cost>
     <Resources>
-      <metal op="add">-10</metal>
+      <food>50</food>
+      <wood>15</wood>
+      <metal>10</metal>
     </Resources>
   </Cost>
   <Health>
