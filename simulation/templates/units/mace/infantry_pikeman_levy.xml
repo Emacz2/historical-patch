@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/mace/infantry_pikeman_levy">
+<Entity parent="levied_cs|template_unit_infantry_melee_pikeman">
 <Builder>
   <Entities datatype="tokens">
       structures/mace/royal_stoa
@@ -14,10 +14,9 @@
     <Icon>units/mace/infantry_pikeman.png</Icon>
   </Identity>
   <Promotion>
-    <Entity>units/mace/infantry_pikeman_a</Entity>
+    <Entity>units/mace/infantry_pikeman_b</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_pikeman_b.xml</Actor>
   </VisualActor>
 </Entity>
-
