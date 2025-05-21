@@ -19,10 +19,11 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "chamfron.png",
 	"researchTime": 60,
-	"tooltip": "Champions +2 Hack and +1.5 Pierce resistances, but -5% movement speed.",
+	"tooltip": "Champions +2 Hack, +1.5 Pierce and +2.5 crush resistances, but -5% movement speed.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5 },
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.95 }
 		
 	],

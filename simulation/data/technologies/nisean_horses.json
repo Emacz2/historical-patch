@@ -5,8 +5,8 @@
 	},
 	"description": "The now-extinct Nisian breed of horse was one of the largest and robust horses of ancient times. They were highly sought after by the Seleucids and Persians as both rider and mount gained heavier armor as time progressed.",
 	"cost": {
-		"food": 400,
-		"metal": 200
+		"food": 300,
+		"metal": 150
 	},
 	"supersedes": "cavalry_health",
 	"requirements": {
@@ -22,11 +22,14 @@
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "chamfron.png",
-	"researchTime": 60,
-	"tooltip": "Champion Cavalry 100 health, but +10% training time.",
+	"researchTime": 45,
+	"tooltip": "Champion Cavalry 50 health, -0.5 Hack/Pierce and +2.5 crush but +15% training time.",
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 1.1 },
-		{ "value": "Health/Max", "add": 100 }
+		{ "value": "Cost/BuildTime", "multiply": 1.15 },
+		{ "value": "Health/Max", "add": 50 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5 }
 	],
 	"affects": ["Champion Cavalry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
