@@ -3,7 +3,7 @@
   <Identity>
     <Civ>mace</Civ>
     <SpecificName>Stoa</SpecificName>
-    <Tooltip>Train Champion Cavalary and Infantry Spearman.  Upgrade Infantry to Silver Shields</Tooltip>
+    <Tooltip>Train Champion Cavalary and Infantry Spearman.  Upgrade Infantry to Silver Shields. Garrison champions to heal them</Tooltip>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
@@ -23,4 +23,12 @@
   <VisualActor>
     <Actor>special/greek_stoa_great.xml</Actor>
   </VisualActor>
+  <GarrisonHolder>
+    <Max>20</Max>
+    <EjectHealth>0.1</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
+    <List datatype="tokens">Champion</List>
+    <BuffHeal>4</BuffHeal>
+    <LoadingRange>2</LoadingRange>
+  </GarrisonHolder>
 </Entity>
