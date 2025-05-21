@@ -14,8 +14,8 @@
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
     </Melee>
   </Attack>
-  <Health>
-    <Max>250</Max>
+ <Health>
+    <Max>300</Max>
   </Health>
   <Resistance>
     <Entity>
