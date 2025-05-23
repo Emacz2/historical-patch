@@ -33,6 +33,7 @@
       <Neodamodes>15</Neodamodes>
       <Monument>5</Monument>
       <Palace>1</Palace>
+      <PerioikoiCamp>1</PerioikoiCamp>
       <Pillar>0</Pillar>
       <PyramidLarge>2</PyramidLarge>
       <PraetorianGuard>0</PraetorianGuard>
@@ -53,7 +54,7 @@
       <Gladiator>
         <Amphitheater>15</Amphitheater>
       </Gladiator>
-       <LandTrader>
+      <LandTrader>
         <Market>5</Market>
       </LandTrader>
       <Helot>

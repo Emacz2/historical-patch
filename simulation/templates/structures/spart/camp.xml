@@ -57,7 +57,7 @@
     <Max>30</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Perioikoi Soldier -Helot</List>
+    <List datatype="tokens">Perioikoi</List>
     <BuffHeal>0</BuffHeal>
     <LoadingRange>6</LoadingRange>
   </GarrisonHolder>
@@ -97,6 +97,9 @@
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
   </ResourceDropsite>
+  <TrainingRestrictions>
+  <Category>PerioikoiCamp</Category>
+  </TrainingRestrictions>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_broch.xml</select>
