@@ -25,9 +25,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>5</Hack>
+        <Hack>3</Hack>
         <Pierce>4</Pierce>
-        <Crush>15</Crush>
+        <Crush>10</Crush>
       </Damage>
     </Entity>
   </Resistance>
@@ -59,11 +59,11 @@
   <UnitMotion>
     <PassabilityClass>large</PassabilityClass>
     <Acceleration op="mul">0.5</Acceleration>
-    <WalkSpeed op="mul">0.93</WalkSpeed>
+    <WalkSpeed op="mul">0.92</WalkSpeed>
     <RunMultiplier>1.2</RunMultiplier>
     <Weight op="mul">5.0</Weight>
   </UnitMotion>
   <Vision>
-    <Range>80</Range>
+    <Range>75</Range>
   </Vision>
 </Entity>

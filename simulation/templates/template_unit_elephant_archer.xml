@@ -35,8 +35,8 @@
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
   </Identity>
   <Loot>
-    <food>18</food>
-    <wood>7</wood>
+    <food>20</food>
+    <wood>10</wood>
   </Loot>
   <Sound>
     <SoundGroups>
