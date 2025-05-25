@@ -8,10 +8,12 @@
 	"modifications": [
 		
 		{ "value": "Resistance/Entity/Damage/Hack", "add": -1.5, "affects": "Melee" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -2, "affects": "Melee" }
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1.5, "affects": "Melee" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": -0.5, "affects": "Ranged" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1.5, "affects": "Ranged" }
 	
 
 
 	],
-	"affects": ["Perioikoi Neodamodes"]
+	"affects": ["Perioikoi"]
 }

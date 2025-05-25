@@ -4,9 +4,10 @@
 	"description": "The Mauryas archers used 6 foot bows that sometimes needed to be stablized with their feet.",
 	"requirements": { "civ": "maur" },
 	"icon": "wooden_walls.png",
-	"tooltip": " Archers +3 range but +150 prepare time.",
+	"tooltip": " Archers +3 range and 5% pierce dmg but +150 prepare time.",
 	"modifications": [
 		{ "value": "Attack/Ranged/MaxRange", "add": 3 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05 },
 		{ "value": "Attack/Ranged/PrepareTime", "add": 150}
 	
 		

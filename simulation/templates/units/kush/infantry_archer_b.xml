@@ -13,9 +13,9 @@
     <Ranged>
     <ApplyStatus>
         <Poisoned>
-          <Interval>2000</Interval>
+          <Interval>1.5</Interval>
           <Damage>
-            <Poison>1.0</Poison>
+            <Poison>1</Poison>
           </Damage>
           <Stackability>Extend</Stackability>
           <Duration>6000</Duration>
