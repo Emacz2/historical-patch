@@ -37,7 +37,7 @@
 		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.4, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "Structure" },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "Structuree" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "Structure" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "Structure" },
 		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Rōmānī" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Rōmānī" },
