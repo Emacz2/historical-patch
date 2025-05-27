@@ -4,15 +4,28 @@
     units/testudo
   </Auras>
    <Cost>
-    <BuildTime op="mul">1.1</BuildTime>
+   <BuildTime op="mul">1.05</BuildTime>
     <Resources>
-      <food op="add">25</food>
-      <metal op="add">20</metal>
-      <wood op="add">-20</wood>
+      <metal op="add">15</metal>
     </Resources>
   </Cost>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="add">1</Hack>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
    <Health>
-    <Max op="add">50</Max>
+    <Max op="add">25</Max>
   </Health>
   <Identity>
     <GenericName>Evocati</GenericName>
@@ -20,7 +33,7 @@
     <VisibleClasses datatype="tokens">Evocati</VisibleClasses>
     <Icon>units/rome/champion_legion_marian.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_empi</Techs>
+      <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
   <Promotion>

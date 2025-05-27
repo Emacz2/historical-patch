@@ -37,10 +37,9 @@
   </Identity>
   <Loot>
     <xp>130</xp>
-    <food>10</food>
-    <wood>5</wood>
-    <stone>2</stone>
-    <metal>2</metal>
+    <wood>10</wood>
+    <stone>5</stone>
+    <metal>5</metal>
   </Loot>
   <Position>
     <TurnRate>10</TurnRate>

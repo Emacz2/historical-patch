@@ -8,16 +8,28 @@
       <lightdamage>0.85</lightdamage>
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
-    <Max op="add">-25</Max>
+    <Max op="add">-50</Max>
   </Health>
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <metal op="add">-20</metal>
+      <wood op="add">-20</wood>
+    </Resources>
   </Cost>
+   <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-0.5</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">0.5</Hack>
-        <Pierce op="add">0.5</Pierce>
+        <Hack op="add">-0.5</Hack>
+        <Pierce op="add">-0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>

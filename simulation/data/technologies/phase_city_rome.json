@@ -44,7 +44,7 @@
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Structure"},
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Rōmānī" },
-		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Rōmānī" }
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Rōmānī" }
 		
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"

@@ -39,7 +39,7 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "Structure" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "Structure" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "Structure" },
-		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Rōmānī" },
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Rōmānī" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Rōmānī" },
 		{ "value": "Cost/BuildTime", "multiply": 0.85, "affects": "Structure"},
 		{ "value": "Player/MaxPopulation", "multiply": 1.1 }

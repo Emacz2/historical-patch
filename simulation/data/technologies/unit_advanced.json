@@ -3,7 +3,6 @@
 	"icon": "upgrade_advanced.png",
 	"tooltip": "Advanced and Elite units +20% training time and 30% slower gathering rates, but +0.5 capture attack strength, +20% loot, 10 health; Healers +5 healing strength and +3 healing range; Melee units +10% attack damage and 0.5H/P resistance; Ranged units −10% spread 5% Hack/Pierce/Crush dmg and +1 range.", 
 	"modifications": [
-		{ "value": "Attack/Capture/Capture", "add": 0.5, "affects": "!PaidMerc" },
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Melee !Hunt" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Melee !Hunt" },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "Melee !Hunt" },
@@ -23,7 +22,7 @@
 		{ "value": "Attack/Ranged/MaxRange", "add": 2, "affects": "Citizen Crossbowman"  },
 		{ "value": "Attack/Ranged/MaxRange", "add": 2.5, "affects": "Citizen Greek Archer"  },
 		{ "value": "Attack/Ranged/MaxRange", "add": 3.5, "affects": "Citizen Archer"  },
-		{ "value": "Cost/BuildTime", "multiply": 1.2 },
+		{ "value": "Cost/BuildTime", "multiply": 1.15 },
 		{ "value": "Health/Max", "add": 5, "affects": "Ranged Infantry"},
 		{ "value": "Health/Max", "add": 15, "affects": "Melee Infantry"},
 		{ "value": "Health/Max", "add": 15, "affects": "Ranged Cavalry"},
