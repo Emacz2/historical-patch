@@ -1,0 +1,14 @@
+{
+	"genericName": "Legend of Tartessos",
+	"autoResearch": true,
+	"description": "Gathers 10% faster meat garthering.",
+	"requirements": { "civ": "iber" },
+	"icon": "wooden_walls.png",
+	"tooltip": "Iberians can build markets p1, land and sea traders train time reduced by 50%.",
+	"modifications": 
+[
+	{ "value": "Cost/BuildTime", "multiply": 0.5}
+	
+	],
+	"affects": ["Trader"]
+}

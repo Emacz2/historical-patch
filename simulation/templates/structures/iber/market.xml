@@ -10,6 +10,10 @@
   <Identity>
     <Civ>iber</Civ>
     <SpecificName>Arruga</SpecificName>
+    <VisibleClasses datatype="tokens">-Town Village</VisibleClasses>
+    <Requirements>
+     <Techs datatype="tokens">-phase_town phase_village</Techs>
+    </Requirements>
   </Identity>
   <Obstruction>
     <Static width="16.0" depth="20.0"/>

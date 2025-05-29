@@ -23,7 +23,7 @@
   <Identity>
     <Classes datatype="tokens">Human</Classes>
     <VisibleClasses datatype="tokens">Soldier Hero</VisibleClasses>
-    <Tooltip>0 damage vs FemaleCitizen .</Tooltip>
+    <Tooltip>10% damage vs FemaleCitizen .</Tooltip>
     <GenericName>Hero</GenericName>
     <Icon>technologies/laurel_wreath.png</Icon>
     <Requirements>

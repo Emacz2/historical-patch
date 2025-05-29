@@ -12,7 +12,7 @@
   </BuildRestrictions>
   <Capturable disable=""/>
   <Cost>
-    <BuildTime>120</BuildTime>
+    <BuildTime>90</BuildTime>
     <Resources>
       <stone>100</stone>
       <metal>100</metal>
@@ -23,7 +23,7 @@
     <Height>8.0</Height>
   </Footprint>
   <Health>
-    <Max>1200</Max>
+    <Max>1000</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_2x2</SpawnEntityOnDeath>
   </Health>
   <Identity>
@@ -50,8 +50,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>20</Hack>
-        <Pierce>30</Pierce>
+        <Hack>15</Hack>
+        <Pierce>25</Pierce>
         <Crush>3</Crush>
       </Damage>
     </Entity>

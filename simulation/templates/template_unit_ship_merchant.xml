@@ -2,8 +2,11 @@
 <Entity parent="template_unit_ship">
   <Cost>
     <BuildTime>20</BuildTime>
+    <Population>0</Population>
     <Resources>
-      <metal>100</metal>
+      <food>25</food>
+      <wood>75</wood>
+      <metal>25</metal>
     </Resources>
   </Cost>
   <GarrisonHolder>
