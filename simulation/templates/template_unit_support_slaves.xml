@@ -16,9 +16,10 @@
   </Attack>
   <Cost>
     <Population>0</Population>
-    <BuildTime>10</BuildTime>
+    <BuildTime>6</BuildTime>
     <Resources>
       <food>50</food>
+      <wood>10</wood>
     </Resources>
   </Cost>
   <Health>
@@ -27,7 +28,7 @@
   <Identity>
     <GenericName>Slave</GenericName>
     <SelectionGroupName>template_unit_support_slave</SelectionGroupName>
-    <Tooltip>Gatherer with a finite life span. Bonused at mining and lumbering.</Tooltip>
+    <Tooltip>Gather 20% faster than normal infantry, but weak fighters, slow builders.</Tooltip>
     <VisibleClasses datatype="tokens">Worker Slave</VisibleClasses>
   </Identity>
   <Loot>
