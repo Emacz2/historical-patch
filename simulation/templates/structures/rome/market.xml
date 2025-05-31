@@ -20,7 +20,7 @@
   </VisualActor>
    <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/infantry_swordsman_slave
+      units/{civ}/support_slave
       units/{civ}/aux_archer
       units/{civ}/aux_inf_slinger_stone
     </Entities>
