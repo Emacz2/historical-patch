@@ -16,4 +16,7 @@
   <VisualActor>
     <Actor>units/global/slave.xml</Actor>
   </VisualActor>
+  <TrainingRestrictions>
+  <Category>RomanSlave</Category>
+  </TrainingRestrictions>
 </Entity>

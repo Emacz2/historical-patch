@@ -22,6 +22,7 @@
       <Animal>50</Animal>
       <CivilCentre>1</CivilCentre>
       <ConsularBodyguard>24</ConsularBodyguard>
+      <Doûlos>5</Doûlos>
       <Gladiator>0</Gladiator>
       <Helot>3</Helot>
       <Hero>1</Hero>
@@ -37,6 +38,7 @@
       <Pillar>0</Pillar>
       <PyramidLarge>2</PyramidLarge>
       <PraetorianGuard>0</PraetorianGuard>
+      <RomanSlave>5</RomanSlave>
       <TempleOfAmun>1</TempleOfAmun>
       <TempleOfIsis>1</TempleOfIsis>
       <TempleOfVesta>1</TempleOfVesta>
@@ -51,6 +53,9 @@
       <Wonder>1</Wonder>
     </Limits>
     <LimitChangers>
+      <Doûlos>
+        <Market>5</Market>
+      </Doûlos>
       <Gladiator>
         <Amphitheater>15</Amphitheater>
       </Gladiator>
@@ -67,7 +72,7 @@
         <Brasidas>30</Brasidas>
       </Neodamodes>
       <PerioikoiCamp>
-      <Champion>6</Champion>
+        <Champion>6</Champion>
       </PerioikoiCamp>
       <Pillar>
         <Ashoka>5</Ashoka>
@@ -75,6 +80,9 @@
       <PraetorianGuard>
         <Fortress>5</Fortress>
       </PraetorianGuard>
+      <RomanSlaved>
+        <ArmyCamp>5</ArmyCamp>
+      </RomanSlave>
       <WarDog>
         <Kennel>10</Kennel>
       </WarDog>
