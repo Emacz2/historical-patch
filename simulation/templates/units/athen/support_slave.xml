@@ -3,6 +3,7 @@
   <Cost>
     <Resources>
       <food>40</food>
+      <wood>0</wood>
       <metal>10</metal>
     </Resources>
   </Cost>
