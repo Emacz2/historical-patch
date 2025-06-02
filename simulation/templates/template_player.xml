@@ -85,7 +85,7 @@
         <Fortress>5</Fortress>
       </PraetorianGuard>
       <RomanSlave>
-        <ArmyCamp>5</ArmyCamp>
+        <ArmyCamp>10</ArmyCamp>
       </RomanSlave>
       <WarDog>
         <Kennel>10</Kennel>
