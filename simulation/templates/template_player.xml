@@ -31,14 +31,15 @@
       <LandTrader>5</LandTrader>
       <Library>1</Library>
       <Lighthouse>1</Lighthouse>
-      <Neodamodes>15</Neodamodes>
+      <MaceSlave>0</MaceSlave>
       <Monument>5</Monument>
+      <Neodamodes>15</Neodamodes>
       <Palace>1</Palace>
       <PerioikoiCamp>1</PerioikoiCamp>
       <Pillar>0</Pillar>
       <PyramidLarge>2</PyramidLarge>
       <PraetorianGuard>0</PraetorianGuard>
-      <RomanSlave>5</RomanSlave>
+      <RomanSlave>0</RomanSlave>
       <TempleOfAmun>1</TempleOfAmun>
       <TempleOfIsis>1</TempleOfIsis>
       <TempleOfVesta>1</TempleOfVesta>
@@ -68,6 +69,9 @@
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
       </Juggernaut>
+      <MaceSlave>
+        <Nobels>1</Nobels>
+      </MaceSlave>
       <Neodamodes>
         <Brasidas>30</Brasidas>
       </Neodamodes>

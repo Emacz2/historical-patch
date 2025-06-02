@@ -7,6 +7,7 @@
     <SpecificName>Hetaîros</SpecificName>
     <Icon>units/mace/champion_cavalry.png</Icon>
     <SelectionGroupName>units/mace/champion_cavalry</SelectionGroupName>
+    <VisibleClasses datatype="tokens">Nobels</VisibleClasses>
     <Tooltip>Slowlyg regenerate health over time 1hp every 4 seconds</Tooltip>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>

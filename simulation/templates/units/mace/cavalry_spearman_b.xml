@@ -6,6 +6,7 @@
     <SelectionGroupName>units/mace/cavalry_spearman_b</SelectionGroupName>
     <GenericName>Thessalian Lancer</GenericName>
     <SpecificName>Xystophóros Thessalikós</SpecificName>
+    <VisibleClasses datatype="tokens">Nobels</VisibleClasses>
     <Icon>units/mace/cavalry_spearman.png</Icon>
   </Identity>
   <Promotion>
