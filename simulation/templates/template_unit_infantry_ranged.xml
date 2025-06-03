@@ -5,7 +5,7 @@
     <GenericName>Ranged</GenericName>
   </Identity>
   <Health>
-    <Max>60</Max>
+    <Max>70</Max>
   </Health>
   <Resistance>
     <Entity>

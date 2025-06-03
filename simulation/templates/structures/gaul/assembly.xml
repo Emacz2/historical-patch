@@ -3,7 +3,7 @@
   <Cost>
     <BuildTime>200</BuildTime>
     <Resources>
-      <wood>400</wood>
+      <wood>750</wood>
     </Resources>
   </Cost>
   <Footprint replace="">
@@ -28,14 +28,14 @@
     <SpecificName>Remogantion</SpecificName>
     <Tooltip> Train Champion infantry and Heroes.</Tooltip>
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">City Council</VisibleClasses>
+    <VisibleClasses datatype="tokens">Town Council</VisibleClasses>
     <Icon>structures/tholos.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
   <Loot>
-    <wood>80</wood>
+    <wood>100</wood>
   </Loot>
   <Obstruction>
     <Static width="25.0" depth="25.0"/>
