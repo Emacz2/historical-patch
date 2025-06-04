@@ -4,7 +4,7 @@
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Pierce>8</Pierce>
+        <Pierce>8.3</Pierce>
         <Crush>0.2</Crush>
       </Damage>
       <MaxRange>80</MaxRange>
@@ -34,6 +34,9 @@
       <attack_ranged>attack/weapon/sling_attack.xml</attack_ranged>
     </SoundGroups>
   </Sound>
+   <Vision>
+    <Range op="add">10</Range>
+  </Vision>
   <UnitMotion>
     <WalkSpeed op="mul">0.95</WalkSpeed>
     <Acceleration op="add">3.0</Acceleration>
