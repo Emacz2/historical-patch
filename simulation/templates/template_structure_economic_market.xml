@@ -74,7 +74,6 @@
       units/{civ}/merc_archer_market_b
       units/{civ}/merc_maceman_market_b
       units/{civ}/merc_javelineer_market_b
-      units/{civ}/merc_inf_slinger_stone_market
       units/{civ}/merc_spear_market_b
       units/{civ}/merc_spearcav_market_b
     </Entities>

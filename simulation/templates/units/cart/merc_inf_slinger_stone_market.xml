@@ -7,30 +7,22 @@
     <SelectionGroupName>units/cart/infantry_slinger_iber_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
-  <Attack>
+ <Attack>
     <Ranged>
       <AttackName>Slinger</AttackName>
       <Damage>
-        <Pierce op="add">3</Pierce>
-        <Crush op="add">3</Crush>
+        <Pierce op="add">-3</Pierce>
+        <Crush op="add">4</Crush>
       </Damage>
     </Ranged>
   </Attack>
-   <Upgrade>
-    <Lead>
-      <Entity>units/cart/merc_inf_slinger_lead</Entity>
-      <Tooltip>Switch to sling lead bullets.</Tooltip>
-      <Cost>
-        <metal>5</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>5</Time>
-    </Lead>
-  </Upgrade>
   <Health>
     <Max>75</Max>
   </Health>
-  <Promotion disable=""/>
+  <Promotion>
+    <Entity>units/cart/merc_inf_slinger_lead</Entity>
+    <RequiredXp>400</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>
   </VisualActor>

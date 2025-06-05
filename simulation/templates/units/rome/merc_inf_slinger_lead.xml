@@ -5,20 +5,16 @@
     <GenericName>Balearic Slinger</GenericName>
     <SpecificName>Qallāʿ Ibušimi</SpecificName>
     <SelectionGroupName>units/cart/infantry_slinger_iber_b</SelectionGroupName>
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
     <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
-  <Upgrade>
-    <Stone>
-      <Entity>units/rome/aux_inf_slinger_stone</Entity>
-      <Tooltip>Switch to throwing stones.</Tooltip>
-      <Variant>upgrading</Variant>
-      <Time>5</Time>
-    </Stone>
-  </Upgrade>
   <Health>
     <Max>75</Max>
   </Health>
-  <Promotion disable=""/>
+   <Promotion>
+    <Entity>units/rome/aux_inf_slinger_lead</Entity>
+    <RequiredXp>4000</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>
   </VisualActor>

@@ -16,27 +16,16 @@
       <AttackName>Slinger</AttackName>
       <Damage>
         <Pierce op="add">-3</Pierce>
-        <Crush op="add">3</Crush>
+        <Crush op="add">4</Crush>
       </Damage>
     </Ranged>
   </Attack>
-   <Upgrade>
-    <Lead>
-      <Entity>units/rome/merc_inf_slinger_lead</Entity>
-      <Tooltip>Switch to sling lead bullets.</Tooltip>
-      <Cost>
-        <metal>5</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>5</Time>
-    </Lead>
-  </Upgrade>
   <Health>
     <Max>75</Max>
   </Health>
-   <Promotion>
-    <Entity>units/rome/aux_inf_slinger_stone</Entity>
-    <RequiredXp>4000</RequiredXp>
+  <Promotion>
+    <Entity>units/rome/merc_inf_slinger_lead</Entity>
+    <RequiredXp>400</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>

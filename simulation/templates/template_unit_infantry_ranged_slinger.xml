@@ -5,7 +5,7 @@
       <AttackName>Slinger</AttackName>
       <Damage>
         <Pierce>4</Pierce>
-        <Crush>4</Crush>
+        <Crush>5</Crush>
       </Damage>
       <MaxRange>55</MaxRange>
       <PrepareTime>400</PrepareTime>

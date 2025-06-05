@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_slinger">
+<Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
     <Civ>rome</Civ>
     <GenericName>Balearic Slinger</GenericName>
@@ -17,26 +17,6 @@
       <stone>0</stone>
     </Resources>
   </Cost>
-  <Attack>
-    <Ranged>
-      <AttackName>Slinger</AttackName>
-      <Damage>
-        <Pierce op="add">-3</Pierce>
-        <Crush op="add">3</Crush>
-      </Damage>
-    </Ranged>
-  </Attack>
-   <Upgrade>
-    <Lead>
-      <Entity>units/rome/merc_inf_slinger_lead</Entity>
-      <Tooltip>Switch to sling lead bullets.</Tooltip>
-      <Cost>
-        <metal>5</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>5</Time>
-    </Lead>
-  </Upgrade>
   <Health>
     <Max>75</Max>
   </Health>
