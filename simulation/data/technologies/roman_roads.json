@@ -1,25 +1,25 @@
 {
-	"genericName": "Roman Roads",
+	"genericName": "Foundation for orads",
 	"specificName": {
 		"rome": "Viae Romanum"
 	},
 	"description": "All roads lead to Rome.",
 	"cost": {
-		"stone": 500
+		"stone": 300
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_town" },
+			{ "tech": "phase_village" },
 			{ "civ": "rome" }
 		]
 	},
-	"requirementsTooltip": "Unlocked in Town Phase.",
+	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "wheel.png",
-	"researchTime": 60,
-	"tooltip": "Infantry Units +4% movement speed.",
+	"researchTime": 40,
+	"tooltip": "Infantry Units +3% movement speed.",
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.04 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.03 }
 	],
-	"affects": ["Infantry"],
+	"affects": ["Unit !Ship !Hunt"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

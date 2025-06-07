@@ -24,7 +24,7 @@
   <WalkSpeed op="mul">0.98</WalkSpeed>
  </UnitMotion>
   <Identity>
-    <GenericName>Spartan Olympic Hoplite</GenericName>
+    <GenericName>Hippeis</GenericName>
     <Icon>units/spart/champion_infantry_olympian.png</Icon>
   </Identity>
   <Promotion disable=""/>

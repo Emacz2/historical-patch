@@ -1,11 +1,10 @@
 {
 	"type": "global",
-	"affects": ["Unit !Ship"],
+	"affects": ["Citizen Infantry !PaidMerc"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.04 }
+		{ "value": "Cost/BuildTime", "multiply": 0.9 }
 	],
-	"auraName": "Roman Roads",
-	"showDescription": 1,
-	"auraDescription": "All land units 4% faster movement speed."
+	"auraName": "Conscription",
+	"auraDescription": "Citizen Infantry −10% training time."
 }
