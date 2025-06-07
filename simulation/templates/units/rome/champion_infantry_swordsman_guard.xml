@@ -25,7 +25,7 @@
     <VisibleClasses datatype="tokens">Praetorian Guard Rōmānī</VisibleClasses>
     <Icon>units/rome/champion_legion_centurio.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_empi</Techs>
+      <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <TrainingRestrictions>
