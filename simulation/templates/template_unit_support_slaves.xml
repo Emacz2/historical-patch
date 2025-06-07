@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="builder|template_unit_support">
   <Builder>
-    <Rate>0.5</Rate>
+    <Rate>1</Rate>
   </Builder>
   <Attack>
     <Melee>
