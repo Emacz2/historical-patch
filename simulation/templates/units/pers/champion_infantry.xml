@@ -35,11 +35,6 @@
       </Damage>
     </Entity>
   </Resistance>
-  <Loot>
-    <food>5</food>
-    <wood>3</wood>
-    <metal>5</metal>
-  </Loot>
   <Upgrade>
     <Immortal_archer>
       <Entity>units/pers/champion_infantry_archer_upgrade</Entity>

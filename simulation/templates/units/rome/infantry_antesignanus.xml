@@ -14,7 +14,6 @@
     </Resources>
   </Cost>
   <Loot> 
-    <metal>2</metal>
   </Loot>
   <Identity>
     <Civ>rome</Civ>
@@ -32,7 +31,7 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">0.5</Hack>
+        <Hack op="add">1</Hack>
         <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>

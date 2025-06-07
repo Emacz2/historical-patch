@@ -11,21 +11,23 @@
       structures/rome/tower_artillery
     </Entities>
   </Builder>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
   <Cost>
     <Resources>
       <metal op="add">10</metal>
       <wood op="add">-10</wood>
     </Resources>
   </Cost>
-  <Loot>
-    <wood>5</wood>
-    <metal>5</metal>
-  </Loot>
   <Resistance>
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
-        <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
