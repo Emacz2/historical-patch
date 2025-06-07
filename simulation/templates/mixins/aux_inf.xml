@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Cost>
-    <BuildTime op="mul">0.6</BuildTime>
+    <BuildTime op="mul">0.5</BuildTime>
      <Resources>
       <food>75</food>
       <wood>0</wood>
@@ -18,7 +18,7 @@
   </Attack>
   <Identity>
     <VisibleClasses datatype="tokens">Auxiliary</VisibleClasses>
-    <Rank>Elite</Rank>
+    <Rank>Advanced</Rank>
   </Identity>
   <ResourceGatherer disable=""/>
   <Builder disable=""/>
