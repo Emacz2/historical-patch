@@ -3,8 +3,8 @@
   <Attack>
     <Melee merge="">
       <Damage>
-        <Pierce op="mul">0.8</Pierce>
-        <Hack op="mul">0.8</Hack>
+        <Pierce op="mul">0.85</Pierce>
+        <Hack op="mul">0.85</Hack>
       </Damage>
       <Bonuses>
         <BonusCavMelee>
@@ -16,8 +16,8 @@
     </Melee>
     <Ranged merge="">
       <Damage>
-        <Pierce op="mul">0.85</Pierce>
-        <Hack op="mul">0.85</Hack>
+        <Pierce op="mul">0.9</Pierce>
+        <Hack op="mul">0.9</Hack>
       </Damage>
       <Projectile>
         <Spread op="mul">1.1</Spread>
@@ -42,6 +42,10 @@
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
   </Cost>
+    <UnitMotion>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Hunt</VisibleClasses>
   </Identity>

@@ -15,10 +15,6 @@
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
     <GenericName>Parthian Style Cavalry Archer</GenericName>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.1</WalkSpeed>
-    <Acceleration op="mul">1.05</Acceleration>
-  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>
