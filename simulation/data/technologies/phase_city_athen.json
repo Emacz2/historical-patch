@@ -5,10 +5,10 @@
 	},
 	"description": "Advances from a bustling town to a veritable metropolis, full of the wonders of modern technology. This is the Athenian city phase, where metal gathering rates are boosted because of the 'Silver Owls' bonus.",
 	"cost": {
-		"food": 250,
-		"wood": 250,
+		"food": 500,
+		"wood": 500,
 		"stone": 750,
-		"metal": 750
+		"metal": 500
 	},
 	 "requirements": {
         "all": [

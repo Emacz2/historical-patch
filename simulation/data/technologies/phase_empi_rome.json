@@ -6,10 +6,10 @@
 
 	"description": "Advances from a veritable metropolis to Imperial Rome.",
 	"cost": {
-		"food": 1000,
-		"wood": 1000,
+		"food": 750,
+		"wood": 750,
 		"stone": 1000,
-		"metal": 1000
+		"metal": 500
 	},
 	 "requirements": {
         "all": [

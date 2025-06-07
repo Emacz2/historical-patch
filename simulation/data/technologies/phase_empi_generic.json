@@ -9,15 +9,25 @@
 		"food": 1000,
 		"wood": 1000,
 		"stone": 1000,
-		"metal": 1000
+		"metal": 500
 	},
 	"requirements": {
-		"entity": {
-			"class": "Village",
-			"number": 20
-		}
+        "all": [
+            {
+                "entity": {
+                    "class": "Town",
+                    "number": 3
+                }
+            },
+            {
+                "entity": {
+                    "class": "City",
+                    "number": 2
+                }
+            }
+        ]
 	},
-	"requirementsTooltip": "Requires 20 village Structures.",
+	"requirementsTooltip": "Requires 3 town and 2 city structures.",
 	"supersedes": "phase_city_generic",
 	"replaces": ["phase_empi"],
 	"icon": "empire_phase.png",

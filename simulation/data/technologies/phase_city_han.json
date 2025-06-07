@@ -5,10 +5,10 @@
 	},
 	"description": "Advances from a small village to a bustling town, ready to expand rapidly. Han crossbowmen shoot 5% faster and are 10% more accurate.",
 	"cost": {
-		"food": 250,
-		"wood": 250,
+		"food": 500,
+		"wood": 500,
 		"stone": 750,
-		"metal": 750
+		"metal": 500
 	},
 	 "requirements": {
         "all": [
