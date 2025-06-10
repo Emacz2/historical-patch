@@ -4,8 +4,7 @@
  <Cost>
     <Resources>
       <stone>50</stone>
-      <metal>50</metal>
-      <wood>150</wood>
+      <wood>250</wood>
     </Resources>
   <BuildTime>120</BuildTime>
   </Cost>
