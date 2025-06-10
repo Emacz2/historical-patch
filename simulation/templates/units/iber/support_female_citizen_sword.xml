@@ -12,11 +12,7 @@
     <GenericName>Iberian Woman</GenericName>
     <Icon>units/iber/support_female_citizen.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/iber/support_female_citizen_sword</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <VisualActor>
-    <Actor>units/iberians/female_citizen.xml</Actor>
+    <Actor>units/iberians/female_citizen_sword.xml</Actor>
   </VisualActor>
 </Entity>
