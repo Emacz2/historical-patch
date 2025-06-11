@@ -1,10 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
-<Builder>
-    <Rate>1.25</Rate>
-</Builder>
+<Attack>
+  <Melee merge="">
+	<Damage>
+	  <Hack op="mul">0.90</Hack>
+    <Pierce op="mul">0.90</Pierce>
+    <Crush op="mul">0.90</Crush>
+  </Damage>
+  </Melee>
+  <Ranged merge="">
+	  <Damage>
+	    <Hack op="mul">0.90</Hack>
+      <Pierce op="mul">0.90</Pierce>
+      <Crush op="mul">0.90</Crush>
+    </Damage>
+      <Projectile>
+        <Spread op="mul">1.1</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
  <Cost>
-    <BuildTime>10</BuildTime>
+   <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
+    <Resources>
+      <food>50</food>
+      <wood>25</wood>
+      <stone>0</stone>
+      <metal>0</metal>
+    </Resources>
+  </Cost>
   </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Neodamodes</VisibleClasses>
@@ -12,4 +36,5 @@
    <TrainingRestrictions>
     <Category>Neodamodes</Category>
   </TrainingRestrictions>
+  <ResourceGatherer disable=""/>
 </Entity>
