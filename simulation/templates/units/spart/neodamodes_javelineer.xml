@@ -12,20 +12,9 @@
       -structures/{civ}/stable
     </Entities>
   </Builder>
-   <Cost>
-    <Resources>
-      <food>40</food>
-      <wood>40</wood>
-      <metal>0</metal>
-    </Resources>
-  </Cost>
-   <Health>
-    <Max>45</Max>
-  </Health>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/neodamodes_jav</SelectionGroupName>
     <GenericName>Neodamodes Skirmisher</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>
