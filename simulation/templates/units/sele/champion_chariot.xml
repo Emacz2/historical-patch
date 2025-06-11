@@ -2,7 +2,6 @@
 <Entity parent="chariot|template_unit_champion_cavalry_archer_chariot">
   <Auras datatype="tokens">
     units/scythe_1
-    units/scythe_2
   </Auras>
   <Footprint replace="">
     <Square width="11.0" depth="11.0"/>
