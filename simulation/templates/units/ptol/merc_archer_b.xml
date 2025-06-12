@@ -4,6 +4,8 @@
     <Entities datatype="tokens">
       structures/ptol/lighthouse
       structures/ptol/library
+      structures/ptol/temple_2
+      structures/ptol/barracks_greek
     </Entities>
   </Builder>
   <Identity>
