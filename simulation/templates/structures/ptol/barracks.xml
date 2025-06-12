@@ -10,6 +10,19 @@
     <Civ>ptol</Civ>
     <SpecificName>Stratopedon</SpecificName>
   </Identity>
+  <Cost>
+    <Resources>
+      <stone op="add">-25</stone>
+    </Resources>
+  </Cost>
+   <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/merc_archer_b
+      -units/{civ}/merc_javelineer_b
+      -units/{civ}/infantry_spearman_merc_b
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="20.0" depth="20.0"/>
   </Obstruction>

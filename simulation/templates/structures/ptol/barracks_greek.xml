@@ -14,6 +14,11 @@
   <Obstruction>
     <Static width="20.0" depth="20.0"/>
   </Obstruction>
+  <Cost>
+    <Resources>
+      <stone op="add">-25</stone>
+    </Resources>
+  </Cost>
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
@@ -21,6 +26,8 @@
       -units/{civ}/infantry_archer_b
       -units/{civ}/infantry_pikeman_b
       units/{civ}/merc_archer_b
+      units/{civ}/merc_javelineer_b
+      units/{civ}/infantry_spearman_merc_b
     </Entities>
   </Trainer>
   <VisualActor>
