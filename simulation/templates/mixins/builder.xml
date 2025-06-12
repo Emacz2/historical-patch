@@ -18,6 +18,7 @@
       structures/{civ}/dock
       structures/{civ}/kennel
       structures/{civ}/barracks
+      structures/{civ}/barracks_greek
       structures/{civ}/stable
       structures/{civ}/elephant_stable
       structures/{civ}/forge
