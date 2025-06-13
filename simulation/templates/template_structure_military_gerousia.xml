@@ -5,8 +5,8 @@
   </Auras>
   <Cost>
    <Resources>
-      <stone>200</stone>
-      <metal>100</metal>
+      <stone>250</stone>
+      <metal>50</metal>
       <wood>100</wood>
     </Resources>
   </Cost>
