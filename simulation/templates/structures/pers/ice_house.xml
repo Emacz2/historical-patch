@@ -28,7 +28,7 @@
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/yakhchal.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
+      <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
   </Identity>
     <Population>
