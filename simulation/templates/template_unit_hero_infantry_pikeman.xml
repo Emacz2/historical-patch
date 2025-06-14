@@ -17,6 +17,7 @@
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
+      <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Melee>
   </Attack>
   <Identity>

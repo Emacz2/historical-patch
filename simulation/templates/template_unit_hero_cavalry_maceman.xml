@@ -11,6 +11,7 @@
       <PrepareTime>350</PrepareTime>
       <RepeatTime>1100</RepeatTime>
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
+      <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Melee>
   </Attack>
     <Resistance>

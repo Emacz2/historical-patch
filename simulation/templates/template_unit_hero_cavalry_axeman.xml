@@ -12,6 +12,7 @@
      <PrepareTime>300</PrepareTime>
      <RepeatTime>1250</RepeatTime>
      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+     <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Melee>
   </Attack>
   <Identity>
