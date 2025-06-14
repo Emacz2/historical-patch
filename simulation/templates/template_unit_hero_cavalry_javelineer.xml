@@ -18,6 +18,7 @@
         <LaunchPoint y="5"/>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
+      <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Ranged>
   </Attack>
   <Health>

@@ -10,6 +10,7 @@
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1000</RepeatTime>
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
+      <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Melee>
   </Attack>
   <Identity>
