@@ -8,13 +8,6 @@
       structures/ptol/barracks_greek
     </Entities>
   </Builder>
-    <Cost>
-    <Resources>
-      <food>50</food>
-      <wood>15</wood>
-      <stone>10</stone>
-    </Resources>
-  </Cost>
   <Identity>
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_slinger_b</SelectionGroupName>
