@@ -24,9 +24,12 @@
     <Civ>pers</Civ>
     <GenericName>Ice House</GenericName>
     <SpecificName>Yakhchāl</SpecificName>
-    <VisibleClasses datatype="tokens">Town IceHouse</VisibleClasses>
+    <VisibleClasses datatype="tokens">Village IceHouse</VisibleClasses>
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/yakhchal.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">-phase_town phase_village</Techs>
+    </Requirements>
   </Identity>
     <Population>
     <Bonus>5</Bonus>
