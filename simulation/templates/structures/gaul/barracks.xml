@@ -6,6 +6,16 @@
       <stone>0</stone>
     </Resources>
   </Cost>
+     <Resistance>
+    <Entity>
+    <ApplyStatus>
+        <Burning>
+          <Duration>0.5</Duration>
+          <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Footprint>
     <Square width="22.0" depth="22.0"/>
     <Height>5.0</Height>

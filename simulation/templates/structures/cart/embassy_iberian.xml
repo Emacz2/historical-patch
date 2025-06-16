@@ -8,6 +8,16 @@
       <wood>100</wood>
     </Resources>
   <BuildTime>120</BuildTime>
+   <Resistance>
+    <Entity>
+    <ApplyStatus>
+        <Burning>
+          <Duration>0.4</Duration>
+          <BlockChance>0.6</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   </Cost>
   <Health>
     <Max>1200</Max>

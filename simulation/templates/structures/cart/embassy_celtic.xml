@@ -9,6 +9,16 @@
     </Resources>
   <BuildTime>120</BuildTime>
   </Cost>
+   <Resistance>
+    <Entity>
+    <ApplyStatus>
+        <Burning>
+          <Duration>0.4</Duration>
+          <BlockChance>0.6</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Footprint>
     <Square width="16.0" depth="13.0"/>
     <Height>11.0</Height>
