@@ -27,6 +27,12 @@
   </Attack>
   <Resistance>
     <Entity>
+    <ApplyStatus>
+        <Burning>
+          <Duration>0.1</Duration>
+          <BlockChance>0.98</BlockChance>
+        </Burning>
+      </ApplyStatus>
       <Damage>
         <Hack>20</Hack>
         <Pierce>40</Pierce>
