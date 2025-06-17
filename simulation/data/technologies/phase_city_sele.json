@@ -42,8 +42,8 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.25, "affects": "Champion Cavalry Spearman" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.25, "affects": "Champion Cavalry Spearman"},
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Champion Cavalry Spearman" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion Cavalry Spearman" },
-		{ "value": "Health/Max","add": 25, "affects": "Champion Cavalry Spearman"}
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion Cavalry Spearman" }
+	
 	
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
