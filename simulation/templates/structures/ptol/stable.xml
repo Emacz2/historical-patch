@@ -4,6 +4,12 @@
     <Civ>ptol</Civ>
     <SpecificName>Hippōn</SpecificName>
   </Identity>
+  <Trainer>
+    <Entities datatype="tokens">
+      units/{civ}/cavalry_spearman_b
+      -units/{civ}/cavalry_archer_b
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="23.0" depth="23.0"/>
   </Obstruction>
