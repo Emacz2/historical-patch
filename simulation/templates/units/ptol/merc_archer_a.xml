@@ -6,7 +6,9 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-<Promotion disable=""/>
+  <Promotion>
+    <Entity>units/ptol/merc_archer_e</Entity>
+  </Promotion>
   <VisualActor>
     <Actor>units/ptolemies/infantry_archer_a.xml</Actor>
   </VisualActor>

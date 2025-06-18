@@ -15,7 +15,9 @@
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
   </Identity>
-  <Promotion disable=""/>
+ <Promotion>
+    <Entity>units/ptol/merc_archer_a</Entity>
+  </Promotion>
   <VisualActor>
     <Actor>units/ptolemies/infantry_archer_merc_b.xml</Actor>
   </VisualActor>
