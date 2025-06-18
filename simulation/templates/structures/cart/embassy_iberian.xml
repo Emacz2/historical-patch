@@ -8,6 +8,7 @@
       <wood>100</wood>
     </Resources>
   <BuildTime>120</BuildTime>
+  </Cost>
    <Resistance>
     <Entity>
     <ApplyStatus>
