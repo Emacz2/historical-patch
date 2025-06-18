@@ -17,6 +17,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/ptolemies/merc_archer_market_b.xml</Actor>
+    <Actor>units/ptolemies/infantry_archer_merc_b.xml</Actor>
   </VisualActor>
 </Entity>
