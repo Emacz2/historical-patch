@@ -18,9 +18,7 @@
    <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      -units/{civ}/merc_archer_b
-      -units/{civ}/merc_javelineer_b
-      -units/{civ}/infantry_spearman_merc_b
+      -units/{civ}/infantry_javelineer_b
     </Entities>
   </Trainer>
   <Obstruction>
