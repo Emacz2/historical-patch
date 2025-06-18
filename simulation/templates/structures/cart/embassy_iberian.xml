@@ -19,7 +19,6 @@
       </ApplyStatus>
     </Entity>
   </Resistance>
-  </Cost>
   <Health>
     <Max>1200</Max>
   </Health>
