@@ -26,18 +26,6 @@
       unlock_shared_los
     </Technologies>
   </Researcher>
-  <Trainer>
-    <BatchTimeModifier>0.5</BatchTimeModifier>
-    <Entities datatype="tokens">
-      units/{civ}/support_trader
-      units/{civ}/merc_archer_market_e
-      units/{civ}/merc_javelineer_market_e
-      units/{civ}/merc_swordsman_market_e
-      -units/{civ}/merc_archer_market_b
-      -units/{civ}/merc_javelineer_market_b
-      -units/{civ}/merc_swordsman_market_b
-    </Entities>
-  </Trainer>
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
