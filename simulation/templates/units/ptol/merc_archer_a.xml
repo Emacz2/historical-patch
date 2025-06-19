@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/ptol/merc_archer_market_b">
+<Entity parent="units/ptol/merc_archer_b">
    <Identity>
     <Rank>Advanced</Rank>
     <Requirements>
