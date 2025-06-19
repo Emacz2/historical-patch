@@ -43,7 +43,7 @@
     <BuildTime op="mul">0.9</BuildTime>
   </Cost>
     <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <WalkSpeed op="mul">1.2</WalkSpeed>
     <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
   <Identity>
