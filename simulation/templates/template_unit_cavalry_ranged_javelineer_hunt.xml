@@ -3,12 +3,12 @@
 <Attack>
     <Ranged>
       <AttackName>Javelin</AttackName>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">3.0</MaxRange>
     </Ranged>
   </Attack>
   <Cost>
     <Resources>
-      <wood>50</wood>
+      <wood>40</wood>
     </Resources>
   </Cost>
   <Identity>
