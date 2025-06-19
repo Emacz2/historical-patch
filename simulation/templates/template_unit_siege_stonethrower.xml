@@ -27,7 +27,7 @@
       </RangeOverlay>
       <Splash>
         <Shape>Circular</Shape>
-        <Range>1.5</Range>
+        <Range>2</Range>
         <FriendlyFire>true</FriendlyFire>
         <Damage>
           <Crush>120</Crush>

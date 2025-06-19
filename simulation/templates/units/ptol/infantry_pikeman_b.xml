@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_melee_pikeman">
-  <Builder>
+ <Builder>
     <Entities datatype="tokens">
       structures/ptol/lighthouse
       structures/ptol/library
       structures/ptol/temple_2
-      structures/ptol/barracks_greek
     </Entities>
   </Builder>
   <Identity>
