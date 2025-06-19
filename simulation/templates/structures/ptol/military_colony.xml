@@ -23,6 +23,7 @@
     <Civ>ptol</Civ>
     <SpecificName>Greek Mercanery Camp</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
+    <Icon>structures/military_settlement.png</Icon>
   </Identity>
   <Obstruction>
     <Static width="32" depth="31"/>
