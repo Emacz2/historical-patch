@@ -21,16 +21,27 @@
   </Attack>
   <Cost>
     <Resources>
-      <food>115</food>
-      <wood>20</wood>
-      <metal>15</metal>
+      <wood>30</wood>
+      <metal>20</metal>
     </Resources>
   </Cost>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <GenericName>Cavalry Swordsman</GenericName>
     <VisibleClasses datatype="tokens">Swordsman</VisibleClasses>
     <Tooltip>Counters: 1.25× vs Ranged Infantry.</Tooltip>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+    <Acceleration op="mul">0.95</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
