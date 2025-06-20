@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_melee_spearman_hunt">
+<Entity parent="template_unit_cavalry_melee_spearman">
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/cavalry_spearman_b</SelectionGroupName>
-    <GenericName>Greek Hunting Spear Cavalry</GenericName>
+    <GenericName>Olynthian Allied Light Spear Cavalry</GenericName>
     <SpecificName>Hippeús Symmakhikós</SpecificName>
     <Icon>units/spart/cavalry_spearman.png</Icon>
   </Identity>

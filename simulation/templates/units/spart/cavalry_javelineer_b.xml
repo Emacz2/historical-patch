@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer">
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Hunting Jav Cavalry</GenericName>
+    <GenericName>Olynthian Allied Light Jav Cavalry</GenericName>
     <Icon>units/spart/cavalry_javelinist.png</Icon>
-    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/spart/cavalry_javelineer_a</Entity>
