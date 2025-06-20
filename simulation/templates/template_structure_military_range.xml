@@ -2,8 +2,9 @@
 <Entity parent="template_structure_military">
   <Cost>
     <Resources>
-      <wood>250</wood>
-      <stone>50</stone>
+      <wood>350</wood>
+      <stone>100</stone>
+      <metal>50</metal>
     </Resources>
   </Cost>
   <Footprint>

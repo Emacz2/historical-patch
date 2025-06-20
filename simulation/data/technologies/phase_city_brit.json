@@ -38,8 +38,7 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Cost/BuildTime", "multiply": 0.80, "affects": "Chariot" },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.03, "affects": "Chariot" },
+		{ "value": "Cost/BuildTime", "multiply": 0.10, "affects": "Chariot" },
 		{ "value": "Health/Max", "add": 10, "affects": "Healer"}
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
