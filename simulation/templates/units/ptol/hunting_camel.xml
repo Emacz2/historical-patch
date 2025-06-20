@@ -22,6 +22,7 @@
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
   </Identity>
+  <Promotion disable=""/>
   <Sound>
     <SoundGroups>
       <select>actor/fauna/animal/camel_select.xml</select>
