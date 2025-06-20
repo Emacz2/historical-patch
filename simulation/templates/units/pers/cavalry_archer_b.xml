@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_archer_hunt">
+<Entity parent="template_unit_cavalry_ranged_archer">
   <Identity>
     <Civ>pers</Civ>
     <Lang>persian</Lang>
@@ -7,7 +7,6 @@
     <GenericName>Parthian Horse Archer</GenericName>
     <SpecificName>Asabāra Parθava</SpecificName>
     <Icon>units/pers/cavalry_archer.png</Icon>
-    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
   </Identity>
   <Promotion>
     <Entity>units/pers/cavalry_archer_a</Entity>

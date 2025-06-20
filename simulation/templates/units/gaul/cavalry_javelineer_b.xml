@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer">
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Marcacos</SpecificName>
-    <GenericName>Hunting Jav Cavalry</GenericName>
-    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
+    <GenericName>Light Jav Cavalry</GenericName>
     <Icon>units/gaul/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

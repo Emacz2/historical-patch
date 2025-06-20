@@ -3,9 +3,8 @@
   <Identity>
     <Civ>maur</Civ>
     <SelectionGroupName>units/maur/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Indian Jav Hunting Cavalry</GenericName>
+    <GenericName>Indian Light Jav Cavalry</GenericName>
     <SpecificName>Ashwarohi</SpecificName>
-    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
     <Icon>units/maur/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer">
   <Identity>
     <Civ>kush</Civ>
     <Lang>napatan</Lang>
     <SelectionGroupName>units/kush/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Iry hr ssmwtt</SpecificName>
-    <GenericName>Napatan Hunting Jav Cavalry</GenericName>
-    <Tooltip>Counters: 1.25× vs Support.</Tooltip>
+    <GenericName>Napatan Light Jav Cavalry</GenericName>
     <Icon>units/kush/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

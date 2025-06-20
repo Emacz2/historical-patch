@@ -4,7 +4,7 @@
     <Civ>iber</Civ>
     <SelectionGroupName>units/iber/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Kantabriako Zaldun</SpecificName>
-    <GenericName>Fighting Jav Cavalry</GenericName>
+    <GenericName>Light Jav Cavalry</GenericName>
     <Icon>units/iber/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

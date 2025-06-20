@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer">
   <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/sele/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Militia Hunting Jav Cavalry</GenericName>
+    <GenericName>Militia Light Jav Cavalry</GenericName>
     <SpecificName>Hippakontistès Politès</SpecificName>
     <Icon>units/sele/cavalry_militia.png</Icon>
   </Identity>

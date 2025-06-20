@@ -14,6 +14,7 @@
     <SelectionGroupName>units/kush/cavalry_spearman_b</SelectionGroupName>
     <GenericName>Meroitic Heavy Spear Cavalry</GenericName>
     <SpecificName>Htr</SpecificName>
+    <Tooltip>Has an additional 0.5 of hack and pierce resistance</Tooltip>
     <Icon>units/kush/cavalry_spearman.png</Icon>
   </Identity>
   <Promotion>
