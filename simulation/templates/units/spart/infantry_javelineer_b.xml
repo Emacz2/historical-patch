@@ -9,7 +9,6 @@
       -structures/wallset_palisade
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
-      -structures/{civ}/stable
     </Entities>
   </Builder>
   <Identity>

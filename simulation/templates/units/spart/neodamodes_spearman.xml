@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="polearm|neodamodes|hoplite|template_unit_infantry_melee_spearman">
  <Builder>
-    <Entities datatype="tokens">
+  <Entities datatype="tokens">
       structures/spart/gerousia
       structures/spart/syssiton
       structures/spart/camp
@@ -9,12 +9,10 @@
       -structures/wallset_palisade
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
-      -structures/{civ}/stable
     </Entities>
   </Builder>
   <Identity>
     <Civ>spart</Civ>
-    <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/infantry_spearman_neodamodes</SelectionGroupName>
     <GenericName>Neodamodes Hoplite</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>
