@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="cataphract|template_unit_champion_cavalry_spearman_heavy">
-<Attack>
-    <Melee>
-      <Splash>
-        <Shape>Circular</Shape>
-        <Range>1.0</Range>
-        <FriendlyFire>true</FriendlyFire>
-        <Damage>
-          <Crush>5</Crush>
-        </Damage>
-      </Splash>
-    </Melee>
-  </Attack>
   <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>

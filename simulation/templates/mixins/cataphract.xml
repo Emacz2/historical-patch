@@ -3,6 +3,14 @@
   <Attack>
     <Melee>
       <MaxRange op="add">2.0</MaxRange>
+      <Splash>
+        <Shape>Circular</Shape>
+        <Range>1.0</Range>
+        <FriendlyFire>false</FriendlyFire>
+        <Damage>
+          <Crush>5</Crush>
+        </Damage>
+      </Splash>
     </Melee>
   </Attack>
   <Cost>
@@ -23,8 +31,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1.5</Pierce>
         <Crush op="add">2.5</Crush>
       </Damage>
     </Entity>
