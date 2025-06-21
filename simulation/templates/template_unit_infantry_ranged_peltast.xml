@@ -11,6 +11,7 @@
   <Identity>
     <GenericName>Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
+    <Tooltip>Named for the shield they carried, peltast + .5 Hack and +1 Pierce reistance but 3% slower walk speed</Tooltip>
   </Identity>
   <Sound>
     <SoundGroups>
@@ -19,7 +20,7 @@
     </SoundGroups>
   </Sound>
  <UnitMotion>
-    <WalkSpeed op="mul">0.98</WalkSpeed>
+    <WalkSpeed op="mul">0.97</WalkSpeed>
     <Acceleration op="add">4.0</Acceleration>
   </UnitMotion>
 </Entity>

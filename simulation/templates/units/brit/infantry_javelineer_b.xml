@@ -6,12 +6,6 @@
       structures/brit/hill_fort
   </Entities>
 </Builder>
- <Cost>
-    <Resources>
-      <wood op="add">-5</wood>
-      <metal op="add">5</metal>
-    </Resources>
-  </Cost>
   <Health>
     <DamageVariants>
       <lightdamage>0.80</lightdamage>
@@ -22,6 +16,7 @@
   <Identity>
     <Civ>brit</Civ>
     <SelectionGroupName>units/brit/infantry_javelineer_b</SelectionGroupName>
+    <GenericName>Brit Peltast</GenericName>
     <SpecificName>Adretos</SpecificName>
     <Icon>units/brit/infantry_javelinist.png</Icon>
   </Identity>
