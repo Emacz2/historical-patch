@@ -4,7 +4,7 @@
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/cart/cavalry_spearmanH_e</Entity>
+    <Entity>units/cart/cavalry_spearman_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/carthaginians/cavalry_spearmanH_a_m.xml</Actor>

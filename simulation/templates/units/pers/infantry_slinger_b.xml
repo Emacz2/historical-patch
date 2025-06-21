@@ -11,6 +11,9 @@
     <SelectionGroupName>units/pers/infantry_slinger_b</SelectionGroupName>
     <SpecificName>Habailari</SpecificName>
     <Icon>units/iber/infantry_slinger.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">unlock_slingers</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/pers/infantry_slinger_a</Entity>
