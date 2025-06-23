@@ -48,7 +48,6 @@
     <Tooltip>Counters: 1.5× vs Ranged Infantry.</Tooltip>
     <GenericName>Heavy Swordsman</GenericName>
   </Identity>
-
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
