@@ -1,6 +1,6 @@
 {
-	"genericName": "Civic Center increased range",
-	"description": "Fortress arrows shoot further.",
+	"genericName": "Higher Ramparts",
+	"description": "Civic centers +10 vision and attack range.",
 	"cost": {
 		"food": 150,
 		"wood": 100

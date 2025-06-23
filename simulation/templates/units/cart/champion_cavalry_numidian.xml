@@ -14,7 +14,7 @@
   </UnitMotion>
   <Identity>
     <Civ>cart</Civ>
-    <GenericName>Numidian Jav Cavalry</GenericName>
+    <GenericName>Numidian Light Javelineer Cavalry</GenericName>
     <Icon>units/cart/champion_cavalry.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>

@@ -16,7 +16,7 @@
   <Identity>
     <Civ>brit</Civ>
     <SelectionGroupName>units/brit/infantry_javelineer_b</SelectionGroupName>
-    <GenericName>Brit Peltast</GenericName>
+    <GenericName>Brythonic Peltast</GenericName>
     <SpecificName>Adretos</SpecificName>
     <Icon>units/brit/infantry_javelinist.png</Icon>
   </Identity>

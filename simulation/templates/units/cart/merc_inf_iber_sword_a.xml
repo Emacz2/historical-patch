@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/cart/infantry_swordsman_ital_b">
+<Entity parent="units/cart/merc_inf_iber_sword_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/cart/infantry_swordsman_ital_e</Entity>
+    <Entity>units/cart/merc_inf_iber_sword_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/carthaginians/infantry_swordsman_a.xml</Actor>
