@@ -29,20 +29,11 @@
       <Pierce op="mul">1.04</Pierce>
       <Crush op="mul">1.04</Crush>
     </Damage>
-      <MaxRange op="add">1.0</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
   </Ranged>
 </Attack>
- <Resistance>
-    <Entity>
-      <Damage>
-       <Hack op="add"> 0.5</Hack>
-       <Pierce op="add"> 0.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Loot>
     <metal>10</metal>
     <food>5</food>

@@ -3,7 +3,7 @@
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Liby-Phoenician Hunting Javelineer Cavalry</GenericName>
+    <GenericName>Liby-Phoenician Mounted Javelineer Hunter</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/cart/cavalry_javelinist.png</Icon>
     <Tooltip>Counters: 1.25× vs Support.</Tooltip>
