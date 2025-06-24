@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity parent="mercenary">
   <Cost>
-    <BuildTime op="mul">1.25</BuildTime>
+    <BuildTime op="mul">0.8</BuildTime>
     <Resources>
       <metal>100</metal>
     </Resources>
@@ -10,7 +10,4 @@
     <metal>15</metal>
     <food>10</food>
   </Loot>
-  <Promotion>
-    <RequiredXp>300</RequiredXp>
-  </Promotion>
 </Entity>
