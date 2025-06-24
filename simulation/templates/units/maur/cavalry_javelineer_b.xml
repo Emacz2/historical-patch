@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_ranged_javelineer_hunt">
+<Entity parent="template_unit_cavalry_ranged_javelineer_shield">
   <Identity>
     <Civ>maur</Civ>
     <SelectionGroupName>units/maur/cavalry_javelineer_b</SelectionGroupName>
