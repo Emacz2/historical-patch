@@ -3,9 +3,9 @@
 	"radius": 50,
 	"affects": ["Human", "Siege", "Ship"],
 	"modifications": [
-		{ "value": "Looter/Resource/metal", "add": 20 }
+		{ "value": "Looter/Resource/metal", "add": 15 }
 	],
 	"auraName": "Sacker of Rome",
 	"showDescription": 1,
-	"auraDescription": "Humans, Siege Engines, and Ships gain +20 metal loot."
+	"auraDescription": "Humans, Siege Engines, and Ships gain +15 metal loot."
 }

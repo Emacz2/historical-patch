@@ -23,7 +23,7 @@
 			"multiply": 0.8
 		}
 	],
-	"auraName": "Research Mandate?",
+	"auraName": "Research Mandate",
 	"showDescription": 1,
 	"auraDescription": "Tech research cost 10% less resources and -20% research time when Minister is garrisoned.",
 	"stackable": true

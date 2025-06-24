@@ -3,8 +3,8 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <GenericName>Champion Javelineer</GenericName>
-    <SpecificName>Extrāōrdinārius</SpecificName>
+    <GenericName>Italic Heavy Javelineer</GenericName>
+     <SpecificName>Lictor</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_javelineer</SelectionGroupName>
     <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
     <Icon>units/rome/rome_champ_jav.png</Icon>

@@ -8,7 +8,7 @@
 			"multiply": 0.8
 		}
 	],
-	"auraName": "Focus on National Health?",
+	"auraName": "Focus on National Health",
 	"showDescription": 1,
 	"auraDescription": "Temple technologies -20% research time.",
 	"stackable": true

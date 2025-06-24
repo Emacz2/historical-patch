@@ -8,7 +8,7 @@
 			"multiply": 0.8
 		}
 	],
-	"auraName": "Focus on National Health?",
+	"auraName": "Focus on National Health",
 	"showDescription": 1,
 	"auraDescription": "Healers cost 20% less resources.",
 	"stackable": true

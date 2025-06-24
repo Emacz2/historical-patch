@@ -5,7 +5,6 @@
       structures/gaul/assembly
       structures/gaul/celtic_coalitliton
     </Entities>
-    <Rate>1.25</Rate>
   </Builder>
   <Identity>
     <Civ>gaul</Civ>

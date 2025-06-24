@@ -10,7 +10,7 @@
   </Builder>
   <Identity>
     <Civ>rome</Civ>
-    <GenericName>Roman Slave</GenericName>
+    <GenericName>War Captive</GenericName>
     <Icon>units/global/slave.png</Icon>
   </Identity>
   <VisualActor>

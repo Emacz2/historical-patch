@@ -11,7 +11,7 @@
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/cavalry_treveri_spear_b</SelectionGroupName>
     <SpecificName>Marcacos</SpecificName>
-    <GenericName>Treveri spear cav</GenericName>
+    <GenericName>Treveri Heavy Spear Cavalry</GenericName>
     <Tooltip>Counters: 2.5× vs Support.</Tooltip>
     <Icon>units/gaul/cavalry_javelinist.png</Icon>
     <Rank>Advanced</Rank>

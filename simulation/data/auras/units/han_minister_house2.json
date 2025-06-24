@@ -1,7 +1,7 @@
 {
 	"type": "range",
 	"radius": 60,
-	"auraName": "Excellency of Structures?",
+	"auraName": "Excellency of Structures",
 	"showDescription": 1,
 	"auraDescription": "Structures +10% capture point regeneration rate.",
 	"modifications": [

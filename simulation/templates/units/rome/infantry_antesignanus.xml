@@ -19,7 +19,7 @@
     <Civ>rome</Civ>
     <Lang>latin</Lang>
     <SelectionGroupName>units/rome/infantry_antesignanus</SelectionGroupName>
-    <GenericName>Legionary Skirmisher</GenericName>
+    <GenericName>Legionary Javelineer</GenericName>
     <SpecificName>Antesignānus</SpecificName>
     <VisibleClasses datatype="tokens">Legionary Rōmānī</VisibleClasses>
     <Rank>Elite</Rank>

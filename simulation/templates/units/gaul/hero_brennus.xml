@@ -2,6 +2,7 @@
 <Entity parent="template_unit_hero_infantry_swordsman">
   <Auras datatype="tokens">
     units/heroes/gaul_hero_brennus
+    units/heroes/gaul_hero_brennus2
   </Auras>
   <Identity>
     <Civ>gaul</Civ>

@@ -7,7 +7,7 @@
 			"multiply": 0.8
 		}
 	],
-	"auraName": "Focus on National Health?",
+	"auraName": "Focus on National Health",
 	"showDescription": 1,
 	"auraDescription": "Healers 20% less recruit time.",
 	"stackable": true

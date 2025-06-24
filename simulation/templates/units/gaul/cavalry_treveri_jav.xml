@@ -15,7 +15,7 @@
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/cavalry_treveri_jav_e</SelectionGroupName>
-    <GenericName>Treveri Elite Jav Cav</GenericName>
+    <GenericName>Treveri Javelineer Cavalry</GenericName>
     <Icon>units/gaul/cavalry_javelinist.png</Icon>
     <Rank>Elite</Rank>
   </Identity>
