@@ -3,7 +3,7 @@
   <Identity>
     <SelectionGroupName>units/athen/cavalry_javelineer_b</SelectionGroupName>
     <SpecificName>Pródromos</SpecificName>
-    <GenericName>Athenian Light Javelineer Cavalry</GenericName>
+    <GenericName>Athenian Light-Javelineer Cavalry</GenericName>
     <Icon>units/athen/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

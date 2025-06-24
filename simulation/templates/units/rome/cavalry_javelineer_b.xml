@@ -3,7 +3,7 @@
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <GenericName>Knight Companion Cavalry Javelineer</GenericName>
+    <GenericName>Companion Light-Javelineer Cavalry</GenericName>
     <SpecificName>Eques Socius</SpecificName>
     <SelectionGroupName>units/rome/cavalry_javelineer_b</SelectionGroupName>
     <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>

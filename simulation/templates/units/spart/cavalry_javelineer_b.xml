@@ -4,7 +4,7 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Olynthian Allied Light Jav Cavalry</GenericName>
+    <GenericName>Olynthian Allied Light-Javelineer Cavalry</GenericName>
     <Icon>units/spart/cavalry_javelinist.png</Icon>
   </Identity>
   <Promotion>

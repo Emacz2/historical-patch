@@ -4,7 +4,7 @@
     <Civ>sele</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/sele/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Militia Light Jav Cavalry</GenericName>
+    <GenericName>Militia Light-Javelineer Cavalry</GenericName>
     <SpecificName>Hippakontistès Politès</SpecificName>
     <Icon>units/sele/cavalry_militia.png</Icon>
   </Identity>

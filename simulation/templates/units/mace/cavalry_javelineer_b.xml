@@ -4,7 +4,7 @@
     <Civ>mace</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/mace/cavalry_javelineer_b</SelectionGroupName>
-    <GenericName>Odrysian Jav Cavalry</GenericName>
+    <GenericName>Odrysian Light-Javelineer Cavalry</GenericName>
     <SpecificName>Hippakontistḕs Odrysós</SpecificName>
     <Icon>units/mace/cavalry_javelinist.png</Icon>
     <Requirements>

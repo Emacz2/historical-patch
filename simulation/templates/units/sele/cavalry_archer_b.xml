@@ -4,7 +4,7 @@
     <Civ>sele</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/sele/cavalry_archer_b</SelectionGroupName>
-    <GenericName>Dahae Horse Archer</GenericName>
+    <GenericName>Dahae Bow Cavalry</GenericName>
     <SpecificName>Hippotoxotès Dahae</SpecificName>
     <Icon>units/pers/cavalry_archer.png</Icon>
     <Requirements>

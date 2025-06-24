@@ -3,6 +3,7 @@
   <Identity>
     <Civ>han</Civ>
     <SelectionGroupName>units/han/cavalry_swordsman_b</SelectionGroupName>
+    <GenericName>Han Sword Cavalry</GenericName>
     <SpecificName>Dāo Qíbīng</SpecificName>
     <Icon>units/han/cavalry_swordsman.png</Icon>
   </Identity>
