@@ -5,8 +5,8 @@
 	"modifications": [
 		{ "value": "Trader/GainMultiplier", "multiply": 1.25 }
 	],
-	"auraName": "Increased production",
+	"auraName": "Increased Trade",
 	"showDescription": 1,
-	"auraDescription": "Traders 25% gain.",
+	"auraDescription": "Traders 25% profit gained.",
 	"overlayIcon": "art/textures/ui/session/auras/heal.png"
 }

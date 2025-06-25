@@ -3,10 +3,10 @@
 	"radius": 30,
 	"affects": ["Worker"],
 	"modifications": [
-		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.10 }
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.15 }
 	],
 	"auraName": "Increased production",
 	"showDescription": 1,
-	"auraDescription": "Workers 10% faster gather speed within 30m.",
+	"auraDescription": "Workers 15% faster gather rate.",
 	"overlayIcon": "art/textures/ui/session/auras/heal.png"
 }
