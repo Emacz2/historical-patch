@@ -1,0 +1,12 @@
+{
+	"type": "global",
+	"affects": ["Trader"],
+	"affectedPlayers": ["Ally"],
+	"modifications": [
+		{ "value": "Trader/GainMultiplier", "multiply": 1.25 }
+	],
+	"auraName": "Increased production",
+	"showDescription": 1,
+	"auraDescription": "Traders 25% gain.",
+	"overlayIcon": "art/textures/ui/session/auras/heal.png"
+}

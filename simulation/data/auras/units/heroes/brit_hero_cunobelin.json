@@ -1,12 +1,12 @@
 {
 	"type": "range",
 	"radius": 30,
-	"affects": ["Human"],
+	"affects": ["Worker"],
 	"modifications": [
-		{ "value": "Health/RegenRate", "add": 0.8 }
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.10 }
 	],
-	"auraName": "Britannorum Rex",
+	"auraName": "Increased production",
 	"showDescription": 1,
-	"auraDescription": "Humans +0.8 health regeneration rate.",
+	"auraDescription": "Workers 10% faster gather speed within 30m.",
 	"overlayIcon": "art/textures/ui/session/auras/heal.png"
 }
