@@ -1,14 +1,18 @@
 {
 	"type": "range",
 	"radius": 60,
-	"affects": ["Melee Cavalry"],
+	"affects": ["Cavalry"],
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.3 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.3 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.3 }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.2 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.2 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.2 },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.2 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.2 },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.2 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 }
 	],
 	"auraName": "Cavalry Commander",
 	"showDescription": 1,
-	"auraDescription": "Melee Cavalry +30% melee attack damage.",
+	"auraDescription": "Cavalry +20% attack damage and 10% walk speed.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

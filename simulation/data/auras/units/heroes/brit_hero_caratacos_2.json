@@ -1,11 +1,16 @@
 {
 	"type": "global",
 	"affects": ["Infantry", "Siege"],
-	"affectedPlayers": ["Ally"],
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 }
 	],
 	"auraName": "Guerrilla Chief",
 	"showDescription": 1,
-	"auraDescription": "Own and allied infantry and siege 10% faster walk speed"
+	"auraDescription": "Infantry and siege 10% faster walk speed and damage"
 }
