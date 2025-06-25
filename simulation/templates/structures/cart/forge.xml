@@ -2,10 +2,6 @@
 <Entity parent="template_structure_military_forge">
   <Identity>
     <Civ>cart</Civ>
-     <VisibleClasses datatype="tokens">Town Forge</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>structures/carthaginians/blacksmith.xml</Actor>

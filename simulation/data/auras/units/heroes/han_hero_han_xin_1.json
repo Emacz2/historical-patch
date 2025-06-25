@@ -1,12 +1,13 @@
 {
 	"type": "range",
-	"radius": 30,
-	"affects": ["CitizenSoldier"],
+	"radius": 40,
+	"affects": ["Soldier"],
 	"modifications": [
-		{ "value": "Promotion/RequiredXp", "multiply": 0.8 }
+		{ "value": "Promotion/RequiredXp", "multiply": 0.8 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 }
 	],
 	"auraName": "Northern Army",
 	"showDescription": 1,
-	"auraDescription": "Soldiers −20% promotion experience.",
+	"auraDescription": "Soldiers −20% promotion experience and 10% movement.",
 	"overlayIcon": "art/textures/ui/session/auras/xp.png"
 }
