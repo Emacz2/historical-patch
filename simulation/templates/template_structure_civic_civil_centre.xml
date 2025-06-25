@@ -116,7 +116,6 @@
       phase_town_{civ}
       phase_city_{civ}
       unlock_shared_los
-      unlock_shared_dropsites
       archery_tradition
       hoplite_tradition
       hellenistic_metropolis

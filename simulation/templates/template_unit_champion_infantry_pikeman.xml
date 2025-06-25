@@ -7,7 +7,7 @@
         <Hack>8</Hack>
         <Pierce>16</Pierce>
       </Damage>
-      <MaxRange>7</MaxRange>
+      <MaxRange>9</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Bonuses>
@@ -28,7 +28,7 @@
     <Entity>
       <Damage>
         <Hack op="add">3.5</Hack>
-        <Pierce op="add">2</Pierce>
+        <Pierce op="add">3.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>

@@ -19,7 +19,7 @@
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.075, "affects": "PaidMerc" },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.075, "affects": "PaidMerc" },
 		{ "value": "Attack/Ranged/MaxRange", "add": 1.5, "affects": "Citizen Javelineer"  },
-		{ "value": "Attack/Ranged/MaxRange", "add": 2, "affects": "Citizen Crossbowman"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1, "affects": "Citizen Crossbowman"  },
 		{ "value": "Attack/Ranged/MaxRange", "add": 2.5, "affects": "Citizen Greek Archer"  },
 		{ "value": "Attack/Ranged/MaxRange", "add": 3.5, "affects": "Citizen Archer"  },
 		{ "value": "Cost/BuildTime", "multiply": 1.15 },

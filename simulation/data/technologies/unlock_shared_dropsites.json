@@ -9,7 +9,6 @@
 	},
 	"requirements": {
 		"entity": {
-			"class": "Trader",
 			"number": 3
 		}
 	},
