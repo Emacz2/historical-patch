@@ -76,7 +76,7 @@
     <Civ>brit</Civ>
     <SpecificName>Hill Fort</SpecificName>
     <SelectionGroupName>template_structure_civic_civil_centre</SelectionGroupName>
-    <Tooltip>Build in own or neutral territory. Acquire large tracts of territory. Territory root. Train Citizens and research technologies. Garrison Soldiers for additional arrows.</Tooltip>
+    <Tooltip>Build in own or neutral territory. Acquire small tracts of territory. Territory root. Train Citizens. Garrison Soldiers for additional arrows.</Tooltip>
     <VisibleClasses datatype="tokens">Defensive Colony</VisibleClasses>
     <Icon>structures/civic_centre.png</Icon>
   </Identity>
@@ -99,7 +99,6 @@
   <Obstruction>
     <Static width="10.0" depth="14.0"/>
   </Obstruction>
- 
   <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
