@@ -22,9 +22,6 @@
   <Health>
     <Max>1200</Max>
   </Health>
-   <Population>
-    <Bonus>5</Bonus>
-  </Population>
   <Identity>
     <Civ>cart</Civ>
     <SpecificName>Iberian Village Embassy</SpecificName>

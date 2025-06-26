@@ -33,7 +33,7 @@
     <BuildTime>15</BuildTime>
     <Population>0</Population>
     <Resources>
-      <food>100</food>
+      <food>75</food>
     </Resources>
   </Cost>
   <Footprint replace="">

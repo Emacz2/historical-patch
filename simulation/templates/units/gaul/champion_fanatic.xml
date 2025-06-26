@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="spec_champ|template_unit_champion_infantry_spearman">
+<Attack>
+    <Melee>
+      <PrepareTime>300</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+    </Melee>
+  </Attack>
   <Cost>
     <Resources>
       <food>120</food>
@@ -30,7 +36,7 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">1.14</WalkSpeed>
+    <WalkSpeed op="mul">1.25</WalkSpeed>
     <Acceleration op="mul">1.7</Acceleration>
   </UnitMotion>
   <VisualActor>

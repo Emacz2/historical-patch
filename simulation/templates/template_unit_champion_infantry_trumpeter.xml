@@ -14,7 +14,7 @@
     </Melee>
   </Attack>
    <Cost>
-    <BuildTime op="mul">0.95</BuildTime>
+    <BuildTime op="mul">1.05</BuildTime>
     <Resources>
       <food op="add">25</food>
       <wood>0</wood>
@@ -28,8 +28,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="add">-0.5</Hack>
+        <Pierce op="add">-0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
