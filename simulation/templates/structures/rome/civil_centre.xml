@@ -20,7 +20,6 @@
       phase_city_{civ}
       phase_empi_rome
       unlock_shared_los
-      unlock_shared_dropsites
       roman_roads
       unlock_spies
       spy_counter

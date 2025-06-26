@@ -7,12 +7,7 @@
 		"stone": 100,
 		"metal": 100
 	},
-	"requirements": {
-		"entity": {
-			"number": 3
-		}
-	},
-	"requirementsTooltip": "Requires three Traders",
+
 	"icon": "dove.png",
 	"researchTime": 40,
 	"tooltip": "Allows using allied dropsites.",
