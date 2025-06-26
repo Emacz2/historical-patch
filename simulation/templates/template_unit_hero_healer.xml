@@ -21,7 +21,7 @@
     <HealableClasses datatype="tokens">Human</HealableClasses>
   </Heal>
   <Health>
-    <Max>650</Max>
+    <Max>500</Max>
   </Health>
   <Identity>
     <VisibleClasses datatype="tokens">-Soldier Healer Support</VisibleClasses>
@@ -32,9 +32,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>4</Hack>
-        <Pierce>8</Pierce>
-        <Crush>4</Crush>
+        <Hack>5</Hack>
+        <Pierce>7</Pierce>
+        <Crush>5</Crush>
       </Damage>
     </Entity>
   </Resistance>

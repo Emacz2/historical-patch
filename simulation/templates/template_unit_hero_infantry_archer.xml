@@ -24,9 +24,6 @@
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
     <GenericName>Hero Archer</GenericName>
   </Identity>
-  <Health>
-    <Max>300</Max>
-  </Health>
   <Resistance>
     <Entity>
       <Damage>

@@ -20,9 +20,6 @@
       <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Ranged>
   </Attack>
-  <Health>
-    <Max>300</Max>
-  </Health>
   <Identity>
     <GenericName>Hero Infantry Crossbowman</GenericName>
     <VisibleClasses datatype="tokens">Ranged Crossbowman</VisibleClasses>
