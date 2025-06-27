@@ -8,9 +8,6 @@
     <GenericName>Druid</GenericName>
     <SpecificName>Druid</SpecificName>
     <Icon>units/celt/support_healer.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-    </Requirements>
   </Identity>
   <Vision>
     <Range>65</Range>
