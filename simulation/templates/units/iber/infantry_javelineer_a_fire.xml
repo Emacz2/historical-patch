@@ -18,27 +18,20 @@
         <Burning>
           <Interval>1000</Interval>
           <Damage>
-            <Fire>1.5</Fire>
+            <Fire>2</Fire>
           </Damage>
           <Stackability>Stack</Stackability>
           <Duration>6000</Duration>
         </Burning>
       </ApplyStatus>
      <Damage>
-        <Pierce op="add">-5</Pierce>
+        <Pierce op="mul">0.9</Pierce>
       </Damage>
       <Projectile>
         <Spread op="add">0.5</Spread>
       </Projectile>
     </Ranged>
   </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Pierce op="add">0.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Identity>
     <Civ>iber</Civ>
     <SelectionGroupName>units/iber/infantry_javelineer_b</SelectionGroupName>

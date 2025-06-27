@@ -10,8 +10,8 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "kush" },
-			{ "civ": "sele" }
+			{ "civ": "kush" }
+			
 		]
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",

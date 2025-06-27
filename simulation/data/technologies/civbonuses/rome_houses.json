@@ -1,0 +1,18 @@
+{
+	"genericName": "Roman Villas",
+	"autoResearch": true,
+	"description": ".",
+	"requirements": { "civ": "rome" },
+	  "icon": "ionic_column.png",
+	  "tooltip": "Houses +4 garrison capacity, technologies -50% resource cost.",
+	  "modifications": [
+		{ "value": "GarrisonHolder/Max", "add": 4},
+		{ "value": "Researcher/TechCostMultiplier/food", "multiply": 0.5 },
+		{ "value": "Researcher/TechCostMultiplier/wood", "multiply": 0.5 },
+		{ "value": "Researcher/TechCostMultiplier/stone", "multiply": 0.5 },
+		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.5 }
+  
+		  
+	  ],
+	  "affects": ["House"]
+  }

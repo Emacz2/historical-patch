@@ -28,9 +28,6 @@
     <SelectionGroupName>template_unit_support_healer</SelectionGroupName>
     <Rank>Basic</Rank>
     <Tooltip>Heal units.</Tooltip>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <xp>8</xp>
