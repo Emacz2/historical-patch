@@ -1,6 +1,5 @@
 {
-	"type": "range",
-	"radius": 50,
+	"type": "global",
 	"affects": ["Soldier"],
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },

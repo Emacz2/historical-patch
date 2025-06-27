@@ -57,6 +57,6 @@
   </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Melee Serfs 20% less dmg, -2 Hack/Pierce and -2.5 Crush resistance but 10% faster train time cost 10 less wood and gather resources 15% faster</Tooltip>
+    <Tooltip>Melee Serfs 15% less dmg, -2 Hack/Pierce resistance but 15% faster train time cost 10 less wood and gather resources 10% faster</Tooltip>
   </Identity>
 </Entity>

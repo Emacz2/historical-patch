@@ -1,12 +1,11 @@
 {
-	"genericName": "Infantry consisted primarely of shepherds",
+	"genericName": "Spepard army core",
 	"autoResearch": true,
-	"description": "",
+	"description": "Infantry consisted primarely of shepherds",
 	"requirements": { "civ": "mace" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Mace pikeman 5% faster gathering rate, 2% faster movement speed, 10% less train time and 20% less wood, but attack 10% slower, have 50% less armor and ranged units 25% less accurate.",
+	"tooltip": "Mace pikeman 15% less dmg, -2 Hack/Pierce resistance but 15% faster train time cost 10 less wood, gather resources 10% faster and 2% faster walk speed.",
 	"modifications": [
-		{"value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 },
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
 
 

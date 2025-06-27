@@ -2,12 +2,13 @@
 	"genericName": "Heavy Skirmishers",
 	"description": "Add armor to your citizen infantry skirmishers",
 	"cost": {
-		"food": 350
+		"food": 350,
+		"metal": 75
 		
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_village" },
+			{ "tech": "phase_town" },
 			{ "civ": "iber" },
 			{ "civ": "rome" }
 		]

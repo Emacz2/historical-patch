@@ -20,6 +20,9 @@
 </Attack>
   <Cost>
     <BuildTime op="mul">0.85</BuildTime>
+    <Resources>
+      <wood op="add">-10</wood>
+    </Resources>
   </Cost>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
@@ -44,6 +47,6 @@
   </ResourceGatherer>
   <Identity>
     <VisibleClasses datatype="tokens">Serf</VisibleClasses>
-    <Tooltip>Ranged Serfs 15% less dmg, 10% less acurate and -5 range, but 15% faster train time and gather resources 10% faster</Tooltip>
+    <Tooltip>Ranged Serfs 15% less dmg, 10% less acurate and -5 range, but 15% faster train time, -10 wood cost, gather resources 10% faster and 2% faster walk speed</Tooltip>
   </Identity>
 </Entity>

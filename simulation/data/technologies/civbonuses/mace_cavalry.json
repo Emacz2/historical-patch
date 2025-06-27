@@ -4,14 +4,15 @@
 	"description": "Mace cavalry were made up of noblemen while infantry were shepards.",
 	"requirements": { "civ": "mace" },
 	"icon": "sword_cavalry.png",
-	"tooltip": "Cavalry +0.5 of Hack/Pierce resistance and 5% more dmg, but citizen cavalry cost +15 metal.",
+	"tooltip": "Cavalry 1 of Hack/Pierce resistance and 105% more dmg, but citizen cavalry cost +15 metal and take 15% longer to train.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05},
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05},
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05},
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1},
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1},
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1},
+		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "!Hero !Champion" },
 		{ "value": "Cost/Resources/metal", "add": 15, "affects": "!Hero !Champion"  }
 		
 	],

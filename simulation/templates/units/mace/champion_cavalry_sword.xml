@@ -8,20 +8,20 @@
     <Icon>units/mace/champion_cavalry.png</Icon>
     <SelectionGroupName>units/mace/champion_cavalry</SelectionGroupName>
     <VisibleClasses datatype="tokens">Nobels</VisibleClasses>
-    <Tooltip>Slowlyg regenerate health over time 1hp every 4 seconds</Tooltip>
+    <Tooltip>Slowly regenerate health over time 2hp every 4 seconds</Tooltip>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <Health>
-    <RegenRate>0.25</RegenRate>
+    <RegenRate>0.5</RegenRate>
   </Health> 
   <Upgrade>
     <Spear>
       <Entity>units/mace/champion_cavalry</Entity>
       <Tooltip>Switch to using a sword.</Tooltip>
       <Variant>upgrading</Variant>
-      <Time>2</Time>
+      <Time>4</Time>
     </Spear>
   </Upgrade>
   <VisualActor>

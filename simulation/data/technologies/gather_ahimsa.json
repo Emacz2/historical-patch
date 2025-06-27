@@ -3,7 +3,8 @@
 	"genericName": "Ahimsa",
 	"description": "Ahimsa is the ancient Indian principle of nonviolence which applies to actions towards all living beings. It is a key virtue in Indian religions like Jainism, Buddhism, Hinduism, and Sikhism.",
 	"cost": {
-		"wood": 100
+		"wood": 100,
+		"metal": 50
 	},
 	"requirements": {
 		"all": [
@@ -13,9 +14,10 @@
 	},
 	"icon": "cornucopia.png",
 	"researchTime": 40,
-	"tooltip": "Units +100% fruit gather rate, but −80% meat and fish gather.",
+	"tooltip": "Units +100% fruit gather rate, 5% farming gather rate, but −80% meat and fish gather.",
 	"modifications": [
 		{ "value": "ResourceGatherer/Rates/food.fruit", "multiply": 2.0 },
+		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.05 },
 		{ "value": "ResourceGatherer/Rates/food.fish", "multiply": 0.2 },
 		{ "value": "ResourceGatherer/Rates/food.meat", "multiply": 0.2 }
 	],

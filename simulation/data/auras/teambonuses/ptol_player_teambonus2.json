@@ -3,11 +3,11 @@
 	"affects": ["Structure"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
-		{ "value": "Cost/Resources/wood", "multiply": 0.8 },
-		{ "value": "Cost/BuildTime", "multiply": 0.9 }
+		{ "value": "Cost/Resources/wood", "multiply": 0.85 },
+		{ "value": "Cost/BuildTime", "multiply": 0.85 }
 		
 	],
-	"auraName": "Sundried bricks",
+	"auraName": "High quality cedar wood",
 	"showDescription": 1,
-	"auraDescription": "Structures 20% less wood and 10% less build time"
+	"auraDescription": "Structures 15% less wood cost and build time"
 }

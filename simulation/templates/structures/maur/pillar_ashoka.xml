@@ -12,10 +12,10 @@
   </BuildRestrictions>
   <Capturable disable=""/>
   <Cost>
-    <BuildTime>80</BuildTime>
+    <BuildTime>65</BuildTime>
     <Resources>
-      <stone>100</stone>
-      <metal>100</metal>
+      <stone>200</stone>
+      <metal>200</metal>
     </Resources>
   </Cost>
   <Footprint replace="">

@@ -5,8 +5,9 @@
   </BuildRestrictions>
   <Cost>
     <BuildTime op="mul">1.5</BuildTime>
-    <Resources>
-      <stone op="mul">1.5</stone>
+      <Resources>
+      <wood>100</wood>
+      <stone>250</stone>
     </Resources>
   </Cost>
   <Footprint>
@@ -23,7 +24,7 @@
     <Civ>ptol</Civ>
    <GenericName>Temple of Isis</GenericName>
     <SpecificName>Naos</SpecificName>
-   <Tooltip>Train Heroes and Healers. Research special technologies.</Tooltip>
+   <Tooltip>Train Heroes and Healers. Research special technologies.Gain trickle of metal +3 per second</Tooltip>
    <Classes datatype="tokens">CivSpecific</Classes>
    <VisibleClasses datatype="tokens">City TempleOfIsis</VisibleClasses>
    <Icon>structures/temple_epic.png</Icon>
@@ -42,6 +43,12 @@
       pair_unlock_cult_ptol
     </Technologies>
   </Researcher>
+  <ResourceTrickle>
+    <Rates>
+      <metal>3</metal>
+    </Rates>
+    <Interval>1000</Interval>
+  </ResourceTrickle>
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/hero_ptolemy_i

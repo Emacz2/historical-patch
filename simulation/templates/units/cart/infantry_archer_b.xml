@@ -9,12 +9,6 @@
       structures/cart/numidian_camp
     </Entities>
   </Builder>
-    <Cost>
-    <Resources>
-      <food>50</food>
-      <wood>25</wood>
-    </Resources>
-  </Cost>
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/infantry_archer_b</SelectionGroupName>
