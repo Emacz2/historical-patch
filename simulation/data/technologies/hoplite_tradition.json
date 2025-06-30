@@ -19,11 +19,13 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_corinthian.png",
 	"researchTime": 60,
-	"tooltip": "Hoplites −20% training time, −30% promotion experience, and +25 health.",
+	"tooltip": "Hoplites −20% training time, −30% promotion experience, Citizen +15 HP Champion +25.",
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 0.80 },
 		{ "value": "Promotion/RequiredXp", "multiply": 0.7 },
-		{ "value": "Health/Max", "add": 25 }
+		{ "value": "Health/Max", "add": 15 },
+		{ "value": "Health/Max", "add": 10, "affects": "Champion" }
+
 	],
 	"affects": ["Infantry Spearman !Hero"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

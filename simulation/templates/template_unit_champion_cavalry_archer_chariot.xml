@@ -32,6 +32,9 @@
       <Techs datatype="tokens">unlock_champion_chariots</Techs>
     </Requirements>
   </Identity>
+  <Loot>
+    <metal op="add">10</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

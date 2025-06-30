@@ -35,13 +35,6 @@
     <Classes datatype="tokens">Human FastMoving CitizenSoldier</Classes>
     <VisibleClasses datatype="tokens">Citizen Soldier Cavalry</VisibleClasses>
   </Identity>
-  <Loot>
-    <xp>130</xp>
-    <food>10</food>
-    <wood>5</wood>
-    <stone>2</stone>
-    <metal>2</metal>
-  </Loot>
   <Position>
     <TurnRate>10</TurnRate>
   </Position>

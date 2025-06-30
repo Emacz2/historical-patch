@@ -36,16 +36,3 @@
     </SoundGroups>
   </Sound>
 </Entity>
-<Attack>
-    <Melee>
-      <AttackName>Axe</AttackName>
-      <Damage>
-        <Hack>20</Hack>
-        <Crush>7</Crush>
-      </Damage>
-      <MaxRange>4</MaxRange>
-      <PrepareTime>500</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
-      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
-    </Melee>
-  </Attack>

@@ -101,25 +101,18 @@
           <BlockChance>1</BlockChance>
         </Poisoned>
       </ApplyStatus>
-      <Damage>
-        <Hack>1</Hack>
-        <Pierce>10</Pierce>
-        <Crush>1</Crush>
-      </Damage>
-    </Entity>
-    <Foundation>
       <ApplyStatus>
-        <Poisoned>
+        <Burning>
           <Duration>0.0</Duration>
-          <BlockChance>1</BlockChance>
-        </Poisoned>
+          <BlockChance>0.1</BlockChance>
+        </Burning>
       </ApplyStatus>
       <Damage>
         <Hack>1</Hack>
         <Pierce>10</Pierce>
         <Crush>1</Crush>
       </Damage>
-    </Foundation>
+    </Entity>
   </Resistance>
   <Selectable>
     <Overlay>

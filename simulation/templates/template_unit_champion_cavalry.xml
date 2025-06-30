@@ -27,8 +27,8 @@
   </Identity>
   <Loot>
     <xp>200</xp>
-    <food>15</food>
-    <wood>8</wood>
+    <wood>20</wood>
+    <stone>5</stone>
     <metal>10</metal>
   </Loot>
   <Position>
