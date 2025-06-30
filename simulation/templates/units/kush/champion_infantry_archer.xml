@@ -24,7 +24,7 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-    <Upgrade>
+  <Upgrade>
     <Fire_Arrows>
       <Entity>units/kush/champion_infantry_archer_fire</Entity>
       <Tooltip>Switch to falming arrows.</Tooltip>
