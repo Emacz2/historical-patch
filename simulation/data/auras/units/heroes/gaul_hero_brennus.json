@@ -1,6 +1,6 @@
 {
 	"type": "range",
-	"radius": 50,
+	"radius": 45,
 	"affects": ["Human", "Siege", "Ship"],
 	"modifications": [
 		{ "value": "Looter/Resource/metal", "add": 15 }

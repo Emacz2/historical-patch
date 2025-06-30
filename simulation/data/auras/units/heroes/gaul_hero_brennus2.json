@@ -1,6 +1,6 @@
 {
 	"type": "range",
-	"radius": 50,
+	"radius": 45,
 	"affects": ["Infantry"],
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
@@ -8,9 +8,10 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1 },
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 }
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Attack/Capture/Capture", "add": 2 }
 	],
 	"auraName": "Sacker of Rome",
 	"showDescription": 1,
-	"auraDescription": "Infantry 10% more dmg."
+	"auraDescription": "Infantry 10% more dmg and +2 capture attack."
 }
