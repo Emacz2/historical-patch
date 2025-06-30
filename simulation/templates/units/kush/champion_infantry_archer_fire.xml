@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_archer">
- <Attack>
+<Attack>
     <Ranged>
     <ApplyStatus>
-        <Poisoned>
+          <Burning>
           <Interval>1500</Interval>
           <Damage>
-            <Poison>1.5</Poison>
+            <Fire>1</Fire>
           </Damage>
-          <Stackability>Extend</Stackability>
+          <Stackability>Stack</Stackability>
           <Duration>6000</Duration>
-        </Poisoned>
+        </Burning>
       </ApplyStatus>
     </Ranged>
   </Attack>
@@ -24,13 +24,13 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-    <Upgrade>
-    <Fire_Arrows>
+  <Upgrade>
+    <Poison_Arrows>
       <Entity>units/kush/champion_infantry_archer_fire</Entity>
-      <Tooltip>Switch to falming arrows.</Tooltip>
+      <Tooltip>Switch to poison tipped arrows.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>4</Time>
-    </Fire_Arrows>
+    </Poison_Arrows>
   </Upgrade>
   <VisualActor>
     <Actor>units/kushites/infantry_archer_c.xml</Actor>
