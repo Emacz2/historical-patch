@@ -8,6 +8,12 @@
     <RegenRate>7.5</RegenRate>
     <GarrisonRegenRate>5.0</GarrisonRegenRate>
   </Capturable>
+    <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      units/{civ}/infantry_torch
+    </Entities>
+  </Trainer>
   <Identity>
     <Civ>brit</Civ>
     <SpecificName>Miletucerdon</SpecificName>
