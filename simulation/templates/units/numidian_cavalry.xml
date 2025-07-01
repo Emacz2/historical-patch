@@ -11,6 +11,9 @@
     <WalkSpeed op="mul">1.15</WalkSpeed>
     <Acceleration op="mul">1.05</Acceleration>
   </UnitMotion>
+  <Health>
+    <Max op="add">50</Max>
+  </Health>
   <Identity>
     <GenericName>Numidian Light Javelineer Cavalry</GenericName>
     <Icon>units/cart/champion_cavalry.png</Icon>
