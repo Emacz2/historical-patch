@@ -1,7 +1,7 @@
 {
-	"genericName": "",
+	"genericName": "Early Shock Cavalry",
 	"autoResearch": true,
-	"description": "Under the constitution written by the mythical lawgiver Lycurgus, the institution of the Agoge was established, where Spartans were trained from the age of 6 to be superior warriors in defense of the Spartan state.",
+	"description": "",
 	"icon": "agoge.png",
 	"tooltip": "Cataphracts are available in p2 but 20% less dmg while costing 25% less wood in p2",
 	"requirements": { "civ": "sele" },
