@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="serf_ranged|template_unit_infantry_ranged_stone_serf">
+<Entity parent="units/ptol/infantry_slinger_b">
  <Builder>
     <Entities datatype="tokens">
       structures/ptol/lighthouse
@@ -15,7 +15,7 @@
     <Icon>units/ptol/infantry_slinger.png</Icon>
   </Identity>
   <Promotion>
-    <Entity>units/ptol/infantry_slinger_b</Entity>
+    <Entity>units/ptol/infantry_slinger_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/ptolemies/infantry_slinger_b.xml</Actor>
