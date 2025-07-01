@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/numidian_cavalry">
+<Entity parent="merc_cav_champ|template_unit_champion_cavalry_javelineer">
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
+  </UnitMotion>
   <Identity>
     <GenericName>Numidian Light Javelineer Cavalry</GenericName>
     <Icon>units/cart/champion_cavalry.png</Icon>
