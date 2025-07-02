@@ -11,7 +11,8 @@
 			{ "tech": "phase_town" },
 			{
 				"any": [
-					{ "civ": "mace" }
+					{ "civ": "mace" },
+					{ "civ": "sele" }
 				]
 			}
 		]

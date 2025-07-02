@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_military_barracks">
+<Entity parent="template_structure_civic_civil_centre_military_colony">
 <BuildRestrictions>
     <Territory>own neutral</Territory>
     <Distance>
@@ -7,14 +7,6 @@
       <MinDistance>150</MinDistance>
     </Distance>
   </BuildRestrictions>
-  <Cost>
-    <BuildTime>150</BuildTime>
-    <Resources>
-      <wood>50</wood>
-      <stone>150</stone>
-      <metal>50</metal>
-    </Resources>
-  </Cost>
   <Footprint>
     <Square width="34" depth="33"/>
     <Height>12</Height>
@@ -25,17 +17,21 @@
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/military_settlement.png</Icon>
   </Identity>
+  <Trainer>
+    <Entities replace="" datatype="tokens">
+      units/{civ}/champion_infantry_pikeman
+      units/{civ}/champion_cavalry
+      units/{civ}/infantry_pikeman_a
+      units/{civ}/infantry_archer_a
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="32" depth="31"/>
   </Obstruction>
-  <Trainer>
-    <Entities replace="" datatype="tokens">
-      units/{civ}/merc_archer_b
-      units/{civ}/merc_javelineer_b
-      units/{civ}/infantry_spearman_merc_b
-      units/{civ}/cavalry_spearman_b
-    </Entities>
-  </Trainer>
+  <ResourceDropsite>
+    <Types>food wood stone metal</Types>
+    <Sharable>true</Sharable>
+  </ResourceDropsite>
   <VisualActor>
     <Actor>structures/ptolemies/military_colony.xml</Actor>
     <FoundationActor>structures/fndn_9x9.xml</FoundationActor>
