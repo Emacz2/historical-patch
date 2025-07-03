@@ -9,7 +9,7 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max op="add">20</Max>
+    <Max op="add">10</Max>
   </Health>
   <Identity>
     <Lang>greek</Lang>
