@@ -10,9 +10,6 @@
   <Identity>
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_archer_b</SelectionGroupName>
-    <GenericName>Cretan Mercenary Archer</GenericName>
-    <SpecificName>Toxótēs Krētikós</SpecificName>
-    <Icon>units/mace/infantry_archer.png</Icon>
   </Identity>
  <Promotion>
     <Entity>units/ptol/merc_archer_a</Entity>
