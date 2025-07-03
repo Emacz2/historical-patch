@@ -9,6 +9,12 @@
     <SpecificName>Phrourion</SpecificName>
     <Tooltip>Train Heroes. Garrison Soldiers for additional arrows.</Tooltip>
   </Identity>
+  <Trainer>
+    <BatchTimeModifier>0.8</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/infantry_javelineer_a
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="24.0" depth="26.0"/>
   </Obstruction>

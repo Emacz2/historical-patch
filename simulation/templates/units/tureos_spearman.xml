@@ -3,14 +3,18 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1.5</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="add">2</Hack>
+        <Pierce op="add">1.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
   <Health>
     <Max op="add">10</Max>
   </Health>
+   <UnitMotion>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+    <Acceleration op="mul">0.95</Acceleration>
+  </UnitMotion>
   <Identity>
     <Lang>greek</Lang>
     <GenericName>Mercenary Thureos Spearman</GenericName>
