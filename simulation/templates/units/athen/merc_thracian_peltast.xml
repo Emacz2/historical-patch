@@ -19,6 +19,7 @@
       <metal op="add">10</metal>
     </Resources>
   </Cost>
+    <Promotion disable=""/>
   <VisualActor>
     <Actor>units/athenians/merc_inf_javelinist_a.xml</Actor>
   </VisualActor>

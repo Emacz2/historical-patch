@@ -30,6 +30,7 @@
       <Time>4</Time>
     </Peltast_Jav>
  </Upgrade>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>
