@@ -14,7 +14,7 @@
 		]
 	},
 	"requirementsTooltip": "Unlocked in Village Phase.",
-	"icon": "helmet_corinthian_bronze_old.png",
+	"icon": "bow.png",
 	"researchTime": 20,
 	"tooltip": "Unlock the ability to train Archers from baracks.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
