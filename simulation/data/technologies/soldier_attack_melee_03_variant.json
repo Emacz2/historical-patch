@@ -6,7 +6,7 @@
 	},
 	"description": "Secret steel working techniques give sword blades distinctive and beautiful markings. Not only that, but the steel's hardness is unparalleled.",
 	"cost": {
-		"food": 500,
+		"food": 400,
 		"metal": 400
 	},
 	"supersedes": "soldier_attack_melee_02",
@@ -29,9 +29,9 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.15 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.15 },
-		{ "value": "Attack/Melee/Damage/Hack", "affects": "Swordsman", "multiply": 1.15 },
-		{ "value": "Attack/Melee/Damage/Pierce", "affects": "Swordsman", "multiply": 1.15 },
-		{ "value": "Attack/Melee/Damage/Crush", "affects": "Swordsman", "multiply": 1.15 }
+		{ "value": "Attack/Melee/Damage/Hack", "affects": "Swordsman", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "affects": "Swordsman", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "affects": "Swordsman", "multiply": 1.1 }
 	],
 	"affects": ["Soldier !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

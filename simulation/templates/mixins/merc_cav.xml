@@ -12,16 +12,16 @@
   <Attack>
   <Melee merge="">
 	<Damage>
-	  <Hack op="mul">1.03</Hack>
-    <Pierce op="mul">1.03</Pierce>
-    <Crush op="mul">1.03</Crush>
+	  <Hack op="mul">1.05</Hack>
+    <Pierce op="mul">1.05</Pierce>
+    <Crush op="mul">1.05</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
 	<Damage>
-	  <Hack op="mul">1.02</Hack>
-      <Pierce op="mul">1.02</Pierce>
-      <Crush op="mul">1.02</Crush>
+	  <Hack op="mul">1.04</Hack>
+      <Pierce op="mul">1.04</Pierce>
+      <Crush op="mul">1.04</Crush>
     </Damage>
       <Projectile>
         <Spread op="mul">0.9</Spread>
