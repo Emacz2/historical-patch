@@ -6,15 +6,15 @@
         <Bleeding>
           <Interval>1000</Interval>
           <Damage>
-            <Bleeding>0.5</Bleeding>
+            <Bleeding>0.75</Bleeding>
           </Damage>
           <Stackability>Extend</Stackability>
           <Duration>9000</Duration>
         </Bleeding>
       </ApplyStatus>
       <Damage>
-        <Hack op="add">-3.0</Hack>
-        <Pierce op="add">-1.0</Pierce>
+        <Hack op="mul">0.9</Hack>
+        <Pierce op="mul">0.95</Pierce>
       </Damage>
       <MaxRange op="add">1.5</MaxRange>
       <PrepareTime>500</PrepareTime>

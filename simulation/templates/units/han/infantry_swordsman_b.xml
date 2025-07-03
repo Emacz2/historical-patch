@@ -5,6 +5,20 @@
       -structures/wallset_palisade
     </Entities>
   </Builder>
+  <Attack>
+    <Melee>
+    <ApplyStatus>
+        <Bleeding>
+          <Interval>1000</Interval>
+          <Damage>
+            <Bleeding>0.5</Bleeding>
+          </Damage>
+          <Stackability>Extend</Stackability>
+          <Duration>5000</Duration>
+        </Bleeding>
+      </ApplyStatus>
+    </Melee>
+  </Attack>
   <Identity>
     <Civ>han</Civ>
     <SelectionGroupName>units/han/infantry_swordsman_b</SelectionGroupName>

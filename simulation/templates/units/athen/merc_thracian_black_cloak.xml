@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/thracian_black_cloak">
+   <Identity>
+   <Rank>Advanced</Rank>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>1.5</Hack>
+        <Pierce>2</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Health>
+    <Max>70</Max>
+  </Health>
+  <UnitMotion>
+    <WalkSpeed>10.3</WalkSpeed>
+    <Acceleration>45.1</Acceleration>
+  </UnitMotion>
+  <Upgrade>
+    <Peltast_Jav>
+      <Entity>units/athen/merc_thracian_peltast</Entity>
+      <Tooltip>Switch to throwing javilin.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Peltast_Jav>
+ </Upgrade>
+  <VisualActor>
+    <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
+  </VisualActor>
+</Entity>

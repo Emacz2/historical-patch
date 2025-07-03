@@ -21,7 +21,7 @@
       -units/{civ}/infantry_archer_b
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_javelineer_b
-      units/{civ}/merc_inf_peltast
+      units/{civ}/merc_thracian_peltast
       units/{civ}/merc_inf_slinger_b
     </Entities>
   </Trainer>

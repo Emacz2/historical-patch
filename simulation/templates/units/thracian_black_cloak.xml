@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf|template_unit_champion_infantry_swordsman">
+<Entity parent="merc_inf|longsword|template_unit_infantry_melee_swordsman">
   <Attack>
     <Melee>
       <AttackName context="Name of an attack using a rhomphaia (ῥομφαία), a Thracian two-handed weapon capable of both thrusting and slashing.">Rhomphaia</AttackName>
@@ -11,6 +11,13 @@
     <SpecificName>Rhomphaiophoros</SpecificName>
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.02</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
+  </UnitMotion>
+   <Health>
+    <Max op="add">10</Max>
+  </Health>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>
