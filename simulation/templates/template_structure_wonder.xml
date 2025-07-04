@@ -10,7 +10,7 @@
     <CapturePoints op="mul">4</CapturePoints>
   </Capturable>
   <Cost>
-    <BuildTime>900</BuildTime>
+    <BuildTime>750</BuildTime>
     <Resources>
       <food>1000</food>
       <wood>1500</wood>
