@@ -2,9 +2,9 @@
 <Entity parent="template_structure_civic_civil_centre">
  <AlertRaiser>
     <List datatype="tokens">FemaleCitizen</List>
-    <RaiseAlertRange>120</RaiseAlertRange>
-    <EndOfAlertRange>180</EndOfAlertRange>
-    <SearchRange>100</SearchRange>
+    <RaiseAlertRange>60</RaiseAlertRange>
+    <EndOfAlertRange>90</EndOfAlertRange>
+    <SearchRange>50</SearchRange>
   </AlertRaiser>
   <Attack>
     <Ranged>
@@ -48,20 +48,20 @@
     <GarrisonArrowClasses>Soldier</GarrisonArrowClasses>
   </BuildingAI>
   <Capturable>
-    <CapturePoints>2000</CapturePoints>
+    <CapturePoints>1500</CapturePoints>
     <RegenRate>5.0</RegenRate>
   </Capturable>
   <Cost>
     <BuildTime>250</BuildTime>
     <Resources>
-      <food>300</food>
+      <food>50</food>
       <wood>150</wood>
       <stone>150</stone>
       <metal>150</metal>
     </Resources>
   </Cost>
   <GarrisonHolder>
-    <Max>15</Max>
+    <Max>12</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Support Infantry Cavalry</List>
