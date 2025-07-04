@@ -2,28 +2,31 @@
 <Entity parent="merc_inf|template_unit_infantry_ranged_peltast">
   <Attack>
     <Ranged>
-	    <Damage>
-	      <Pierce op="mul">1.05</Pierce>
+      <Damage>
+        <Pierce op="mul">0.9</Pierce>
+        <Hack op="mul">0.95</Hack>
       </Damage>
-      <Projectile>
+    <Projectile>
         <Spread>2.5</Spread>
       </Projectile>
     </Ranged>
   </Attack>
-   <Resistance>
+  <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">0.5</Hack>
+        <Hack>2.5</Hack>
+        <Pierce>3</Pierce>
+        <Crush>1</Crush>
       </Damage>
     </Entity>
   </Resistance>
+   <Health>
+    <Max>105</Max>
+  </Health>
   <UnitMotion>
     <WalkSpeed op="mul">1.03</WalkSpeed>
     <Acceleration op="mul">1.05</Acceleration>
   </UnitMotion>
-  <Health>
-    <Max op="add">5</Max>
-  </Health>
   <Identity>
     <Lang>greek</Lang>
     <GenericName>Thracian Peltast</GenericName>

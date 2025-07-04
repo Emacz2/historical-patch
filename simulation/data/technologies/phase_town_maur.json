@@ -27,7 +27,7 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
 		{"value": "ResourceGatherer/Rates/tree.wood", "multiply": 1.1, "affects": "Worker" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Citizen Ranged" },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -100, "affects": "Archer" },
 		{ "value": "Attack/Ranged/Spread", "multiply": 0.95, "affects": "Citizen Ranged" }
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"

@@ -5,6 +5,18 @@
       <AttackName context="Name of an attack using a rhomphaia (ῥομφαία), a Thracian two-handed weapon capable of both thrusting and slashing.">Rhomphaia</AttackName>
     </Melee>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>2.5</Hack>
+        <Pierce>3</Pierce>
+        <Crush>1</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Health>
+    <Max>105</Max>
+  </Health>
   <Identity>
     <Lang>greek</Lang>
     <GenericName>Thracian Black Cloak</GenericName>
@@ -12,13 +24,11 @@
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.02</WalkSpeed>
-    <Acceleration op="mul">1.05</Acceleration>
+    <WalkSpeed>10.3</WalkSpeed>
+    <Acceleration>45.1</Acceleration>
   </UnitMotion>
-   <Health>
-    <Max op="add">10</Max>
-  </Health>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>
 </Entity>
+  

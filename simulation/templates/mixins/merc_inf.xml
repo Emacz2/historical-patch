@@ -40,6 +40,7 @@
   </Loot>
   <Identity>
     <VisibleClasses datatype="tokens">PaidMerc</VisibleClasses>
+    <Tooltip>Merc Infantry have 1 less capture attack/range. Melee 5% more DMG and Ranged 4% more dmg 10% more accurate than than CS equivalent. They gain an addtion 7.5% dmg Adavanced and Elite rank but do not revieve WTF tech.</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>

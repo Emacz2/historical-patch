@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/sele/merc_archer_market_b">
+<Entity parent="units/sele/merc_archer_b">
    <Identity>
     <Rank>Advanced</Rank>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-<Promotion disable=""/>
+   <Promotion>
+    <Entity>units/sele/merc_archer_e</Entity>
+  </Promotion>
   <VisualActor>
     <Actor>units/seleucids/infantry_archer_a.xml</Actor>
   </VisualActor>

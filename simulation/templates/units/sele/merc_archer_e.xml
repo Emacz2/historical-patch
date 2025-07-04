@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/sele/merc_archer_market_a">
+<Entity parent="units/sele/merc_archer_a">
   <Identity>
     <Rank>Elite</Rank>
-    <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
   </Identity>
 <Promotion disable=""/>
   <VisualActor>
