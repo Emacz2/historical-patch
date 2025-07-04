@@ -10,13 +10,19 @@
       structures/ptol/temple_2
     </Entities>
   </Builder>
+  <Upgrade>
+    <Heavy_Jav>
+      <Entity>units/ptol/merc_javelineer_b</Entity>
+      <Tooltip>Switch to throwing javelins.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Heavy_Jav>
+  </Upgrade>
   <Identity>
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_spearman_merc_b</SelectionGroupName>
   </Identity>
-  <Promotion>
-    <Entity>units/ptol/infantry_spearman_merc_a</Entity>
-  </Promotion>
+   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/ptolemies/infantry_spearman_b.xml</Actor>
   </VisualActor>

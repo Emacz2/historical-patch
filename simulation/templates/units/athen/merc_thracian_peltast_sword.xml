@@ -6,10 +6,6 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed>10.3</WalkSpeed>
-    <Acceleration>45.1</Acceleration>
-  </UnitMotion>
   <Upgrade>
     <Peltast_Jav>
       <Entity>units/athen/merc_thracian_peltast</Entity>

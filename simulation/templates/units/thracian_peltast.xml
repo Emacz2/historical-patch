@@ -26,7 +26,8 @@
   </Health>
   <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
-    <Acceleration op="mul">1.05</Acceleration>
+    <RunMultiplier op="mul">1.1</RunMultiplier>
+    <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Identity>
     <Lang>greek</Lang>

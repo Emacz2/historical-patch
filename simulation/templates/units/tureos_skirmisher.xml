@@ -3,24 +3,25 @@
   <Attack>
     <Ranged>
       <Projectile>
-        <Spread>2.5</Spread>
+        <Spread>3.5</Spread>
       </Projectile>
     </Ranged>
   </Attack>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2</Hack>
-        <Pierce op="add">1.5</Pierce>
+        <Hack>4</Hack>
+        <Pierce>4.5</Pierce>
+        <Crush>1.5</Crush>
       </Damage>
     </Entity>
   </Resistance>
   <Health>
-    <Max op="add">5</Max>
+    <Max>125</Max>
   </Health>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.95</WalkSpeed>
-    <Acceleration op="mul">0.95</Acceleration>
+    <UnitMotion>
+    <WalkSpeed>9.4</WalkSpeed>
+    <Acceleration>35</Acceleration>
   </UnitMotion>
   <Identity>
     <Lang>greek</Lang>

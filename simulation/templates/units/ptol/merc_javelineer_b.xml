@@ -7,13 +7,19 @@
       structures/ptol/temple_2
     </Entities>
   </Builder>
+   <Upgrade>
+    <Spear>
+      <Entity>units/ptol/infantry_spearman_merc_b</Entity>
+      <Tooltip>Switch to using a spear.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Spear>
+  </Upgrade>
   <Identity>
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_javelineer_b</SelectionGroupName>
   </Identity>
-  <Promotion>
-    <Entity>units/ptol/merc_javelineer_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_javelinist_b.xml</Actor>
   </VisualActor>

@@ -24,8 +24,9 @@
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
   </Identity>
   <UnitMotion>
-    <WalkSpeed>10.3</WalkSpeed>
-    <Acceleration>45.1</Acceleration>
+    <WalkSpeed>10.5</WalkSpeed>
+    <RunMultiplier op="mul">1.1</RunMultiplier>
+    <Acceleration>49.4</Acceleration>
   </UnitMotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
