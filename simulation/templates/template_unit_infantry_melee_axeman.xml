@@ -16,7 +16,7 @@
   </Attack>
   <Cost>
     <Resources>
-      <wood>40</wood>
+      <wood>10</wood>
       <metal>10</metal>
     </Resources>
   </Cost>
@@ -34,6 +34,10 @@
   <UnitMotion>
     <WalkSpeed op="mul">0.89</WalkSpeed>
   </UnitMotion>
+  <Loot>
+    <wood>10</wood>
+    <metal>7</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

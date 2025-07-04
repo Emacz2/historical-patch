@@ -37,6 +37,11 @@
     <Tooltip>Counters: 3 × vs Cavalry. Light infantry spearman, without a shield</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
+    <Loot>
+    <wood>10</wood>
+    <metal>3</metal>
+    <stone>2</stone>
+  </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">0.93</WalkSpeed>
   </UnitMotion>

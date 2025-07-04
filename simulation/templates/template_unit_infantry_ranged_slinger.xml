@@ -31,6 +31,11 @@
     <VisibleClasses datatype="tokens">Slinger Stone</VisibleClasses>
     <GenericName>Slinger</GenericName>
   </Identity>
+  <Loot>
+    <wood>5</wood>
+    <metal>3</metal>
+    <stone>4</stone>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/sling_attack.xml</attack_ranged>

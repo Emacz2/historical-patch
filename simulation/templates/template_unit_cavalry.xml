@@ -36,10 +36,7 @@
     <VisibleClasses datatype="tokens">Citizen Soldier Cavalry</VisibleClasses>
   </Identity>
   <Loot>
-    <xp>130</xp>
-    <wood>10</wood>
-    <stone>5</stone>
-    <metal>5</metal>
+    <xp>75</xp>
   </Loot>
   <Position>
     <TurnRate>10</TurnRate>

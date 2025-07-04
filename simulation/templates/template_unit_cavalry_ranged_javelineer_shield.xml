@@ -18,6 +18,9 @@
     <Tooltip>Shield adds 0.5 Hack and 1 Pierce resitance but repeat time increased 150.</Tooltip>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
+  <Loot>
+    <metal op="add">2</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/javelin_attack.xml</attack_ranged>

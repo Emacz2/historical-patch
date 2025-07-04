@@ -28,6 +28,11 @@
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
     <GenericName>Mounted Archer</GenericName>
   </Identity>
+   <Loot>
+    <food>15</food>
+    <metal>10</metal>
+    <wood>12</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

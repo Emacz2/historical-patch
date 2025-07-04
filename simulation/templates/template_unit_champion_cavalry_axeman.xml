@@ -30,6 +30,10 @@
     <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>
     <GenericName>Champion Cavalry Axeman</GenericName>
   </Identity>
+  <Loot>
+    <metal>18</metal>
+    <wood>24</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

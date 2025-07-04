@@ -31,6 +31,10 @@
     <GenericName>Champion Cavalry Crossbowman</GenericName>
     <VisibleClasses datatype="tokens">Ranged Crossbowman</VisibleClasses>
   </Identity>
+  <Loot>
+    <metal>20</metal>
+    <wood>24</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

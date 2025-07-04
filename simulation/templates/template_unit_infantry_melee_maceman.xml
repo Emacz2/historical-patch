@@ -16,13 +16,18 @@
   </Attack>
   <Cost>
     <Resources>
-      <wood>50</wood>
+      <wood>45</wood>
+      <metal>5</metal>
     </Resources>
   </Cost>
   <Identity>
     <GenericName>Infantry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
+    <Loot>
+    <wood>10</wood>
+    <metal>7</metal>
+  </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">0.90</WalkSpeed>
   </UnitMotion>

@@ -34,6 +34,10 @@
     <GenericName>Infantry Torchman</GenericName>
     <VisibleClasses datatype="tokens">Torchman</VisibleClasses>
   </Identity>
+  <Loot>
+    <wood>10</wood>
+    <metal>2</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

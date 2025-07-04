@@ -23,6 +23,10 @@
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
     <GenericName>Champion Cavalry Archer</GenericName>
   </Identity>
+  <Loot>
+    <metal>20</metal>
+    <wood>24</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

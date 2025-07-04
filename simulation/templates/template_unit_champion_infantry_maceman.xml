@@ -18,6 +18,10 @@
     <GenericName>Champion Infantry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Melee Maceman</VisibleClasses>
   </Identity>
+  <Loot>
+    <wood>15</wood>
+    <metal>10</metal>
+  </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">0.9</WalkSpeed>
   </UnitMotion>

@@ -26,10 +26,8 @@
     <GenericName>Champion Cavalry</GenericName>
   </Identity>
   <Loot>
-    <xp>200</xp>
-    <wood>20</wood>
-    <stone>5</stone>
-    <metal>10</metal>
+    <xp>160</xp>
+    <food>25</food>
   </Loot>
   <Position>
     <TurnRate>5</TurnRate>

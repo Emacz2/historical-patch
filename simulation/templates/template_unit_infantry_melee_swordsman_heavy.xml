@@ -48,6 +48,10 @@
     <Tooltip>Counters: 1.5× vs Ranged Infantry.</Tooltip>
     <GenericName>Heavy Swordsman</GenericName>
   </Identity>
+  <Loot>
+    <wood>7</wood>
+    <metal>10</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

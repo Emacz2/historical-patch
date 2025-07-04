@@ -23,6 +23,10 @@
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Swordsman</GenericName>
   </Identity>
+  <Loot>
+    <wood>12</wood>
+    <metal>12</metal>
+  </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">0.9</WalkSpeed>
   </UnitMotion>

@@ -29,8 +29,9 @@
     <GenericName>Infantry Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
-  <Loot>
-    <wood>5</wood>
+   <Loot>
+    <wood>7</wood>
+    <metal>5</metal>
   </Loot>
   <Sound>
     <SoundGroups>

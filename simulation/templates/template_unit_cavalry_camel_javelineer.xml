@@ -29,6 +29,11 @@
     <GenericName>Mounted Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
   </Identity>
+  <Loot>
+    <food>15</food>
+    <metal>10</metal>
+    <wood>10</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/javelin_attack.xml</attack_ranged>

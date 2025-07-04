@@ -17,6 +17,9 @@
     <GenericName>Cavalry Swordsman with shield</GenericName>
     <Tooltip>Shield adds 0.5 Hack and 1 Pierce resitance but repeat time increased 150.</Tooltip>
   </Identity>
+  <Loot>
+    <metal op="add">2</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

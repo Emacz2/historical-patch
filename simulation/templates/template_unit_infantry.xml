@@ -39,10 +39,7 @@
     <Rank>Basic</Rank>
   </Identity>
   <Loot>
-    <xp>100</xp>
-    <wood>10</wood>
-    <stone>5</stone>
-    <metal>5</metal>
+    <xp>50</xp>
   </Loot>
   <Position>
     <Anchor>upright</Anchor>

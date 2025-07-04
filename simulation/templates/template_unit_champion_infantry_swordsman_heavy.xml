@@ -31,6 +31,10 @@
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Heavy Swordsman</GenericName>
   </Identity>
+  <Loot>
+    <wood op="add">-2</wood>
+    <metal op="add">3</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

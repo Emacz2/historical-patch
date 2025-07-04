@@ -28,6 +28,10 @@
     <GenericName>Infantry Crossbowman</GenericName>
     <VisibleClasses datatype="tokens">Crossbowman</VisibleClasses>
   </Identity>
+  <Loot>
+    <wood>10</wood>
+    <metal>5</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>

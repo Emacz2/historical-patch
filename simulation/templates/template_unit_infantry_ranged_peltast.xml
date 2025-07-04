@@ -13,6 +13,10 @@
     <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
     <Tooltip>Named for the shield they carried, peltast + .5 Hack and +1 Pierce reistance but 3% slower walk speed</Tooltip>
   </Identity>
+  <Loot>
+    <wood op="add">1</wood>
+    <metal op="add">1</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_ranged>attack/weapon/javelin_attack.xml</attack_ranged>

@@ -18,6 +18,10 @@
     <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>
     <GenericName>Champion Axeman</GenericName>
   </Identity>
+  <Loot>
+    <wood>15</wood>
+    <metal>10</metal>
+  </Loot>
   <Resistance>
     <Entity>
       <Damage>

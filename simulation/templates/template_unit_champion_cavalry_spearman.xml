@@ -36,6 +36,10 @@
     <Tooltip>Counters: 1.75× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
+  <Loot>
+    <metal>16</metal>
+    <wood>30</wood>
+  </Loot>
   <UnitMotion>
     <Acceleration op="mul">1.10</Acceleration>
   </UnitMotion>

@@ -39,6 +39,10 @@
       </Damage>
     </Entity>
   </Resistance>
+  <Loot>
+    <wood>7</wood>
+    <metal>10</metal>
+  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/pike_attack.xml</attack_melee>

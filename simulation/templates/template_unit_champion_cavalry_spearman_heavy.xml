@@ -24,6 +24,10 @@
     <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
+  <Loot>
+    <metal op="add">5</metal>
+    <wood op="add">2</wood>
+  </Loot>
   <Resistance>
     <Entity>
       <Damage>

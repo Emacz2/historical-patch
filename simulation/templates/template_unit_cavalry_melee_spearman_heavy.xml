@@ -37,6 +37,10 @@
     <Tooltip>Counters: 2.5× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
+   <Loot>
+    <metal op="add">3</metal>
+    <wood op="add">-1</wood>
+  </Loot>
   <UnitMotion>
     <WalkSpeed op="mul">0.9</WalkSpeed>
     <Acceleration op="mul">0.95</Acceleration>

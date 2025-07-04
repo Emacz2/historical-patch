@@ -24,6 +24,10 @@
     <Tooltip>Counters: 3.25× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Pikeman</VisibleClasses>
   </Identity>
+  <Loot>
+    <wood>15</wood>
+    <metal>20</metal>
+  </Loot>
   <Resistance>
     <Entity>
       <Damage>

@@ -16,10 +16,7 @@
     <GenericName>Champion Infantry</GenericName>
   </Identity>
   <Loot>
-    <xp>150</xp>
-    <wood>20</wood>
-    <metal>10</metal>
-    <stone>10</stone>
+    <xp>110</xp>
   </Loot>
   <Position>
     <Anchor>upright</Anchor>
