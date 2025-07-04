@@ -8,7 +8,7 @@
   </Identity>
   <Upgrade>
     <Black_Cloack>
-      <Entity>units/athen/merc_thracian_black_cloak</Entity>
+      <Entity>units/athen/merc_thracian_peltast_sword</Entity>
       <Tooltip>Switch to using a sword.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>4</Time>

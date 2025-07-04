@@ -15,8 +15,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>2.5</Hack>
-        <Pierce>3</Pierce>
+        <Hack>1.5</Hack>
+        <Pierce>2</Pierce>
         <Crush>1</Crush>
       </Damage>
     </Entity>
@@ -25,7 +25,7 @@
     <Max>105</Max>
   </Health>
   <UnitMotion>
-    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
     <Acceleration op="mul">1.05</Acceleration>
   </UnitMotion>
   <Identity>
