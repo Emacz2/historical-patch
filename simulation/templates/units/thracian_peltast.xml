@@ -35,5 +35,9 @@
     <SpecificName>Peltastḗs Thrâx</SpecificName>
     <Icon>units/athen/infantry_javelinist.png</Icon>
   </Identity>
+  <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/athenians/merc_inf_javelinist_a.xml</Actor>
+  </VisualActor>
 </Entity>
  

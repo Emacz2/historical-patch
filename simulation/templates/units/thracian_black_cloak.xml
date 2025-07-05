@@ -27,6 +27,7 @@
     <RunMultiplier op="mul">1.1</RunMultiplier>
     <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>

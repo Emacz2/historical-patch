@@ -16,6 +16,7 @@
   <Health>
     <Max op="add">20</Max>
   </Health>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/carthaginians/infantry_swordsman_b.xml</Actor>
   </VisualActor>

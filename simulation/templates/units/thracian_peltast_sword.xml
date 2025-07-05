@@ -23,6 +23,7 @@
     <SpecificName>Rhomphaiophoros</SpecificName>
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
   </Identity>
+  <Promotion disable=""/>
   <UnitMotion>
     <WalkSpeed>10.5</WalkSpeed>
     <RunMultiplier op="mul">1.1</RunMultiplier>

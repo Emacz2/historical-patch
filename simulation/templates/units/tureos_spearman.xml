@@ -18,5 +18,9 @@
     <SpecificName>Thureophóros Misthophóros</SpecificName>
     <Icon>units/ptol/infantry_spearman_2.png</Icon>
   </Identity>
+  <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/ptolemies/infantry_spearman_b.xml</Actor>
+  </VisualActor>
 </Entity>
  
