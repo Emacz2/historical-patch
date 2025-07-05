@@ -2,9 +2,6 @@
 <Entity parent="units/ptol/merc_archer_b">
    <Identity>
     <Rank>Advanced</Rank>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/ptol/merc_archer_e</Entity>

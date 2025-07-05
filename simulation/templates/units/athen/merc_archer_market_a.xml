@@ -2,11 +2,10 @@
 <Entity parent="units/athen/merc_archer_market_b">
   <Identity>
     <Rank>Advanced</Rank>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-<Promotion disable=""/>
+  <Promotion>
+    <Entity>units/athen/merc_archer_market_e</Entity>
+  </Promotion>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_a.xml</Actor>
   </VisualActor>

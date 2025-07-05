@@ -7,7 +7,7 @@
   </Damage>
   <MaxRange op="add">2.0</MaxRange>
   </Ranged>
-</Attack>
+  </Attack>
    <Resistance>
     <Entity>
       <Damage>
@@ -20,7 +20,7 @@
     <WalkSpeed op="mul">1.02</WalkSpeed>
     <Acceleration op="mul">1.05</Acceleration>
   </UnitMotion>
-   <Health>
+  <Health>
     <Max op="add">5</Max>
   </Health>
    <Identity>
@@ -29,4 +29,7 @@
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
   </Identity>
+  <VisualActor>
+  <Actor>units/macedonians/infantry_archer_b.xml</Actor>
+  </VisualActor>
 </Entity>

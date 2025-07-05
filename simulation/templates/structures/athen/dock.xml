@@ -19,7 +19,7 @@
     <Entities datatype="tokens">
       units/{civ}/support_slave
       units/{civ}/champion_marine_dock
-      -units/{civ}/infantry_archer_b_dock
+      units/{civ}/infantry_archer_b_dock
     </Entities>
   </Trainer>
   <VisualActor>
