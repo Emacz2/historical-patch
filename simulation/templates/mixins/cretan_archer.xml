@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Attack>
+    <Ranged>
+      <Damage>
+	      <Pierce op="mul">1.05</Pierce>
+      </Damage>
+    <MaxRange op="add">2.0</MaxRange>
+    <Projectile>
+      <Spread op="mul">0.9</Spread>
+    </Projectile>
+    </Ranged>
+  </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.02</WalkSpeed>
+    <Acceleration op="mul">1.05</Acceleration>
+  </UnitMotion>
+  <Health>
+    <Max op="add">5</Max>
+  </Health>
+  <Identity>
+    <Lang>greek</Lang>
+    <GenericName>Cretan Mercenary Archer</GenericName>
+    <SpecificName>Toxótēs Krētikós</SpecificName>
+    <Icon>units/mace/infantry_archer.png</Icon>
+    <VisibleClasses datatype="tokens">PaidMerc Cretan</VisibleClasses>
+    <Tooltip>Merc Infantry have 1 less capture attack/range. Melee 5% more DMG and Ranged 4% more dmg 10% more accurate than than CS equivalent. They gain an addtion 7.5% dmg Adavanced and Elite rank but do not revieve WTF tech.</Tooltip>
+  </Identity>
+  <ResourceGatherer disable=""/>
+</Entity>
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/cretan_archer">
+<Entity parent="merc_inf|cretan_archer|template_unit_infantry_ranged_archer_greek">
  <Builder>
   <Entities datatype="tokens">
       structures/spart/gerousia

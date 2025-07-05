@@ -9,7 +9,7 @@
   </Builder>
    <Upgrade>
     <Spear>
-      <Entity>units/ptol/infantry_spearman_merc_b</Entity>
+      <Entity>units/ptol/merc_tureos_spearman</Entity>
       <Tooltip>Switch to using a spear.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>4</Time>
