@@ -6,12 +6,12 @@
       <Damage>
         <Pierce>15</Pierce>
       </Damage>
-      <MaxRange>72</MaxRange>
+      <MaxRange>70</MaxRange>
       <PrepareTime>0</PrepareTime>
       <RepeatTime>1100</RepeatTime>
       <Projectile>
         <Speed>125</Speed>
-        <Spread>1</Spread>
+        <Spread>1.5</Spread>
         <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="5"/>

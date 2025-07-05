@@ -8,14 +8,14 @@
     <BuildTime>18</BuildTime>
   </Cost>
   <Health>
-    <Max>180</Max>
+    <Max>185</Max>
   </Health>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>3.5</Hack>
+        <Hack>4</Hack>
         <Pierce>4.5</Pierce>
-        <Crush>2.5</Crush>
+        <Crush>3.5</Crush>
       </Damage>
     </Entity>
   </Resistance>

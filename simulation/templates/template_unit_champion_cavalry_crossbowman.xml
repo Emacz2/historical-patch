@@ -6,7 +6,7 @@
       <Damage>
         <Pierce>50</Pierce>
       </Damage>
-      <MaxRange>42</MaxRange>
+      <MaxRange>40</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>3000</RepeatTime>
       <Projectile>
@@ -19,14 +19,6 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-2</Hack>
-        <Pierce op="add">-2</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Identity>
     <GenericName>Champion Cavalry Crossbowman</GenericName>
     <VisibleClasses datatype="tokens">Ranged Crossbowman</VisibleClasses>

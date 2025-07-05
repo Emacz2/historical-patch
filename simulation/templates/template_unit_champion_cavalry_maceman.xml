@@ -6,7 +6,7 @@
       <Damage>
         <Hack>8</Hack>
         <Pierce>3</Pierce>
-        <Crush>11</Crush>
+        <Crush>13</Crush>
       </Damage>
       <MaxRange>3.5</MaxRange>
       <PrepareTime>550</PrepareTime>
@@ -20,9 +20,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>5</Hack>
-        <Pierce>5</Pierce>
         <Crush>5</Crush> 
+        <Hack>7</Hack>
+        <Pierce>7.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>

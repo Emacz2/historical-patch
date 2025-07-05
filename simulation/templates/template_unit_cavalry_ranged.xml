@@ -8,7 +8,7 @@
     <BuildTime>16</BuildTime>
   </Cost>
   <Health>
-    <Max>120</Max>
+    <Max>115</Max>
   </Health>
   <UnitAI>
     <Formations datatype="tokens">
@@ -21,9 +21,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>2</Hack>
-        <Pierce>1.5</Pierce>
-        <Crush>1.5</Crush>
+        <Hack>1.5</Hack>
+        <Pierce>2</Pierce>
+        <Crush>2</Crush>
       </Damage>
     </Entity>
   </Resistance>

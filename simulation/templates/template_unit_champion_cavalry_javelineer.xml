@@ -4,10 +4,10 @@
     <Ranged>
       <AttackName>Javelin</AttackName>
       <Damage>
-        <Pierce>44</Pierce>
-        <Hack>4</Hack>
+        <Pierce>38</Pierce>
+        <Hack>3</Hack>
       </Damage>
-      <MaxRange>32</MaxRange>
+      <MaxRange>30</MaxRange>
       <PrepareTime>250</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Projectile>
@@ -20,14 +20,6 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-2</Hack>
-        <Pierce op="add">-2</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Identity>
     <GenericName>Champion Cavalry Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Javelineer</VisibleClasses>

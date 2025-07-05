@@ -4,8 +4,8 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack>7</Hack>
-        <Pierce>3</Pierce>
+        <Hack>6.5</Hack>
+        <Pierce>3.5</Pierce>
       </Damage>
       <MaxRange>2.75</MaxRange>
       <PrepareTime>500</PrepareTime>
@@ -25,6 +25,13 @@
       </Bonuses>
     </Melee>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Cost>
     <Resources>
       <wood>35</wood>
@@ -32,7 +39,7 @@
     </Resources>
   </Cost>
   <UnitMotion>
-    <WalkSpeed op="mul">0.90</WalkSpeed>
+    <WalkSpeed op="mul">0.87</WalkSpeed>
   </UnitMotion>
   <Loot>
     <wood>8</wood>

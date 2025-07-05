@@ -5,7 +5,7 @@
       <AttackName>Spear</AttackName>
       <Damage>
         <Hack>8</Hack>
-        <Pierce>14</Pierce>
+        <Pierce>15</Pierce>
       </Damage>
       <MaxRange>4.5</MaxRange>
       <PrepareTime>300</PrepareTime>

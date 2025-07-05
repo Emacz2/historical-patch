@@ -4,8 +4,8 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
       <Damage>
-        <Hack>18</Hack>
-        <Pierce>7</Pierce>
+        <Hack>15</Hack>
+        <Pierce>8</Pierce>
       </Damage>
       <MaxRange>3.5</MaxRange>
       <PrepareTime>250</PrepareTime>
@@ -25,9 +25,9 @@
    <Resistance>
     <Entity>
       <Damage>
-        <Hack>5</Hack>
-        <Pierce>5</Pierce>
         <Crush>5</Crush> 
+        <Hack>7</Hack>
+        <Pierce>7.5</Pierce> 
       </Damage>
     </Entity>
   </Resistance>
