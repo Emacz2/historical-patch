@@ -8,7 +8,7 @@
     <GenericName>Champion Melee Infantry</GenericName>
   </Identity>
    <Health>
-    <Max>250</Max>
+    <Max>210</Max>
   </Health>
   <Position>
     <Anchor>upright</Anchor>
@@ -16,9 +16,9 @@
   <Resistance>
     <Entity>
       <Damage>
+        <Crush>3</Crush> 
         <Hack>5.5</Hack>
         <Pierce>6</Pierce>
-        <Crush>3</Crush> 
       </Damage>
     </Entity>
   </Resistance>
