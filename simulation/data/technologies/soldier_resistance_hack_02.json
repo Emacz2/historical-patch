@@ -19,7 +19,7 @@
 	"researchTime": 40,
 	"tooltip": "Soldiers +1 hack resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 }
 	],
 	"affects": ["Soldier !Helot !Serf !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

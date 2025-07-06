@@ -9,10 +9,10 @@
 	},
 	"description": "The will to fight is crucial to victory. Inspire your troops with higher pay.",
 	"cost": {
-		"food": 1500,
-		"wood": 1500,
-		"stone": 1500,
-		"metal": 1500
+		"food": 1250,
+		"wood": 1250,
+		"stone": 1250,
+		"metal": 1250
 	},
 	"requirements": {
 		"all": [
@@ -25,12 +25,12 @@
 	"researchTime": 40,
 	"tooltip": "Soldiers, Siege Engines, and Ships +25% attack damage.",
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.25 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.25 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.25 },
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.25 },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.25 },
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.25 }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.20 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.20 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.20 },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.20 },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.20 },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.20 }
  	],
 	"affects": ["Ship", "Siege", "Soldier !Helot !PaidMerc !Perioikoi"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
