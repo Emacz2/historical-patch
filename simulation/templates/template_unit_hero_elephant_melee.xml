@@ -47,11 +47,11 @@
   <Position>
     <TurnRate>4</TurnRate>
   </Position>
-  <Resistance>
+<Resistance>
     <Entity>
       <Damage>
-        <Hack>10</Hack>
-        <Pierce>10</Pierce>
+        <Hack>14</Hack>
+        <Pierce>14</Pierce>
         <Crush>25</Crush>
       </Damage>
     </Entity>
