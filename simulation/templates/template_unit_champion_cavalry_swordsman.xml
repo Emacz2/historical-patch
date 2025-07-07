@@ -20,7 +20,7 @@
     </Melee>
   </Attack>
   <Health>
-    <Max>300</Max>
+    <Max>275</Max>
   </Health>
    <Resistance>
     <Entity>

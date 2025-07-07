@@ -24,7 +24,7 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max>300</Max>
+    <Max>275</Max>
   </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>

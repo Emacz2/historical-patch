@@ -1,11 +1,12 @@
 {
-	"type": "global",
-	"affects": ["Structure"],
+	"type": "range",
+	"radius": 100,
+	"affects": ["Worker"],
 	"modifications": [
-		{ "value": "TerritoryInfluence/Radius", "multiply": 1.2 }
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 }
 	],
-	"auraDescription": "Structures +20% territory influence radius.",
+	"auraName": "Entertained",
 	"showDescription": 1,
-	"auraName": "Hellenization",
-	"stackable": true
+	"auraDescription": "Workers +5% gather speed.",
+	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png"
 }
