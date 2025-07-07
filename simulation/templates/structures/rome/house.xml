@@ -11,12 +11,14 @@
     <SpecificName>Domus</SpecificName>
   </Identity>
   <Resistance>
+    <Entity>
       <ApplyStatus>
         <Burning>
           <Duration>0.0</Duration>
           <BlockChance>0.5</BlockChance>
         </Burning>
       </ApplyStatus>
+    </Entity>
   </Resistance>
   <VisualActor>
     <Actor>structures/romans/house.xml</Actor>
