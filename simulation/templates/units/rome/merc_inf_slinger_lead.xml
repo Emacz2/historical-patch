@@ -2,12 +2,13 @@
 <Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger_lead">
  <Identity>
     <Rank>Elite</Rank>
+    <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
    <Promotion>
     <Entity>units/rome/aux_inf_slinger_lead</Entity>
     <RequiredXp>4000</RequiredXp>
   </Promotion>
   <VisualActor>
-    <Actor>units/iberians/infantry_slinger_b.xml</Actor>
+    <Actor>units/iberians/infantry_slinger_e.xml</Actor>
   </VisualActor>
 </Entity>
