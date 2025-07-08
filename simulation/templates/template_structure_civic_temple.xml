@@ -33,6 +33,16 @@
     <VisibleClasses datatype="tokens">Village Temple</VisibleClasses>
     <Icon>structures/temple.png</Icon>
   </Identity>
+  <Resistance>
+    <Entity>
+      <ApplyStatus>
+        <Burning>
+          <Duration>0.3</Duration>
+          <BlockChance>0.7</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Loot>
     <stone>60</stone>
   </Loot>

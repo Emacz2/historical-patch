@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_special">
   <Auras datatype="tokens">
-    structures/library
+    structures/loyalty_regen
   </Auras>
   <BuildRestrictions>
     <Category>Library</Category>
@@ -28,6 +28,14 @@
     <VisibleClasses datatype="tokens">Library</VisibleClasses>
     <Icon>structures/library_scroll.png</Icon>
   </Identity>
+  <ProductionQueue/>
+  <Researcher>
+    <Technologies datatype="tokens">
+      scrolls_economic
+      scrolls_general
+      scrolls_military
+    </Technologies>
+  </Researcher>
   <Loot>
     <stone>40</stone>
     <metal>40</metal>

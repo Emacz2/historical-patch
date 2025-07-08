@@ -1,14 +1,11 @@
 {
-	"type": "global",
+	"type": "range",
+	"radius": 100,
 	"affects": ["Structure"],
 	"modifications": [
-		{ "value": "Researcher/TechCostMultiplier/food", "multiply": 0.8 },
-		{ "value": "Researcher/TechCostMultiplier/wood", "multiply": 0.8 },
-		{ "value": "Researcher/TechCostMultiplier/stone", "multiply": 0.8 },
-		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.8 },
-		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.8 }
+	{ "value": "Capturable/GarrisonRegenRate", "multiply": 1.5 }
 	],
 	"showDescription": 1,
-	"auraDescription": "Structures −20% technology resource costs and research time.",
+	"auraDescription": "Structures +50% capture points garrison regeneration rate.",
 	"auraName": "Centre of Scholarship"
 }
