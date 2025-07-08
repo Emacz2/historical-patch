@@ -24,8 +24,7 @@
     <Max>75</Max>
   </Health>
   <Promotion>
-    <Entity>units/rome/merc_inf_slinger_lead</Entity>
-    <RequiredXp>400</RequiredXp>
+    <Entity>units/rome/merc_inf_slinger_stone_market_a</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>

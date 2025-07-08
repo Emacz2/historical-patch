@@ -20,7 +20,6 @@
   </VisualActor>
    <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_inf_slinger_stone_market
       units/{civ}/aux_archer
       units/{civ}/aux_inf_slinger_lead
     </Entities>

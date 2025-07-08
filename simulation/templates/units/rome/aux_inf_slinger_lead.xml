@@ -1,25 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
-    <Civ>rome</Civ>
-    <GenericName>Balearic Slinger</GenericName>
-    <SpecificName>Qallāʿ Ibušimi</SpecificName>
+    <Identity>
+    <Rank>Elite</Rank>
+  </Identity>
     <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-    <Cost>
-     <Resources>
-      <metal>0</metal>
-      <wood>0</wood>
-      <stone>0</stone>
-    </Resources>
-  </Cost>
-  <Health>
-    <Max>75</Max>
-  </Health>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>

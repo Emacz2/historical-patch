@@ -5,7 +5,7 @@
 		"food": 100,
 		"metal": 100
 	},
-	"icon": "gather_basket_empty.png",
+	"icon": "skull_swords.png",
 	"researchTime": 30,
 	"tooltip": "Techs from military buildings 25% less resource cost and research time.",
 	"modifications": [

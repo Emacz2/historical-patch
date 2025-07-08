@@ -5,9 +5,9 @@
 		"food": 100,
 		"metal": 100
 	},
-	"icon": "gather_basket_empty.png",
+	"icon": "statue_face_stone.png",
 	"researchTime": 30,
-	"tooltip": "Techs from economic buildings 25% less resource cost and research time..",
+	"tooltip": "Techs from civic buildings 25% less resource cost and research time..",
 	"modifications": [
 		{ "value": "Researcher/TechCostMultiplier/food", "multiply": 0.75 },
 		{ "value": "Researcher/TechCostMultiplier/wood", "multiply": 0.75 },

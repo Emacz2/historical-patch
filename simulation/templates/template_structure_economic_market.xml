@@ -71,6 +71,7 @@
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/support_trader
+      units/{civ}/merc_inf_slinger_stone_market_b
       units/{civ}/merc_swordsman_market_b
       units/{civ}/merc_archer_market_b
       units/{civ}/merc_maceman_market_b
