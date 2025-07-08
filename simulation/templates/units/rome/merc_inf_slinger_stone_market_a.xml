@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/rome/merc_inf_slinger_stone_market_b">
   <Identity>
-     <Identity>
     <Rank>Advanced</Rank>
-  </Identity>
   </Identity>
   <Promotion>
     <Entity>units/rome/merc_inf_slinger_lead</Entity>
