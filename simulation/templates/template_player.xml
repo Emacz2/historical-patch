@@ -44,6 +44,7 @@
       <TempleOfIsis>1</TempleOfIsis>
       <TempleOfVesta>1</TempleOfVesta>
       <Theater>1</Theater>
+      <ScythianGuard>0</ScythianGuard>
       <Silvermine>3</Silvermine>
       <Yakhchal>5</Yakhchal>
       <WarDog>5</WarDog>
@@ -87,6 +88,9 @@
       <RomanSlave>
         <ArmyCamp>10</ArmyCamp>
       </RomanSlave>
+      <ScythianGuard>
+        <Fortress>105</Fortress>
+      </ScythianGuard>
       <WarDog>
         <Kennel>10</Kennel>
       </WarDog>

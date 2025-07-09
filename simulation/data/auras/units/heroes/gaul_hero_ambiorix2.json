@@ -1,0 +1,13 @@
+{
+	"type": "global",
+	"affects": ["Soldier"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 }
+	
+	],
+	"auraName": "Guerrilla Chief",
+	"showDescription": 1,
+	"auraDescription": "Soldiers 10% faster movement speed and +1 pierce and hack resistance."
+}

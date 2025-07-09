@@ -1,17 +1,12 @@
 {
 	"type": "Global",
-	"affects": ["FemaleCitizen"],
+	"affects": ["Soldier"],
 	"modifications": [
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.25 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.25 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.25 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
-		{ "value": "Health/Max", "add": 10 }
+	{ "value": "Cost/BuildTime", "multiply": 0.9}
 		
 	],
-	"auraName": "Boudican revolt",
+	"auraName": "Revolt reinforcements",
 	"showDescription": 1,
-	"auraDescription": "Women gain 25% melee attack, +1.5 pierce/hack resistance and +10 life.",
+	"auraDescription": "Soldiers 10% less train time.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

@@ -24,6 +24,18 @@
       <RestrictedClasses datatype="tokens">Organic</RestrictedClasses>
     </Melee>
   </Attack>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.5</Hack>
+        <Pierce>1</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Health>
+    <Max>150</Max>
+  </Health>
   <Cost>
     <Resources>
       <food>75</food>
@@ -43,6 +55,9 @@
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
     </SoundGroups>
   </Sound>
- <ResourceGatherer disable=""/>
-<Builder disable=""/>
+  <ResourceGatherer disable=""/>
+  <Builder disable=""/>
+  <UnitMotion>
+    <WalkSpeed>11.5</WalkSpeed>
+  </UnitMotion>
 </Entity>

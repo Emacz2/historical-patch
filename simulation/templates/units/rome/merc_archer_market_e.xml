@@ -3,9 +3,6 @@
   <Identity>
     <Rank>Elite</Rank>
     <VisibleClasses datatype="tokens">Republic</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/rome/aux_archer</Entity>

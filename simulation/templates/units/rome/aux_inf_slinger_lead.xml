@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="aux_inf|merc_inf|template_unit_infantry_ranged_slinger_lead">
+<Entity parent="aux_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
-    <Rank>Elite</Rank>
     <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
-    <Icon>units/cart/infantry_slinger.png</Icon>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
+  <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

@@ -15,7 +15,7 @@
       <LineTextureMask>heal_overlay_range_mask.png</LineTextureMask>
       <LineThickness>0.35</LineThickness>
     </RangeOverlay>
-    <Health>15</Health>
+    <Health>20</Health>
     <Interval>2000</Interval>
     <UnhealableClasses datatype="tokens"/>
     <HealableClasses datatype="tokens">Human</HealableClasses>

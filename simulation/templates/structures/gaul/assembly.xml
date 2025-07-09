@@ -67,8 +67,8 @@
     <Entities datatype="tokens">
       units/{civ}/champion_cavalry
       units/{civ}/champion_infantry_swordsman
+      units/{civ}/hero_ambiorix
       units/{civ}/hero_brennus
-      units/{civ}/hero_viridomarus
       units/{civ}/hero_vercingetorix
     </Entities>
   </Trainer>

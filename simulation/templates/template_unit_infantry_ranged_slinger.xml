@@ -5,7 +5,7 @@
       <AttackName>Slinger</AttackName>
       <Damage>
         <Pierce>4</Pierce>
-        <Crush>6</Crush>
+        <Crush>7</Crush>
       </Damage>
       <MaxRange>55</MaxRange>
       <PrepareTime>400</PrepareTime>
@@ -17,7 +17,7 @@
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="3"/>
       </Projectile>
-      <RestrictedClasses datatype="tokens">Structure</RestrictedClasses>
+      <RestrictedClasses datatype="tokens">Structure Siege</RestrictedClasses>
     </Ranged>
   </Attack>
   <Cost>

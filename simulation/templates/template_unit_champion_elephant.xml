@@ -8,10 +8,6 @@
       <metal>200</metal>
     </Resources>
   </Cost>
-  <Footprint replace="">
-    <Square width="4.5" depth="9.0"/>
-    <Height>9.0</Height>
-  </Footprint>
   <Health>
     <Max>600</Max>
   </Health>

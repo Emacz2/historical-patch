@@ -6,9 +6,9 @@
 	"tooltip": "Corrals 50% build time and resources cost.",
 	"requirements": { "civ": "kush" },
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.5 },
-		{ "value": "Cost/Resources/wood", "multiply": 0.5 }
+		{ "value": "Cost/BuildTime", "multiply": 0.5, "affects": "Corral"},
+		{ "value": "Cost/Resources/wood", "multiply": 0.5, "affects": "Corral"},
+		{ "value": "Cost/BuildTime", "multiply": 0.75, "affects": "Domestic"  }
 	
-	],
-	"affects": ["Corral"]
+	]
 }

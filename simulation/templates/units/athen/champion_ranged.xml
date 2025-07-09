@@ -8,6 +8,9 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
+  <TrainingRestrictions>
+    <Category>ScythianGuard</Category>
+  </TrainingRestrictions>
   <VisualActor>
     <Actor>units/athenians/infantry_archer_c.xml</Actor>
   </VisualActor>

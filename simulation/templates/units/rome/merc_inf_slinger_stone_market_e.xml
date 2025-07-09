@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger">
+  <Identity>
+    <Civ>rome</Civ>
+    <GenericName>Balearic Slinger</GenericName>
+    <SpecificName>Qallāʿ Ibušimi</SpecificName>
+    <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
+    <Icon>units/cart/infantry_slinger.png</Icon>
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+  <Attack>
+    <Ranged>
+      <AttackName>Slinger</AttackName>
+      <Damage>
+        <Pierce op="add">-3</Pierce>
+        <Crush op="add">4</Crush>
+      </Damage>
+    </Ranged>
+  </Attack>
+  <Health>
+    <Max>75</Max>
+  </Health>
+  <Promotion>
+    <Entity>units/rome/merc_inf_slinger_lead</Entity>
+    <RequiredXp>400</RequiredXp>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/iberians/infantry_slinger_b.xml</Actor>
+  </VisualActor>
+</Entity>

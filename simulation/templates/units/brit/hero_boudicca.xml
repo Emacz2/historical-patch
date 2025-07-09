@@ -2,6 +2,7 @@
 <Entity parent="chariot|template_unit_hero_cavalry_javelineer">
   <Auras datatype="tokens">
     units/heroes/brit_hero_boudicca
+    units/heroes/brit_hero_boudicca2
   </Auras>
   <Footprint replace="">
     <Square width="5.0" depth="10.0"/>

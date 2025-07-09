@@ -19,10 +19,6 @@
       </Damage>
     </Entity>
   </Resistance>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.02</WalkSpeed>
-    <Acceleration op="mul">1.05</Acceleration>
-  </UnitMotion>
   <Health>
     <Max op="add">5</Max>
   </Health>
@@ -32,7 +28,7 @@
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
     <VisibleClasses datatype="tokens">PaidMerc Cretan</VisibleClasses>
-    <Tooltip>Merc Infantry have 1 less capture attack/range. Melee 5% more DMG and Ranged 4% more dmg 10% more accurate than than CS equivalent. They gain an addtion 7.5% dmg Adavanced and Elite rank but do not revieve WTF tech.</Tooltip>
+    <Tooltip>Cretans were well known for their archery skills and hight sought after mercanaries.  Cretan archers 5% more pierce dmg, +2 range, 10% more accurate +0.5H and +1P resistance than regular greek archers.</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>
