@@ -19,6 +19,6 @@
 
 	],
 	"affects": ["Structure", "Republic !Legionary !Auxiliary"],
-	"tooltip": "Convert Infantry to Marian Legionaries, Unlock Onagers and Centurions, Champion Swordsmen cost 15 less metal.",
+	"tooltip": "Convert Infantry to Marian Legionaries, Unlock Onagers and Centurions. Mercanaries become auxilary, only cost food. ",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

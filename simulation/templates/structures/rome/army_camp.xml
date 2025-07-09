@@ -113,9 +113,8 @@
       units/{civ}/support_slave
       units/{civ}/infantry_swordsman_a
       units/{civ}/infantry_spearman_a
-      units/{civ}/infantry_legionary
       units/{civ}/infantry_antesignanus
-      units/{civ}/champion_infantry_swordsman_evocati
+      units/{civ}/champion_infantry_swordsman
       units/{civ}/champion_infantry_swordsman_guard
       units/{civ}/merc_inf_samnite_spearman
       units/{civ}/aux_inf_samnite_spearman
