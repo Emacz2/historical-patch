@@ -1,5 +1,5 @@
 {
-	"genericName": "citizen gatherer.",
+	"genericName": "Citizen gatherers.",
 	"autoResearch": true,
 	"description": "Rarely did citizens of Carth fight in the army.",
 	"requirements": { "civ": "cart" },

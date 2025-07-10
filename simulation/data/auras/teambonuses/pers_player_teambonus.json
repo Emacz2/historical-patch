@@ -1,6 +1,6 @@
 {
 	"type": "global",
-	"affects": ["Barracks","Stable"],
+	"affects": ["Barracks","Stable", "Range"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
                 { "value": "Cost/Resources/wood", "multiply": 0.8 },
@@ -9,5 +9,5 @@
 	],
 	"auraName": "Training Regimes",
 	"showDescription": 1,
-	"auraDescription": "Barracks and Stables -20% cost and build time."
+	"auraDescription": "Barracks, Stables and Ranges -20% cost and build time."
 }
