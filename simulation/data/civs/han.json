@@ -11,7 +11,13 @@
 			"Type": "peace"
 		}
 	],
-	"CivBonuses": [],
+	"CivBonuses": [
+		{
+			"Name": "Ministry",
+			"History": "The Nine Ministers or Nine Chamberlains (Chinese: 九卿; pinyin: jiǔ qīng) was the collective name for nine high officials in the imperial government of the Han dynasty (206 BC–220 AD), who each headed one of the Nine Courts and were subordinates to the Three Councillors of State..",
+			"Description": "Han have the ability to train 9 ministers each with their own bonus(es), mini heroes in a way.."
+		}
+	],
 	"WallSets": [
 		"structures/han/wallset_stone"
 	],
