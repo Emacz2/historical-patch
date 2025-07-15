@@ -13,9 +13,6 @@
     <GenericName>Machimoi Archers</GenericName>
     <SpecificName>Toxótēs </SpecificName>
     <Icon>units/cart/infantry_archer.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">unlock_archers</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/ptol/infantry_archer_a</Entity>

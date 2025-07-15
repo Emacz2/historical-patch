@@ -14,7 +14,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/infantry_pikeman_b
-      units/{civ}/infantry_slinger_b
+      units/{civ}/serf_slinger
       units/{civ}/hunting_camel
     </Entities>
   </Trainer>

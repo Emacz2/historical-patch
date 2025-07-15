@@ -4,7 +4,7 @@
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 0.8 },
 		{ "value": "Cost/Resources/stone", "multiply": 0.5 },
-                { "value": "Cost/Resources/wood", "multiply": 0.5 }
+        { "value": "Cost/Resources/wood", "multiply": 0.5 }
 	],
 	"auraName": "Themistoclean Walls",
 	"showDescription": 1,

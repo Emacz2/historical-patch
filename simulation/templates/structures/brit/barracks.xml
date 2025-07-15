@@ -30,7 +30,6 @@
    <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      -units/{civ}/infantry_slinger_b
       units/{civ}/infantry_swordsman
     </Entities>
   </Trainer>

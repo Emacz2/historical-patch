@@ -10,9 +10,10 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "armor_chain.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +1.5 hack resistance.",
+	"tooltip": "Soldiers +2 hack and +0.5 crush resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 2 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
 	],
 	"affects": ["Soldier !Helot !Serf !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

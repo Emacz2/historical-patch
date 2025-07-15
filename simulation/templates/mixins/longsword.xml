@@ -6,7 +6,7 @@
         <Bleeding>
           <Interval>1000</Interval>
           <Damage>
-            <Bleeding>0.75</Bleeding>
+            <Bleeding>0.5</Bleeding>
           </Damage>
           <Stackability>Extend</Stackability>
           <Duration>9000</Duration>
