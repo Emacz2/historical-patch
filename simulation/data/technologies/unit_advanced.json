@@ -1,7 +1,7 @@
 {
 	"autoResearch": true,
 	"icon": "upgrade_advanced.png",
-	"tooltip": "Advanced +10% training time and 10% slower gathering rates, but +0.5 capture attack strength, +20% loot, 10 health; Healers +5 healing strength and +3 healing range; Melee units +10% attack damage and 0.5H/P resistance; Ranged units −10% spread 5% Hack/Pierce/Crush dmg and +1 range.", 
+	"tooltip": "Advanced units +10% training time and 10% slower gathering rates, but melee 5% more dmg and +0.5 pierce and hack resistance. Ranged 3% more dmg, and 10% more accurate. Javelineers +1.5 range, Crossbows + 1 range, Greek Archers +2.5 range, Archers +3.5 range. ", 
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Melee" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Melee" },
@@ -9,8 +9,8 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "PaidMerc" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "PaidMerc" },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.075, "affects": "PaidMerc" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Melee !PaidMerc"},
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "PaidMerc" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Melee"},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Melee" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "PaidMerc"},
 		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged !Hunt" },
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.03, "affects": "Ranged !Hunt" },
@@ -26,10 +26,6 @@
 		{ "value": "Cost/BuildTime", "multiply": 1.1 },
 		{ "value": "Heal/Range", "add": 3, "affects": "Healer" },
 		{ "value": "Heal/Health", "add": 2.5, "affects": "Healer" },
-		{ "value": "Loot/food", "multiply": 1.2 },
-		{ "value": "Loot/wood", "multiply": 1.2 },
-		{ "value": "Loot/stone", "multiply": 1.2 },
-		{ "value": "Loot/metal", "multiply": 1.2 },
 		{ "value": "Loot/xp", "multiply": 1.2 },
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.9 }
 	],

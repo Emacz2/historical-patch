@@ -5,7 +5,7 @@
     <VisibleClasses datatype="tokens">Melee</VisibleClasses>
   </Identity>
   <Health>
-    <Max>140</Max>
+    <Max>150</Max>
   </Health>
   <Resistance>
     <Entity>
