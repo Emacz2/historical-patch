@@ -38,10 +38,10 @@
     <GarrisonRegenRate>5.0</GarrisonRegenRate>
   </Capturable>
   <Cost>
-    <BuildTime>100</BuildTime>
+    <BuildTime>150</BuildTime>
     <Resources>
-      <wood>300</wood>
-      <stone>100</stone>
+      <wood>250</wood>
+      <stone>75</stone>
     </Resources>
   </Cost>
   <Footprint>
@@ -71,7 +71,7 @@
   <Identity>
    <Civ>spart</Civ>
     <GenericName>Perioikoi Camp</GenericName>
-    <SpecificName>Castra</SpecificName>
+    <SpecificName>Perioecis Poleis</SpecificName>
     <Tooltip>May be built in own or neutral teritory. Trains Periokoi/Helot units and used as a dropsite for resoruces. Adds 5 to population.</Tooltip>
     <Classes datatype="tokens">PerioikoiCamp</Classes>
     <VisibleClasses datatype="tokens">Village Camp</VisibleClasses>

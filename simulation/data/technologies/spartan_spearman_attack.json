@@ -5,9 +5,9 @@
 	},
 	"description": "Spartaites began their training at a very young age.  They were the most feared army of their time",
 	"cost": {
-		"food": 200,
-		"wood": 100,
-		"stone": 50
+		"food": 100,
+		"wood": 200,
+		"stone": 75
 	},
 	"requirements": { "tech": "phase_village" },
 	"requirementsTooltip": "Unlocked in Village Phase.",

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_siege_stonethrower">
+<Cost>
+    <Resources>
+      <wood>450</wood>
+      <stone>200</stone>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>han</Civ>
     <GenericName>Mangonel</GenericName>
