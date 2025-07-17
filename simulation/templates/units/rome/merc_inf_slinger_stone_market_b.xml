@@ -20,9 +20,6 @@
       </Damage>
     </Ranged>
   </Attack>
-  <Health>
-    <Max>75</Max>
-  </Health>
   <Promotion>
     <Entity>units/rome/merc_inf_slinger_stone_market_a</Entity>
   </Promotion>
