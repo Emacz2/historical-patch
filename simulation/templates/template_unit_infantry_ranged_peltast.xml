@@ -10,7 +10,7 @@
   </Resistance>
   <Identity>
     <GenericName>Javelineer</GenericName>
-    <VisibleClasses datatype="tokens">Javelineer</VisibleClasses>
+    <VisibleClasses datatype="tokens">Javelineer Peltast</VisibleClasses>
     <Tooltip>Named for the shield they carried, peltast + .5 Hack and +1 Pierce reistance but 3% slower walk speed</Tooltip>
   </Identity>
   <Loot>
