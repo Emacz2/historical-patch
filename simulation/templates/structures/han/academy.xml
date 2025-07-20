@@ -6,9 +6,9 @@
   <Cost>
     <BuildTime>200</BuildTime>
     <Resources>
-      <wood>0</wood>
-      <stone>150</stone>
       <metal>150</metal>
+      <stone>100</stone>
+      <wood>100</wood>
     </Resources>
   </Cost>
   <Footprint>
