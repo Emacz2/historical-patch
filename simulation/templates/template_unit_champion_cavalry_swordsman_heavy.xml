@@ -19,6 +19,11 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
+  <Cost>
+    <Resources>
+      <metal op="add">10</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Cavalry Swordsman</GenericName>

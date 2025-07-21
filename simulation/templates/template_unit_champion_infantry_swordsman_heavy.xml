@@ -22,19 +22,21 @@
     <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2.5</Hack>
-        <Pierce op="add">1.5</Pierce>
+        <Crush op="add">2</Crush>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
+  <Cost>
+    <Resources>
+      <metal op="add">10</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Heavy Swordsman</GenericName>
   </Identity>
-  <Loot>
-    <wood op="add">-2</wood>
-    <metal op="add">3</metal>
-  </Loot>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

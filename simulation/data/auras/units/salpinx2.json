@@ -1,0 +1,14 @@
+{
+	"type": "range",
+	"radius": 35,
+	"affects": ["Infantry"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.1 }
+		
+		
+	],
+	"auraName": "Inspiriational sound",
+	"showDescription": 1,
+	"auraDescription": "Infantry 10% faster movement speed +1 Hack and Pierce Resitance.",
+	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
+}

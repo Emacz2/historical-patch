@@ -19,6 +19,11 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
+  <Cost>
+    <Resources>
+      <metal op="add">10</metal>
+    </Resources>
+  </Cost>
   <Identity>
     <GenericName>Champion Cavalry Spearman</GenericName>
     <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
@@ -31,8 +36,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">2</Hack>
-        <Pierce op="add">2</Pierce>
+        <Crush op="add">2</Crush>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
   </Resistance>

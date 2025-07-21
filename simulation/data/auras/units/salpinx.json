@@ -1,0 +1,15 @@
+{
+	"type": "range",
+	"radius": 25,
+	"affects": ["Soldier"],
+	"affectedPlayers": ["Enemy"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.9 },
+		{ "value": "Attack/Melee/RepeatTime", "multiply": 0.9}
+		
+	],
+	"auraName": "Intimidating Sound",
+	"showDescription": 1,
+	"auraDescription": "Enemy Soldiers -10% movement speed and attack repeat time.",
+	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
+}
