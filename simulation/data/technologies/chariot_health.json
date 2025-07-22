@@ -2,18 +2,19 @@
 	"genericName": "Armor Plating",
 	"cost": {
 		"metal": 400,
-		"food": 100
+		"food": 250
 	},
 	"requirements": { "tech": "phase_city" },
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "armor_plates_gold.png",
 	"researchTime": 40,
-	"tooltip": "Chariots +25 health, +1.5 hack/pierce and +2 crush resistance.",
+	"tooltip": "Chariots +25 health, +2.5 hack/pierce and +3 crush resistance but 5% slower walk speed.",
 	"modifications": [
 		{ "value": "Health/Max", "add": 25 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
-		{ "value": "Resistance/Entity/Damage/Crush", "add": 2 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 3 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.95 }
 
 	],
 	"affects": ["Chariot"],
