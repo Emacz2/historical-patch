@@ -17,5 +17,8 @@ Mace Royal Stoa 100m 150s 100w (was 150/100)
 
 Perioikoi camp changed specific name
 
+Stonethrower splash range increased to 3.5
+Cataphract Splash range increaded to 
+
 Added salphinx aura enemy soldiers -10% movement speed and attack repeat time. (For Greek trumpeters, not in game yet)
 Added salphinx2 aura infantry 10% movement speed (For Greek trumpeters, not in game yet)
