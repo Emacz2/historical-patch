@@ -13,11 +13,11 @@
       <Techs datatype="tokens">-phase_city phase_town</Techs>
     </Requirements>
   </Identity>
-  <Attack>
+   <Attack>
     <Melee>
       <Damage>
-        <Hack op="mul">0.75</Hack>
-        <Pierce op="mul">0.75</Pierce>
+        <Hack op="mul">0.8</Hack>
+        <Pierce op="mul">0.8</Pierce>
       </Damage>
     </Melee>
   </Attack>

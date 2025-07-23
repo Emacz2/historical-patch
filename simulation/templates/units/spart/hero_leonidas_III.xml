@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="polearm|greek_olympian|hoplite|template_unit_hero_infantry_spearman">
+<Entity parent="polearm|greek_olympian|hoplite|units/spart/hero_leonidas">
   <Auras datatype="tokens">
     units/heroes/spart_hero_leonidas
   </Auras>
+  <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="mul">1.2</Hack>
+        <Pierce op="mul">1.2</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
+  <Health>
+    <Max op="mul">2</Max>
+  </Health>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
