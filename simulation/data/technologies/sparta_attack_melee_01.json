@@ -13,7 +13,7 @@
 	"requirementsTooltip": "Unlocked in village.",
 	"icon": "sword_01.png",
 	"researchTime": 20,
-	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 5%.  Champion spearman +10% train time. ",
+	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 5%.  Champion spearman +5% train time. ",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },

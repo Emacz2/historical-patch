@@ -10,14 +10,14 @@
 	"requirementsTooltip": "Unlocked in town phase.",
 	"icon": "sword_02.png",
 	"researchTime": 40,
-	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 5%, but Champion spearman an additional 10% train time. ",
+	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 10%, but Champion spearman an additional 10% train time. ",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
 	],
 	"affects": ["Soldier !PaidMerc !Elephant"],

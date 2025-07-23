@@ -23,7 +23,9 @@ Cataphract Splash range increaded to 2 (from 1.5)
 
 corrected tooltip for spartan civ bonus melee infantry, gain additional 5% p2 (It said gain 2.5% p2 and an additional 2.5% p3)
 
-fixed spartan resistance techs to mirror other civs, no longer champ train penalty for regular resitance techs.  Their fist piece and hack techs they gain additional +0.5 but also 5% more train time.  pierce and hacks techs 2 and 3 are same as other civs with exception that periokio/neomades dont gain full bonuses/
+fixed spartan resistance techs to mirror other civs, no longer champ train penalty for regular resitance techs.  Their fist piece and hack techs they gain additional +0.5 but also 5% more train time.  pierce and hacks techs 2 and 3 are same as other civs with exception that 
+periokio/neomades dont gain full bonuses.
+Similar to resistance techs, cleaned up melee attack techs.
 
 p2 Leonids 0.8 dmg instead of 0.75, when promotes should be regular hero stats.  No longer can train twice.
 
