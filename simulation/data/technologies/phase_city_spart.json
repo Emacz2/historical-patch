@@ -50,7 +50,9 @@
 		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Helot" },
 		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"},
-		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Hero" }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.2, "affects": "Leonidas" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.2, "affects": "Leonidas" },
+		{ "value": "Health/Max", "multiply": 2, "affects": "Leonidas"}
 	
 		
 	],

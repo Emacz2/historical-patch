@@ -13,11 +13,11 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"researchTime": 40,
 	"icon": "armor_pteruges.png",
-	"tooltip": "Soldiers +1.5 hack resistance. Neodamodes and Perioikoi +1. Champion spearman 5% additional train time",
+	"tooltip": "Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Neodamodes Perioikoi"},
-		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
 	],
 	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
