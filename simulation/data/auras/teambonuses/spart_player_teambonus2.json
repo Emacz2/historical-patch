@@ -1,10 +1,10 @@
 {
 	"type": "global",
-	"affects": ["Infantry !Helot"],
+	"affects": ["Infantry"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Helot !Perioikoi !Neodamodes" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "!Helot !Perioikoi !Neodamodes" },
 		{ "value": "Promotion/RequiredXp", "multiply": 0.85 }
 
 	],

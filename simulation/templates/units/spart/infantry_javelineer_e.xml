@@ -2,10 +2,23 @@
 <Entity parent="units/spart/infantry_javelineer_a">
   <Identity>
     <Rank>Elite</Rank>
+    <SpecificName>Pelte Períoikos</SpecificName>
+    <Icon>units/spart/infantry_javelinist.png</Icon>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add">0.5</Hack>
+       <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.97</WalkSpeed>
+  </UnitMotion>
    <Promotion>
     <Entity>units/spart/champion_infantry_javelineer</Entity>
-    <RequiredXp>750</RequiredXp>
+    <RequiredXp>600</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_javelinist_e.xml</Actor>

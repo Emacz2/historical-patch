@@ -22,7 +22,7 @@
       <Animal>50</Animal>
       <CivilCentre>1</CivilCentre>
       <ConsularBodyguard>24</ConsularBodyguard>
-      <Doûlos>5</Doûlos>
+      <Doulos>5</Doulos>
       <Gladiator>0</Gladiator>
       <Helot>3</Helot>
       <Hero>1</Hero>
@@ -55,9 +55,9 @@
       <Wonder>1</Wonder>
     </Limits>
     <LimitChangers>
-      <Doûlos>
+      <Doulos>
         <Market>5</Market>
-      </Doûlos>
+      </Doulos>
       <Gladiator>
         <Amphitheater>15</Amphitheater>
       </Gladiator>

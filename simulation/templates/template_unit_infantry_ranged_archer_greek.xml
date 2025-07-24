@@ -29,9 +29,6 @@
     <VisibleClasses datatype="tokens">Greek Archer</VisibleClasses>
     <GenericName>Greek Archer</GenericName>
   </Identity>
-   <Health>
-    <Max>70</Max>
-  </Health>
   <Loot>
     <wood>10</wood>
     <metal>5</metal>

@@ -8,23 +8,16 @@
       structures/spart/tent_helot
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
-      -structures/{civ}/stable
     </Entities>
   </Builder>
   <Identity>
     <Civ>spart</Civ>
+    <Lang>greek</Lang>
     <Rank>Advanced</Rank>
     <SelectionGroupName>units/spart/infantry_peltasts_b</SelectionGroupName>
     <GenericName>Peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
-  </Identity>
-    <Promotion>
-    <Entity>units/spart/infantry_peltasts_a</Entity>
-  </Promotion>
-  <Loot>
-    <food>5</food>
-    <wood>5</wood>
-  </Loot>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/jav_neodamodes.xml</Actor>
   </VisualActor>
