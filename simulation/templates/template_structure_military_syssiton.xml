@@ -26,11 +26,8 @@
     <GenericName>Barracks</GenericName>
     <SelectionGroupName>template_structure_military_syssiton</SelectionGroupName>
     <Tooltip>Train Spearman Soldiers. Research military technologies only available to sparta.</Tooltip>
-   <VisibleClasses datatype="tokens">Village Syssiton</VisibleClasses>
+   <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
     <Icon>structures/barracks.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <wood>40</wood>

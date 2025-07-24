@@ -23,6 +23,7 @@
     <GenericName>Military Mess Hall</GenericName>
     <SpecificName>Syssition</SpecificName>
     <Icon>structures/syssition.png</Icon>
+    <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
   </Identity>
   <Loot>
     <stone>30</stone>
