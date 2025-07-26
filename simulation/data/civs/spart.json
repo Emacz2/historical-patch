@@ -45,7 +45,7 @@
 		},
 		{
 			"Template": "units/spart/helot_javelineer",
-			"Count": 2
+			"Count": 1
 		},
 		{
 			"Template": "units/spart/scout"
@@ -54,7 +54,8 @@
 			"Template": "units/spart/champion_infantry_spear"
 		},
 
-		{	"Template": "units/spart/cavalry_spearman_b"
+		{	"Template": "units/spart/infantry_javelineer_b",
+			"Count": 2
 		}
 		
 	],

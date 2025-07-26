@@ -3,36 +3,13 @@
   <Attack>
     <Ranged>
       <AttackName>Stone thrower</AttackName>
-      <Damage>
-        <Pierce op="mul">0.75</Pierce>
-        <Crush op="mul">0.75</Crush>
-      </Damage>
-      <MaxRange op="add">-15</MaxRange>
-      <RepeatTime>1500</RepeatTime>
-      <Projectile>
-        <Speed>70</Speed>
-        <Spread>3</Spread>
-        <Gravity>45</Gravity>
-        <FriendlyFire>false</FriendlyFire>
-        <LaunchPoint y="3"/>
-      </Projectile>
+      <MaxRange op="add">-10</MaxRange>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
       <RestrictedClasses datatype="tokens">Structure</RestrictedClasses>
     </Ranged>
   </Attack>
-  <Cost>
-    <Resources>
-      <food op="add">15</food>
-      <stone>10</stone>
-    </Resources>
-  </Cost>
   <Resistance>
     <Entity>
-      <Damage>
-        <Hack>0</Hack>
-        <Pierce>0</Pierce>
-        <Crush>0</Crush>
-      </Damage>
       <ApplyStatus>
         <Burning>
         <Duration>0.5</Duration>

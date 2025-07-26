@@ -20,7 +20,6 @@
   </Ranged>
 </Attack>
   <Cost>
-    <BuildTime op="mul">0.9</BuildTime>
     <Resources>
       <food>50</food>
       <wood>40</wood>
@@ -49,10 +48,6 @@
       <metal>10</metal>
     </Capacities>
   </ResourceGatherer>
-   <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-    <RunMultiplier>1.45</RunMultiplier>
-  </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Perioikoi</VisibleClasses>
     <Tooltip>Perioikoi were free, but not citizens of Sparta.  They were expected to harvest the resources, work the forges etc, but fight when called upon.</Tooltip>

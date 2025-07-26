@@ -22,9 +22,8 @@
   </Attack>
   <Cost>
     <Resources>
-      <food op="add">10</food>
-      <stone>20</stone>
-      <wood>20</wood>
+      <stone>25</stone>
+      <wood>25</wood>
     </Resources>
   </Cost>
   <Identity>

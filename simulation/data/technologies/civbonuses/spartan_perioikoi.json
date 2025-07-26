@@ -4,12 +4,10 @@
 	"description": "The Perioikoi were free but not citizens of Sparta. They wever viewed as second class, often sharing their harvest with Sparta and being called upon to fight despite less training and armor.",
 	"requirements": { "civ": "spart" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Melee 10% less dmg, -1 hack and pierce resistance. Ranged 10% less dmg, 10% less accurate and -1 pierce resistance. However, they gather resources 5% faster, have 5% faster walk speed, cost 10 less wood and train 10% faster.",
+	"tooltip": "Melee 10% less dmg. Ranged 10% less dmg, 10% less accurate. However, they gather resources 5% faster, have 5% faster walk speed, cost 10 less wood and train 10% faster.",
 	"modifications": [
 		
-		{ "value": "Resistance/Entity/Damage/Hack", "add": -1, "affects": "Melee" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Melee" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": -1, "affects": "Ranged" }
+		{ "value": "Cost/BuildTime", "multiply": 0.9 }
 	
 
 

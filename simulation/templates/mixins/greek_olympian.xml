@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
-  <Attack>
-  <Melee merge="">
-	<Damage>
-	  <Hack op="mul">1.03</Hack>
-      <Pierce op="mul">1.03</Pierce>
-      <Crush op="mul">1.03</Crush>
-    </Damage>
-  </Melee>
-  <Ranged merge="">
-	<Damage>
-	  <Hack op="mul">1.02</Hack>
-      <Pierce op="mul">1.02</Pierce>
-      <Crush op="mul">1.02</Crush>
-    </Damage>
-   <MaxRange op="add">1.0</MaxRange>
-  </Ranged>
-</Attack>
-  <Cost>
-    <BuildTime op="mul">1.05</BuildTime>
-  </Cost>
   <Identity>
-    <Classes datatype="tokens">Greek Olympian</Classes>
+    <Classes datatype="tokens">Olympian</Classes>
     <Tooltip>Ancient Greece is home of the orignal Olympic games.  A series of athletic competitions in which freeborn Greek men competed against each other. Melee units 3% more dmg, while ranged units add 2% dmg and +1 range.  Both receive a 2% faster movement speed but take an additional 5% training time.</Tooltip>
   </Identity>
- <UnitMotion>
-    <WalkSpeed op="mul">1.02</WalkSpeed>
-    <Acceleration op="mul">1.05</Acceleration>
-  </UnitMotion>
 </Entity>

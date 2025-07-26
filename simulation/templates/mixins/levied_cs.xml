@@ -3,20 +3,17 @@
  <Attack>
   <Melee merge="">
 	<Damage>
-	  <Hack op="mul">0.90</Hack>
-    <Pierce op="mul">0.90</Pierce>
-    <Crush op="mul">0.90</Crush>
+	  <Hack op="mul">0.95</Hack>
+    <Pierce op="mul">0.95</Pierce>
+    <Crush op="mul">0.95</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
 	  <Damage>
-	    <Hack op="mul">0.90</Hack>
-      <Pierce op="mul">0.90</Pierce>
-      <Crush op="mul">0.90</Crush>
+	    <Hack op="mul">0.95</Hack>
+      <Pierce op="mul">0.95</Pierce>
+      <Crush op="mul">0.95</Crush>
     </Damage>
-      <Projectile>
-        <Spread op="mul">1.1</Spread>
-    </Projectile>
   </Ranged>
 </Attack>
   <Cost>
@@ -25,33 +22,19 @@
       <wood op="add">-10</wood>
     </Resources>
   </Cost>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-1.5</Hack>
-        <Pierce op="add">-1.5</Pierce>
-      </Damage>
-      <ApplyStatus>
-        <Burning>
-        <Duration>0.5</Duration>
-        <BlockChance>0.5</BlockChance>
-        </Burning>
-      </ApplyStatus>
-    </Entity>
-  </Resistance>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.05</food.fruit>
-      <food.grain op="mul">1.05</food.grain>
-      <food.meat op="mul">1.05</food.meat>
-      <wood.tree op="mul">1.05</wood.tree>
-      <wood.ruins op="mul">1.05</wood.ruins>
-      <stone.rock op="mul">1.05</stone.rock>
-      <stone.ruins op="mul">1.05</stone.ruins>
-      <metal.ore  op="mul">1.05</metal.ore>
-      <metal.ruins op="mul">1.05</metal.ruins>
+      <food.fruit op="mul">1.02</food.fruit>
+      <food.grain op="mul">1.02</food.grain>
+      <food.meat op="mul">1.02</food.meat>
+      <wood.tree op="mul">1.02</wood.tree>
+      <wood.ruins op="mul">1.02</wood.ruins>
+      <stone.rock op="mul">1.02</stone.rock>
+      <stone.ruins op="mul">1.02</stone.ruins>
+      <metal.ore  op="mul">1.02</metal.ore>
+      <metal.ruins op="mul">1.02</metal.ruins>
     </Rates>
     <Capacities>
       <food>10</food>
@@ -61,11 +44,11 @@
     </Capacities>
   </ResourceGatherer>
    <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <WalkSpeed op="mul">1.02</WalkSpeed>
     <RunMultiplier>1.45</RunMultiplier>
   </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Levied</VisibleClasses>
-    <Tooltip>.</Tooltip>
+    <Tooltip>Levied Soldiers gather resrouces 2% faster, cost 10 less wood and -10% train time but 5% less dmg</Tooltip>
   </Identity>
 </Entity>

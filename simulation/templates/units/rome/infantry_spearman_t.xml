@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="levied_cs|template_unit_infantry_melee_spearman">
+<Entity parent="template_unit_infantry_melee_spearman">
   <Builder>
     <Entities datatype="tokens">
       structures/rome/army_camp
@@ -18,8 +18,8 @@
     <Civ>rome</Civ>
     <Lang>latin</Lang>
     <SelectionGroupName>units/rome/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Levy Spearman</GenericName>
-    <SpecificName>Peditatus</SpecificName>
+    <GenericName>Elite Spearman</GenericName>
+    <SpecificName>Triārius</SpecificName>
     <Icon>units/rome/infantry_spearman_conscript.png</Icon>
     <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
     <Tooltip>Elite rank Spearmen can be promoted to champion Centurions.</Tooltip>

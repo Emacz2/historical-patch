@@ -17,6 +17,7 @@
     <SelectionGroupName>units/spart/infantry_peltasts_b</SelectionGroupName>
     <GenericName>Peltasts</GenericName>
     <Icon>units/athen/infantry_jav.png</Icon>
+    </Identity>
  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/spartans/jav_neodamodes.xml</Actor>

@@ -1,18 +1,12 @@
 {
 	"genericName": "Largest army of the time",
 	"autoResearch": true,
-	"description": "",
+	"description": "Levied soldiers for for the army",
 	"requirements": { "civ": "pers" },
 	"icon": "wooden_walls.png",
 	"tooltip": "Persian citizen infantry 10% less train time but 5% less dmg, and archers 10% less accurate.",
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.9 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 0.95 },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 0.95 },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 0.95 },
-		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 0.95 },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.95 },
-		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 0.95 },
+
 		{ "value": "Attack/Ranged/Spread", "multiply": 1.1, "affects": "Archer" }
 	],
 	"affects": ["Citizen Infantry"]
