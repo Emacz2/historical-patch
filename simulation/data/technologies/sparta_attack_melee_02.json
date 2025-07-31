@@ -6,7 +6,12 @@
 		"metal": 150
 	},
 	"supersedes": "sparta_attack_melee_01",
-	"requirements": { "tech": "phase_town" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "civ": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in town phase.",
 	"icon": "sword_02.png",
 	"researchTime": 40,

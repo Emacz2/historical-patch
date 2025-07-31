@@ -6,7 +6,12 @@
 		"metal": 400
 	},
 	"supersedes": "sparta_resistance_pierce_02",
-	"requirements": { "tech": "phase_city" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "civ": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "shields_generic_silver.png",
 	"researchTime": 60,

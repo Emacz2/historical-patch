@@ -9,7 +9,12 @@
 		"food": 200,
 		"metal": 150
 	},
-	"requirements": { "tech": "phase_village" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_village" },
+			{ "civ": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in village.",
 	"icon": "sword_01.png",
 	"researchTime": 20,

@@ -9,7 +9,12 @@
 		"metal": 250
 	},
 	"supersedes": "sparta_resistance_hack_01",
-	"requirements": { "tech": "phase_town" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "civ": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"researchTime": 40,
 	"icon": "armor_pteruges.png",
