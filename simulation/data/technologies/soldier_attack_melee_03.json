@@ -10,7 +10,8 @@
 		"all": [
 			{ "tech": "phase_city" },
 			{ "notciv": "iber" },
-			{ "notciv": "maur" }
+			{ "notciv": "maur" },
+			{ "notciv": "spart" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",

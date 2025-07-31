@@ -12,7 +12,12 @@
 		"food": 200,
 		"metal": 100
 	},
-	"requirements": { "tech": "phase_town" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "notciv": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_leather.png",
 	"researchTime": 20,

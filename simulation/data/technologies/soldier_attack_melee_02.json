@@ -6,7 +6,12 @@
 		"metal": 250
 	},
 	"supersedes": "soldier_attack_melee_01",
-	"requirements": { "tech": "phase_town" },
+		"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "notciv": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "sword_02.png",
 	"researchTime": 40,

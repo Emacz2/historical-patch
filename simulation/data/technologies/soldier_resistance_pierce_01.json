@@ -5,7 +5,12 @@
 		"wood": 200,
 		"metal": 100
 	},
-	"requirements": { "tech": "phase_town" },
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "notciv": "spart" }
+		]
+	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "shields_generic_wood.png",
 	"researchTime": 20,
