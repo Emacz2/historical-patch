@@ -4,6 +4,7 @@
     <GenericName>Athenian Marine</GenericName>
     <SpecificName>Epibátēs Athēnaîos</SpecificName>
     <Icon>units/athen/champion_marine.png</Icon>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

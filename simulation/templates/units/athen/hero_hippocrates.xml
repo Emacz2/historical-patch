@@ -12,6 +12,7 @@
     <GenericName>Hippocrates</GenericName>
     <SpecificName>Hippocrates</SpecificName>
     <Icon>units/athen/hero_hippocrates.png</Icon>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">-phase_city phase_town</Techs>
     </Requirements>

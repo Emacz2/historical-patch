@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
+<Attack>
+  <Melee merge="">
+	<Damage>
+	  <Hack op="mul">1.05</Hack>
+    <Pierce op="mul">1.05</Pierce>
+    <Crush op="mul">1.05</Crush>
+  </Damage>
+  </Melee>
+  <Ranged merge="">
+	<Damage>
+	  <Hack op="mul">1.03</Hack>
+      <Pierce op="mul">1.03</Pierce>
+      <Crush op="mul">1.03</Crush>
+    </Damage>
+      <MaxRange op="add">1</MaxRange>
+      <Projectile>
+        <Spread op="mul">0.95</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
+ <UnitMotion>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <Acceleration op="add">5</Acceleration>
+  </UnitMotion>
   <Identity>
-    <Classes datatype="tokens">Olympian</Classes>
-    <Tooltip>Ancient Greece is home of the orignal Olympic games.  A series of athletic competitions in which freeborn Greek men competed against each other. Melee units 3% more dmg, while ranged units add 2% dmg and +1 range.  Both receive a 2% faster movement speed but take an additional 5% training time.</Tooltip>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
   </Identity>
 </Entity>

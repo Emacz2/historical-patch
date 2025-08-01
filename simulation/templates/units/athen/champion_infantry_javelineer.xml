@@ -6,7 +6,7 @@
     <GenericName>Champion Javelineer</GenericName>
     <SpecificName>Akontistḗ</SpecificName>
     <SelectionGroupName>units/athen/champion_infantry_javelineer</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
     <Icon>units/spart/champion_ranged_polis.png</Icon>
     <Requirements>
       <Techs datatype="tokens">-phase_city phase_town</Techs>

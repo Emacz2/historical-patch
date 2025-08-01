@@ -8,6 +8,7 @@
     <GenericName>Iphicrates</GenericName>
     <SpecificName>Iphikratēs</SpecificName>
     <Icon>units/athen/hero_iphicrates.png</Icon>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
   </Identity>
   <ProductionQueue/>
   <Researcher>

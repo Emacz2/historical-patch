@@ -8,6 +8,7 @@
     <GenericName>Themistocles</GenericName>
     <SpecificName>Themistoklēs</SpecificName>
     <Icon>units/athen/hero_themistocles.png</Icon>
+    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
   </Identity>
   <VisualActor>
     <Actor>units/athenians/hero_infantry_swordsman_themistocles.xml</Actor>
