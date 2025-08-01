@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/mace/merc_blackcloack_market_b">
+<Entity parent="merc_inf_market|thracian_black_cloak|longsword|template_unit_infantry_melee_swordsman">
   <Identity>
     <Civ>mace</Civ>
     <Lang>greek</Lang>
@@ -9,10 +9,9 @@
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
-    <Rank>Advanced</Rank>
   </Identity>
    <Promotion>
-    <Entity>units/mace/merc_blackcloack_market_e</Entity>
+    <Entity>units/mace/merc_blackcloack_market_a</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
