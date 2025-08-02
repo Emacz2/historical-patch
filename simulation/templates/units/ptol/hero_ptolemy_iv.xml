@@ -2,6 +2,7 @@
 <Entity parent="template_unit_hero_cavalry_swordsman">
   <Auras datatype="tokens">
     units/heroes/ptol_hero_ptolemy_iv
+    units/heroes/ptol_hero_ptolemy_iv_2
   </Auras>
   <Identity>
     <Civ>ptol</Civ>
