@@ -15,10 +15,7 @@
       <Time>8</Time>
     </Centurion>
   </Upgrade>
-  <Promotion>
-    <Entity>units/rome/infantry_legionary</Entity>
-    <RequiredXp>2000</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/romans/infantry_spearman_e.xml</Actor>
   </VisualActor>

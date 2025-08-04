@@ -8,6 +8,9 @@
       structures/rome/tower_artillery
     </Entities>
   </Builder>
+  <Cost>
+    <BuildTime>9</BuildTime>
+  </Cost>
   <Health>
     <DamageVariants>
       <lightdamage>0.85</lightdamage>
@@ -24,6 +27,7 @@
   </Identity>
    <Promotion>
     <Entity>units/rome/infantry_spearman_b</Entity>
+    <RequiredXp>100</RequiredXp>
   </Promotion>
   <UnitAI>
     <Formations datatype="tokens">
