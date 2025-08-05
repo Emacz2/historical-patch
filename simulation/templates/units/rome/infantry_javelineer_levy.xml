@@ -23,7 +23,7 @@
     <SelectionGroupName>units/rome/infantry_javelineer_levy</SelectionGroupName>
     <GenericName>Levy Skirmisher</GenericName>
     <SpecificName>Peditatus</SpecificName>
-    <Icon>units/rome/infantry_spearman_conscript.png</Icon>
+     <Icon>units/rome/infantry_javelinist.png</Icon>
   </Identity>
    <Promotion>
     <Entity>units/rome/infantry_javelineer_b</Entity>
