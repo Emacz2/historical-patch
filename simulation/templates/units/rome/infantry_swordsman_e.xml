@@ -5,6 +5,7 @@
   </Auras>
   <Identity>
     <Rank>Elite</Rank>
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
   </Identity>
   <Upgrade>
     <Centurion>

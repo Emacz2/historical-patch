@@ -49,4 +49,5 @@
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>
   </VisualActor>
+  <ResourceGatherer disable=""/>
 </Entity>
