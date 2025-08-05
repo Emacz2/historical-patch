@@ -14,6 +14,8 @@
   <Trainer>
     <Entities datatype="tokens">
       -units/{civ}/infantry_spearman_b
+      -units/{civ}/infantry_javelineer_b
+      units/{civ}/infantry_javelineer_levy
       units/{civ}/infantry_spearman_levy
       units/{civ}/infantry_legionary
       units/{civ}/infantry_antesignanus
