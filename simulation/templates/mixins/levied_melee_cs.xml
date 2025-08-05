@@ -17,7 +17,7 @@
     </Entity>
   </Resistance>
   <Cost>
-    <BuildTime op="mul">0.9</BuildTime>
+    <BuildTime op="mul">0.85</BuildTime>
     <Resources>
       <wood op="add">-10</wood>
     </Resources>
