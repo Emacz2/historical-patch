@@ -21,7 +21,7 @@
     <GenericName>Roman Swordsman</GenericName>
     <SpecificName>Hastātus</SpecificName>
     <Icon>units/rome/infantry_swordsman.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
+    <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
     <Tooltip>Elite rank Swordsmen can be promoted to champion Centurions.</Tooltip>
   </Identity>
   <Promotion>
