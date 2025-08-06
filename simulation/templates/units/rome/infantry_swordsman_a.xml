@@ -2,6 +2,7 @@
 <Entity parent="units/rome/infantry_swordsman_b">
   <Identity>
     <Rank>Advanced</Rank>
+    <SpecificName>Principes</SpecificName>
   </Identity>
   <Promotion>
     <Entity>units/rome/infantry_swordsman_e</Entity>

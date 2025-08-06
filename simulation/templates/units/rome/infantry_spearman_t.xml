@@ -1,38 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_melee_spearman">
-  <Builder>
-    <Entities datatype="tokens">
-      structures/rome/army_camp
-      structures/rome/temple_vesta
-      structures/rome/temple_mars
-      structures/rome/tower_artillery
-    </Entities>
-  </Builder>
   <Health>
     <DamageVariants>
       <lightdamage>0.85</lightdamage>
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
   </Health>
+  <Auras datatype="tokens">
+    units/phalanx
+  </Auras>
+  <Cost>
+    <Resources>
+      <metal op="add">20</metal>
+      <wood op="add">-10</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>
-    <SelectionGroupName>units/rome/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Elite Spearman</GenericName>
+    <Rank>Elite</Rank>
+    <SelectionGroupName>units/rome/infantry_spearman_t</SelectionGroupName>
+    <GenericName>Third Liners</GenericName>
     <SpecificName>Triārius</SpecificName>
-    <Icon>units/rome/infantry_spearman_conscript.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
-    <Tooltip>Elite rank Spearmen can be promoted to champion Centurions.</Tooltip>
+    <Icon>units/samn/spearman.png</Icon>
+    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
   </Identity>
-  <Promotion>
-    <Entity>units/rome/infantry_spearman_a</Entity>
-  </Promotion>
+   <Health>
+    <Max op="add">25</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Upgrade>
+    <Centurion>
+      <Entity>units/rome/champion_infantry_swordsman_centurion</Entity>
+      <Tooltip>Give this combat veteran the rank of Centurion.</Tooltip>
+      <Cost>
+        <food>100</food>
+        <metal>50</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>12</Time>
+    </Centurion>
+  </Upgrade>
+  <Promotion disable=""/>
   <UnitAI>
     <Formations datatype="tokens">
       special/formations/anti_cavalry
     </Formations>
   </UnitAI>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+  </UnitMotion>
   <VisualActor>
-    <Actor>units/romans/infantry_spearman_conscript.xml</Actor>
+    <Actor>units/romans/infantry_spearman_t.xml</Actor>
   </VisualActor>
 </Entity>

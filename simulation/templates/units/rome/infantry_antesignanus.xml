@@ -28,14 +28,26 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
+   <Upgrade>
+    <Legionary>
+      <Entity>units/rome/infantry_legionary</Entity>
+      <Tooltip>Switch to using a sword.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Legionary>
+  </Upgrade>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1</Hack>
-        <Pierce op="add">0.5</Pierce>
+        <Hack>2.5</Hack>
+        <Hack>6.5</Hack>
+        <Pierce>6.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
+  <UnitMotion>
+    <WalkSpeed>9.0</WalkSpeed>
+  </UnitMotion>
   <Promotion>
     <Entity>units/rome/champion_infantry_javelineer</Entity>
     <RequiredXp>500</RequiredXp>

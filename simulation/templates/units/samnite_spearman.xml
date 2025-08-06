@@ -5,6 +5,11 @@
     <SpecificName>Samnite Spearman</SpecificName>
     <Icon>units/samn/spearman.png</Icon>
   </Identity>
+  <Cost>
+    <Resources>
+      <metal op="add">25</metal>
+    </Resources>
+  </Cost>
  <Resistance>
     <Entity>
       <Damage>
@@ -14,7 +19,7 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max op="add">20</Max>
+    <Max op="add">25</Max>
   </Health>
   <Promotion disable=""/>
   <VisualActor>

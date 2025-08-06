@@ -42,6 +42,17 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed>9.0</WalkSpeed>
+  </UnitMotion>
+   <Upgrade>
+    <Antesignanus>
+      <Entity>units/rome/infantry_antesignanus</Entity>
+      <Tooltip>Switch to using a javilin.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Antesignanus>
+  </Upgrade>
   <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
     <RequiredXp>400</RequiredXp>

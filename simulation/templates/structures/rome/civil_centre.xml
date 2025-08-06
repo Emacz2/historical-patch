@@ -28,9 +28,10 @@
   </Researcher>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/infantry_javelineer_levy
+      units/{civ}/infantry_javelineer_b
       units/{civ}/cavalry_spearman_b
-	    units/rome/infantry_spearman_levy
+	    units/{civ}/infantry_spearman_b
+      units/{civ}/serf_slinger
     </Entities>
   </Trainer>
   <VisualActor>

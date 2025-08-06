@@ -14,11 +14,11 @@
 	"requirements": {
 		"entity": {
 			"class": "Village",
-			"number": 6
+			"number": 5
 		}
 	},
 
-	"requirementsTooltip": "Requires six Village Structures.",
+	"requirementsTooltip": "Requires five Village Structures.",
 	"supersedes": "phase_village",
 	"replaces": ["phase_town"],
 	"icon": "town_phase.png",
@@ -32,8 +32,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" }
-		
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" },
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Early" }		
 		
 
 	],

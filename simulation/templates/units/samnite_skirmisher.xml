@@ -5,6 +5,11 @@
     <SpecificName>Samnite Skirmisher</SpecificName>
     <Icon>units/samn/skirmisher.png</Icon>
   </Identity>
+  <Cost>
+    <Resources>
+      <metal op="add">25</metal>
+    </Resources>
+  </Cost>
   <Attack>
     <Ranged>
       <Projectile>

@@ -35,6 +35,6 @@
     </Formations>
   </UnitAI>
   <VisualActor>
-    <Actor>units/romans/infantry_spearman_conscript.xml</Actor>
+    <Actor>units/romans/infantry_javelineer_conscript.xml</Actor>
   </VisualActor>
 </Entity>
