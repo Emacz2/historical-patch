@@ -24,7 +24,7 @@
     <GenericName>Roman Spearman</GenericName>
     <SpecificName>Hastātus</SpecificName>
     <Icon>units/rome/infantry_spearman.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī Early</VisibleClasses>
+    <VisibleClasses datatype="tokens">Rōmānī</VisibleClasses>
   </Identity>
   <Promotion>
     <Entity>units/rome/infantry_spearman_a</Entity>
