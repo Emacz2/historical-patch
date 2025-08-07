@@ -8,12 +8,12 @@
       <lightdamage>0.85</lightdamage>
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
-    <Max op="add">-50</Max>
+    <Max op="add">-35</Max>
   </Health>
   <Cost>
     <BuildTime op="mul">0.9</BuildTime>
     <Resources>
-      <metal op="add">-20</metal>
+      <metal op="add">-30</metal>
       <wood op="add">-20</wood>
     </Resources>
   </Cost>

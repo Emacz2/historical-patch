@@ -6,7 +6,7 @@
       <AttackName>Trunk</AttackName>
       <Damage>
         <Hack>30</Hack>
-        <Crush>45</Crush>
+        <Crush>40</Crush>
       </Damage>
       <Splash>
         <Shape>Circular</Shape>

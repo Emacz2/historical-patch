@@ -11,8 +11,7 @@
   </Auras>
   <Cost>
     <Resources>
-      <metal op="add">20</metal>
-      <wood op="add">-10</wood>
+      <metal op="add">25</metal>
     </Resources>
   </Cost>
   <Identity>
