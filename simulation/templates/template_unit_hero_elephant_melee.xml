@@ -34,7 +34,7 @@
     <Height>9.0</Height>
   </Footprint>
   <Health>
-    <Max>1200</Max>
+    <Max>1250</Max>
   </Health>
   <Identity>
     <GenericName>Hero Elephant</GenericName>
