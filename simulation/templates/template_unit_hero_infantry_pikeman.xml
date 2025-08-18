@@ -3,17 +3,17 @@
   <Attack>
     <Melee>
       <AttackName>Pike</AttackName>
-      <Damage>
+       <Damage>
         <Hack>12</Hack>
-        <Pierce>16</Pierce>
+        <Pierce>24</Pierce>
       </Damage>
-      <MaxRange>8</MaxRange>
-      <PrepareTime>1000</PrepareTime>
+      <MaxRange>9</MaxRange>
+      <PrepareTime>500</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3.5</Multiplier>
+          <Multiplier>3.25</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>

@@ -4,13 +4,13 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>32</Pierce>
+        <Pierce>22.4</Pierce>
       </Damage>
-      <MaxRange>65</MaxRange>
-      <PrepareTime>550</PrepareTime>
-      <RepeatTime>1250</RepeatTime>
+      <MaxRange>74</MaxRange>
+      <PrepareTime>250</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
       <Projectile>
-        <Speed>400</Speed>
+        <Speed>125</Speed>
         <Spread>1.5</Spread>
         <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>

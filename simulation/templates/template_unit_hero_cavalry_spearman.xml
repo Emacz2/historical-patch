@@ -4,8 +4,8 @@
     <Melee>
       <AttackName>Spear</AttackName>
       <Damage>
-        <Hack>18</Hack>
-        <Pierce>38</Pierce>
+        <Hack>15</Hack>
+        <Pierce>24</Pierce>
       </Damage>
       <MaxRange>5.5</MaxRange>
       <Bonuses>
@@ -14,8 +14,8 @@
           <Multiplier>2</Multiplier>
         </BonusCavMelee>
       </Bonuses>
-      <PrepareTime>350</PrepareTime>
-      <RepeatTime>1300</RepeatTime>
+      <PrepareTime>300</PrepareTime>
+      <RepeatTime>1400</RepeatTime>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
       <RestrictedClasses datatype="tokens">FemaleCitizen</RestrictedClasses>
     </Melee>

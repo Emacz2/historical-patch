@@ -3,17 +3,17 @@
   <Attack>
     <Melee>
       <AttackName>Spear</AttackName>
-      <Damage>
-        <Hack>15</Hack>
-        <Pierce>12</Pierce>
+       <Damage>
+        <Hack>12</Hack>
+        <Pierce>22</Pierce>
       </Damage>
-      <MaxRange>4</MaxRange>
-      <PrepareTime>450</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
+      <MaxRange>4.5</MaxRange>
+      <PrepareTime>300</PrepareTime>
+      <RepeatTime>1250</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3.5</Multiplier>
+          <Multiplier>3</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
