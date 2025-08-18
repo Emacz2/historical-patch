@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_hero">
-  <Attack>
+<Attack>
     <Capture disable=""/>
     <Melee>
       <AttackName>Trunk</AttackName>
       <Damage>
-        <Hack>60</Hack>
-        <Crush>90</Crush>
+        <Hack>45</Hack>
+        <Crush>60</Crush>
       </Damage>
       <Splash>
         <Shape>Circular</Shape>
         <Range>2</Range>
         <FriendlyFire>false</FriendlyFire>
         <Damage>
-          <Hack>45</Hack>
+          <Crush>45</Crush>
         </Damage>
       </Splash>
       <MaxRange>5</MaxRange>
@@ -50,8 +50,8 @@
 <Resistance>
     <Entity>
       <Damage>
-        <Hack>17.5</Hack>
-        <Pierce>17.5</Pierce>
+        <Hack>18.5</Hack>
+        <Pierce>18.5</Pierce>
         <Crush>25</Crush>
       </Damage>
     </Entity>

@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_hero_cavalry">
-  <Attack>
+   <Attack>
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>40</Pierce>
+      <Pierce>22.5</Pierce>
       </Damage>
-      <MaxRange>62</MaxRange>
-      <PrepareTime>250</PrepareTime>
-      <RepeatTime>1250</RepeatTime>
+      <MaxRange>70</MaxRange>
+      <PrepareTime>300</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
       <Projectile>
-        <Speed>425</Speed>
-        <Spread>0.5</Spread>
+        <Speed>125</Speed>
+        <Spread>1.5</Spread>
         <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="5"/>

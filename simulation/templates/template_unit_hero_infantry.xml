@@ -11,7 +11,7 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>500</Max>
+    <Max>550</Max>
   </Health>
   <Identity>
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
@@ -23,9 +23,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Crush>10</Crush>
-        <Hack>11</Hack>
-        <Pierce>11</Pierce>
+        <Crush>15</Crush>
+        <Hack>12.5</Hack>
+        <Pierce>12.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
