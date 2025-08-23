@@ -20,7 +20,7 @@
     <Icon>units/pers/champion_infantry.png</Icon>
   </Identity>
   <Cost>
-    <BuildTime>16</BuildTime>
+    <BuildTime>20</BuildTime>
     <Resources>
       <food>80</food>
       <wood>60</wood>

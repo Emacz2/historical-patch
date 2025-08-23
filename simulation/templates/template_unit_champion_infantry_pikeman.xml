@@ -21,7 +21,7 @@
   </Attack>
   <Identity>
     <GenericName>Champion Pikeman</GenericName>
-    <Tooltip>Counters: 3.25× vs Cavalry.</Tooltip>
+    <Tooltip>Counters: 3.5 vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Pikeman</VisibleClasses>
   </Identity>
   <Loot>

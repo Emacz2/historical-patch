@@ -7,4 +7,16 @@
   <VisualActor>
     <Actor>units/persians/infantry_archer_e.xml</Actor>
   </VisualActor>
+   <Upgrade>
+    <Imortal>
+      <Entity>units/pers/champion_infantry_archer_upgrade</Entity>
+      <Tooltip>Upgrade Elite Archers to Imortals</Tooltip>
+      <Cost>
+        <food>20</food>
+        <metal>30</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </Imortal>
+  </Upgrade>
 </Entity>

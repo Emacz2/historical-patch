@@ -13,9 +13,9 @@
     <BuildTime>750</BuildTime>
     <Resources>
       <food>1000</food>
-      <wood>1500</wood>
+      <wood>1250</wood>
       <stone>1500</stone>
-      <metal>1000</metal>
+      <metal>750</metal>
     </Resources>
   </Cost>
   <Footprint>
