@@ -10,10 +10,9 @@
    <Upgrade>
     <Imortal>
       <Entity>units/pers/champion_infantry_archer_upgrade</Entity>
-      <Tooltip>Upgrade Elite Archers to Imortals</Tooltip>
       <Cost>
-        <food>20</food>
-        <metal>30</metal>
+        <food>10</food>
+        <metal>40</metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>

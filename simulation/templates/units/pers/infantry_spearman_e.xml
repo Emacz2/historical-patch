@@ -10,10 +10,9 @@
   <Upgrade>
     <Imortal>
       <Entity>units/pers/champion_infantry</Entity>
-      <Tooltip>Upgrade Elite Spearman to Imortals</Tooltip>
       <Cost>
-        <food>20</food>
-        <metal>30</metal>
+        <food>10</food>
+        <metal>40</metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>

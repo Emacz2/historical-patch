@@ -9,6 +9,7 @@
     <Civ>pers</Civ>
     <Lang>persian</Lang>
     <SelectionGroupName>units/pers/infantry_spearman_b</SelectionGroupName>
+    <Tooltip>Upgrade Elite Spearman to Imortals</Tooltip>
     <GenericName>Shield Bearer</GenericName>
     <SpecificName>Sparabara</SpecificName>
     <Icon>units/pers/infantry_spearman.png</Icon>
