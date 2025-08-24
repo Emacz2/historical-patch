@@ -12,7 +12,7 @@
   <Cost>
     <Resources>
       <food op="add">25</food>
-      <metal op="add">25</metal>
+      <metal op="add">15</metal>
     </Resources>
   </Cost>
   <Identity>

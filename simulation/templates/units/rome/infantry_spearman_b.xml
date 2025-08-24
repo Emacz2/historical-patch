@@ -19,7 +19,7 @@
   </Health>
    <Cost>
     <Resources>
-      <metal op="add">10</metal>
+      <metal op="add">15</metal>
       <wood op="add">-10</wood>
     </Resources>
   </Cost>
