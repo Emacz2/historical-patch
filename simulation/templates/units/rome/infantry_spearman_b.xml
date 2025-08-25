@@ -17,12 +17,6 @@
       <mediumdamage>0.45</mediumdamage>
     </DamageVariants>
   </Health>
-   <Cost>
-    <Resources>
-      <metal op="add">15</metal>
-      <wood op="add">-10</wood>
-    </Resources>
-  </Cost>
   <Identity>
     <Civ>rome</Civ>
     <Lang>latin</Lang>

@@ -20,6 +20,10 @@
       units/{civ}/champion_infantry_swordsman_first_cohert
     </Entities>
   </Trainer>
+  <Promotion>
+    <Entity>structures/rome/barracks_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Obstruction>
     <Static width="22.0" depth="22.0"/>
   </Obstruction>
