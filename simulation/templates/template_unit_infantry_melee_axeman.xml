@@ -5,8 +5,8 @@
       <AttackName>Axe</AttackName>
       <Damage>
         <Hack>7</Hack>
-        <Crush>3</Crush>
-        <Pierce>1</Pierce>
+        <Crush>2.7</Crush>
+        <Pierce>0.9</Pierce>
       </Damage>
       <MaxRange>3.5</MaxRange>
       <PrepareTime>550</PrepareTime>

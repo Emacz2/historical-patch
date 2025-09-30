@@ -5,7 +5,7 @@
     <Melee>
       <AttackName>Trunk</AttackName>
       <Damage>
-        <Hack>30</Hack>
+        <Hack>27</Hack>
         <Crush>40</Crush>
       </Damage>
       <Splash>

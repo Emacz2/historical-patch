@@ -4,7 +4,7 @@
     <Ranged>
       <AttackName>Crossbow</AttackName>
       <Damage>
-        <Pierce>27.5</Pierce>
+        <Pierce>25</Pierce>
       </Damage>
       <MaxRange>37</MaxRange>
       <PrepareTime>750</PrepareTime>

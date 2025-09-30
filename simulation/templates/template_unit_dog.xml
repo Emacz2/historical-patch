@@ -4,7 +4,7 @@
     <Melee>
      <ApplyStatus>
         <Bleeding>
-          <Interval>1500</Interval>
+          <Interval>1250</Interval>
           <Damage>
             <Bleeding>1</Bleeding>
           </Damage>
