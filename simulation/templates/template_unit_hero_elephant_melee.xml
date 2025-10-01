@@ -5,15 +5,15 @@
     <Melee>
       <AttackName>Trunk</AttackName>
       <Damage>
-        <Hack>45</Hack>
-        <Crush>60</Crush>
+        <Hack>40</Hack>
+        <Crush>55</Crush>
       </Damage>
       <Splash>
         <Shape>Circular</Shape>
         <Range>2</Range>
         <FriendlyFire>false</FriendlyFire>
         <Damage>
-          <Crush>45</Crush>
+          <Crush>40</Crush>
         </Damage>
       </Splash>
       <MaxRange>5</MaxRange>
