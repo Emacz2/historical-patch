@@ -16,7 +16,8 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
-			{ "notciv": "spart" }
+			{ "notciv": "spart" },
+			{ "notciv": "brit" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
