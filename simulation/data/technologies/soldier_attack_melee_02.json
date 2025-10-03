@@ -9,6 +9,7 @@
 		"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
+			{ "notciv": "brit" },
 			{ "notciv": "spart" }
 		]
 	},
