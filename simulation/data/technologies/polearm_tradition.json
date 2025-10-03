@@ -20,12 +20,13 @@
 	"requirementsTooltip": "Unlocked in Town Phase.",
 	"icon": "armor_corinthian.png",
 	"researchTime": 30,
-	"tooltip": "Spear/pikemen −25% training time and −40% promotion experience.",
+	"tooltip": "Pikemen −25% training time and −30% promotion experience and +1 range.",
 	"modifications": [
 		{ "value": "Cost/BuildTime", "multiply": 0.75 },
-		{ "value": "Promotion/RequiredXp", "multiply": 0.6 }
+		{ "value": "Promotion/RequiredXp", "multiply": 0.7 },
+		{ "value": "Attack/Melee/MaxRange", "add": 1 }
 		
 	],
-	"affects": ["Polearm !Cavalry"],
+	"affects": ["Infantry Pikeman"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
