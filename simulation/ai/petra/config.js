@@ -1,12 +1,12 @@
 // These integers must be sequential
-PETRA.DIFFICULTY_SANDBOX = 0;
-PETRA.DIFFICULTY_VERY_EASY = 1;
-PETRA.DIFFICULTY_EASY = 2;
-PETRA.DIFFICULTY_MEDIUM = 3;
-PETRA.DIFFICULTY_HARD = 4;
-PETRA.DIFFICULTY_VERY_HARD = 5;
+PETRA_EXPERT.DIFFICULTY_SANDBOX = 0;
+PETRA_EXPERT.DIFFICULTY_VERY_EASY = 1;
+PETRA_EXPERT.DIFFICULTY_EASY = 2;
+PETRA_EXPERT.DIFFICULTY_MEDIUM = 3;
+PETRA_EXPERT.DIFFICULTY_HARD = 4;
+PETRA_EXPERT.DIFFICULTY_VERY_HARD = 5;
 
-PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
+PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, behavior)
 {
 	this.difficulty = difficulty;
 
@@ -18,15 +18,49 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 
 	this.chat = true;	// false to prevent AI's chats
 
-	this.popScaling = 1;	// scale factor depending on the max population
+	let randPopScaling = randFloat(.85, 1.2);
+
+	this.popScaling = randPopScaling;
+
+	let randTowerLapseTime = Math.ceil(randFloat(10, 40));
+	let randFortressLapseTime = Math.ceil(randFloat(80, 250));
+	let randPopForBarracks1 = Math.ceil(randFloat(15, 25));
+	let randPopForBarracks2 = Math.ceil(randFloat(50, 65));
+	let randPopForBarracks3 = Math.ceil(randFloat(85, 100));
+	let randPopForBarracks4 = Math.ceil(randFloat(120, 130));
+	let randPopForBarracks5 = Math.ceil(randFloat(140, 150));
+
+	let randPopForStable1 = Math.ceil(randFloat(80, 100));
+	let randPopForStable2 = Math.ceil(randFloat(125, 140));
+	let randPopForStable3 = Math.ceil(randFloat(160, 180));
+	let randPopForStable4 = Math.ceil(randFloat(200, 240));
+	let randPopForStable5 = Math.ceil(randFloat(250, 270));
+
+	//let randNumSentryTowers = Math.ceil(randFloat(3, 15));
+
+
 
 	this.Military = {
-		"towerLapseTime": 300,	// Time to wait between building 2 towers
-		"fortressLapseTime": 360,	// Time to wait between building 2 fortresses
-		"popForBarracks1": 25,
-		"popForBarracks2": 75,
-		"popForForge": 65,
-		"numSentryTowers": 1
+		//"towerLapseTime": 90,	// Time to wait between building 2 towers
+		"towerLapseTime": randTowerLapseTime,
+		//"fortressLapseTime": 390,	// Time to wait between building 2 fortresses
+		"fortressLapseTime": randFortressLapseTime,
+		//"popForBarracks1": 25,
+		"popForBarracks1": randPopForBarracks1,
+		//"popForBarracks2": 65,
+		"popForBarracks2": randPopForBarracks2,
+		"popForBarracks3": randPopForBarracks3,
+		"popForBarracks4": randPopForBarracks4,
+		"popForBarracks5": randPopForBarracks5,
+		"popForStable1": randPopForStable1,
+		"popForStable2": randPopForStable2,
+		"popForStable3": randPopForStable3,
+		"popForStable4": randPopForStable4,
+		"popForStable5": randPopForStable5,
+		"popForForge": 65,		
+		"popForEmbassy": 65,
+		//"numSentryTowers": 1
+		"numSentryTowers": 2 //randNumSentryTowers
 	};
 
 	this.DamageTypeImportance = {
@@ -36,26 +70,61 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		"Fire": 0.095
 	};
 
+	// mod params
+	let randPopPhase2 = Math.ceil(randFloat(50, 80));
+	let randWorkPhase3 = Math.ceil(randFloat(160, 190));
+	let randWorkPhase4 = Math.ceil(randFloat(190, 200));
+	let randPopForDock = Math.ceil(randFloat(5, 35));
+	let randTargetNumWorkers = Math.ceil(randFloat(120, 150));
+	let randTargetNumTraders = Math.ceil(randFloat(10, 20));
+	let randTargetNumFishers = Math.ceil(randFloat(5, 20));
+
 	this.Economy = {
-		"popPhase2": 80,	// How many units we want before aging to phase2.
-		"workPhase3": 120,	// How many workers we want before aging to phase3.
-		"workPhase4": 150,	// How many workers we want before aging to phase4 or higher.
-		"popForDock": 25,
-		"targetNumWorkers": 40,	// dummy, will be changed later
-		"targetNumTraders": 5,	// Target number of traders
-		"targetNumFishers": 1,	// Target number of fishers per sea
-		"supportRatio": 0.35,	// fraction of support workers among the workforce
-		"provisionFields": 2
+		//"popPhase2": 38,	// How many units we want before aging to phase2.
+		"popPhase2": randPopPhase2,
+		//"workPhase3": 65,	// How many workers we want before aging to phase3.
+		"workPhase3": randWorkPhase3,
+		//"workPhase4": 80,	// How many workers we want before aging to phase4 or higher.
+		"randWorkPhase4": randWorkPhase4,
+
+		"popForGerousia": 65,
+		
+		"popForCorral1": 25,
+		"popForCorral2": 50,
+		"popForCorral3": 90,
+		"popForCorral4": 120,
+		"popForCorral5": 150,
+		//"popForDock": 25,
+		"popForDock": randPopForDock,
+		//"targetNumWorkers": 40,	// dummy, will be changed later
+		"targetNumWorkers": randTargetNumWorkers,
+		//"targetNumTraders": 5,	// Target number of traders
+		"targetNumTraders": randTargetNumTraders,
+		//"targetNumFishers": 1,	// Target number of fishers per sea
+		"targetNumFishers": randTargetNumFishers,
+		//"supportRatio": 0.35,	// fraction of support workers among the workforce
+		"supportRatio": .85,
+		//"provisionFields": 2
+		"provisionFields": 1
 	};
 
 	// Note: attack settings are set directly in attack_plan.js
 	// defense
-	this.Defense =
+	/* this.Defense =
 	{
 		"defenseRatio": { "ally": 1.4, "neutral": 1.8, "own": 2 },	// ratio of defenders/attackers.
 		"armyCompactSize": 2000,	// squared. Half-diameter of an army.
 		"armyBreakawaySize": 3500,	// squared.
 		"armyMergeSize": 1400	// squared.
+	}; */
+
+	// mod
+	this.Defense =
+	{
+		"defenseRatio": { "ally": 2.4, "neutral": 2.8, "own": 4 },	// ratio of defenders/attackers.
+		"armyCompactSize": 3000,	// squared. Half-diameter of an army.
+		"armyBreakawaySize": 5500,	// squared.
+		"armyMergeSize": 2400	// squared.
 	};
 
 	// Additional buildings that the AI does not yet know when to build
@@ -68,19 +137,24 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 			"structures/{civ}/prytaneion",
 			"structures/{civ}/theater"
 		],
-		"brit": [],
+		"brit": [
+			"structures/{civ}/kennel"
+
+		],
 		"cart": [
 			"structures/{civ}/embassy_celtic",
 			"structures/{civ}/embassy_iberian",
-			"structures/{civ}/embassy_italic"
+			"structures/{civ}/embassy_italic",
+			"structures/{civ}/super_dock",
+
 		],
 		"gaul": [
-			"structures/{civ}/assembly",
-			"structures/{civ}/celtic_coalitliton"
+			"structures/{civ}/assembly"
 		],
 		"han": [
 			"structures/{civ}/academy",
 			"structures/{civ}/ministry"
+
 		],
 		"iber": [
 			"structures/{civ}/monument"
@@ -105,7 +179,10 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		"ptol": [
 			"structures/{civ}/library",
 			"structures/{civ}/theater",
+			//"structures/{civ}/lighthouse",
+			//"structures/{civ}/mercenary_camp",
 			"structures/{civ}/temple_2"
+
 		],
 		"rome": [
 			"structures/{civ}/army_camp",
@@ -115,30 +192,55 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 			"structures/{civ}/theater"
 		],
 		"spart": [
+			"structures/{civ}/gerousia",
 			"structures/{civ}/syssiton",
 			"structures/{civ}/theater"
+
 		]
 	};
 
-	this.priorities =
+	/* this.priorities =
 	{
-		"villager": 500,      // should be slightly lower than the citizen soldier one to not get all the food
-		"citizenSoldier": 750,
+		"villager": 30,      // should be slightly lower than the citizen soldier one to not get all the food
+		"citizenSoldier": 60,
 		"trader": 50,
 		"healer": 20,
 		"ships": 70,
-		"house": 675,
-		"dropsites": 400,
+		"house": 350,
+		"dropsites": 200,
 		"field": 400,
 		"dock": 90,
-		"corral": 10,
-		"economicBuilding": 350,
+		"corral": 100,
+		"economicBuilding": 90,
+		"militaryBuilding": 130,
+		"defenseBuilding": 70,
+		"civilCentre": 950,
+		"majorTech": 700,
+		"minorTech": 250,
+		"wonder": 1000,
+		"emergency": 1000    // used only in emergency situations, should be the highest one
+	}; */
+
+	// mod
+	this.priorities =
+	{
+		"villager": 500,      // should be slightly lower than the citizen soldier one to not get all the food
+		"citizenSoldier": 980,
+		"trader": 180,
+		"healer": 20,
+		"ships": 70,
+		"house": 750,
+		"dropsites": 200,
+		"field": 670,
+		"dock": 800,
+		"corral": 900,
+		"economicBuilding": 300,
 		"militaryBuilding": 400,
-		"defenseBuilding": 100,
-		"civilCentre": 300,
-		"majorTech": 600,
-		"minorTech": 700,
-		"wonder": 100,
+		"defenseBuilding": 300,
+		"civilCentre": 950,
+		"majorTech": 350,
+		"minorTech": 150,
+		"wonder": 1000,
 		"emergency": 1000    // used only in emergency situations, should be the highest one
 	};
 
@@ -150,7 +252,7 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		"defensive": 0.5
 	};
 
-	// See PETRA.QueueManager.prototype.wantedGatherRates()
+	// See PETRA_EXPERT.QueueManager.prototype.wantedGatherRates()
 	this.queues =
 	{
 		"firstTurn": {
@@ -159,14 +261,17 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 			"default": 0
 		},
 		"short": {
-			"food": 200,
-			"wood": 200,
-			"default": 100
+			"food": 225,
+			"wood": 150,
+			"default": 50
 		},
 		"medium": {
 			"default": 0
 		},
 		"long": {
+			"default": 0
+		},
+		"long1": {
 			"default": 0
 		}
 	};
@@ -178,6 +283,7 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 		"Market/InternationalBonus",
 		"Player/sharedDropsites"
 	];
+
 
 	this.criticalPopulationFactors = [
 		0.8,
@@ -207,9 +313,9 @@ PETRA.Config = function(difficulty = PETRA.DIFFICULTY_MEDIUM, behavior)
 	];
 };
 
-PETRA.Config.prototype.setConfig = function(gameState)
+PETRA_EXPERT.Config.prototype.setConfig = function(gameState)
 {
-	if (this.difficulty > PETRA.DIFFICULTY_SANDBOX)
+	if (this.difficulty > PETRA_EXPERT.DIFFICULTY_SANDBOX)
 	{
 		// Setup personality traits according to the user choice:
 		// The parameter used to define the personality is basically the aggressivity or (1-defensiveness)
@@ -223,7 +329,7 @@ PETRA.Config.prototype.setConfig = function(gameState)
 		};
 		let behavior = randFloat(-0.5, 0.5);
 		// make agressive and defensive quite anticorrelated (aggressive ~ 1 - defensive) but not completelety
-		let variation = 0.15 * randFloat(-1, 1) * Math.sqrt(Math.square(0.5) - Math.square(behavior));
+		let variation = 0.3 * randFloat(-1, 1) * Math.sqrt(Math.square(0.5) - Math.square(behavior));
 		let aggressive = Math.max(Math.min(behavior + variation, 0.5), -0.5) + 0.5;
 		let defensive = Math.max(Math.min(-behavior + variation, 0.5), -0.5) + 0.5;
 		let min = personalityList[this.behavior].min;
@@ -234,7 +340,7 @@ PETRA.Config.prototype.setConfig = function(gameState)
 			"cooperative": randFloat(0, 1)
 		};
 	}
-	// Petra usually uses the continuous values of personality.aggressive and personality.defensive
+	// Petra Expert usually uses the continuous values of personality.aggressive and personality.defensive
 	// to define its behavior according to personality. But when discontinuous behavior is needed,
 	// it uses the following personalityCut which should be set such that:
 	// behavior="aggressive" => personality.aggressive > personalityCut.strong &&
@@ -252,14 +358,14 @@ PETRA.Config.prototype.setConfig = function(gameState)
 	this.Military.fortressLapseTime = Math.round(this.Military.fortressLapseTime * (1.1 - 0.2 * this.personality.defensive));
 	this.priorities.defenseBuilding = Math.round(this.priorities.defenseBuilding * (0.9 + 0.2 * this.personality.defensive));
 
-	if (this.difficulty < PETRA.DIFFICULTY_EASY)
+	if (this.difficulty < PETRA_EXPERT.DIFFICULTY_EASY)
 	{
 		this.popScaling = 0.5;
 		this.Economy.supportRatio = 0.5;
 		this.Economy.provisionFields = 1;
 		this.Military.numSentryTowers = this.personality.defensive > this.personalityCut.strong ? 1 : 0;
 	}
-	else if (this.difficulty < PETRA.DIFFICULTY_MEDIUM)
+	else if (this.difficulty < PETRA_EXPERT.DIFFICULTY_MEDIUM)
 	{
 		this.popScaling = 0.7;
 		this.Economy.supportRatio = 0.4;
@@ -268,7 +374,7 @@ PETRA.Config.prototype.setConfig = function(gameState)
 	}
 	else
 	{
-		if (this.difficulty == PETRA.DIFFICULTY_MEDIUM)
+		if (this.difficulty == PETRA_EXPERT.DIFFICULTY_MEDIUM)
 			this.Military.numSentryTowers = 1;
 		else
 			this.Military.numSentryTowers = 2;
@@ -286,13 +392,13 @@ PETRA.Config.prototype.setConfig = function(gameState)
 	}
 
 	let maxPop = gameState.getPopulationMax();
-	if (this.difficulty < PETRA.DIFFICULTY_EASY)
+	if (this.difficulty < PETRA_EXPERT.DIFFICULTY_EASY)
 		this.Economy.targetNumWorkers = Math.max(1, Math.min(40, maxPop));
-	else if (this.difficulty < PETRA.DIFFICULTY_MEDIUM)
+	else if (this.difficulty < PETRA_EXPERT.DIFFICULTY_MEDIUM)
 		this.Economy.targetNumWorkers = Math.max(1, Math.min(60, Math.floor(maxPop/2)));
 	else
-		this.Economy.targetNumWorkers = Math.max(1, Math.min(120, Math.floor(maxPop/3)));
-	this.Economy.targetNumTraders = 2 + this.difficulty;
+		this.Economy.targetNumWorkers = Math.floor(this.Economy.targetNumWorkers * this.popScaling);
+	this.Economy.targetNumTraders = Math.floor(this.Economy.targetNumTraders * this.popScaling);
 
 
 	if (gameState.getVictoryConditions().has("wonder"))
@@ -301,20 +407,32 @@ PETRA.Config.prototype.setConfig = function(gameState)
 		this.Economy.workPhase4 = Math.floor(0.9 * this.Economy.workPhase4);
 	}
 
-	if (maxPop < 300)
+	if (maxPop <= 300)
 		this.popScaling *= Math.sqrt(maxPop / 300);
 
-	this.Military.popForBarracks1 = Math.min(Math.max(Math.floor(this.Military.popForBarracks1 * this.popScaling), 12), Math.floor(maxPop/5));
-	this.Military.popForBarracks2 = Math.min(Math.max(Math.floor(this.Military.popForBarracks2 * this.popScaling), 45), Math.floor(maxPop*2/3));
-	this.Military.popForForge = Math.min(Math.max(Math.floor(this.Military.popForForge * this.popScaling), 30), Math.floor(maxPop/2));
-	this.Economy.popPhase2 = Math.min(Math.max(Math.floor(this.Economy.popPhase2 * this.popScaling), 20), Math.floor(maxPop/2));
-	this.Economy.workPhase3 = Math.min(Math.max(Math.floor(this.Economy.workPhase3 * this.popScaling), 40), Math.floor(maxPop*2/3));
-	this.Economy.workPhase4 = Math.min(Math.max(Math.floor(this.Economy.workPhase4 * this.popScaling), 45), Math.floor(maxPop*2/3));
+	this.Military.popForBarracks1 = Math.floor(this.Military.popForBarracks1 * this.popScaling);
+	this.Military.popForBarracks2 = Math.floor(this.Military.popForBarracks2 * this.popScaling);
+	this.Military.popForBarracks3 = Math.floor(this.Military.popForBarracks3 * this.popScaling);
+	this.Military.popForBarracks4 = Math.floor(this.Military.popForBarracks4 * this.popScaling);
+	this.Military.popForBarracks5 = Math.floor(this.Military.popForBarracks5 * this.popScaling);
+	//Stable
+	this.Military.popForStable1 = Math.floor(this.Military.popForStable1 * this.popScaling);
+	this.Military.popForStable2 = Math.floor(this.Military.popForStable2 * this.popScaling);
+	this.Military.popForStable3 = Math.floor(this.Military.popForStable3 * this.popScaling);
+	this.Military.popForStable4 = Math.floor(this.Military.popForStable4 * this.popScaling);
+	this.Military.popForStable5 = Math.floor(this.Military.popForStable5 * this.popScaling);
+	this.Military.popForForge = Math.floor(this.Military.popForForge * this.popScaling);
+	this.Military.popForEmbassy = Math.floor(this.Military.popForEmbassy * this.popScaling);
+
+	this.Economy.popPhase2 = Math.floor(this.Economy.popPhase2 * this.popScaling);
+	this.Economy.popForGerousia = Math.floor(this.Economy.popForGerousia * this.popScaling);
+	this.Economy.workPhase3 = Math.floor(this.Economy.workPhase3 * this.popScaling);
+	this.Economy.workPhase4 = Math.floor(this.Economy.workPhase4 * this.popScaling);
 	this.Economy.targetNumTraders = Math.round(this.Economy.targetNumTraders * this.popScaling);
-	this.Economy.targetNumWorkers = Math.max(this.Economy.targetNumWorkers, this.Economy.popPhase2);
+	this.Economy.targetNumWorkers = Math.floor(this.Economy.targetNumWorkers * this.popScaling);
 	this.Economy.workPhase3 = Math.min(this.Economy.workPhase3, this.Economy.targetNumWorkers);
 	this.Economy.workPhase4 = Math.min(this.Economy.workPhase4, this.Economy.targetNumWorkers);
-	if (this.difficulty < PETRA.DIFFICULTY_EASY)
+	if (this.difficulty < PETRA_EXPERT.DIFFICULTY_EASY)
 		this.Economy.workPhase3 = Infinity;	// prevent the phasing to city phase
 
 	this.emergencyValues = {
@@ -327,10 +445,10 @@ PETRA.Config.prototype.setConfig = function(gameState)
 
 	if (this.debug < 2)
 		return;
-	API3.warn(" >>>  Petra bot: personality = " + uneval(this.personality));
+	API3.warn(" >>>  Petra Expert bot: personality = " + uneval(this.personality));
 };
 
-PETRA.Config.prototype.Cheat = function(gameState)
+PETRA_EXPERT.Config.prototype.Cheat = function(gameState)
 {
 	// Sandbox, Very Easy, Easy, Medium, Hard, Very Hard
 	// rate apply on resource stockpiling as gathering and trading
@@ -345,7 +463,7 @@ PETRA.Config.prototype.Cheat = function(gameState)
 	}, gameState.playerData.entity);
 };
 
-PETRA.Config.prototype.Serialize = function()
+PETRA_EXPERT.Config.prototype.Serialize = function()
 {
 	var data = {};
 	for (let key in this)
@@ -354,7 +472,7 @@ PETRA.Config.prototype.Serialize = function()
 	return data;
 };
 
-PETRA.Config.prototype.Deserialize = function(data)
+PETRA_EXPERT.Config.prototype.Deserialize = function(data)
 {
 	for (let key in data)
 		this[key] = data[key];
