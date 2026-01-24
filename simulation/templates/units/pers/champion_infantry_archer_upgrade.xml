@@ -32,7 +32,7 @@
     </Requirements>
   </Identity>
    <Cost>
-    <BuildTime>20</BuildTime>
+    <BuildTime>22</BuildTime>
     <Resources>
       <food>80</food>
       <wood>60</wood>
