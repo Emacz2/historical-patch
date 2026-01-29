@@ -41,11 +41,11 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 
 
 	this.Military = {
-		//"towerLapseTime": 90,	// Time to wait between building 2 towers
+		//"towerLapseTime": 120,	// Time to wait between building 2 towers
 		"towerLapseTime": randTowerLapseTime,
 		//"fortressLapseTime": 390,	// Time to wait between building 2 fortresses
 		"fortressLapseTime": randFortressLapseTime,
-		//"popForBarracks1": 25,
+		//"popForBarracks1": 30,
 		"popForBarracks1": randPopForBarracks1,
 		//"popForBarracks2": 65,
 		"popForBarracks2": randPopForBarracks2,
@@ -64,9 +64,9 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 	};
 
 	this.DamageTypeImportance = {
-		"Hack": 0.085,
-		"Pierce": 0.075,
-		"Crush": 0.065,
+		"Hack": 0.090,
+		"Pierce": 0.085,
+		"Crush": 0.060,
 		"Fire": 0.095
 	};
 
@@ -80,11 +80,11 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 	let randTargetNumFishers = Math.ceil(randFloat(5, 20));
 
 	this.Economy = {
-		//"popPhase2": 38,	// How many units we want before aging to phase2.
+		//"popPhase2": 75,	// How many units we want before aging to phase2.
 		"popPhase2": randPopPhase2,
-		//"workPhase3": 65,	// How many workers we want before aging to phase3.
+		//"workPhase3": 125,	// How many workers we want before aging to phase3.
 		"workPhase3": randWorkPhase3,
-		//"workPhase4": 80,	// How many workers we want before aging to phase4 or higher.
+		//"workPhase4": 150,	// How many workers we want before aging to phase4 or higher.
 		"randWorkPhase4": randWorkPhase4,
 
 		"popForGerousia": 65,
@@ -138,17 +138,20 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 			"structures/{civ}/theater"
 		],
 		"brit": [
-			"structures/{civ}/kennel"
+			"structures/{civ}/kennel",
+			"structures/{civ}/hill_fort"
 
 		],
 		"cart": [
 			"structures/{civ}/embassy_celtic",
 			"structures/{civ}/embassy_iberian",
 			"structures/{civ}/embassy_italic",
+			"structures/{civ}/numidian_camp",
 			"structures/{civ}/super_dock",
 
 		],
 		"gaul": [
+			"structures/{civ}/celtic_coalitliton",
 			"structures/{civ}/assembly"
 		],
 		"han": [
@@ -157,7 +160,9 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 
 		],
 		"iber": [
-			"structures/{civ}/monument"
+			"structures/{civ}/hall_of_heroes",
+			"structures/{civ}/monument",
+			"structures/{civ}/silvermine"
 		],
 		"kush": [
 			"structures/{civ}/camp_blemmye",
@@ -165,8 +170,9 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 			"structures/{civ}/pyramid_large",
 			"structures/{civ}/pyramid_small",
 			"structures/{civ}/temple_amun"
-		],
+	 	],
 		"mace": [
+			"structures/{civ}/royal_stoa",
 			"structures/{civ}/theater"
 		],
 		"maur": [
@@ -174,6 +180,7 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 			"structures/{civ}/pillar_ashoka"
 		],
 		"pers": [
+			"structures/{civ}/apartment_block",
 			"structures/{civ}/tachara"
 		],
 		"ptol": [
@@ -186,14 +193,18 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 		],
 		"rome": [
 			"structures/{civ}/army_camp",
-			"structures/{civ}/temple_vesta"
+			"structures/{civ}/temple_mars",
+			"structures/{civ}/temple_vesta",
+			"structures/{civ}/tower_artillery"
 		],
 		"sele": [
 			"structures/{civ}/theater"
 		],
 		"spart": [
+			"structures/{civ}/camp",
 			"structures/{civ}/gerousia",
 			"structures/{civ}/syssiton",
+			"structures/{civ}/tent_helot",
 			"structures/{civ}/theater"
 
 		]
@@ -202,9 +213,9 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 	/* this.priorities =
 	{
 		"villager": 30,      // should be slightly lower than the citizen soldier one to not get all the food
-		"citizenSoldier": 60,
-		"trader": 50,
-		"healer": 20,
+		"citizenSoldier": 45,
+		"trader": 75,
+		"healer": 50,
 		"ships": 70,
 		"house": 350,
 		"dropsites": 200,
@@ -224,22 +235,22 @@ PETRA_EXPERT.Config = function(difficulty = PETRA_EXPERT.DIFFICULTY_MEDIUM, beha
 	// mod
 	this.priorities =
 	{
-		"villager": 500,      // should be slightly lower than the citizen soldier one to not get all the food
-		"citizenSoldier": 980,
-		"trader": 180,
-		"healer": 20,
-		"ships": 70,
+		"villager": 800,      // should be slightly lower than the citizen soldier one to not get all the food
+		"citizenSoldier": 900,
+		"trader": 200,
+		"healer": 250,
+		"ships": 100,
 		"house": 750,
 		"dropsites": 200,
 		"field": 670,
-		"dock": 800,
-		"corral": 900,
-		"economicBuilding": 300,
-		"militaryBuilding": 400,
+		"dock": 600,
+		"corral":100,
+		"economicBuilding": 750,
+		"militaryBuilding": 700,
 		"defenseBuilding": 300,
-		"civilCentre": 950,
-		"majorTech": 350,
-		"minorTech": 150,
+		"civilCentre": 925,
+		"majorTech": 700,
+		"minorTech": 600,
 		"wonder": 1000,
 		"emergency": 1000    // used only in emergency situations, should be the highest one
 	};
