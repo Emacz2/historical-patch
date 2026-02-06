@@ -9,18 +9,17 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_city" },
-			{ "notciv": "brit" },
 			{ "notciv": "spart" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "armor_chain.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +2 hack and +0.5 crush resistance.",
+	"tooltip": "Non citizen soldiers +2 hack and +0.5 crush resistance.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
 	],
-	"affects": ["Soldier !Helot !Serf !Elephant"],
+	"affects": ["!Citizen Soldier"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

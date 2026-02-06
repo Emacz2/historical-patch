@@ -1,12 +1,12 @@
 {
 	"type": "Global",
-	"affects": ["Soldier"],
+	"affects": ["Citizen Soldier"],
 	"modifications": [
-	{ "value": "Cost/BuildTime", "multiply": 0.9}
+	{ "value": "Cost/BuildTime", "multiply": 0.75}
 		
 	],
 	"auraName": "Revolt reinforcements",
 	"showDescription": 1,
-	"auraDescription": "Soldiers 10% less train time.",
+	"auraDescription": "Soldiers 25% less train time.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }
