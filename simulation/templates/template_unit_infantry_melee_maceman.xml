@@ -29,7 +29,7 @@
     <metal>7</metal>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">0.90</WalkSpeed>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
   </UnitMotion>
   <Sound>
     <SoundGroups>

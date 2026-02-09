@@ -57,7 +57,8 @@
   </Sound>
   <ResourceGatherer disable=""/>
   <Builder disable=""/>
-  <UnitMotion>
-    <WalkSpeed>11.5</WalkSpeed>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
+    <RunMultiplier op="mul">1.5</RunMultiplier>
   </UnitMotion>
 </Entity>

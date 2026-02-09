@@ -104,7 +104,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.1</WalkSpeed>
-    <RunMultiplier op="mul">1.1</RunMultiplier>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <RunMultiplier op="mul">0.9</RunMultiplier>
   </UnitMotion>
 </Entity>

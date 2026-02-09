@@ -83,8 +83,7 @@
       special/formations/wedge
     </Formations>
   </UnitAI>
-  <UnitMotion>
-    <WalkSpeed>11</WalkSpeed>
-    <RunMultiplier>1.4</RunMultiplier>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.5</WalkSpeed>
   </UnitMotion>
 </Entity>

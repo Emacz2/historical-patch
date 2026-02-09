@@ -43,7 +43,7 @@
     <stone>2</stone>
   </Loot>
   <UnitMotion>
-    <WalkSpeed op="mul">0.873</WalkSpeed>
+    <WalkSpeed op="mul">0.9</WalkSpeed>
     <Acceleration op="mul">0.9</Acceleration>
   </UnitMotion>
   <Sound>

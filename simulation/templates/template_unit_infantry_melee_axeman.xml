@@ -32,7 +32,7 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">0.89</WalkSpeed>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
   </UnitMotion>
   <Loot>
     <wood>10</wood>

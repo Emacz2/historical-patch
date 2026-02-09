@@ -43,7 +43,7 @@
     <Range op="add">10</Range>
   </Vision>
   <UnitMotion>
-    <WalkSpeed op="mul">0.95</WalkSpeed>
+    <WalkSpeed op="mul">0.87</WalkSpeed>
     <Acceleration op="add">3.0</Acceleration>
   </UnitMotion>
 </Entity>
