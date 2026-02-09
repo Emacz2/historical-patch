@@ -25,8 +25,10 @@
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
       -units/{civ}/infantry_slinger_a
+      -units/{civ}/infantry_archer_a
       -units/{civ}/champion_infantry_javelineer
       units/{civ}/champion_ranged
+      units/{civ}/merc_inf_archer_a
     </Entities>
   </Trainer>
 </Entity>
