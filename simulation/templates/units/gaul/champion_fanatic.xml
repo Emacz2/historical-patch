@@ -8,9 +8,9 @@
   </Attack>
   <Cost>
     <Resources>
-      <food>120</food>
+      <food>100</food>
       <wood>100</wood>
-      <metal>0</metal>
+      <metal>15</metal>
     </Resources>
   </Cost>
   <Identity>

@@ -29,14 +29,14 @@
   </Resistance>
   <Identity>
     <Civ>brit</Civ>
-    <SelectionGroupName>units/brit/infantry_spearman_b</SelectionGroupName>
+    <SelectionGroupName>units/brit/infantry_spearman_temple</SelectionGroupName>
     <GenericName>Celtic Thrusting Spearman</GenericName>
-    <SpecificName>Catucos</SpecificName>
+    <SpecificName>Catucos 2</SpecificName>
     <Icon>units/gaul/champion_fanatic.png</Icon>
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
+    <WalkSpeed op="mul">1.2</WalkSpeed>
     <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Promotion>
