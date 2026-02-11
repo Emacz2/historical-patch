@@ -2,6 +2,7 @@
 <Entity parent="template_unit_champion_infantry_spearman">
 <Attack>
     <Melee>
+      <MaxRange op="add">1.0</MaxRange>
       <PrepareTime>300</PrepareTime>
       <RepeatTime>1100</RepeatTime>
     </Melee>
@@ -9,8 +10,8 @@
   <Cost>
     <Resources>
       <food>100</food>
-      <wood>100</wood>
-      <metal>15</metal>
+      <wood>130</wood>
+      <metal>0</metal>
     </Resources>
   </Cost>
   <Identity>

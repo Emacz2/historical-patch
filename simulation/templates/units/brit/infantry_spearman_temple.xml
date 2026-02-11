@@ -6,15 +6,19 @@
       structures/brit/hill_fort
   </Entities>
 </Builder>
+ <Attack>
+    <Melee>
+      <MaxRange op="add">1.0</MaxRange>
+    </Melee>
+  </Attack>
 <Cost>
     <Resources>
-      <metal op="add">10</metal>
+      <wood op="add">30</wood>
     </Resources>
   </Cost>
 <Attack>
     <Melee>
       <Damage>
-        <Hack op="add">2</Hack>
 	      <Pierce op="add">1</Pierce>
       </Damage>
     </Melee>
@@ -36,7 +40,7 @@
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">1.2</WalkSpeed>
+    <WalkSpeed op="mul">1.15</WalkSpeed>
     <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Promotion>
