@@ -9,7 +9,7 @@
     </Melee>
   </Attack>
   <Health>
-    <Max op="mul">1.1</Max>
+    <Max op="mul">1.25</Max>
   </Health>
   <Identity>
     <SpecificName>Hypaspistḗs Argyraspídi</SpecificName>

@@ -13,7 +13,7 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "silvershields.png",
 	"researchTime": 60,
-	"tooltip": "Upgrade Shield Bearer Champion Infantry to Silver Shields, with more health and attack damage.",
+	"tooltip": "Upgrade Shield Bearer Champion Infantry to Silver Shields, with more 25% more health and 10% more attack damage.",
 	"modifications": [
 		{ "value": "Promotion/RequiredXp", "replace": 0 }
 	],

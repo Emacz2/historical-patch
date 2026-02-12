@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="hoplite|greek_olympian|template_unit_champion_infantry_spearman">
- <Auras datatype="tokens">
+  <Auras datatype="tokens">
     units/phalanx
   </Auras>
+  <Attack>
+    <Melee>
+      <MaxRange op="add">1.5</MaxRange>
+    </Melee>
+  </Attack>
+  <Health>
+    <Max op="add">-10</Max>
+  </Health>
   <Identity>
     <Civ>mace</Civ>
     <Lang>greek</Lang>
