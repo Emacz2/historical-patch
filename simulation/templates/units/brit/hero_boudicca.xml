@@ -3,6 +3,7 @@
   <Auras datatype="tokens">
     units/heroes/brit_hero_boudicca
     units/heroes/brit_hero_boudicca2
+    units/heroes/brit_hero_boudicca3
   </Auras>
   <Footprint replace="">
     <Square width="5.0" depth="10.0"/>

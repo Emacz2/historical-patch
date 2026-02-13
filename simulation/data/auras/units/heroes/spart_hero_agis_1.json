@@ -2,14 +2,8 @@
 	"type": "global",
 	"affects": [ "Soldier" ],
 	"modifications": [
-		{
-			"value": "Cost/BuildTime",
-			"multiply": 0.75
-		},
-		{
-			"value": "Cost/Resources/metal",
-			"multiply": 0.6
-		}
+		{ "value": "Cost/BuildTime", "multiply": 0.75},
+		{ "value": "Cost/Resources/metal","multiply": 0.6}
 	],
 	"auraName": "Great Revolt",
 	"showDescription": 1,

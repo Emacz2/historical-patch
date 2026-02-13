@@ -7,6 +7,6 @@
 	],
 	"auraName": "Revolt reinforcements",
 	"showDescription": 1,
-	"auraDescription": "Citizens 25% less train time.",
+	"auraDescription": "Citizens Soldiers 25% less train time.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }
