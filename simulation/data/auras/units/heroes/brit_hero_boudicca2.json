@@ -1,6 +1,6 @@
 {
 	"type": "Global",
-	"affects": ["CitizenSoldier"],
+	"affects": [ "CitizenSoldier" ],
 	"modifications": [
 	{ "value": "Cost/BuildTime", "multiply": 0.75}
 		
