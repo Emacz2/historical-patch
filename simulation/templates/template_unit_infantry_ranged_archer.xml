@@ -19,6 +19,9 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+  <Vision>
+    <Range>75</Range>
+  </Vision>
   <Cost>
     <Resources>
       <food>50</food>

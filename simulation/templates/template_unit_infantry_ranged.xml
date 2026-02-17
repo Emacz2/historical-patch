@@ -22,9 +22,6 @@
       </ApplyStatus>
     </Entity>
   </Resistance>
-  <Vision>
-    <Range>65</Range>
-  </Vision>
   <Turretable/>
   <UnitAI>
     <Formations datatype="tokens">
