@@ -7,7 +7,6 @@
         <Crush>6</Crush>
         <Pierce>3.5</Pierce>
       </Damage>
-      </Damage>
       <MaxRange>50</MaxRange>
       <PrepareTime>400</PrepareTime>
       <RepeatTime>1500</RepeatTime>
