@@ -38,7 +38,7 @@
     <GenericName>Swordsman</GenericName>
   </Identity>
   <UnitMotion>
-    <WalkSpeed op="mul">0.92</WalkSpeed>
+    <WalkSpeed op="mul">0.93</WalkSpeed>
   </UnitMotion>
   <Sound>
     <SoundGroups>
