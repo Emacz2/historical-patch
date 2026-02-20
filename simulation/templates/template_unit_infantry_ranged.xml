@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry">
+  <Identity>
+    <VisibleClasses datatype="tokens">Ranged</VisibleClasses>
+    <GenericName>Ranged</GenericName>
+  </Identity>
+ <Health>
+    <Max>75</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.5</Hack>
+        <Pierce>1</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
+  <Turretable/>
+  <UnitAI>
+    <Formations datatype="tokens">
+      special/formations/skirmish
+    </Formations>
+  </UnitAI>
+</Entity>
