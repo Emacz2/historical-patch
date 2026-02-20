@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_ranged">
+  <Attack>
+    <Ranged>
+      <AttackName>Sling</AttackName>
+      <Damage>
+        <Crush>6</Crush>
+        <Pierce>3.5</Pierce>
+      </Damage>
+      </Damage>
+      <MaxRange>50</MaxRange>
+      <PrepareTime>400</PrepareTime>
+      <RepeatTime>1500</RepeatTime>
+      <Projectile>
+        <Speed>125</Speed>
+        <Spread>2.5</Spread>
+        <Gravity>45</Gravity>
+        <FriendlyFire>false</FriendlyFire>
+        <LaunchPoint y="3"/>
+      </Projectile>
+     <RestrictedClasses datatype="tokens">Structure Siege</RestrictedClasses>
+    </Ranged>
+  </Attack>
+  <Cost>
+    <Resources>
+      <stone>25</stone>
+      <wood>25</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Slinger</VisibleClasses>
+    <GenericName>Slinger</GenericName>
+  </Identity>
+  <Sound>
+    <SoundGroups>
+      <attack_ranged>attack/weapon/sling_attack.xml</attack_ranged>
+    </SoundGroups>
+  </Sound>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.94</WalkSpeed>
+    <Acceleration op="add">3.0</Acceleration>
+  </UnitMotion>
+  <Vision>
+    <Range>60</Range>
+  </Vision>
+</Entity>

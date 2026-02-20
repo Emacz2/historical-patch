@@ -1,0 +1,95 @@
+Unit template
+Resistance set to 0
+Walk speed 7.5
+Run multiplier 2.0
+Vision 10
+Infantry template
+Loot exp 75, food 10
+resistances 0
+gathering meat 3
+1.15 walk speed
+0.9 run multiplier
+vision 50
+Infantry melee
+Max health 150
+Reistances 1.5C 2.5H 3.0P
+Burning duration .5 block chance .5
+vision 50
+Infantry ranged
+Max health 75
+resitance 0C .5H 1P
+Burning duration .5 block chance .5
+Infantry Axeman
+3C 8H 1P Dmg 
+range 3.5
+1100 repeat time
++0.5H resistance
+walkspeed .95
+Infantry Maceman
+8C 3H 1P
+walkspeed .95
+Infantry Pikeman
+3x Cavalry bonus
+Resource cost 35W 15M
++1C +2H +1P resistance
+.85 walk/acceleration
+Infantry Spearman
+3.5H 7P DMG
+range 4.5
+750 prepare/1250 repeat
+3x Cavalry bonus
+walkspeed .95
+Infantry Swordsman
+7H 2P
+500prepare 1000repeat time
+Resource cost 35 wood 15 metal
++0.5H
+walkspeed .93
+Infantry Archer
+Dmg 6.6
+Max range 63
+550 prepare 1100 repeat time
+Projectile speed 125, spread 2.5
+resistance 0
+walkspeed .94
+acceleration +2.5
+Vision 75
+Infantry Archer Greek
+Dmg 7.4
+Max range 50
+550 prepare 1100 repeat time
+Projectile speed 125, spread 2
+resistance 0
+walkspeed .94
+acceleration +2.5
+Vision 65
+Infantry Xbow
+Dmg 22
+Max range 38
+projectile speed 175, spread 1.5
+resistance 0
+walkspeed .96
+acceleration +3.5
+Infantry Javelineer
+1H 16.5P
+27 max range
+500 prepare 2000 repeat
+projectile speed 100 spread 3.5
+acceleration +5
+Infantry Peltast (Based off Javelineer template)
++0.5H +1P resistance
+walkspeed .98
+Infantry Slinger
+6C 3.5P
+50 max range
+projectile spread 2.5
+can not attack buildings or siege
+Resource cost 25W 25S
+walkspeed .94 
+acceleration +3
+Vision 60
+
+
+
+
+
