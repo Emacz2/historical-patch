@@ -14,9 +14,10 @@
   <Decay>
     <Active>false</Active>
     <SinkingAnim>false</SinkingAnim>
-    <DelayTime>30.0</DelayTime>
-    <SinkRate>0.01</SinkRate>
-    <SinkAccel>0.0</SinkAccel>
+    <SinkProb>0.04</SinkProb>
+    <DelayTime>5.0</DelayTime>
+    <SinkRate>0.003</SinkRate>
+    <SinkAccel>0.0002</SinkAccel>
   </Decay>
   <Footprint>
     <Circle radius="1.5"/>
@@ -42,7 +43,6 @@
   </Identity>
   <Looter/>
   <Minimap>
-    <Type>unit</Type>
   </Minimap>
   <Obstruction>
     <Unit/>
@@ -103,7 +103,7 @@
   </TreasureCollector>
   <UnitAI>
     <DefaultStance>aggressive</DefaultStance>
-    <FleeDistance>15.0</FleeDistance>
+    <FleeDistance>12.0</FleeDistance>
     <FormationController>false</FormationController>
     <CanGuard>true</CanGuard>
     <CanPatrol>true</CanPatrol>
@@ -120,7 +120,7 @@
       special/formations/battle_line
     </Formations>
   </UnitAI>
-  <UnitMotion>
+<UnitMotion>
     <FormationController>false</FormationController>
     <PassabilityClass>default</PassabilityClass>
     <WalkSpeed>7.5</WalkSpeed>
@@ -136,7 +136,7 @@
     <Preview>false</Preview>
   </Visibility>
   <Vision>
-    <Range>15</Range>
+    <Range>10</Range>
   </Vision>
   <VisionSharing>
     <Bribable>false</Bribable>
