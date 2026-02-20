@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_infantry_melee">
+  <Attack>
+    <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Crush>3</Crush>
+        <Hack>8</Hack>
+        <Pierce>1<Pierce>
+      </Damage>
+      <MaxRange>3.5</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Cost>
+    <Resources>
+      <wood>40</wood>
+      <metal>10</metal>
+    </Resources>
+  </Cost>
+  <Identity>
+    <VisibleClasses datatype="tokens">Axeman</VisibleClasses>
+    <GenericName>Axeman</GenericName>
+  </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add"> 0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+  </UnitMotion>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+</Entity>
