@@ -31,9 +31,6 @@
       <metal>0</metal>
     </Resources>
   </Cost>
-  <Health>
-    <Max>80</Max>
-  </Health>
   <Identity>
     <GenericName>Infantry</GenericName>
     <Classes datatype="tokens">Human CitizenSoldier</Classes>
