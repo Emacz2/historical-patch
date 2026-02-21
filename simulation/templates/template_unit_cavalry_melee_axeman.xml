@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_cavalry_melee">
+  <Attack>
+    <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Crush>3.5</Crush>
+        <Hack>8.5</Hack>
+        <Pierce>1.5</Pierce>
+      </Damage>
+      <MaxRange>4</MaxRange>
+      <PrepareTime>600</PrepareTime>
+      <RepeatTime>1250</RepeatTime>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Cost>
+    <Resources>
+      <wood>40</wood>
+      <metal>10</metal>
+    </Resources>
+  </Cost>
+  <Identity>
+    <GenericName>Cavalry Axeman</GenericName>
+    <VisibleClasses datatype="tokens">Axeman</VisibleClasses>
+  </Identity>
+<Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add"> 0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+</Entity>

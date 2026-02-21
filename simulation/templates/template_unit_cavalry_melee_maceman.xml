@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_cavalry_melee">
+  <Attack>
+    <Melee>
+      <AttackName>Mace</AttackName>
+      <Damage>
+        <Crush>8.5</Crush>
+        <Hack>3.5</Hack>
+        <Pierce>1.5</Pierce>
+      </Damage>
+      <MaxRange>3.5</MaxRange>
+       <PrepareTime>600</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+      <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Cost>
+    <Resources>
+      <wood>50</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <GenericName>Cavalry Maceman</GenericName>
+    <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
+  </Identity>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+</Entity>
