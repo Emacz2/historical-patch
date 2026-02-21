@@ -4,9 +4,9 @@
     <Melee>
       <AttackName>Dagger</AttackName>
       <Damage>
-        <Hack>2</Hack>
+        <Hack>1.5</Hack>
       </Damage>
-      <MaxRange>3</MaxRange>
+      <MaxRange>2</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1000</RepeatTime>
     </Melee>
@@ -28,7 +28,7 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>25</Max>
+    <Max>40</Max>
   </Health>
   <Identity>
     <Phenotype>female</Phenotype>
@@ -38,8 +38,7 @@
     <VisibleClasses datatype="tokens">Citizen Worker</VisibleClasses>
   </Identity>
   <Loot>
-    <xp>3</xp>
-    <food>5</food>
+    <xp>5</xp>
   </Loot>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
@@ -47,7 +46,7 @@
     <Rates>
       <food.fruit>1</food.fruit>
       <food.grain>0.5</food.grain>
-      <food.meat>1</food.meat>
+      <food.meat>2</food.meat>
       <wood.tree>0.7</wood.tree>
       <wood.ruins>5</wood.ruins>
       <stone.rock>0.35</stone.rock>
@@ -87,6 +86,6 @@
     <Formations disable=""/>
   </UnitAI>
   <Vision>
-    <Range>32</Range>
+    <Range>35</Range>
   </Vision>
 </Entity>
