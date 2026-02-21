@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_cavalry">
+  <Identity>
+    <GenericName>Melee Cavalry</GenericName>
+    <VisibleClasses datatype="tokens">Melee</VisibleClasses>
+  </Identity>
+  <Cost>
+    <BuildTime>18</BuildTime>
+  </Cost>
+  <Health>
+    <Max>185</Max>
+  </Health>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>3.5</Crush>
+        <Hack>4</Hack>
+        <Pierce>4.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+</Entity>
