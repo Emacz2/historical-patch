@@ -120,7 +120,7 @@
       special/formations/battle_line
     </Formations>
   </UnitAI>
-<UnitMotion>
+  <UnitMotion>
     <FormationController>false</FormationController>
     <PassabilityClass>default</PassabilityClass>
     <WalkSpeed>7.5</WalkSpeed>
