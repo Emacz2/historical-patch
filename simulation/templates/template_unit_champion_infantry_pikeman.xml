@@ -31,11 +31,12 @@
     <wood>15</wood>
     <metal>20</metal>
   </Loot>
-      <Entity>
+   <Resistance>
+    <Entity>
       <Damage>
         <Crush op="add"> 1</Crush>
-        <Hack op="add"> 2</Hack>
-        <Pierce op="add"> 1.5</Pierce>
+        <Hack op="add">2</Hack>
+        <Pierce op="add">1.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
