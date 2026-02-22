@@ -1,0 +1,20 @@
+{
+	"genericName": "Gather Scrolls on military knowledge",
+	"description": "Techs from military buildings 25% less resource cost and research time.",
+	"cost": {
+		"food": 100,
+		"metal": 100
+	},
+	"icon": "skull_swords.png",
+	"researchTime": 30,
+	"tooltip": "Techs from military buildings 25% less resource cost and research time.",
+	"modifications": [
+		{ "value": "Researcher/TechCostMultiplier/food", "multiply": 0.75 },
+		{ "value": "Researcher/TechCostMultiplier/wood", "multiply": 0.75 },
+		{ "value": "Researcher/TechCostMultiplier/stone", "multiply": 0.75 },
+		{ "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.75 },
+		{ "value": "Researcher/TechCostMultiplier/time", "multiply": 0.75 }
+	],
+	"affects": ["Structure Military"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

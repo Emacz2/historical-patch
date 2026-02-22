@@ -1,0 +1,14 @@
+{
+	"genericName": "Center Of Greek Trade Routes",
+	"autoResearch": true,
+	"description": ".",
+	"icon": "woad_warriors.png",
+	"tooltip": "Traders 15% movement speed.",
+	"requirements": { "civ": "athen" },
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.15 }
+	
+	],
+	"affects": ["Trader"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

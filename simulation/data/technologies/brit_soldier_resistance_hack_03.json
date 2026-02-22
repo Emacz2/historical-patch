@@ -1,0 +1,25 @@
+{
+	"genericName": "Mail Body Armor",
+	"description": "Body armor made of small metal rings linked together.",
+	"cost": {
+		"food": 500,
+		"metal": 400
+	},
+	"supersedes": "soldier_resistance_hack_02",
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "notciv": "spart" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in City Phase.",
+	"icon": "armor_chain.png",
+	"researchTime": 60,
+	"tooltip": "Non citizen soldiers +2 hack and +0.5 crush resistance.",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
+	],
+	"affects": ["!Citizen Soldier"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

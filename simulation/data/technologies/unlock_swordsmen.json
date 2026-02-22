@@ -1,0 +1,24 @@
+{
+	"genericName": "Unlock swordsman",
+	"description": "",
+	"cost": {
+		"food": 150,
+		"wood": 105,
+		"metal": 45
+		
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_village" },
+			{ "civ": "han" },
+			{ "civ": "iber" },
+			{ "civ": "kush" },
+			{ "civ": "maur" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in village Phase.",
+	"icon": "unlock_swordsmen.png",
+	"researchTime": 25,
+	"tooltip": "Unlock the ability to train swordman from baracks.",
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

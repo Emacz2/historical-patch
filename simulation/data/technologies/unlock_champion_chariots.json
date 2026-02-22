@@ -1,0 +1,28 @@
+{
+	"genericName": "Unlock Champion Chariots",
+	"description": "Guard units (Champions) are professionals who wield the best weapons and have the best training.",
+	"cost": {
+		"food": 250,
+		"wood": 150,
+		"metal": 250
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{
+				"any": [
+					{ "civ": "brit" },
+					{ "civ": "han" },
+					{ "civ": "maur" },
+					{ "civ": "pers" },
+					{ "civ": "sele" }
+				]
+			}
+		]
+	},
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "helmet_corinthian_crest.png",
+	"researchTime": 50,
+	"tooltip": "Unlock Champion Chariots from range.",
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

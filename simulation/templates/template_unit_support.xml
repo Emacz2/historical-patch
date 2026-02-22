@@ -6,6 +6,7 @@
     <GenericName>Support</GenericName>
   </Identity>
   <Minimap>
+    <Type>support</Type>
   </Minimap>
   <Position>
     <Anchor>upright</Anchor>

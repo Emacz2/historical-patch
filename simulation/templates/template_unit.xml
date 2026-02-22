@@ -43,6 +43,7 @@
   </Identity>
   <Looter/>
   <Minimap>
+    <Type>unit</Type>
   </Minimap>
   <Obstruction>
     <Unit/>

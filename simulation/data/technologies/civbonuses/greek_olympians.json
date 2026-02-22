@@ -1,0 +1,26 @@
+{
+	"genericName": "Greek Olympians",
+	"autoResearch": true,
+	"description": "Ancient Greece is home of the orignal Olympic games.  A series of athletic competitions in which freeborn Greek men competed against each other.",
+	"requirements": {
+		"any": [
+			{ "civ": "athen" },
+			{ "civ": "mace" },
+			{ "civ": "spart" }
+		]
+	},
+	"icon": "ionic_column.png",
+	"tooltip": "Infantry 3% faster walk speed. Melee units 4% more dmg, while ranged units 2% dmg, 5% more accurate and additional range.",
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.04},
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.04},
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.04},
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.02},
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.02},
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.02},
+		{ "value": "Attack/Ranged/MaxRange", "add": 1},
+		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.95},
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.03}
+	],
+	"affects": ["Olympian"]
+}

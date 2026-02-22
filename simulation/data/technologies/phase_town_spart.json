@@ -1,0 +1,50 @@
+{
+	"genericName": "Town Phase",
+	"specificName": {
+		"spart": "Kōmopolis"
+	},
+	"description": "Advances from a small village to a bustling town, ready to expand rapidly.",
+	"cost": {
+		"food": 500,
+		"wood": 500,
+		"stone": 150,
+		"metal": 100
+	},
+
+	"requirements": {
+		"entity": {
+			"class": "Village",
+			"number": 6
+		}
+	},
+
+	"requirementsTooltip": "Requires six Village Structures.",
+	"supersedes": "phase_village",
+	"replaces": ["phase_town"],
+	"icon": "town_phase.png",
+	"researchTime": 40,
+	"tooltip": "Advance to Spartan town Phase, which unlocks more entities and technologies. Civic Centers +15% territory influence radius. Structures +0.5 capture points regeneration rate for garrisoned units.  Civ Center 25% more garrison capacity, 5 more range and +2.5 each resistance but 2% less peirce dmg. Spartiates cost 15 more metal/wood and 25 more food as well as take 15% longer but gain 5% Hack/Pierce DMG.  All Infantry 0.5H/P resistance except Helots. ",
+	"modifications": [
+		{ "value": "Capturable/GarrisonRegenRate", "add": 0.5, "affects": "Structure" },
+		{ "value": "TerritoryInfluence/Radius", "multiply": 1.15, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "multiply": 1.25, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 10, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.98, "affects": "CivCentre" },
+		{ "value": "Cost/Resources/food", "add": 25, "affects": "Champion Spearman"},
+		{ "value": "Cost/Resources/metal", "add": 15, "affects": "Champion Spearman"},
+		{ "value": "Cost/Resources/wood", "add": 15, "affects": "Champion Spearman"},
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion Spearman" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Champion Spearman" },
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman"},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Infantry" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Infantry" },
+		{ "value": "Cost/BuildTime", "multiply": 0.95, "affects": "Helot" },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" }
+		
+
+	],
+	"soundComplete": "interface/alarm/alarm_phase.xml"
+}
