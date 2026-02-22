@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_melee">
+<Entity parent="template_unit_champion_infantry_melee">
   <Attack>
     <Melee>
       <AttackName>Spear</AttackName>
       <Damage>
-        <Hack>4</Hack>
-        <Pierce>7</Pierce>
+        <Hack>6</Hack>
+        <Pierce>10.5</Pierce>
       </Damage>
       <MaxRange>4.5</MaxRange>
-      <PrepareTime>750</PrepareTime>
+      <PrepareTime>375</PrepareTime>
       <RepeatTime>1250</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
@@ -19,15 +19,10 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
-  <Cost>
-    <Resources>
-      <wood>50</wood>
-    </Resources>
-  </Cost>
   <Identity>
-    <GenericName>Spearman</GenericName>
-    <Tooltip>Counters: 3× vs Cavalry.</Tooltip>
-    <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
+    <GenericName>Champion Spearman</GenericName>
+    <Tooltip>Counters: 3 × vs Cavalry.</Tooltip>
+    <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
     <WalkSpeed op="mul">0.95</WalkSpeed>
@@ -37,4 +32,9 @@
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>
     </SoundGroups>
   </Sound>
+  <UnitAI>
+    <Formations datatype="tokens">
+      special/formations/testudo
+    </Formations>
+  </UnitAI>
 </Entity>

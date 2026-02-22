@@ -108,7 +108,7 @@
   </Sound>
   <UnitMotion>
     <WalkSpeed op="mul">1.15</WalkSpeed>
-    <RunMultiplier op="mul">0.9</RunMultiplier>
+    <RunMultiplier op="mul">0.95</RunMultiplier>
   </UnitMotion>
   <Vision>
     <Range>50</Range>

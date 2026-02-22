@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_melee">
+<Entity parent="template_unit_champion_infantry_melee">
+  <Auras datatype="tokens">
+    units/syntagma
+  </Auras>
   <Attack>
     <Melee>
       <AttackName>Pike</AttackName>
       <Damage>
-        <Hack>4</Hack>
-        <Pierce>8</Pierce>
+        <Hack>6</Hack>
+        <Pierce>12</Pierce>
       </Damage>
       <MaxRange>8</MaxRange>
-      <PrepareTime>1000</PrepareTime>
+      <PrepareTime>500</PrepareTime>
       <RepeatTime>2000</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3</Multiplier>
+          <Multiplier>3.25</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Melee>
   </Attack>
-  <Cost>
-    <Resources>
-      <food>50</food>
-      <wood>35</wood>
-      <metal>15</metal>
-    </Resources>
-  </Cost>
   <Identity>
-    <GenericName>Pikeman</GenericName>
-    <Tooltip>Counters: 3× vs Cavalry.</Tooltip>
-    <VisibleClasses datatype="tokens">Pikeman</VisibleClasses>
+    <GenericName>Champion Pikeman</GenericName>
+    <Tooltip>Counters: 3.5 vs Cavalry.</Tooltip>
+    <VisibleClasses datatype="tokens">Melee Pikeman</VisibleClasses>
   </Identity>
-  <Resistance>
-    <Entity>
+  <Loot>
+    <wood>15</wood>
+    <metal>20</metal>
+  </Loot>
+      <Entity>
       <Damage>
         <Crush op="add"> 1</Crush>
         <Hack op="add"> 2</Hack>
@@ -54,4 +53,5 @@
     <WalkSpeed op="mul">0.85</WalkSpeed>
     <Acceleration op="mul">0.85</Acceleration>
   </UnitMotion>
+</Entity>
 </Entity>
