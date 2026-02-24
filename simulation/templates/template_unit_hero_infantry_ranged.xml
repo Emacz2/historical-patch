@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_champion">
+<Entity parent="template_unit_hero_infantry">
   <Auras datatype="tokens">
     units/ram_garrison
   </Auras>
-  <Cost>
-    <BuildTime>24</BuildTime>
-    <Resources>
-      <food>150</food>
-      <wood>100</wood>
-      <metal>50</metal>
-    </Resources>
-  </Cost>
+  <Attack>
+    <Ranged>
+      <RestrictedClasses datatype="tokens">Civilian</RestrictedClasses>
+    </Ranged>
+  </Attack>
   <Identity>
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
-    <GenericName>Champion Infantry</GenericName>
+    <GenericName>Hero Ranged Infantry</GenericName>
   </Identity>
-  <Loot>
-    <xp>110</xp>
-  </Loot>
+  <Health>
+    <Max>500</Max>
+  </Health>
   <Position>
     <Anchor>upright</Anchor>
   </Position>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>2</Crush>
+        <Hack>2</Hack>
+        <Pierce>4</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Selectable>
     <Overlay>
       <Texture>
@@ -37,7 +43,4 @@
       <death>actor/human/death/{phenotype}_death.xml</death>
     </SoundGroups>
   </Sound>
- <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
-  </UnitMotion>
 </Entity>

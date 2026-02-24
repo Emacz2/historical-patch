@@ -97,6 +97,15 @@
     <CanPatrol>false</CanPatrol>
     <Formations disable=""/>
   </UnitAI>
+  <UnitMotion>
+    <FormationController>false</FormationController>
+    <PassabilityClass>default</PassabilityClass>
+    <WalkSpeed>7.5</WalkSpeed>
+    <RunMultiplier>2</RunMultiplier>
+    <InstantTurnAngle>1.5</InstantTurnAngle>
+    <Acceleration>35</Acceleration>
+    <Weight>10</Weight>
+  </UnitMotion>
   <Vision>
     <Range>30</Range>
   </Vision>

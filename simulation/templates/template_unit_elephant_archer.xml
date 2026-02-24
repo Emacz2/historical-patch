@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_elephant">
+  <Attack>
+    <Ranged>
+      <AttackName>Bow</AttackName>
+      <Damage>
+        <Pierce>4</Pierce>
+      </Damage>
+      <MaxRange>59</MaxRange>
+      <PrepareTime>550</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+      <Projectile>
+        <Speed>125</Speed>
+        <Spread>3</Spread>
+        <Gravity>50</Gravity>
+        <FriendlyFire>false</FriendlyFire>
+        <LaunchPoint y="5"/>
+      </Projectile>
+      <PreferredClasses datatype="tokens">Human</PreferredClasses>
+    </Ranged>
+  </Attack>
+  <Cost>
+    <Population>2</Population>
+    <BuildTime>30</BuildTime>
+    <Resources>
+      <food>250</food>
+      <wood>100</wood>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>200</Max>
+  </Health>
+  <Identity>
+    <GenericName>Elephant Archer</GenericName>
+    <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
+  </Identity>
+  <Sound>
+    <SoundGroups>
+      <attack_impact_ranged>attack/impact/arrow_impact.xml</attack_impact_ranged>
+      <attack_ranged>attack/weapon/bow_attack.xml</attack_ranged>
+    </SoundGroups>
+  </Sound>
+</Entity>

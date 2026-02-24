@@ -8,7 +8,7 @@
     <BuildTime>16</BuildTime>
   </Cost>
   <Health>
-    <Max>115</Max>
+    <Max>150</Max>
   </Health>
   <UnitAI>
     <Formations datatype="tokens">

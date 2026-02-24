@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_hero_infantry_melee">
+  <Attack>
+     <Melee>
+      <AttackName>Axe</AttackName>
+      <Damage>
+        <Crush>7</Crush>
+        <Hack>18</Hack>
+        <Pierce>2</Pierce>
+      </Damage>
+      <MaxRange>3.5</MaxRange>
+      <PrepareTime>250</PrepareTime>
+      <RepeatTime>1100</RepeatTime>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Identity>
+    <VisibleClasses datatype="tokens">Melee Axeman</VisibleClasses>
+    <GenericName>Hero Axeman</GenericName>
+  </Identity>
+    <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+    <UnitMotion>
+    <WalkSpeed op="mul">0.9</WalkSpeed>
+  </UnitMotion>
+</Entity>

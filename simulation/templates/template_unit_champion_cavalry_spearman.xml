@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_cavalry_melee">
+<Entity parent="template_unit_champion_cavalry_melee">
   <Attack>
     <Melee>
       <AttackName>Spear</AttackName>
       <Damage>
-        <Hack>4.5</Hack>
-        <Pierce>8</Pierce>
+        <Hack>7</Hack>
+        <Pierce>12</Pierce>
       </Damage>
       <MaxRange>5</MaxRange>
-      <PrepareTime>700</PrepareTime>
+      <PrepareTime>350</PrepareTime>
       <RepeatTime>1400</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
@@ -20,12 +20,12 @@
     </Melee>
   </Attack>
   <Identity>
-    <GenericName>Shock Cavalry Spearman</GenericName>
+    <GenericName>Champion Cavalry Spearman</GenericName>
     <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
-    <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
+    <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
-    <Acceleration op="mul">1.15</Acceleration>
+    <Acceleration op="mul">1.10</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>
@@ -33,3 +33,4 @@
     </SoundGroups>
   </Sound>
 </Entity>
+

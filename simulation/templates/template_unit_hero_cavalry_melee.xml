@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_champion">
+<Entity parent="template_unit_hero_cavalry">
   <Auras datatype="tokens">
     units/ram_garrison
   </Auras>
-  <Cost>
-    <BuildTime>24</BuildTime>
-    <Resources>
-      <food>150</food>
-      <wood>100</wood>
-      <metal>50</metal>
-    </Resources>
-  </Cost>
   <Identity>
-    <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
-    <GenericName>Champion Infantry</GenericName>
+    <VisibleClasses datatype="tokens">Cavalry</VisibleClasses>
+    <GenericName>Champion Melee Cavalry</GenericName>
   </Identity>
-  <Loot>
-    <xp>110</xp>
-  </Loot>
+   <Health>
+    <Max>900</Max>
+  </Health>
   <Position>
     <Anchor>upright</Anchor>
   </Position>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>10</Crush> 
+        <Hack>12</Hack>
+        <Pierce>13</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Selectable>
     <Overlay>
       <Texture>
@@ -37,7 +38,4 @@
       <death>actor/human/death/{phenotype}_death.xml</death>
     </SoundGroups>
   </Sound>
- <UnitMotion>
-    <WalkSpeed op="mul">1.15</WalkSpeed>
-  </UnitMotion>
 </Entity>

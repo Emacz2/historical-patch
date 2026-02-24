@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_hero">
+  <Attack disable=""/>
+  <Heal>
+    <Range>20</Range>
+    <RangeOverlay>
+      <LineTexture>heal_overlay_range.png</LineTexture>
+      <LineTextureMask>heal_overlay_range_mask.png</LineTextureMask>
+      <LineThickness>0.35</LineThickness>
+    </RangeOverlay>
+    <Health>20</Health>
+    <Interval>2000</Interval>
+    <UnhealableClasses datatype="tokens"/>
+    <HealableClasses datatype="tokens">Human</HealableClasses>
+  </Heal>
+  <Identity>
+    <VisibleClasses datatype="tokens">-Soldier Healer Support</VisibleClasses>
+  </Identity>
+  <Position>
+    <Anchor>upright</Anchor>
+  </Position>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>2</Crush>
+        <Hack>2</Hack>
+        <Pierce>4</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Selectable>
+    <Overlay>
+      <Shape>
+        <Circle radius="2.0"/>
+      </Shape>
+      <Texture>
+        <MainTexture>128x128/star.png</MainTexture>
+        <MainTextureMask>128x128/star_mask.png</MainTextureMask>
+      </Texture>
+    </Overlay>
+  </Selectable>
+  <Sound>
+    <SoundGroups>
+      <order_heal>voice/{lang}/civ/civ_{phenotype}_heal.xml</order_heal>
+    </SoundGroups>
+  </Sound>
+</Entity>

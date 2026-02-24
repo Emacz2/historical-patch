@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_hero_infantry_melee">
+  <Attack>
+    <Melee>
+      <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
+      <Damage>
+        <Hack>15</Hack>
+        <Pierce>4.5</Pierce>
+      </Damage>
+      <MaxRange>3</MaxRange>
+       <PrepareTime>250</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+      <Bonuses>
+        <BonusMelee>
+          <Classes>Ranged Infantry</Classes>
+          <Multiplier>1.5</Multiplier>
+        </BonusMelee>
+      </Bonuses>
+      <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
+    </Melee>
+  </Attack>
+  <Identity>
+    <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
+    <Tooltip>Counters: 1.5× vs Ranged Infantry.</Tooltip>
+    <GenericName>Hero Swordsman</GenericName>
+  </Identity>
+  <Sound>
+    <SoundGroups>
+      <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
+    </SoundGroups>
+  </Sound>
+  <UnitAI>
+    <Formations datatype="tokens">
+      special/formations/testudo
+    </Formations>
+  </UnitAI>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.91</WalkSpeed>
+  </UnitMotion>
+</Entity>

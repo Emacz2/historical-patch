@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="builder|template_unit_support_civilian">
+  <Builder>
+    <Rate>1</Rate>
+  </Builder>
+  <Attack>
+    <Melee>
+      <AttackName>Dagger</AttackName>
+      <Damage>
+        <Hack>1.5</Hack>
+      </Damage>
+      <MaxRange>2</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+    </Melee>
+    <Slaughter>
+      <AttackName>Slaughter</AttackName>
+      <Damage>
+        <Hack>1000</Hack>
+      </Damage>
+      <MaxRange>2</MaxRange>
+      <PrepareTime>900</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+      <RestrictedClasses datatype="tokens">!Domestic</RestrictedClasses>
+    </Slaughter>
+  </Attack>
+  <Cost>
+    <Population>0</Population>
+    <BuildTime>10</BuildTime>
+    <Resources>
+      <food>50</food>
+      <wood>10</wood>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>40</Max>
+  </Health>
+  <Identity>
+    <GenericName>Slave</GenericName>
+    <SelectionGroupName>template_unit_support_slave</SelectionGroupName>
+    <Tooltip>Gather 20% faster than normal infantry, but weak fighters, slow builders.</Tooltip>
+    <VisibleClasses datatype="tokens">Worker Slave</VisibleClasses>
+  </Identity>
+  <Loot>
+    <xp>10</xp>
+  </Loot>
+  <ResourceGatherer>
+    <MaxDistance>2.0</MaxDistance>
+    <BaseSpeed>1.0</BaseSpeed>
+    <Rates>
+      <food.fruit op="mul">1.2</food.fruit>
+      <food.grain op="mul">1.2</food.grain>
+      <food.meat op="mul">1.2</food.meat>
+      <wood.tree op="mul">1.2</wood.tree>
+      <wood.ruins op="mul">1.2</wood.ruins>
+      <stone.rock op="mul">1.2</stone.rock>
+      <stone.ruins op="mul">1.2</stone.ruins>
+      <metal.ore op="mul">1.2</metal.ore>
+    </Rates>
+    <Capacities>
+      <food>10</food>
+      <wood>10</wood>
+      <stone>10</stone>
+      <metal>10</metal>
+    </Capacities>
+  </ResourceGatherer>
+  <TreasureCollector disable=""/>
+  <Sound>
+    <SoundGroups>
+      <build>resource/construction/con_wood.xml</build>
+      <gather_fruit>resource/foraging/forage_leaves.xml</gather_fruit>
+      <gather_grain>resource/farming/farm.xml</gather_grain>
+      <gather_wood>resource/lumbering/lumbering.xml</gather_wood>
+      <gather_stone>resource/mining/pickaxe.xml</gather_stone>
+      <gather_metal>resource/mining/mining.xml</gather_metal>
+      <invalid_building_placement>interface/alarm/alarm_invalid_building_placement.xml</invalid_building_placement>
+      <order_build>voice/{lang}/civ/civ_{phenotype}_build.xml</order_build>
+      <order_repair>voice/{lang}/civ/civ_{phenotype}_repair.xml</order_repair>
+      <trained>actor/singlesteps/steps_gravel_trained.xml</trained>
+    </SoundGroups>
+  </Sound>
+</Entity>

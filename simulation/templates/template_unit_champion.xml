@@ -35,4 +35,7 @@
       <select>voice/{lang}/civ/civ_{phenotype}_select.xml</select>
     </SoundGroups>
   </Sound>
+    <Vision>
+    <Range>50</Range>
+  </Vision>
 </Entity>
