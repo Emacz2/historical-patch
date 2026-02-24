@@ -49,7 +49,7 @@ run speed x0.9
 
 build time 15
 
-pop 0 (restricted by how many markets you own)
+pop 0 (restricted by how many markets, 5 per market)
 
 resources 75W 25M
 
