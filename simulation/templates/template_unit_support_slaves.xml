@@ -38,7 +38,7 @@
   <Identity>
     <GenericName>Slave</GenericName>
     <SelectionGroupName>template_unit_support_slave</SelectionGroupName>
-    <Tooltip>Gather 20% faster than normal infantry, but weak fighters, slow builders.</Tooltip>
+    <Tooltip>Gather 50% faster than normal infantry, but weak fighters</Tooltip>
     <VisibleClasses datatype="tokens">Worker Slave</VisibleClasses>
   </Identity>
   <Loot>
@@ -48,14 +48,14 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.2</food.fruit>
-      <food.grain op="mul">1.2</food.grain>
-      <food.meat op="mul">1.2</food.meat>
-      <wood.tree op="mul">1.2</wood.tree>
-      <wood.ruins op="mul">1.2</wood.ruins>
-      <stone.rock op="mul">1.2</stone.rock>
-      <stone.ruins op="mul">1.2</stone.ruins>
-      <metal.ore op="mul">1.2</metal.ore>
+      <food.fruit op="mul">1.5</food.fruit>
+      <food.grain op="mul">1.5</food.grain>
+      <food.meat op="mul">1.5</food.meat>
+      <wood.tree op="mul">1.5</wood.tree>
+      <wood.ruins op="mul">1.5</wood.ruins>
+      <stone.rock op="mul">1.5</stone.rock>
+      <stone.ruins op="mul">1.5</stone.ruins>
+      <metal.ore op="mul">1.5</metal.ore>
     </Rates>
     <Capacities>
       <food>10</food>
