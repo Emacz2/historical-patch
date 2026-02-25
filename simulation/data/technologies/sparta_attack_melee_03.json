@@ -1,0 +1,30 @@
+{
+	"genericName": "Carburization",
+	"description": "By adding a small amount of carbon during the iron smelting process, a stronger material, steel, can be forged.",
+	"cost": {
+		"food": 500,
+		"metal": 400
+	},
+	"supersedes": "sparta_attack_melee_02",
+	"requirements": {
+		"all": [
+			{ "tech": "phase_city" },
+			{ "civ": "spart" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in city phase.",
+	"icon": "sword_03.png",
+	"researchTime": 60,
+	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 10%. Champion spearman an additional 10% train time. ",
+	"modifications": [
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.10, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.10, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
+	],
+	"affects": ["Soldier !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

@@ -1,0 +1,29 @@
+{
+	"genericName": "Quilted Body Armor",
+	"specificName": {
+		"spart": "Spolas"
+	},
+	"description": "Body armor made from quilted wool, linen, cotton, or leather.",
+	"cost": {
+		"food": 350,
+		"metal": 250
+	},
+	"supersedes": "sparta_resistance_hack_01",
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "civ": "spart" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"researchTime": 40,
+	"icon": "armor_pteruges.png",
+	"tooltip": "Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!Neodamodes Perioikoi"},
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
+	],
+	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
