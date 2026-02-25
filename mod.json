@@ -1,8 +1,8 @@
 {
-	"name": "historical-patch",
+	"name": "classical-warfare-aea",
 	"version": "28.0.1",
-	"label": "historical-patch",
-	"url": "https://github.com/Emacz2/Historical-rebalance-patch", 
-	"description": "This patch is an effort to make civs a little historically more accurate, promoting different styles of play.",
+	"label": "classical-warfare-aea",
+	"url": "https://github.com/Emacz2/classical-warefare-aea", 
+	"description": "A more indepth complex version of 0ad.",
 	"dependencies": [ "0ad=0.28.0" ]
 }
