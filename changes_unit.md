@@ -607,7 +607,11 @@ resources 600f 400m
 
 same motion multipliers as champ melee
 
-Mercanaries
+**Mixins**
+
+**Greek Olympians** 5% more melee dmg 3% more ranged dmg +1 range and 5% more accurate. Infantry 5%faster walk, 10%faster run and +5 acceleration
+
+**Mercanaries**
 
 Cretan Archer 5% more pierce dmg, +2 range, 10% more accurate +0.5H and +1P resistance than regular greek archers. (Sparta, Athens, Rome)
 

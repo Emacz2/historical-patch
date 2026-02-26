@@ -34,7 +34,19 @@ Infantry +.5 hack, 1 pierce resistance and promote 15% faster.
 
 Units
 
-CS Spearman and Javelineers are Periokoi
+Females trained from CC
+
+CS Spearman and Javelineers are Periokoi trained from camps "Roman"
+
+Helot Stone throwers, Javelineers trained from tents.  3 without any Champions, 2 more for each champion you have.
+
+Scout trained from cc
+
+Spartriates trained from CC or Ssystion
+
+Skiritai trained from camps "Roman"
+
+Cretan Archers recruited from markets
 
 
 
@@ -77,8 +89,4 @@ Helot 10% faster train time -125 repeat time
 Infantry +0.5P resistances except helots
 
 Leonidas 20% more DMG and double Health
-
-
-
-
 
