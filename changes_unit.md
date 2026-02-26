@@ -579,7 +579,7 @@ can not attack civilians
 
 same resistances as ranged heroes
 
-**Hero Calvary** 
+**Hero Calvary**
 
 resources 300F 200W 250M
 
@@ -606,4 +606,8 @@ resources 300F 200W 250M
 resources 600f 400m
 
 same motion multipliers as champ melee
+
+Mercanaries
+
+Cretan Archer 5% more pierce dmg, +2 range, 10% more accurate +0.5H and +1P resistance than regular greek archers. (Sparta, Athens, Rome)
 

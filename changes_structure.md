@@ -34,7 +34,7 @@ default arrows 10
 
 resources 150F 350W 350S 150M
 
-vision 80
+vision 70
 
 **Military Colony**
 
@@ -76,7 +76,7 @@ prepare time 400 repeate time 2500
 
 2 default arrow
 
-**Tower-Sentry** 
+**Tower-Sentry**
 
 7 max arrow
 
@@ -167,7 +167,7 @@ resources 400W 700S 150M
 
 xp 1.5 trickle aura when garrisoned
 
-**Gerousia** 
+**Gerousia**
 
 Military template
 

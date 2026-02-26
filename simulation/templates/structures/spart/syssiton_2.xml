@@ -5,29 +5,16 @@
     <Height>12.0</Height>
   </Footprint>
   <Health>
-    <Max>2000</Max>
+    <Max>2500</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_4x6</SpawnEntityOnDeath>
   </Health>
   <Identity>
     <Civ>spart</Civ>
-    <GenericName>Military Mess Hall</GenericName>
+    <GenericName>Grand Military Mess Hall</GenericName>
     <SpecificName>Syssition</SpecificName>
     <Icon>structures/syssition.png</Icon>
     <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
   </Identity>
-   <Upgrade>
-    <syssiton>
-      <Entity>structures/spart/syssiton_2</Entity>
-      <Tooltip>Upgrade to a bigger Mess Hall.</Tooltip>
-      <Cost>
-        <metal>50</metal>
-        <wood>100</wood>
-        <stone>100</stone>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>45</Time>
-    </syssiton>
-  </Upgrade>
   <Obstruction>
     <Static width="15.0" depth="25.0"/>
   </Obstruction>
@@ -38,16 +25,17 @@
       <constructed>interface/complete/building/complete_gymnasium.xml</constructed>
     </SoundGroups>
   </Sound>
-  <Population>
-    <Bonus>10</Bonus>
-  </Population>
+  <GarrisonHolder>
+    <Max>15</Max>
+    <List datatype="tokens">Champion Spearman</List>
+  </GarrisonHolder>
   <TerritoryInfluence>
     <Root>false</Root>
-    <Radius>40</Radius>
+    <Radius>50</Radius>
     <Weight>40000</Weight>
   </TerritoryInfluence>
   <Trainer>
-    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/champion_infantry_spear
       units/{civ}/hero_leonidas

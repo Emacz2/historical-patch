@@ -22,13 +22,23 @@ This unit is bleeding from their wounds
 
 **Attack soldiers will (WTF)** 1250 each resources 40s Soldiers, Siege Engines, and Ships +20% attack damage (Fortress) No Sparta or Han
 
-**Fort Garrison** 400F 200M 50s Fortress +5 default arrows and +15 garrison capacity (50 total) Fortress
-
 **Barracks batch training** 400F 35s available p2, -0.1 to batch training modifier (from barracks, except Pers)
 
 **Barracks batch training2** 750F 35s p3, -0.15 to batch training modifier (from barracks, except Pers)
 
+**Cavalry movement speed** 100F 15s p1 Cavalry +10% walk speed, but 10% more train time. Doesnt not apply to hunt cavalry
+
+**CC Range** 150F 100W 30s P1 Civic centers +10 vision and attack range**CC Range** 150F 100W 30s P1 Civic centers +10 vision and attack range
+
+**Chariot Health** 400M 250F 40s P3 Chariots +25 health, +2.5 hack/pierce and +3 crush resistance but 5% slower walk speed.
+
+**Ele Heath** 200m 300f 40s P2 Elephants +1.5 pierce/hack and +2 crush resistance
+
+**Ele Heath2** 400m 400f 40s P3 Elephants +50 health, +1.5 Hack/Pierce and 2 Cruch resistance
+
 **Fort Range** 400W 200M 400F Fortress +15 vision, +10 attack range. (Fortress)
+
+**Fort Garrison** 400F 200M 50s Fortress +5 default arrows and +15 garrison capacity (50 total) Fortress
 
 **Guerrilla Jav** 300F 45s P1 Infantry Javelineers 5% faster walk, 10% faster run speed and +15 vision but 10% longer train time. (from barracks Brit only)
 
@@ -38,9 +48,11 @@ This unit is bleeding from their wounds
 
 **Heavy Skirmishers** 350F 75M 45s P1 Citizen Skirmishers +1.5 hack and +1 pierce resistance but walk 3% and run 5% slower. (Barracks Iber/Rome)
 
-**Heavy Spearman** 350F 75M 45s P1 Citizen spearman +1.5 hack and +1 pierce resistance but but walk 3% and run 5% slower. (Barracks Iber only)
+**Heavy Spearman** 350F 75M 45s P1 Citizen spearman +1.5 hack and +1 pierce resistance but but walk 3% and run 5% slower. (Barracks Iber only) 
 
 **Heavy swordsman** 350F 75m 45s P1 Citizen swordsman +1.5 hack and +1 pierce resistance but walk 3% and run 5% slower. (Barracks Iber only)
+
+**Javelineer Tradition** 200W 150M Javelineers +3 attack range (CC Brit, Gaul, Iber)
 **Poison Arrows** 1000F 500M 500W 45s Ranged Soldiers +20% attack damage. (Fortress Han Only)
 
 **Poison Blades** 1000F 500M 500W 45s Melee Soldiers +20% attack damage. (Fortress Han Only)

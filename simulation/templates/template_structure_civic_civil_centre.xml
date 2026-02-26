@@ -44,9 +44,11 @@
     <Technologies datatype="tokens">
       phase_town_{civ}
       phase_city_{civ}
+      cc_range
       unlock_shared_los
       archery_tradition
       hoplite_tradition
+      javelineer_tradition
       hellenistic_metropolis
       roman_roads
       unlock_spies
@@ -141,7 +143,7 @@
     </Entities>
   </Trainer>
   <Vision>
-    <Range>80</Range>
+    <Range>70</Range>
   </Vision>
   <VisualActor>
     <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
