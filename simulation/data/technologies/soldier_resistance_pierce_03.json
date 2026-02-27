@@ -5,24 +5,21 @@
 		"wood": 500,
 		"metal": 400
 	},
-	"supersedes": "sparta_resistance_pierce_02",
+	"supersedes": "soldier_resistance_pierce_02",
 	"requirements": {
 		"all": [
 			{ "tech": "phase_city" },
-			{ "civ": "spart" }
+			{ "notciv": "spart" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "shields_generic_silver.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +1 pierce and +1 crush resistance. Champions extra +1 pierce.",
+	"tooltip": "Soldiers +2 pierce and +1 crush resistance.",
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Champions" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
-		
-
 	],
-	"affects": ["Soldier !Helot !PaidMerc !Elephant"],
+	"affects": ["Soldier !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
