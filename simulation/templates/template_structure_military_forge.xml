@@ -49,6 +49,12 @@
       soldier_resistance_pierce_02
       soldier_resistance_pierce_03
       archer_attack_spread
+      unlock_archers
+      unlock_pikemen
+      unlock_skirms
+      unlock_slingers
+      unlock_spearmen
+      unlock_swordsmen
     </Technologies>
   </Researcher>
   <Sound>

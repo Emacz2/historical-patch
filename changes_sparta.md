@@ -44,13 +44,19 @@ Scout trained from cc
 
 Spartriates trained from CC or Ssystion
 
-Skiritai trained from camps "Roman"
+Skiritai trained from camps "Roman" fast moving, less armor "scout/patrol/type unit"
 
 Cretan Archers recruited from markets
 
 
 
+Heroes
 
+Leonidas available p2, but 1/2 health and 20% less dmg. Gains the health and dmg when you go p3
+
+Infantry +15% melee attack. All infantry +1.5 hack and pierce resistance and +5 Crush. Champion Spearman +25 health.
+
+Spearman 5% walk and 10% run speed. Available on p3 version only
 
 
 

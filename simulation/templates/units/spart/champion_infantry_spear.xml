@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="hoplite|greek_olympian|template_unit_champion_infantry_spearman">
   <Auras datatype="tokens">
-    units/spartan_phalanx
+    units/phalanx
   </Auras>
   <Identity>
     <Civ>spart</Civ>

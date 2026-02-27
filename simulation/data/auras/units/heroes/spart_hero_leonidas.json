@@ -1,7 +1,7 @@
 {
 	"type": "range",
 	"radius": 35,
-	"affects": ["Infantry"],
+	"affects": ["Champion Infantry"],
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.15 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15 },
@@ -9,11 +9,11 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 5 },
-		{ "value": "Health/Max", "add": 25, "affects": "Champion Spearman" }
+		{ "value": "Health/Max", "add": 25}
 		
 	],
 	"auraName": "Last Stand",
 	"showDescription": 1,
-	"auraDescription": "Infantry +15% melee attack. All infantry +1.5 hack and pierce resistance and +5 Crush. Champion Spearman +25 health.",
+	"auraDescription": "Champion Infantry +15% melee attack, +1.5 hack/pierce, +5 Crush resistances and +25 health.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }
