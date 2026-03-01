@@ -1,0 +1,10 @@
+{
+	"type": "garrison",
+	"affects": ["Structure"],
+	"modifications": [
+		{ "value": "Capturable/GarrisonRegenRate", "add": 3 }
+	],
+	"auraName": "Inspired Defense",
+	"showDescription": 1,
+	"auraDescription": "When garrisoned, the Structure has 3 capture points garrison regeneration rate."
+}

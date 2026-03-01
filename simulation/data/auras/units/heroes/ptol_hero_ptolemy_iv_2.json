@@ -1,0 +1,11 @@
+{
+	"type": "global",
+	"affects": ["Pikeman"],
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 }
+	],
+	"auraName": "Pike reinforcements",
+	"showDescription": 1,
+	"auraDescription": "Pikeman +5% movement speed.",
+	"overlayIcon": "art/textures/ui/session/auras/speed_bonus.png"
+}
