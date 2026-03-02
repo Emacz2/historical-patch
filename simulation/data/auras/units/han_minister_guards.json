@@ -1,0 +1,15 @@
+{
+	"type": "global",
+	"affects": ["Citizen Infantry"],
+	"modifications": [
+	
+		{
+			"value": "Cost/BuildTime",
+			"multiply": 0.9
+		}
+	],
+	"auraName": "Shortened Training Regimen",
+	"showDescription": 1,
+	"auraDescription": "Citizen infantry -10% train time.",
+	"stackable": true
+}
