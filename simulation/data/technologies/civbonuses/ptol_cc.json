@@ -1,0 +1,16 @@
+{
+        "genericName": "Long reign",
+        "autoResearch": true,
+        "description": "The Ptol dynasty was the longest lasting of Egypt origin ,",
+        "requirements": { "civ": "ptol" },
+        "icon": "stone_blocks_brown.png",
+        "tooltip": "CC techs cost 20% less but 25% more train time.",
+        "modifications": [
+                { "value": "Researcher/TechCostMultiplier/food", "multiply": 0.8 },
+                { "value": "Researcher/TechCostMultiplier/wood", "multiply": 0.8 },
+                { "value": "Researcher/TechCostMultiplier/stone", "multiply": 0.8 },
+                { "value": "Researcher/TechCostMultiplier/metal", "multiply": 0.8 },
+                { "value": "Researcher/TechCostMultiplier/time", "multiply": 1.25 }
+        ],
+        "affects": ["CivilCentre"]
+}

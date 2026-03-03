@@ -1,0 +1,13 @@
+{
+	"genericName": "Fertile Nile River Valley",
+	"autoResearch": true,
+	"description": "The Kushite.",
+	"icon": "wall.png",
+	"tooltip": "Workers +10% farming rate",
+	"requirements": { "civ": "kush" },
+	"modifications": [
+		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.1 }
+	],
+	"affects": ["Worker"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

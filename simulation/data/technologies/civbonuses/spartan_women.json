@@ -1,0 +1,16 @@
+{
+	"genericName": "Spartan Women",
+	"autoResearch": true,
+	"description": "Spartan women had more rights and responsibilities than other greek culcutres due to the men always training for war.",
+	"requirements": { "civ": "spart" },
+	"icon": "wooden_walls.png",
+	"tooltip": "Women 5% faster gathering/build rates rate, and 2% faster movement speed. Also 50% melee dmg and 0.5 of each resistance",
+	"modifications": [
+		{"value": "ResourceGatherer/BaseSpeed", "multiply": 1.05 },
+		{ "value": "Builder/Rate", "multiply": 1.05 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
+
+
+	],
+	"affects": ["FemaleCitizen"]
+}
