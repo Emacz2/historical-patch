@@ -611,6 +611,8 @@ same motion multipliers as champ melee
 
 **Greek Olympians** 5% more melee dmg 3% more ranged dmg +1 range and 5% more accurate. Infantry 5%faster walk, 10%faster run and +5 acceleration
 
+**Serf\_ranged** Ranged Serfs 15% less dmg, 10% less acurate and -5 range. However, 15% less train time, -10 wood cost, gather resources 15% faster and 2% faster walk speed.
+
 **Mercanaries**
 
 Cretan Archer 5% more pierce dmg, +2 range, 10% more accurate +0.5H and +1P resistance than regular greek archers. (Sparta, Athens, Rome)

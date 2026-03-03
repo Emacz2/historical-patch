@@ -54,11 +54,25 @@ Heroes
 
 Leonidas available p2, but 1/2 health and 20% less dmg. Gains the health and dmg when you go p3
 
-Infantry +15% melee attack. All infantry +1.5 hack and pierce resistance and +5 Crush. Champion Spearman +25 health.
+Champion Infantry +15% melee attack, +1.5 hack/pierce, +5 Crush resistances and +25 health.
 
 Spearman 5% walk and 10% run speed. Available on p3 version only
 
 
+
+Agis
+
+Own and allied soldiers -40% metal cost and -25% training time.
+
+Agis 33% health and 5 of each resistance
+
+
+
+Brasidas
+
+Javelineers +2 crush, hack, pierce resistance, +3 capture attack. Range 60
+
+Helots promote 50% faster to neodamodes
 
 
 
@@ -95,4 +109,32 @@ Helot 10% faster train time -125 repeat time
 Infantry +0.5P resistances except helots
 
 Leonidas 20% more DMG and double Health
+
+
+
+Unique Technologies
+
+**Helot Economy** 300f 300w 150m 150s 40s Helots +100% grain gather rate, +25% wood/metal/stone but champions take 25% longer to train
+
+**Krypteia** 300f 300m p2 40s Champions +10% melee/ranged attack damage, heroes 25% melee attack but all infantry 10% more train time and helots 20% less health.
+
+**Spartan melee01** 200F 150M 20s p1 Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 5%.  Champion spearman +5% train time (ssystion)
+
+**Spartan melee02** 200F 150M 40s p2 Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 10%, but Champion spearman an additional 10% train time (Forge)
+
+**Spartan melee03** 500F 400M 60s p3 Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 10%. Champion spearman an additional 10% train time (Forge)
+
+**Sparta Hack armor** **01** Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush. Champion spearman 5% additional train time. (Forge)
+
+**Sparta Hack armor** **02** 350F 250M p2 Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.(Forge)
+
+**Sparta Hack armor** **03** 500F 400M p3 Soldiers +2 hack and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.
+
+**Sparta Pierce armor 01** 200W 100M p1 20s Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush. Champion spearman 5% additional train time.
+
+**Sparta Pierce armor 02** 350W 250M p2 40s Soldiers +1.5 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.
+
+**Sparta Pierce armor 03** 500W 400M p3 60s Soldiers +2 pierce and +0.5 crush resistance. Neodamodes and Perioikois only recieve + 1 pierce +0.5 crush.
+
+
 
