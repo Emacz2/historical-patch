@@ -55,7 +55,7 @@
 			"Template": "units/athen/scout"
 		},
 		{
-			"Template": "units/athen/cavalry_javelineer_b"
+			"Template": "units/athen/serf_slinger"
 		}
 	],
 	"AINames": [
