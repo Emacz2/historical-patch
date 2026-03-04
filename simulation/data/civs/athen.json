@@ -80,7 +80,7 @@
 		"Xenophon"
 	],
 	"SkirmishReplacements": {
-		"skirmish/units/default_infantry_ranged_b": "units/athen/infantry_slinger_b",
+		"skirmish/units/default_infantry_ranged_b": "units/athen/infantry_javelineer_b",
 		"skirmish/structures/default_house_10": "structures/{civ}/house"
 	},
 	"SelectableInGameSetup": true
