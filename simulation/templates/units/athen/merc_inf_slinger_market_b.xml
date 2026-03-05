@@ -4,7 +4,7 @@
     <SelectionGroupName>units/athen/infantry_slinger_b</SelectionGroupName>
     <GenericName>Rhodian Slinger</GenericName>
     <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
-    <Icon>units/athen/infantry_slinger.png</Icon>
+   <Icon>units/mace/infantry_slinger.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
