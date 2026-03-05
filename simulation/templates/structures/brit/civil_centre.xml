@@ -18,6 +18,8 @@
     <Entities datatype="tokens">
       units/{civ}/infantry_spearman_b
       units/{civ}/serf_slinger
+      units/{civ}/support_female_citizen
+      -units/{civ}/support_civilian
       units/{civ}/cavalry_javelineer_b
     </Entities>
   </Trainer>

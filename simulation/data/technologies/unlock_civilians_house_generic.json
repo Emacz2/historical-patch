@@ -1,0 +1,31 @@
+{
+	"genericName": "Fertility Festival",
+	"specificName": {
+		"athen": "Thesmophoria",
+		"mace": "Thesmophoria",
+		"ptol": "Thesmophoria",
+		"rome": "Bona Dea",
+		"sele": "Thesmophoria",
+		"spart": "Thesmophoria"
+	},
+	"description": "A festival to celebrate fertility.",
+	"cost": {
+		"food": 200
+	
+	},
+	"requirements": {
+		"all": [
+			{ "tech": "phase_village" },
+			{ "civ": "han" },
+			{ "civ": "german" },
+			{ "civ": "maur" },
+			{ "civ": "pers" },
+			{ "civ": "rome" },
+			{ "civ": "sele" }
+		]
+	},
+	"icon": "wives_festival.png",
+	"researchTime": 45,
+	"tooltip": "Unlock the ability to train Civilians from houses.",
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

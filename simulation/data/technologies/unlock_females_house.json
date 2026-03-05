@@ -10,17 +10,23 @@
 	},
 	"description": "A festival attended by women-only, to celebrate female fertility.",
 	"cost": {
-		"food": 150
+		"food": 160
 		
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_village" }
+			{ "tech": "phase_village" },
+			{ "notciv": "han" },
+			{ "notciv": "german" },
+			{ "notciv": "maury" },
+			{ "notciv": "pers" },
+			{ "notciv": "rome" },
+			{ "notciv": "sele" }
 			
 		]
 	},
 	"icon": "wives_festival.png",
-	"researchTime": 30,
+	"researchTime": 45,
 	"tooltip": "Unlock the ability to train women from houses.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

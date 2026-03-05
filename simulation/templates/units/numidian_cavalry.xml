@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="merc_cav_champ|template_unit_champion_cavalry_javelineer">
- <Resistance>
   <UnitMotion>
     <WalkSpeed op="mul">1.15</WalkSpeed>
     <RunMultiplier op="mul">1.1</RunMultiplier>

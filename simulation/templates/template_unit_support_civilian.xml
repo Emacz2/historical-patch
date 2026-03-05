@@ -28,14 +28,8 @@
     </Resources>
   </Cost>
   <Health>
-    <Max>40</Max>
+    <Max>50</Max>
   </Health>
-  <Cost>
-    <BuildTime>8</BuildTime>
-    <Resources>
-      <food>50</food>
-    </Resources>
-  </Cost>
   <Identity>
     <GenericName>Civilian</GenericName>
     <Phenotype datatype="tokens">

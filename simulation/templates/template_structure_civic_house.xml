@@ -47,6 +47,7 @@
       pop_house_01
       pop_house_02
       unlock_females_house
+      unlock_civilians_house_generic
     </Technologies>
   </Researcher>
   <Sound>
@@ -66,6 +67,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/support_female_citizen_house
+      units/{civ}/support_civilians_house
     </Entities>
   </Trainer>
   <Vision>

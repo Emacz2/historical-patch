@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/pers/cavalry_spearman_b">
+<Entity parent="units/pers/cavalry_camel_spearman_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/pers/cavalry_spearman_e</Entity>
+    <Entity>units/pers/cavalry_camel_spearman_e</Entity>
   </Promotion>
   <VisualActor>
-    <Actor>units/persians/cavalry_spearman_a_m.xml</Actor>
+     <Actor>units/persians/camel_spear_a_m.xml</Actor>
   </VisualActor>
 </Entity>

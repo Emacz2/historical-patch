@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/ptol/merc_swordsman_market_a">
+   <Identity>
+    <Rank>Elite</Rank>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+<Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/ptolemies/infantry_swordsman_e.xml</Actor>
+  </VisualActor>
+</Entity>
