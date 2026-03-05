@@ -32,7 +32,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05, "affects": "Hoplite" }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05, "affects": "Hoplite" },
+		{ "value": "UnitMotion/RunMultiplier", "multiply": 1.05, "affects": "Hoplite" }
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
 }

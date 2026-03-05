@@ -14,9 +14,11 @@
 	"requirementsTooltip": "Unlocked in Village Phase.",
 	"icon": "walk.png",
 	"researchTime": 30,
-	"tooltip": "Infantry Heroes and Champions +10% movement speed.",
+	"tooltip": "Infantry Heroes and Champions +10% walk and 5% faster run speed.",
 	"modifications": [
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 }
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.10 },
+		{ "value": "UnitMotion/RunMultiplier", "multiply": 1.05 }
+
 	],
 	"affects": ["Champion Infantry Hero"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

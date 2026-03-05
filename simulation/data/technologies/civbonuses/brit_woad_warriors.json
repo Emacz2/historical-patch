@@ -10,7 +10,7 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 }
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": -0.5 }
 	
 
 	],
