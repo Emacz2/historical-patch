@@ -161,11 +161,11 @@ walkspeed .93
 
 **Infantry Archer**
 
-Dmg 6.6
+Dmg 8
 
 Max range 63
 
-550 prepare 1100 repeat time
+750 prepare 1500 repeat time
 
 Projectile speed 125, spread 2.5
 
@@ -179,11 +179,11 @@ Vision 75
 
 **Infantry Archer Greek**
 
-Dmg 7.4
+Dmg 9
 
 Max range 50
 
-550 prepare 1100 repeat time
+750 prepare 1500 repeat time
 
 Projectile speed 125, spread 2
 
@@ -233,6 +233,8 @@ walkspeed .98
 
 50 max range
 
+prepare time 500/repeat time 1000
+
 projectile spread 2.5
 
 can not attack buildings or siege
@@ -245,19 +247,13 @@ acceleration +3
 
 Vision 60
 
-**Infantry Slinger Serf (Based of slinger template)**
-
--10 range
-
-walkspeed 1.05
-
 **Infantry Slinger Lead**
 
-6.5P 1.5C
+5.5P 0.5C
 
 max range 80
 
-prepare time 500
+prepare time 500/repeat time 1000
 
 projectile speed 125, spread 1.5
 

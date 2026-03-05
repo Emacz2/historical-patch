@@ -1,0 +1,48 @@
+{
+	"genericName": "City Phase",
+	"description": "Advances from a bustling town to a veritable metropolis, full of the wonders of modern technology. This is the Cart city phase.",
+	"cost": {
+		"food": 500,
+		"wood": 500,
+		"stone": 750,
+		"metal": 500
+	},
+	 "requirements": {
+        "all": [
+            {
+                "entity": {
+                    "class": "Village",
+                    "number": 20
+                }
+            },
+            {
+                "entity": {
+                    "class": "Town",
+                    "number": 2
+                }
+            }
+        ]
+	},
+	"requirementsTooltip": "Requires twenty Village Structures.",
+	"supersedes": "phase_town_mace",
+	"replaces": ["phase_city"],
+	"icon": "city_phase.png",
+	"researchTime": 60,
+	"tooltip": "Advance to City Phase, which unlocks more entities and technologies. Civic Centers +25% territory influence radius. Structures +20% damage and +1 capture points regeneration rate for garrisoned units.",
+	"modifications": [
+		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
+		{ "value": "TerritoryInfluence/Radius", "multiply": 1.25, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "multiply": 1.4, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "CivCentre" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 0.97, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.01, "affects": "Citizen Infantry"},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Cavalry" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Cavalry" },
+		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Cavalry !Hero" }
+	
+	],
+	"soundComplete": "interface/alarm/alarm_phase.xml"
+}

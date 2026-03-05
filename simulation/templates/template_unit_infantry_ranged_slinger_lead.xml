@@ -4,12 +4,12 @@
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>1.5</Crush>
-        <Pierce>6.5</Pierce>
+        <Crush>0.5</Crush>
+        <Pierce>5.5</Pierce>
       </Damage>
-      <MaxRange>80</MaxRange>
+      <MaxRange>75</MaxRange>
       <PrepareTime>500</PrepareTime>
-      <RepeatTime>1500</RepeatTime>
+      <RepeatTime>1000</RepeatTime>
       <Projectile>
         <Speed>125</Speed>
         <Spread>1.5</Spread>

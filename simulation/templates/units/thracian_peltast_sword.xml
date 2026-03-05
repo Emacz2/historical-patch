@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf|longsword|template_unit_infantry_melee_swordsman">
+<Entity parent="longsword|template_unit_infantry_melee_swordsman">
   <Attack>
     <Melee>
       <AttackName context="Name of an attack using a rhomphaia (ῥομφαία), a Thracian two-handed weapon capable of both thrusting and slashing.">Rhomphaia</AttackName>
@@ -15,7 +15,7 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max>105</Max>
+    <Max>135</Max>
   </Health>
   <Identity>
     <Lang>greek</Lang>

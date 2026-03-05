@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+  <Cost>
+    <BuildTime op="mul">1.15</BuildTime>
+  </Cost>
+  <Attack>
+    <Ranged>
+    <Damage>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
+    </Damage>
+      <Projectile>
+        <Spread op="mul">0.9</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
+  <Health>
+    <Max op="add">5</Max>
+  </Health>
+  <Identity>
+    <Lang>greek</Lang>
+    <GenericName>Rhodian Slinger</GenericName>
+    <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
+    <Icon>units/mace/infantry_slinger.png</Icon>
+    <VisibleClasses datatype="tokens">PaidMerc Cretan</VisibleClasses>
+    <Tooltip>Rhodian slingers were renowned in the ancient world for their exceptional skill and effectiveness in using the sling as a projectile weapon; 5% more pierce dmg, 10% more accurate and +5 health but 15% longer train time compared to regular slingers.</Tooltip>
+  </Identity>
+  <ResourceGatherer disable=""/>
+</Entity>
+

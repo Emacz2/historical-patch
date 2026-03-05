@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_siege_log_ram">
+  <Identity>
+    <Civ>gaul</Civ>
+    <GenericName>Log Ram</GenericName>
+    <SpecificName>Rammabagmaz</SpecificName>
+    <Icon>units/germ/siege_ram.png</Icon>
+  </Identity>
+  <Selectable>
+    <Overlay>
+      <Texture>
+        <MainTexture>128x256/cartouche.png</MainTexture>
+        <MainTextureMask>128x256/cartouche_mask.png</MainTextureMask>
+      </Texture>
+    </Overlay>
+  </Selectable>
+  <VisualActor>
+    <Actor>structures/germans/siege_ram_pivot.xml</Actor>
+  </VisualActor>
+</Entity>

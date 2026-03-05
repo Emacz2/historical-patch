@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
+  <Cost>
+    <BuildTime op="mul">1.15</BuildTime>
+  </Cost>
   <Attack>
     <Ranged>
-      <Damage>
-	      <Pierce op="mul">1.05</Pierce>
-      </Damage>
-    <MaxRange op="add">2.0</MaxRange>
-    <Projectile>
-      <Spread op="mul">0.9</Spread>
+    <Damage>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
+    </Damage>
+    <RepeatTime>1350</RepeatTime>
+      <Projectile>
+        <Spread op="mul">0.9</Spread>
     </Projectile>
-    </Ranged>
-  </Attack>
+  </Ranged>
+</Attack>
   <Resistance>
     <Entity>
       <Damage>
@@ -28,7 +33,7 @@
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
     <VisibleClasses datatype="tokens">PaidMerc Cretan</VisibleClasses>
-    <Tooltip>Cretans were well known for their archery skills and hight sought after mercanaries.  Cretan archers 5% more pierce dmg, +2 range, 10% more accurate +0.5H and +1P resistance than regular greek archers.</Tooltip>
+    <Tooltip>Cretans were well known for their archery skills and hight sought after mercanaries; 5% more pierce dmg, 10% faster repeat time, 10% more accurate +0.5H and +1P resistance, +5 Health but 15% longer train time compared to regular greek archers.</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>

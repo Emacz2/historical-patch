@@ -1,0 +1,26 @@
+{
+	"autoResearch": true,
+	"icon": "upgrade_elite.png",
+	"tooltip": "Elite units +15% training time and  -30% gathering rates;   Healers +5 healing rate and range;  Ranged units 5% more damage and, Javelineers +1.5, Crossbows +2, Greek Archers +2.5 and Archers +3.5 max range.  Melee units 10% more dmg, +1 capture attack and +0.5 Pierce Resistance.",
+	"modifications": [
+		{ "value": "Cost/BuildTime", "multiply": 1.15},
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.7 },
+		{ "value": "Heal/Range", "add": 5, "affects": "Healer" },
+		{ "value": "Heal/Health", "add": 5, "affects": "Healer" },
+		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.05, "affects": "Ranged !Hunt !PaidMerc" },
+		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.05, "affects": "Ranged !Hunt !PaidMerc" },
+		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.05, "affects": "Ranged !Hunt !PaidMerc" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1.5, "affects": "Javelineer !PaidMerc"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 2, "affects": "Crossbowman !PaidMerc"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 2.5, "affects": "Greek Archer !PaidMerc"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 3.5, "affects": "Archer !PaidMerc"  },
+		{ "value": "Attack/Capture/Capture", "add": 1, "affects": "Melee !PaidMerc"  },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Melee !PaidMerc" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Melee !PaidMerc" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "Melee !PaidMerc" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Melee !PaidMerc" }
+	
+		
+	],
+	"affects": ["Elite Unit"]
+}

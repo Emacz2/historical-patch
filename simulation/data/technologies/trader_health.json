@@ -1,0 +1,18 @@
+{
+	"genericName": "Trade Caravan",
+	"description": "Horse drawn carts.",
+	"cost": {
+		"food": 300
+	},
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "trade_caravan.png",
+	"researchTime": 40,
+	"tooltip": "Land Traders 20% faster.",
+	"modifications": [
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.2 }
+		
+	],
+	"affects": ["Trader !Ship"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

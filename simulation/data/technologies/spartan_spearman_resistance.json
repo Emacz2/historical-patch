@@ -1,0 +1,30 @@
+{
+	"genericName": "Bronze Helmets",
+	"specificName": {
+		"athen": "Xiphos",
+		"mace": "Xiphos",
+		"ptol": "Xiphos",
+		"rome": "Pugio",
+		"sele": "Xiphos",
+		"spart": "Xiphos"
+	},
+	"description": "Spartaites began their training at a very young age.  They were the most feared army of their time",
+	"cost": {
+		"food": 200,
+		"wood": 100,
+		"metal": 50
+	},
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "helmet_corinthian_bronze_old.png",
+	"researchTime": 20,
+	"tooltip": "All Infantry Polearm (spear/pike) gain .5 Pierce and Hack armor and 1 crush armor but 1% slower walk speed and Spartiate spearman 5% longer train time.",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Polearm" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Polearm" },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 5, "affects": "Polearm" },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.99, "affects": "Polearm" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion Spearman" }
+	],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

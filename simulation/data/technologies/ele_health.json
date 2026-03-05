@@ -1,0 +1,20 @@
+{
+	"genericName": "Armor Plating",
+	"cost": {
+		"metal": 200,
+		"food": 300
+	},
+	"requirements": { "tech": "phase_town" },
+	"requirementsTooltip": "Unlocked in City Phase.",
+	"icon": "armor_chain.png",
+	"researchTime": 40,
+	"tooltip": "Elephants +1.5 pierce/hack and +2 crush resistance.",
+	"modifications": [
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2 }
+
+	],
+	"affects": ["Elephant"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

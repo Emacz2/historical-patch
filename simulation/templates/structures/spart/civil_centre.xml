@@ -16,7 +16,8 @@
     <Entities datatype="tokens">
       units/{civ}/champion_infantry_spear
       units/{civ}/scout
-      -units/{native}/support_civilian
+      -units/{civ}/support_civilian
+      units/{native}/support_female_citizen
     </Entities>
   </Trainer>
   <VisualActor>
