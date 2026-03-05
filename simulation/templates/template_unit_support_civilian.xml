@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="builder|template_unit_support">
   <Attack>
-    <Capture>
-      <AttackName>Capture</AttackName>
-      <Capture>1.0</Capture>
-      <MaxRange>4</MaxRange>
-      <RepeatTime>1000</RepeatTime>
-      <RestrictedClasses datatype="tokens">Field Palisade Wall</RestrictedClasses>
-    </Capture>
     <Melee>
       <AttackName>Dagger</AttackName>
       <Damage>
@@ -37,6 +30,12 @@
   <Health>
     <Max>40</Max>
   </Health>
+  <Cost>
+    <BuildTime>8</BuildTime>
+    <Resources>
+      <food>50</food>
+    </Resources>
+  </Cost>
   <Identity>
     <GenericName>Civilian</GenericName>
     <Phenotype datatype="tokens">
@@ -52,19 +51,19 @@
     <Rates>
       <food.fruit>1</food.fruit>
       <food.grain>0.5</food.grain>
-      <food.meat>2</food.meat>
-      <wood.tree>0.7</wood.tree>
+      <food.meat>3</food.meat>
+      <wood.tree>0.8</wood.tree>
       <wood.ruins>5</wood.ruins>
-      <stone.rock>0.35</stone.rock>
+      <stone.rock>0.43</stone.rock>
       <stone.ruins>2</stone.ruins>
-      <metal.ore>0.35</metal.ore>
+      <metal.ore>0.43</metal.ore>
       <metal.ruins>2</metal.ruins>
     </Rates>
     <Capacities>
-      <food>10</food>
-      <wood>10</wood>
-      <stone>10</stone>
-      <metal>10</metal>
+      <food>15</food>
+      <wood>15</wood>
+      <stone>15</stone>
+      <metal>15</metal>
     </Capacities>
   </ResourceGatherer>
   <Sound>
@@ -97,16 +96,7 @@
     <CanPatrol>false</CanPatrol>
     <Formations disable=""/>
   </UnitAI>
-  <UnitMotion>
-    <FormationController>false</FormationController>
-    <PassabilityClass>default</PassabilityClass>
-    <WalkSpeed>7.5</WalkSpeed>
-    <RunMultiplier>2</RunMultiplier>
-    <InstantTurnAngle>1.5</InstantTurnAngle>
-    <Acceleration>35</Acceleration>
-    <Weight>10</Weight>
-  </UnitMotion>
-  <Vision>
-    <Range>30</Range>
+ <Vision>
+    <Range>35</Range>
   </Vision>
 </Entity>

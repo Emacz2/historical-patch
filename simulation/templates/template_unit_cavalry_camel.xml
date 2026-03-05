@@ -6,7 +6,6 @@
     <Classes datatype="tokens">Human FastMoving CitizenSoldier</Classes>
     <VisibleClasses datatype="tokens">Citizen Soldier Cavalry</VisibleClasses>
   </Identity>
-  </UnitAI>
    <UnitMotion>
     <WalkSpeed op="mul">0.95</WalkSpeed>
   </UnitMotion>

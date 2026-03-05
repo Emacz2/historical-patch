@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/mace/merc_inf_slinger_market_b">
+<Entity parent="units/athen/merc_inf_slinger_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/mace/merc_inf_slinger_market_e</Entity>
+    <Entity>units/athen/merc_inf_slinger_market_e</Entity>
   </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_a.xml</Actor>
