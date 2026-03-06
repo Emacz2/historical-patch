@@ -21,7 +21,7 @@
     </veteran>
   </Upgrade>
   <Promotion>
-    <Entity>units/athen/merc_archer_market_a</Entity>
+    <Entity>units/athen/merc_inf_archer_market_a</Entity>
   </Promotion>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_b.xml</Actor>
