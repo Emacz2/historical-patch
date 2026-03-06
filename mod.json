@@ -1,5 +1,6 @@
 {
 	"name": "classical-warfare-aea",
+	 "ignoreInCompatibilityChecks": false,
 	"version": "28.0.1",
 	"label": "classical-warfare-aea",
 	"url": "https://github.com/Emacz2/classical-warefare-aea", 
