@@ -11,6 +11,17 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+  <Upgrade>
+    <veteran>
+      <Entity>units/rome/merc_inf_slinger_stone_market_a</Entity>
+      <Tooltip>Rank up to veteran status.</Tooltip>
+      <Cost>
+        <metal>10</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </veteran>
+  </Upgrade>
   <Attack>
     <Ranged>
       <AttackName>Slinger</AttackName>
