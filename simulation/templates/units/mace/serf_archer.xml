@@ -5,6 +5,12 @@
       structures/mace/royal_stoa
   </Entities>
 </Builder>
+  <Cost>
+    <Resources>
+      <food>40</food>
+      <wood>20</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>mace</Civ>
     <Lang>greek</Lang>

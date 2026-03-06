@@ -53,7 +53,7 @@
 			"Count": 1
 		},
 		{
-			"Template": "units/mace/inf_archer_b"
+			"Template": "units/mace/serf_archer"
 		}
 	],
 	"AINames": [

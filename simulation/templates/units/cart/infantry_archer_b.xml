@@ -22,9 +22,7 @@
     <SpecificName>Qešet</SpecificName>
     <Icon>units/cart/infantry_archer.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/infantry_archer_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/carthaginians/infantry_archer_b.xml</Actor>
   </VisualActor>
