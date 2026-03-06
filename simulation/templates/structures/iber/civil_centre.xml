@@ -9,11 +9,11 @@
   </Identity>
   <Trainer>
     <Entities datatype="tokens">
+      -units/{civ}/support_civilian
+      units/{native}/support_female_citizen
       units/{civ}/infantry_spearman_b
       units/{civ}/serf_slinger
       units/{civ}/cavalry_javelineer_b
-      -units/{civ}/support_civilian
-      units/{native}/support_female_citizen
     </Entities>
   </Trainer>
   <BuildingAI>
