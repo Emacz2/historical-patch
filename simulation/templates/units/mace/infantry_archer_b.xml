@@ -12,9 +12,7 @@
     <SpecificName>Toxotia</SpecificName>
     <Icon>units/han/infantry_archer.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/mace/infantry_archer_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/seleucids/infantry_archer_b.xml</Actor>
   </VisualActor>

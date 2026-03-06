@@ -44,7 +44,7 @@
 		},
 		{
 			"Template": "units/gaul/support_civilian",
-			"Count": 4
+			"Count": 3
 		},
 		{
 			"Template": "units/gaul/infantry_spearman_b",
@@ -56,6 +56,9 @@
 		},
 		{
 			"Template": "units/gaul/cavalry_javelineer_b"
+		},
+		{
+			"Template": "units/gaul/serf_slinger"
 		}
 	],
 	"AINames": [
