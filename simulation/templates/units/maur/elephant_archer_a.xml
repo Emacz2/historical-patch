@@ -10,8 +10,10 @@
       </Damage>
     </Ranged>
   </Attack>
-   <BuildingAI>
+    <BuildingAI>
     <DefaultArrowCount>2</DefaultArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Archer</GarrisonArrowClasses>
     <MaxArrowCount>2</MaxArrowCount>
   </BuildingAI>
   <Promotion>

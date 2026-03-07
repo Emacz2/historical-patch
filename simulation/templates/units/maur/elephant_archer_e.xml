@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/maur/elephant_archer_a">
- <BuildingAI>
+  <BuildingAI>
     <DefaultArrowCount>3</DefaultArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Archer</GarrisonArrowClasses>
     <MaxArrowCount>3</MaxArrowCount>
   </BuildingAI>
   <Attack>
