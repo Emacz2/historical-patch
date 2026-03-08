@@ -57,7 +57,7 @@
     </SoundGroups>
   </Sound>
   <TerritoryInfluence>
-    <Radius>38</Radius>
+    <Radius>40</Radius>
   </TerritoryInfluence>
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>

@@ -3,6 +3,10 @@
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Ballistārium</SpecificName>
+    <VisibleClasses datatype="tokens">City -Town Arsenal</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">-phase_town phase_city</Techs>
+    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>structures/romans/workshop.xml</Actor>
