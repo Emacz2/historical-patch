@@ -40,7 +40,6 @@
     <Technologies datatype="tokens">
       stable_batch_training
       cavalry_movement_speed
-      unlock_champion_chariots
       unlock_bowcav
       unlock_javcav
       unlock_spearcav
