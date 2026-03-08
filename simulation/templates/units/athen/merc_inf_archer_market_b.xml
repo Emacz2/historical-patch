@@ -11,7 +11,7 @@
   </Identity>
    <Upgrade>
     <veteran>
-      <Entity>units/rome/merc_inf_archer_market_a</Entity>
+      <Entity>units/athen/merc_inf_archer_market_a</Entity>
       <Tooltip>Rank up to veteran status.</Tooltip>
       <Cost>
         <metal>10</metal>
