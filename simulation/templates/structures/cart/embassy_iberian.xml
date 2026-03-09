@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure_military_embassy">
-  <Auras datatype="tokens"> structures/xp_trickle </Auras>
  <Cost>
     <Resources>
       <stone>100</stone>

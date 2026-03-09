@@ -28,10 +28,10 @@
     <SpecificName>Tàixué</SpecificName>
     <SelectionGroupName>structures/han/academy</SelectionGroupName>
     <Tooltip>Train Champions.</Tooltip>
-    <VisibleClasses datatype="tokens">-Village City Academy</VisibleClasses>
+    <VisibleClasses datatype="tokens">City Academy</VisibleClasses>
     <Icon>structures/embassy_italic.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">-phase_village phase_city</Techs>
+      <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <Loot>
