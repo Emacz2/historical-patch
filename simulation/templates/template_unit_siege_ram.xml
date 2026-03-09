@@ -25,7 +25,7 @@
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>5</Max>
+    <Max>2</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Infantry</List>
@@ -39,6 +39,11 @@
     <GenericName>Battering Ram</GenericName>
     <Tooltip>Cannot attack Fields or Organic Units.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Ram</VisibleClasses>
+  <Requirements>
+      <Techs datatype="tokens">
+        phase_town
+      </Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <xp>150</xp>

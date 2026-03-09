@@ -10,6 +10,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
+			{ "civ": "germ" },
 			{ "civ": "han" },
 			{ "civ": "iber" },
 			{ "civ": "kush" },

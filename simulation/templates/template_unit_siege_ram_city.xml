@@ -4,7 +4,7 @@
     <Melee>
       <AttackName>Ram</AttackName>
       <Damage>
-        <Crush>120</Crush>
+        <Crush>100</Crush>
       </Damage>
       <MaxRange>6.5</MaxRange>
       <PrepareTime>1000</PrepareTime>
@@ -26,7 +26,7 @@
     <Height>5.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>8</Max>
+    <Max>6</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
     <List datatype="tokens">Infantry</List>
@@ -52,9 +52,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>8</Hack>
+        <Hack>10</Hack>
         <Pierce>35</Pierce>
-	      <Crush>12</Crush>
+	      <Crush>15</Crush>
       </Damage>
     </Entity>
   </Resistance>

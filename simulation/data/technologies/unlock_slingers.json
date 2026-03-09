@@ -9,6 +9,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
+			{ "civ": "germ" },
 			{ "civ": "pers" },
 			{ "civ": "sele" }
 		]
