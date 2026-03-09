@@ -26,7 +26,7 @@
     <GenericName>Military Mess Halls</GenericName>
     <SelectionGroupName>template_structure_military_syssiton</SelectionGroupName>
     <Tooltip>Train Spearman Soldiers. Research military technologies only available to sparta.</Tooltip>
-   <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
+   <VisibleClasses datatype="tokens">Village Syssiton</VisibleClasses>
     <Icon>structures/barracks.png</Icon>
   </Identity>
   <Resistance>

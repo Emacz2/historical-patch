@@ -25,7 +25,7 @@
   <Identity>
     <GenericName>Library</GenericName>
     <SelectionGroupName>template_structure_special_library</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Library</VisibleClasses>
+    <VisibleClasses datatype="tokens">Library Town</VisibleClasses>
     <Icon>structures/library_scroll.png</Icon>
   </Identity>
   <ProductionQueue/>

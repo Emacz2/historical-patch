@@ -22,7 +22,7 @@
   </Position>
   <ResourceSupply>
     <KillBeforeGather>false</KillBeforeGather>
-    <Max>1250</Max>
+    <Max>1500</Max>
     <Type>metal.ore</Type>
     <MaxGatherers>15</MaxGatherers>
   </ResourceSupply>

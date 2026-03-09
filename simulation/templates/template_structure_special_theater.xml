@@ -26,7 +26,7 @@
   <Identity>
     <GenericName>Theater</GenericName>
     <SelectionGroupName>template_structure_special_theater</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Theater</VisibleClasses>
+    <VisibleClasses datatype="tokens">Theater Town</VisibleClasses>
     <Icon>structures/theater.png</Icon>
   </Identity>
   <Loot>
