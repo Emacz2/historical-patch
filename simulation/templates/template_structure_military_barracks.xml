@@ -37,9 +37,6 @@
     <Tooltip>Train Infantry and research Infantry technologies.</Tooltip>
     <VisibleClasses datatype="tokens">Village Barracks</VisibleClasses>
     <Icon>structures/barracks.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <wood>40</wood>

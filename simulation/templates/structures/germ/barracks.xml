@@ -22,12 +22,6 @@
       -pair_unlock_champions_sele
     </Technologies>
   </Researcher>
-  <Trainer>
-    <Entities datatype="tokens">
-      -units/{civ}/champion_infantry_swordsman
-      -units/{civ}/champion_infantry_axeman
-    </Entities>
-  </Trainer>
   <Obstruction>
     <Static width="23.0" depth="22.0"/>
   </Obstruction>
