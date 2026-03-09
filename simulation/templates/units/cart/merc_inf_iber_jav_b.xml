@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/cart/infantry_javelineer_iber_b">
-  <Identity>
-    <Rank>Advanced</Rank>
+<Entity parent="merc_inf|template_unit_infantry_ranged_peltast">
+<Identity>
+    <Civ>cart</Civ>
+    <GenericName>Iberian Mercenary Skirmisher</GenericName>
+    <SpecificName>Sǝḫīr Kidōn</SpecificName>
+    <SelectionGroupName>units/cart/infantry_javelineer_iber_b</SelectionGroupName>
+    <Icon>units/cart/infantry_javelinist.png</Icon>
   </Identity>
+  <Loot>
   <Promotion>
     <Entity>units/cart/infantry_javelineer_iber_e</Entity>
   </Promotion>

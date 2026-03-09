@@ -26,9 +26,6 @@
     <SpecificName>Seḫīr Ḥerev</SpecificName>
     <SelectionGroupName>units/cart/merc_sword_celt</SelectionGroupName>
     <Icon>units/cart/infantry_swordsman.png</Icon>
-     <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/cart/infantry_swordsman_gaul_a</Entity>
