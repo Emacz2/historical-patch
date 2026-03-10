@@ -14,6 +14,6 @@
 	
 
 	],
-	"affects": ["Infantry"],
+	"affects": ["Citizen Infantry"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
