@@ -23,9 +23,6 @@
     <GenericName>Infantry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.95</WalkSpeed>
-  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
