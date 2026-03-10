@@ -81,6 +81,9 @@
       <trained>interface/alarm/alarm_create_female.xml</trained>
     </SoundGroups>
   </Sound>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.98</WalkSpeed>
+  </UnitMotion>
   <UnitAI>
     <CanPatrol>false</CanPatrol>
     <Formations disable=""/>
