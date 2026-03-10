@@ -14,6 +14,6 @@
 	
 
 	],
-	"affects": ["Citizen Infantry !Serf"],
+	"affects": ["Infantry !Serf"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
