@@ -3,8 +3,8 @@
    <BuildingAI>
     <DefaultArrowCount>1</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Archer</GarrisonArrowClasses>
     <MaxArrowCount>1</MaxArrowCount>
+    <GarrisonArrowClasses>Infantry Archer</GarrisonArrowClasses>
   </BuildingAI>
   <Identity>
     <Civ>maur</Civ>
