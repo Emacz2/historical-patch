@@ -68,6 +68,11 @@
       </One>
     </TurretPoints>
   </TurretHolder>
+   <Researcher>
+    <Technologies datatype="tokens">
+     outpost_vision
+    </Technologies>
+  </Researcher>
   <Vision>
     <Range>90</Range>
   </Vision>
