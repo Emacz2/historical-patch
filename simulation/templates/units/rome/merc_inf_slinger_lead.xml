@@ -4,6 +4,14 @@
     <Rank>Elite</Rank>
     <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
+    <Upgrade>
+    <Stone>
+      <Entity>units/rome/merc_inf_slinger_market_e</Entity>
+      <Tooltip>Switch to lead bullet Balearic Slinger</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </Stone>
+  </Upgrade>
    <Promotion>
     <Entity>units/rome/aux_inf_slinger_lead</Entity>
     <RequiredXp>4000</RequiredXp>

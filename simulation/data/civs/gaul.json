@@ -43,7 +43,7 @@
 			"Template": "structures/gaul/civil_centre"
 		},
 		{
-			"Template": "units/gaul/support_civilian",
+			"Template": "units/gaul/support_female_citizen",
 			"Count": 3
 		},
 		{

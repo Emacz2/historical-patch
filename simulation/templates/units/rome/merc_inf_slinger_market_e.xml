@@ -4,7 +4,7 @@
     <Civ>rome</Civ>
     <GenericName>Balearic Slinger</GenericName>
     <SpecificName>Qallāʿ Ibušimi</SpecificName>
-    <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
+    <SelectionGroupName>units/rome/merc_inf_slinger_market_e</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
     <VisibleClasses datatype="tokens">Republic</VisibleClasses>
     <Requirements>
@@ -12,29 +12,21 @@
     </Requirements>
   </Identity>
   <Upgrade>
-    <veteran>
-      <Entity>units/rome/merc_inf_slinger_stone_market_a</Entity>
-      <Tooltip>Rank up to veteran status.</Tooltip>
+    <Lead>
+      <Entity>units/rome/merc_inf_slinger_lead</Entity>
+      <Tooltip>Switch to lead bullet Balearic Slinger</Tooltip>
       <Cost>
-        <metal>10</metal>
+        <metal>25</metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
-    </veteran>
+    </Lead>
   </Upgrade>
-  <Attack>
-    <Ranged>
-      <AttackName>Slinger</AttackName>
-      <Damage>
-        <Pierce op="add">-3</Pierce>
-        <Crush op="add">4</Crush>
-      </Damage>
-    </Ranged>
-  </Attack>
   <Promotion>
-    <Entity>units/rome/merc_inf_slinger_stone_market_a</Entity>
+    <Entity>units/rome/aux_inf_slinger_lead</Entity>
+    <RequiredXp>4000</RequiredXp>
   </Promotion>
   <VisualActor>
-    <Actor>units/iberians/infantry_slinger_b.xml</Actor>
+    <Actor>units/iberians/infantry_slinger_e.xml</Actor>
   </VisualActor>
 </Entity>
