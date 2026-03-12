@@ -29,11 +29,11 @@
       <metal>225</metal>
     </Resources>
   </Cost>
-   <BuildingAI>
+  <BuildingAI>
     <DefaultArrowCount>1</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Javelineer</GarrisonArrowClasses>
     <MaxArrowCount>1</MaxArrowCount>
+    <GarrisonArrowClasses>Infantry Javelineer</GarrisonArrowClasses>
   </BuildingAI>
   <Loot>
     <metal op="add">10</metal>

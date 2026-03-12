@@ -28,11 +28,11 @@
       <metal>225</metal>
     </Resources>
   </Cost>
-  <BuildingAI>
+<BuildingAI>
     <DefaultArrowCount>1</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Archer</GarrisonArrowClasses>
     <MaxArrowCount>1</MaxArrowCount>
+    <GarrisonArrowClasses>Infantry Archer</GarrisonArrowClasses>
   </BuildingAI>
   <Identity>
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
