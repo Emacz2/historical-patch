@@ -9,6 +9,7 @@
         <Pierce op="mul">0.55</Pierce>
       </Damage>
     </Ranged>
+    </Attack>
    <BuildingAI>
     <DefaultArrowCount>2</DefaultArrowCount>
     <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
