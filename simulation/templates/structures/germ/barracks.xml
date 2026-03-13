@@ -22,6 +22,11 @@
       -pair_unlock_champions_sele
     </Technologies>
   </Researcher>
+    <Trainer>
+    <Entities datatype="tokens">
+    units/{civ}/infantry_maceman_a
+    </Entities>
+  </Trainer>
   <Obstruction>
     <Static width="23.0" depth="22.0"/>
   </Obstruction>

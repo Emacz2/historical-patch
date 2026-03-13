@@ -7,6 +7,12 @@
       <heavydamage>0.20</heavydamage>
     </DamageVariants>
   </Health>
+  <Builder>
+  <Entities datatype="tokens">
+      structures/brit/range
+      structures/brit/hill_fort
+  </Entities>
+</Builder>
   <Identity>
     <Civ>brit</Civ>
     <SelectionGroupName>units/brit/infantry_javelineer_b</SelectionGroupName>

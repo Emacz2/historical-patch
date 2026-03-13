@@ -5,6 +5,9 @@
     <GenericName>Log Ram</GenericName>
     <SpecificName>Rammabagmaz</SpecificName>
     <Icon>units/germ/siege_ram.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Selectable>
     <Overlay>

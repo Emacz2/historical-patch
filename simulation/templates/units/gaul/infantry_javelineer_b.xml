@@ -9,6 +9,7 @@
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/infantry_javelineer_b</SelectionGroupName>
+    <GenericName>Gallic Peltast</GenericName>
     <SpecificName>Adretos</SpecificName>
     <Icon>units/gaul/infantry_javelinist.png</Icon>
   </Identity>

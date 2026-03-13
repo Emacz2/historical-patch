@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger_lead">
- <Identity>
-    <Icon>units/cart/infantry_slinger.png</Icon>
-  </Identity>
-    <Upgrade>
-    <Stone>
-      <Entity>units/cart/merc_inf_slinger_market_e</Entity>
+<Entity parent="units/cart/merc_inf_slinger_market_a">
+  <Upgrade>
+    <Lead>
+      <Entity>units/cart/merc_inf_slinger_lead</Entity>
       <Tooltip>Switch to lead bullet Balearic Slinger</Tooltip>
+      <Cost>
+        <metal>15</metal>
+      </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
-    </Stone>
+    </Lead>
   </Upgrade>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_e.xml</Actor>

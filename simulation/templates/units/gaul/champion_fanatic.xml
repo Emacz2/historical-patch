@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_spearman">
-<Attack>
-    <Melee>
-      <PrepareTime>300</PrepareTime>
-      <RepeatTime>1100</RepeatTime>
-    </Melee>
-  </Attack>
   <Cost>
     <Resources>
       <food>120</food>
@@ -22,11 +16,6 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <Loot>
-    <food>12</food>
-    <wood>10</wood>
-    <metal>0</metal>
-  </Loot>
   <Resistance>
     <Entity>
       <Damage>

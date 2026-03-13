@@ -9,6 +9,7 @@
   <Identity>
     <Civ>gaul</Civ>
     <SelectionGroupName>units/gaul/infantry_spearman_b</SelectionGroupName>
+    <GenericName>Gallic Spearman</GenericName>
     <SpecificName>Catucos</SpecificName>
     <Icon>units/gaul/infantry_spearman.png</Icon>
   </Identity>
