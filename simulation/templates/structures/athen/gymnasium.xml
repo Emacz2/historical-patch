@@ -23,7 +23,7 @@
     <SpecificName>Gymnasion</SpecificName>
     <Tooltip>Train Champions.</Tooltip>
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">Gymnasium -City Town</VisibleClasses>
+    <VisibleClasses datatype="tokens">Gymnasium Town</VisibleClasses>
     <Icon>structures/gymnasium.png</Icon>
   </Identity>
   <Loot>

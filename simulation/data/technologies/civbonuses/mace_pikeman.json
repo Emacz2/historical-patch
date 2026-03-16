@@ -4,11 +4,11 @@
 	"description": "Infantry consisted primarely of shepherds",
 	"requirements": { "civ": "mace" },
 	"icon": "wooden_walls.png",
-	"tooltip": "Mace pikeman 15% less dmg, -2 Hack/Pierce resistance but 15% faster train time cost 10 less wood, gather resources 10% faster and 2% faster walk speed.",
+	"tooltip": "Mace pikeman gather resrouces 5% faster, walk 2% faster, cost 10 less wood and -10% train time but 5% less dmg and -0.5 pierce/hack resistance.",
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.02 }
 
 
 	],
-	"affects": ["Serf"]
+	"affects": ["Levied"]
 }
