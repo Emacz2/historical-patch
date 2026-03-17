@@ -11,10 +11,10 @@
       -structures/{civ}/barracks
     </Entities>
   </Builder>
-   <Cost>
+    <Cost>
     <Resources>
-      <food>50</food>
-      <wood>25</wood>
+      <food>40</food>
+      <wood>20</wood>
     </Resources>
   </Cost>
   <Identity>
