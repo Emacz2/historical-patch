@@ -33,15 +33,15 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.20</food.fruit>
-      <food.grain op="mul">1.20</food.grain>
-      <food.meat op="mul">1.20</food.meat>
-      <wood.tree op="mul">1.20</wood.tree>
-      <wood.ruins  op="mul">1.20</wood.ruins>
-      <stone.rock  op="mul">1.2</stone.rock>
-      <stone.ruins  op="mul">1.2</stone.ruins>
-      <metal.ore  op="mul">1.2</metal.ore>
-      <metal.ruins  op="mul">1.2</metal.ruins>
+      <food.fruit op="mul">1.25</food.fruit>
+      <food.grain op="mul">1.25</food.grain>
+      <food.meat op="mul">1.25</food.meat>
+      <wood.tree op="mul">1.25</wood.tree>
+      <wood.ruins  op="mul">1.25</wood.ruins>
+      <stone.rock  op="mul">1.25</stone.rock>
+      <stone.ruins  op="mul">1.25</stone.ruins>
+      <metal.ore  op="mul">1.25</metal.ore>
+      <metal.ruins  op="mul">1.25</metal.ruins>
     </Rates>
     <Capacities>
       <food>15</food>
@@ -61,6 +61,6 @@
   </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Helot</VisibleClasses>
-    <Tooltip>Helots 50 health, -25% dmg, 25% less accurate -10% range and +250 repeat time but gather resources 20% faster. They don't count torwards population or recieve forge uprades</Tooltip>
+    <Tooltip>Helots 50 health, -25% dmg, 25% less accurate -10% range and +250 repeat time but gather resources 25% faster. They don't count torwards population or recieve forge uprades</Tooltip>
   </Identity>
 </Entity>
