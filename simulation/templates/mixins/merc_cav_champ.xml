@@ -4,7 +4,7 @@
    <BuildTime op="mul">1.1</BuildTime>
     <Resources>
       <metal>150</metal>
-      <food>100</food> 
+      <food>200</food> 
       <wood>0</wood>
       <stone>0</stone>
     </Resources>
@@ -28,10 +28,6 @@
     </Projectile>
   </Ranged>
 </Attack>
- <Loot>
-    <metal>15</metal>
-    <food>10</food>
-  </Loot>
   <Identity>
     <VisibleClasses datatype="tokens">MercChamp</VisibleClasses>
   </Identity>

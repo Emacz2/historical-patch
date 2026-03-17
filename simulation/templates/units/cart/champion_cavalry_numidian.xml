@@ -3,9 +3,6 @@
   <Identity>
     <GenericName>Numidian Light Javelineer Cavalry</GenericName>
     <Icon>units/cart/champion_cavalry.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_city</Techs>
-    </Requirements>
   </Identity>
   <VisualActor>
     <Actor>units/carthaginians/champion_cavalry_numidian_c_m.xml</Actor>

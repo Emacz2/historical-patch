@@ -25,13 +25,13 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.meat op="mul">1.15</food.meat>
-      <wood.tree op="mul">1.15</wood.tree>
-      <wood.ruins  op="mul">1.15</wood.ruins>
-      <stone.rock  op="mul">1.15</stone.rock>
-      <stone.ruins  op="mul">1.15</stone.ruins>
-      <metal.ore  op="mul">1.15</metal.ore>
-      <metal.ruins  op="mul">1.15</metal.ruins>
+      <food.meat op="mul">1.2</food.meat>
+      <wood.tree op="mul">1.2</wood.tree>
+      <wood.ruins  op="mul">1.2</wood.ruins>
+      <stone.rock  op="mul">1.2</stone.rock>
+      <stone.ruins  op="mul">1.2</stone.ruins>
+      <metal.ore  op="mul">1.2</metal.ore>
+      <metal.ruins  op="mul">1.2</metal.ruins>
     </Rates>
     <Capacities>
       <food>10</food>
@@ -41,11 +41,11 @@
     </Capacities>
   </ResourceGatherer>
   <UnitMotion>
-    <WalkSpeed op="mul">1.02</WalkSpeed>
-    <RunMultiplier op="mul">1.05</RunMultiplier>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <RunMultiplier op="mul">1.06</RunMultiplier>
   </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Civilian Worker</VisibleClasses>
-    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range. However, 15% less train time and 15% faster resource gathering than citizen soldiers.</Tooltip>
+    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 5% faster run than their soldier equivilent.</Tooltip>
   </Identity>
 </Entity>
