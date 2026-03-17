@@ -35,7 +35,6 @@
     <Entities datatype="tokens">
       units/{civ}/infantry_rhaetian_axeman
       units/{civ}/infantry_rutheni_archer_b
-      units/{civ}/cavalry_treveri_spear
       units/{civ}/cavalry_treveri_jav
     </Entities>
   </Trainer>
