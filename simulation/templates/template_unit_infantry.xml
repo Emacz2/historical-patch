@@ -37,13 +37,6 @@
     <VisibleClasses datatype="tokens">Citizen Worker Soldier Infantry</VisibleClasses>
     <Rank>Basic</Rank>
   </Identity>
-  <Loot>
-    <xp>75</xp>
-    <food>10</food>
-    <wood>0</wood>
-    <stone>0</stone>
-    <metal>0</metal>
-  </Loot>
   <Position>
     <Anchor>upright</Anchor>
   </Position>
