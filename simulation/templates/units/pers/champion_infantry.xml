@@ -10,12 +10,15 @@
     <SpecificName>Anušiya</SpecificName>
     <VisibleClasses datatype="tokens">Immortal</VisibleClasses>
     <Icon>units/pers/champion_infantry.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Cost>
     <BuildTime>20</BuildTime>
     <Resources>
-      <food>100</food>
-      <wood>50</wood>
+      <food>150</food>
+      <wood>100</wood>
       <metal>50</metal>
     </Resources>
   </Cost>
