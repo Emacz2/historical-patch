@@ -28,8 +28,8 @@
     <Population>0</Population>
     <BuildTime>10</BuildTime>
     <Resources>
-      <food>50</food>
-      <wood>10</wood>
+      <food>40</food>
+      <metal>10</metal>
     </Resources>
   </Cost>
   <Health>
@@ -38,7 +38,7 @@
   <Identity>
     <GenericName>Slave</GenericName>
     <SelectionGroupName>template_unit_support_slave</SelectionGroupName>
-    <Tooltip>Gather 50% faster than normal infantry, but weak fighters</Tooltip>
+    <Tooltip>Gather 50% faster than civilians and don't count torwards population</Tooltip>
     <VisibleClasses datatype="tokens">Worker Slave</VisibleClasses>
   </Identity>
   <Loot>

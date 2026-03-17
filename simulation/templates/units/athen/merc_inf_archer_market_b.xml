@@ -9,17 +9,6 @@
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
   </Identity>
-   <Upgrade>
-    <veteran>
-      <Entity>units/athen/merc_inf_archer_market_a</Entity>
-      <Tooltip>Rank up to veteran status.</Tooltip>
-      <Cost>
-        <metal>10</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>10</Time>
-    </veteran>
-  </Upgrade>
   <Promotion>
     <Entity>units/athen/merc_inf_archer_market_a</Entity>
   </Promotion>
