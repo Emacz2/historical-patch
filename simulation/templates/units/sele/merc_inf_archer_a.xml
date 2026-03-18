@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/sele/merc_archer_b">
+<Entity parent="units/sele/merc_inf_archer_b">
    <Identity>
     <Rank>Advanced</Rank>
   </Identity>
    <Upgrade>
     <veteran>
-      <Entity>units/sele/merc_archer_aa</Entity>
+      <Entity>units/sele/merc_inf_archer_aa</Entity>
       <Tooltip>Rank up to veteran status.</Tooltip>
       <Cost>
         <metal>10</metal>
