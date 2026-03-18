@@ -3,7 +3,8 @@
   <Cost>
     <BuildTime op="mul">1.1</BuildTime>
   </Cost>
-  <Attack>
+ <Attack>
+    <Ranged>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
