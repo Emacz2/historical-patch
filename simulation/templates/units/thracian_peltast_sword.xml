@@ -26,11 +26,6 @@
     <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
-  <UnitMotion>
-    <WalkSpeed>10.5</WalkSpeed>
-    <RunMultiplier op="mul">1.1</RunMultiplier>
-    <Acceleration>49.4</Acceleration>
-  </UnitMotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>
