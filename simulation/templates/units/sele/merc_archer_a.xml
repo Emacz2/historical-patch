@@ -3,9 +3,17 @@
    <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-   <Promotion>
-    <Entity>units/sele/merc_archer_e</Entity>
-  </Promotion>
+   <Upgrade>
+    <veteran>
+      <Entity>units/sele/merc_archer_aa</Entity>
+      <Tooltip>Rank up to veteran status.</Tooltip>
+      <Cost>
+        <metal>10</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </veteran>
+  </Upgrade>
     <VisualActor>
     <Actor>units/athenians/infantry_archer_a.xml</Actor>
   </VisualActor>
