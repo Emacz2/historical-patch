@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/athen/merc_inf_archer_market_aa">
+<Entity parent="units/athen/merc_inf_archer_market_a">
   <Identity>
     <Rank>Elite</Rank>
   </Identity>
-   <Upgrade>
-    <veteran>
-      <Entity>units/athen/merc_inf_archer_market_ee</Entity>
-      <Tooltip>Rank up to veteran status.</Tooltip>
-      <Cost>
-        <metal>10</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>10</Time>
-    </veteran>
-  </Upgrade>
   <VisualActor>
     <Actor>units/athenians/infantry_archer_e.xml</Actor>
   </VisualActor>

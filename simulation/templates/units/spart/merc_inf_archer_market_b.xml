@@ -22,9 +22,7 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/spart/merc_archer_market_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_b.xml</Actor>
   </VisualActor>

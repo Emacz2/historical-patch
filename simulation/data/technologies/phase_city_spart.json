@@ -49,7 +49,8 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.2, "affects": "Leonidas" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.2, "affects": "Leonidas" },
-		{ "value": "Health/Max", "multiply": 2, "affects": "Leonidas"}
+		{ "value": "Health/Max", "multiply": 2, "affects": "Leonidas"},
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Market" }
 	
 		
 	],
