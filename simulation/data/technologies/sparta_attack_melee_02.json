@@ -25,6 +25,6 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
 	],
-	"affects": ["Soldier !PaidMerc !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -159,8 +159,9 @@
     <UnitClasses datatype="tokens">
       Cavalry
       Champion
-      Domestic
+      Citizen
       Civilian
+      Domestic
       Hero
       Infantry
       Ship

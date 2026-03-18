@@ -17,17 +17,19 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max>125</Max>
+     <Max>135</Max>
   </Health>
     <UnitMotion>
     <WalkSpeed>9.4</WalkSpeed>
     <Acceleration>35</Acceleration>
   </UnitMotion>
   <Identity>
+    <Rank>Elite</Rank>
     <Lang>greek</Lang>
     <GenericName>Mercenary Thureos Skirmisher</GenericName>
     <SpecificName>Thureophóros Akrobolistḗs</SpecificName>
     <Icon>units/ptol/infantry_javelinist_merc.png</Icon>
+    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

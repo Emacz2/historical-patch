@@ -18,10 +18,12 @@
     <Max>135</Max>
   </Health>
   <Identity>
+    <Rank>Elite</Rank>
     <Lang>greek</Lang>
     <GenericName>Thracian Black Cloak</GenericName>
     <SpecificName>Rhomphaiophoros</SpecificName>
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
+    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
   <UnitMotion>

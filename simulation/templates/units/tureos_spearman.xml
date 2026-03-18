@@ -10,13 +10,15 @@
     </Entity>
   </Resistance>
   <Health>
-    <Max>125</Max>
+   <Max>135</Max>
   </Health>
   <Identity>
+    <Rank>Elite</Rank>
     <Lang>greek</Lang>
     <GenericName>Mercenary Thureos Spearman</GenericName>
     <SpecificName>Thureophóros Misthophóros</SpecificName>
     <Icon>units/ptol/infantry_spearman_2.png</Icon>
+    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

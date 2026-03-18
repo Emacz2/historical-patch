@@ -18,16 +18,16 @@
     </Capture>
   <Melee merge="">
 	<Damage>
-	  <Hack op="mul">1.05</Hack>
-    <Pierce op="mul">1.05</Pierce>
-    <Crush op="mul">1.05</Crush>
+	  <Hack op="mul">1.075</Hack>
+    <Pierce op="mul">1.075</Pierce>
+    <Crush op="mul">1.075</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
 	<Damage>
-	  <Hack op="mul">1.04</Hack>
-      <Pierce op="mul">1.04</Pierce>
-      <Crush op="mul">1.04</Crush>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
     </Damage>
       <Projectile>
         <Spread op="mul">0.9</Spread>
@@ -38,9 +38,12 @@
     <metal>10</metal>
     <food>5</food>
   </Loot>
+  <Promotion>
+    <RequiredXp>200</RequiredXp>
+  </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">PaidMerc</VisibleClasses>
-    <Tooltip>Merc Infantry have 1 less capture attack/range. Melee 5% more DMG and Ranged 4% more dmg 10% more accurate than than CS equivalent. They do not gain forge techs or WTF.</Tooltip>
+   <VisibleClasses datatype="tokens">Mercenary</VisibleClasses>
+    <Tooltip>Merc Infantry have 1 less capture attack/range. Melee +7.5% dmg, Ranged +5% dmg and 10% more accurate than than CS equivalent. They do not gain forge techs or WTF. And have a different promotion system/stats</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>

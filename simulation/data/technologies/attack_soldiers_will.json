@@ -33,6 +33,6 @@
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.20 },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.20 }
  	],
-	"affects": ["Ship", "Siege", "Soldier !PaidMerc"],
+	"affects": ["Ship", "Siege", "Soldier !Mercenary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

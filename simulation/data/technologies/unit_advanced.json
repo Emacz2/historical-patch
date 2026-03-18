@@ -3,22 +3,21 @@
 	"icon": "upgrade_advanced.png",
 	"tooltip": "Advanced and Elite units +15% training time,-20% gathering rates and 20% more health;   Healers +5 healing rate and range;  Ranged units 10% more accurate and 0.5 Hack Resistance and Crossbows + 1, Javelineers +1.5, Greek Archers +2.5 and Archers +3.5 max range.  Melee units 5% more dmg and +1 capture attack. ", 
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 1.1 },
+		{ "value": "Cost/BuildTime", "multiply": 1.05 },
 		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 0.80 },
 		{ "value": "Health/Max", "multiply": 1.2},
 		{ "value": "Heal/Range", "add": 5, "affects": "Healer" },
 		{ "value": "Heal/Health", "add": 5, "affects": "Healer" },
-		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged !Hunt !PaidMerc" },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Ranged !PaidMerc" },
-		{ "value": "Attack/Ranged/MaxRange", "add": 1, "affects": "Crossbowman !PaidMerc"  },
-		{ "value": "Attack/Ranged/MaxRange", "add": 1.5, "affects": "Javelineer !PaidMerc"  },
-		{ "value": "Attack/Ranged/MaxRange", "add": 2.5, "affects": "Greek Archer !PaidMerc"  },
-		{ "value": "Attack/Ranged/MaxRange", "add": 3.5, "affects": "Archer !PaidMerc"  },
-		{ "value": "Attack/Capture/Capture", "add": 1, "affects": "Melee !PaidMerc"  },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Melee !PaidMerc" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Melee !PaidMerc" },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "Melee !PaidMerc" }
+		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged" },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1, "affects": "Crossbowman"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 1.5, "affects": "Javelineer"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 2.5, "affects": "GreekArcher"  },
+		{ "value": "Attack/Ranged/MaxRange", "add": 3.5, "affects": "Archer !GreekArcher"  },
+		{ "value": "Attack/Capture/Capture", "add": 1, "affects": "Melee"  },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "Melee" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "Melee" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "Melee" }
 	
 	],
-	"affects": ["Advanced Unit", "Elite Unit"]
+	"affects": ["Advanced Unit !Champion !Mercenary", "Elite Unit !Mercenary !Champion"]
 }

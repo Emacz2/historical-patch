@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity parent="mercenary">
   <Cost>
-    <BuildTime op="mul">0.8</BuildTime>
+    <BuildTime op="mul">0.9</BuildTime>
     <Resources>
       <metal>100</metal>
     </Resources>
   </Cost>
+  <Attack>
+   <Capture>
+      <AttackName>Capture</AttackName>
+      <Capture>1.0</Capture>
+      <MaxRange>3</MaxRange>
+      <RepeatTime>1000</RepeatTime>
+    </Capture>
+  </Attack>
   <Loot>
     <metal>15</metal>
     <food>10</food>
   </Loot>
+   <Identity>
+  <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
+    <Tooltip>Specialized Mercenary with unique stats/abilties. Capture attack is 1. They do not gain forge techs or WTF. And have a different promotion system/stats</Tooltip>
+  </Identity>
 </Entity>

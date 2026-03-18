@@ -22,6 +22,6 @@
 
 		
 	],
-	"affects": ["Soldier !Helot !Elephant"],
+	"affects": ["Soldier !Mercenary !Helot !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

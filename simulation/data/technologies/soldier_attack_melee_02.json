@@ -22,6 +22,6 @@
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.15 }
 	],
-	"affects": ["Soldier !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

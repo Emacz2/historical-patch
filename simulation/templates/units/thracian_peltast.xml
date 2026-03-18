@@ -18,10 +18,12 @@
     <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Identity>
+    <Rank>Elite</Rank>
     <Lang>greek</Lang>
     <GenericName>Thracian Peltast</GenericName>
     <SpecificName>Peltastḗs Thrâx</SpecificName>
     <Icon>units/athen/infantry_javelinist.png</Icon>
+    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

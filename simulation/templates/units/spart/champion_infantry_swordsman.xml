@@ -22,6 +22,7 @@
     <Max>200</Max>
   </Health>
    <Identity>
+    <Rank>Elite</Rank>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Skiritai Commando</GenericName>
