@@ -14,10 +14,10 @@
   </Researcher>
   <Trainer>
     <Entities datatype="tokens">
+      units/{civ}/support_female_citizen
       units/{civ}/infantry_spearman_b
       units/{civ}/infantry_archer_b
       units/{civ}/cavalry_spearman_b
-      units/{civ}/support_female_citizen
       -units/{civ}/support_civilian
       units/{civ}/champion_cavalry
     </Entities>
