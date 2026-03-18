@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/athen/merc_inf_archer_market_a">
+ <Identity>
+    <Rank>Advanced</Rank>
+  </Identity>
  <Attack>
   <Ranged>
 	  <Damage>
@@ -7,7 +10,7 @@
       <Pierce op="mul">1.2</Pierce>
       <Crush op="mul">1.2</Crush>
     </Damage>
-      <MaxRange op="mul">1.1</MaxRange>
+      <MaxRange op="add">3</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
       </Projectile>
