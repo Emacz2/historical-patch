@@ -23,7 +23,7 @@
     <GenericName>Thracian Black Cloak</GenericName>
     <SpecificName>Rhomphaiophoros</SpecificName>
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
-    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
+    <VisibleClasses datatype="tokens">Mercenary -Citizen Switch</VisibleClasses>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
