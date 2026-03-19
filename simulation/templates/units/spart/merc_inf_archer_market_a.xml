@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/spart/merc_archer_market_b">
+<Entity parent="units/spart/merc_inf_archer_market_b">
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
