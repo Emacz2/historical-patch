@@ -31,7 +31,6 @@
       units/{civ}/infantry_javelineer_b
       units/{civ}/cavalry_spearman_b
 	    units/{civ}/infantry_spearman_b
-      units/{civ}/serf_slinger
     </Entities>
   </Trainer>
   <Promotion>

@@ -14,9 +14,6 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/infantry_pikeman_b
-      units/{civ}/serf_slinger
-      -units/{civ}/support_civilian
-      units/{native}/support_female_citizen
     </Entities>
   </Trainer>
   <VisualActor>

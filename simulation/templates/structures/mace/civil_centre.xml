@@ -9,10 +9,7 @@
   </Identity>
   <Trainer>
     <Entities datatype="tokens">
-      -units/{civ}/support_civilian
-      units/{native}/support_female_citizen
       units/{civ}/infantry_pikeman_levy
-      units/{civ}/serf_archer
       units/{civ}/cavalry_spearman_b
     </Entities>
   </Trainer>
