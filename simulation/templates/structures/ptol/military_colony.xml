@@ -13,7 +13,7 @@
   </Footprint>
   <Identity>
     <Civ>ptol</Civ>
-    <SpecificName>Greek Mercanery Camp</SpecificName>
+    <SpecificName>Egyptian Military Colony</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/military_settlement.png</Icon>
   </Identity>
