@@ -13,9 +13,7 @@
     <SpecificName>Toxótēs Syrías</SpecificName>
     <Icon>units/sele/infantry_archer.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/sele/merc_inf_archer_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/athenians/infantry_archer_b.xml</Actor>
   </VisualActor>

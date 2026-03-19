@@ -3,10 +3,7 @@
  <Identity>
     <Civ>cart</Civ>
     <SpecificName>Šūq</SpecificName>
-    <VisibleClasses datatype="tokens">-Town Village</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-    </Requirements>
+    <VisibleClasses datatype="tokens">Village</VisibleClasses>
   </Identity>
     <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
