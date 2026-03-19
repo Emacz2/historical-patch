@@ -25,6 +25,12 @@
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
     <VisibleClasses datatype="tokens">Mercenary -Citizen Switch</VisibleClasses>
   </Identity>
+    <UnitMotion>
+    <WalkSpeed>9.1</WalkSpeed>
+   <RunMultiplier op="mul">1.1</RunMultiplier>
+    <Acceleration>44.8</Acceleration>
+    <Weight>10</Weight>
+  </UnitMotion>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>

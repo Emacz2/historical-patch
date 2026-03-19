@@ -36,6 +36,6 @@
     </SoundGroups>
   </Sound>
   <Vision>
-    <Range>75</Range>
+    <Range>80</Range>
   </Vision>
 </Entity>
