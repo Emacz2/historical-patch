@@ -24,13 +24,14 @@
       units/{civ}/helot_javelineer
       units/{civ}/helot_stone_thrower
       units/{civ}/neodamodes_spearman
+      units/{civ}/neodamodes_javelineer
     </Entities>
   </Trainer>
   <GarrisonHolder>
     <Max>5</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Helot</List>
+    <List datatype="tokens">Helot Neodamodes</List>
     <BuffHeal>0</BuffHeal>
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>

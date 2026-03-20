@@ -19,6 +19,9 @@
     <SpecificName>Neodamōdeis</SpecificName>
     <Icon>units/athen/infantry_jav.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">unlock_neodamodes</Techs>
+    </Requirements>
   </Identity>
   <ResourceGatherer disable=""/>
   <Promotion disable=""/>
