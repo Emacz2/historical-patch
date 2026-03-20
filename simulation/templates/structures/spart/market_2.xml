@@ -4,6 +4,11 @@
     <Civ>spart</Civ>
     <SpecificName>Emporion</SpecificName>
   </Identity>
+  <Cost>
+     <Resources>
+      <wood op="add">50</wood>
+    </Resources>
+  </Cost>
   <VisualActor>
     <Actor>structures/spartans/market.xml</Actor>
   </VisualActor>

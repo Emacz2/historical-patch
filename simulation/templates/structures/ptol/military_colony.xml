@@ -17,14 +17,6 @@
     <Classes datatype="tokens">CivSpecific</Classes>
     <Icon>structures/military_settlement.png</Icon>
   </Identity>
-  <Trainer>
-    <Entities replace="" datatype="tokens">
-      units/{civ}/champion_infantry_pikeman
-      units/{civ}/champion_cavalry
-      units/{civ}/infantry_pikeman_a
-      units/{civ}/infantry_archer_a
-    </Entities>
-  </Trainer>
   <Obstruction>
     <Static width="32" depth="31"/>
   </Obstruction>

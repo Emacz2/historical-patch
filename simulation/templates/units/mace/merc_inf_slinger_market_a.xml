@@ -3,9 +3,7 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
-    <Entity>units/mace/merc_inf_slinger_market_e</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_a.xml</Actor>
   </VisualActor>

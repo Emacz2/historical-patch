@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf_market|thracian_black_cloak|longsword|template_unit_infantry_melee_swordsman">
+<Entity parent="longsword|template_unit_champion_infantry_swordsman">
+  <Attack>
+    <Melee>
+      <AttackName context="Name of an attack using a rhomphaia (ῥομφαία), a Thracian two-handed weapon capable of both thrusting and slashing.">Rhomphaia</AttackName>
+    </Melee>
+  </Attack>
   <Identity>
     <Civ>mace</Civ>
     <Lang>greek</Lang>
@@ -7,12 +12,9 @@
     <SpecificName>Rhomphaiaphoros</SpecificName>
     <Icon>units/thrac/champion_infantry_swordsman.png</Icon>
     <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
+      <Techs datatype="tokens">-phase_city unlock_champion_infantry</Techs>
     </Requirements>
   </Identity>
-   <Promotion>
-    <Entity>units/mace/merc_blackcloack_market_a</Entity>
-  </Promotion>
   <VisualActor>
     <Actor>units/macedonians/infantry_swordsman_c_thracian.xml</Actor>
   </VisualActor>

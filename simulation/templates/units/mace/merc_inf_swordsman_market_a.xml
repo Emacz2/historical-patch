@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/mace/merc_blackcloack_market_a">
+<Entity parent="units/mace/merc_inf_swordsman_market_b">
   <Identity>
-    <Rank>Elite</Rank>
+    <Rank>Advanced</Rank>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

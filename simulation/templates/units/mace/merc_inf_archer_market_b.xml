@@ -6,24 +6,8 @@
     <GenericName>Cretan Mercenary Archer</GenericName>
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
-    </Requirements>
   </Identity>
-   <Upgrade>
-    <veteran>
-      <Entity>units/athen/merc_inf_archer_market_a</Entity>
-      <Tooltip>Rank up to veteran status.</Tooltip>
-      <Cost>
-        <metal>10</metal>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>10</Time>
-    </veteran>
-  </Upgrade>
-  <Promotion>
-    <Entity>units/mace/merc_inf_archer_market_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
    <Actor>units/athenians/infantry_archer_b.xml</Actor>
   </VisualActor>

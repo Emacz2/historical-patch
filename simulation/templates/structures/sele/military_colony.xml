@@ -12,14 +12,6 @@
   <Obstruction>
     <Static width="29" depth="29"/>
   </Obstruction>
-  <Trainer>
-    <Entities datatype="tokens">
-      -units/{civ}/support_civilian
-      units/{civ}/merc_thracian_peltast
-      units/{civ}/merc_inf_archer_a
-      units/{civ}/cavalry_spearman_merc_a
-    </Entities>
-  </Trainer>
   <VisualActor>
     <Actor>structures/seleucids/military_colony.xml</Actor>
     <FoundationActor>structures/fndn_9x9.xml</FoundationActor>

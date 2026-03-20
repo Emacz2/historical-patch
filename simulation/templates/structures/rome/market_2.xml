@@ -4,6 +4,11 @@
     <Square width="27" depth="27"/>
     <Height>8.0</Height>
   </Footprint>
+  <Cost>
+     <Resources>
+      <wood op="add">50</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Emporion</SpecificName> 
