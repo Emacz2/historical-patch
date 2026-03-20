@@ -29,7 +29,7 @@
     <Max>135</Max>
   </Health>
   <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
     <RunMultiplier op="mul">1.1</RunMultiplier>
     <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
