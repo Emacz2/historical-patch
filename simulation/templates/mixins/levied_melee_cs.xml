@@ -34,7 +34,7 @@
       <wood.ruins op="mul">1.05</wood.ruins>
       <stone.rock op="mul">1.05</stone.rock>
       <stone.ruins op="mul">1.05</stone.ruins>
-      <metal.ore  op="mul">1.5</metal.ore>
+      <metal.ore  op="mul">1.05</metal.ore>
       <metal.ruins op="mul">1.05</metal.ruins>
     </Rates>
     <Capacities>

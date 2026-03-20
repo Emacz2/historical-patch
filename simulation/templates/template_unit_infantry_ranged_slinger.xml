@@ -40,6 +40,6 @@
     <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
   <Vision>
-    <Range>60</Range>
+    <Range>65</Range>
   </Vision>
 </Entity>

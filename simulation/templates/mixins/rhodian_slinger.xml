@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
   <Cost>
-    <BuildTime op="mul">1.15</BuildTime>
+    <BuildTime op="mul">1.1</BuildTime>
   </Cost>
   <Attack>
     <Ranged>
@@ -10,14 +10,20 @@
       <Pierce op="mul">1.05</Pierce>
       <Crush op="mul">1.05</Crush>
     </Damage>
+      <MaxRange op="add">2.0</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
   </Ranged>
 </Attack>
-  <Health>
-    <Max op="add">5</Max>
-  </Health>
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <Lang>greek</Lang>
     <GenericName>Rhodian Slinger</GenericName>
