@@ -11,6 +11,10 @@
     <Civ>rome</Civ>
     <SpecificName>Mercātus</SpecificName>
   </Identity>
+    <Promotion>
+    <Entity>structures/rome/market_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Obstruction>
     <Static width="32.0" depth="26.0"/>
   </Obstruction>

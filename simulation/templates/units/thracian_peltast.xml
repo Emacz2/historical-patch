@@ -16,11 +16,11 @@
       <RepeatTime>1000</RepeatTime>
     </Capture>
   </Attack>
-  <Resistance>
+ <Resistance>
     <Entity>
       <Damage>
-        <Hack>1</Hack>
-        <Pierce>1.5</Pierce>
+        <Hack>2</Hack>
+        <Pierce>2.5</Pierce>
         <Crush>1</Crush>
       </Damage>
     </Entity>

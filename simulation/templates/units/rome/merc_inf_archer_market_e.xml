@@ -2,7 +2,6 @@
 <Entity parent="units/rome/merc_inf_archer_market_a">
   <Identity>
     <Rank>Elite</Rank>
-    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
   </Identity>
   <Promotion>
     <Entity>units/rome/aux_archer</Entity>

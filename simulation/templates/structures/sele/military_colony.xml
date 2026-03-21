@@ -9,6 +9,11 @@
     <SpecificName>Klērouchia</SpecificName>
     <Classes datatype="tokens">CivSpecific</Classes>
   </Identity>
+   <Researcher>
+    <Technologies datatype="tokens">
+      pair_unlock_champions_sele
+    </Technologies>
+  </Researcher>
   <Obstruction>
     <Static width="29" depth="29"/>
   </Obstruction>

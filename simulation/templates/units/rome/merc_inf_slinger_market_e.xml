@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="merc_inf_market|template_unit_infantry_ranged_slinger">
+<Entity parent="units/rome/merc_inf_slinger_market_a">
   <Identity>
-    <Civ>rome</Civ>
-    <GenericName>Balearic Slinger</GenericName>
-    <SpecificName>Qallāʿ Ibušimi</SpecificName>
-    <SelectionGroupName>units/rome/merc_inf_slinger_market_e</SelectionGroupName>
-    <Icon>units/cart/infantry_slinger.png</Icon>
-    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
+    <Rank>Elite</Rank>
   </Identity>
   <Upgrade>
     <Lead>
       <Entity>units/rome/merc_inf_slinger_lead</Entity>
       <Tooltip>Switch to lead bullet Balearic Slinger</Tooltip>
       <Cost>
-        <metal>15</metal>
+        <metal>10</metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>

@@ -3,9 +3,12 @@
   <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>
-    <GenericName>Romanized Heavy Swordsman</GenericName>
-    <SpecificName>Thorakitès Rhomaïkós</SpecificName>
+     <GenericName>Silver Shield Swordsman</GenericName>
+    <SpecificName>Argyraspis</SpecificName>
     <Icon>units/sele/champion_swordsman.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">reformed_army_sele</Techs>
+    </Requirements>
   </Identity>
   <Resistance>
     <Entity>

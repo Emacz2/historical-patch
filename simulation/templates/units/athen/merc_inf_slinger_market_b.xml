@@ -5,13 +5,8 @@
     <GenericName>Rhodian Slinger</GenericName>
     <SpecificName>Sphendonḗtēs Rhódios</SpecificName>
     <Icon>units/mace/infantry_slinger.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/athen/merc_inf_slinger_market_a</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
     <Actor>units/macedonians/infantry_slinger_b.xml</Actor>
   </VisualActor>
