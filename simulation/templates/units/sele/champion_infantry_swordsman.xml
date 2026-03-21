@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_champion_infantry_swordsman_heavy">
+<Entity parent="template_unit_champion_infantry_swordsman">
   <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>
     <GenericName>Romanized Heavy Swordsman</GenericName>
     <SpecificName>Thorakitès Rhomaïkós</SpecificName>
     <Icon>units/sele/champion_swordsman.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">reformed_army_sele</Techs>
-    </Requirements>
   </Identity>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Crush op="add">5</Crush>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">1</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
   <VisualActor>
     <Actor>units/seleucids/infantry_swordsman_c.xml</Actor>
   </VisualActor>

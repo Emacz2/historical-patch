@@ -27,6 +27,9 @@
     <SpecificName>Anušiya</SpecificName>
     <VisibleClasses datatype="tokens">Immortal</VisibleClasses>
     <Icon>units/pers/champion_infantry_archer.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
  <Resistance>
     <Entity>
