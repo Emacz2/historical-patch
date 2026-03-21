@@ -17,11 +17,6 @@
     <Civ>germ</Civ>
     <SpecificName>Druthislegra</SpecificName>
   </Identity>
-  <Researcher>
-    <Technologies datatype="tokens">
-      -pair_unlock_champions_sele
-    </Technologies>
-  </Researcher>
     <Trainer>
     <Entities datatype="tokens">
     units/{civ}/infantry_maceman_a

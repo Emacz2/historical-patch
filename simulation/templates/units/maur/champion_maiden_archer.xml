@@ -15,7 +15,6 @@
     <Phenotype>female</Phenotype>
     <GenericName>Maiden Guard Archer</GenericName>
     <SpecificName>Visha Kanya</SpecificName>
-	<Tooltip>Strong versus heavily armored units.</Tooltip>
     <Icon>units/maur/champion_maiden_archer.png</Icon>
   </Identity>
   <VisualActor>
