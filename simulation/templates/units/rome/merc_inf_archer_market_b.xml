@@ -7,9 +7,6 @@
     <GenericName>Cretan Mercenary Archer</GenericName>
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/rome/merc_inf_archer_market_a</Entity>
