@@ -16,13 +16,8 @@
     <GenericName>Noba Maceman</GenericName>
     <SpecificName>Nhw Noba</SpecificName>
     <Icon>units/kush/infantry_maceman.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/kush/infantry_maceman_merc_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/kushites/infantry_maceman_b.xml</Actor>
   </VisualActor>

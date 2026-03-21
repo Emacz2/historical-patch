@@ -18,6 +18,9 @@
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">City</VisibleClasses>
     <Icon>structures/mercenary_camp.png</Icon>
+       <Requirements>
+     <Techs datatype="tokens">-phase_town phase_city</Techs>
+     </Requirements>
   </Identity>
   <Loot>
     <metal>40</metal>

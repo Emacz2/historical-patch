@@ -11,9 +11,7 @@
     <Civ>ptol</Civ>
     <SelectionGroupName>units/ptol/infantry_archer_b</SelectionGroupName>
   </Identity>
-  <Promotion>
-    <Entity>units/ptol/merc_archer_a</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
     <Actor>units/ptolemies/infantry_archer_merc_b.xml</Actor>
   </VisualActor>

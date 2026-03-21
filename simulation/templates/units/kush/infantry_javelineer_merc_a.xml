@@ -3,9 +3,7 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
-    <Entity>units/kush/infantry_javelineer_merc_e</Entity>
-  </Promotion>
+   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/kushites/infantry_javelinist_a.xml</Actor>
   </VisualActor>

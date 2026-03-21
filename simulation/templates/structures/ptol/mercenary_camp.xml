@@ -28,6 +28,7 @@
     <GenericName>Greek Mercanery Camp</GenericName>
     <SpecificName>Stratopedeia Misthophorōn</SpecificName>
     <Classes datatype="tokens">MercenaryCamp</Classes>
+    <VisibleClasses datatype="tokens">Village</VisibleClasses>
     <Tooltip>Cheap Barracks-like structure that is buildable in neutral territory, but casts no territory influence. Train Mercenaries.</Tooltip>
     <Icon>structures/mercenary_camp.png</Icon>
     <Requirements>
@@ -70,7 +71,7 @@
   <TerritoryInfluence disable=""/>
  <Trainer>
     <Entities replace="" datatype="tokens">
-      units/{civ}/merc_archer_b
+      units/{civ}/merc_inf_archer_b
       units/{civ}/cavalry_spearman_b
     </Entities>
   </Trainer>

@@ -16,13 +16,8 @@
     <GenericName>Noba Skirmisher</GenericName>
     <SpecificName>Nhw ʿhȝw Noba</SpecificName>
     <Icon>units/kush/infantry_javelinist.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/kush/infantry_javelineer_merc_a</Entity>
-  </Promotion>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/kushites/infantry_javelinist_b.xml</Actor>
   </VisualActor>
