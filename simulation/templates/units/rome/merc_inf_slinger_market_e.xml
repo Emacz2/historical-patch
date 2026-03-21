@@ -7,25 +7,19 @@
     <SelectionGroupName>units/rome/merc_inf_slinger_market_e</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
     <VisibleClasses datatype="tokens">Republic</VisibleClasses>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Upgrade>
     <Lead>
       <Entity>units/rome/merc_inf_slinger_lead</Entity>
       <Tooltip>Switch to lead bullet Balearic Slinger</Tooltip>
       <Cost>
-        <metal>25</metal>
+        <metal>15</metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
     </Lead>
   </Upgrade>
-  <Promotion>
-    <Entity>units/rome/aux_inf_slinger_lead</Entity>
-    <RequiredXp>4000</RequiredXp>
-  </Promotion>
+   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_e.xml</Actor>
   </VisualActor>

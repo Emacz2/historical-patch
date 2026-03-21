@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
-  <Cost>
-    <BuildTime op="mul">1.15</BuildTime>
-  </Cost>
-   <Attack>
+  <Attack>
     <Ranged>
-      <AttackName>Sling</AttackName>
-      <MaxRange op="mul">1.1</MaxRange>
-      <PrepareTime>500</PrepareTime>
-      <RepeatTime>1000</RepeatTime>
-    </Ranged>
-  </Attack>
-  <Resistance>
+    <Damage>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
+    </Damage>
+      <MaxRange op="add">2.0</MaxRange>
+      <Projectile>
+        <Spread op="mul">0.9</Spread>
+    </Projectile>
+  </Ranged>
+</Attack>
+ <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">0.5</Hack>
-        <Pierce op="add">0.5</Pierce>
+        <Hack op="add">-1</Hack>
+        <Pierce op="add">-1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
-  <Health>
-    <Max op="add">15</Max>
-  </Health>
   <Identity>
     <GenericName>Balearic Slinger</GenericName>
     <SpecificName>Qallāʿ Ibušimi</SpecificName>

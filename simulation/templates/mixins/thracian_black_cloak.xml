@@ -15,9 +15,6 @@
       </Damage>
     </Entity>
   </Resistance>
-  <Health>
-    <Max op="add">10</Max>
-  </Health>
    <UnitMotion>
     <WalkSpeed op="mul">1.1</WalkSpeed>
     <RunMultiplier op="mul">1.1</RunMultiplier>

@@ -46,6 +46,7 @@
     <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
     <RequiredXp>400</RequiredXp>
   </Promotion>
+  <ResourceGatherer disable=""/>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>
   </VisualActor>
