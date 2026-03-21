@@ -21,7 +21,7 @@
     <SelectionGroupName>units/rome/infantry_antesignanus</SelectionGroupName>
     <GenericName>Legionary Javelineer</GenericName>
     <SpecificName>Antesignānus</SpecificName>
-    <VisibleClasses datatype="tokens">Legionary Rōmānī</VisibleClasses>
+    <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
     <Rank>Elite</Rank>
     <Icon>units/rome/infantry_antesignanus.png</Icon>
     <Requirements>

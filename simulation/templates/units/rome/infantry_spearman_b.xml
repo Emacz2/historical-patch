@@ -21,7 +21,6 @@
     <GenericName>Roman Spearmen</GenericName>
     <SpecificName>Hastātus</SpecificName>
     <Icon>units/rome/infantry_spearman.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
     <Tooltip>Elite rank Spearmen can be promoted to champion Centurions.</Tooltip>
   </Identity>
   <Promotion>

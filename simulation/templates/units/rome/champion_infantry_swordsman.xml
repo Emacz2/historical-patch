@@ -15,7 +15,6 @@
     <GenericName>Italic Heavy Swordsman</GenericName>
     <SpecificName>Lictor</SpecificName>
     <SelectionGroupName>units/rome/champion_infantry_swordsman</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
     <Icon>units/rome/champion_infantry.png</Icon>
   </Identity>
   <Promotion>
