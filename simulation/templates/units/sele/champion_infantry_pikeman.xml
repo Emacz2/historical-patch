@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="greek_olympian|template_unit_champion_infantry_pikeman">
-  <Identity>
     <Cost>
     <BuildTime>20</BuildTime>
   </Cost>
+    <Identity>
     <Civ>sele</Civ>
     <Lang>greek</Lang>
     <GenericName>Silver Shield</GenericName>
