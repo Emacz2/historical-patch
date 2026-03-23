@@ -26,7 +26,7 @@
     <GenericName>Cretan Mercenary Archer</GenericName>
     <SpecificName>Toxótēs Krētikós</SpecificName>
     <Icon>units/mace/infantry_archer.png</Icon>
-    <VisibleClasses datatype="tokens">Mercenary -Citizen</VisibleClasses>
+    <VisibleClasses datatype="tokens">-Citizen</VisibleClasses>
     <Tooltip>Cretans were well known for their archery skills and hight sought after mercanaries; 5% more pierce dmg, 10% faster repeat time, 10% more accurate +0.5H and +1P resistance, +5 Health but 15% longer train time compared to regular greek archers.</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>

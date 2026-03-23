@@ -7,7 +7,7 @@
     <SelectionGroupName>units/cart/merc_inf_slinger_market_b</SelectionGroupName>
     <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
- <Promotion disable=""/>
+  <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_b.xml</Actor>
   </VisualActor>

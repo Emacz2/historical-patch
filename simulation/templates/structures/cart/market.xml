@@ -8,7 +8,7 @@
       <Techs datatype="tokens">-phase_town phase_village</Techs>
     </Requirements>
   </Identity>
-  <Promotion>
+   <Promotion>
     <Entity>structures/cart/market_2</Entity>
     <RequiredXp>3000</RequiredXp>
   </Promotion>
