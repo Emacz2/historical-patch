@@ -5,11 +5,6 @@
     <SpecificName>Samnite Spearman</SpecificName>
     <Icon>units/samn/spearman.png</Icon>
   </Identity>
-  <Cost>
-    <Resources>
-      <metal op="add">25</metal>
-    </Resources>
-  </Cost>
  <Resistance>
     <Entity>
       <Damage>

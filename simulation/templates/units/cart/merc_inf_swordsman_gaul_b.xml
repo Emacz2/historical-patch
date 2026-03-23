@@ -27,9 +27,7 @@
     <SelectionGroupName>units/cart/merc_sword_celt</SelectionGroupName>
     <Icon>units/cart/infantry_swordsman.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/infantry_swordsman_gaul_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/gauls/infantry_swordsman_b.xml</Actor>
   </VisualActor>

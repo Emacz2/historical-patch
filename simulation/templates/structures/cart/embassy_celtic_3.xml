@@ -27,19 +27,15 @@
   </Health>
   <Identity>
     <Civ>cart</Civ>
-    <SpecificName>Celtic Embassy</SpecificName>
-    <Tooltip>Train Basic Celtic Mercenaries.</Tooltip>
+    <SpecificName>Celtic Embassy lvl 2</SpecificName>
+    <Tooltip>Train Celtic Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Village</VisibleClasses>
     <Icon>structures/embassy_celtic.png</Icon>
      <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
+      <Techs datatype="tokens">-phase_town phase_city</Techs>
      </Requirements>
   </Identity>
-    <Promotion>
-    <Entity>structures/cart/embassy_celtic_2</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <Loot>
     <wood>40</wood>
   </Loot>
@@ -48,7 +44,8 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_inf_swordsman_gaul_b
+      units/{civ}/merc_inf_swordsman_gaul_e
+      units/{civ}/merc_swordcav_gaul_e
     </Entities>
   </Trainer>
   <VisualActor>

@@ -3,7 +3,8 @@
   <Cost>
     <BuildTime op="mul">0.5</BuildTime>
      <Resources>
-      <food>90</food>
+      <food>120</food>
+      <metal>0</metal>
       <wood>0</wood>
       <stone>0</stone>
     </Resources>

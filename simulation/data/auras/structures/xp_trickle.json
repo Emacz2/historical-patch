@@ -2,7 +2,7 @@
 	"type": "garrisonedUnits",
 	"affects": ["Unit"],
 	"modifications": [
-		{ "value": "Promotion/TrickleRate", "add": 1 }
+		{ "value": "Promotion/TrickleRate", "add": 0.5 }
 	],
 	"auraName": "Rigorous Training",
 	"showDescription": 1,

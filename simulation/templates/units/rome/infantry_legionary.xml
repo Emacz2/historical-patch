@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_infantry_melee_swordsman">
+<Entity parent="legionary|template_unit_infantry_melee_swordsman">
   <Auras datatype="tokens">
     units/testudo
   </Auras>
@@ -18,12 +18,6 @@
       </Damage>
     </Melee>
   </Attack>
-  <Cost>
-    <Resources>
-      <metal op="add">10</metal>
-      <wood op="add">-10</wood>
-    </Resources>
-  </Cost>
   <Resistance>
     <Entity>
       <Damage>
@@ -35,17 +29,13 @@
     <GenericName>Legionary Swordsman</GenericName>
     <Lang>latin</Lang>
     <SpecificName>Legiōnārius</SpecificName>
-    <Rank>Elite</Rank>
     <Icon>units/rome/infantry_legionary.png</Icon>
     <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
-    <RequiredXp>400</RequiredXp>
-  </Promotion>
+  <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>

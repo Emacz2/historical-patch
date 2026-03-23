@@ -4,6 +4,9 @@
     <Square width="24.0" depth="44.0"/>
     <Height>12.0</Height>
   </Footprint>
+    <Auras datatype="tokens">
+    structures/rome_temple_mars
+  </Auras>
   <GarrisonHolder>
     <Max op="add">10</Max>
   </GarrisonHolder>

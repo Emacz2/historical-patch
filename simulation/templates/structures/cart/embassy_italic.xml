@@ -42,8 +42,8 @@
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_inf_samnite_spearman
-      units/{civ}/merc_inf_samnite_skirmisher
+      units/{cart}/merc_inf_samnite_spearman
+      units/{cart}/merc_inf_samnite_skirmisher
     </Entities>
   </Trainer>
   <VisualActor>

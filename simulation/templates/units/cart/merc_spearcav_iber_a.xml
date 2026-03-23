@@ -3,9 +3,7 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/merc_spearcav_iber_e</Entity>
-  </Promotion>
+<Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/cavalry_spearman_a_m.xml</Actor>
   </VisualActor>

@@ -4,7 +4,7 @@
     <BuildTime op="mul">1.05</BuildTime>
   </Cost>
   <Health>
-    <Max op="add">25</Max>
+    <Max op="add">20</Max>
   </Health>
   <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
@@ -16,9 +16,7 @@
     <SelectionGroupName>units/cart/merc_spearcav_iber</SelectionGroupName>
     <Icon>units/cart/cavalry_spearman.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/merc_spearcav_iber_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/cavalry_spearman_b_m.xml</Actor>
   </VisualActor>

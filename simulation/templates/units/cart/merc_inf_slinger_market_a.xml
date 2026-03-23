@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="units/cart/merc_inf_slinger_market_b">
-  <Promotion>
-    <Entity>units/cart/merc_inf_slinger_market_e</Entity>
-  </Promotion>
+  <Identity>
+    <Rank>Advanced</Rank>
+    <SelectionGroupName>units/cart/merc_inf_slinger_market_a</SelectionGroupName>
+  </Identity>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_a.xml</Actor>
   </VisualActor>

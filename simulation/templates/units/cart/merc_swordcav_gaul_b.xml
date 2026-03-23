@@ -19,9 +19,7 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/merc_swordcav_gaul_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/gauls/cavalry_swordsman_b_m.xml</Actor>
   </VisualActor>

@@ -9,10 +9,13 @@
 		{ "value": "Attack/Ranged/Damage/Hack", "multiply": 1.15},
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.15 },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.15 },
-		{ "value": "Vision/Range", "add": 15 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5 }
+		
 	],
-	"auraName": "Religious Fervor",
+	"auraName": "God of War",
 	"showDescription": 1,
-	"auraDescription": "Soldiers +15% melee and ranged attack damage and +15 vision.",
+	"auraDescription": "Soldiers +15% melee and ranged attack damage and and gain +1.5 Hack, Pierce and +2.5 Crush resitance.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

@@ -24,7 +24,7 @@
   <Identity>
     <Civ>cart</Civ>
     <SpecificName>Iberian Village Embassy</SpecificName>
-    <Tooltip>Train Iberian Mercenaries.</Tooltip>
+    <Tooltip>Train Basic Iberian Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Village</VisibleClasses>
     <Icon>structures/embassy_iberian.png</Icon>
@@ -32,6 +32,10 @@
      <Techs datatype="tokens">-phase_town phase_village</Techs>
      </Requirements>
   </Identity>
+    <Promotion>
+    <Entity>structures/cart/embassy_iberian_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Loot>
     <stone>20</stone>
     <wood>20</wood>
@@ -40,10 +44,11 @@
   <Obstruction>
     <Static width="16.0" depth="16.0"/>
   </Obstruction>
-  <Trainer>
+<Trainer>
     <Entities datatype="tokens">
+      units/{civ}/merc_inf_javelineer_iber_b
+      units/{civ}/merc_inf_swordsman_iber_b
       units/{civ}/merc_spearcav_iber_b
-      units/{civ}/merc_inf_iber_sword_b
     </Entities>
   </Trainer>
   <VisualActor>

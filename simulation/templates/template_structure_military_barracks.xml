@@ -74,7 +74,6 @@
       units/{civ}/infantry_javelineer_b
       units/{civ}/infantry_slinger_b
       units/{civ}/infantry_archer_b
-      units/{civ}/infantry_archer_merc_b
     </Entities>
   </Trainer>
   <Vision>

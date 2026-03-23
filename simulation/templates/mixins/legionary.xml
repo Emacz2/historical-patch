@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity>
+  <Builder>
+    <Rate>1.25</Rate>
+  </Builder>
+    <Cost>
+    <Resources>
+      <metal op="add">10</metal>
+      <wood op="add">-10</wood>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Rank>Elite</Rank>
+    <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
+    <Tooltip>Roman Legionaries were the backbone of the Roman Army during the late Republic and into the Empire phase.  Javelineers gain +1 hack and 0.5 pierce resistance. Swordsman +1 pierce attack and +0.5 hack resistance. They can no longer gather resources but build 25% faster. Cost +10 metal but -10 wood.</Tooltip>
+  </Identity>
+</Entity>

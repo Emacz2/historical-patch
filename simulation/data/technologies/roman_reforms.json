@@ -1,8 +1,8 @@
 {
-	"genericName": "Marian Reforms",
-	"description": "Regularize the army into a professional, organized force. The Marian reforms were a series of military reforms in the last century BC attributed to Gaius Marius involving the abolition of citzen cavalry, equipment changes, and standardization of the heavy infantry unit: the Legionary.",
+	"genericName": "Augustus' Reforms",
+	"description": "Gaius Octavius, later known as Augustus created a series of laws between 30 BCE and 2 BCE that transformed the constitution of the Roman Republic into the Constitution of the Roman Empire.  One of which created a standing army of approximately 28 legions consisting of 5,000-6,000 professional soldiers.",
 	"cost": {
-		"food": 1000,
+		"food": 800,
 		"metal": 800
 	},
 	"researchTime": 60,
@@ -17,7 +17,7 @@
 	"modifications":[
 		{ "value": "Promotion/RequiredXp", "replace": 0 }
 	],
-	"affects": ["Structure", "Soldier !Auxiliary"],
-	"tooltip": "Convert Infantry to Marian Legionaries, and cavalry to Auxiliaries, and citizen spearmen to conscript infantry. Unlock Onagers and Centurions.",
+	"affects": ["Republic"],
+	"tooltip": "Convert Infantry to Swordsman and Javelineers into Marian Legionaries. Unlock Onagers and Centurions. Javelineers gain +1 hack and 0.5 pierce resistance. Swordsman +1 pierce attack and +0.5 hack resistance. They can no longer gather resources but build 25% faster. Cost +10 metal but -10 wood.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

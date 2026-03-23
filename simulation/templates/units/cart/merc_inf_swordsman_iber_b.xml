@@ -20,7 +20,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1.5</Hack>
+        <Crush op="add">2.5</Crush>
+        <Hack op="add">2</Hack>
         <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
@@ -32,9 +33,7 @@
     <SelectionGroupName>units/cart/merc_inf_iber_sword_b</SelectionGroupName>
     <Icon>units/cart/infantry_swordsman_2.png</Icon>
   </Identity>
-  <Promotion>
-    <Entity>units/cart/merc_inf_iber_sword_a</Entity>
-  </Promotion>
+ <Promotion disable=""/>
    <UnitMotion>
     <WalkSpeed op="mul">0.97</WalkSpeed>
   </UnitMotion>

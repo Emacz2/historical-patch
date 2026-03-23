@@ -2,9 +2,9 @@
 <Entity parent="template_structure_military_embassy">
  <Cost>
     <Resources>
-      <stone>50</stone>
+      <stone>100</stone>
       <metal>50</metal>
-      <wood>150</wood>
+      <wood>100</wood>
     </Resources>
   <BuildTime>120</BuildTime>
   </Cost>
@@ -18,40 +18,33 @@
       </ApplyStatus>
     </Entity>
   </Resistance>
-  <Footprint>
-    <Square width="16.0" depth="13.0"/>
-    <Height>11.0</Height>
-  </Footprint>
   <Health>
     <Max>1200</Max>
   </Health>
   <Identity>
     <Civ>cart</Civ>
-    <SpecificName>Celtic Embassy</SpecificName>
-    <Tooltip>Train Basic Celtic Mercenaries.</Tooltip>
+    <SpecificName>Iberian Embassy lvl 2</SpecificName>
+    <Tooltip>Train Advanced Iberian Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Village</VisibleClasses>
-    <Icon>structures/embassy_celtic.png</Icon>
-     <Requirements>
-      <Techs datatype="tokens">-phase_town phase_village</Techs>
-     </Requirements>
+    <Icon>structures/embassy_iberian.png</Icon>
   </Identity>
-    <Promotion>
-    <Entity>structures/cart/embassy_celtic_2</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <Loot>
-    <wood>40</wood>
+    <stone>20</stone>
+    <wood>20</wood>
+    <metal>10</metal>
   </Loot>
   <Obstruction>
-    <Static width="15.0" depth="12.0"/>
+    <Static width="16.0" depth="16.0"/>
   </Obstruction>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/merc_inf_swordsman_gaul_b
+      units/{civ}/merc_inf_javelineer_iber_a
+      units/{civ}/merc_inf_swordsman_iber_a
+      units/{civ}/merc_spearcav_iber_a
     </Entities>
   </Trainer>
   <VisualActor>
-    <Actor>structures/carthaginians/embassy_celtic.xml</Actor>
+    <Actor>structures/carthaginians/embassy_iberian.xml</Actor>
   </VisualActor>
 </Entity>

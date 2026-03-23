@@ -24,7 +24,6 @@
     <GenericName>Veteran Spearman</GenericName>
     <SpecificName>Triārius</SpecificName>
     <Icon>units/samn/spearman.png</Icon>
-    <VisibleClasses datatype="tokens">Rōmānī Republic</VisibleClasses>
   </Identity>
   <VisualActor>
     <Actor>units/carthaginians/infantry_spearman_c_samnite.xml</Actor>

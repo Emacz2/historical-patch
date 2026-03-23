@@ -5,11 +5,6 @@
     <SpecificName>Samnite Skirmisher</SpecificName>
     <Icon>units/samn/skirmisher.png</Icon>
   </Identity>
-  <Cost>
-    <Resources>
-      <metal op="add">25</metal>
-    </Resources>
-  </Cost>
   <Attack>
     <Ranged>
       <Projectile>
@@ -25,9 +20,6 @@
       </Damage>
     </Entity>
   </Resistance>
-  <Health>
-    <Max op="add">10</Max>
-  </Health>
   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/carthaginians/infantry_javelinist_c_samnite.xml</Actor>

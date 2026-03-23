@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="baleric_slinger|aux_inf|template_unit_infantry_ranged_slinger_lead">
+<Entity parent="baleric_slinger|aux_inf|template_unit_infantry_ranged_slinger">
   <Identity>
     <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
   <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
     <Upgrade>
-    <Stone>
-      <Entity>units/rome/aux_inf_slinger_stone</Entity>
+    <Lead>
+      <Entity>units/rome/aux_inf_slinger_lead</Entity>
       <Tooltip>Switch to stone throwing Balearic Slinger</Tooltip>
       <Cost>
-        <Stone>10</Stone>
+        <Metal>10</Metal>
       </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
-    </Stone>
+    </Lead>
   </Upgrade>
   <Promotion disable=""/>
   <VisualActor>
