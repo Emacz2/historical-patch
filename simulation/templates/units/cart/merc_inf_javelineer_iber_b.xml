@@ -2,10 +2,10 @@
 <Entity parent="merc_inf|template_unit_infantry_ranged_peltast">
 <Identity>
     <Civ>cart</Civ>
-    <GenericName>Iberian Mercenary Skirmisher</GenericName>
+    <GenericName>Iberian Mercenary Peltast</GenericName>
     <SpecificName>Sǝḫīr Kidōn</SpecificName>
     <SelectionGroupName>units/cart/infantry_javelineer_iber_b</SelectionGroupName>
-    <Icon>units/cart/infantry_javelinist.png</Icon>
+    <Icon>units/iber/infantry_javelinist.png</Icon>
   </Identity>
    <Attack>
     <Ranged>

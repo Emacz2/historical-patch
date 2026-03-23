@@ -6,10 +6,7 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-<Promotion>
-    <Entity>units/cart/merc_inf_slinger_market_e</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
+   <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_a.xml</Actor>
   </VisualActor>

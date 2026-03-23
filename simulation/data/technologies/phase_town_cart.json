@@ -34,7 +34,7 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Embassy" },
-		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure" }
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure !Two" }
 	],
 	"soundComplete": "interface/alarm/alarm_phase.xml"
 }

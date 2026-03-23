@@ -25,7 +25,7 @@
     <GenericName>Celtic Mercenary Swordsman</GenericName>
     <SpecificName>Seḫīr Ḥerev</SpecificName>
     <SelectionGroupName>units/cart/merc_sword_celt</SelectionGroupName>
-    <Icon>units/cart/infantry_swordsman.png</Icon>
+    <Icon>units/gaul/infantry_swordsman.png</Icon>
   </Identity>
  <Promotion disable=""/>
   <VisualActor>

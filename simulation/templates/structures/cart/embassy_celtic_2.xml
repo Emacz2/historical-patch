@@ -30,7 +30,7 @@
     <SpecificName>Celtic Embassy lvl 2</SpecificName>
     <Tooltip>Train Celtic Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">Village</VisibleClasses>
+     <VisibleClasses datatype="tokens">Village -Town Two</VisibleClasses>
     <Icon>structures/embassy_celtic.png</Icon>
   </Identity>
   <Loot>

@@ -31,7 +31,7 @@
     <GenericName>Iberian Heavy Swordsman</GenericName>
     <SpecificName>Seḫīr Romaḥ</SpecificName>
     <SelectionGroupName>units/cart/merc_inf_iber_sword_b</SelectionGroupName>
-    <Icon>units/cart/infantry_swordsman_2.png</Icon>
+    <Icon>units/cart/infantry_swordsman.png</Icon>
   </Identity>
  <Promotion disable=""/>
    <UnitMotion>

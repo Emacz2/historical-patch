@@ -6,7 +6,6 @@
       <metal>50</metal>
       <wood>150</wood>
     </Resources>
-  <BuildTime>120</BuildTime>
   </Cost>
    <Resistance>
     <Entity>
@@ -30,7 +29,7 @@
     <SpecificName>Celtic Embassy</SpecificName>
     <Tooltip>Train Basic Celtic Mercenaries.</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
-    <VisibleClasses datatype="tokens">Village</VisibleClasses>
+    <VisibleClasses datatype="tokens">Village -Town</VisibleClasses>
     <Icon>structures/embassy_celtic.png</Icon>
      <Requirements>
       <Techs datatype="tokens">-phase_town phase_village</Techs>
