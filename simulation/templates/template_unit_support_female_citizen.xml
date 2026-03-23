@@ -35,7 +35,7 @@
     <GenericName>Female Citizen</GenericName>
     <SelectionGroupName>template_unit_support_female_citizen</SelectionGroupName>
     <Classes datatype="tokens">FemaleCitizen</Classes>
-    <VisibleClasses datatype="tokens">Civilian Worker</VisibleClasses>
+    <VisibleClasses datatype="tokens">Civilian Citzen Worker</VisibleClasses>
   </Identity>
   <Loot>
     <xp>5</xp>

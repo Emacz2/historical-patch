@@ -45,7 +45,7 @@
     </Capacities>
   </ResourceGatherer>
   <Identity>
-    <VisibleClasses datatype="tokens">Levied</VisibleClasses>
+    <VisibleClasses datatype="tokens">Levied Civilian</VisibleClasses>
     <Tooltip>Levied Melee CS gather resrouces 5% faster, cost 10 less wood and -10% train time but 5% less dmg and -0.5 pierce/hack resistance</Tooltip>
   </Identity>
 </Entity>

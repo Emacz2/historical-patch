@@ -56,7 +56,7 @@
     </Capacities>
   </ResourceGatherer>
   <Identity>
-    <VisibleClasses datatype="tokens">Serf</VisibleClasses>
+    <VisibleClasses datatype="tokens">Serf Civilian</VisibleClasses>
     <Tooltip>Melee Serfs 15% less dmg, -2 Hack/Pierce resistance but 15% faster train time cost 10 less wood and gather resources 10% faster</Tooltip>
   </Identity>
 </Entity>

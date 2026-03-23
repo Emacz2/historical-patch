@@ -45,7 +45,7 @@
     <RunMultiplier op="mul">1.06</RunMultiplier>
   </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Civilian Worker</VisibleClasses>
+    <VisibleClasses datatype="tokens">Serf Civilian</VisibleClasses>
     <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 5% faster run than their soldier equivilent.</Tooltip>
   </Identity>
 </Entity>

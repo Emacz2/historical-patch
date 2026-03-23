@@ -44,7 +44,7 @@
     <RunMultiplier>1.45</RunMultiplier>
   </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Levied</VisibleClasses>
+    <VisibleClasses datatype="tokens">Levied Civilian</VisibleClasses>
     <Tooltip>Levied Ranged CS gather resrouces 5% faster, cost 10 less wood and -10% train time but 5% less dmg and -10% spread</Tooltip>
   </Identity>
 </Entity>

@@ -37,7 +37,7 @@
       male
     </Phenotype>
     <SelectionGroupName>template_unit_support_civilian</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Civilian Worker</VisibleClasses>
+    <VisibleClasses datatype="tokens">Civilian Citizen Worker</VisibleClasses>
   </Identity>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
