@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_economic_market_3">
+<Entity parent="template_structure_economic_market">
  <Identity>
     <Civ>cart</Civ>
     <GenericName>Market lvl 3</GenericName>
     <SpecificName>Šūq</SpecificName>
-    <VisibleClasses datatype="tokens">Village -Town</VisibleClasses>
+      <Requirements>
+      <Techs datatype="tokens">-phase_town -phase_city</Techs>
+    </Requirements>
   </Identity>
+     <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/merc_inf_slinger_market_b
+      -units/{civ}/merc_inf_slinger_market_a
+      units/{civ}/merc_inf_slinger_market_e
+    </Entities>
+  </Trainer>
   <VisualActor>
     <Actor>structures/carthaginians/market.xml</Actor>
   </VisualActor>

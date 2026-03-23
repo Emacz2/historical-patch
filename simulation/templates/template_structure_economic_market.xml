@@ -27,8 +27,11 @@
     <SelectionGroupName>template_structure_economic_market</SelectionGroupName>
     <Tooltip>Barter resources. Establish trade routes. Train Traders and research trade and barter technologies.</Tooltip>
     <Classes datatype="tokens">Barter</Classes>
-    <VisibleClasses datatype="tokens">Trade Village Market</VisibleClasses>
+    <VisibleClasses datatype="tokens">Trade Town Market</VisibleClasses>
     <Icon>structures/market.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
   <Loot>
     <wood>60</wood>
@@ -70,7 +73,6 @@
       units/{civ}/support_slave
       units/{civ}/support_trader
       units/{civ}/merc_inf_slinger_market_b
-      units/{civ}/merc_inf_slinger_stone_market
       units/{civ}/merc_swordsman_market_b
       units/{civ}/merc_archer_market_b
       units/{civ}/merc_maceman_market_b

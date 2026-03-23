@@ -3,7 +3,10 @@
  <Identity>
     <Civ>cart</Civ>
     <SpecificName>Šūq</SpecificName>
-    <VisibleClasses datatype="tokens">Village</VisibleClasses>
+    <VisibleClasses datatype="tokens">Village -Town</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">-phase_town phase_village</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>structures/cart/market_2</Entity>

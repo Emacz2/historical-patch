@@ -2,7 +2,6 @@
 <Entity parent="units/cart/merc_inf_slinger_market_b">
   <Identity>
     <Rank>Advanced</Rank>
-    <SelectionGroupName>units/cart/merc_inf_slinger_market_a</SelectionGroupName>
   </Identity>
  <Promotion disable=""/>
   <VisualActor>
