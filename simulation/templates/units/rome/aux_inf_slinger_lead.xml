@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="baleric_slinger|aux_inf|template_unit_infantry_ranged_slinger_lead">
   <Identity>
-    <SelectionGroupName>units/rome/infantry_slinger_iber_b</SelectionGroupName>
+    <SelectionGroupName>units/rome/aux_inf_slinger_lead</SelectionGroupName>
   <Icon>units/cart/infantry_slinger.png</Icon>
   </Identity>
     <Upgrade>

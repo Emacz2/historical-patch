@@ -20,7 +20,6 @@
     <Entities datatype="tokens">
       -units/{civ}/merc_inf_slinger_market_b
       units/{civ}/merc_inf_slinger_market_a
-      -units/{civ}/merc_inf_archer_market_b
       units/{civ}/merc_inf_archer_market_a
     </Entities>
   </Trainer>

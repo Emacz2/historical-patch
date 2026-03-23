@@ -19,5 +19,5 @@
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "Melee" }
 	
 	],
-	"affects": ["Advanced Unit !Champion !Mercenary", "Elite Unit !Mercenary !Champion"]
+	"affects": ["Advanced Unit !Auxiliary !Mercenary", "Elite Unit !Auxiliary !Mercenary !Champion"]
 }

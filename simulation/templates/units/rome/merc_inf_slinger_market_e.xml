@@ -18,7 +18,7 @@
       <Time>10</Time>
     </Lead>
   </Upgrade>
-   <Promotion disable=""/>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_e.xml</Actor>
   </VisualActor>

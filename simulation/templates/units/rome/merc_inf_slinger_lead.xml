@@ -15,10 +15,7 @@
       <Time>10</Time>
     </Stone>
   </Upgrade>
-   <Promotion>
-    <Entity>units/rome/aux_inf_slinger_lead</Entity>
-    <RequiredXp>4000</RequiredXp>
-  </Promotion>
+ <Promotion disable=""/>
   <VisualActor>
     <Actor>units/iberians/infantry_slinger_e.xml</Actor>
   </VisualActor>

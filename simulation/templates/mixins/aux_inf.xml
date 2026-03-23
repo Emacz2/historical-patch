@@ -35,7 +35,7 @@
   </Ranged>
   </Attack>
   <Identity>
-    <VisibleClasses datatype="tokens">Auxiliary</VisibleClasses>
+    <VisibleClasses datatype="tokens">Auxiliary -Mercenary</VisibleClasses>
     <Rank>Elite</Rank>
   </Identity>
   <ResourceGatherer disable=""/>

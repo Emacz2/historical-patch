@@ -21,6 +21,6 @@
 	
 		
 	],
-		"affects": ["Elite Unit !Mercenary !Champion"]
+		"affects": ["Elite Unit !Auxiliary !Mercenary !Champion"]
 }
 
