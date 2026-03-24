@@ -3,13 +3,11 @@
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Emporion</SpecificName> 
-      <Requirements>
-      <Techs datatype="tokens">-phase_town phase_city</Techs>
-    </Requirements>
   </Identity>
        <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
+      -units/{civ}/merc_inf_slinger_market_b
       units/{civ}/merc_inf_slinger_market_e
       units/{civ}/merc_inf_archer_market_e
     </Entities>

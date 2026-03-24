@@ -25,8 +25,8 @@
       </RangeOverlay>
       <Splash>
         <Shape>Linear</Shape>
-        <Range>9</Range>
-        <FriendlyFire>false</FriendlyFire>
+        <Range>6</Range>
+        <FriendlyFire>true</FriendlyFire>
         <Damage>
           <Pierce>80</Pierce>
         </Damage>

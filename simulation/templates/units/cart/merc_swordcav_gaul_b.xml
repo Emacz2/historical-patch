@@ -15,9 +15,6 @@
     <SpecificName>Ḥayyāl Ḥerev Raḫūv</SpecificName>
     <SelectionGroupName>units/cart/merc_swordcav_celt</SelectionGroupName>
     <Icon>units/gaul/cavalry_swordsman.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
  <Promotion disable=""/>
   <VisualActor>

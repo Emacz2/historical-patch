@@ -18,26 +18,25 @@
     </Capture>
      <Melee merge="">
 	<Damage>
-	  <Hack op="mul">1.08</Hack>
-    <Pierce op="mul">1.08</Pierce>
-    <Crush op="mul">1.08</Crush>
+	  <Hack op="mul">1.075</Hack>
+    <Pierce op="mul">1.075</Pierce>
+    <Crush op="mul">1.075</Crush>
   </Damage>
   </Melee>
   <Ranged merge="">
 	<Damage>
-	  <Hack op="mul">1.06</Hack>
-      <Pierce op="mul">1.06</Pierce>
-      <Crush op="mul">1.06</Crush>
+	  <Hack op="mul">1.05</Hack>
+      <Pierce op="mul">1.05</Pierce>
+      <Crush op="mul">1.05</Crush>
     </Damage>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
   </Ranged>
-  </Attack>
+</Attack>
   <Identity>
-    <VisibleClasses datatype="tokens">Allied -Mercenary</VisibleClasses>
+    <VisibleClasses datatype="tokens">Allied</VisibleClasses>
   </Identity>
   <ResourceGatherer disable=""/>
-  <Builder disable=""/>
 </Entity>
 
