@@ -8,8 +8,8 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "maur" },
-			{ "civ": "pers" }
+			{ "civ": "maur" }
+	
 		]
 	},
 	"requirementsTooltip": "Unlocked in Village Phase.",

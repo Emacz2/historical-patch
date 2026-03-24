@@ -3,9 +3,9 @@
  <Attack>
   <Melee>
 	<Damage>
-	  <Hack op="mul">0.95</Hack>
-    <Pierce op="mul">0.95</Pierce>
-    <Crush op="mul">0.95</Crush>
+	  <Hack op="mul">0.9</Hack>
+    <Pierce op="mul">0.9</Pierce>
+    <Crush op="mul">0.9</Crush>
   </Damage>
   </Melee>
 </Attack>
@@ -38,14 +38,17 @@
       <metal.ruins op="mul">1.05</metal.ruins>
     </Rates>
     <Capacities>
-      <food>10</food>
-      <wood>10</wood>
-      <stone>10</stone>
-      <metal>10</metal>
+      <food>15</food>
+      <wood>15</wood>
+      <stone>15</stone>
+      <metal>15</metal>
     </Capacities>
   </ResourceGatherer>
+  <Promotion>
+    <RequiredXp>150</RequiredXp>
+  </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Levied Civilian</VisibleClasses>
-    <Tooltip>Levied Melee CS gather resrouces 5% faster, cost 10 less wood and -10% train time but 5% less dmg and -0.5 pierce/hack resistance</Tooltip>
+    <VisibleClasses datatype="tokens">Conscript Civilian</VisibleClasses>
+    <Tooltip>Concript Melee gather resrouces 5% faster, hace a carrying capacity of 15 for each resoruce, cost 10 less wood and -10% train time but 10% less dmg and -0.5 pierce/hack resistance. They take 50% longer to promote, but lose their consript status when they achieve basic rang</Tooltip>
   </Identity>
 </Entity>

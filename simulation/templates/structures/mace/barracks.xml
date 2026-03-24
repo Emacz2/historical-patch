@@ -18,7 +18,7 @@
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
       -units/{civ}/infantry_pikeman_b
-       units/{civ}/infantry_pikeman_levy
+      units/{civ}/infantry_pikeman_concsript
     </Entities>
   </Trainer>
   <VisualActor>

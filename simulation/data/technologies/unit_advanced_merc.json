@@ -20,5 +20,5 @@
 		{ "value": "Atacck/Ranged/Damage/Crush", "multiply": 1.2 }
 	
 	],
-	"affects": ["Advanced Mercenary", "Elite Mercenary"]
+	"affects": ["Advanced Mercenary", "Advanced Allied", "Elite Mercenary", "Elite Allied"]
 }

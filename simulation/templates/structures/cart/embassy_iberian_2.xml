@@ -37,15 +37,10 @@
   <Obstruction>
     <Static width="16.0" depth="16.0"/>
   </Obstruction>
-  <Promotion>
-    <Entity>structures/cart/embassy_iberian_3</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/merc_inf_javelineer_iber_a
       units/{civ}/merc_inf_swordsman_iber_a
-      units/{civ}/merc_spearcav_iber_a
     </Entities>
   </Trainer>
   <VisualActor>

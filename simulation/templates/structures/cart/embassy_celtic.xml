@@ -48,6 +48,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/merc_inf_swordsman_gaul_b
+      units/{civ}/merc_swordcav_gaul_b
     </Entities>
   </Trainer>
   <VisualActor>
