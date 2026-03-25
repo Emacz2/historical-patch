@@ -22,6 +22,14 @@
       <metal>50</metal>
     </Resources>
   </Cost>
+    <Attack>
+    <Melee>
+      <Damage>
+        <Hack op="mul">0.85</Hack>
+        <Pierce op="mul">0.85</Pierce>
+      </Damage>
+    </Melee>
+  </Attack>
  <Resistance>
     <Entity>
       <Damage>
