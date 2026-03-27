@@ -2,7 +2,7 @@
 <Entity parent="units/numidian_cavalry">
   <Identity>
     <GenericName>Numidian Light Javelineer Cavalry</GenericName>
-    <Icon>units/cart/champion_cavalry.png</Icon>
+    <Icon>units/special/special_jav_cav.png</Icon>
   </Identity>
   <VisualActor>
     <Actor>units/carthaginians/champion_cavalry_numidian_c_m.xml</Actor>

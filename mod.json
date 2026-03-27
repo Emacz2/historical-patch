@@ -1,7 +1,6 @@
 {
 	"name": "classical-warfare-aea",
-	 "ignoreInCompatibilityChecks": false,
-	"version": "28.0.1",
+	"version": "28.0.2",
 	"label": "classical-warfare-aea",
 	"url": "https://github.com/Emacz2/classical-warefare-aea", 
 	"description": "A more indepth complex version of 0ad.",
