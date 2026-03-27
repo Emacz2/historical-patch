@@ -21,7 +21,7 @@
     <SelectionGroupName>units/cart/infantry_archer_b</SelectionGroupName>
     <GenericName>Liby-Phoenician stonethrower</GenericName>
     <SpecificName>Qešet</SpecificName>
-    <Icon>units/cart/infantry_archer.png</Icon>
+   <Icon>units/ptol/infantry_slinger.png</Icon>
   </Identity>
  <Promotion disable=""/>
   <VisualActor>
