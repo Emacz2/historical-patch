@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hunt_cav|template_unit_cavalry_melee_spearman_hunt">
+<Entity parent="template_unit_cavalry_melee_spearman">
   <Identity>
     <Civ>cart</Civ>
     <SelectionGroupName>units/cart/cavalry_spearman_b</SelectionGroupName>
-    <GenericName>Liby-Phoenician Mounted Spear Hunter</GenericName>
+    <GenericName>Liby-Phoenician Mounted Spearman</GenericName>
     <SpecificName>Ḥayyāl Raḫūv Masili</SpecificName>
     <Icon>units/rome/cavalry_spearman_auxiliary.png</Icon>
   </Identity>
