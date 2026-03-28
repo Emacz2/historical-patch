@@ -19,6 +19,11 @@
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
+   <Cost>
+    <Resources>
+      <wood>50</wood>
+    </Resources>
+  </Cost>
   <Identity>
     <GenericName>Shock Cavalry Spearman</GenericName>
     <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
