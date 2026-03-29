@@ -7,7 +7,7 @@
         <Pierce>22</Pierce>
       </Damage>
       <MaxRange>38</MaxRange>
-      <PrepareTime>600</PrepareTime>
+      <PrepareTime>1000</PrepareTime>
       <RepeatTime>3000</RepeatTime>
       <Projectile>
         <Speed>175</Speed>
@@ -35,7 +35,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.06</WalkSpeed>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
     <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
 </Entity>
