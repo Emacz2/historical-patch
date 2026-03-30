@@ -1,8 +1,8 @@
 {
-	"name": "classical-warfare-aea",
-	"version": "28.0.2",
-	"label": "classical-warfare-aea",
-	"url": "https://github.com/Emacz2/classical-warefare-aea", 
-	"description": "A more indepth complex version of 0ad.",
-	"dependencies": [ "0ad=0.28.0" ]
+    "name": "classical-warfare-aea",
+    "version": "2.2.2",
+    "label": "Classical Warfare AEA",
+    "url": "https://github.com/Emacz2/classical-warefare-aea",
+    "description": "A more indepth complex version of 0ad.",
+    "dependencies": [ "0ad=0.28.0" ]
 }
