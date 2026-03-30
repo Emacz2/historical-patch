@@ -17,6 +17,14 @@
       </ApplyStatus>
     </Ranged>
   </Attack>
+   <Cost>
+    <BuildTime>18</BuildTime>
+    <Resources>
+      <food>150</food>
+      <wood>100</wood>
+      <metal>50</metal>
+    </Resources>
+  </Cost>
   <Health>
     <Max>185</Max>
   </Health>

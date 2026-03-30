@@ -15,7 +15,7 @@
     </Requirements>
   </Identity>
   <Cost>
-    <BuildTime>20</BuildTime>
+    <BuildTime>18</BuildTime>
     <Resources>
       <food>150</food>
       <wood>100</wood>
