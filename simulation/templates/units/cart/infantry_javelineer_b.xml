@@ -14,7 +14,7 @@
     <SelectionGroupName>units/cart/infantry_javelineer_b</SelectionGroupName>
     <GenericName>Liby-Phoenicians Javelineer</GenericName>
     <SpecificName>Sǝḫīr Ḥanīt</SpecificName>
-    <Icon>units/cart/infantry_spearman.png</Icon>
+    <Icon>units/cart/inf_jav.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/cart/infantry_javelineer_a</Entity>

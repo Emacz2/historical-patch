@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/numidian_cavalry2|allied_cav">
+<Entity parent="units/numidian_cavalry">
   <Cost>
+    <BuildTime op="mul">0.9</BuildTime>
      <Resources>
-     <food>300</food>
-      <wood>50</wood>
-      <metal>100</metal>
+      <food>150</food>
+      <metal>30</metal>
+      <wood>20</wood>
+      <stone>0</stone>
     </Resources>
   </Cost>
   <Identity>
