@@ -13,23 +13,6 @@
     </variant>
   </group>
   <group>
-    <variant frequency="1" name="shield-numidian_round_1">
-      <props>
-        <prop actor="props/units/shields/numidian_round_1.xml" attachpoint="shield_arm"/>
-      </props>
-    </variant>
-    <variant frequency="1" name="shield-numidian_round_2">
-      <props>
-        <prop actor="props/units/shields/numidian_round_2.xml" attachpoint="shield_arm"/>
-      </props>
-    </variant>
-    <variant frequency="1" name="shield-numidian_round_3">
-      <props>
-        <prop actor="props/units/shields/numidian_round_3.xml" attachpoint="shield_arm"/>
-      </props>
-    </variant>
-  </group>
-  <group>
     <variant name="judea-tunic-1a">
       <textures>
         <texture file="skeletal/jude/tunic_01_01.png" name="baseTex"/>
