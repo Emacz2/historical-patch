@@ -4,6 +4,9 @@
     <VisibleClasses datatype="tokens">Cavalry</VisibleClasses>
     <GenericName>Champion Melee Cavalry</GenericName>
   </Identity>
+   <Cost>
+    <BuildTime>28</BuildTime>
+  </Cost>
    <Health>
     <Max>300</Max>
   </Health>

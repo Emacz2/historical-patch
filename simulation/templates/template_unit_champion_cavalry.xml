@@ -6,7 +6,6 @@
     </Capture>
   </Attack>
   <Cost>
-    <BuildTime>30</BuildTime>
     <Resources>
       <food>250</food>
       <wood>100</wood>

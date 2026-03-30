@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_cavalry">
-  <Auras datatype="tokens">
-    units/ram_garrison
-  </Auras>
   <Identity>
     <VisibleClasses datatype="tokens">Cavalry</VisibleClasses>
     <GenericName>Champion Ranged Cavalry</GenericName>
   </Identity>
+    <Cost>
+    <BuildTime>26</BuildTime>
+  </Cost>
    <Health>
     <Max>225</Max>
   </Health>

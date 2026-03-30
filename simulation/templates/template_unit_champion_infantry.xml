@@ -4,7 +4,7 @@
     units/ram_garrison
   </Auras>
   <Cost>
-    <BuildTime>24</BuildTime>
+    <BuildTime>20</BuildTime>
     <Resources>
       <food>150</food>
       <wood>50</wood>
