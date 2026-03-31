@@ -3,7 +3,6 @@
    <Resistance>
     <Entity>
       <Damage>
-       <Hack op="add">0.5</Hack>
        <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
@@ -11,7 +10,7 @@
   <Identity>
     <GenericName>Javelineer</GenericName>
     <VisibleClasses datatype="tokens">Javelineer Peltast</VisibleClasses>
-    <Tooltip>Named for the shield they carried, peltast + .5 Hack and +1 Pierce reistance but 2% slower walk speed</Tooltip>
+    <Tooltip>Named for the shield they carried, peltast +1 Pierce reistance</Tooltip>
   </Identity>
   <Sound>
     <SoundGroups>
@@ -19,7 +18,4 @@
       <attack_impact_ranged>attack/impact/javelin_impact.xml</attack_impact_ranged>
     </SoundGroups>
   </Sound>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.98</WalkSpeed>
-  </UnitMotion>
 </Entity>
