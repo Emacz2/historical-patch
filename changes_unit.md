@@ -16,3 +16,27 @@ acceleration +2.5
 
 
 
+Melee Calvary
+
+Train time reduced from 18 to 16 seconds
+
+Ranged Calvary
+
+Train time reduced from 16 to 15 seconds
+
+Champion Infantry
+
+Train time reduced from 24 to 20 seconds
+
+Champion Melee Calvary
+
+Train time reduced from 30 to 28
+
+Champion Ranged Calvary
+
+Train time reduced from 30 to 26
+
+Persian Imortals
+
+Train time reduced from 20 to 18
+

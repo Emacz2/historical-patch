@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="units/pers/infantry_spearman_a">
+  <Identity>
+    <Rank>Elite</Rank>
+  </Identity>
+  <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/persians/infantry_spearman_e.xml</Actor>
+  </VisualActor>
+  <Upgrade>
+    <Imortal>
+      <Entity>units/pers/champion_infantry</Entity>
+      <Cost>
+        <food>50</food>
+        <metal>50</metal>
+      </Cost>
+      <Variant>upgrading</Variant>
+      <Time>10</Time>
+    </Imortal>
+  </Upgrade>
+</Entity>

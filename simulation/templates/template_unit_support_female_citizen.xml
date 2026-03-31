@@ -45,7 +45,7 @@
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
       <food.fruit>1</food.fruit>
-      <food.grain>0.6</food.grain>
+      <food.grain>0.5</food.grain>
       <food.meat>2</food.meat>
       <wood.tree>0.6</wood.tree>
       <wood.ruins>5</wood.ruins>
@@ -81,9 +81,6 @@
       <trained>interface/alarm/alarm_create_female.xml</trained>
     </SoundGroups>
   </Sound>
-  <UnitMotion>
-    <WalkSpeed op="mul">0.98</WalkSpeed>
-  </UnitMotion>
   <UnitAI>
     <CanPatrol>false</CanPatrol>
     <Formations disable=""/>
