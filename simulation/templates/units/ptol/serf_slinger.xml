@@ -24,6 +24,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/athenians/serf_slinger.xml</Actor>
+    <Actor>units/ptolemies/ptole_serf_stone.xml</Actor>
   </VisualActor>
 </Entity>

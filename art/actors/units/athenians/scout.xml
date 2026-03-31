@@ -4,19 +4,35 @@
   <group>
     <variant frequency="1" name="Base">
       <mesh>skeletal/new/m_tunic_short.dae</mesh>
-      <props>
-        <prop actor="props/units/heads/new/head_hele_b.xml" attachpoint="head"/>
-         <prop actor="props/units/weapons/jav_loaded.xml" attachpoint="weapon_R"/>
+     <props>
+      <prop actor="props/units/heads/new/head_hele_b.xml" attachpoint="head"/>
       </props>
       <textures>
-        <texture file="skeletal/hele/tunic_01_01.png" name="baseTex"/>
+        <texture file="skeletal/imp/support_citizen_male_01.png" name="baseTex"/>
         <texture file="default_norm.png" name="normTex"/>
-        <texture file="null_black.dds" name="specTex"/>
+        <texture file="skeletal/imp/support_citizen_male_spec.png" name="specTex"/>
+      </textures>
+    </variant>
+  </group>
+    <group>
+    <variant frequency="1" name="tunic_fur_01_01">
+      <textures>
+       <texture file="skeletal/hele/tunic_01_01.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant frequency="1" name="tunic_fur_01_02">
+      <textures>
+        <texture file="skeletal/hele/tunic_fur_01_02.png" name="baseTex"/>
+      </textures>
+    </variant>
+    <variant frequency="1" name="tunic_fur_01_03">
+      <textures>
+        <texture file="skeletal/hele/tunic_fur_01_03.png" name="baseTex"/>
       </textures>
     </variant>
   </group>
   <group>
-    <variant file="biped/base_skirmisher_fast.xml" frequency="1" name="Skirmisher-Shield-Fast"/>
+    <variant file="biped/base_peasant_male.xml"/>
     <variant file="biped/carry_food.xml"/>
     <variant file="biped/carry_meat.xml"/>
     <variant file="biped/carry_wood.xml"/>
@@ -33,8 +49,8 @@
   </group>
   <group>
     <variant frequency="1" name="Idle"/>
-    <variant file="biped/attack_ranged_javelinist.xml"/>
     <variant file="biped/attack_capture.xml"/>
+    <variant file="biped/attack_melee_female.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
     <variant file="biped/gather_tree.xml"/>
     <variant file="biped/gather_grain.xml"/>

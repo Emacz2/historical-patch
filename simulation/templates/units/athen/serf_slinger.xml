@@ -14,6 +14,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/athenians/serf_slinger.xml</Actor>
+    <Actor>units/athenians/citizen_male.xml</Actor>
   </VisualActor>
 </Entity>
