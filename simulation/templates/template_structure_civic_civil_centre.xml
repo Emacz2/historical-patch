@@ -134,7 +134,7 @@
   </Sound>
   <TerritoryInfluence>
     <Root>true</Root>
-    <Radius>140</Radius>
+    <Radius>100</Radius>
     <Weight>10000</Weight>
   </TerritoryInfluence>
   <Trainer>

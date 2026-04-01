@@ -11,7 +11,7 @@
     <SelectionGroupName>units/mace/infantry_pikeman_b</SelectionGroupName>
     <GenericName>Foot Companion</GenericName>
     <SpecificName>Pezétairos</SpecificName>
-    <Icon>units/mace/infantry_pikeman.png</Icon>
+    <Icon>units/mace/conscript_pike.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/mace/infantry_pikeman_b</Entity>

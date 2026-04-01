@@ -36,6 +36,8 @@
 	"modifications": [
 		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.4, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "add": 10, "affects": "CivCentre" },
+		{ "value": "Population/Bonus", "add": 10, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "Structure" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "Structure" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "Structure" },

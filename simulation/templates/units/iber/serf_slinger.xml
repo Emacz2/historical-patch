@@ -19,7 +19,7 @@
     <SelectionGroupName>units/iber/infantry_slinger_b</SelectionGroupName>
     <GenericName>Iberian Serf Stone Thrower</GenericName>
     <SpecificName>Habailari</SpecificName>
-    <Icon>units/iber/infantry_slinger.png</Icon>
+    <Icon>units/iber/stone_serf.png</Icon>
   </Identity>
    <Promotion disable=""/>
   <VisualActor>
