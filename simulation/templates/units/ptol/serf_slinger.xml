@@ -20,7 +20,7 @@
     <SelectionGroupName>units/ptol/infantry_slinger_b</SelectionGroupName>
     <GenericName>Judean Serf Stone Thrower</GenericName>
     <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
-    <Icon>units/ptol/infantry_slinger.png</Icon>
+    <Icon>units/ptol/stone_serf.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
