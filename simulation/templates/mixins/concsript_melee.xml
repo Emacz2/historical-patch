@@ -48,7 +48,7 @@
     <RequiredXp>150</RequiredXp>
   </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Conscript Civilian</VisibleClasses>
+    <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
     <Tooltip>Concript Melee gather resrouces 5% faster, hace a carrying capacity of 15 for each resoruce, cost 10 less wood and -10% train time but 10% less dmg and -0.5 pierce/hack resistance. They take 50% longer to promote, but lose their consript status when they achieve basic rang</Tooltip>
   </Identity>
 </Entity>
