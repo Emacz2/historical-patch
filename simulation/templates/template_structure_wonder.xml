@@ -98,6 +98,7 @@
     <ResourceDropsite>
     <Types>food wood stone metal</Types>
     <Sharable>true</Sharable>
+    </ResourceDropsite>
   <Vision>
     <Range>75</Range>
   </Vision>
