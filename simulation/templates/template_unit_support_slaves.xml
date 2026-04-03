@@ -7,7 +7,7 @@
     <Melee>
       <AttackName>Dagger</AttackName>
       <Damage>
-        <Hack>1.5</Hack>
+        <Hack>1</Hack>
       </Damage>
       <MaxRange>2</MaxRange>
       <PrepareTime>500</PrepareTime>

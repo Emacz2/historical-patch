@@ -27,27 +27,30 @@
       <metal>0</metal>
     </Resources>
   </Cost>
-  <ResourceGatherer>
+ <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.05</food.fruit>
-      <food.grain op="mul">1.05</food.grain>
-      <food.meat op="mul">1.05</food.meat>
-      <wood.tree op="mul">1.05</wood.tree>
-      <wood.ruins op="mul">1.05</wood.ruins>
-      <stone.rock op="mul">1.05</stone.rock>
-      <stone.ruins op="mul">1.05</stone.ruins>
-      <metal.ore  op="mul">1.05</metal.ore>
-      <metal.ruins op="mul">1.05</metal.ruins>
+      <food.fruit op="mul">1.1</food.fruit>
+      <food.grain op="mul">1.1</food.grain>
+      <food.meat op="mul">1.1</food.meat>
+      <wood.tree op="mul">1.1</wood.tree>
+      <wood.ruins op="mul">1.1</wood.ruins>
+      <stone.rock op="mul">1.1</stone.rock>
+      <stone.ruins op="mul">1.1</stone.ruins>
+      <metal.ore  op="mul">1.1</metal.ore>
+      <metal.ruins op="mul">1.1</metal.ruins>
     </Rates>
     <Capacities>
-      <food>10</food>
-      <wood>10</wood>
-      <stone>10</stone>
-      <metal>10</metal>
+      <food>15</food>
+      <wood>15</wood>
+      <stone>15</stone>
+      <metal>15</metal>
     </Capacities>
   </ResourceGatherer>
+  <Promotion>
+    <RequiredXp>150</RequiredXp>
+  </Promotion>
   <Identity>
     <VisibleClasses datatype="tokens">Perioikoi</VisibleClasses>
     <Tooltip>Perioikoi were free, but not citizens of Sparta.  They were expected to harvest the resources, work the forges etc, but fight when called upon.</Tooltip>
