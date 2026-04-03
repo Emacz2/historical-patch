@@ -13,7 +13,6 @@
   </Builder>
   <Cost>
     <Resources>
-      <food>50</food>
       <stone>10</stone>
     </Resources>
   </Cost>
