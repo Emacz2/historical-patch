@@ -25,6 +25,13 @@
       <wood>50</wood>
     </Resources>
   </Cost>
+  <Resistance>
+    <Entity>
+      <Damage>
+       <Hack op="add">0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
   <Identity>
     <VisibleClasses datatype="tokens">Archer</VisibleClasses>
     <GenericName>Archer</GenericName>

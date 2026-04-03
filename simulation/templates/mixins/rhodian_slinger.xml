@@ -5,7 +5,7 @@
 </Cost>
   <Attack>
     <Ranged>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">3.0</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>
