@@ -67,7 +67,7 @@
     </Entity>
   </Resistance>
   <Identity>
-    <VisibleClasses datatype="tokens">Helot</VisibleClasses>
+    <VisibleClasses datatype="tokens">Helot -Citizen -Soldier</VisibleClasses>
     <Tooltip>Helots 50 health, -25% dmg, 25% less accurate -25% range and +250 repeat time but gather resources 25% faster. They don't count torwards population or recieve forge uprades</Tooltip>
   </Identity>
 </Entity>
