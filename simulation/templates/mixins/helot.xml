@@ -39,9 +39,6 @@
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
-    <ResourceGatherer>
-    <MaxDistance>2.0</MaxDistance>
-    <BaseSpeed>1.0</BaseSpeed>
     <Rates>
       <food.fruit>0.8</food.fruit>
       <food.grain>0.4</food.grain>
