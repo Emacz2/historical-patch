@@ -2,7 +2,7 @@
 <Entity>
  <Attack>
     <Capture>
-      <Capture>1</Capture>
+      <Capture>0</Capture>
       <MaxRange>1</MaxRange>
       <RepeatTime>5000</RepeatTime>
     </Capture>
@@ -18,6 +18,14 @@
       </Projectile>
   </Ranged>
 </Attack>
+ <Cost>
+    <Resources>
+      <food>40</food>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>50</Max>
+  </Health>
  <Resistance>
     <Entity>
       <Damage>

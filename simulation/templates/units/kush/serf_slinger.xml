@@ -9,10 +9,8 @@
       structures/kush/range
     </Entities>
   </Builder>
-    <Cost>
+  <Cost>
     <Resources>
-      <food>40</food>
-      <wood>10</wood>
       <stone>10</stone>
     </Resources>
   </Cost>
