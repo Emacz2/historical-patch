@@ -18,6 +18,21 @@
       </Projectile>
   </Ranged>
 </Attack>
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.0</Hack>
+        <Pierce>0.0</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Cost>
     <BuildTime op="mul">0.85</BuildTime>
   </Cost>
@@ -45,7 +60,7 @@
     <RunMultiplier op="mul">1.06</RunMultiplier>
   </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Serf Civilian</VisibleClasses>
-    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 5% faster run than their soldier equivilent.</Tooltip>
+    <VisibleClasses datatype="tokens">Serf Civilian -Soldier -Infantry</VisibleClasses>
+    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range and no resistances. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 6% faster run than their soldier equivilent.</Tooltip>
   </Identity>
 </Entity>
