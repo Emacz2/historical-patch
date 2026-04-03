@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_ranged">
+  <Cost>
+    <BuildTime>11</BuildTime>
+  </Cost>
   <Attack>
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>6</Crush>
+        <Crush>5.5</Crush>
         <Pierce>3</Pierce>
       </Damage>
       <MaxRange>50</MaxRange>
@@ -36,7 +39,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <WalkSpeed op="mul">1.08</WalkSpeed>
     <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
   <Vision>
