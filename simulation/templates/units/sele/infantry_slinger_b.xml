@@ -6,7 +6,7 @@
     <SelectionGroupName>units/sele/infantry_slinger_b</SelectionGroupName>
     <GenericName>Yavne Slinger</GenericName>
     <SpecificName>Sphendonḗtēs Yavne</SpecificName>
-    <Icon>units/mace/infantry_slinger.png</Icon>
+    <Icon>units/sele/inf_slinger.png</Icon>
     <Requirements>
       <Techs datatype="tokens">unlock_slingers</Techs>
     </Requirements>
