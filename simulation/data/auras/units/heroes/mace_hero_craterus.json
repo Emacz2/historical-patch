@@ -1,7 +1,7 @@
 {
 	"type": "range",
 	"radius": 60,
-	"affects": ["Infantry Pikeman"],
+	"affects": ["Infantry Polearm"],
 	"modifications": [
 		{ "value": "Attack/Capture/Capture", "multiply": 1.2 },
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.2 },
@@ -10,6 +10,6 @@
 	],
 	"auraName": "Taxiarchès",
 	"showDescription": 1,
-	"auraDescription": "Infantry Pikemen +20% capture attack strength, +20% melee attack damage.",
+	"auraDescription": "Infantry Polearm +20% capture attack strength, +20% melee attack damage.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }
