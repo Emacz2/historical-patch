@@ -37,7 +37,7 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Young Hoplite Spartan</GenericName>
-    <SpecificName>Spartiátēs</SpecificName>
+    <SpecificName>Paidiskoi</SpecificName>
     <Icon>units/spart/champion_infantry_spear.png</Icon>
   </Identity>
   <Promotion>
@@ -45,6 +45,6 @@
     <RequiredXp>600</RequiredXp>
   </Promotion>
   <VisualActor>
-    <Actor>units/spartans/infantry_spearman_c.xml</Actor>
+    <Actor>units/spartans/infantry_spearman_c_300</Actor>
   </VisualActor>
 </Entity>

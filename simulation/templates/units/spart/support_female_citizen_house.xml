@@ -4,6 +4,7 @@
     <BuildTime>24</BuildTime>
   </Cost>
   <Identity>
+    <Icon>units/spart/support_female_citizen.png</Icon>
     <Requirements>
       <Techs datatype="tokens">unlock_females_house</Techs>
     </Requirements>

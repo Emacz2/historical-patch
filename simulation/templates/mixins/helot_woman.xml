@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Entity>
+<Attack>
+    <Melee>
+      <AttackName>Dagger</AttackName>
+      <Damage>
+        <Hack op="mul">0.5</Hack>
+      </Damage>
+      <MaxRange>2</MaxRange>
+      <PrepareTime>500</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+    </Melee>
+    <Slaughter>
+      <AttackName>Slaughter</AttackName>
+      <Damage>
+        <Hack>1000</Hack>
+      </Damage>
+      <MaxRange>2</MaxRange>
+      <PrepareTime>900</PrepareTime>
+      <RepeatTime>1000</RepeatTime>
+      <RestrictedClasses datatype="tokens">!Domestic</RestrictedClasses>
+    </Slaughter>
+  </Attack>
+  <Cost>
+    <Population>0</Population>
+    <BuildTime>8</BuildTime>
+      <Resources>
+      <food>40</food>
+      <metal>0</metal>
+      <stone>0</stone>
+      <wood>0</wood>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>40</Max>
+  </Health>
+  <ResourceGatherer>
+    <MaxDistance>2.0</MaxDistance>
+    <BaseSpeed>1.0</BaseSpeed>
+    <Rates>
+      <food.fruit>1</food.fruit>
+      <food.grain>0.5</food.grain>
+      <food.meat>2</food.meat>
+      <wood.tree>0.6</wood.tree>
+      <wood.ruins>5</wood.ruins>
+      <stone.rock>0.3</stone.rock>
+      <stone.ruins>2</stone.ruins>
+      <metal.ore>0.3</metal.ore>
+      <metal.ruins>2</metal.ruins>
+    </Rates>
+    <Capacities>
+      <food>15</food>
+      <wood>15</wood>
+      <stone>15</stone>
+      <metal>15</metal>
+    </Capacities>
+  </ResourceGatherer>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0</Hack>
+        <Pierce>0</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Identity>
+    <VisibleClasses datatype="tokens">Helot -Support</VisibleClasses>
+    <Tooltip>Helot women 50% less dmg and -10 health, but metal/stone/wood gather rates .1 more than other women. They don't count torwards population or recieve forge uprades</Tooltip>
+  </Identity>
+</Entity>

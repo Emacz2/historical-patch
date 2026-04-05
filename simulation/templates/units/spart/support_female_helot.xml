@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_support_female_citizen">
+<Entity parent="helot_woman|template_unit_support_female_citizen">
   <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -13,9 +13,13 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <GenericName>Spartan Woman</GenericName>
+    <GenericName>Helot Woman</GenericName>
+    <SpecificName>Heílōs</SpecificName>
     <Icon>units/spart/support_female_citizen.png</Icon>
   </Identity>
+  <TrainingRestrictions>
+  <Category>Helot</Category>
+  </TrainingRestrictions>
   <UnitAI>
     <CanPatrol>true</CanPatrol>
   </UnitAI>
