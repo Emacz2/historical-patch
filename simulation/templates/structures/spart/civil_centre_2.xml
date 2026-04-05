@@ -21,6 +21,14 @@
       units/{civ}/scout
     </Entities>
   </Trainer>
+     <GarrisonHolder>
+    <Max>20</Max>
+    <EjectHealth>0.1</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
+    <List datatype="tokens">Support Infantry Helot</List>
+    <BuffHeal>1</BuffHeal>
+    <LoadingRange>1</LoadingRange>
+  </GarrisonHolder>
   <VisualActor>
     <Actor>structures/spartans/civic_center.xml</Actor>
   </VisualActor>
