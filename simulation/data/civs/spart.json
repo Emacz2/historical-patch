@@ -51,7 +51,7 @@
 			"Template": "units/spart/scout"
 		},
 		{
-			"Template": "units/spart/champion_infantry_spear"
+			"Template": "units/spart/champion_infantry_spear_b"
 		},
 
 		{	"Template": "units/spart/infantry_javelineer_b",

@@ -40,7 +40,7 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear
+      units/{civ}/champion_infantry_spear_b
     </Entities>
   </Trainer>
   <Researcher>
