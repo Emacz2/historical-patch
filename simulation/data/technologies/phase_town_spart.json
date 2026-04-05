@@ -32,13 +32,12 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects": "Champion Spearman" },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "Champion Spearman" },
 		{ "value": "Health/Max", "add": 25, "affects": "Champion Spearman"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "Champion" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "Champion" },
 		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Helot" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" }
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure" }
 		
 
 	],

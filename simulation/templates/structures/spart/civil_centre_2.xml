@@ -14,14 +14,10 @@
   </Researcher>
   <Trainer>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear_b
+      units/{civ}/champion_infantry_spear_a
       units/{civ}/scout
     </Entities>
   </Trainer>
-    <Promotion>
-    <Entity>structures/spart/civil_centre_2</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <VisualActor>
     <Actor>structures/spartans/civic_center.xml</Actor>
   </VisualActor>

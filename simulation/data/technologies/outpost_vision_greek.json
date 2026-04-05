@@ -1,5 +1,5 @@
 {
-	"genericName": "Carrier Pigeons",
+	"genericName": "Phryctoria",
 	"description": "Increases outpost vision.",
 	"cost": {
 		"food": 100,
@@ -9,13 +9,11 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "notciv": "athen" },
-			{ "notciv": "mace" },
-			{ "notciv": "ptol" },
-			{ "notciv": "sele" },
-			{ "notciv": "spart" }
-			
-			
+			{ "civ": "athen"},
+			{ "civ": "mace" },
+			{ "civ": "ptol" },
+			{ "civ": "sele" },
+			{ "civ": "spart" }
 		]
 	},
 	"icon": "pigeon.png",

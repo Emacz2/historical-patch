@@ -15,19 +15,10 @@
     <Icon>structures/syssition.png</Icon>
     <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
   </Identity>
-   <Upgrade>
-    <syssiton>
-      <Entity>structures/spart/syssiton_2</Entity>
-      <Tooltip>Upgrade to a bigger Mess Hall.</Tooltip>
-      <Cost>
-        <metal>50</metal>
-        <wood>100</wood>
-        <stone>100</stone>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>45</Time>
-    </syssiton>
-  </Upgrade>
+  <Promotion>
+    <Entity>structures/spart/syssiton_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Obstruction>
     <Static width="15.0" depth="25.0"/>
   </Obstruction>
@@ -50,7 +41,6 @@
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
       units/{civ}/champion_infantry_spear
-      units/{civ}/hero_leonidas
     </Entities>
   </Trainer>
   <Researcher>

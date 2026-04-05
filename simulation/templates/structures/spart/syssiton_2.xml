@@ -29,6 +29,9 @@
     <Max>15</Max>
     <List datatype="tokens">Champion Spearman</List>
   </GarrisonHolder>
+    <Population>
+    <Bonus>15</Bonus>
+  </Population>
   <TerritoryInfluence>
     <Root>false</Root>
     <Radius>50</Radius>
@@ -37,7 +40,7 @@
   <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear
+      units/{civ}/champion_infantry_spear_a
       units/{civ}/hero_leonidas
     </Entities>
   </Trainer>

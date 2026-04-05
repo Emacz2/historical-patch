@@ -1,18 +1,31 @@
 {
-	"genericName": "Carrier Pigeons",
+	"genericName": "Carrier Pigeons2",
 	"description": "Increases tower vision.",
 	"cost": {
 		"food": 200,
-		"wood": 100
+		"wood": 200
+	},
+"supersedes": "outpost_vision",
+"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "notciv": "athen" },
+			{ "notciv": "mace" },
+			{ "notciv": "ptol" },
+			{ "notciv": "sele" },
+			{ "notciv": "spart" }
+		]
 	},
 
-	"requirements": { "tech": "phase_village" },
+
+
 	"icon": "pigeon.png",
 	"researchTime": 40,
-	"tooltip": "towers +25% vision range.",
+	"tooltip": "towers and outposts +25% vision range.",
 	"modifications": [
 		{ "value": "Vision/Range", "multiply": 1.25 }
 	],
-	"affects": ["Tower"],
+	"affects": ["Outpost", "Tower"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
+

@@ -1,3 +1,9 @@
+**Women**
+
+Farming rate reduced to .5 same as civilians
+
+
+
 **Infantry Xbow**
 
 Dmg 22
@@ -35,8 +41,4 @@ Train time reduced from 30 to 28
 Champion Ranged Calvary
 
 Train time reduced from 30 to 26
-
-Persian Imortals
-
-Train time reduced from 20 to 18
 
