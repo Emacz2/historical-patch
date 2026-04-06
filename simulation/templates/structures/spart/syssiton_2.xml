@@ -13,7 +13,7 @@
     <GenericName>Grand Military Mess Hall</GenericName>
     <SpecificName>Syssition</SpecificName>
     <Icon>structures/syssition.png</Icon>
-    <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
+    <VisibleClasses datatype="tokens">Syssiton Special</VisibleClasses>
   </Identity>
   <Obstruction>
     <Static width="15.0" depth="25.0"/>

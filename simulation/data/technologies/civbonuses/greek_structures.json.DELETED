@@ -1,7 +1,7 @@
 {
-	"genericName": "Doric Order",
+	"genericName": "Hellenic Architecture",
 	"autoResearch": true,
-	"description": "The Doric order is one of the three classical orders of ancient Greek and later Roman architecture, alongside the Ionic and Corinthian orders. It is the earliest and simplest of the classical orders, characterized by its plain, sturdy columns and lack of elaborate decoration.",
+	"description": "The Greeks used stone construction from early Mycenaean times.",
 	"requirements": {
 		"any": [
 			{ "civ": "athen" },
