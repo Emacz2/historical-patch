@@ -17,8 +17,7 @@
   </Health>
   <Identity>
     <GenericName>Special Structure</GenericName>
-    <Category>Special</Category>
-    <VisibleClasses datatype="tokens">Town</VisibleClasses>
+    <VisibleClasses datatype="tokens">Town Special</VisibleClasses>
       <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

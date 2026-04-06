@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_structure">
- <Attack>
-    <Ranged>
-      <AttackName>Bow</AttackName>
-      <Damage>
-        <Pierce>2.25</Pierce>
-      </Damage>
-      <MaxRange>35</MaxRange>
-      <PrepareTime>400</PrepareTime>
-      <RepeatTime>2000</RepeatTime>
-      <Projectile>
-        <Speed>100</Speed>
-        <Spread>2</Spread>
-        <Gravity>50</Gravity>
-        <FriendlyFire>false</FriendlyFire>
-        <LaunchPoint y="0"/>
-      </Projectile>
-      <PreferredClasses datatype="tokens">Human</PreferredClasses>
-      <RangeOverlay>
-        <LineTexture>outline_border.png</LineTexture>
-        <LineTextureMask>outline_border_mask.png</LineTextureMask>
-        <LineThickness>0.175</LineThickness>
-      </RangeOverlay>
-    </Ranged>
-  </Attack>
   <BuildRestrictions>
-    <Territory>neutral</Territory>
+     <Territory>own neutral</Territory>
     <Category>PerioikoiCamp</Category>
     <Distance>
       <FromClass>PerioikoiCamp</FromClass>
@@ -34,14 +10,13 @@
   </BuildRestrictions>
   <Capturable>
     <CapturePoints op="mul">1.5</CapturePoints>
-    <RegenRate>7.5</RegenRate>
-    <GarrisonRegenRate>5.0</GarrisonRegenRate>
+    <RegenRate>8</RegenRate>
+    <GarrisonRegenRate>5.5</GarrisonRegenRate>
   </Capturable>
   <Cost>
     <BuildTime>150</BuildTime>
     <Resources>
       <wood>250</wood>
-      <stone>75</stone>
     </Resources>
   </Cost>
   <Footprint>
@@ -65,7 +40,7 @@
     <Bonus>5</Bonus>
   </Population>
   <Health>
-    <Max>1750</Max>
+    <Max>1500</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_rome_sb</SpawnEntityOnDeath>
   </Health>
   <Identity>
