@@ -32,7 +32,10 @@
     </Requirements>
   </Identity>
   <Loot>
-    <wood>15</wood>
+    <food>10</food>
+    <metal>5</metal>
+    <stone>5</tonel>
+    <wood>10</wood>
   </Loot>
   <Obstruction>
     <Static width="11.0" depth="11.0"/>

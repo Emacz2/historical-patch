@@ -65,7 +65,7 @@
         <Market>5</Market>
       </LandTrader>
       <Helot>
-        <Champion>2</Champion>
+        <Free>1</Free>
       </Helot>
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
@@ -159,6 +159,7 @@
     <UnitClasses datatype="tokens">
       Cavalry
       Champion
+      Free
       Citizen
       Civilian
       Domestic

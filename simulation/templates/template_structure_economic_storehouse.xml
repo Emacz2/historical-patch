@@ -31,8 +31,10 @@
       <Techs datatype="tokens">phase_village</Techs>
     </Requirements>
   </Identity>
-  <Loot>
-    <wood>20</wood>
+   <Loot>
+    <metal>25</metal>
+    <stone>25</tonel>
+    <wood>25</wood>
   </Loot>
   <Obstruction>
     <Static width="13.0" depth="13.0"/>

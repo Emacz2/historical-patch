@@ -6,8 +6,8 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <GenericName>Hoplite Spartan</GenericName>
-    <SpecificName>Spartiátēs</SpecificName>
+     <GenericName>Spartan Hoplite</GenericName>
+    <SpecificName>Hebontes</SpecificName>
     <Icon>units/spart/champion_infantry_spear.png</Icon>
   </Identity>
   <Promotion>

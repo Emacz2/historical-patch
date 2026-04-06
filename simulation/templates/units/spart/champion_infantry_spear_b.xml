@@ -38,6 +38,7 @@
     <Lang>greek</Lang>
     <GenericName>Young Hoplite Spartan</GenericName>
     <SpecificName>Paidiskoi</SpecificName>
+    <VisibleClasses datatype="tokens">Free</VisibleClasses>
     <Icon>units/spart/champion_infantry_spear.png</Icon>
   </Identity>
   <Promotion>

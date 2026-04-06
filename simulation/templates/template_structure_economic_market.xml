@@ -33,8 +33,11 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <Loot>
-    <wood>60</wood>
+ <Loot>
+    <food>50</food>
+    <metal>75</metal>
+    <stone>75</tonel>
+    <wood>75</wood>
   </Loot>
   <Market>
     <TradeType>land</TradeType>
