@@ -45,6 +45,6 @@
     <RequiredXp>600</RequiredXp>
   </Promotion>
   <VisualActor>
-    <Actor>units/spartans/infantry_spearman_c_300</Actor>
+    <Actor>units/spartans/champion_infantry_spear_b</Actor>
   </VisualActor>
 </Entity>

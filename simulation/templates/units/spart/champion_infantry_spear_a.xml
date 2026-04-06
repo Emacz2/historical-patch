@@ -15,6 +15,6 @@
     <RequiredXp>300</RequiredXp>
   </Promotion>
   <VisualActor>
-    <Actor>units/spartans/infantry_spearman_c.xml</Actor>
+    <Actor>units/spartans/champion_infantry_spear_a.xml</Actor>
   </VisualActor>
 </Entity>

@@ -24,6 +24,6 @@
     <CanPatrol>true</CanPatrol>
   </UnitAI>
   <VisualActor>
-    <Actor>units/spartans/female_citizen.xml</Actor>
+    <Actor>units/spartans/helot_female.xml</Actor>
   </VisualActor>
 </Entity>
