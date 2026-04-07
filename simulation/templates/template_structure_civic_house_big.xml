@@ -19,7 +19,7 @@
  <Loot>
     <food>20</food>
     <metal>10</metal>
-    <stone>10</tonel>
+    <stone>10</stone>
     <wood>20</wood>
   </Loot>
   <Obstruction>
