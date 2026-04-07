@@ -14,14 +14,17 @@
 	},
 	"icon": "sickle_2.png",
 	"researchTime": 40,
-	"tooltip": "Helots +50% grain gather rate but take 15% longer train time, and champions take 10% longer.",
+	"tooltip": "Helots +50% resource gather rate, but Infantry take 10% longer.",
 	"modifications": [
-		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.5, "affects": "Helot" },
-		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.5, "affects": "Helot" },
-		{ "value": "ResourceGatherer/Rates/wood.tree", "multiply": 1.5, "affects": "Helot" },
-		{ "value": "ResourceGatherer/Rates/stone.rock", "multiply": 1.5, "affects": "Helot" },
-		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Helot" },
-		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion" }
+		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.5, "affects": "HelotM" },
+		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.5, "affects": "HelotM" },
+		{ "value": "ResourceGatherer/Rates/wood.tree", "multiply": 1.5, "affects": "HelotM" },
+		{ "value": "ResourceGatherer/Rates/stone.rock", "multiply": 1.5, "affects": "HelotM" },
+		{ "value": "ResourceGatherer/Rates/food.grain", "multiply": 1.5, "affects": "HelotW" },
+		{ "value": "ResourceGatherer/Rates/metal.ore", "multiply": 1.5, "affects": "HelotW" },
+		{ "value": "ResourceGatherer/Rates/wood.tree", "multiply": 1.5, "affects": "HelotW" },
+		{ "value": "ResourceGatherer/Rates/stone.rock", "multiply": 1.5, "affects": "HelotW" },
+		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Infantry" }
 	],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }
