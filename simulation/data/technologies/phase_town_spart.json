@@ -32,8 +32,9 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "Champion" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "Infantry" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "Infantry" },
+		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Helot" },
 		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
 		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure" }

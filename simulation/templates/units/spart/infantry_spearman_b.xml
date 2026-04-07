@@ -14,13 +14,12 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/infantry_spearman_b</SelectionGroupName>
-    <GenericName>Hoplite</GenericName>
+    <GenericName>Hoplite Perioikoi</GenericName>
     <SpecificName>Hoplítēs Períoikos</SpecificName>
     <Icon>units/spart/infantry_spearman.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/spart/infantry_spearman_a</Entity>
-    <RequiredXp>300</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_b.xml</Actor>

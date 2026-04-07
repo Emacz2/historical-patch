@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="hoplite|template_unit_champion_infantry_spearman ">
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <SelectionGroupName>units/spart/champ_perioikoi</SelectionGroupName>
+    <GenericName>Hoplite Perioikoi Spartiate</GenericName>
+    <SpecificName>Hoplítēs Períoikos</SpecificName>
+    <Icon>units/spart/infantry_spearman.png</Icon>
+  </Identity>
+  <Promotion disable=""/>
+  <TrainingRestrictions>
+    <Category>Champion_Perioikoi</Category>
+  </TrainingRestrictions>
+  <VisualActor>
+    <Actor>units/spartans/champ_perioikoi.xml</Actor>
+  </VisualActor>
+</Entity>

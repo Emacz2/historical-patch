@@ -20,6 +20,7 @@
   <EntityLimits>
     <Limits>
       <Animal>50</Animal>
+      <Champion_Perioikoi>10</Champion_Perioikoi>
       <CivilCentre>1</CivilCentre>
       <ConsularBodyguard>24</ConsularBodyguard>
       <Doulos>5</Doulos>
