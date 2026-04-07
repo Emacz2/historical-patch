@@ -91,6 +91,7 @@
       units/{civ}/helot_javelineer
       units/{civ}/infantry_spearman_b
       units/{civ}/champion_infantry_swordsman
+      units/{civ}/neodamodes_spearman
     </Entities>
   </Trainer>
   <Vision>
