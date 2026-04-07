@@ -27,7 +27,7 @@
   <Category>HelotM</Category>
   </TrainingRestrictions>
   <Promotion>
-    <Entity>units/spart/neodamodes_javelineer</Entity>
+    <Entity>units/spart/neodamodes_spearman</Entity>
     <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>

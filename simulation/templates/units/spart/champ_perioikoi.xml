@@ -6,7 +6,7 @@
     <SelectionGroupName>units/spart/champ_perioikoi</SelectionGroupName>
     <GenericName>Hoplite Perioikoi Spartiate</GenericName>
     <SpecificName>Hoplítēs Períoikos</SpecificName>
-    <Icon>units/spart/infantry_spearman.png</Icon>
+    <Icon>units/spart/champ_p.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <TrainingRestrictions>
