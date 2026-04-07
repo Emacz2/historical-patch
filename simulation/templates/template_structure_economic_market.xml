@@ -36,7 +36,7 @@
  <Loot>
     <food>50</food>
     <metal>75</metal>
-    <stone>75</tonel>
+    <stone>75</stone>
     <wood>75</wood>
   </Loot>
   <Market>
