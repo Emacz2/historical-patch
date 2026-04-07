@@ -1,8 +1,10 @@
 {
-	"genericName": "Unlock Neodamodes",
+	"genericName": "Helot Emancipation",
 	"description": "In ancient Sparta, the Helots who were freed by the state in reward for military service were known as Neodamodes.",
 	"cost": {
-		"food": 100
+		"food": 200,
+		"wood": 100,
+		"metal": 50
 	},
 	"requirements": {
 		"all": [
