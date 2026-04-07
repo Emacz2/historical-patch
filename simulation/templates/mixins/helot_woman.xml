@@ -65,7 +65,7 @@
     </Entity>
   </Resistance>
   <Identity>
-    <VisibleClasses datatype="tokens">Helot -Support</VisibleClasses>
+    <VisibleClasses datatype="tokens">HelotW -Support</VisibleClasses>
     <Tooltip>Helot women 50% less dmg and -10 health, but metal/stone/wood gather rates .1 more than other women. They don't count torwards population or recieve forge uprades</Tooltip>
   </Identity>
 </Entity>

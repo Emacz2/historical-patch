@@ -24,7 +24,7 @@
     <Icon>units/spart/helot_jav.png</Icon>
   </Identity>
   <TrainingRestrictions>
-  <Category>Helot</Category>
+  <Category>HelotM</Category>
   </TrainingRestrictions>
   <Promotion>
     <Entity>units/spart/neodamodes_javelineer</Entity>
