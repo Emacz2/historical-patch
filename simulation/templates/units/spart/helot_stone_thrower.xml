@@ -24,10 +24,10 @@
     <Icon>units/spart/helot_stone.png</Icon>
   </Identity>
   <TrainingRestrictions>
-  <Category>Helot</Category>
+  <Category>HelotM</Category>
   </TrainingRestrictions>
-   <Promotion>
-    <Entity>units/spart/neodamodes_archer</Entity>
+     <Promotion>
+    <Entity>units/spart/neodamodes_spearman</Entity>
     <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>
