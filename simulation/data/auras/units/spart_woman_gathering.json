@@ -1,0 +1,12 @@
+{
+	"type": "range",
+	"radius": 20,
+	"affects": ["HelotW", "HelotM"],
+	"modifications": [
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.01 }
+	],
+	"auraName": "Minister over the Masses",
+	"auraDescription": "Gatherers +1% gathering rate.",
+	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
+	"stackable": true
+}

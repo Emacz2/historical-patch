@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support_female_citizen">
-  <Builder>
-    <Entities datatype="tokens">
-      structures/spart/gerousia
-      structures/spart/syssiton
-      structures/spart/camp
-      -structures/wallset_palisade
-      -structures/{civ}/wallset_stone
-      -structures/{civ}/barracks
-    </Entities>
-  </Builder>
+ <Auras datatype="tokens">
+    units/spart_woman_gathering
+    units/spart_woman_building
+  </Auras>
+  <Builder disable=""/>
+  <ResourceGatherer disable=""/>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Spartan Woman</GenericName>
-    <Icon>units/spart/support_female_citizen.png</Icon>
+    <Icon>units/spart/spart_woman.png</Icon>
   </Identity>
   <UnitAI>
     <CanPatrol>true</CanPatrol>
   </UnitAI>
+  <TrainingRestrictions>
+  <Category>SpartW</Category>
+  </TrainingRestrictions>
   <VisualActor>
-    <Actor>units/spartans/female_citizen.xml</Actor>
+    <Actor>units/spartans/citizen_female.xml</Actor>
   </VisualActor>
 </Entity>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_support">
   <Auras datatype="tokens">
-    units/spart_ephor_techs
     units/spart_ephor_train
     units/spart_ephor_structure
     units/spart_ephor_trickle
