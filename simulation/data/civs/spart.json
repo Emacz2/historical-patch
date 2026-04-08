@@ -37,7 +37,7 @@
 		},
 		{
 			"Template": "units/spart/support_female_helot",
-			"Count": 4
+			"Count": 3
 		},
 		{
 			"Template": "units/spart/infantry_spearman_b",
@@ -52,6 +52,9 @@
 		},
 		{
 			"Template": "units/spart/champion_infantry_spear_b"
+		},
+		{
+			"Template": "units/spart/support_female_citizen"
 		}
 
 		
