@@ -1,0 +1,12 @@
+{
+
+	"type": "garrison",
+	"affects": ["CivCentre"],
+	"modifications": [
+		{ "value": "ResourceTrickle/Rates/metal", "add": 0.5 }
+	],
+	"auraName": "Nationalized Industries",
+	"showDescription": 1,
+	"auraDescription": "Gain small trickle a +0.1/1 second of metal when Ephor garrisoned in Civic Center.",
+	"stackable": true
+}

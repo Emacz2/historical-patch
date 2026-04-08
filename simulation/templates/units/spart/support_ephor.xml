@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_unit_support">
+  <Auras datatype="tokens">
+    units/spart_ephor_techs
+    units/spart_ephor_train
+    units/spart_ephor_structure
+    units/spart_ephor_trickle
+  </Auras>
+  <Attack>
+    <Capture>
+      <AttackName>Capture</AttackName>
+      <Capture>5</Capture>
+      <MaxRange>4</MaxRange>
+      <RepeatTime>1000</RepeatTime>
+      <RestrictedClasses datatype="tokens">Field Palisade Wall</RestrictedClasses>
+    </Capture>
+    </Attack>
+  <Cost>
+    <Population>0</Population>
+    <BuildTime>60</BuildTime>
+    <Resources>
+      <food>150</food>
+      <metal>100</metal>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>300</Max>
+  </Health>
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <GenericName>Magistrate</GenericName>
+    <SpecificName>Ephor</SpecificName>
+    <Tooltip>Only Spartan buildings can garrison Ephors.</Tooltip>
+    <Classes datatype="tokens">Organic Human</Classes>
+    <VisibleClasses datatype="tokens">Ephor</VisibleClasses>
+    <Icon>units/spart/ephor.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+  <Loot>
+    <xp>100</xp>
+    <food>10</food>
+    <metal>10</metal>
+  </Loot>
+  <Minimap>
+    <Type>hero</Type>
+  </Minimap>
+  <Position>
+    <TurnRate>8</TurnRate>
+  </Position>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>4.5</Hack>
+        <Pierce>4.5</Pierce>
+        <Crush>10</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <Selectable>
+    <Overlay>
+      <AlwaysVisible/>
+      <Shape>
+        <Circle radius="2.5"/>
+      </Shape>
+      <Texture>
+        <MainTexture>128x128/octagram.png</MainTexture>
+        <MainTextureMask>128x128/octagram_mask.png</MainTextureMask>
+      </Texture>
+    </Overlay>
+  </Selectable>
+  <TrainingRestrictions>
+    <Category>Ephor</Category>
+    <MatchLimit>5</MatchLimit>
+  </TrainingRestrictions>
+  <Vision>
+    <Range>40</Range>
+  </Vision>
+  <VisualActor>
+    <Actor>units/spartans/ephor.xml</Actor>
+  </VisualActor>
+</Entity>

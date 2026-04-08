@@ -1,0 +1,15 @@
+{
+	"type": "global",
+	"affects": ["Infantry"],
+	"modifications": [
+	
+		{
+			"value": "Cost/BuildTime",
+			"multiply": 0.97
+		}
+	],
+	"auraName": "Shortened Training Regimen",
+	"showDescription": 1,
+	"auraDescription": "Infantry -3%% train time for each Ephor.",
+	"stackable": true
+}
