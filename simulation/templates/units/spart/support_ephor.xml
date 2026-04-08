@@ -16,11 +16,11 @@
     </Capture>
     </Attack>
   <Cost>
-    <Population>0</Population>
-    <BuildTime>60</BuildTime>
+    <Population>1</Population>
+    <BuildTime>45</BuildTime>
     <Resources>
-      <food>150</food>
-      <metal>100</metal>
+      <food>200</food>
+      <metal>50</metal>
     </Resources>
   </Cost>
   <Health>
