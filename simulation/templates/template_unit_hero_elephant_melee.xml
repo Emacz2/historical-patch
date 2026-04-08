@@ -36,6 +36,9 @@
   <Health>
     <Max>1500</Max>
   </Health>
+    <Loot>
+    <xp>500</xp>
+  </Loot>
   <Identity>
     <GenericName>Hero Elephant</GenericName>
     <VisibleClasses datatype="tokens">Elephant Melee</VisibleClasses>

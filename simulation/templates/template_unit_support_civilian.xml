@@ -60,6 +60,11 @@
       <metal>15</metal>
     </Capacities>
   </ResourceGatherer>
+   <Loot>
+    <xp>15</xp>
+    <food>5</food>
+    <wood>5</wood>
+  </Loot>
   <Sound>
     <SoundGroups>
       <trained>interface/alarm/alarm_create_infantry.xml</trained>

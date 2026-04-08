@@ -25,7 +25,7 @@
     <Max>20</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support Infantry Helot</List>
+    <List datatype="tokens">Support Infantry HelotW</List>
     <BuffHeal>1</BuffHeal>
     <LoadingRange>1</LoadingRange>
   </GarrisonHolder>

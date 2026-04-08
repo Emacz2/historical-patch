@@ -10,6 +10,11 @@
    <Health>
     <Max>225</Max>
   </Health>
+    <Loot>
+    <xp>80</xp>
+    <metal>5</metal>
+    <wood>10</wood>
+  </Loot>
   <Position>
     <Anchor>upright</Anchor>
   </Position>

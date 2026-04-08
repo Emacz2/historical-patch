@@ -10,6 +10,9 @@
    <Health>
     <Max>900</Max>
   </Health>
+    <Loot>
+    <xp>300</xp>
+  </Loot>
   <Position>
     <Anchor>upright</Anchor>
   </Position>

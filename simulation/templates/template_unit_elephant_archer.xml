@@ -30,6 +30,11 @@
   <Health>
     <Max>200</Max>
   </Health>
+      <Loot>
+    <xp>65</xp>
+    <metal>5</metal>
+    <wood>10</wood>
+  </Loot>
   <Identity>
     <GenericName>Elephant Archer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>
