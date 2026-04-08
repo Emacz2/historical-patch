@@ -15,7 +15,7 @@
     <WalkSpeed op="mul">1.05</WalkSpeed>
   </UnitMotion>
    <TrainingRestrictions>
-  <Category>PerioikoiR</Category>
+  <Category>PerioikoiRange</Category>
   </TrainingRestrictions>
   <VisualActor>
     <Actor>units/spartans/infantry_javelinist_e.xml</Actor>
