@@ -92,6 +92,7 @@
       units/{civ}/infantry_spearman_b
       units/{civ}/champion_infantry_swordsman
       units/{civ}/neodamodes_spearman
+      units/{civ}/perioikoi_range
     </Entities>
   </Trainer>
   <Vision>

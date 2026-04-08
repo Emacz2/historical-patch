@@ -3,14 +3,6 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-    <Upgrade>
-    <Perioikoi_Range>
-      <Entity>units/spart/perioikoi_range</Entity>
-      <Tooltip>Upgrade to Elite Javelineer, limited to 15 at one time.</Tooltip>
-      <Variant>upgrading</Variant>
-      <Time>12</Time>
-    </Perioikoi_Range>
-  </Upgrade>
   <Promotion>
     <Entity>units/spart/infantry_spearman_e</Entity>
     <RequiredXp>200</RequiredXp>

@@ -6,6 +6,9 @@
     <GenericName>Perioikoi Skirmisher</GenericName>
     <SpecificName>Akontistḗs Períoikos</SpecificName>
     <Icon>units/spart/infantry_javelinist.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
   </Identity>
   <Promotion disable=""/>
   <UnitMotion>
