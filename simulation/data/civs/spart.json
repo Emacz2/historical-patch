@@ -52,11 +52,8 @@
 		},
 		{
 			"Template": "units/spart/champion_infantry_spear_b"
-		},
-		{
-			"Template": "units/spart/support_female_citizen"
 		}
-
+	
 		
 	],
 	"AINames": [
