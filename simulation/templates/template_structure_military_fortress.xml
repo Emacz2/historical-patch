@@ -7,7 +7,7 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>2</Pierce>
+        <Pierce>1.7</Pierce>
       </Damage>
       <MaxRange>70</MaxRange>
       <MinRange>10</MinRange>
@@ -60,11 +60,11 @@
     <RegenRate>10.0</RegenRate>
   </Capturable>
   <Cost>
-    <BuildTime>600</BuildTime>
+    <BuildTime>510</BuildTime>
     <Resources>
       <metal>150</metal>
       <wood>400</wood>
-      <stone>700</stone>
+      <stone>600</stone>
     </Resources>
   </Cost>
   <Footprint>
@@ -82,7 +82,7 @@
     <Bonus>25</Bonus>
     </Population>
   <Health>
-    <Max>5500</Max>
+    <Max>4000</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_6x6</SpawnEntityOnDeath>
   </Health>
   <Identity>
@@ -107,15 +107,15 @@
   <Trainer>
     <BatchTimeModifier>0.8</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/infantry_spearman_e
-      units/{civ}/infantry_pikeman_e
-      units/{civ}/infantry_maceman_e
-      units/{civ}/infantry_crossbowman_e
-      units/{civ}/infantry_axeman_e
-      units/{civ}/infantry_swordsman_e
-      units/{civ}/infantry_javelineer_e
-      units/{civ}/infantry_slinger_e
-      units/{civ}/infantry_archer_e
+      units/{civ}/infantry_spearman_a
+      units/{civ}/infantry_pikeman_a
+      units/{civ}/infantry_maceman_a
+      units/{civ}/infantry_crossbowman_a
+      units/{civ}/infantry_axeman_a
+      units/{civ}/infantry_swordsman_a
+      units/{civ}/infantry_javelineer_a
+      units/{civ}/infantry_slinger_a
+      units/{civ}/infantry_archer_a
       units/{civ}/champion_infantry_spearman
       units/{civ}/champion_infantry_pikeman
       units/{civ}/champion_infantry_maceman
