@@ -44,6 +44,7 @@
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "Infantry" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "Infantry" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion" },
 		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "HelotM" },
 		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "HelotM" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !HelotM"},
