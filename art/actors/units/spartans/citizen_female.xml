@@ -82,7 +82,7 @@
     <!-- In this group, define overloads for other animation types, since they presumably do not collide with each other -->
     <variant frequency="1" name="Idle"/>
     <variant file="biped/attack_capture.xml"/>
-    <variant file="biped/attack_melee_female.xml"/>
+    <variant file="biped/attack_ranged_javelinist.xml"/>
     <variant file="biped/attack_slaughter.xml"/>
     <variant file="biped/female_death.xml"/>
     <variant file="biped/female_gather_tree.xml"/>

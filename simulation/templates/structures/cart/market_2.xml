@@ -4,7 +4,7 @@
     <Civ>cart</Civ>
     <GenericName>Market lvl 2</GenericName>
     <SpecificName>Šūq</SpecificName>
-     <VisibleClasses datatype="tokens">Village -Town Two</VisibleClasses>
+    <VisibleClasses datatype="tokens">Village -Town Two</VisibleClasses>
   </Identity>
    <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>

@@ -15,14 +15,14 @@
         "all": [
             {
                 "entity": {
-                    "class": "Town",
-                    "number": 3
+                    "class": "City",
+                    "number": 2
                 }
             },
             {
                 "entity": {
-                    "class": "City",
-                    "number": 2
+                    "class": "Reform",
+                    "number": 1
                 }
             }
         ]
