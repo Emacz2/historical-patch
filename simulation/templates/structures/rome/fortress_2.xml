@@ -11,7 +11,6 @@
   </Identity>
   <Trainer>
     <Entities datatype="tokens">
-      -units/{civ}/infantry_spearman_e
       units/{civ}/hero_marcellus
       units/{civ}/hero_maximus
       units/{civ}/hero_scipio

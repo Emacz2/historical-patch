@@ -16,14 +16,6 @@
       <metal>0</metal>
     </Resources>
   </Cost>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">0.5</Hack>
-        <Pierce op="add">0.5</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
  <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
@@ -50,6 +42,6 @@
   </Promotion>
   <Identity>
     <VisibleClasses datatype="tokens">Perioikoi Free</VisibleClasses>
-    <Tooltip>Perioikoi were free non citizen that were an important backbone in Sparta's military.  They do 5% more dmg, have 0.5 more pierce and hack resistances, but 10% longer train time and -10% gather speed compared to other spearman</Tooltip>
+    <Tooltip>Perioikoi were free non citizen that were an important backbone in Sparta's military.  They do 5% more dmg, have +0.5H, +1 pierce resistances, but 10% longer train time and -10% gather speed compared to other spearman</Tooltip>
   </Identity>
 </Entity>
