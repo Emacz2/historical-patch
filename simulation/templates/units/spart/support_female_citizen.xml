@@ -10,7 +10,8 @@
     <Civ>spart</Civ>
     <Lang>greek</Lang>
     <GenericName>Spartan Woman</GenericName>
-    <Icon>units/spart/spart_woman.png</Icon>
+    <SelectionGroupName>units/spart/support_female_citizen</SelectionGroupName>
+    <Icon>units/spart/female_citizen.png</Icon>
   </Identity>
   <UnitAI>
     <CanPatrol>true</CanPatrol>

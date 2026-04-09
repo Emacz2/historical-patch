@@ -4,6 +4,9 @@
   <group>
     <variant>
       <mesh>skeletal/new/f_tunic_short.dae</mesh>
+       <props>
+         <prop actor="props/units/weapons/jav_loaded.xml" attachpoint="weapon_R"/>
+      </props>
       <textures>
         <texture file="default_norm.png" name="normTex"/>
       </textures>
@@ -12,7 +15,7 @@
   <group>
     <variant frequency="1" name="head_female_dudette_a">
       <props>
-         <prop actor="props/units/heads/hele_hood_priest.xml" attachpoint="helmet"/>
+         <prop actor="props/units/heads/new/head_female_dudette_a.xml" attachpoint="head"/>
       </props>
     </variant>
     <variant frequency="1" name="head_female_dudette_b">

@@ -15,6 +15,7 @@
     <Lang>greek</Lang>
     <GenericName>Helot Woman</GenericName>
     <SpecificName>Heílōs</SpecificName>
+    <SelectionGroupName>units/spart/support_female_helot</SelectionGroupName>
     <Icon>units/spart/support_female_citizen.png</Icon>
   </Identity>
   <TrainingRestrictions>
