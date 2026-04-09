@@ -26,6 +26,7 @@
   <Identity>
     <GenericName>Royal Guard</GenericName>
     <SpecificName>Hippeis</SpecificName>
+    <VisibleClasses datatype="tokens">Free</VisibleClasses>
     <Icon>units/spart/champion_infantry_olympian.png</Icon>
   </Identity>
   <Promotion disable=""/>
