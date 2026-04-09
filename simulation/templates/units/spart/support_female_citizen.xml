@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_unit_support_female_citizen">
+<Entity parent="template_unit_support_female_sparta">
  <Auras datatype="tokens">
     units/spart_woman_gathering
     units/spart_woman_building
@@ -25,6 +25,12 @@
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
     </Ranged>
   </Attack>
+    <Cost>
+    <BuildTime>25</BuildTime>
+    <Resources>
+      <food>0</food>
+    </Resources>
+  </Cost>
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
