@@ -16,7 +16,7 @@
     <Max>250</Max>
   </Health>
   <Identity>
-    <VisibleClasses datatype="tokens">WatchTower</VisibleClasses>
+    <VisibleClasses datatype="tokens">WatchTower Outpost</VisibleClasses>
     <GenericName>Moving Tower</GenericName>
   </Identity>
   <Loot>
@@ -48,15 +48,15 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack>8</Hack>
+        <Hack>7.5</Hack>
         <Pierce>25</Pierce>
-        <Crush>7</Crush>
+        <Crush>7.5</Crush>
       </Damage>
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">0.3</WalkSpeed>
-    <Acceleration op="mul">0.3</Acceleration>
+    <WalkSpeed op="mul">0.4</WalkSpeed>
+    <Acceleration op="mul">0.4</Acceleration>
   </UnitMotion>
     <GarrisonHolder>
     <Max>4</Max>
@@ -67,7 +67,7 @@
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
   <Vision>
-    <Range>85</Range>
+    <Range>80</Range>
   </Vision>
   <Identity>
     <Civ>han</Civ>
