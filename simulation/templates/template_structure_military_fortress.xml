@@ -74,7 +74,7 @@
   <GarrisonHolder>
     <Max>35</Max>
     <EjectHealth>0.1</EjectHealth>
-    <List datatype="tokens">Support Infantry Cavalry Siege Elephant</List>
+    <List datatype="tokens">Support Serf Infantry Cavalry Siege Elephant</List>
     <LoadingRange>5</LoadingRange>
     <BuffHeal>1</BuffHeal>
   </GarrisonHolder>

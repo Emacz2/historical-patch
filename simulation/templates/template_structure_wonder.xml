@@ -26,7 +26,7 @@
     <Max>60</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support Soldier</List>
+    <List datatype="tokens">Support Soldier Serf</List>
     <BuffHeal>5</BuffHeal>
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
