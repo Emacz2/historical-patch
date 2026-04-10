@@ -3,9 +3,9 @@
  <Attack>
   <Melee>
 	<Damage>
-	  <Hack op="mul">0.9</Hack>
-    <Pierce op="mul">0.9</Pierce>
-    <Crush op="mul">0.9</Crush>
+	  <Hack op="mul">0.95</Hack>
+    <Pierce op="mul">0.95</Pierce>
+    <Crush op="mul">0.95</Crush>
   </Damage>
   </Melee>
 </Attack>
@@ -18,40 +18,16 @@
     </Entity>
   </Resistance>
   <Cost>
-    <BuildTime op="mul">0.9</BuildTime>
     <Resources>
-      <wood op="add">-10</wood>
+      <food op="add">-5</food>
+      <wood op="add">-5</wood>
     </Resources>
   </Cost>
-  <ResourceGatherer>
-    <MaxDistance>2.0</MaxDistance>
-    <BaseSpeed>1.0</BaseSpeed>
-    <Rates>
-      <food.fruit op="mul">1.1</food.fruit>
-      <food.grain op="mul">1.1</food.grain>
-      <food.meat op="mul">1.1</food.meat>
-      <wood.tree op="mul">1.1</wood.tree>
-      <wood.ruins op="mul">1.1</wood.ruins>
-      <stone.rock op="mul">1.1</stone.rock>
-      <stone.ruins op="mul">1.1</stone.ruins>
-      <metal.ore  op="mul">1.1</metal.ore>
-      <metal.ruins op="mul">1.1</metal.ruins>
-    </Rates>
-    <Capacities>
-      <food>15</food>
-      <wood>15</wood>
-      <stone>15</stone>
-      <metal>15</metal>
-    </Capacities>
-  </ResourceGatherer>
   <Promotion>
-    <RequiredXp>150</RequiredXp>
+    <RequiredXp>100</RequiredXp>
   </Promotion>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-  </UnitMotion>
   <Identity>
     <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
-    <Tooltip>Concript Melee gather resrouces 5% faster, hace a carrying capacity of 15 for each resoruce, cost 10 less wood and -10% train time but 10% less dmg and -0.5 pierce/hack resistance. They take 50% longer to promote, but lose their consript status when they achieve basic rang</Tooltip>
+    <Tooltip>Concript soldiers -10% train time and cost 5 less food and wood but 5% less dmg and -0.5 pierce/hack resistance.  They lose consript status when promoted to basic rank</Tooltip>
   </Identity>
 </Entity>
