@@ -28,4 +28,7 @@
       </Texture>
     </Overlay>
   </Selectable>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.05</WalkSpeed>
+  </UnitMotion>
 </Entity>
