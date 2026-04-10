@@ -25,21 +25,21 @@
     <Population>0</Population>
     <BuildTime>8</BuildTime>
       <Resources>
-      <food>40</food>
+      <food>35</food>
       <metal>0</metal>
       <stone>0</stone>
       <wood>0</wood>
     </Resources>
   </Cost>
   <Health>
-    <Max>40</Max>
+    <Max>35</Max>
   </Health>
   <ResourceGatherer>
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit>1</food.fruit>
-      <food.grain>0.5</food.grain>
+      <food.fruit>1.05</food.fruit>
+      <food.grain>0.55</food.grain>
       <food.meat>2</food.meat>
       <wood.tree>0.6</wood.tree>
       <wood.ruins>5</wood.ruins>
