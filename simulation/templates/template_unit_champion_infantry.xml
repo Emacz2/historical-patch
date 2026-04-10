@@ -39,6 +39,5 @@
   </Sound>
  <UnitMotion>
     <WalkSpeed op="mul">1.05</WalkSpeed>
-    <RunMultiplier op="mul">0.95</RunMultiplier>
   </UnitMotion>
 </Entity>
