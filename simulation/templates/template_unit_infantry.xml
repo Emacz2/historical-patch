@@ -100,7 +100,10 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <RunMultiplier op="mul">0.95</RunMultiplier>
+    <WalkSpeed>8.1</WalkSpeed>
+    <RunMultiplier>0.97</RunMultiplier>
+    <Acceleration>30</Acceleration>
+    <Weight>10</Weight>
   </UnitMotion>
   <Vision>
     <Range>50</Range>
