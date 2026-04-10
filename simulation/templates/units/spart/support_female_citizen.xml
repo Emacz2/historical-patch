@@ -6,7 +6,6 @@
   </Auras>
   <Builder disable=""/>
   <ResourceGatherer disable=""/>
-  </Attack>
     <Cost>
     <BuildTime>25</BuildTime>
     <Resources>
