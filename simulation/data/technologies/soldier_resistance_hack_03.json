@@ -10,6 +10,7 @@
 		"all": [
 			{ "tech": "phase_city" },
 			{ "notciv": "brit" },
+			{ "notciv": "pers" },
 			{ "notciv": "spart" }
 		]
 	},

@@ -9,14 +9,14 @@
 	},
 	"description": "Body armor made from quilted wool, linen, cotton, or leather.",
 	"cost": {
-		"food": 200,
-		"metal": 100
+		"food": 250
+
 	},
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
-			{ "notciv": "pers" },
-			{ "notciv": "spart" }
+			{ "civ": "pers" }
+		
 		]
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",

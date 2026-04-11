@@ -16,6 +16,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
+			{ "notciv": "pers" },
 			{ "notciv": "spart" }
 		]
 	},
