@@ -10,7 +10,8 @@
 		"all": [
 			{ "tech": "phase_city" },
 			{ "notciv": "han" },
-			{ "notciv": "ptol" }
+			{ "notciv": "ptol" },
+			{ "notciv": "spart" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in City Phase.",

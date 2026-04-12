@@ -1,6 +1,5 @@
 {
-	"genericName": "Iron Weapons",
-	"description": "Using iron instead of bronze gave weapons additional power.",
+	"genericName": " Quenching",
 	"cost": {
 		"food": 200,
 		"metal": 150

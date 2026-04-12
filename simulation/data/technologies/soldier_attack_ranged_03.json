@@ -1,6 +1,5 @@
 {
-	"genericName": "Trilobate Arrowheads",
-	"description": "Arrowheads with three lobes instead of two inflict larger wounds.",
+	"genericName": "Pyramidal arrowheads",
 	"cost": {
 		"wood": 500,
 		"metal": 400

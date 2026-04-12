@@ -1,6 +1,5 @@
 {
-	"genericName": "Metal Rim",
-	"description": "Strengthen shields with a metal rim or spine.",
+	"genericName": "Cord Handle",
 	"cost": {
 		"wood": 350,
 		"metal": 250

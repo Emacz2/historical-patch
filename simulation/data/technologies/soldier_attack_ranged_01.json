@@ -1,6 +1,5 @@
 {
-	"genericName": "Improved Fletching",
-	"description": "Improving the fletching of arrows increases their stability and speed, and thus their penetration.",
+	"genericName": "Bodkin Arrowheads",
 	"cost": {
 		"wood": 200,
 		"metal": 100

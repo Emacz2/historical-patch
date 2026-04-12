@@ -11,7 +11,7 @@
   <Identity>
     <Civ>spart</Civ>
     <GenericName>Military Mess Hall</GenericName>
-    <SpecificName>Syssition</SpecificName>
+    <SpecificName>Pheideition</SpecificName>
     <Icon>structures/syssition.png</Icon>
     <VisibleClasses datatype="tokens">Syssiton Special</VisibleClasses>
   </Identity>

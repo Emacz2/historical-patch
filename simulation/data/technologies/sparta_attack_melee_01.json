@@ -1,10 +1,6 @@
 {
-	"genericName": "Side Arms",
-	"specificName": {
-	
-		"spart": "Xiphos"
-	},
-	"description": ".",
+	"genericName": "Carburisation",
+	"description": "By adding a small amount of carbon during the iron smelting process, a stronger material, steel, can be forged.",
 	"cost": {
 		"food": 200,
 		"metal": 150

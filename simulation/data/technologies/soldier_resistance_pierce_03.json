@@ -1,6 +1,5 @@
 {
-	"genericName": "Improved Shield Alloys",
-	"description": "Strengthen shields further with stronger metal alloys.",
+	"genericName": "Shield Apron",
 	"cost": {
 		"wood": 500,
 		"metal": 400

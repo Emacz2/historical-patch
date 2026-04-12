@@ -1,6 +1,5 @@
 {
-	"genericName": "Wooden Shield",
-	"description": "Wooden shields are heavier but much better able to resist projectiles and blows than wicker-frame shields.",
+	"genericName": "Molded Greave",
 	"cost": {
 		"wood": 200,
 		"metal": 100
