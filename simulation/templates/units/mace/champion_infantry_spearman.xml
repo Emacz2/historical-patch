@@ -16,6 +16,7 @@
     <Lang>greek</Lang>
     <GenericName>Macedonian Shield Bearer</GenericName>
     <SpecificName>Hypaspistḗs</SpecificName>
+    <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <SelectionGroupName>units/mace/champion_infantry_spearman</SelectionGroupName>
     <Icon>units/mace/hypaspist.png</Icon>
     <Requirements>

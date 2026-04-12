@@ -14,6 +14,7 @@
   <Identity>
     <SpecificName>Hypaspistḗs Argyraspídi</SpecificName>
     <Icon>units/mace/argyraspidai.png</Icon>
+     <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>

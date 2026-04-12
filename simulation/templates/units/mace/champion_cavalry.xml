@@ -7,7 +7,7 @@
     <SpecificName>Hetaîros</SpecificName>
     <Icon>units/mace/champion_cavalry.png</Icon>
     <SelectionGroupName>units/mace/champion_cavalry</SelectionGroupName>
-    <VisibleClasses datatype="tokens">Nobels</VisibleClasses>
+    <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <Tooltip>Slowly regenerate health over time 2hp every 4 seconds</Tooltip>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
