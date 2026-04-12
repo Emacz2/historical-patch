@@ -11,7 +11,7 @@
     <Territory>own neutral</Territory>
     <Distance>
       <FromClass>CivilCentre</FromClass>
-      <MinDistance>30</MinDistance>
+      <MinDistance>50</MinDistance>
     </Distance>
   </BuildRestrictions>
 </Entity>
