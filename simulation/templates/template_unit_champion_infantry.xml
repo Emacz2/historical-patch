@@ -15,9 +15,6 @@
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
     <GenericName>Champion Infantry</GenericName>
   </Identity>
-  <Loot>
-    <xp>110</xp>
-  </Loot>
   <Position>
     <Anchor>upright</Anchor>
   </Position>
