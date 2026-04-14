@@ -23,14 +23,6 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-   <Upgrade>
-    <Skiri_spear>
-      <Entity>units/spart/skiri_spearman</Entity>
-      <Tooltip>Switch to using spear.</Tooltip>
-      <Variant>upgrading</Variant>
-      <Time>4</Time>
-    </Skiri_spear>
-  </Upgrade>
   <UnitMotion>
     <WalkSpeed op="mul">1.25</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
@@ -41,6 +33,6 @@
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/spartans/skiri_swordsman_e.xml</Actor>
+    <Actor>units/spartans/infantry_swordsman_c.xml</Actor>
   </VisualActor>
 </Entity>

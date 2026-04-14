@@ -90,7 +90,7 @@
       units/{civ}/support_female_helot
       units/{civ}/helot_javelineer
       units/{civ}/infantry_spearman_b
-      units/{civ}/skiri_spearman
+      units/{civ}/skiri_swordsman
       units/{civ}/neodamodes_spearman
       units/{civ}/perioikoi_range
     </Entities>
