@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="allied_inf|template_unit_infantry_melee_spearman">
-<Builder>
-    <Entities datatype="tokens">
-      structures/spart/gerousia
-      structures/spart/syssiton
-      structures/spart/camp
-      -structures/{civ}/wallset_stone
-      -structures/{civ}/barracks
-      -structures/{civ}/stable
-    </Entities>
-  </Builder>
+  <Cost>
+    <BuildTime op="mul">1.2</BuildTime>
+     <Resources>
+      <food>100</food>
+      <metal op="add">-40</metalk>
+      <wood>25</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
   <Resistance>
     <Entity>
       <Damage>
@@ -36,6 +35,9 @@
     <Skiri_sword>
       <Entity>units/spart/skiri_swordsman</Entity>
       <Tooltip>Switch to using sword.</Tooltip>
+       <Cost>
+        <metal>5</metal>
+      </Cost>
       <Variant>upgrading</Variant>
       <Time>8</Time>
     </Skiri_sword>
@@ -50,6 +52,6 @@
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_swordsman_c.xml</Actor>
+    <Actor>units/spartans/skiri_spearman_e</Actor>
   </VisualActor>
 </Entity>

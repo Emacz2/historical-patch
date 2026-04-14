@@ -50,6 +50,6 @@
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_swordsman_c.xml</Actor>
+    <Actor>units/spartans/skiri_swordsman_e.xml</Actor>
   </VisualActor>
 </Entity>
