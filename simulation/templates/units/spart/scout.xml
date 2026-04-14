@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_scout">
+ <Auras datatype="tokens">
+    units/greek_scout
+  </Auras>
   <Builder disable=""/>
     <Identity>
     <Civ>spart</Civ>
