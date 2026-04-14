@@ -4,16 +4,16 @@
     <BuildTime op="mul">1.2</BuildTime>
      <Resources>
       <food>100</food>
-      <metal op="add">-40</metal>
-      <wood>25</wood>
+      <metal>0</metal>
+      <wood>30</wood>
       <stone>0</stone>
     </Resources>
   </Cost>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-4</Hack>
-	      <Pierce op="add">-4</Pierce>
+        <Hack op="add">-5</Hack>
+	      <Pierce op="add">-6</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -52,6 +52,6 @@
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/spartans/skiri_spearman_e</Actor>
+    <Actor>units/spartans/skiri_spearman_e.xml</Actor>
   </VisualActor>
 </Entity>
