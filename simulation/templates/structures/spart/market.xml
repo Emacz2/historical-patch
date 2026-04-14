@@ -6,6 +6,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SpecificName>Emporion</SpecificName>
+    <VisibleClasses datatype="tokens">Market</VisibleClasses>
   </Identity>
   <Promotion>
     <Entity>structures/spart/market_2</Entity>

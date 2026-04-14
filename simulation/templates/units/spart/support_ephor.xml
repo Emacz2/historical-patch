@@ -18,8 +18,7 @@
     <Population>1</Population>
     <BuildTime>45</BuildTime>
     <Resources>
-      <food>200</food>
-      <metal>50</metal>
+      <food>300</food>
     </Resources>
   </Cost>
   <Health>

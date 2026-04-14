@@ -38,7 +38,7 @@
 		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "HelotM" },
 		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "HelotM" },
-		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure" }
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure !Camp !Market" }
 		
 
 	],

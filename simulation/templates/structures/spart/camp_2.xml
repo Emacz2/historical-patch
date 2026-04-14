@@ -47,10 +47,6 @@
     <VisibleClasses datatype="tokens">Village Camp</VisibleClasses>
     <Icon>structures/roman_camp.png</Icon>
   </Identity>
-     <Promotion>
-    <Entity>structures/spart/camp_2</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <Loot>
     <wood>100</wood>
   </Loot>
@@ -89,7 +85,7 @@
       units/{civ}/support_female_helot
       units/{civ}/helot_javelineer
       units/{civ}/infantry_spearman_b
-      units/{civ}/skiri_spearman
+      units/{civ}/skiri_jav
       units/{civ}/neodamodes_spearman
       units/{civ}/perioikoi_range
     </Entities>

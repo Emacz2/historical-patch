@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="allied_inf|template_unit_infantry_melee_spearman">
+  <Cost>
+    <BuildTime op="mul">1.2</BuildTime>
+     <Resources>
+      <food>100</food>
+      <metal>0</metal>
+      <wood>30</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
+   <Health>
+    <Max>200</Max>
+  </Health>
+   <Identity>
+    <Rank>Elite</Rank>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <GenericName>Elite Skiritai Vanguard Sword</GenericName>
+    <SpecificName>Ékdromos Skirítēs</SpecificName>
+    <Icon>units/spart/champion_infantry_sword.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+    <Upgrade>
+    <Skiri_jav>
+      <Entity>units/spart/skiri_jav</Entity>
+      <Tooltip>Switch to throwing javelins.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>8</Time>
+    </Skiri_jav>
+  </Upgrade>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <RunMultiplier>1.55</RunMultiplier>
+  </UnitMotion>
+  <Vision>
+    <Range op="add">20</Range>
+  </Vision>
+  <Promotion disable=""/>
+  <ResourceGatherer disable=""/>
+  <VisualActor>
+    <Actor>units/spartans/skiri_thrust_e.xml</Actor>
+  </VisualActor>
+</Entity>
