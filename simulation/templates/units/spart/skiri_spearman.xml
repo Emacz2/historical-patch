@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="greek_olympian|template_unit_infantry_melee_swordsman">
+<Entity parent="allied_inf|template_unit_infantry_melee_spearman">
 <Builder>
     <Entities datatype="tokens">
       structures/spart/gerousia
@@ -13,8 +13,8 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">-3</Hack>
-	      <Pierce op="add">-2</Pierce>
+        <Hack op="add">-4</Hack>
+	      <Pierce op="add">-4</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -25,14 +25,21 @@
     <Rank>Elite</Rank>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <GenericName>Skiritai Commando</GenericName>
+    <GenericName>Elite Skiritai Vanguard Spear</GenericName>
     <SpecificName>Ékdromos Skirítēs</SpecificName>
     <Icon>units/spart/champion_infantry_sword.png</Icon>
-    <VisibleClasses datatype="tokens">Champion</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+    <Upgrade>
+    <Skiri_sword>
+      <Entity>units/spart/skiri_swordsman</Entity>
+      <Tooltip>Switch to using sword.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>8</Time>
+    </Skiri_sword>
+  </Upgrade>
   <UnitMotion>
     <WalkSpeed op="mul">1.25</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
