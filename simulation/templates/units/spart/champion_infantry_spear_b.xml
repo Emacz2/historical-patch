@@ -4,7 +4,7 @@
     units/phalanx
   </Auras>
   <Cost>
-    <BuildTime>16</BuildTime>
+    <BuildTime>15</BuildTime>
     <Resources>
       <food>100</food>
       <wood>50</wood>
@@ -14,8 +14,8 @@
     <Attack>
     <Melee>
       <Damage>
-        <Hack op="mul">0.7</Hack>
-        <Pierce op="mul">0.7</Pierce>
+        <Hack op="mul">0.75</Hack>
+        <Pierce op="mul">0.75</Pierce>
       </Damage>
     </Melee>
   </Attack>
