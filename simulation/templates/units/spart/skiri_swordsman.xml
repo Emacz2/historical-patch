@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="allied_inf|template_unit_infantry_melee_swordsman">
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-5</Hack>
-	      <Pierce op="add">-6</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
-   <Health>
    <Health>
     <Max>200</Max>
   </Health>
@@ -23,6 +14,14 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
+    <Upgrade>
+    <Skiri_sword>
+      <Entity>units/spart/skiri_spearman</Entity>
+      <Tooltip>Switch to using spear.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>4</Time>
+    </Skiri_sword>
+  </Upgrade>
   <UnitMotion>
     <WalkSpeed op="mul">1.25</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
@@ -33,6 +32,6 @@
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_swordsman_c.xml</Actor>
+    <Actor>units/spartans/skiri_swordsman_e.xml</Actor>
   </VisualActor>
 </Entity>
