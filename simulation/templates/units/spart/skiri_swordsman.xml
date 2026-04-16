@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="allied_inf|template_unit_infantry_melee_swordsman">
+ <Cost>
+    <BuildTime op="mul">1.2</BuildTime>
+     <Resources>
+      <food>100</food>
+      <metal>0</metal>
+      <wood>30</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
    <Health>
     <Max>200</Max>
   </Health>
@@ -9,6 +18,7 @@
     <Lang>greek</Lang>
     <GenericName>Elite Skiritai Vanguard Sword</GenericName>
     <SpecificName>Ékdromos Skirítēs</SpecificName>
+    <VisibleClasses datatype="tokens">-Citizen Switch</VisibleClasses>
     <Icon>units/spart/champion_infantry_sword.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
@@ -27,7 +37,7 @@
     <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
   <Vision>
-    <Range op="add">20</Range>
+    <Range>75</Range>
   </Vision>
   <Promotion disable=""/>
   <ResourceGatherer disable=""/>
