@@ -3,8 +3,9 @@
 	"icon": "upgrade_advanced.png",
 	"tooltip": "Advanced and Elite Mercanaries +15% training time,-20% gathering rates and 20% more health;   Healers +5 healing rate and range;  Ranged units 10% more accurate and 0.5 Hack Resistance and Crossbows + 1, Javelineers +1.5, Greek Archers +2.5 and Archers +3.5 max range.  Melee units 5% more dmg and +1 capture attack. ", 
 	"modifications": [
+		{ "value": "Cost/BuildTime", "multiply": 1.1 },
 		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged" },
-		{ "value": "Attack/Ranged/MaxRange", "multiply": 1.05  },
+		{ "value": "Attack/Ranged/MaxRange", "multiply": 1.1  },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2, "affects": "!Switch" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2, "affects": "!Switch" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2, "affects": "!Switch" },
