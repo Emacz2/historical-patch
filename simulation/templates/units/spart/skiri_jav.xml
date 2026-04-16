@@ -16,7 +16,7 @@
     <Rank>Elite</Rank>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
-    <GenericName>Elite Skiritai Vanguard Sword</GenericName>
+    <GenericName>Elite Skiritai Light Skirmisher</GenericName>
     <SpecificName>Ékdromos Skirítēs</SpecificName>
     <VisibleClasses datatype="tokens">-Citizen Switch</VisibleClasses>
     <Icon>units/spart/champion_infantry_sword.png</Icon>
