@@ -25,7 +25,7 @@
       <ConsularBodyguard>24</ConsularBodyguard>
       <Doulos>5</Doulos>
       <Gladiator>0</Gladiator>
-      <HelotM>0</HelotM>
+      <HelotM>5</HelotM>
       <HelotW>5</HelotW>
       <Hero>1</Hero>
       <Juggernaut>1</Juggernaut>
@@ -69,10 +69,10 @@
         <Market>5</Market>
       </LandTrader>
       <HelotM>
-        <Free>1</Free>
+        <Free>2</Free>
       </HelotM>
       <HelotW>
-        <Free>1</Free>
+        <HelotM>1</HelotM>
       </HelotW>
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
