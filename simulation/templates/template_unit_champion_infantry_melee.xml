@@ -8,10 +8,10 @@
     <GenericName>Champion Melee Infantry</GenericName>
   </Identity>
    <Health>
-    <Max>250</Max>
+    <Max>225</Max>
   </Health>
       <Loot>
-    <xp>80</xp>
+    <xp>75</xp>
     <metal>10</metal>
     <wood>5</wood>
   </Loot>
@@ -21,9 +21,9 @@
   <Resistance>
     <Entity>
       <Damage>
-        <Crush>3</Crush> 
-        <Hack>5</Hack>
-        <Pierce>6</Pierce>
+        <Crush>3.5</Crush> 
+        <Hack>6</Hack>
+        <Pierce>7</Pierce>
       </Damage>
     </Entity>
   </Resistance>
