@@ -12,6 +12,15 @@
    <Health>
     <Max>200</Max>
   </Health>
+     <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>2</Crush>
+        <Hack>2</Hack>
+        <Pierce>2.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
    <Identity>
     <Rank>Elite</Rank>
     <Civ>spart</Civ>
