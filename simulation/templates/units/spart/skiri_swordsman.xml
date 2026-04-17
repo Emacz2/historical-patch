@@ -9,10 +9,10 @@
       <stone>0</stone>
     </Resources>
   </Cost>
-   <Health>
+ <Health>
     <Max>200</Max>
   </Health>
-   <Resistance>
+     <Resistance>
     <Entity>
       <Damage>
         <Crush>2</Crush>
@@ -42,7 +42,7 @@
     </Skiri_sword>
   </Upgrade>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <WalkSpeed>10.5</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
   <Vision>

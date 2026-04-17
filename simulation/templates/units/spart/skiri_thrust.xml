@@ -42,7 +42,7 @@
     </Skiri_jav>
   </Upgrade>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <WalkSpeed>12.0</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
   <Vision>

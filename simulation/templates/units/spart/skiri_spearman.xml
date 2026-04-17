@@ -42,7 +42,7 @@
     </Skiri_sword>
   </Upgrade>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <WalkSpeed op="mul">1.3</WalkSpeed>
     <RunMultiplier>1.55</RunMultiplier>
   </UnitMotion>
  <Vision>
