@@ -6,6 +6,7 @@
   <Identity>
     <Civ>spart</Civ>
     <Lang>greek</Lang>
+    <Rank>Advanced</Rank>
      <GenericName>Hoplite Spartan</GenericName>
     <SpecificName>Hebontes</SpecificName>
     <VisibleClasses datatype="tokens">Free</VisibleClasses>

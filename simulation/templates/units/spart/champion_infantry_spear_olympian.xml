@@ -24,6 +24,7 @@
   <WalkSpeed op="mul">1.05</WalkSpeed>
  </UnitMotion>
   <Identity>
+    <Rank>Elite</Rank>
     <GenericName>Royal Guard</GenericName>
     <SpecificName>Hippeis</SpecificName>
     <VisibleClasses datatype="tokens">Free</VisibleClasses>
