@@ -29,6 +29,9 @@
     <Tooltip>Counters: 2.5× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Spearman</VisibleClasses>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>

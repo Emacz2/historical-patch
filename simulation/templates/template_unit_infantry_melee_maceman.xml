@@ -14,15 +14,19 @@
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
     </Melee>
   </Attack>
-  <Cost>
+   <Cost>
     <Resources>
-      <wood>50</wood>
+      <wood>40</wood>
+      <stone>10</stone>
     </Resources>
   </Cost>
   <Identity>
     <GenericName>Infantry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
+  <UnitMotion>
+    <WalkSpeed op="mul">1.03</WalkSpeed>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
