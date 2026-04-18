@@ -5,15 +5,12 @@
     <SelectionGroupName>units/spart/perioikoi_range</SelectionGroupName>
     <GenericName>Perioikoi Skirmisher</GenericName>
     <SpecificName>Akontistḗs Períoikos</SpecificName>
-    <Icon>units/spart/infantry_javelinist.png</Icon>
+    <Icon>units/spart/perioikoi_jav.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
   <Promotion disable=""/>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-  </UnitMotion>
    <TrainingRestrictions>
   <Category>PerioikoiRange</Category>
   </TrainingRestrictions>

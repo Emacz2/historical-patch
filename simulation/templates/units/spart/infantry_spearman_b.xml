@@ -17,7 +17,7 @@
     <SelectionGroupName>units/spart/infantry_spearman_b</SelectionGroupName>
     <GenericName>Hoplite Perioikoi</GenericName>
     <SpecificName>Hoplítēs Períoikos</SpecificName>
-    <Icon>units/spart/infantry_spearman.png</Icon>
+    <Icon>units/spart/perioikoi_spear.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/spart/infantry_spearman_a</Entity>
