@@ -5,14 +5,15 @@
 	"modifications": [
 		{ "value": "Promotion/RequiredXp", "multiply": 0.98 },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
-		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.97 },
-		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.03}
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.5 },
+		{ "value": "Resistance/Entity/Damage/Crush", "add": 1.5 },
+		{ "value": "UnitMotion/WalkSpeed", "multiply": 0.96 },
+		{ "value": "Attack/Melee/RepeatTime", "multiply": 1.043}
 	
 	],
 	"auraName": "testudo",
 	"showDescription": 1,
-	"auraDescription": "Infantry swordsman promote 2% faster, gain 1 of each resistance, but walk/attack speed reduced by 3%",
+	"auraDescription": "Infantry swordsman promote 2% faster, gain 1 Hack and 1.5/Crush Resistance, but walk/attack speed reduced by 4%",
 	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",
 	"stackable": false
 }

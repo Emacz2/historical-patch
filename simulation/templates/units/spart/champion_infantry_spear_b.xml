@@ -28,7 +28,7 @@
     </Entity>
   </Resistance>
  <Health>
-    <Max op="add">-50</Max>
+    <Max op="add">-25</Max>
   </Health>
  <UnitMotion>
   <WalkSpeed op="mul">1.02</WalkSpeed>
