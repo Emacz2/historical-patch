@@ -9,7 +9,7 @@
      <GenericName>Hoplite Spartan</GenericName>
     <SpecificName>Hebontes</SpecificName>
     <VisibleClasses datatype="tokens">Free</VisibleClasses>
-    <Icon>units/spart/champion_infantry_spear.png</Icon>
+    <Icon>units/spart/champ_spear_a.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/spart/champion_infantry_spear_olympian</Entity>

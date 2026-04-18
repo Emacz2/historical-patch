@@ -31,7 +31,6 @@
     <Max op="add">-25</Max>
   </Health>
  <UnitMotion>
-  <WalkSpeed op="mul">1.02</WalkSpeed>
  </UnitMotion>
   <Identity>
     <Civ>spart</Civ>
@@ -39,7 +38,7 @@
     <GenericName>Young Hoplite Spartan</GenericName>
     <SpecificName>Paidiskoi</SpecificName>
     <VisibleClasses datatype="tokens">Free</VisibleClasses>
-    <Icon>units/spart/champion_infantry_spear.png</Icon>
+    <Icon>units/spart/champ_spear_b.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/spart/champion_infantry_spear_a</Entity>
