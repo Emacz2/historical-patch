@@ -28,7 +28,10 @@
       </Texture>
     </Overlay>
   </Selectable>
-   <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
+  <UnitMotion>
+    <WalkSpeed>8.3</WalkSpeed>
+    <RunMultiplier>1.25</RunMultiplier>
+    <Acceleration>30</Acceleration>
+    <Weight>10</Weight>
   </UnitMotion>
 </Entity>

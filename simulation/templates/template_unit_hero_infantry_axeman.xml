@@ -22,6 +22,7 @@
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -30,7 +31,4 @@
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>
     </SoundGroups>
   </Sound>
-    <UnitMotion>
-    <WalkSpeed op="mul">0.9</WalkSpeed>
-  </UnitMotion>
 </Entity>
