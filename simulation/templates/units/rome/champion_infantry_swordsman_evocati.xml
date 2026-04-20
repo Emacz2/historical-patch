@@ -30,18 +30,16 @@
   <Identity>
     <GenericName>Evocati</GenericName>
     <SpecificName>Evocati</SpecificName>
+    <Rank>Advanced</Rank>
     <VisibleClasses datatype="tokens">Evocati</VisibleClasses>
     <Icon>units/rome/champion_legion_marian.png</Icon>
     <Requirements>
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-    <UnitMotion>
-    <WalkSpeed op="mul">1.01</WalkSpeed>
-  </UnitMotion>
   <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_evocati_II</Entity>
-    <RequiredXp>400</RequiredXp>
+    <RequiredXp>250</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>

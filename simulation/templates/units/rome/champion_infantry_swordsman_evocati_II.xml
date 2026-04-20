@@ -22,11 +22,9 @@
   <Health>
     <Max op="add">25</Max>
   </Health>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.01</WalkSpeed>
-  </UnitMotion>
   <Identity>
     <GenericName>Evocati II</GenericName>
+    <Rank>Elite</Rank>
     <Icon>units/rome/champion_legion_imperial.png</Icon>
   </Identity>
    <Promotion disable=""/>

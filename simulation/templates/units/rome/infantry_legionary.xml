@@ -49,12 +49,9 @@
       <Techs datatype="tokens">roman_reforms</Techs>
     </Requirements>
   </Identity>
-  <UnitMotion>
-    <WalkSpeed op="mul">1.01</WalkSpeed>
-  </UnitMotion>
    <Promotion>
     <Entity>units/rome/champion_infantry_swordsman_evocati</Entity>
-    <RequiredXp>300</RequiredXp>
+    <RequiredXp>150</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/romans/infantry_swordsman_c2.xml</Actor>
