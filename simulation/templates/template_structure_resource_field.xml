@@ -21,6 +21,13 @@
     <Tooltip>Harvest grain for food. Each subsequent gatherer works less efficiently.</Tooltip>
     <Icon>structures/field.png</Icon>
   </Identity>
+   <BuildRestrictions>
+    <Territory>own</Territory>
+    <Distance>
+      <FromClass>CivilCentre</FromClass>
+      <MinDistance>50</MinDistance>
+    </Distance>
+  </BuildRestrictions>
   <Loot>
     <food>50</food>
   </Loot>
