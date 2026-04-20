@@ -8,9 +8,6 @@
     <Stone>
       <Entity>units/rome/aux_inf_slinger_stone</Entity>
       <Tooltip>Switch to stone throwing Balearic Slinger</Tooltip>
-      <Cost>
-        <Stone>10</Stone>
-      </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
     </Stone>
