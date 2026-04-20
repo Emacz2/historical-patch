@@ -50,7 +50,7 @@
     </Requirements>
   </Identity>
    <Promotion>
-    <Entity>units/rome/champion_infantry_swordsman_evocati</Entity>
+    <Entity>units/rome/champion_infantry_swordsman_first_cohert</Entity>
     <RequiredXp>100</RequiredXp>
   </Promotion>
   <VisualActor>
