@@ -5,11 +5,11 @@
       <AttackName>Spear</AttackName>
       <Damage>
         <Hack>7</Hack>
-        <Pierce>13</Pierce>
+        <Pierce>14</Pierce>
       </Damage>
       <MaxRange>6</MaxRange>
       <PrepareTime>350</PrepareTime>
-      <RepeatTime>1400</RepeatTime>
+      <RepeatTime>1500</RepeatTime>
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>

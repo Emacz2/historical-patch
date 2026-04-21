@@ -13,19 +13,6 @@
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>
   </Identity>
-  <Attack>
-    <Melee>
-      <MaxRange op="add">1.0</MaxRange>
-    </Melee>
-  </Attack>
-  <Resistance>
-    <Entity>
-      <Damage>
-        <Hack op="add">-0.5</Hack>
-        <Pierce op="add">-1</Pierce>
-      </Damage>
-    </Entity>
-  </Resistance>
   <Health>
     <RegenRate>0.5</RegenRate>
   </Health>
