@@ -10,28 +10,27 @@
           <Multiplier>2</Multiplier>
         </BonusCavMelee>
       </Bonuses>
-      <PrepareTime>500</PrepareTime>
-      <RepeatTime>1500</RepeatTime>
+      <PrepareTime>350</PrepareTime>
+      <RepeatTime>1400</RepeatTime>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
     </Melee>
   </Attack>
   <Identity>
     <GenericName>Champion Cavalry Spearman</GenericName>
-    <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
+    <Tooltip>One handed spear with shield. Counters: 2× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <Resistance>
     <Entity>
       <Damage>
-        <Crush op="add">2</Crush>
-        <Hack op="add">1.5</Hack>
+        <Crush op="add">1</Crush>
+        <Hack op="add">0.5</Hack>
         <Pierce op="add">1</Pierce>
       </Damage>
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">0.92</WalkSpeed>
-    <Acceleration op="mul">0.96</Acceleration>
+    <Acceleration op="mul">1.10</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

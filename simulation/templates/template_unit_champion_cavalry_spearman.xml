@@ -5,9 +5,9 @@
       <AttackName>Spear</AttackName>
       <Damage>
         <Hack>7</Hack>
-        <Pierce>12</Pierce>
+        <Pierce>13</Pierce>
       </Damage>
-      <MaxRange>5</MaxRange>
+      <MaxRange>6</MaxRange>
       <PrepareTime>350</PrepareTime>
       <RepeatTime>1400</RepeatTime>
       <Bonuses>
@@ -21,7 +21,7 @@
   </Attack>
   <Identity>
     <GenericName>Champion Cavalry Spearman</GenericName>
-    <Tooltip>Counters: 2× vs Cavalry.</Tooltip>
+    <Tooltip>Two handed thursting spear. Counters: 2× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <UnitMotion>
