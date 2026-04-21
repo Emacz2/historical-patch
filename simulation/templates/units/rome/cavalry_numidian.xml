@@ -13,6 +13,10 @@
     <GenericName>Allied Numidian Light Javelineer Cavalry</GenericName>
     <Icon>units/special/num_cav.png</Icon>
   </Identity>
+  <Promotion>
+    <Entity>units/rome/champion_cavalry_numidian</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <VisualActor>
     <Actor>units/carthaginians/champion_cavalry_numidian_c_m.xml</Actor>
   </VisualActor>
