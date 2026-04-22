@@ -1,12 +1,6 @@
 {
-	"genericName": "Unlock axeman",
+	"genericName": "Unlock Raeti Alliance",
 	"description": "",
-	"cost": {
-		"food": 200,
-		"wood": 160,
-		"metal": 40
-		
-	},
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
@@ -15,7 +9,7 @@
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",
 	"icon": "helmet_corinthian_bronze_old.png",
-	"researchTime": 25,
-	"tooltip": "Unlock the ability to recruit Rhaetian Axeman from the Alps. They start at rank2, builders only and are produced from the assembly .",
+	"researchTime": 45,
+	"tooltip": "Build an alliance with the Raeti Tribe.",
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

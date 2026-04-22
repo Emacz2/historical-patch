@@ -11,7 +11,7 @@
     <SelectionGroupName>units/mace/infantry_archer_b</SelectionGroupName>
     <GenericName>Macedonian Conscripted Archer</GenericName>
     <SpecificName>Toxotia</SpecificName>
-    <Icon>units/han/infantry_archer.png</Icon>
+    <Icon>units/mace/conscript_archer.png</Icon>
   </Identity>
   <Promotion>
     <Entity>units/mace/infantry_archer_b</Entity>

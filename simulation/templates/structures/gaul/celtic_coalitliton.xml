@@ -3,9 +3,9 @@
  <Cost>
     <Resources>
       <stone>50</stone>
-      <wood>250</wood>
+      <wood>150</wood>
     </Resources>
-  <BuildTime>120</BuildTime>
+  <BuildTime>90</BuildTime>
   </Cost>
   <Footprint>
     <Square width="16.0" depth="13.0"/>
@@ -19,10 +19,13 @@
   </Population>
   <Identity>
     <Civ>gaul</Civ>
-    <SpecificName>Celtic Coalition</SpecificName>
+    <SpecificName>Rhaetian Camp</SpecificName>
     <Tooltip>Recruit soldiers from various Celtic tribes to join your forces!</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Town</VisibleClasses>
+     <Requirements>
+      <Techs datatype="tokens">alliance_raeti</Techs>
+    </Requirements>
     <Icon>structures/embassy_celtic.png</Icon>
   </Identity>
   <Loot>
@@ -34,8 +37,6 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/infantry_rhaetian_axeman
-      units/{civ}/infantry_rutheni_archer_b
-      units/{civ}/cavalry_treveri_jav
     </Entities>
   </Trainer>
   <VisualActor>

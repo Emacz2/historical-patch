@@ -18,7 +18,7 @@
     <SpecificName>Hypaspistḗs</SpecificName>
     <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <SelectionGroupName>units/mace/champion_infantry_spearman</SelectionGroupName>
-    <Icon>units/mace/hypaspist.png</Icon>
+    <Icon>units/mace/champion_infantry.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
