@@ -3,7 +3,7 @@
 	"description": "",
 	"requirements": {
 		"all": [
-			{ "tech": "phase_city" },
+			{ "tech": "phase_town" },
 			{ "civ": "gaul" }
 		]
 	},
