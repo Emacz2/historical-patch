@@ -19,8 +19,8 @@
   </Population>
   <Identity>
     <Civ>gaul</Civ>
-    <SpecificName>Rhaetian Camp</SpecificName>
-    <Tooltip>Recruit soldiers from various Celtic tribes to join your forces!</Tooltip>
+    <SpecificName>Celtic Coalition</SpecificName>
+    <Tooltip>Recruit soldiers from various Alliences with Celtic tribes to join your forces!</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Town</VisibleClasses>
      <Requirements>
@@ -37,6 +37,7 @@
   <Trainer>
     <Entities datatype="tokens">
       units/{civ}/infantry_rhaetian_axeman
+      units/{civ}/infantry_rutheni_archer_b
     </Entities>
   </Trainer>
   <VisualActor>
