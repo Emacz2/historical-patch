@@ -9,6 +9,7 @@
       <Techs datatype="tokens">alliance_treveri</Techs>
     </Requirements>
   </Identity>
+  <ProductionQueue/>
   <Researcher>
     <Technologies datatype="tokens">
       treveri_cav

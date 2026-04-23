@@ -24,8 +24,9 @@
     <Tooltip>Two handed thursting spear. Counters: 2× vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
-  <UnitMotion>
-    <Acceleration op="mul">1.10</Acceleration>
+ <UnitMotion>
+    <WalkSpeed op="mul">0.98</WalkSpeed>
+    <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

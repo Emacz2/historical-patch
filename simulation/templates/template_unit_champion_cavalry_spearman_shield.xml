@@ -34,7 +34,7 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <Acceleration op="mul">1.10</Acceleration>
+    <Acceleration op="mul">1.15</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

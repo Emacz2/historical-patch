@@ -18,9 +18,10 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 	this.Military = {
 		"towerLapseTime": 360,	// Time to wait between building 2 towers
 		"fortressLapseTime": 390,	// Time to wait between building 2 fortresses
-		"popForBarracks1": 25,
-		"popForBarracks2": 55,
+		"popForBarracks1": 45,
+		"popForBarracks2": 60,
 		"popForForge": 65,
+		"popForStable1": 90,
 		"numSentryTowers": 1
 	};
 
@@ -32,8 +33,8 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 	};
 
 	this.Economy = {
-		"popPhase2": 150,	// How many units we want before aging to phase2.
-		"workPhase3": 180,	// How many workers we want before aging to phase3.
+		"popPhase2": 125,	// How many units we want before aging to phase2.
+		"workPhase3": 150,	// How many workers we want before aging to phase3.
 		"workPhase4": 200,	// How many workers we want before aging to phase4 or higher.
 		"popForDock": 25,
 		"targetNumWorkers": 60,	// dummy, will be changed later
@@ -63,20 +64,27 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 				"structures/{civ}/prytaneion",
 				"structures/{civ}/theater"
 			],
-			"brit": [],
+			"brit": [
+				"structures/{civ}/hill_fort"
+			],
 			"cart": [
 				"structures/{civ}/embassy_celtic",
 				"structures/{civ}/embassy_iberian",
-				"structures/{civ}/embassy_italic"
+				"structures/{civ}/embassy_italic",
+				"structures/{civ}/numidian_camp"
 			],
 			"gaul": [
-				"structures/{civ}/assembly"
+				"structures/{civ}/assembly",
+				"structures/{civ}/celtic_coalitliton"
 			],
 			"han": [
-				"structures/{civ}/academy"
+				"structures/{civ}/academy",
+				"structures/{civ}/ministry"
 			],
 			"iber": [
-				"structures/{civ}/monument"
+				"structures/{civ}/hall_of_heroes",
+				"structures/{civ}/monument",
+				"structures/{civ}/silvermine"
 			],
 			"kush": [
 				"structures/{civ}/camp_blemmye",
@@ -86,7 +94,9 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 				"structures/{civ}/temple_amun"
 			],
 			"mace": [
+				"structures/{civ}/royal_stoa",
 				"structures/{civ}/theater"
+				
 			],
 			"maur": [
 				"structures/{civ}/palace",
@@ -97,39 +107,43 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 			],
 			"ptol": [
 				"structures/{civ}/library",
+				"structures/{civ}/mercenary_camp",
 				"structures/{civ}/theater"
 			],
 			"rome": [
 				"structures/{civ}/army_camp",
+				"structures/{civ}/numidian_camp",
+				"structures/{civ}/temple_mars",
 				"structures/{civ}/temple_vesta"
 			],
 			"sele": [
 				"structures/{civ}/theater"
 			],
 			"spart": [
-				"structures/{civ}/syssiton",
-				"structures/{civ}/theater"
+				"structures/{civ}/camp",
+				"structures/{civ}/gerousia",
+				"structures/{civ}/syssiton"
 			]
 		};
 
 	this.priorities =
 		{
-			"villager": 300,      // should be slightly lower than the citizen soldier one to not get all the food
+			"villager": 400,      // should be slightly lower than the citizen soldier one to not get all the food
 			"citizenSoldier": 600,
 			"trader": 1,
 			"healer": 20,
 			"ships": 1,
 			"house": 250,
-			"dropsites": 950,
-			"field": 480,
+			"dropsites": 900,
+			"field": 600,
 			"dock": 90,
 			"corral": 1,
 			"economicBuilding": 700,
-			"militaryBuilding": 330,
+			"militaryBuilding": 500,
 			"defenseBuilding": 70,
 			"civilCentre": 1,
 			"majorTech": 700,
-			"minorTech": 250,
+			"minorTech": 500,
 			"wonder": 1,
 			"emergency": 1000    // used only in emergency situations, should be the highest one
 		};
@@ -146,16 +160,18 @@ export function Config(difficulty = difficultyLevel.MEDIUM, behavior)
 	this.queues =
 		{
 			"firstTurn": {
-				"food": 10,
+				"food": 20,
 				"wood": 10,
 				"default": 0
 			},
 			"short": {
-				"food": 200,
-				"wood": 200,
+				"food": 150,
+				"wood": 100,
 				"default": 100
 			},
 			"medium": {
+				"food": 300,
+				"wood": 300,
 				"default": 0
 			},
 			"long": {
