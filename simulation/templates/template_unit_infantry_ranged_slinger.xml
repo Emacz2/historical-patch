@@ -7,8 +7,8 @@
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>5.5</Crush>
-        <Pierce>3</Pierce>
+        <Crush>4.5</Crush>
+        <Pierce>4</Pierce>
       </Damage>
       <MaxRange>50</MaxRange>
       <PrepareTime>500</PrepareTime>
