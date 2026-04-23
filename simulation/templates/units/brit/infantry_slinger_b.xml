@@ -6,6 +6,9 @@
     <GenericName>Celtic Slinger</GenericName>
     <SpecificName>Talmoris</SpecificName>
     <Icon>units/gaul/infantry_slinger.png</Icon>
+      <Requirements>
+      <Techs datatype="tokens">unlock_slingers</Techs>
+    </Requirement>
   </Identity>
   <Promotion>
     <Entity>units/brit/infantry_slinger_a</Entity>
