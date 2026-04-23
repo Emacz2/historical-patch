@@ -1,14 +1,17 @@
 {
-	"genericName": "Unlock professional slingers",
+	"genericName": "Unlock slingers",
 	"description": "",
 	"cost": {
 		"food": 150,
-		"metal": 150
+		"wood": 75,
+		"stone": 75
+
 		
 	},
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
+			{ "civ": "brit" },
 			{ "civ": "germ" },
 			{ "civ": "pers" },
 			{ "civ": "sele" }
