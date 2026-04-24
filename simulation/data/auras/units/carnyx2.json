@@ -1,15 +1,15 @@
 {
 	"type": "range",
-	"radius": 35,
+	"radius": 25,
 	"affects": ["Soldier"],
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.0 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1.0 }
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5 },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5 }
 		
 	],
 	"auraName": "Inspiriational sound",
 	"showDescription": 1,
-	"auraDescription": "Soldiers 5% faster movement speed +1 Hack and Pierce Resitance.",
+	"auraDescription": "Soldiers 5% faster movement speed +0.5 Hack and Pierce Resitance.",
 	"overlayIcon": "art/textures/ui/session/auras/broken_sword.png"
 }
