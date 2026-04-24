@@ -48,8 +48,8 @@
 			"Template": "structures/ptol/civil_centre"
 		},
 		{
-			"Template": "units/ptol/support_female_citizen",
-			"Count": 3
+			"Template": "units/ptol/support_civilian",
+			"Count": 4
 		},
 		{
 			"Template": "units/ptol/infantry_pikeman_b",
@@ -61,10 +61,8 @@
 		},
 		{
 			"Template": "units/ptol/cavalry_archer_b"
-		},
-		{
-			"Template": "units/ptol/serf_slinger"
 		}
+		
 	],
 	"AINames": [
 		"Ptolemy Philadelphus",

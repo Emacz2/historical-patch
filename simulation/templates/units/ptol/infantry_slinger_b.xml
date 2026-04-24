@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_ranged_slinger">
-  <Builder>
+ <Builder>
     <Entities datatype="tokens">
       structures/ptol/lighthouse
       structures/ptol/library
       structures/ptol/temple_2
+      structures/ptol/mercenary_camp
     </Entities>
   </Builder>
   <Identity>
@@ -13,8 +14,8 @@
     <GenericName>Judean Slinger</GenericName>
     <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
     <Icon>units/ptol/infantry_slinger.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_village</Techs>
+     <Requirements>
+      <Techs datatype="tokens">unlock_slingers</Techs>
     </Requirements>
   </Identity>
   <Promotion>
