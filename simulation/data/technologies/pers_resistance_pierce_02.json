@@ -4,10 +4,9 @@
 		"wood": 350,
 		"metal": 250
 	},
-	"supersedes": "soldier_resistance_pierce_01",
+	"supersedes": "pers_resistance_pierce",
 	"requirements": {
 		"all": [
-			{ "tech": "phase_town" },
 			{ "civ": "pers" }
 		]
 	},

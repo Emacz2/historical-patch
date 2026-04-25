@@ -6,8 +6,10 @@
   </Identity>
     <Researcher>
     <Technologies datatype="tokens">
-      soldier_resistance_pierce_per
-      soldier_resistance_hack_per
+      pers_resistance_hack
+      pers_resistance_pierce
+      pers_resistance_hack_02
+      pers_resistance_pierce_02
     </Technologies>
   </Researcher>
   <VisualActor>
