@@ -2,9 +2,9 @@
 <Entity parent="units/numidian_cavalry2|allied_cav">
   <Cost>
      <Resources>
-     <food>300</food>
+     <food>250</food>
       <wood>50</wood>
-      <metal>100</metal>
+      <metal>50</metal>
     </Resources>
   </Cost>
   <Identity>
