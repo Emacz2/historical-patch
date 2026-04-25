@@ -24,7 +24,7 @@
     </Resources>
   </Cost>
   <Promotion>
-    <RequiredXp>80</RequiredXp>
+    <RequiredXp>60</RequiredXp>
   </Promotion>
   <Identity>
     <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
