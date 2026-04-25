@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_infantry_ranged">
-  <Cost>
-    <BuildTime>11</BuildTime>
-  </Cost>
   <Attack>
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>3</Crush>
-        <Pierce>4</Pierce>
+        <Crush>3.5</Crush>
+        <Pierce>3.5</Pierce>
       </Damage>
       <MaxRange>47</MaxRange>
       <PrepareTime>500</PrepareTime>
