@@ -13,7 +13,7 @@
 		]
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
-	"icon": "shields_generic_wood.png",
+	"icon": "armor_leather.png",
 	"researchTime": 20,
 	"tooltip": "Soldiers +1 hack and +0.5 crush resistance.",
 	"modifications": [
