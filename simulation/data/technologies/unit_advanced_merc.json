@@ -8,7 +8,7 @@
 		{ "value": "Health/Max", "add": 25, "affects": "Ranged !Switch" },
 		{ "value": "Health/Max", "add": 50, "affects": "Melee !Switch" },
 		{ "value": "Attack/Ranged/Projectile/Spread", "multiply": 0.9, "affects": "Ranged" },
-		{ "value": "Attack/Ranged/MaxRange", "multiply": 1.1  },
+		{ "value": "Attack/Ranged/MaxRange", "multiply": 1.05  },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 2, "affects": "!Switch" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2, "affects": "!Switch" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2, "affects": "!Switch" },

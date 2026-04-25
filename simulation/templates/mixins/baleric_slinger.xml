@@ -7,7 +7,7 @@
     <Ranged>
     <Damage>
       <Crush op="mul">1.25</Crush>
-      <Pierce op="mul">0.9</Peirce>
+      <Pierce op="mul">0.9</Pierce>
     </Damage>
       <Projectile>
         <Spread op="mul">0.9</Spread>
