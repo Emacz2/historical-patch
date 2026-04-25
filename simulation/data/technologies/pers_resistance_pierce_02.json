@@ -1,0 +1,24 @@
+{
+	"genericName": "CS cost less resources",
+	"cost": {
+		"wood": 350,
+		"metal": 250
+	},
+	"supersedes": "soldier_resistance_pierce_01",
+	"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "civ": "pers" }
+		]
+	},
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "shields_generic_bronze.png",
+	"researchTime": 40,
+	"tooltip": "CS soldiers cost -5 food and wood. ",
+		"modifications": [
+		{ "value": "Cost/Resources/food", "add": -5 },
+		{ "value": "Cost/Resources/wood", "add": -5 }
+	],
+	"affects": ["Citizen Soldier"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}
