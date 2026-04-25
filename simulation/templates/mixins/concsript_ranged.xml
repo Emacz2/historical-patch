@@ -22,7 +22,7 @@
     <RequiredXp>100</RequiredXp>
   </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Conscript Civilian</VisibleClasses>
+    <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
     <Tooltip>Concript ranged soldiers -10% train time and cost 5 less food and wood but 5% less dmg and 10% less accurate.  They lose consript status when promoted to basic rank</Tooltip>
   </Identity>
 </Entity>

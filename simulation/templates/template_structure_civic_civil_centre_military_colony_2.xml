@@ -45,6 +45,18 @@
       -hellenistic_metropolis
     </Technologies>
   </Researcher>
+    <Trainer>
+    <Entities datatype="tokens">
+      -units/{civ}/support_civilian
+      -units/{civ}/support_female_citizen
+      units/{civ}/infantry_pikeman_e
+      units/{civ}/infantry_archer_e
+      units/{civ}/merc_thracian_peltast
+      units/{civ}/merc_inf_archer_e
+      units/{civ}/cavalry_spearman_merc_e
+      units/{civ}/champion_infantry_pikeman
+    </Entities>
+  </Trainer>
   <Sound>
     <SoundGroups>
       <select>interface/select/building/sel_gymnasium.xml</select>

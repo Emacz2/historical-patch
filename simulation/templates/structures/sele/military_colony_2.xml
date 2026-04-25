@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_civic_civil_centre_military_colony">
+<Entity parent="template_structure_civic_civil_centre_military_colony_2">
   <Footprint>
     <Square width="31" depth="31"/>
     <Height>8</Height>
@@ -14,10 +14,6 @@
       pair_unlock_champions_sele
     </Technologies>
   </Researcher>
-  <Promotion>
-    <Entity>structures/sele/military_colony_2</Entity>
-    <RequiredXp>3000</RequiredXp>
-  </Promotion>
   <Obstruction>
     <Static width="29" depth="29"/>
   </Obstruction>
