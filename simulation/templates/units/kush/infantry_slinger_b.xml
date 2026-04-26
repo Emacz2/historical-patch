@@ -14,7 +14,10 @@
     <Lang>napatan</Lang>
     <SelectionGroupName>units/kush/infantry_slinger_b</SelectionGroupName>
     <GenericName>Nubian Slinger</GenericName>
-    <Icon>units/sele/inf_slinger.png</Icon>
+    <Icon>units/kush/cs_slinger.png</Icon>
+     <Requirements>
+      <Techs datatype="tokens">unlock_slingers</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/kush/infantry_slinger_a</Entity>
