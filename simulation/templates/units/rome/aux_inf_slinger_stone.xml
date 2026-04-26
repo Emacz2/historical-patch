@@ -8,9 +8,6 @@
     <Lead>
       <Entity>units/rome/aux_inf_slinger_lead</Entity>
       <Tooltip>Switch to stone throwing Balearic Slinger</Tooltip>
-      <Cost>
-        <Metal>10</Metal>
-      </Cost>
       <Variant>upgrading</Variant>
       <Time>10</Time>
     </Lead>

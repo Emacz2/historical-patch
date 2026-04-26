@@ -16,6 +16,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
+			{ "notciv": "pers" },
 			{ "notciv": "spart" }
 		]
 	},
@@ -27,6 +28,6 @@
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1.5 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
 	],
-	"affects": ["Soldier !Mercenary !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -2,7 +2,7 @@
 <Entity>
  <Attack>
     <Capture>
-      <Capture>1</Capture>
+      <Capture>0</Capture>
       <MaxRange>1</MaxRange>
       <RepeatTime>5000</RepeatTime>
     </Capture>
@@ -18,6 +18,32 @@
       </Projectile>
   </Ranged>
 </Attack>
+ <Cost>
+    <Resources>
+      <food>40</food>
+      <metal>0</metal>
+      <stone>0</stone>
+      <wood>0</wood>
+    </Resources>
+  </Cost>
+  <Health>
+    <Max>50</Max>
+  </Health>
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack>0.0</Hack>
+        <Pierce>0.0</Pierce>
+        <Crush>0</Crush>
+      </Damage>
+      <ApplyStatus>
+        <Burning>
+        <Duration>0.5</Duration>
+        <BlockChance>0.5</BlockChance>
+        </Burning>
+      </ApplyStatus>
+    </Entity>
+  </Resistance>
   <Cost>
     <BuildTime op="mul">0.85</BuildTime>
   </Cost>
@@ -25,13 +51,15 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.meat op="mul">1.2</food.meat>
-      <wood.tree op="mul">1.2</wood.tree>
-      <wood.ruins  op="mul">1.2</wood.ruins>
-      <stone.rock  op="mul">1.2</stone.rock>
-      <stone.ruins  op="mul">1.2</stone.ruins>
-      <metal.ore  op="mul">1.2</metal.ore>
-      <metal.ruins  op="mul">1.2</metal.ruins>
+      <food.fruit>0.8</food.fruit>
+      <food.grain>0.4</food.grain>
+      <food.meat>3</food.meat>
+      <wood.tree>0.8</wood.tree>
+      <wood.ruins>5</wood.ruins>
+      <stone.rock>0.5</stone.rock>
+      <stone.ruins>2</stone.ruins>
+      <metal.ore>0.5</metal.ore>
+      <metal.ruins>2</metal.ruins>
     </Rates>
     <Capacities>
       <food>10</food>
@@ -45,7 +73,7 @@
     <RunMultiplier op="mul">1.06</RunMultiplier>
   </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Serf Civilian</VisibleClasses>
-    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 5% faster run than their soldier equivilent.</Tooltip>
+    <VisibleClasses datatype="tokens">Serf Civilian -Soldier -Infantry</VisibleClasses>
+    <Tooltip>Ranged Serfs 50% less dmg, 25% less acurate and range and no resistances. However, 15% less train time, 20% faster resource gathering and 3% faster walk, 6% faster run than their soldier equivilent.</Tooltip>
   </Identity>
 </Entity>

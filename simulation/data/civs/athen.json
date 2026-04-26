@@ -40,12 +40,12 @@
 			"Template": "structures/athen/civil_centre"
 		},
 		{
-			"Template": "units/athen/support_female_citizen",
+			"Template": "units/athen/support_civilian",
 			"Count": 4
 		},
 		{
 			"Template": "units/athen/infantry_spearman_b",
-			"Count": 2
+			"Count": 3
 		},
 		{
 			"Template": "units/athen/infantry_javelineer_b",
@@ -53,10 +53,8 @@
 		},
 		{
 			"Template": "units/athen/scout"
-		},
-		{
-			"Template": "units/athen/serf_slinger"
 		}
+		
 	],
 	"AINames": [
 		"Alcibiades",

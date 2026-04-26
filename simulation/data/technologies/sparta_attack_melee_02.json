@@ -1,6 +1,5 @@
 {
-	"genericName": "Iron Weapons",
-	"description": "Using iron instead of bronze gave weapons additional power.",
+	"genericName": " Quenching",
 	"cost": {
 		"food": 200,
 		"metal": 150
@@ -20,11 +19,11 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Neodamodes !Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "!Neodamodes !Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "!Neodamodes !Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
 	],
-	"affects": ["Soldier !Mercenary !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

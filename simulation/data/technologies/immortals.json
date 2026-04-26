@@ -14,12 +14,10 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "immortals.png",
 	"researchTime": 45,
-	"tooltip": "Immortals −15% training time and 15 less food, 10 less wood, 5 less metal.",
+	"tooltip": "Immortals −20% training.",
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.85 },
-		{ "value": "Cost/Resources/food", "add": -15},
-		{ "value": "Cost/Resources/metal", "add": -5},
-		{ "value": "Cost/Resources/wood", "add": -10}
+		{ "value": "Cost/BuildTime", "multiply": 0.80 }
+		
 	],
 	"affects": ["Immortal"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

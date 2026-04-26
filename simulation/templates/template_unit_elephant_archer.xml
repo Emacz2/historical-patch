@@ -6,7 +6,7 @@
       <Damage>
         <Pierce>8.2</Pierce>
       </Damage>
-      <MaxRange>66</MaxRange>
+      <MaxRange>68</MaxRange>
       <PrepareTime>600</PrepareTime>
       <RepeatTime>1600</RepeatTime>
       <Projectile>
@@ -30,6 +30,11 @@
   <Health>
     <Max>200</Max>
   </Health>
+      <Loot>
+    <xp>65</xp>
+    <metal>5</metal>
+    <wood>10</wood>
+  </Loot>
   <Identity>
     <GenericName>Elephant Archer</GenericName>
     <VisibleClasses datatype="tokens">Ranged Archer</VisibleClasses>

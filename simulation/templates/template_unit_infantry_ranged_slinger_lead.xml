@@ -4,8 +4,8 @@
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>0.5</Crush>
-        <Pierce>5</Pierce>
+        <Crush>0.3</Crush>
+        <Pierce>4.9</Pierce>
       </Damage>
       <MaxRange>72</MaxRange>
       <PrepareTime>500</PrepareTime>
@@ -22,8 +22,8 @@
   </Attack>
     <Cost>
     <Resources>
-      <metal>35</metal>
-      <wood>15</wood>
+      <food op="add">10</food>
+      <metal>40</metal>
     </Resources>
   </Cost>
   <Identity>
@@ -36,7 +36,7 @@
     </SoundGroups>
   </Sound>
    <UnitMotion>
-    <WalkSpeed op="mul">0.97</WalkSpeed>
+    <WalkSpeed op="mul">1.08</WalkSpeed>
     <Acceleration op="add">3.0</Acceleration>
   </UnitMotion>
   <Vision>

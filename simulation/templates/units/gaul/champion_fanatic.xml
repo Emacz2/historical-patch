@@ -25,7 +25,7 @@
     </Entity>
   </Resistance>
   <UnitMotion>
-    <WalkSpeed op="mul">1.25</WalkSpeed>
+    <WalkSpeed op="mul">1.4</WalkSpeed>
     <Acceleration op="mul">1.7</Acceleration>
   </UnitMotion>
   <VisualActor>

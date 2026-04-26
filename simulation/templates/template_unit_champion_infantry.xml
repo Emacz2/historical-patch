@@ -15,9 +15,6 @@
     <VisibleClasses datatype="tokens">Infantry</VisibleClasses>
     <GenericName>Champion Infantry</GenericName>
   </Identity>
-  <Loot>
-    <xp>110</xp>
-  </Loot>
   <Position>
     <Anchor>upright</Anchor>
   </Position>
@@ -37,8 +34,10 @@
       <death>actor/human/death/{phenotype}_death.xml</death>
     </SoundGroups>
   </Sound>
- <UnitMotion>
-    <WalkSpeed op="mul">1.05</WalkSpeed>
-    <RunMultiplier op="mul">0.95</RunMultiplier>
+  <UnitMotion>
+    <WalkSpeed>8.2</WalkSpeed>
+    <RunMultiplier>1.25</RunMultiplier>
+    <Acceleration>30</Acceleration>
+    <Weight>10</Weight>
   </UnitMotion>
 </Entity>

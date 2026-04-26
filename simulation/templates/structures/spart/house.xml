@@ -4,11 +4,6 @@
     <Civ>spart</Civ>
     <SpecificName>Oikos</SpecificName>
   </Identity>
-  <Trainer>
-    <Entities datatype="tokens">
-      units/{civ}/support_female_citizen_house
-    </Entities>
-  </Trainer>
   <VisualActor>
     <Actor>structures/spartans/house.xml</Actor>
   </VisualActor>

@@ -20,11 +20,13 @@
   <EntityLimits>
     <Limits>
       <Animal>50</Animal>
+      <Champion_Perioikoi>10</Champion_Perioikoi>
       <CivilCentre>1</CivilCentre>
       <ConsularBodyguard>24</ConsularBodyguard>
       <Doulos>5</Doulos>
       <Gladiator>0</Gladiator>
-      <Helot>3</Helot>
+      <HelotM>5</HelotM>
+      <HelotW>5</HelotW>
       <Hero>1</Hero>
       <Juggernaut>1</Juggernaut>
       <Kennel>2</Kennel>
@@ -36,6 +38,7 @@
       <Neodamodes>15</Neodamodes>
       <Palace>1</Palace>
       <PerioikoiCamp>1</PerioikoiCamp>
+      <PerioikoiRange>25</PerioikoiRange>
       <Pillar>0</Pillar>
       <PyramidLarge>2</PyramidLarge>
       <PraetorianGuard>0</PraetorianGuard>
@@ -46,6 +49,7 @@
       <Theater>1</Theater>
       <ScythianGuard>0</ScythianGuard>
       <Silvermine>3</Silvermine>
+      <SpartW>0</SpartW>
       <Yakhchal>5</Yakhchal>
       <WarDog>5</WarDog>
       <SacredBandInfantry>30</SacredBandInfantry>
@@ -64,14 +68,17 @@
       <LandTrader>
         <Market>5</Market>
       </LandTrader>
-      <Helot>
-        <Champion>2</Champion>
-      </Helot>
+      <HelotM>
+        <Free>2</Free>
+      </HelotM>
+      <HelotW>
+        <HelotM>1</HelotM>
+      </HelotW>
       <Juggernaut>
         <PtolemyIV>4</PtolemyIV>
       </Juggernaut>
       <MaceSlave>
-        <Nobels>1</Nobels>
+        <Nobel>1</Nobel>
       </MaceSlave>
       <Neodamodes>
         <Brasidas>30</Brasidas>
@@ -89,8 +96,11 @@
         <ArmyCamp>10</ArmyCamp>
       </RomanSlave>
       <ScythianGuard>
-        <Fortress>105</Fortress>
+        <Fortress>10</Fortress>
       </ScythianGuard>
+      <SpartW>
+        <House>1</House>
+      </SpartW>
       <WarDog>
         <Kennel>10</Kennel>
       </WarDog>
@@ -159,6 +169,7 @@
     <UnitClasses datatype="tokens">
       Cavalry
       Champion
+      Free
       Citizen
       Civilian
       Domestic
@@ -173,11 +184,13 @@
     <StructureClasses datatype="tokens">
       Economic
       CivCentre
+      Special
       Fortress
       House
       Military
       Outpost
       Structure
+      Temple
       Wonder
       Two
     </StructureClasses>

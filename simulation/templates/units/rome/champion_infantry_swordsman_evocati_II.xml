@@ -24,6 +24,7 @@
   </Health>
   <Identity>
     <GenericName>Evocati II</GenericName>
+    <Rank>Elite</Rank>
     <Icon>units/rome/champion_legion_imperial.png</Icon>
   </Identity>
    <Promotion disable=""/>

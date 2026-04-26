@@ -10,7 +10,7 @@
 		]
 	},
 	"icon": "ionic_column.png",
-	"tooltip": "Infantry 3% faster walk speed. Melee units 5% more dmg, while ranged units 3% dmg, 5% more accurate and +l range.",
+	"tooltip": "Certian Champs and Special Infantry 3% faster walk speed, Melee units 5% more dmg, while ranged units 3% dmg, 5% more accurate and +l range.",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05},
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05},

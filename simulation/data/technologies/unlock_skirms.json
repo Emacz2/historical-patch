@@ -8,7 +8,9 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
-			{ "civ": "maur" }
+			{ "civ": "gaul" },
+			{ "civ": "maur" },
+			{ "civ": "mace" }
 	
 		]
 	},

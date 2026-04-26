@@ -3,9 +3,9 @@
  <Cost>
     <Resources>
       <stone>50</stone>
-      <wood>250</wood>
+      <wood>150</wood>
     </Resources>
-  <BuildTime>120</BuildTime>
+  <BuildTime>90</BuildTime>
   </Cost>
   <Footprint>
     <Square width="16.0" depth="13.0"/>
@@ -20,9 +20,12 @@
   <Identity>
     <Civ>gaul</Civ>
     <SpecificName>Celtic Coalition</SpecificName>
-    <Tooltip>Recruit soldiers from various Celtic tribes to join your forces!</Tooltip>
+    <Tooltip>Recruit soldiers from various Alliences with Celtic tribes to join your forces!</Tooltip>
     <Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Town</VisibleClasses>
+     <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
     <Icon>structures/embassy_celtic.png</Icon>
   </Identity>
   <Loot>

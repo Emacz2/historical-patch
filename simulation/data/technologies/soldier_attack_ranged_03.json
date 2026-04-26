@@ -1,6 +1,5 @@
 {
-	"genericName": "Trilobate Arrowheads",
-	"description": "Arrowheads with three lobes instead of two inflict larger wounds.",
+	"genericName": "Pyramidal arrowheads",
 	"cost": {
 		"wood": 500,
 		"metal": 400
@@ -16,6 +15,6 @@
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.2 },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.2 }
 	],
-	"affects": ["Soldier !Helot !Mercenary"],
+	"affects": ["Soldier !Helot !Mercenary !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="hoplite|greek_olympian|template_unit_champion_infantry_spearman">
+<Entity parent="hoplite|greek_olympian|polearm|template_unit_champion_infantry_spearman">
   <Auras datatype="tokens">
     units/phalanx
   </Auras>
@@ -16,8 +16,9 @@
     <Lang>greek</Lang>
     <GenericName>Macedonian Shield Bearer</GenericName>
     <SpecificName>Hypaspistḗs</SpecificName>
+    <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <SelectionGroupName>units/mace/champion_infantry_spearman</SelectionGroupName>
-    <Icon>units/mace/hypaspist.png</Icon>
+    <Icon>units/mace/champion_infantry.png</Icon>
     <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>

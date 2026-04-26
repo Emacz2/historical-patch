@@ -31,7 +31,7 @@
     <Classes datatype="tokens">ConquestCritical CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Town Council</VisibleClasses>
     <Icon>structures/tholos.png</Icon>
-    <Requirements>
+   <Requirements>
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
@@ -72,6 +72,13 @@
       units/{civ}/hero_vercingetorix
     </Entities>
   </Trainer>
+    <Researcher>
+    <Technologies datatype="tokens">
+      alliance_raeti
+      alliance_rutheni
+      alliance_treveri
+    </Technologies>
+  </Researcher>
   <Vision>
     <Range>40</Range>
   </Vision>

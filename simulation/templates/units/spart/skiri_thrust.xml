@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="allied_inf|template_unit_infantry_melee_spearman">
+  <Cost>
+    <BuildTime op="mul">1.2</BuildTime>
+     <Resources>
+      <food>100</food>
+      <metal>0</metal>
+      <wood>30</wood>
+      <stone>0</stone>
+    </Resources>
+  </Cost>
+   <Health>
+    <Max>200</Max>
+  </Health>
+       <Resistance>
+    <Entity>
+      <Damage>
+        <Crush>2</Crush>
+        <Hack>1.5</Hack>
+        <Pierce>1.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+   <Identity>
+    <Rank>Elite</Rank>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <GenericName>Elite Skiritai Light Skirmisher melee</GenericName>
+    <SpecificName>Ékdromos Skirítēs</SpecificName>
+    <VisibleClasses datatype="tokens">-Citizen Switch</VisibleClasses>
+    <Icon>units/spart/skiri_thurst.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">phase_city</Techs>
+    </Requirements>
+  </Identity>
+    <Upgrade>
+    <Skiri_jav>
+      <Entity>units/spart/skiri_jav</Entity>
+      <Tooltip>Switch to throwing javelins.</Tooltip>
+      <Variant>upgrading</Variant>
+      <Time>8</Time>
+    </Skiri_jav>
+  </Upgrade>
+  <UnitMotion>
+    <WalkSpeed>12.0</WalkSpeed>
+    <RunMultiplier>1.55</RunMultiplier>
+  </UnitMotion>
+  <Vision>
+    <Range>80</Range>
+  </Vision>
+  <Promotion disable=""/>
+  <ResourceGatherer disable=""/>
+  <VisualActor>
+    <Actor>units/spartans/skiri_thrust_e.xml</Actor>
+  </VisualActor>
+</Entity>

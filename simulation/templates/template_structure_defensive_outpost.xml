@@ -71,10 +71,11 @@
    <Researcher>
     <Technologies datatype="tokens">
      outpost_vision
+     outpost_vision_greek
     </Technologies>
   </Researcher>
   <Vision>
-    <Range>90</Range>
+    <Range>80</Range>
   </Vision>
   <VisualActor>
     <FoundationActor>structures/fndn_2x2.xml</FoundationActor>

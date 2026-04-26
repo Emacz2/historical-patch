@@ -11,23 +11,14 @@
   <Identity>
     <Civ>spart</Civ>
     <GenericName>Military Mess Hall</GenericName>
-    <SpecificName>Syssition</SpecificName>
+    <SpecificName>Pheideition</SpecificName>
     <Icon>structures/syssition.png</Icon>
-    <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
+    <VisibleClasses datatype="tokens">Syssiton Special</VisibleClasses>
   </Identity>
-   <Upgrade>
-    <syssiton>
-      <Entity>structures/spart/syssiton_2</Entity>
-      <Tooltip>Upgrade to a bigger Mess Hall.</Tooltip>
-      <Cost>
-        <metal>50</metal>
-        <wood>100</wood>
-        <stone>100</stone>
-      </Cost>
-      <Variant>upgrading</Variant>
-      <Time>45</Time>
-    </syssiton>
-  </Upgrade>
+  <Promotion>
+    <Entity>structures/spart/syssiton_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Obstruction>
     <Static width="15.0" depth="25.0"/>
   </Obstruction>
@@ -49,13 +40,11 @@
   <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear
-      units/{civ}/hero_leonidas
+      units/{civ}/champion_infantry_spear_b
     </Entities>
   </Trainer>
   <Researcher>
    <Technologies datatype="tokens">
-   tyrtean_paeans
    sparta_attack_melee_01
   </Technologies>
   </Researcher>

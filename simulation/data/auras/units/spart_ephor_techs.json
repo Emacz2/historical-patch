@@ -1,0 +1,30 @@
+{
+	"type": "garrison",
+	"affects": ["Structure"],
+	"modifications": [
+		{
+			"value": "Researcher/TechCostMultiplier/wood",
+			"multiply": 0.95
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/food",
+			"multiply": 0.95
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/metal",
+			"multiply": 0.95
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/stone",
+			"multiply": 0.95
+		},
+		{
+			"value": "Researcher/TechCostMultiplier/time",
+			"multiply": 0.95
+		}
+	],
+	"auraName": "Research Mandate",
+	"showDescription": 1,
+	"auraDescription": "Tech research cost 5% less resources and -5% research time for each garrisoned Ephor.",
+	"stackable": true
+}

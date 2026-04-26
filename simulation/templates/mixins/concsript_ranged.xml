@@ -3,47 +3,26 @@
  <Attack>
   <Ranged>
 	  <Damage>
-	    <Hack op="mul">0.90</Hack>
-      <Pierce op="mul">0.90</Pierce>
-      <Crush op="mul">0.90</Crush>
+	    <Hack op="mul">0.95</Hack>
+      <Pierce op="mul">0.95</Pierce>
+      <Crush op="mul">0.95</Crush>
     </Damage>
      <Projectile>
         <Spread op="mul">1.1</Spread>
       </Projectile>
   </Ranged>
 </Attack>
-  <Cost>
-    <BuildTime op="mul">0.85</BuildTime>
+ <Cost>
     <Resources>
-      <wood op="add">-10</wood>
+      <food op="add">-5</food>
+      <wood op="add">-5</wood>
     </Resources>
   </Cost>
-  <ResourceGatherer>
-    <MaxDistance>2.0</MaxDistance>
-    <BaseSpeed>1.0</BaseSpeed>
-    <Rates>
-      <food.fruit op="mul">1.05</food.fruit>
-      <food.grain op="mul">1.05</food.grain>
-      <food.meat op="mul">1.05</food.meat>
-      <wood.tree op="mul">1.05</wood.tree>
-      <wood.ruins op="mul">1.05</wood.ruins>
-      <stone.rock op="mul">1.05</stone.rock>
-      <stone.ruins op="mul">1.05</stone.ruins>
-      <metal.ore  op="mul">1.05</metal.ore>
-      <metal.ruins op="mul">1.05</metal.ruins>
-    </Rates>
-    <Capacities>
-      <food>15</food>
-      <wood>15</wood>
-      <stone>15</stone>
-      <metal>15</metal>
-    </Capacities>
-  </ResourceGatherer>
   <Promotion>
-    <RequiredXp>150</RequiredXp>
+    <RequiredXp>60</RequiredXp>
   </Promotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Conscript Civilian</VisibleClasses>
-    <Tooltip>Concript Ranged units gather resrouces 5% faster, have a carrying capacity of 15 for each resoruce, cost 10 less wood and -15% train time; but 10% less dmg and accuracy. They take 50% longer to promote, but lose their consript status when they achieve basic rang</Tooltip>
+    <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
+    <Tooltip>Concript ranged soldiers -10% train time and cost 5 less food and wood but 5% less dmg and 10% less accurate.  They lose consript status when promoted to basic rank</Tooltip>
   </Identity>
 </Entity>

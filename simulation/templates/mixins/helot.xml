@@ -16,7 +16,6 @@
       <Pierce op="mul">0.75</Pierce>
       <Crush op="mul">0.75</Crush>
     </Damage>
-      <RepeatTime op="add">250</RepeatTime>
       <MaxRange op="mul">0.75</MaxRange>
       <Projectile>
         <Spread op="mul">1.25</Spread>
@@ -24,8 +23,14 @@
   </Ranged>
 </Attack>
  <Cost>
-    <Population>0</Population>
-    <BuildTime op="mul">0.85</BuildTime>
+    <Population>1</Population>
+    <BuildTime>9</BuildTime>
+      <Resources>
+      <food>40</food>
+      <metal>0</metal>
+      <stone>0</stone>
+      <wood>0</wood>
+    </Resources>
   </Cost>
   <Health>
     <Max>50</Max>
@@ -34,15 +39,15 @@
     <MaxDistance>2.0</MaxDistance>
     <BaseSpeed>1.0</BaseSpeed>
     <Rates>
-      <food.fruit op="mul">1.25</food.fruit>
-      <food.grain op="mul">1.25</food.grain>
-      <food.meat op="mul">1.25</food.meat>
-      <wood.tree op="mul">1.25</wood.tree>
-      <wood.ruins  op="mul">1.25</wood.ruins>
-      <stone.rock  op="mul">1.25</stone.rock>
-      <stone.ruins  op="mul">1.25</stone.ruins>
-      <metal.ore  op="mul">1.25</metal.ore>
-      <metal.ruins  op="mul">1.25</metal.ruins>
+      <food.fruit>0.8</food.fruit>
+      <food.grain>0.4</food.grain>
+      <food.meat>3</food.meat>
+      <wood.tree>0.8</wood.tree>
+      <wood.ruins>5</wood.ruins>
+      <stone.rock>0.5</stone.rock>
+      <stone.ruins>2</stone.ruins>
+      <metal.ore>0.5</metal.ore>
+      <metal.ruins>2</metal.ruins>
     </Rates>
     <Capacities>
       <food>15</food>
@@ -60,8 +65,11 @@
       </Damage>
     </Entity>
   </Resistance>
+   <UnitMotion>
+    <WalkSpeed op="mul">1.1</WalkSpeed>
+  </UnitMotion>
   <Identity>
-    <VisibleClasses datatype="tokens">Helot</VisibleClasses>
-    <Tooltip>Helots 50 health, -25% dmg, 25% less accurate -25% range and +250 repeat time but gather resources 25% faster. They don't count torwards population or recieve forge uprades</Tooltip>
+    <VisibleClasses datatype="tokens">HelotM -Citizen -Soldier</VisibleClasses>
+    <Tooltip>Helots are similar to serfs, but 25% less dmg and range instead of 50%</Tooltip>
   </Identity>
 </Entity>

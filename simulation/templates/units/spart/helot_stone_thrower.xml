@@ -13,8 +13,6 @@
   </Builder>
   <Cost>
     <Resources>
-      <food>50</food>
-      <wood>15</wood>
       <stone>10</stone>
     </Resources>
   </Cost>
@@ -23,13 +21,13 @@
     <Lang>greek</Lang>
     <SelectionGroupName>units/spart/infantry_archer_b</SelectionGroupName>
     <GenericName>Helot Stone Thrower</GenericName>
-    <Icon>units/spart/helot_archer.png</Icon>
+    <Icon>units/spart/helot_stone.png</Icon>
   </Identity>
   <TrainingRestrictions>
-  <Category>Helot</Category>
+  <Category>HelotM</Category>
   </TrainingRestrictions>
-   <Promotion>
-    <Entity>units/spart/neodamodes_archer</Entity>
+     <Promotion>
+    <Entity>units/spart/neodamodes_spearman</Entity>
     <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>

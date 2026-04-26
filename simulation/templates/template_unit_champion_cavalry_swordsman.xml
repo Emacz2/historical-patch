@@ -24,6 +24,16 @@
     <GenericName>Champion Cavalry Swordsman</GenericName>
     <Tooltip>Counters: 1.25× vs Ranged Infantry.</Tooltip>
   </Identity>
+    <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <UnitMotion>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

@@ -4,7 +4,7 @@
     <Civ>brit</Civ>
     <GenericName>Brythonic Champion</GenericName>
     <SpecificName>Argos ríastrad </SpecificName>
-    <Icon>units/brit/champion_infantry.png</Icon>
+    <Icon>units/brit/champ_berserk.png</Icon>
   </Identity>
   <Attack>
     <Melee>

@@ -4,17 +4,17 @@
     <Ranged>
       <AttackName>Bow</AttackName>
       <Damage>
-        <Pierce>2.25</Pierce>
+        <Pierce>4</Pierce>
       </Damage>
-      <MaxRange>35</MaxRange>
+      <MaxRange>30</MaxRange>
       <PrepareTime>400</PrepareTime>
-      <RepeatTime>2000</RepeatTime>
+      <RepeatTime>3500</RepeatTime>
       <Projectile>
         <Speed>100</Speed>
-        <Spread>2</Spread>
+        <Spread>1.5</Spread>
         <Gravity>50</Gravity>
         <FriendlyFire>false</FriendlyFire>
-        <LaunchPoint y="0"/>
+        <LaunchPoint y="3"/>
       </Projectile>
       <PreferredClasses datatype="tokens">Human</PreferredClasses>
       <RangeOverlay>
@@ -24,8 +24,14 @@
       </RangeOverlay>
     </Ranged>
   </Attack>
+  <BuildingAI>
+    <DefaultArrowCount>0</DefaultArrowCount>
+    <MaxArrowCount>5</MaxArrowCount>
+    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
+    <GarrisonArrowClasses>Perioikoi</GarrisonArrowClasses>
+  </BuildingAI>
   <BuildRestrictions>
-    <Territory>neutral</Territory>
+     <Territory>own neutral</Territory>
     <Category>PerioikoiCamp</Category>
     <Distance>
       <FromClass>PerioikoiCamp</FromClass>
@@ -34,30 +40,24 @@
   </BuildRestrictions>
   <Capturable>
     <CapturePoints op="mul">1.5</CapturePoints>
-    <RegenRate>7.5</RegenRate>
-    <GarrisonRegenRate>5.0</GarrisonRegenRate>
+    <RegenRate>8</RegenRate>
+    <GarrisonRegenRate>5.5</GarrisonRegenRate>
   </Capturable>
   <Cost>
     <BuildTime>150</BuildTime>
     <Resources>
       <wood>250</wood>
-      <stone>75</stone>
     </Resources>
   </Cost>
   <Footprint>
     <Square width="30.0" depth="30.0"/>
     <Height>10.0</Height>
   </Footprint>
-    <BuildingAI>
-    <DefaultArrowCount>0</DefaultArrowCount>
-    <GarrisonArrowMultiplier>1</GarrisonArrowMultiplier>
-    <GarrisonArrowClasses>Perioikoi</GarrisonArrowClasses>
-  </BuildingAI>
   <GarrisonHolder>
     <Max>30</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Perioikoi</List>
+    <List datatype="tokens">Perioikoi HelotW HelotM</List>
     <BuffHeal>0</BuffHeal>
     <LoadingRange>6</LoadingRange>
   </GarrisonHolder>
@@ -65,7 +65,7 @@
     <Bonus>5</Bonus>
   </Population>
   <Health>
-    <Max>1750</Max>
+    <Max>1500</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_rome_sb</SpawnEntityOnDeath>
   </Health>
   <Identity>
@@ -77,6 +77,10 @@
     <VisibleClasses datatype="tokens">Village Camp</VisibleClasses>
     <Icon>structures/roman_camp.png</Icon>
   </Identity>
+     <Promotion>
+    <Entity>structures/spart/camp_2</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <Loot>
     <wood>100</wood>
   </Loot>
@@ -112,9 +116,12 @@
   <Trainer>
     <BatchTimeModifier>0.9</BatchTimeModifier>
     <Entities datatype="tokens">
+      units/{civ}/support_female_helot
+      units/{civ}/helot_javelineer
       units/{civ}/infantry_spearman_b
-      units/{civ}/infantry_javelineer_b
-      units/{civ}/champion_infantry_swordsman
+      units/{civ}/skiri_spearman
+      units/{civ}/neodamodes_spearman
+      units/{civ}/perioikoi_range
     </Entities>
   </Trainer>
   <Vision>

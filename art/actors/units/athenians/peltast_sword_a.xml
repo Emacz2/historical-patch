@@ -13,25 +13,15 @@
       </props>
     </variant>
   </group>
-  <group>
-    <variant frequency="1" name="tunic_basic_01_02">
+   <group>
+    <variant frequency="1" name="tunic_elite_01_01">
       <textures>
-        <texture file="skeletal/thrac/tunic_basic_01_02.png" name="baseTex"/>
+        <texture file="skeletal/thrac/tunic_elite_01_01.png" name="baseTex"/>
       </textures>
     </variant>
-    <variant frequency="1" name="tunic_basic_02_02">
+    <variant frequency="1" name="tunic_elite_01_02">
       <textures>
-        <texture file="skeletal/thrac/tunic_basic_02_02.png" name="baseTex"/>
-      </textures>
-    </variant>
-    <variant frequency="1" name="tunic_basic_03_02">
-      <textures>
-        <texture file="skeletal/thrac/tunic_basic_03_02.png" name="baseTex"/>
-      </textures>
-    </variant>
-    <variant frequency="1" name="tunic_basic_04_02">
-      <textures>
-        <texture file="skeletal/thrac/tunic_basic_04_02.png" name="baseTex"/>
+        <texture file="skeletal/thrac/tunic_elite_01_02.png" name="baseTex"/>
       </textures>
     </variant>
   </group>

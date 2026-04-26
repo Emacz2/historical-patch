@@ -11,9 +11,9 @@
   <Identity>
     <Civ>spart</Civ>
     <GenericName>Grand Military Mess Hall</GenericName>
-    <SpecificName>Syssition</SpecificName>
+    <SpecificName>Pheideition</SpecificName>
     <Icon>structures/syssition.png</Icon>
-    <VisibleClasses datatype="tokens">Syssiton</VisibleClasses>
+    <VisibleClasses datatype="tokens">Syssiton Special</VisibleClasses>
   </Identity>
   <Obstruction>
     <Static width="15.0" depth="25.0"/>
@@ -29,6 +29,9 @@
     <Max>15</Max>
     <List datatype="tokens">Champion Spearman</List>
   </GarrisonHolder>
+    <Population>
+    <Bonus>15</Bonus>
+  </Population>
   <TerritoryInfluence>
     <Root>false</Root>
     <Radius>50</Radius>
@@ -37,13 +40,12 @@
   <Trainer>
     <BatchTimeModifier>0.6</BatchTimeModifier>
     <Entities datatype="tokens">
-      units/{civ}/champion_infantry_spear
+      units/{civ}/champion_infantry_spear_a
       units/{civ}/hero_leonidas
     </Entities>
   </Trainer>
   <Researcher>
    <Technologies datatype="tokens">
-   tyrtean_paeans
    sparta_attack_melee_01
   </Technologies>
   </Researcher>

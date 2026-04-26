@@ -12,6 +12,9 @@
     <GenericName>Gallic Peltast</GenericName>
     <SpecificName>Adretos</SpecificName>
     <Icon>units/gaul/infantry_javelinist.png</Icon>
+    <Requirements>
+      <Techs datatype="tokens">unlock_skirms</Techs>
+    </Requirements>
   </Identity>
   <Promotion>
     <Entity>units/gaul/infantry_javelineer_a</Entity>

@@ -1,6 +1,5 @@
 {
-	"genericName": "Wooden Shield",
-	"description": "Wooden shields are heavier but much better able to resist projectiles and blows than wicker-frame shields.",
+	"genericName": "Molded Greave",
 	"cost": {
 		"wood": 200,
 		"metal": 100
@@ -8,6 +7,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_town" },
+			{ "notciv": "pers" },
 			{ "notciv": "spart" }
 		]
 	},
@@ -19,6 +19,6 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 0.5 }
 	],
-	"affects": ["Soldier !Mercenary !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

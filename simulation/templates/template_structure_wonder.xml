@@ -23,15 +23,18 @@
     <Height>10.0</Height>
   </Footprint>
   <GarrisonHolder>
-    <Max>50</Max>
+    <Max>60</Max>
     <EjectHealth>0.1</EjectHealth>
     <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
-    <List datatype="tokens">Support Soldier</List>
+    <List datatype="tokens">Support Soldier Serf</List>
     <BuffHeal>5</BuffHeal>
     <LoadingRange>2</LoadingRange>
   </GarrisonHolder>
+    <Population>
+    <Bonus>60</Bonus>
+  </Population>
   <Health>
-    <Max>5000</Max>
+    <Max>6000</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_6x6</SpawnEntityOnDeath>
   </Health>
   <Identity>
@@ -89,9 +92,13 @@
   </Sound>
   <TerritoryInfluence>
     <Root>true</Root>
-    <Radius>75</Radius>
+    <Radius>100</Radius>
     <Weight>65535</Weight>
   </TerritoryInfluence>
+    <ResourceDropsite>
+    <Types>food wood stone metal</Types>
+    <Sharable>true</Sharable>
+    </ResourceDropsite>
   <Vision>
     <Range>75</Range>
   </Vision>

@@ -2,14 +2,14 @@
 <Entity parent="units/numidian_cavalry2|allied_cav">
   <Cost>
      <Resources>
-     <food>300</food>
+     <food>250</food>
       <wood>50</wood>
-      <metal>100</metal>
+      <metal>50</metal>
     </Resources>
   </Cost>
   <Identity>
     <GenericName>Allied Numidian Light Javelineer Cavalry</GenericName>
-    <Icon>units/special/num_cav.png</Icon>
+    <Icon>units/special/num_cav_champ.png</Icon>
   </Identity>
   <VisualActor>
     <Actor>units/carthaginians/champion_cavalry_numidian_c_m.xml</Actor>

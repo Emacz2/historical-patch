@@ -33,8 +33,11 @@
       <Techs datatype="tokens">phase_town</Techs>
     </Requirements>
   </Identity>
-  <Loot>
-    <wood>60</wood>
+ <Loot>
+    <food>50</food>
+    <metal>75</metal>
+    <stone>75</stone>
+    <wood>75</wood>
   </Loot>
   <Market>
     <TradeType>land</TradeType>
@@ -74,7 +77,7 @@
       units/{civ}/support_trader
       units/{civ}/merc_inf_slinger_market_b
       units/{civ}/merc_swordsman_market_b
-      units/{civ}/merc_archer_market_b
+      units/{civ}/merc_inf_archer_market_b
       units/{civ}/merc_maceman_market_b
       units/{civ}/merc_javelineer_market_b
       units/{civ}/merc_thracian_peltast

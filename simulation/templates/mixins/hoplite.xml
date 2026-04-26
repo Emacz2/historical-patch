@@ -5,6 +5,18 @@
       special/formations/phalanx
     </Formations>
   </UnitAI>
+   <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">1</Hack>
+        <Pierce op="add">1</Pierce>
+	      <Crush op="add">1.5</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+ <UnitMotion>
+  <WalkSpeed op="mul">0.96</WalkSpeed>
+ </UnitMotion>
   <Identity>
     <Classes datatype="tokens">Hoplite</Classes>
   </Identity>

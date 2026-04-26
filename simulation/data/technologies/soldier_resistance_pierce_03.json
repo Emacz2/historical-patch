@@ -1,6 +1,5 @@
 {
-	"genericName": "Improved Shield Alloys",
-	"description": "Strengthen shields further with stronger metal alloys.",
+	"genericName": "Shield Apron",
 	"cost": {
 		"wood": 500,
 		"metal": 400
@@ -9,6 +8,7 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_city" },
+			{ "notciv": "pers" },
 			{ "notciv": "spart" }
 		]
 	},
@@ -20,6 +20,6 @@
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 2 },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
 	],
-	"affects": ["Soldier !Mercenary !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

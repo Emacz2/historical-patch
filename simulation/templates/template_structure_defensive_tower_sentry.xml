@@ -48,6 +48,8 @@
   <Researcher>
     <Technologies datatype="tokens">
       tower_watch
+      tower_vision
+      tower_vision_greek
     </Technologies>
   </Researcher>
   <TerritoryInfluence>

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="polearm|neodamodes|hoplite|template_unit_infantry_melee_spearman">
+<Entity parent="neodamodes|hoplite|template_unit_infantry_melee_spearman">
  <Builder>
   <Entities datatype="tokens">
       structures/spart/gerousia
       structures/spart/syssiton
       structures/spart/camp
-      structures/spart/tent_helot
       -structures/wallset_palisade
       -structures/{civ}/wallset_stone
       -structures/{civ}/barracks
@@ -14,7 +13,7 @@
   <Identity>
     <Civ>spart</Civ>
     <SelectionGroupName>units/spart/infantry_spearman_neodamodes</SelectionGroupName>
-    <GenericName>Neodamodes Hoplite</GenericName>
+    <GenericName>Hoplite Hoplite</GenericName>
     <SpecificName>Neodamōdeis</SpecificName>
     <Icon>units/spart/infantry_spearman_neodamodes.png</Icon>
     <VisibleClasses datatype="tokens">-Worker</VisibleClasses>

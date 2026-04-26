@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
+<Cost>
+    <BuildTime op="mul">1.2</BuildTime>
+</Cost>
   <Attack>
     <Ranged>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">3.0</MaxRange>
       <Projectile>
         <Spread op="mul">0.9</Spread>
     </Projectile>

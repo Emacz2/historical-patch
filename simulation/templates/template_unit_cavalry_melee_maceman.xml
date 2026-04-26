@@ -23,6 +23,9 @@
     <GenericName>Cavalry Maceman</GenericName>
     <VisibleClasses datatype="tokens">Maceman</VisibleClasses>
   </Identity>
+   <UnitMotion>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

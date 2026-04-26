@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="hoplite|greek_olympian|template_unit_champion_infantry_spearman">
+  <Auras datatype="tokens">
+    units/phalanx
+  </Auras>
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <Rank>Advanced</Rank>
+     <GenericName>Hoplite Spartan</GenericName>
+    <SpecificName>Hebontes</SpecificName>
+    <VisibleClasses datatype="tokens">Free</VisibleClasses>
+    <Icon>units/spart/champ_spear_a.png</Icon>
+  </Identity>
+  <Promotion>
+    <Entity>units/spart/champion_infantry_spear_olympian</Entity>
+    <RequiredXp>300</RequiredXp>
+  </Promotion>
+  <VisualActor>
+    <Actor>units/spartans/champion_infantry_spear_a.xml</Actor>
+  </VisualActor>
+</Entity>

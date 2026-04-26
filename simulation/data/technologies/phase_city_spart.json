@@ -36,21 +36,23 @@
 	"modifications": [
 		{ "value": "Capturable/GarrisonRegenRate", "add": 1, "affects": "Structure" },
 		{ "value": "TerritoryInfluence/Radius", "multiply": 1.2, "affects": "CivCentre" },
-		{ "value": "GarrisonHolder/Max", "multiply": 1.4, "affects": "CivCentre" },
+		{ "value": "GarrisonHolder/Max", "add": 10, "affects": "CivCentre" },
+		{ "value": "Population/Bonus", "add": 10, "affects": "CivCentre" },
 		{ "value": "Attack/Ranged/MaxRange", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 7.5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 5, "affects": "CivCentre" },
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 2.5, "affects": "CivCentre" },
-		{ "value": "Health/Max", "add": 25, "affects": "Champion"},
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.075, "affects": "Champion" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.075, "affects": "Champion" },
-		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "Helot" },
-		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "Helot" },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !Helot"},
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Infantry" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Infantry" },
+		{ "value": "Cost/BuildTime", "multiply": 1.15, "affects": "Champion" },
+		{ "value": "Cost/BuildTime", "multiply": 0.90, "affects": "Perioikoi" },
+		{ "value": "Cost/BuildTime", "multiply": 0.9, "affects": "HelotM" },
+		{ "value": "Attack/Ranged/RepeatTime", "add": -125, "affects": "HelotM" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 0.5, "affects":  "Infantry !HelotM"},
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.2, "affects": "Leonidas" },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.2, "affects": "Leonidas" },
 		{ "value": "Health/Max", "multiply": 2, "affects": "Leonidas"},
-		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Market" }
+		{ "value": "Promotion/RequiredXp", "replace": 0, "affects": "Structure" }
 	
 		
 	],

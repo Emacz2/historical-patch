@@ -1,6 +1,5 @@
 {
-	"genericName": "Improved Fletching",
-	"description": "Improving the fletching of arrows increases their stability and speed, and thus their penetration.",
+	"genericName": "Bodkin Arrowheads",
 	"cost": {
 		"wood": 200,
 		"metal": 100
@@ -15,6 +14,6 @@
 		{ "value": "Attack/Ranged/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Ranged/Damage/Crush", "multiply": 1.1 }
 	],
-	"affects": ["Soldier !Helot !Mercenary"],
+	"affects": ["Soldier !Helot !Mercenary !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

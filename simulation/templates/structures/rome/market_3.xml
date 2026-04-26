@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_structure_economic_market">
+  <Identity>
+    <Civ>rome</Civ>
+    <SpecificName>Emporion</SpecificName> 
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
+  </Identity>
+    <Trainer>
+    <BatchTimeModifier>0.7</BatchTimeModifier>
+    <Entities datatype="tokens">
+      -units/{civ}/merc_inf_archer_market_b
+      -units/{civ}/merc_inf_slinger_market_b
+      units/{civ}/aux_archer
+      units/{civ}/aux_inf_slinger_stone
+      units/{civ}/cavalry_numidian
+    </Entities>
+  </Trainer>
+  <VisualActor>
+      <Actor>structures/hellenes/market.xml</Actor>
+  </VisualActor>
+</Entity>

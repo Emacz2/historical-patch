@@ -2,7 +2,7 @@
 <Entity>
   <Attack>
     <Melee>
-      <MaxRange op="add">2.0</MaxRange>
+      <MaxRange op="add">1.5</MaxRange>
       <Splash>
         <Shape>Circular</Shape>
         <Range>2</Range>
@@ -22,23 +22,20 @@
     <GenericName>Cataphract Cavalry</GenericName>
     <VisibleClasses datatype="tokens">Cataphract</VisibleClasses>
   </Identity>
-  <Loot>
-    <metal op="add">1</metal>
-  </Loot>
   <Position>
     <TurnRate op="mul">0.8</TurnRate>
   </Position>
   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1.5</Hack>
-        <Pierce op="add">1.5</Pierce>
+        <Hack op="add">2</Hack>
+        <Pierce op="add">2</Pierce>
         <Crush op="add">2.5</Crush>
       </Damage>
     </Entity>
   </Resistance>
   <UnitMotion>
     <WalkSpeed op="mul">0.92</WalkSpeed>
-    <Acceleration op="mul">0.8</Acceleration>
+    <Acceleration op="mul">0.9</Acceleration>
   </UnitMotion>
 </Entity>

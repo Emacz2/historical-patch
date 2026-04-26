@@ -5,7 +5,6 @@
       structures/gaul/assembly
       structures/gaul/celtic_coalitliton
     </Entities>
-    <Rate>1.25</Rate>
   </Builder>
   <Cost>
     <Resources>
@@ -23,7 +22,7 @@
     <VisibleClasses datatype="tokens">-Citizen -Worker Builder</VisibleClasses>
      <Icon>units/gaul/gaul_infantry_axe.png</Icon>
       <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
+      <Techs datatype="tokens">alliance_raeti</Techs>
     </Requirements>
   </Identity>
   <Promotion>

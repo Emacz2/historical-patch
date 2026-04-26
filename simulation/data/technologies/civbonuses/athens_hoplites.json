@@ -3,7 +3,7 @@
 	"autoResearch": true,
 	"description": "Athenian hoplites were know for their speed and endurance.",
 	"icon": "woad_warriors.png",
-	"tooltip": "Hoplites 5% faster walk and run speed per phase.",
+	"tooltip": "Hoplites 5% faster walk and run speed.  Hopelite tradition gives them an additional 5% bonus of each.",
 	"requirements": { "civ": "athen" },
 	"modifications": [
 		{ "value": "UnitMotion/WalkSpeed", "multiply": 1.05 },

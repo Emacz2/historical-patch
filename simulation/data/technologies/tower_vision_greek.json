@@ -1,0 +1,30 @@
+{
+	"genericName": "Phryctoria2",
+	"description": "Increases out post and tower vision.",
+	"cost": {
+		"food": 200,
+		"wood": 200
+	},
+"supersedes": "outpost_vision_greek",
+"requirements": {
+		"all": [
+			{ "tech": "phase_town" },
+			{ "civ": "athen"},
+			{ "civ": "mace" },
+			{ "civ": "ptol" },
+			{ "civ": "sele" },
+			{ "civ": "spart" }
+		]
+	},
+
+
+
+	"icon": "pigeon.png",
+	"researchTime": 40,
+	"tooltip": "towers and outposts +25% vision range.",
+	"modifications": [
+		{ "value": "Vision/Range", "multiply": 1.25 }
+	],
+	"affects": ["Outpost", "Tower"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

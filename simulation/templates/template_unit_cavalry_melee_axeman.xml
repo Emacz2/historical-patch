@@ -24,13 +24,17 @@
     <GenericName>Cavalry Axeman</GenericName>
     <VisibleClasses datatype="tokens">Axeman</VisibleClasses>
   </Identity>
-<Resistance>
+  <Resistance>
     <Entity>
       <Damage>
-       <Hack op="add"> 0.5</Hack>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">-0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
+   <UnitMotion>
+    <Acceleration op="mul">1.1</Acceleration>
+  </UnitMotion>
   <Sound>
     <SoundGroups>
       <attack_melee>attack/weapon/sword_attack.xml</attack_melee>

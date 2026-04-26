@@ -3,15 +3,21 @@
   <Identity>
     <Civ>rome</Civ>
     <SpecificName>Emporion</SpecificName> 
+    <VisibleClasses datatype="tokens">Republic</VisibleClasses>
   </Identity>
-       <Trainer>
+    <Trainer>
     <BatchTimeModifier>0.7</BatchTimeModifier>
     <Entities datatype="tokens">
+      -units/{civ}/merc_inf_archer_market_b
       -units/{civ}/merc_inf_slinger_market_b
       units/{civ}/merc_inf_slinger_market_e
       units/{civ}/merc_inf_archer_market_e
     </Entities>
   </Trainer>
+    <Promotion>
+    <Entity>structures/rome/market_3</Entity>
+    <RequiredXp>3000</RequiredXp>
+  </Promotion>
   <VisualActor>
       <Actor>structures/hellenes/market.xml</Actor>
   </VisualActor>

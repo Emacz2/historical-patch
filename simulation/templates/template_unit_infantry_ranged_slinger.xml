@@ -4,10 +4,10 @@
     <Ranged>
       <AttackName>Sling</AttackName>
       <Damage>
-        <Crush>6</Crush>
-        <Pierce>3</Pierce>
+        <Crush>3.5</Crush>
+        <Pierce>3.5</Pierce>
       </Damage>
-      <MaxRange>50</MaxRange>
+      <MaxRange>47</MaxRange>
       <PrepareTime>500</PrepareTime>
       <RepeatTime>1000</RepeatTime>
       <Projectile>
@@ -17,7 +17,6 @@
         <FriendlyFire>false</FriendlyFire>
         <LaunchPoint y="3"/>
       </Projectile>
-     <RestrictedClasses datatype="tokens">Structure Siege</RestrictedClasses>
     </Ranged>
   </Attack>
   <Cost>
@@ -36,7 +35,7 @@
     </SoundGroups>
   </Sound>
   <UnitMotion>
-    <WalkSpeed op="mul">1.03</WalkSpeed>
+    <WalkSpeed op="mul">1.08</WalkSpeed>
     <Acceleration op="add">2.5</Acceleration>
   </UnitMotion>
   <Vision>

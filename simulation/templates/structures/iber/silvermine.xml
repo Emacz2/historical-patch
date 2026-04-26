@@ -27,7 +27,7 @@
   </Health>
  <Identity>
     <GenericName>Silvermine</GenericName>
-    <Tooltip>Garrison Units for a trickle of 2 Metal/s</Tooltip>
+    <Tooltip> +1 Metal per second</Tooltip>
 	<Classes datatype="tokens">CivSpecific</Classes>
     <VisibleClasses datatype="tokens">Economic Town Silvermine</VisibleClasses>
     <Icon>structures/mining_metal.png</Icon>
@@ -60,7 +60,7 @@
   </Resistance>
   <ResourceTrickle>
     <Rates>
-      <metal>0</metal>
+      <metal>1</metal>
     </Rates>
     <Interval>1000</Interval>
   </ResourceTrickle>

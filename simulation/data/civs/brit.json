@@ -51,8 +51,8 @@
 			"Template": "structures/brit/civil_centre"
 		},
 		{
-			"Template": "units/brit/support_female_citizen",
-			"Count": 3
+			"Template": "units/brit/support_civilian",
+			"Count": 4
 		},
 		{
 			"Template": "units/brit/infantry_spearman_b",
@@ -68,10 +68,8 @@
 		},
 		{
 			"Template": "units/brit/war_dog"
-		},
-		{
-			"Template": "units/brit/serf_slinger"
 		}
+		
 	],
 	"AINames": [
 		"Adminius",

@@ -34,7 +34,7 @@
     <Category>Tower</Category>
     <Distance>
       <FromClass>Tower</FromClass>
-      <MinDistance>65</MinDistance>
+      <MinDistance>80</MinDistance>
     </Distance>
   </BuildRestrictions>
   <GarrisonHolder>

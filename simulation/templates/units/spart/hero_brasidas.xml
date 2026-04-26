@@ -3,6 +3,9 @@
   <Auras datatype="tokens">
     units/heroes/spart_hero_brasidas
     units/heroes/spart_hero_brasidas_2
+    units/spart_ephor_train
+    units/spart_ephor_structure
+    units/spart_ephor_trickle
   </Auras>
   <Identity>
     <Civ>spart</Civ>
@@ -11,7 +14,7 @@
     <GenericName>Brasidas</GenericName>
     <SpecificName>Brasidas</SpecificName>
     <Icon>units/spart/hero_brasidas.png</Icon>
-    <VisibleClasses datatype="tokens">Olympian</VisibleClasses>
+    <VisibleClasses datatype="tokens">Olympian Ephor</VisibleClasses>
   </Identity>
   <ProductionQueue/>
   <Researcher>

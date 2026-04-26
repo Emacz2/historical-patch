@@ -34,12 +34,11 @@
     <Entity>
       <Damage>
         <Hack op="add">0.5</Hack>
-        <Pierce op="add">0.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
-   <UnitMotion>
-    <WalkSpeed op="mul">0.96</WalkSpeed>
+  <UnitMotion>
+    <Acceleration op="mul">1.1</Acceleration>
   </UnitMotion>
   <Sound>
     <SoundGroups>

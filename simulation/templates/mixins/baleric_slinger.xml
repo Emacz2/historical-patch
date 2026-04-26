@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <Entity>
+<Cost>
+    <BuildTime op="mul">1.25</BuildTime>
+</Cost>
   <Attack>
     <Ranged>
     <Damage>
-      <Crush op="mul">1.1</Crush>
+      <Crush op="mul">1.25</Crush>
+      <Pierce op="mul">0.9</Pierce>
     </Damage>
       <Projectile>
         <Spread op="mul">0.9</Spread>
@@ -18,15 +22,12 @@
       </Damage>
     </Entity>
   </Resistance>
-    <UnitMotion>
-    <WalkSpeed>8.0</WalkSpeed>
-  </UnitMotion>
   <Identity>
     <GenericName>Balearic Slinger</GenericName>
     <SpecificName>Qallāʿ Ibušimi</SpecificName>
     <Icon>units/cart/infantry_slinger.png</Icon>
     <VisibleClasses datatype="tokens">-Citizen</VisibleClasses>
-    <Tooltip>The Balearic slingers, indigenous to the Balearic Islands, were warriors from ancient times famed for their mastery in the art of using the sling; 10% crush dmg and more accurate.  Also at the elilte level they can switch between stone and lead</Tooltip>
+    <Tooltip>The Balearic slingers, indigenous to the Balearic Islands, were warriors from ancient times famed for their mastery in the art of using the sling; +25% crush dmg/-10% pierce dmg and more 10% mopre accurate.  Can be upgraded to lead slingers once they hit elite status</Tooltip>
   </Identity>
   <ResourceGatherer disable=""/>
 </Entity>

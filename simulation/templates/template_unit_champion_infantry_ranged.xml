@@ -22,6 +22,11 @@
       </Damage>
     </Entity>
   </Resistance>
+      <Loot>
+    <xp>65</xp>
+    <metal>5</metal>
+    <wood>10</wood>
+  </Loot>
   <Selectable>
     <Overlay>
       <Texture>

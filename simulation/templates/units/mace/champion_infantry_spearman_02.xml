@@ -8,12 +8,21 @@
       </Damage>
     </Melee>
   </Attack>
-  <Health>
-    <Max op="mul">1.25</Max>
+ <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op="add">0.5</Hack>
+        <Pierce op="add">0.5</Pierce>
+      </Damage>
+    </Entity>
+  </Resistance>
+ <Health>
+    <Max op="add">25</Max>
   </Health>
   <Identity>
     <SpecificName>Hypaspistḗs Argyraspídi</SpecificName>
     <Icon>units/mace/argyraspidai.png</Icon>
+     <VisibleClasses datatype="tokens">Nobel</VisibleClasses>
     <Requirements>
       <Techs datatype="tokens">phase_city</Techs>
     </Requirements>

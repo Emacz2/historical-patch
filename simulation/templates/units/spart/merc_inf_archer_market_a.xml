@@ -2,6 +2,7 @@
 <Entity parent="units/spart/merc_inf_archer_market_b">
   <Identity>
     <Rank>Advanced</Rank>
+    <Icon>units/special/creten_archer_a.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

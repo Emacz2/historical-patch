@@ -8,7 +8,7 @@
 </Builder>
 <Cost>
     <Resources>
-      <metal op="add">10</metal>
+      <food op="add">25</food>
     </Resources>
   </Cost>
 <Attack>
@@ -32,7 +32,7 @@
     <SelectionGroupName>units/brit/infantry_spearman_b</SelectionGroupName>
     <GenericName>Brythonic Thrusting Spearman</GenericName>
     <SpecificName>Catucos</SpecificName>
-    <Icon>units/gaul/champion_fanatic.png</Icon>
+    <Icon>units/brit/thrust_spear.png</Icon>
     <Rank>Advanced</Rank>
   </Identity>
   <UnitMotion>

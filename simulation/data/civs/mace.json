@@ -41,20 +41,18 @@
 			"Template": "structures/mace/civil_centre"
 		},
 		{
-			"Template": "units/mace/support_female_citizen",
+			"Template": "units/mace/support_civilian",
 			"Count": 4
 		},
 		{
 			"Template": "units/mace/infantry_pikeman_concsript",
-			"Count": 2
+			"Count": 3
 		},
 		{
-			"Template": "units/mace/infantry_javelineer_b",
+			"Template": "units/mace/infantry_archer_concsript",
 			"Count": 2
-		},
-		{
-			"Template": "units/mace/serf_archer"
 		}
+	
 	],
 	"AINames": [
 		"Antipater",

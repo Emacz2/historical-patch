@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="serf_ranged|template_unit_infantry_ranged_slinger">
+<Builder>
+</Builder>
+  <Cost>
+    <Resources>
+      <stone>10</stone>
+    </Resources>
+  </Cost>
+  <Identity>
+    <Civ>gaul</Civ>
+    <SelectionGroupName>units/brit/infantry_slinger_b</SelectionGroupName>
+    <GenericName>Celtic Serf Stone Thrower</GenericName>
+    <SpecificName>Talmoris</SpecificName>
+    <Icon>units/gaul/infantry_slinger.png</Icon>
+  </Identity>
+ <Promotion disable=""/>
+  <VisualActor>
+    <Actor>units/britons/infantry_slinger_b.xml</Actor>
+  </VisualActor>
+</Entity>

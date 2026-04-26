@@ -19,10 +19,17 @@
       <MaxRange>5</MaxRange>
       <PrepareTime>750</PrepareTime>
       <RepeatTime>1500</RepeatTime>
+      <Bonuses>
+        <BonusMelee>
+          <Classes>Structure</Classes>
+          <Multiplier>1.25</Multiplier>
+        </BonusMelee>
+      </Bonuses>
       <PreferredClasses datatype="tokens">!Ship</PreferredClasses>
     </Melee>
   </Attack>
   <Identity>
     <VisibleClasses datatype="tokens">Melee</VisibleClasses>
+    <Tooltip>25% bonus damage against structures.</Tooltip>
   </Identity>
 </Entity>

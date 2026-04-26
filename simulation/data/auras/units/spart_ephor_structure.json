@@ -1,0 +1,12 @@
+{
+	"type": "range",
+	"radius": 45,
+	"auraName": "Excellency of Structures",
+	"showDescription": 1,
+	"auraDescription": "Structures +5% capture point regeneration rate for each nearby Ephor.",
+	"modifications": [
+		{ "value": "Capturable/RegenRate", "multiply": 1.05 }
+	],
+	"affects": ["Structure"],
+	"overlayIcon": "art/textures/ui/session/auras/laurel.png"
+}

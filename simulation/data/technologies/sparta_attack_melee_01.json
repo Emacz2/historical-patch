@@ -1,10 +1,6 @@
 {
-	"genericName": "Side Arms",
-	"specificName": {
-	
-		"spart": "Xiphos"
-	},
-	"description": ".",
+	"genericName": "Carburisation",
+	"description": "By adding a small amount of carbon during the iron smelting process, a stronger material, steel, can be forged.",
 	"cost": {
 		"food": 200,
 		"metal": 150
@@ -23,11 +19,11 @@
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "!Neodamodes Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.05, "affects": "!Neodamodes !Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.05, "affects": "!Neodamodes !Perioikoi" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.05, "affects": "!Neodamodes !Perioikoi" },
 		{ "value": "Cost/BuildTime", "multiply": 1.05, "affects": "Champion Spearman" }
 	],
-	"affects": ["Soldier !Mercenary !Elephant"],
+	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

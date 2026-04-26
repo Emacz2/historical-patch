@@ -13,7 +13,7 @@
       <Bonuses>
         <BonusCavMelee>
           <Classes>Cavalry</Classes>
-          <Multiplier>3</Multiplier>
+          <Multiplier>2.5</Multiplier>
         </BonusCavMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
@@ -21,7 +21,7 @@
   </Attack>
   <Identity>
     <GenericName>Champion Spearman</GenericName>
-    <Tooltip>Counters: 3 × vs Cavalry.</Tooltip>
+    <Tooltip>Counters: 2.5 × vs Cavalry.</Tooltip>
     <VisibleClasses datatype="tokens">Melee Spearman</VisibleClasses>
   </Identity>
   <Sound>
@@ -29,6 +29,9 @@
       <attack_melee>attack/weapon/spear_attack.xml</attack_melee>
     </SoundGroups>
   </Sound>
+    <UnitMotion>
+    <WalkSpeed op="mul">0.97</WalkSpeed>
+  </UnitMotion>
   <UnitAI>
     <Formations datatype="tokens">
       special/formations/testudo

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="helot_woman|template_unit_support_female_citizen">
+  <Builder>
+    <Entities datatype="tokens">
+      structures/spart/gerousia
+      structures/spart/syssiton
+      structures/spart/camp
+      -structures/wallset_palisade
+      -structures/{civ}/wallset_stone
+      -structures/{civ}/barracks
+    </Entities>
+  </Builder>
+  <Identity>
+    <Civ>spart</Civ>
+    <Lang>greek</Lang>
+    <GenericName>Helot Woman</GenericName>
+    <SpecificName>Heílōs</SpecificName>
+    <SelectionGroupName>units/spart/support_female_helot</SelectionGroupName>
+    <Icon>units/spart/support_female_citizen.png</Icon>
+  </Identity>
+  <TrainingRestrictions>
+  <Category>HelotW</Category>
+  </TrainingRestrictions>
+  <UnitAI>
+    <CanPatrol>true</CanPatrol>
+  </UnitAI>
+  <VisualActor>
+    <Actor>units/spartans/helot_female.xml</Actor>
+  </VisualActor>
+</Entity>
