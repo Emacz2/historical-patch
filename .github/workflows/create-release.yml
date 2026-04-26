@@ -8,6 +8,9 @@ on:
 env:
   MOD_NAME: classical-warefare-aea
 
+permissions:
+  contents: write
+
 jobs:
   release-pyromod:
     runs-on: ubuntu-latest
