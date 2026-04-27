@@ -4,6 +4,7 @@
     <Rate>1.25</Rate>
   </Builder>
     <Cost>
+    <BuildTime op="mul">1.1</BuildTime>
     <Resources>
       <metal op="add">10</metal>
       <wood op="add">-10</wood>
@@ -12,6 +13,6 @@
   <Identity>
     <Rank>Elite</Rank>
     <VisibleClasses datatype="tokens">Legionary</VisibleClasses>
-    <Tooltip>Roman Legionaries were the backbone of the Roman Army during the late Republic and into the Empire phase.  Javelineers gain +1 hack and 0.5 pierce resistance. Swordsman +5% hack/pierce attack and +0.5 hack resistance. They gather meat and wood 15% faster but stone and metal 25% slower.  They are 25% faster at building structures. </Tooltip>
+    <Tooltip>Roman Legionaries were the backbone of the Roman Army during the late Republic and into the Empire phase.  Javelineers gain +1 hack and 0.5 pierce resistance. Swordsman +5% hack/pierce attack and +0.5 hack resistance.  They are 25% faster at building structures and gather meat and wood 15% faster but stone and metal 25% slower and take 10% additional train time. </Tooltip>
   </Identity>
 </Entity>
