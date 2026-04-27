@@ -14,15 +14,19 @@
 	"requirementsTooltip": "Unlocked in city phase.",
 	"icon": "sword_03.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +10% melee attack damage, Spartiates and Skiritai an additional 10%. Champion spearman an additional 10% train time. ",
+	"tooltip": "Soldiers +10% melee attack damage,  Champions/Heroes an additional 10% but also +10% train time. ",
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1 },
 		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1 },
-		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "!Neodamodes !Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.10, "affects": "!Neodamodes !Perioikoi" },
-		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.10, "affects": "!Neodamodes !Perioikoi" },
-		{ "value": "Cost/BuildTime", "multiply": 1.10, "affects": "Champion Spearman" }
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.1, "affects": "Hero" },
+		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.1, "affects": "Hero" },
+		{ "value": "Attack/Melee/Damage/Crush", "multiply": 1.1, "affects": "Hero" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Champion" },
+		{ "value": "Cost/BuildTime", "multiply": 1.1, "affects": "Hero" }
 	],
 	"affects": ["Soldier !Mercenary !Elephant !Auxiliary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"

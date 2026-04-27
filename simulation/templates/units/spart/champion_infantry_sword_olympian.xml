@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="units/spart/champion_infantry_spear">
+<Entity parent="template_unit_champion_infantry_swordsman">
   <Attack>
     <Melee>
-      <Damage>
-        <Hack op="mul">1.05</Hack>
-        <Pierce op="mul">1.05</Pierce>
-      </Damage>
+      <MaxRange>2.5</MaxRange>
     </Melee>
   </Attack>
- <Resistance>
+   <Resistance>
     <Entity>
       <Damage>
-        <Hack op="add">1</Hack>
-        <Pierce op="add">1</Pierce>
-	      <Crush op="add">5</Crush>
+        <Hack op="add">1.5</Hack>
+        <Pierce op="add">2</Pierce>
+        <Crush op="add">6.5</Crush>
       </Damage>
     </Entity>
   </Resistance>
  <Health>
-    <Max op="add">25</Max>
+    <Max>275</Max>
   </Health>
  <UnitMotion>
-  <WalkSpeed op="mul">1.05</WalkSpeed>
+  <WalkSpeed>8.4</WalkSpeed>
  </UnitMotion>
-  <Upgrade>
-    <xiphos>
-      <Entity>units/spart/champion_infantry_sword_olympian</Entity>
-      <Tooltip>Switch to using a sword.</Tooltip>
+ <Upgrade>
+    <doru>
+      <Entity>units/spart/champion_infantry_spear_olympian</Entity>
+      <Tooltip>Switch to using a spear.</Tooltip>
       <Variant>upgrading</Variant>
       <Time>4</Time>
-    </xiphos>
+    </doru>
   </Upgrade>
   <Identity>
     <Rank>Elite</Rank>
@@ -40,6 +37,6 @@
   </Identity>
   <Promotion disable=""/>
   <VisualActor>
-    <Actor>units/spartans/infantry_spearman_c_olympian.xml</Actor>
+    <Actor>units/spartans/infantry_sword_c_olympian.xml</Actor>
   </VisualActor>
 </Entity>

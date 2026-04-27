@@ -1,15 +1,15 @@
 {
 	"type": "global",
-	"affects": ["Infantry"],
+	"affects": ["Infantry !Mercenary"],
 	"affectedPlayers": ["MutualAlly"],
 	"modifications": [
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 0.5, "affects": "!HelotM !Neodamodes" },
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "!HelotM !Neodamodes" },
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "!HelotM !Neodamodes" },
-		{ "value": "Promotion/RequiredXp", "multiply": 0.85 }
+		{ "value": "Promotion/RequiredXp", "multiply": 0.9 }
 
 	],
 	"auraName": "Peloponnesian League",
 	"showDescription": 1,
-	"auraDescription": "Infantry +.5 hack, 1 pierce resistance and promote 15% faster."
+	"auraDescription": "Infantry +1 hack/pierce resistance and promote 10% faster."
 	
 	}

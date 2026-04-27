@@ -15,10 +15,11 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "armor_chain.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +1 hack and +1 crush resistance.  Champions extra +1 hack.",
+	"tooltip": "Soldiers +1 hack and +1 crush resistance.  Champions/Heroes extra +1 hack.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Hack", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "Champions"},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "Champion"},
+		{ "value": "Resistance/Entity/Damage/Hack", "add": 1, "affects": "Hero"},
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
 	],
 	"affects": ["Soldier !Mercenary !Helot !Elephant"],

@@ -15,7 +15,8 @@
   <Attack>
     <Melee>
       <Damage>
-        <Pierce op="add">1</Pierce>
+        <Hack op="mul">1.05</Hack>
+        <Pierce op="mul">1.05</Pierce>
       </Damage>
     </Melee>
   </Attack>

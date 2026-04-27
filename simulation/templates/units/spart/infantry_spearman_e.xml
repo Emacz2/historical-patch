@@ -5,7 +5,7 @@
   </Identity>
   <Promotion>
     <Entity>units/spart/champ_perioikoi</Entity>
-    <RequiredXp>400</RequiredXp>
+    <RequiredXp>250</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_e.xml</Actor>

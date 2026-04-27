@@ -1,7 +1,7 @@
 {
 	"type": "range",
 	"radius": 35,
-	"affects": ["Champion Infantry"],
+	"affects": ["Infantry"],
 	"modifications": [
 		{ "value": "Attack/Melee/Damage/Hack", "multiply": 1.15 },
 		{ "value": "Attack/Melee/Damage/Pierce", "multiply": 1.15 },
@@ -14,6 +14,6 @@
 	],
 	"auraName": "Last Stand",
 	"showDescription": 1,
-	"auraDescription": "Champion Infantry +15% melee attack, +1.5 hack/pierce, +5 Crush resistances and +25 health.",
+	"auraDescription": "Infantry +15% melee attack, +1.5 hack/pierce, +5 Crush resistances and +25 health.",
 	"overlayIcon": "art/textures/ui/session/auras/attack_bonus.png"
 }

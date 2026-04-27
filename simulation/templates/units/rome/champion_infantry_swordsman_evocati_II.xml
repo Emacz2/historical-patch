@@ -3,11 +3,11 @@
   <Auras datatype="tokens">
     units/testudo
   </Auras>
-  <Attack>
+    <Attack>
     <Melee>
       <Damage>
-        <Hack op="add">1.5</Hack>
-        <Pierce op="add">1</Pierce>
+        <Hack op="mul">1.05</Hack>
+        <Pierce op="mul">1.05</Pierce>
       </Damage>
     </Melee>
   </Attack>

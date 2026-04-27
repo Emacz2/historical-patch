@@ -3,9 +3,8 @@
   <Identity>
     <Rank>Advanced</Rank>
   </Identity>
-  <Promotion>
+   <Promotion>
     <Entity>units/spart/infantry_spearman_e</Entity>
-    <RequiredXp>200</RequiredXp>
   </Promotion>
   <VisualActor>
     <Actor>units/spartans/infantry_spearman_a.xml</Actor>

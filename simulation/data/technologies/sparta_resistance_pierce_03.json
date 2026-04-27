@@ -15,10 +15,11 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "shields_generic_silver.png",
 	"researchTime": 60,
-	"tooltip": "Soldiers +1 pierce and +1 crush resistance. Champions extra +1 pierce.",
+	"tooltip": "Soldiers +1 pierce and +1 crush resistance. Champions/Heroes extra +1 pierce.",
 	"modifications": [
 		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1 },
-		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Champions" },
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Champion"},
+		{ "value": "Resistance/Entity/Damage/Pierce", "add": 1, "affects": "Hero"},
 		{ "value": "Resistance/Entity/Damage/Crush", "add": 1 }
 		
 

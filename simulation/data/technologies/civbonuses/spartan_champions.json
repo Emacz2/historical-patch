@@ -11,6 +11,6 @@
 
 	],
 
-	"affects": ["Champion Spearman"]
+	"affects": ["Champion", "Hero"]
 	
 }
