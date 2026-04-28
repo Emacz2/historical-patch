@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_player">
+  <Auras datatype="tokens">
+    teambonuses/theb_player_teambonus
+  </Auras>
+  <EntityLimits>
+    <Limits>
+	  <Stoa>1</Stoa>
+    </Limits>
+  </EntityLimits>
+  <Identity>
+    <Civ>theb</Civ>
+    <GenericName>Thebans</GenericName>
+    <History>The great power of Central Greece and leader of the Boeotian confederacy, Thebes is a force to be reckoned with. It is a major rival of ancient Athens, and sided with the Persians during the 480 BC invasion under Xerxes. Theban forces ended the power of Sparta at the Battle of Leuctra in 371 BC under the command of Epaminondas. The Sacred Band of Thebes (an elite military unit) famously fell at the battle of Chaeronea in 338 BC against Philip II and Alexander the Great. Prior to its destruction by Alexander in 335 BC, Thebes was a major force in Greek history, and was the most dominant city-state at the time of the Macedonian conquest of Greece.</History>
+    <Icon>emblems/emblem_thebans.png</Icon>
+  </Identity>
+  <Player>
+    <Formations datatype="tokens">
+      special/formations/phalanx
+    </Formations>
+  </Player>
+</Entity>

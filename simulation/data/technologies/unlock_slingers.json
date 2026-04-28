@@ -15,7 +15,8 @@
 			{ "civ": "germ" },
 			{ "civ": "pers" },
 			{ "civ": "ptol" },
-			{ "civ": "sele" }
+			{ "civ": "sele" },
+			{ "civ": "theb" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in village Phase.",

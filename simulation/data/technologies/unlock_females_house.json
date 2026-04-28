@@ -16,13 +16,21 @@
 	"requirements": {
 		"all": [
 			{ "tech": "phase_village" },
+			{ "notciv": "athen" },
+			{ "notciv": "brit" },
+			{ "notciv": "cart" },
+			{ "notciv": "gaul" },
 			{ "notciv": "han" },
 			{ "notciv": "german" },
-			{ "notciv": "maury" },
+			{ "notciv": "iber" },
+			{ "notciv": "kush" },
+			{ "notciv": "maur" },
 			{ "notciv": "mace" },
 			{ "notciv": "pers" },
+			{ "notciv": "ptol" },
 			{ "notciv": "rome" },
-			{ "notciv": "sele" }
+			{ "notciv": "sele" },
+			{ "notciv": "theb" }
 			
 		]
 	},

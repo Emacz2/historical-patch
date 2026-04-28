@@ -1,0 +1,72 @@
+{
+	"Code":"theb",
+	"Culture":[ "greek" ],
+	"Region":[ "mediterranean", "europe", "greece" ],
+	"Music":[
+		{"File":"The_Hellespont.ogg", "Type":"peace"},
+		{"File":"Harvest_Festival.ogg", "Type":"peace"},
+		{"File":"Helen_Leaves_Sparta.ogg", "Type":"peace"},
+		{"File":"In_the_Shadow_of_Olympus.ogg", "Type":"peace"},
+		{"File":"Forging_a_City-State.ogg", "Type":"peace"}
+	],
+	"CivBonuses":
+	[
+		{
+			"Name":"Oblique Order",
+			"History":"The oblique order is a military tactic whereby an attacking army focuses its forces to attack a single enemy flank. The force commander concentrates the majority of his strength on one flank and uses the remainder to fix the enemy line. This allows a commander with weaker or equal forces to achieve a local superiority in numbers. The commander can then try to defeat the enemy in detail. It has been used by numerous successful generals. Oblique order required disciplined troops able to execute complex maneuvers in varied circumstances. The first recorded use of this tactic was at the Battle of Leuctra, in Greece, when the Thebans under Epaminondas defeated the Spartans by highly enforcing one flank to fifty rows deep, rather than spread forces parsimoniously. Philip of Macedon learned Epaminondas' technique while held prisoner at Thebes, and his descendants, including Alexander the Great, used it in their campaigns. The classical writer Vegetius was the first known to write about the tactic that became known as the oblique order of battle.",
+			"Description":"An extra-deep Phalanx formation that gives an extra pushing effect and health bonus to the spear infantry within it."
+		},
+		{
+			"Name":"Siege of Delion",
+			"History":"Unknown.",
+			"Description":"Thebans gain access to the Fire Raiser, a unique siege weapon good against units and buildings, but also loses health over its lifetime."
+		},
+		{
+			"Name":"Hellenization",
+			"History":"The Greeks were highly successful in Hellenising various foreigners. During the Hellenistic Age, Greek was the lingua franca of the Ancient World, spoken widely from Spain to India.",
+			"Description":"Buildings +20% territory influence while the Theatron stands."
+		}
+	],
+	"WallSets":
+	[
+		"other/wallset_palisade",
+		"structures/theb/wallset_stone"
+	],
+	"StartEntities":
+	[
+		{
+			"Template": "structures/theb/civil_centre"
+		},
+		{
+			"Template": "units/theb/support_civilian",
+			"Count": 4
+		},
+		{
+			"Template": "units/theb/infantry_spearman_b",
+			"Count": 3
+		},
+		{
+			"Template": "units/theb/infantry_javelineer_b",
+			"Count": 2
+		},
+		{
+			"Template": "units/theb/cavalry_javelineer_b"
+		}
+	],
+	"AINames":
+	[
+		"Calydnus",
+		"Ogyges",
+		"Cadmus",
+		"Pentheus",
+		"Polydorus",
+		"Nycteus",
+		"Lycus",
+		"Labdacus"
+	],
+	"SkirmishReplacements":
+	{
+		"skirmish/units/default_infantry_melee_b": "units/theb/infantry_spearman_b"
+	},
+	"SelectableInGameSetup": true
+}

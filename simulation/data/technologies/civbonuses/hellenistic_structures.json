@@ -8,7 +8,8 @@
 			{ "civ": "mace" },
 			{ "civ": "rome" },
 			{ "civ": "sele" },
-			{ "civ": "spart" }
+			{ "civ": "spart" },
+			{ "civ": "theb" }
 		]
 	},
 	"icon": "ionic_column.png",
