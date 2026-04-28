@@ -2,6 +2,11 @@
 <Entity parent="template_unit_infantry_ranged_slinger_lead">
   <Identity>
     <Rank>Elite</Rank>
+      <Civ>ptol</Civ>
+    <SelectionGroupName>units/ptol/infantry_slinger_b</SelectionGroupName>
+    <GenericName>Judean Slinger with lead bullet amo</GenericName>
+    <SpecificName>Hebraikós Sphendonḗtēs</SpecificName>
+    <Icon>units/ptol/judean_slinger.png</Icon>
   </Identity>
   <Promotion disable=""/>
   <VisualActor>

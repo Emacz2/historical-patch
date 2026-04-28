@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Entity parent="template_structure_military_barracks">
+<Entity parent="template_structure_military_stable">
+  <Footprint>
+    <Square width="22.0" depth="20.0"/>
+    <Height>5.0</Height>
+  </Footprint>
   <Identity>
     <Civ>pers</Civ>
-    <SpecificName>Padgan</SpecificName>
+    <SpecificName>Paraspa</SpecificName>
   </Identity>
-  <Trainer>
-    <Entities datatype="tokens">
-      -units/{civ}/infantry_archer_b
-      units/{civ}/infantry_archer_conscript
-      -units/{civ}/infantry_axeman_b
-      units/{civ}/infantry_axeman_conscript
-      -units/{civ}/infantry_javelineer_b
-      units/{civ}/infantry_javelineer_conscript
-      -units/{civ}/infantry_spearman_b
-      units/{civ}/infantry_spearman_concsript
-    </Entities>
-  </Trainer>
+  <Obstruction>
+    <Static width="18.0" depth="16.0"/>
+  </Obstruction>
    <Upgrade>
     <persian_stoa>
       <Entity>structures/{civ}/persian_stoa</Entity>
@@ -33,6 +28,7 @@
     </persian_stoa>
   </Upgrade>
   <VisualActor>
-    <Actor>structures/persians/barracks.xml</Actor>
+    <Actor>structures/persians/stable.xml</Actor>
+    <FoundationActor>structures/fndn_6x5.xml</FoundationActor>
   </VisualActor>
 </Entity>

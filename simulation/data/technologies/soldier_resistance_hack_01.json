@@ -20,7 +20,7 @@
 		]
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",
-	"icon": "armor_pteruges.png",
+	"icon": "armor_leather.png",
 	"researchTime": 20,
 	"tooltip": "Soldiers +1 hack and +0.5 crush resistance.",
 	"modifications": [

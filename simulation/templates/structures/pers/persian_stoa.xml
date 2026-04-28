@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_structure_military_barracks">
+  <Footprint>
+    <Square width="28" depth="14.0"/>
+    <Height>10.0</Height>
+  </Footprint>
+  <Cost>
+    <BuildTime>150</BuildTime>
+    <Resources>
+      <metal>100</metal>
+      <stone>150</stone>
+      <wood>100</wood>
+    </Resources>
+  </Cost>
+   <GarrisonHolder>
+    <Max>15</Max>
+    <EjectHealth>0.1</EjectHealth>
+    <EjectClassesOnDestroy datatype="tokens">Unit</EjectClassesOnDestroy>
+    <List datatype="tokens">Champion</List>
+    <BuffHeal>0</BuffHeal>
+    <LoadingRange>2</LoadingRange>
+  </GarrisonHolder>
+  <Identity>
+    <Civ>pers</Civ>
+    <GenericName>\"Persian\" Stoa</GenericName>
+    <SpecificName>Stoa Persikē</SpecificName>
+    <Icon>structures/stoa.png</Icon>
+    <VisibleClasses datatype="tokens">Town</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
+  </Identity>
+    <Trainer>
+    <Entities datatype="tokens">
+      -units/{civ}/infantry_archer_b
+      -units/{civ}/infantry_axeman_b
+      -units/{civ}/infantry_javelineer_b
+      -units/{civ}/infantry_spearman_b
+      -units/{civ}/infantry_slinger_b
+      units/{civ}/champion_infantry
+      units/{civ}/champion_chariot
+      units/{civ}/champion_cavalry
+      units/{civ}/champion_cavalry_archer
+    </Entities>
+  </Trainer>
+   <Researcher>
+    <Technologies datatype="tokens">
+      unlock_champion_chariots
+      chariot_health
+    </Technologies>
+  </Researcher>
+  <Obstruction>
+    <Static width="26" depth="12"/>
+  </Obstruction>
+  <RallyPoint disable=""/>
+  <VisualActor>
+    <Actor>structures/spartans/stoa_b.xml</Actor>
+  </VisualActor>
+</Entity>

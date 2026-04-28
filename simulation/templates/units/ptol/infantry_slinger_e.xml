@@ -4,7 +4,7 @@
     <Rank>Elite</Rank>
   </Identity>
   <Promotion>
-    <Entity>units/ptole/infantry_slinger_lead</Entity>
+    <Entity>units/ptol/infantry_slinger_lead</Entity>
     <RequiredXp>3000</RequiredXp>
   </Promotion>
   <VisualActor>

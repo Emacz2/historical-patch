@@ -5,12 +5,12 @@
      <Resources>
       <food>100</food>
       <metal>0</metal>
-      <wood>30</wood>
+      <wood>35</wood>
       <stone>0</stone>
     </Resources>
   </Cost>
    <Health>
-    <Max>200</Max>
+    <Max>150</Max>
   </Health>
      <Resistance>
     <Entity>
