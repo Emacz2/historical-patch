@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_spearman">
   <Health>
-    <Max>185</Max>
+    <Max>180</Max>
   </Health>
   <Identity>
     <Civ>pers</Civ>
@@ -15,7 +15,7 @@
     </Requirements>
   </Identity>
   <Cost>
-    <BuildTime>20</BuildTime>
+    <BuildTime>18</BuildTime>
     <Resources>
       <food>100</food>
       <metal>0</metal>
@@ -25,8 +25,8 @@
     <Attack>
     <Melee>
       <Damage>
-        <Hack op="mul">0.85</Hack>
-        <Pierce op="mul">0.85</Pierce>
+        <Hack op="mul">0.90</Hack>
+        <Pierce op="mul">0.90</Pierce>
       </Damage>
     </Melee>
   </Attack>

@@ -53,7 +53,6 @@
   <Obstruction>
     <Static width="26" depth="12"/>
   </Obstruction>
-  <RallyPoint disable=""/>
   <VisualActor>
     <Actor>structures/spartans/stoa_b.xml</Actor>
   </VisualActor>

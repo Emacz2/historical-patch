@@ -26,6 +26,12 @@
   <Promotion>
     <RequiredXp>60</RequiredXp>
   </Promotion>
+    <Loot>
+    <xp>35</xp>
+    <wood>5</wood>
+    <stone>0</stone>
+    <metal>5</metal>
+  </Loot>
   <Identity>
     <VisibleClasses datatype="tokens">Conscript</VisibleClasses>
     <Tooltip>Concript soldiers -10% train time and cost 5 less food and wood but 5% less dmg and -0.5 pierce/hack resistance.  They lose consript status when promoted to basic rank</Tooltip>

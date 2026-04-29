@@ -6,8 +6,7 @@
 	},
 	"requirements": {
 		"all": [
-			{ "tech": "phase_town" },
-			{ "notciv": "pers" }
+			{ "tech": "phase_town" }
 		]
 	},
 	"requirementsTooltip": "Unlocked in Town Phase.",

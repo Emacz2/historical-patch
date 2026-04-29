@@ -18,6 +18,6 @@
 		{ "value": "Cost/Resources/food", "add": -5 },
 		{ "value": "Cost/Resources/wood", "add": -5 }
 	],
-	"affects": ["Citizen Soldier"],
+	"affects": ["Citizen Soldier !Mercenary"],
 	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
 }

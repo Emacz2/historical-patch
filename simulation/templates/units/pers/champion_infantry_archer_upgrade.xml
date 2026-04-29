@@ -3,7 +3,7 @@
     <Attack>
     <Ranged>
       <Damage>
-        <Pierce op="mul">0.80</Pierce>
+        <Pierce op="mul">0.85</Pierce>
       </Damage>
 	<ApplyStatus>
           <Burning>
@@ -17,16 +17,8 @@
       </ApplyStatus>
     </Ranged>
   </Attack>
- <Cost>
-    <BuildTime>20</BuildTime>
-    <Resources>
-      <food>150</food>
-      <metal>0</metal>
-      <wood>150</wood>
-    </Resources>
-  </Cost>
   <Health>
-    <Max>185</Max>
+    <Max>180</Max>
   </Health>
   <Identity>
     <Civ>pers</Civ>
