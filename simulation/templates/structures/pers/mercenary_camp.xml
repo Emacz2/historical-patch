@@ -78,11 +78,10 @@
       units/{civ}/merc_cavalry_spearman_b
     </Entities>
   </Trainer>
-    <Researcher>
+     <Researcher>
     <Technologies datatype="tokens">
       -barracks_batch_training
       -barracks_batch_training2
-      -judean_lead
     </Technologies>
   </Researcher>
   <VisualActor>

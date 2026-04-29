@@ -4,16 +4,16 @@
     <Melee>
       <AttackName context="Name of an attack using a double-edged sword.">Sword</AttackName>
     <Damage>
-         <Hack>10.5</Hack>
+         <Hack>13</Hack>
         <Pierce>3</Pierce>
     </Damage>
       <MaxRange>2.75</MaxRange>
       <PrepareTime>275</PrepareTime>
-      <RepeatTime>1100</RepeatTime>
+      <RepeatTime>1250</RepeatTime>
       <Bonuses>
         <BonusMelee>
-          <Classes>Ranged Infantry</Classes>
-          <Multiplier>1.5</Multiplier>
+          <Classes>Melee Infantry</Classes>
+          <Multiplier>1.25</Multiplier>
         </BonusMelee>
       </Bonuses>
       <PreferredClasses datatype="tokens">Unit+!Ship</PreferredClasses>
@@ -22,9 +22,9 @@
     <Resistance>
     <Entity>
       <Damage>
-        <Crush op="add">2</Crush>
+        <Crush op="add">2.5</Crush>
         <Hack op="add">1.5</Hack>
-        <Pierce op="add">1</Pierce>
+        <Pierce op="add">1.5</Pierce>
       </Damage>
     </Entity>
   </Resistance>
@@ -36,6 +36,7 @@
   <Identity>
     <VisibleClasses datatype="tokens">Melee Swordsman</VisibleClasses>
     <GenericName>Champion Heavy Swordsman</GenericName>
+    <Tooltip>Counters: 1.25× vs Melee Infantry. And additional 2.5 Hack dmg, but .25 second slower repeat time. Also have an addtional 2.5C 1.5H/P resistance but -5% walk speed</Tooltip>
   </Identity>
   <Sound>
     <SoundGroups>
@@ -48,7 +49,7 @@
     </Formations>
   </UnitAI>
   <UnitMotion>
-    <WalkSpeed op="mul">0.87</WalkSpeed>
-    <Acceleration op="mul">0.9</Acceleration>
+    <WalkSpeed op="mul">0.95</WalkSpeed>
+    <Acceleration op="mul">0.95</Acceleration>
   </UnitMotion>
 </Entity>

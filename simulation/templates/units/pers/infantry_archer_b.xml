@@ -3,6 +3,7 @@
    <Builder>
     <Entities datatype="tokens">
       structures/pers/persian_stoa
+      structures/pers/mercenary_camp
     </Entities>
   </Builder>
   <Identity>

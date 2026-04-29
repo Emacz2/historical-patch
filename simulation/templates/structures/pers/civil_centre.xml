@@ -25,10 +25,7 @@
       units/{civ}/infantry_axeman_conscript
       units/{civ}/infantry_archer_conscript
       units/{civ}/cavalry_javelineer_b
-      units/{civ}/cavalry_axeman_b
-      units/{civ}/cavalry_swordsman_b
       units/{civ}/cavalry_spearman_b
-      units/{civ}/cavalry_archer_b
     </Entities>
   </Trainer>
   <VisualActor>
