@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent="template_unit_champion_infantry_swordsman">
   <Auras datatype="tokens">
-    units/centurion_1
+    units/centurion
     units/centurion_2
     units/testudo
   </Auras>

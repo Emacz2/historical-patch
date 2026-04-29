@@ -5,6 +5,9 @@
       special/formations/phalanx
     </Formations>
   </UnitAI>
+   <Auras datatype="tokens">
+    units/phalanx
+  </Auras>
    <Resistance>
     <Entity>
       <Damage>

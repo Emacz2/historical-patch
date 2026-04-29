@@ -3,7 +3,7 @@
  <Cost>
     <Resources>
       <stone>50</stone>
-      <wood>150</wood>
+      <wood>200</wood>
     </Resources>
   <BuildTime>90</BuildTime>
   </Cost>
@@ -14,9 +14,6 @@
   <Health>
     <Max>1200</Max>
   </Health>
-   <Population>
-    <Bonus>5</Bonus>
-  </Population>
   <Identity>
     <Civ>gaul</Civ>
     <SpecificName>Celtic Coalition</SpecificName>
