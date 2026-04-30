@@ -26,6 +26,9 @@
     <SpecificName>Stoa Persikē</SpecificName>
     <Icon>structures/stoa.png</Icon>
     <VisibleClasses datatype="tokens">Town</VisibleClasses>
+    <Requirements>
+      <Techs datatype="tokens">phase_town</Techs>
+    </Requirements>
   </Identity>
     <Trainer>
     <Entities datatype="tokens">

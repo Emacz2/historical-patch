@@ -4,7 +4,7 @@
     <Category>Embassy</Category>
   </BuildRestrictions>
    <Cost>
-  <BuildTime>120</BuildTime>
+  <BuildTime>100</BuildTime>
   </Cost>
   <Footprint>
     <Square width="16.0" depth="16.0"/>
@@ -15,7 +15,7 @@
     <List datatype="tokens">Support Infantry Cavalry</List>
   </GarrisonHolder>
   <Health>
-    <Max>2000</Max>
+    <Max>1200</Max>
     <SpawnEntityOnDeath>decay|rubble/rubble_stone_3x3</SpawnEntityOnDeath>
   </Health>
   <Identity>

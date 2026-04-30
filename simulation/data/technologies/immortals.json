@@ -3,7 +3,7 @@
 	"description": "The Achaemenids maintained a 10,000-strong elite corps, referred to as Athanatoi (“Immortals”) by Greek authors.",
 	"cost": {
 		"food": 300,
-		"metal": 200
+		"wood": 200
 	},
 	"requirements": {
 		"all": [
@@ -14,9 +14,9 @@
 	"requirementsTooltip": "Unlocked in City Phase.",
 	"icon": "immortals.png",
 	"researchTime": 45,
-	"tooltip": "Immortals −20% training.",
+	"tooltip": "Immortals −33% training.",
 	"modifications": [
-		{ "value": "Cost/BuildTime", "multiply": 0.80 }
+		{ "value": "Cost/BuildTime", "multiply": 0.667 }
 		
 	],
 	"affects": ["Immortal"],

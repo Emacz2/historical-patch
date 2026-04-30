@@ -18,9 +18,6 @@
     <Classes datatype="tokens">MercenaryCamp</Classes>
     <Tooltip>Stronger version of mercancy camp, train Advanced mercanaries.</Tooltip>
     <Icon>structures/mercenary_camp.png</Icon>
-    <Requirements>
-      <Techs datatype="tokens">phase_town</Techs>
-    </Requirements>
   </Identity>
   <Loot>
     <wood>20</wood>
