@@ -2394,24 +2394,27 @@ Headquarters.prototype.update = function(gameState, queues, events)
 		this.garrisonManager.update(gameState, events);
 		this.defenseManager.update(gameState, events);
 
-		// IT14.47: Town Phase still enables Petra's proven attack manager for every
-		// Expert doctrine, but a doctrine that explicitly selected a P1 rush may use the
-		// Rush plan while still in Village Phase.  This is intentionally NOT a generic
-		// P1 AttackManager handoff: non-rush doctrines remain completely untouched until
-		// Town, preserving the successful IT14.46 economic opening.
+		// IT14.73: AttackManager remains active only as the executor for Expert-owned
+		// combat plans.  ExpertDecisionController decides whether a plan exists and whether
+		// it may launch; AttackManager may not create an independent primary offensive.
 		const expertDoctrine = this.expertDoctrine;
 		const expertP1RushWindow = gameState.currentPhase() === 1 && expertDoctrine &&
 			Number(expertDoctrine.rushes) > 0 &&
 			gameState.ai.elapsedTime >= Math.max(0, Number(expertDoctrine.soldierTrainingStartTime) || 0);
-		// IT14.68: do not let a blocked Town transition disable the only system capable
-		// of using a 45-70 man reserve. Once that reserve exists, AttackManager may create
-		// a strength-gated P1 fallback plan even for the P2-Tech doctrine.
+		// Keep the executor ticking during the P1 reserve window so an Expert-owned
+		// fallback plan can assemble and launch even if Town is mechanically delayed.
 		const p = mergePolicy();
 		const expertP1ReserveWindow = gameState.currentPhase() === 1 &&
 			gameState.ai.elapsedTime >= (Number(p.expertP1ReserveAttackMinimumTime) || 360) &&
 			this.attackManager && this.attackManager.expertReserveCombatCount &&
 			this.attackManager.expertReserveCombatCount(gameState) >= (Number(p.expertP1ReserveAttackMinimumArmy) || 45);
-		if ((gameState.currentPhase() > 1 || expertP1RushWindow || expertP1ReserveWindow) && this.Config.difficulty > difficulty.SANDBOX &&
+		// IT14.73: once Expert has created a combat plan, AttackManager must keep running
+		// as its executor even though assigning the reserve to that plan makes the old
+		// reserve-count trigger fall back below 45.
+		const expertHasAuthorityPlan = this.attackManager && ["Rush", "Attack", "HugeAttack"].some(type =>
+			(this.attackManager.upcomingAttacks[type] && this.attackManager.upcomingAttacks[type].length) ||
+			(this.attackManager.startedAttacks[type] && this.attackManager.startedAttacks[type].length));
+		if ((gameState.currentPhase() > 1 || expertP1RushWindow || expertP1ReserveWindow || expertHasAuthorityPlan) && this.Config.difficulty > difficulty.SANDBOX &&
 		    (this.hasActiveBase() || !this.canBuildUnits))
 			this.attackManager.update(gameState, queues, events);
 

@@ -154,6 +154,10 @@ AttackManager.prototype.checkEvents = function(gameState, events)
 	let targetPlayer;
 	for (const evt of events.AttackRequest)
 	{
+		// IT14.73: allied requests are advisory on Expert.  They may not retarget or
+		// force-start the single Expert-owned combat plan.
+		if (this.Config.difficulty >= difficulty.EXPERT)
+			continue;
 		if (evt.source === PlayerID || !gameState.isPlayerAlly(evt.source) || !gameState.isPlayerEnemy(evt.player))
 			continue;
 		targetPlayer = evt.player;
@@ -1708,7 +1712,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 			// melee upgrade. Keep the soldiers economically active in STATE_UNEXECUTED while
 			// that already-queued/researching tech finishes, but never hold past the hard
 			// timing ceiling if the research becomes stuck.
-			if (this.Config.difficulty >= difficulty.EXPERT && attackType === AttackPlan.TYPE_RUSH && doctrine &&
+			if (this.Config.difficulty >= difficulty.EXPERT && !attack.expertAuthorityOwned && attackType === AttackPlan.TYPE_RUSH && doctrine &&
 			    doctrine.id === "late_p1_rush" && gameState.getPlayerCiv && gameState.getPlayerCiv() === "athen" &&
 			    gameState.currentPhase && gameState.currentPhase() === 1 && attack.state === AttackPlan.STATE_UNEXECUTED && attack.canStart && attack.canStart())
 			{
@@ -2026,8 +2030,13 @@ AttackManager.prototype.update = function(gameState, queues, events)
 	this.recoverExpertRamPassengers(gameState);
 	this.manageExpertRamGarrisons(gameState, expertFinishing);
 
-	// creating plans after updating because an aborted plan might be reused in that case.
-	const expertForcedRelaunch = this.forceExpertReboomRelaunch(gameState);
+	// IT14.73: ExpertDecisionController is now the exclusive combat-plan creator.
+	// Petra keeps this legacy creation machinery only for non-Expert difficulties.
+	const expertAuthorityMode = this.Config.difficulty >= difficulty.EXPERT && gameState.ai.HQ.expertDecisionController &&
+		gameState.ai.HQ.expertDecisionController.isActive(gameState);
+	const expertForcedRelaunch = !expertAuthorityMode && this.forceExpertReboomRelaunch(gameState);
+	if (!expertAuthorityMode)
+	{
 
 	const expertPrimaryStarted = this.startedAttacks[AttackPlan.TYPE_DEFAULT].length +
 		this.startedAttacks[AttackPlan.TYPE_HUGE_ATTACK].length;
@@ -2170,6 +2179,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 		}
 		if (target) // prepare a raid against this target
 			this.raidTargetEntity(gameState, target);
+	}
 	}
 
 	// Check if we have some unused ranged siege unit which could do something useful while waiting
@@ -2474,6 +2484,15 @@ AttackManager.prototype.numAttackingUnitsAround = function(pos, dist)
  */
 AttackManager.prototype.switchDefenseToAttack = function(gameState, target, data)
 {
+	// IT14.73: a Petra defense army may keep defending, but it may not manufacture a
+	// new offensive AttackPlan behind Expert's authority boundary.  Expert will decide
+	// when those units transfer into its primary combat plan.
+	if (this.Config.difficulty >= difficulty.EXPERT && gameState.ai.HQ.expertDecisionController &&
+	    gameState.ai.HQ.expertDecisionController.isActive(gameState))
+	{
+		aiWarn("[EXPERT-AUTH] blocked Petra defense->attack conversion");
+		return false;
+	}
 	if (!target || !target.position())
 		return false;
 	if (!data.range && !data.armyID)

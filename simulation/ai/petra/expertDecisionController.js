@@ -2358,6 +2358,375 @@ export class ExpertDecisionController
 		return false;
 	}
 
+	expertCombatPrimaryTypes()
+	{
+		return [AttackPlan.TYPE_RUSH, AttackPlan.TYPE_DEFAULT, AttackPlan.TYPE_HUGE_ATTACK];
+	}
+
+	expertCombatPlans(started = undefined)
+	{
+		const manager = this.HQ && this.HQ.attackManager;
+		if (!manager)
+			return [];
+		const groups = started === true ? [manager.startedAttacks] : started === false ? [manager.upcomingAttacks] : [manager.startedAttacks, manager.upcomingAttacks];
+		const out = [];
+		for (const group of groups)
+			for (const type of this.expertCombatPrimaryTypes())
+				for (const plan of group && group[type] || [])
+					if (plan)
+						out.push(plan);
+		return out;
+	}
+
+	expertCombatTargetPlayer(gameState)
+	{
+		const cc = this.findCC(gameState);
+		const ourPos = cc && cc.position && cc.position();
+		const ourAccess = cc ? getLandAccess(gameState, cc) : undefined;
+		let best;
+		let bestDistance = Infinity;
+		for (let player = 1; player < gameState.sharedScript.playersData.length; ++player)
+		{
+			if (!gameState.isPlayerEnemy(player))
+				continue;
+			const pdata = gameState.sharedScript.playersData[player];
+			if (!pdata || pdata.state === "defeated")
+				continue;
+			for (const enemyCC of gameState.getEnemyStructures(player).filter(filters.byClass("CivCentre")).values())
+			{
+				if (!enemyCC || !enemyCC.position || !enemyCC.position())
+					continue;
+				if (ourAccess !== undefined && getLandAccess(gameState, enemyCC) !== ourAccess)
+					continue;
+				const dist = ourPos ? SquareVectorDistance(ourPos, enemyCC.position()) : 0;
+				if (dist < bestDistance)
+				{
+					bestDistance = dist;
+					best = player;
+				}
+			}
+			if (best === undefined)
+				best = player;
+		}
+		if (best !== undefined && this.HQ.attackManager)
+			this.HQ.attackManager.currentEnemyPlayer = best;
+		return best;
+	}
+
+	configureExpertRushPlan(gameState, plan, doctrine)
+	{
+		if (!plan || !doctrine)
+			return;
+		const target = Math.max(12, Number(doctrine.rushSize) || 20);
+		const minFraction = doctrine.id === "late_p1_rush" ? 0.93 : 0.78;
+		const minTotal = Math.max(10, Math.min(target, Math.round(target * minFraction)));
+		let screenLabel = "infantryMin=" + minTotal;
+		if (gameState.getPlayerCiv() === "athen")
+		{
+			const meleeShare = Number(mergePolicy().athensMeleeShare) || 0.58;
+			const meleeTarget = Math.max(1, Math.min(target - 1, Math.round(target * meleeShare)));
+			const rangedTarget = Math.max(1, target - meleeTarget);
+			const meleeMin = Math.max(1, Math.min(meleeTarget, Math.round(minTotal * meleeShare)));
+			const rangedMin = Math.max(1, Math.min(rangedTarget, minTotal - meleeMin));
+			delete plan.unitStat.Infantry;
+			plan.unitStat.MeleeInfantry = { "priority": 1.1, "minSize": meleeMin, "targetSize": meleeTarget, "batchSize": 2,
+				"classes": ["Infantry+Melee+CitizenSoldier"], "interests": [["strength", 1], ["costsResource", 0.5, "stone"], ["costsResource", 0.6, "metal"]] };
+			plan.unitStat.RangedInfantry = { "priority": 1, "minSize": rangedMin, "targetSize": rangedTarget, "batchSize": 2,
+				"classes": ["Infantry+Ranged+CitizenSoldier"], "interests": [["strength", 1], ["costsResource", 0.5, "stone"], ["costsResource", 0.6, "metal"]] };
+			screenLabel = "screen=" + meleeTarget + "M/" + rangedTarget + "R min=" + meleeMin + "M/" + rangedMin + "R";
+		}
+		else if (plan.unitStat.Infantry)
+		{
+			plan.unitStat.Infantry.targetSize = target;
+			plan.unitStat.Infantry.minSize = minTotal;
+		}
+		if (plan.unitStat.FastMoving)
+			delete plan.unitStat.FastMoving;
+		aiWarn("[EXPERT-AUTH] rush-shape=" + doctrine.id + " targetArmy=" + target + " " + screenLabel);
+	}
+
+	createExpertCombatPlan(gameState, type, reason)
+	{
+		const manager = this.HQ && this.HQ.attackManager;
+		if (!manager)
+			return undefined;
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const data = { "expertAuthorityOwned": true };
+		if (type === AttackPlan.TYPE_RUSH)
+			data.targetSize = Math.max(12, Number(doctrine.rushSize) || 20);
+		const plan = new AttackPlan(gameState, this.HQ.Config, manager.totalNumber, type, data);
+		if (!plan || plan.failed)
+			return undefined;
+		++manager.totalNumber;
+		if (type === AttackPlan.TYPE_RUSH)
+		{
+			this.configureExpertRushPlan(gameState, plan, doctrine);
+			++manager.rushNumber;
+		}
+		else
+			++manager.attackNumber;
+		plan.targetPlayer = this.expertCombatTargetPlayer(gameState);
+		plan.expertAuthorityReason = reason;
+		plan.init(gameState);
+		manager.upcomingAttacks[type].push(plan);
+		aiWarn("[EXPERT-AUTH] create plan=" + plan.name + " type=" + type + " reason=" + reason +
+			" targetPlayer=" + plan.targetPlayer);
+		return plan;
+	}
+
+	expertAdoptExistingCombatPlans(gameState)
+	{
+		for (const plan of this.expertCombatPlans())
+		{
+			if (plan.expertAuthorityOwned)
+				continue;
+			plan.expertAuthorityOwned = true;
+			const alreadyCrossedLaunchBoundary = plan.state !== AttackPlan.STATE_UNEXECUTED;
+			plan.expertAuthorityState = plan.isStarted && plan.isStarted() ? "LAUNCHED" :
+				plan.state === AttackPlan.STATE_COMPLETING ? "COMPLETING" : "ASSEMBLING";
+			// Save-compatibility: a legacy COMPLETING/started plan has already crossed its
+			// launch boundary; adopting it must not strand it behind the new invariant.
+			plan.expertLaunchAuthorized = alreadyCrossedLaunchBoundary;
+			aiWarn("[EXPERT-AUTH] adopted legacy plan=" + plan.name + " state=" + plan.expertAuthorityState);
+		}
+	}
+
+	expertEnsureCombatPlan(gameState)
+	{
+		const manager = this.HQ && this.HQ.attackManager;
+		if (!manager || this.expertCombatPlans().length)
+			return undefined;
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const policy = mergePolicy(this.strategyPolicyOverrides(gameState));
+		const now = Number(gameState.ai.elapsedTime) || 0;
+		const phase = gameState.currentPhase ? gameState.currentPhase() : 1;
+		const barracks = this.builtByClass(gameState, "Barracks").length;
+		if (!barracks && this.HQ.hasPotentialBase && this.HQ.hasPotentialBase())
+			return undefined;
+		if (phase === 1 && Number(doctrine.rushes) > 0 && manager.rushNumber < Number(doctrine.rushes) &&
+		    now >= Math.max(0, Number(doctrine.soldierTrainingStartTime) || 0) && barracks >= 1)
+		{
+			if (!(doctrine.id === "late_p1_rush" && gameState.getPlayerCiv() === "athen" && manager.expertLateP1UnupgradedCancelled &&
+			      !(gameState.isResearched && gameState.isResearched("citystate/city_state_attack_melee_01"))))
+				return this.createExpertCombatPlan(gameState, AttackPlan.TYPE_RUSH, doctrine.id);
+		}
+
+		const reserve = manager.expertReserveCombatCount ? manager.expertReserveCombatCount(gameState) : 0;
+		const phase2Researching = phase === 1 && gameState.getPhaseName && gameState.isResearching && gameState.isResearching(gameState.getPhaseName(2));
+		const p1ReserveReady = phase === 1 && now >= (Number(policy.expertP1ReserveAttackMinimumTime) || 360) &&
+			reserve >= (Number(policy.expertP1ReserveAttackMinimumArmy) || 45);
+		if (now < (Number(manager.expertReboomUntil) || -99999))
+			return undefined;
+		if ((phase >= 2 || phase2Researching || p1ReserveReady) && barracks >= 1)
+			return this.createExpertCombatPlan(gameState, AttackPlan.TYPE_DEFAULT, p1ReserveReady ? "p1-reserve" : phase2Researching ? "town-researching" : "p2-primary");
+		return undefined;
+	}
+
+	expertCombatTrainingOwner(gameState)
+	{
+		const started = this.expertCombatPlans(true).filter(plan => plan && plan.expertAuthorityOwned);
+		if (started.length)
+			return started.sort((a, b) => (b.unitCollection ? b.unitCollection.length : 0) - (a.unitCollection ? a.unitCollection.length : 0))[0];
+		const upcoming = this.expertCombatPlans(false).filter(plan => plan && plan.expertAuthorityOwned);
+		return upcoming.length ? upcoming[0] : undefined;
+	}
+
+	expertCombatOwnershipMetadata(gameState, fallbackOwner = "reserve")
+	{
+		const plan = this.expertCombatTrainingOwner(gameState);
+		return plan ? { "plan": plan.name, "expertCombatOwner": "plan:" + plan.name, "expertCombatOwnerPlan": plan.name } :
+			{ "plan": -1, "expertCombatOwner": fallbackOwner, "expertCombatOwnerPlan": -1 };
+	}
+
+	expertAttachEntityToPlan(plan, ent)
+	{
+		if (!plan || !ent || !ent.getMetadata || !ent.setMetadata)
+			return false;
+		ent.setMetadata(PlayerID, "plan", plan.name);
+		ent.setMetadata(PlayerID, "expertCombatOwner", "plan:" + plan.name);
+		ent.setMetadata(PlayerID, "expertCombatOwnerPlan", plan.name);
+		if (plan.unitCollection && plan.unitCollection.updateEnt)
+			plan.unitCollection.updateEnt(ent);
+		for (const cat in plan.unit || {})
+			if (plan.unit[cat] && plan.unit[cat].updateEnt)
+				plan.unit[cat].updateEnt(ent);
+		return true;
+	}
+
+	expertAssignReserveToPlan(gameState, plan)
+	{
+		if (!plan || !plan.expertAuthorityOwned || plan.state !== AttackPlan.STATE_UNEXECUTED)
+			return 0;
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const policy = mergePolicy();
+		const phase = gameState.currentPhase ? gameState.currentPhase() : 1;
+		const target = plan.type === AttackPlan.TYPE_RUSH ? Math.max(12, Number(doctrine.rushSize) || 20) :
+			phase === 1 ? Math.max(45, Number(policy.expertP1ReserveAttackMinimumArmy) || 45) :
+			Math.max(60, Number(policy.expertP2OpportunityNoTechArmy) || 60);
+		if (plan.unitCollection && plan.unitCollection.length >= target)
+			return 0;
+		const homeReserve = plan.type === AttackPlan.TYPE_RUSH ? 8 : 12;
+		const candidates = [];
+		let totalUnowned = 0;
+		for (const ent of gameState.getOwnUnits().values())
+		{
+			if (!ent || !ent.position || !ent.position() || !ent.getMetadata || !ent.setMetadata ||
+			    hasClass(ent, "Support") || isExpertBuildingSiegeEntity(ent) || hasClass(ent, "Animal") ||
+			    !(hasClass(ent, "CitizenSoldier") || hasClass(ent, "Champion")))
+				continue;
+			const assigned = ent.getMetadata(PlayerID, "plan");
+			if (assigned !== undefined && assigned !== -1)
+				continue;
+			if (ent.getMetadata(PlayerID, EXPERT_DEFENSE) !== undefined || ent.getMetadata(PlayerID, "garrisonHolder") !== undefined ||
+			    ent.getMetadata(PlayerID, "expertWoundedReturnUntil") !== undefined || ent.getMetadata(PlayerID, "expertCombatRetreatUntil") !== undefined ||
+			    ent.getMetadata(PlayerID, "expertDecisionTraining") === "hunt_cavalry")
+				continue;
+			++totalUnowned;
+			candidates.push(ent);
+		}
+		const canClaim = Math.max(0, totalUnowned - homeReserve);
+		let need = Math.max(0, Math.min(target - (plan.unitCollection ? plan.unitCollection.length : 0), canClaim));
+		if (!need)
+			return 0;
+		candidates.sort((a, b) => (hasClass(b, "Champion") ? 1 : 0) - (hasClass(a, "Champion") ? 1 : 0) ||
+			((b.healthLevel && b.healthLevel()) || 1) - ((a.healthLevel && a.healthLevel()) || 1) || a.id() - b.id());
+		let added = 0;
+		for (const ent of candidates)
+		{
+			if (added >= need)
+				break;
+			if (this.expertAttachEntityToPlan(plan, ent))
+				++added;
+		}
+		if (added)
+			aiWarn("[EXPERT-AUTH] assign plan=" + plan.name + " added=" + added + " army=" + plan.unitCollection.length +
+				" target=" + target + " homeReserve=" + homeReserve);
+		return added;
+	}
+
+	expertActivatePreownedMilitary(gameState)
+	{
+		const manager = this.HQ && this.HQ.attackManager;
+		if (!manager)
+			return;
+		for (const ent of gameState.getOwnUnits().values())
+		{
+			if (!ent || !ent.getMetadata || !ent.setMetadata)
+				continue;
+			const owner = Number(ent.getMetadata(PlayerID, "expertCombatOwnerPlan"));
+			if (!Number.isFinite(owner) || owner < 0)
+				continue;
+			const plan = manager.getPlan && manager.getPlan(owner);
+			if (!plan)
+			{
+				ent.setMetadata(PlayerID, "plan", -1);
+				ent.setMetadata(PlayerID, "expertCombatOwner", "reserve");
+				ent.setMetadata(PlayerID, "expertCombatOwnerPlan", -1);
+				continue;
+			}
+			if (Number(ent.getMetadata(PlayerID, "plan")) !== Number(plan.name))
+				this.expertAttachEntityToPlan(plan, ent);
+			const activated = Number(ent.getMetadata(PlayerID, "expertCombatActivatedPlan"));
+			if ((plan.isStarted && plan.isStarted() || hasClass(ent, "Champion") || isExpertBuildingSiegeEntity(ent)) &&
+			    activated !== Number(plan.name) && plan.activateExpertOwnedUnit)
+				plan.activateExpertOwnedUnit(gameState, ent);
+		}
+	}
+
+	expertCancelAuthorityPlan(gameState, plan, reason)
+	{
+		const manager = this.HQ && this.HQ.attackManager;
+		if (!manager || !plan)
+			return false;
+		plan.expertAuthorityState = "CANCELLED";
+		plan.Abort(gameState);
+		const list = manager.upcomingAttacks[plan.type] || [];
+		const index = list.indexOf(plan);
+		if (index >= 0)
+			list.splice(index, 1);
+		if (plan.type === AttackPlan.TYPE_RUSH)
+		{
+			manager.expertRushRecoveryMode = true;
+			manager.expertRushRecoveryUntil = Math.max(Number(manager.expertRushRecoveryUntil) || -99999,
+				(Number(gameState.ai.elapsedTime) || 0) + 45);
+		}
+		aiWarn("[EXPERT-AUTH] cancel plan=" + plan.name + " reason=" + reason);
+		return true;
+	}
+
+	expertAuthorizeCombatLaunch(gameState, plan, reason)
+	{
+		if (!plan || !plan.expertAuthorityOwned || plan.state !== AttackPlan.STATE_UNEXECUTED || plan.expertLaunchAuthorized)
+			return false;
+		if (!plan.authorizeExpertLaunch || !plan.authorizeExpertLaunch(reason))
+			return false;
+		aiWarn("[EXPERT-AUTH] LAUNCH-AUTHORIZED plan=" + plan.name + " type=" + plan.type +
+			" army=" + (plan.unitCollection ? plan.unitCollection.length : 0) + " reason=" + reason);
+		return true;
+	}
+
+	expertEvaluateCombatLaunch(gameState, plan)
+	{
+		if (!plan || plan.state !== AttackPlan.STATE_UNEXECUTED || plan.expertLaunchAuthorized)
+			return;
+		const manager = this.HQ.attackManager;
+		const policy = mergePolicy();
+		const phase = gameState.currentPhase ? gameState.currentPhase() : 1;
+		const army = plan.unitCollection ? plan.unitCollection.length : 0;
+		if (plan.type === AttackPlan.TYPE_RUSH)
+		{
+			const decision = manager.expertP1RushLaunchDecision ? manager.expertP1RushLaunchDecision(gameState, plan) : { launch: false };
+			if (decision.cancel)
+				this.expertCancelAuthorityPlan(gameState, plan, decision.reason || "rush-cancel");
+			else if (decision.launch)
+				this.expertAuthorizeCombatLaunch(gameState, plan, "rush:" + (decision.reason || "advantage"));
+			return;
+		}
+
+		if (phase === 1)
+		{
+			if (army < (Number(policy.expertP1ReserveAttackMinimumArmy) || 45))
+				return;
+			const decision = manager.expertP1TimingWindowDecision ? manager.expertP1TimingWindowDecision(gameState, plan) : { launch: false };
+			if (decision.launch)
+				this.expertAuthorizeCombatLaunch(gameState, plan, "p1-reserve:" + (decision.reason || "advantage"));
+			return;
+		}
+
+		const finishing = this.finishingState(gameState);
+		if (finishing.active && army >= Math.max(8, Number(policy.expertFinishingMinimumArmy) || 36))
+		{
+			this.expertAuthorizeCombatLaunch(gameState, plan, "finish");
+			return;
+		}
+		const tech = manager.getExpertP2AttackTechGate ? manager.getExpertP2AttackTechGate(gameState) : { ready: true, active: 0, completed: 0 };
+		const minimum = Math.max(1, Number(policy.expertP2OpportunityMinimumArmy) || 45);
+		const noTechMinimum = Math.max(minimum, Number(policy.expertP2OpportunityNoTechArmy) || 60);
+		const activeEnough = (Number(tech.active) || Number(tech.completed) || 0) >= (Number(policy.expertP2OpportunityMinimumActiveTechs) || 1);
+		const packageReady = !!tech.ready && army >= minimum;
+		const opportunityReady = army >= minimum && (activeEnough || army >= noTechMinimum);
+		if (!packageReady && !opportunityReady)
+			return;
+		const decision = manager.expertP1TimingWindowDecision ? manager.expertP1TimingWindowDecision(gameState, plan) : { launch: false };
+		if (decision.launch)
+			this.expertAuthorizeCombatLaunch(gameState, plan, (packageReady ? "p2-package:" : "p2-opportunity:") + (decision.reason || "advantage"));
+	}
+
+	updateExpertCombatAuthority(gameState)
+	{
+		if (!this.isExpertControlActive(gameState) || !this.HQ.attackManager)
+			return;
+		this.expertAdoptExistingCombatPlans(gameState);
+		this.expertEnsureCombatPlan(gameState);
+		for (const plan of this.expertCombatPlans(false))
+			if (plan && plan.expertAuthorityOwned)
+			{
+				this.expertAssignReserveToPlan(gameState, plan);
+				this.expertEvaluateCombatLaunch(gameState, plan);
+			}
+		this.expertActivatePreownedMilitary(gameState);
+	}
+
 	visibleEnemyCombatCount(gameState, player)
 	{
 		if (player === undefined || !gameState.getEnemyUnits)
@@ -3294,6 +3663,20 @@ export class ExpertDecisionController
 			pop >= (Number(policy.phase2OneBarracksLayoutEscapeMinimumPopulation) || 90) &&
 			coverage >= (Number(policy.phase2OneBarracksLayoutEscapeCostCoverage) || 0.65) &&
 			(Number(this.farmsteadPlacementFailures) || 0) >= (Number(policy.phase2OneBarracksLayoutEscapeMinimumFailures) || 6);
+		// IT14.72: 14.71 exposed a missing salvage state. Two Barracks + four
+		// fields could fail every three-slot Farmstead search forever, while the one-
+		// Barracks and five-field escape lanes were both inapplicable. Preserve six
+		// fields as the normal contract, but after sustained, proven placement failure
+		// allow Town so a human cannot win simply by waiting for the AI to starve in P1.
+		const twoBarracksFourFieldEscape = barracks >= 2 &&
+			fieldPipeline >= (Number(policy.phase2TwoBarracksFourFieldEscapeMinimumFields) || 4) &&
+			fieldPipeline < (Number(policy.phase2AbsoluteMinimumFields) || 6) &&
+			openFieldSlots <= 0 &&
+			naturalRemaining <= (Number(policy.phase2TwoBarracksFourFieldEscapeNaturalFood) || 200) &&
+			now >= (Number(policy.phase2TwoBarracksFourFieldEscapeTime) || 540) &&
+			pop >= (Number(policy.phase2TwoBarracksFourFieldEscapeMinimumPopulation) || 90) &&
+			coverage >= (Number(policy.phase2TwoBarracksFourFieldEscapeCostCoverage) || 0.60) &&
+			(Number(this.farmsteadPlacementFailures) || 0) >= (Number(policy.phase2TwoBarracksFourFieldEscapeMinimumFailures) || 8);
 		// IT14.68 revised: standard two-Barracks P2 lanes require the six-field
 		// permanent-food insurance floor even while healthy natural food remains.
 		// Only explicit sustained deadlock/alternate-build lanes may bypass this floor.
@@ -3315,6 +3698,8 @@ export class ExpertDecisionController
 			ready = true, lane = "absolute-7m";
 		else if (productionReady && fiveFieldLayoutEscape && pop >= policy.phase2AbsolutePopulation)
 			ready = true, lane = "five-field-layout-failsafe";
+		else if (twoBarracksFourFieldEscape)
+			ready = true, lane = "two-barracks-four-field-layout-failsafe";
 		else if (oneBarracksFourFieldEscape)
 			ready = true, lane = "one-barracks-four-field-layout-failsafe";
 		else if (productionReady && deadlockFoodFloor &&
@@ -6249,6 +6634,7 @@ export class ExpertDecisionController
 		const plan = new TrainingPlan(gameState, selected.type, {
 			"role": Worker.ROLE_WORKER, "base": 0, "plan": -1, "trainer": cc.id(),
 			"expertDecisionLayer": true, "expertDecisionTraining": "hunt_cavalry",
+			"expertCombatOwner": "hunt", "expertCombatOwnerPlan": -1,
 			"expertRallyCommand": "gather", "expertRallyJob": "hunt",
 			"expertRallyTarget": target && target.id()
 		}, batch, batch);
@@ -6350,16 +6736,18 @@ export class ExpertDecisionController
 				continue;
 			if (this.operatingPopulationHeadroom(gameState, true) < this.unitPopulationCost(gameState, selected.type))
 				continue;
+			const combatOwner = this.expertCombatOwnershipMetadata(gameState, "siege-reserve");
 			const plan = new TrainingPlan(gameState, selected.type, {
-				"plan": -1, "trainer": arsenal.id(), "expertDecisionLayer": true,
-				"expertDecisionTraining": "siege", "expertDecisionMilitary": true
+				"plan": combatOwner.plan, "trainer": arsenal.id(), "expertDecisionLayer": true,
+				"expertDecisionTraining": "siege", "expertDecisionMilitary": true,
+				"expertCombatOwner": combatOwner.expertCombatOwner, "expertCombatOwnerPlan": combatOwner.expertCombatOwnerPlan
 			}, 1, 1);
 			if (!plan)
 				continue;
 			siegeQueue.addPlan(plan);
 			gameState.ai.queueManager.changePriority(queueName, 1120);
 			++accounted;
-			aiWarn("[EXPERT-SIEGE] queued siege=" + selected.type + " trainer=" + arsenal.id() + " enemyPop=" + siegeContext.enemyPopulation +
+			aiWarn("[EXPERT-SIEGE] queued siege=" + selected.type + " trainer=" + arsenal.id() + " owner=" + combatOwner.expertCombatOwner + " enemyPop=" + siegeContext.enemyPopulation +
 				" mode=" + (siegeContext.finishing ? "finish" : siegeContext.p2KillSwitch ? "p2-kill" : siegeContext.brokenTown ? "broken-p2" : "p3-push"));
 		}
 	}
@@ -6429,6 +6817,8 @@ export class ExpertDecisionController
 			return true;
 
 		const houses = this.builtByClass(gameState, "House").length;
+		const houseFoundations = this.foundationsByClass(gameState, "House").length;
+		const committedHouses = houses + houseFoundations;
 		const free = Math.max(0, (Number(gameState.getPopulationLimit()) || 0) - (Number(gameState.getPopulation()) || 0));
 		const failures = Math.max(Number(this.placementFailureCounts["house:primary"] || 0),
 			...Object.entries(this.placementFailureCounts || {}).filter(([key]) => key.startsWith("house:")).map(([, value]) => Number(value) || 0), 0);
@@ -6437,7 +6827,7 @@ export class ExpertDecisionController
 		const crowdedFallback = free <= (Number(policy.houseEmergencyTechFreePopulation) || 6) &&
 			houses >= (Number(policy.houseEmergencyTechMinimumHouses) || 6) &&
 			failures >= (Number(policy.houseEmergencyTechPlacementFailures) || 2);
-		if (houses < strongAt && !crowdedFallback)
+		if (committedHouses < strongAt && !crowdedFallback)
 			return false;
 
 		const available = new Map(gameState.findAvailableTech() || []);
@@ -6450,8 +6840,8 @@ export class ExpertDecisionController
 		const res = gameState.getResources();
 		const affordable = ["food", "wood", "stone", "metal"].every(r =>
 			(Number(res[r]) || 0) >= (Number(cost[r]) || 0));
-		const mandatory = houses >= mandatoryAt;
-		const strong = houses >= strongAt && (affordable || free <= (Number(policy.houseCapacityTechStrongFreePopulation) || 18));
+		const mandatory = committedHouses >= mandatoryAt;
+		const strong = committedHouses >= strongAt && (affordable || free <= (Number(policy.houseCapacityTechStrongFreePopulation) || 18));
 		if (!mandatory && !strong && !crowdedFallback)
 			return false;
 
@@ -6487,9 +6877,11 @@ export class ExpertDecisionController
 			return false;
 		const policy = mergePolicy();
 		const houses = this.builtByClass(gameState, "House").length;
+		const houseFoundations = this.foundationsByClass(gameState, "House").length;
+		const committedHouses = houses + houseFoundations;
 		const strongAt = Math.max(1, Number(policy.houseCapacityTechStrongHouseCount) || 12);
 		const mandatoryAt = Math.max(strongAt, Number(policy.houseCapacityTechMandatoryHouseCount) || 13);
-		if (houses < strongAt)
+		if (committedHouses < strongAt)
 			return false;
 		const techName = "pop_house_01";
 		const researched = gameState.isResearched && gameState.isResearched(techName);
@@ -6499,9 +6891,9 @@ export class ExpertDecisionController
 		// IT14.71: once Home Garden is actually committed at house #12, stop queuing
 		// another house behind it. At house #13 suppression is unconditional whenever
 		// the tech remains available/researchable.
-		if (houses >= strongAt && (researched || researching || queued))
+		if (committedHouses >= strongAt && (researched || researching || queued))
 			return true;
-		if (houses < mandatoryAt)
+		if (committedHouses < mandatoryAt)
 			return false;
 		const available = new Map(gameState.findAvailableTech() || []);
 		return available.has(techName) && !!(gameState.hasResearchers && gameState.hasResearchers(techName, true));
@@ -6780,17 +7172,20 @@ export class ExpertDecisionController
 		const unitPop = this.unitPopulationCost(gameState, selected.type);
 		if (this.operatingPopulationHeadroom(gameState) < unitPop)
 			return false;
+		const combatOwner = this.expertCombatOwnershipMetadata(gameState, "premium-reserve");
 		const plan = new TrainingPlan(gameState, selected.type, {
-			"role": Worker.ROLE_ATTACK, "base": 0, "plan": -1, "trainer": trainer.id(),
+			"role": Worker.ROLE_ATTACK, "base": 0, "plan": combatOwner.plan, "trainer": trainer.id(),
 			"expertDecisionLayer": true, "expertDecisionTraining": "special",
-			"expertDecisionMilitary": true, "expertDecisionSpecial": label
+			"expertDecisionMilitary": true, "expertDecisionSpecial": label,
+			"expertCombatOwner": combatOwner.expertCombatOwner, "expertCombatOwnerPlan": combatOwner.expertCombatOwnerPlan
 		}, 1, 1);
 		if (!plan)
 			return false;
 		queues.citizenSoldier.addPlan(plan);
 		gameState.ai.queueManager.changePriority("citizenSoldier",
 			Math.max(this.HQ.Config.priorities.citizenSoldier || 1, label.includes("hero") ? 975 : 955));
-		aiWarn("[EXPERT-ATHENS] queued " + label + "=" + selected.type + " trainer=" + trainer.id());
+		aiWarn("[EXPERT-ATHENS] queued " + label + "=" + selected.type + " trainer=" + trainer.id() +
+			" owner=" + combatOwner.expertCombatOwner);
 		return true;
 	}
 
@@ -7229,23 +7624,34 @@ export class ExpertDecisionController
 		    !this.phaseWoodCrisis && !(this.lastFoodWoodFeedback && this.lastFoodWoodFeedback.mode === "food_recovery"))
 			rallyGeneric = this.lastResourceBalance.target;
 		const rallyTarget = this.trainingRallyTarget(gameState, trainer, rallyGeneric);
-		const plan = new TrainingPlan(gameState, selected.type, {
-			// Replay contract: citizen soldiers are BOTH the growing army and productive
-			// workers. IT14.58 gives the trainer a live gather rally so the unit leaves the
-			// doorway already doing useful work instead of waiting for the next AI tick.
-			"role": Worker.ROLE_WORKER, "base": 0, "plan": -1, "trainer": trainer.id(),
+		const ownerPlan = this.expertCombatTrainingOwner(gameState);
+		const ownerStarted = !!(ownerPlan && ownerPlan.isStarted && ownerPlan.isStarted());
+		const combatOwner = ownerPlan ? { "plan": ownerPlan.name, "expertCombatOwner": "plan:" + ownerPlan.name, "expertCombatOwnerPlan": ownerPlan.name } :
+			{ "plan": -1, "expertCombatOwner": "reserve", "expertCombatOwnerPlan": -1 };
+		const metadata = {
+			// IT14.73: ownership is assigned before training.  A preparing-plan soldier may
+			// still gather productively; a reinforcement born for a launched plan is combat
+			// owned immediately and never receives a contradictory wood rally first.
+			"role": ownerStarted ? Worker.ROLE_ATTACK : Worker.ROLE_WORKER, "base": 0, "plan": combatOwner.plan, "trainer": trainer.id(),
 			"expertDecisionLayer": true, "expertDecisionTraining": "soldier",
 			"expertDecisionCitizenSoldierWood": true, "expertDecisionSource": source,
 			"expertDecisionStandby": standbyUnfunded || headroom <= 0,
-			"expertRallyJob": rallyGeneric, "expertRallyTarget": rallyTarget && rallyTarget.id(), "expertRallyCommand": "gather"
-		}, batch, batch);
+			"expertCombatOwner": combatOwner.expertCombatOwner, "expertCombatOwnerPlan": combatOwner.expertCombatOwnerPlan
+		};
+		if (!ownerStarted)
+		{
+			metadata.expertRallyJob = rallyGeneric;
+			metadata.expertRallyTarget = rallyTarget && rallyTarget.id();
+			metadata.expertRallyCommand = "gather";
+		}
+		const plan = new TrainingPlan(gameState, selected.type, metadata, batch, batch);
 		if (!plan)
 			return false;
 		queues.citizenSoldier.addPlan(plan);
 		gameState.ai.queueManager.changePriority("citizenSoldier", Math.max(this.HQ.Config.priorities.citizenSoldier || 1,
 			Number(policy.expertProductionSoldierPriority) || 950));
 		aiWarn("[EXPERT-MIL] queued " + source + " soldiers=" + selected.type + " batch=" + batch + " trainer=" + trainer.id() +
-			" depth=" + (this.expertSoldierWorkCount(queues, trainer)) + "/" + Math.max(1, Math.floor(Number(maxWorkDepth) || 1)) +
+			" owner=" + combatOwner.expertCombatOwner + " depth=" + (this.expertSoldierWorkCount(queues, trainer)) + "/" + Math.max(1, Math.floor(Number(maxWorkDepth) || 1)) +
 			(protectWood && selected.slinger && selected.cost.wood <= 0 ? " mode=low-wood-slinger" : "") +
 			(standbyUnfunded || headroom <= 0 ? " standby=1" : ""));
 		return true;
@@ -7612,7 +8018,13 @@ export class ExpertDecisionController
 				candidates.push(...initialStorehousePlacementCandidates({ "action": "SELECT_INITIAL_WOODSITE", ...site }, { distances, angleCount }));
 			request = {
 				kind, "templateRadius": geometry.radius, candidates,
-				"worksiteAnchor": ranked[0].position, "selectedTreeIds": [...(ranked[0].treeIds || [])]
+				"worksiteAnchor": ranked[0].position, "selectedTreeIds": [...(ranked[0].treeIds || [])],
+				// IT14.72: the opening Storehouse is a wood-edge building, not a farm-
+				// district building. Score legal candidates away from the berry/future-
+				// field core while keeping the same selected wood patch.
+				"openingStorehouse": true,
+				"foodDistrictAnchor": foodObservation && Array.isArray(foodObservation.center) ? [...foodObservation.center] : undefined,
+				"ccAnchor": cc && cc.position ? [...cc.position()] : undefined
 			};
 			if (recovery > 0)
 				aiWarn("[EXPERT-WOOD] opening storehouse recovery=" + recovery + " sites=" + ranked.length +
@@ -7820,7 +8232,7 @@ export class ExpertDecisionController
 				const secondSlotsAfterFallback = Math.max(3, requestedSecondSlots - secondFallbackSteps);
 				const minimumFieldSlots = secondBarracksFoodBlock ?
 					secondSlotsAfterFallback : deadlockEmergency ?
-					Math.max(3, Number(policy.minimumFarmHubFieldSlotsEmergency) || 3) : fallbackHub ?
+					Math.max(2, Number(policy.minimumFarmHubFieldSlotsEmergency) || 2) : fallbackHub ?
 					Math.max(3, Number(policy.minimumFarmHubFieldSlotsFallback) || 3) : Math.max(3, Number(policy.minimumFarmHubFieldSlots) || 4);
 				request = {
 					kind,
@@ -8790,10 +9202,33 @@ export class ExpertDecisionController
 		if (kind === "storehouse")
 			ports.scoreCandidate = (position, request, index) =>
 			{
-				if (!request || !request.resourceService)
-					return Number(index) || 0;
-				const sources = Array.isArray(request.pathSources) ? request.pathSources : [];
 				let score = Number(index) || 0;
+				if (request && request.openingStorehouse)
+				{
+					const policy = mergePolicy();
+					if (Array.isArray(request.foodDistrictAnchor))
+					{
+						const radius = Number(policy.openingStorehouseFoodDistrictPreserveRadius) || 42;
+						const distance = Math.sqrt(SquareVectorDistance(position, request.foodDistrictAnchor));
+						if (distance < radius)
+							score += (Number(policy.openingStorehouseFoodDistrictPenalty) || 5000) * (radius - distance);
+					}
+					if (Array.isArray(request.ccAnchor))
+					{
+						const radius = Number(policy.openingStorehouseCCCorePreserveRadius) || 30;
+						const distance = Math.sqrt(SquareVectorDistance(position, request.ccAnchor));
+						if (distance < radius)
+							score += (Number(policy.openingStorehouseCCCorePenalty) || 1200) * (radius - distance);
+					}
+					// Keep the Storehouse useful as a dropsite while choosing the OUTER edge
+					// of the same selected forest patch when two legal positions are similar.
+					if (Array.isArray(request.worksiteAnchor))
+						score += 8 * Math.sqrt(SquareVectorDistance(position, request.worksiteAnchor));
+					return score;
+				}
+				if (!request || !request.resourceService)
+					return score;
+				const sources = Array.isArray(request.pathSources) ? request.pathSources : [];
 				for (const source of sources)
 				{
 					const distance = Math.sqrt(SquareVectorDistance(source, position));
@@ -10596,6 +11031,10 @@ export class ExpertDecisionController
 		// then invisible to worker retargeting while they deposit, retreat, assemble and fight.
 		const defenseState = this.coordinateExpertDefense(gameState, cc);
 		this.coordinateCivilianSafety(gameState, cc);
+		// IT14.73: combat ownership/launch authority runs before production. Any military
+		// queued later this same turn can therefore be born already owned by the selected
+		// Expert plan (or explicitly by the reserve if no plan exists).
+		this.updateExpertCombatAuthority(gameState);
 
 		// Compute the current production burn BEFORE assigning newly-created civilians.
 		// New permanent jobs are based on how many food workers the active CC/barracks
@@ -10941,7 +11380,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.71] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.73] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -11003,7 +11442,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.71] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.73] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()

@@ -36,6 +36,14 @@ export function AttackPlan(gameState, config, uniqueID, type = AttackPlan.TYPE_D
 	this.state = AttackPlan.STATE_UNEXECUTED;
 	this.forced = false;  // true when this attacked has been forced to help an ally
 
+	// IT14.73 authority cutover.  On Expert, an authority-owned AttackPlan is only an
+	// executor.  It may regroup/path/move units, but it may not recruit, train or cross
+	// the launch boundary unless ExpertDecisionController explicitly authorizes it.
+	this.expertAuthorityOwned = !!(data && data.expertAuthorityOwned);
+	this.expertAuthorityState = this.expertAuthorityOwned ? "ASSEMBLING" : undefined;
+	this.expertLaunchAuthorized = false;
+	this.expertLaunchReason = undefined;
+
 	if (data && data.target)
 	{
 		this.target = data.target;
@@ -373,6 +381,11 @@ AttackPlan.prototype.mustStart = function()
 
 AttackPlan.prototype.forceStart = function()
 {
+	// IT14.73: legacy Petra callers may still *request* a force-start, but they cannot
+	// authorize an Expert authority plan.  This closes max-pop, siege, ally-request and
+	// finish-force bypasses without having to hunt each caller forever.
+	if (this.expertAuthorityOwned && !this.expertLaunchAuthorized)
+		return false;
 	for (const unitCat in this.unitStat)
 	{
 		const Unit = this.unitStat[unitCat];
@@ -380,6 +393,18 @@ AttackPlan.prototype.forceStart = function()
 		Unit.minSize = 0;
 	}
 	this.forced = true;
+	return true;
+};
+
+AttackPlan.prototype.authorizeExpertLaunch = function(reason)
+{
+	if (!this.expertAuthorityOwned || this.state !== AttackPlan.STATE_UNEXECUTED || this.expertLaunchAuthorized)
+		return false;
+	this.expertLaunchAuthorized = true;
+	this.expertAuthorityState = "LAUNCH_AUTHORIZED";
+	this.expertLaunchReason = reason || "expert-authority";
+	// Now, and only now, make the mechanical preparation path immediately startable.
+	return this.forceStart();
 };
 
 AttackPlan.prototype.emptyQueues = function()
@@ -499,6 +524,10 @@ AttackPlan.prototype.updatePreparation = function(gameState)
 		}
 	}
 
+	if (this.Config.difficulty >= difficulty.EXPERT && this.expertAuthorityOwned &&
+	    this.state === AttackPlan.STATE_UNEXECUTED && !this.expertLaunchAuthorized)
+		return AttackPlan.PREPARATION_KEEP_GOING;
+
 	if (this.Config.debug > 3 && gameState.ai.playedTurn % 50 === 0)
 		this.debugAttack();
 
@@ -506,7 +535,7 @@ AttackPlan.prototype.updatePreparation = function(gameState)
 	if (this.overseas && !gameState.ai.HQ.navalManager.seaTransportShips[this.overseas].length)
 		return AttackPlan.PREPARATION_KEEP_GOING;
 
-	if (this.type !== AttackPlan.TYPE_RAID || !this.forced)    // Forced Raids have special purposes (as relic capture)
+	if (!this.expertAuthorityOwned && (this.type !== AttackPlan.TYPE_RAID || !this.forced))    // Expert authority assigns its own units.
 		this.assignUnits(gameState);
 	if (this.type !== AttackPlan.TYPE_RAID && gameState.ai.HQ.attackManager.getAttackInPreparation(AttackPlan.TYPE_RAID) !== undefined)
 		this.reassignFastUnit(gameState);    // reassign some fast units (if any) to fasten raid preparations
@@ -520,6 +549,8 @@ AttackPlan.prototype.updatePreparation = function(gameState)
 		gameState.ai.HQ.attackManager.getExpertP2AttackTechGate ?
 		gameState.ai.HQ.attackManager.getExpertP2AttackTechGate(gameState) : { ready: true, completed: 0, required: 0 };
 	let expertP2TechBlocked = !expertP2TechGate.ready;
+	if (this.expertAuthorityOwned && this.expertLaunchAuthorized)
+		expertP2TechBlocked = false;
 	// IT14.67: P2 Tech Push is still a tech-oriented strategy, but not a ritual. If
 	// one core upgrade is already active and a 45+ army has a clearly favorable fight,
 	// use the same local/global strength test as the P1 timing window instead of idling
@@ -687,7 +718,7 @@ AttackPlan.prototype.updatePreparation = function(gameState)
 	// citizen-soldiers are still allowed to keep gathering.
 	if ((this.targetPlayer === undefined || !this.target || !gameState.getEntityById(this.target.id())) && !this.chooseTarget(gameState))
 		return AttackPlan.PREPARATION_FAILED;
-	if (this.Config.difficulty >= difficulty.EXPERT && this.type === AttackPlan.TYPE_RUSH &&
+	if (this.Config.difficulty >= difficulty.EXPERT && !this.expertAuthorityOwned && this.type === AttackPlan.TYPE_RUSH &&
 	    gameState.ai.HQ.attackManager.expertP1RushLaunchDecision)
 	{
 		const decision = gameState.ai.HQ.attackManager.expertP1RushLaunchDecision(gameState, this);
@@ -695,6 +726,8 @@ AttackPlan.prototype.updatePreparation = function(gameState)
 			return decision.cancel ? AttackPlan.PREPARATION_FAILED : AttackPlan.PREPARATION_KEEP_GOING;
 	}
 	this.state = AttackPlan.STATE_COMPLETING;
+	if (this.expertAuthorityOwned)
+		this.expertAuthorityState = "COMPLETING";
 	if (!this.overseas)
 		this.getPathToTarget(gameState);
 
@@ -1025,7 +1058,7 @@ AttackPlan.prototype.isAvailableUnit = function(gameState, ent)
 // enough to participate, then the plan releases the whole army inward.
 AttackPlan.prototype.expertRamAssaultState = function(gameState)
 {
-	const out = { active: false, waiting: false, ready: false, objective: undefined, objectivePos: undefined, stagingPos: undefined };
+	const out = { active: false, waiting: false, ready: false, executeCC: false, objective: undefined, objectivePos: undefined, stagingPos: undefined };
 	if (this.Config.difficulty < difficulty.EXPERT || !this.isStarted() || this.targetPlayer === undefined)
 		return out;
 	let cc;
@@ -1099,6 +1132,7 @@ AttackPlan.prototype.expertRamAssaultState = function(gameState)
 	if (executeCC)
 	{
 		out.ready = true;
+		out.executeCC = true;
 		this.expertRamHoldSince = undefined;
 		this.expertRamHoldLogged = false;
 		if (this.expertRamExecutionObjective !== cc.id())
@@ -1380,6 +1414,37 @@ AttackPlan.prototype.forceExpertFinishingRetarget = function(gameState)
 			ent.moveToRange(this.targetPos[0], this.targetPos[1], 0, 12);
 	}
 	return !!best;
+};
+
+AttackPlan.prototype.activateExpertOwnedUnit = function(gameState, ent)
+{
+	if (!this.expertAuthorityOwned || !ent || !ent.position || !ent.position() || !ent.getMetadata ||
+	    Number(ent.getMetadata(PlayerID, "plan")) !== Number(this.name))
+		return false;
+	if (this.unitCollection && this.unitCollection.updateEnt)
+		this.unitCollection.updateEnt(ent);
+	for (const cat in this.unit || {})
+		if (this.unit[cat] && this.unit[cat].updateEnt)
+			this.unit[cat].updateEnt(ent);
+
+	const citizenWorker = ent.hasClass && ent.hasClass("CitizenSoldier") && !ent.hasClass("Champion") && !this.isStarted();
+	if (citizenWorker)
+		return true;
+
+	ent.setMetadata(PlayerID, "role", Worker.ROLE_ATTACK);
+	if (this.isStarted())
+		ent.setMetadata(PlayerID, "subrole", this.state === "walking" ? Worker.SUBROLE_WALKING : Worker.SUBROLE_ATTACKING);
+	else
+		ent.setMetadata(PlayerID, "subrole", Worker.SUBROLE_COMPLETING);
+	const stance = ent.isPackable && ent.isPackable() ? "standground" : "aggressive";
+	if (ent.getStance && ent.setStance && ent.getStance() != stance)
+		ent.setStance(stance);
+	const rendezvous = this.isStarted() && this.position && Number.isFinite(this.position[0]) && Number.isFinite(this.position[1]) &&
+		(this.position[0] !== 0 || this.position[1] !== 0) ? this.position : this.rallyPoint || this.targetPos;
+	if (rendezvous && Number.isFinite(rendezvous[0]) && Number.isFinite(rendezvous[1]) && ent.moveToRange)
+		ent.moveToRange(rendezvous[0], rendezvous[1], 0, this.isStarted() ? 18 : 12);
+	ent.setMetadata(PlayerID, "expertCombatActivatedPlan", this.name);
+	return true;
 };
 
 AttackPlan.prototype.addExpertReinforcement = function(gameState, ent)
@@ -1932,6 +1997,11 @@ AttackPlan.prototype.setRallyPoint = function(gameState)
  */
 AttackPlan.prototype.StartAttack = function(gameState)
 {
+	if (this.expertAuthorityOwned && !this.expertLaunchAuthorized)
+	{
+		aiWarn("[EXPERT-AUTH-INVARIANT] blocked unauthorized StartAttack plan=" + this.name);
+		return false;
+	}
 	if (this.Config.debug > 1)
 		aiWarn("start attack " + this.name + " with type " + this.type);
 
@@ -1953,6 +2023,8 @@ AttackPlan.prototype.StartAttack = function(gameState)
 
 	const rallyAccess = gameState.ai.accessibility.getAccessValue(this.rallyPoint);
 	const targetAccess = getLandAccess(gameState, this.target);
+	if (this.expertAuthorityOwned)
+		this.expertAuthorityState = "LAUNCHED";
 	if (rallyAccess == targetAccess)
 	{
 		if (!this.path)
@@ -2284,6 +2356,9 @@ AttackPlan.prototype.update = function(gameState, events)
 				const target = gameState.getEntityById(targetId);
 				if (!target || gameState.isPlayerAlly(target.owner()))
 					needsUpdate = true;
+				else if (expertRamAssault.executeCC && target.hasClass("Structure") &&
+				    (!expertRamAssault.objective || target.id() !== expertRamAssault.objective.id()))
+					needsUpdate = true;
 				else if (unitTargets[targetId] && unitTargets[targetId] > 0)
 				{
 					needsUpdate = true;
@@ -2333,6 +2408,12 @@ AttackPlan.prototype.update = function(gameState, events)
 			// Checking for gates if we're a siege unit.
 			if (siegeUnit)
 			{
+				if (expertRamAssault.executeCC && expertRamAssault.objective &&
+				    ent.canAttackTarget(expertRamAssault.objective, false))
+				{
+					ent.attack(expertRamAssault.objective.id(), false);
+					continue;
+				}
 				const mStruct = enemyStructures.filter(enemy => {
 					if (!enemy.position() || !ent.canAttackTarget(enemy, allowCapture(gameState, ent, enemy)))
 						return false;
@@ -2443,6 +2524,16 @@ AttackPlan.prototype.update = function(gameState, events)
 					});
 					const rand = randIntExclusive(0, mUnit.length * 0.1);
 					ent.attack(mUnit[rand].id(), allowCapture(gameState, ent, mUnit[rand]));
+				}
+				// IT14.72 FINISH OBJECTIVE LOCK. During literal CC execution, nearby
+				// enemy units remain the first priority; when no defender is in range,
+				// every capture-capable foot soldier works the CC with the rams instead
+				// of wandering off to capture houses under defensive fire.
+				else if (expertRamAssault.executeCC && expertRamAssault.objective &&
+				    ent.canAttackTarget(expertRamAssault.objective, allowCapture(gameState, ent, expertRamAssault.objective)))
+				{
+					ent.attack(expertRamAssault.objective.id(), allowCapture(gameState, ent, expertRamAssault.objective));
+					continue;
 				}
 				// This may prove dangerous as we may be blocked by something we
 				// cannot attack. See similar behaviour at #5741.
@@ -3021,7 +3112,11 @@ AttackPlan.prototype.Serialize = function()
 		"expertTacticalRegroupUntil": this.expertTacticalRegroupUntil,
 		"expertWoundedReplacementDemand": this.expertWoundedReplacementDemand,
 		"expertLastWoundedReplacementWave": this.expertLastWoundedReplacementWave,
-		"expertLastPrimaryReinforcementWave": this.expertLastPrimaryReinforcementWave
+		"expertLastPrimaryReinforcementWave": this.expertLastPrimaryReinforcementWave,
+		"expertAuthorityOwned": this.expertAuthorityOwned,
+		"expertAuthorityState": this.expertAuthorityState,
+		"expertLaunchAuthorized": this.expertLaunchAuthorized,
+		"expertLaunchReason": this.expertLaunchReason
 	};
 
 	return { "properties": properties };

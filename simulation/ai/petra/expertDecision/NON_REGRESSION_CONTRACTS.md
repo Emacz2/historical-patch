@@ -464,5 +464,24 @@ Replay regressions locked by IT14:
 - Early surplus bias favors food: generic mining waits for at least six completed Fields, roughly 45 civilians and a healthier food bank; non-food balancing cannot outrank food while the food bank is below the raised priority floor.
 - Dedicated permanent Farmsteads must justify themselves with at least three legal hard-touch field slots. Natural-food dropsites remain the exception because their primary job is servicing berries/fruit. The one-Barracks/four-field phase escape prevents this stricter farm-hub quality rule from causing another permanent P1 lock.
 - Home Garden commitment suppresses ordinary House plans as early as house 12 once the tech is queued/researching, and all normal House queue entries are purged while suppression is active so generic Petra cannot sneak house 14 behind Expert.
-- Runtime telemetry marker is `[EXPERT-IT14.71]`.
+- Runtime telemetry marker is `[EXPERT-IT14.73]`.
 
+
+
+## IT14.72 — consistency/layout/endgame cleanup
+- Opening Storehouse placement remains tied to the chosen wood patch but strongly avoids the berry/future-field core and immediate CC core when legal forest-edge alternatives exist. This is a scoring preference, not a hard veto.
+- Dedicated permanent Farmstead hubs still prefer four touching fields and normally require at least three. Only a sustained `farm_hub_deadlock` emergency may accept a two-field hub; one-field/zero-field permanent hubs remain rejected.
+- Standard two-Barracks Town progression still requires six fields. A new emergency-only `two-barracks-four-field-layout-failsafe` prevents the observed 14.71 death state after sustained no-slot/no-legal-Farmstead failure.
+- FINISH OBJECTIVE LOCK: once ram execution mode is active on a living enemy CC, rams attack the CC; infantry fight nearby enemy units first and otherwise capture/attack the CC. Side houses/fields/farmsteads/storehouses are not endgame objectives under CC fire.
+- Home Garden planning counts a live House foundation as a committed house so a queued thirteenth house cannot silently become house #14 behind the tech.
+- IT14.71 four-worker field build->farm handoff, civilian stickiness, all timing gates, production continuity, siege production, <=0.8m field geometry and +35% remain frozen.
+
+
+## IT14.73 — combat authority cutover (1–4)
+
+- ExpertDecisionController is the exclusive creator of primary Rush/Attack/HugeAttack plans on Expert difficulty; Petra defense-to-attack conversion is blocked from manufacturing a bypass plan.
+- Authority-owned AttackPlan is an executor: it cannot autonomously recruit/train/force-start while UNEXECUTED.
+- Only `ExpertDecisionController.expertAuthorizeCombatLaunch()` may cross the launch boundary. Legacy `forceStart()` calls are ignored until that authorization exists.
+- Military TrainingPlans receive an explicit combat owner before training (`plan:<id>`, `reserve`, `premium-reserve`, `siege-reserve`, or `hunt`).
+- Citizen-soldiers owned by an assembling plan may continue productive gathering; reinforcements born for a launched plan are combat-owned immediately and receive no resource rally.
+- This pass intentionally does NOT restructure farm geometry, finish targeting, City-phase authority, or the existing retreat/screen algorithms.

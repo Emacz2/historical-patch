@@ -1,0 +1,21 @@
+IT14.73 combat authority cutover — scoped to requested items 1–4
+
+1. Expert exclusive combat-plan creation
+   - Petra AttackManager autonomous Rush/Default/Huge/Raid creation is disabled while ExpertDecisionController is active.
+   - ExpertDecisionController creates/adopts the primary combat plan.
+   - Petra defense->attack conversion is blocked on Expert so it cannot create a started-plan bypass.
+
+2. AttackPlan executor mode on Expert
+   - Authority-owned plans do not call autonomous assignUnits/trainMoreUnits while waiting.
+   - They retain target resolution, regroup, pathfinding, movement and started-plan execution mechanics.
+
+3. One launch authority
+   - Only ExpertDecisionController.expertAuthorizeCombatLaunch() authorizes an authority-owned plan.
+   - AttackPlan.forceStart() is a no-op for an unauthorized authority plan, closing legacy bypasses.
+
+4. Ownership before training
+   - Expert soldier/special/siege TrainingPlans are tagged with combat owner and plan id before creation.
+   - Hunting cavalry has explicit non-combat owner=hunt.
+   - Units born for a launched plan skip resource rally and are activated toward the army.
+
+Not included in this pass: persistent farm slots, hard finish-CC authority, City-phase cutover.

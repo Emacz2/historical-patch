@@ -149,7 +149,7 @@ const DEFAULT_POLICY = Object.freeze({
   // IT14.29: keep four-slot farm hubs as the normal standard, but after repeated
   // real-map placement failures accept a compact three-field hub rather than deadlock.
   minimumFarmHubFieldSlotsFallback: 3,
-  minimumFarmHubFieldSlotsEmergency: 3,
+  minimumFarmHubFieldSlotsEmergency: 2,
   farmHubFallbackAfterFailures: 6,
   // IT14.71: permanent farm hubs never degrade below three supported fields.
   // Natural-food dropsites may be less efficient, but a dedicated farm hub must justify
@@ -224,6 +224,16 @@ const DEFAULT_POLICY = Object.freeze({
   phase2OneBarracksLayoutEscapeMinimumPopulation: 90,
   phase2OneBarracksLayoutEscapeMinimumFailures: 6,
   phase2OneBarracksLayoutEscapeCostCoverage: 0.65,
+  // IT14.72 salvage lane: if a two-Barracks base is physically trapped at four
+  // fields after repeated farm-hub failures, take Town rather than die in Village
+  // with a huge wood bank. This is emergency-only; the normal two-Barracks floor
+  // remains six fields.
+  phase2TwoBarracksFourFieldEscapeTime: 540,
+  phase2TwoBarracksFourFieldEscapeMinimumFields: 4,
+  phase2TwoBarracksFourFieldEscapeMinimumPopulation: 90,
+  phase2TwoBarracksFourFieldEscapeMinimumFailures: 8,
+  phase2TwoBarracksFourFieldEscapeNaturalFood: 200,
+  phase2TwoBarracksFourFieldEscapeCostCoverage: 0.60,
   secondBarracksHardFieldPipeline: 2,
   secondBarracksEarlyNaturalFood: 1200,
   // If natural food alone can safely bridge two production buildings, do not require
@@ -683,6 +693,13 @@ const DEFAULT_POLICY = Object.freeze({
   farmDistrictIndependentBuildingMinimumDistance: 28,
   farmDistrictIndependentBuildingPreferredDistance: 38,
   farmDistrictReservedSlotMargin: 2,
+  // Keep the opening wood dropsite on the forest edge instead of stealing the
+  // central berry/future-field district. This is a score preference, not a hard
+  // legality veto, so awkward maps can still place a Storehouse.
+  openingStorehouseFoodDistrictPreserveRadius: 42,
+  openingStorehouseFoodDistrictPenalty: 5000,
+  openingStorehouseCCCorePreserveRadius: 30,
+  openingStorehouseCCCorePenalty: 1200,
   // Once the normal 10-field economy is physically complete, military/civic
   // expansion no longer reserves hypothetical future field faces.  Real fields
   // remain protected by the obstruction map; 11-12 fields are emergency capacity.
