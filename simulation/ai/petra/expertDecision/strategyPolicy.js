@@ -7,7 +7,7 @@ const DOCTRINES = Object.freeze({
   EARLY_P1_RUSH: Object.freeze({
     id: "early_p1_rush",
     label: "Early P1 Rush",
-    weight: 0.20,
+    weight: 0.25,
     softCivilianCap: 42,
     softCapUntil: 390,
     soldierTrainingStartTime: 105,
@@ -55,7 +55,7 @@ const DOCTRINES = Object.freeze({
   P2_TECH_PUSH: Object.freeze({
     id: "p2_tech_push",
     label: "P2 Forge-Tech Push",
-    weight: 0.55,
+    weight: 0.25,
     softCivilianCap: 70,
     softCapUntil: 0,
     soldierTrainingStartTime: 150,
@@ -63,13 +63,38 @@ const DOCTRINES = Object.freeze({
     rushSize: 0,
     p1EcoSweepBeforeP2: true,
     policy: Object.freeze({})
+  }),
+  P3_BOOM_ALL_IN: Object.freeze({
+    id: "p3_boom_all_in",
+    label: "P3 Boom Max-Tech All-In",
+    weight: 0.25,
+    softCivilianCap: 70,
+    softCapUntil: 0,
+    soldierTrainingStartTime: 150,
+    rushes: 0,
+    rushSize: 0,
+    p1EcoSweepBeforeP2: true,
+    policy: Object.freeze({
+      // P3 boom protects the fast/safe Town click, then uses the 60-70 civilian
+      // Town economy to satisfy City requirements as soon as Petra permits.
+      phase2ExceptionalTime: 390,
+      phase2NormalTime: 420,
+      phase2MatureTime: 450,
+      phase2AbsoluteTime: 420,
+      phase2LateTime: 510,
+      // P3 Boom should satisfy the Town-structure path to City promptly rather than
+      // waiting for the ordinary P2 market population thresholds.
+      phase2MarketPopulation: 80,
+      phase2SecondMarketPopulation: 95
+    })
   })
 });
 
 const ORDER = Object.freeze([
   DOCTRINES.EARLY_P1_RUSH,
   DOCTRINES.LATE_P1_RUSH,
-  DOCTRINES.P2_TECH_PUSH
+  DOCTRINES.P2_TECH_PUSH,
+  DOCTRINES.P3_BOOM_ALL_IN
 ]);
 
 function chooseDoctrine(randomValue)

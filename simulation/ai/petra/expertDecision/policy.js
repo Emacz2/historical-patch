@@ -96,10 +96,10 @@ const DEFAULT_POLICY = Object.freeze({
   farmPrepareRatio: 0.35,
   farmTransitionRatio: 0.25,
   naturalFoodExpansionRatio: 0.25,
-  // IT14.15 baseline: permanent fields normally begin when the COMBINED natural food
-  // discovered in our territory falls to roughly 30%. IT14.17 adds two safe overrides:
-  // spend a large wood bank on fields, or add field capacity when natural patches are full.
-  territoryNaturalFarmTransitionRatio: 0.25,
+  // IT14.74: permanent fields do not begin until the COMBINED usable natural food
+  // discovered in our territory falls to 40% or less. Temporary full patches, low food
+  // banks, or surplus wood may not bypass this threshold.
+  territoryNaturalFarmTransitionRatio: 0.40,
   // IT14.42: natural food remains the preferred opening food engine. Do not let a
   // large wood bank or a temporarily full berry patch force early fields while the
   // combined in-territory natural-food pool is still healthy; overflow civilians can
@@ -122,9 +122,8 @@ const DEFAULT_POLICY = Object.freeze({
   naturalFoodFarmsteadAssumedWalkSpeed: 8,
   naturalFoodFarmsteadCarryCapacity: 10,
   naturalFoodFarmsteadPaybackWorkerSeconds: 85,
-  // IT14.43 staged natural-food -> farm transition.  Natural food remains the
-  // efficient first choice, but permanent capacity starts coming online BEFORE the
-  // last berries disappear instead of jumping from natural food to starvation.
+  // Legacy staged-transition thresholds retained for post-40% sizing logic. IT14.74
+  // hard-gates the first permanent Field until combined usable natural food is <=40%.
   fieldTransitionLeadSeconds: 55,
   naturalFoodRunwaySafetySeconds: 45,
   naturalFoodStageTwoRunwaySeconds: 120,
@@ -145,11 +144,14 @@ const DEFAULT_POLICY = Object.freeze({
   // Do not plan six speculative perimeter slots; four reliable N/E/S/W positions
   // are the capacity contract, with small tangential fallback only if one side is blocked.
   fieldsPerFarmstead: 4,
+  // IT14.74: normal mature food layout is two/three compact farmsteads supporting
+  // roughly 8-12 fields. Natural-food dropsites and permanent hubs share this cap.
+  maximumFarmsteads: 3,
   minimumFarmHubFieldSlots: 4,
   // IT14.29: keep four-slot farm hubs as the normal standard, but after repeated
   // real-map placement failures accept a compact three-field hub rather than deadlock.
   minimumFarmHubFieldSlotsFallback: 3,
-  minimumFarmHubFieldSlotsEmergency: 2,
+  minimumFarmHubFieldSlotsEmergency: 3,
   farmHubFallbackAfterFailures: 6,
   // IT14.71: permanent farm hubs never degrade below three supported fields.
   // Natural-food dropsites may be less efficient, but a dedicated farm hub must justify
@@ -166,7 +168,9 @@ const DEFAULT_POLICY = Object.freeze({
   // permanent farm hub instead of deadlocking forever waiting for an impossible
   // third opening field. Dedicated later farm hubs still use the normal 3-field rule.
   minimumFieldsBeforeConstrainedOpeningFarmHub: 2,
-  minimumNaturalExpansionFieldSlots: 2,
+  // IT14.74: any non-opening natural-food Farmstead must also be a credible future
+  // farm hub. Do not spend one of the three total hubs on a site that cannot host 3 Fields.
+  minimumNaturalExpansionFieldSlots: 3,
   maxFarmHubDistanceFromCC: 70,
   minimumPrebuildFields: 2,
   minimumMidPrebuildFields: 3,
@@ -707,10 +711,10 @@ const DEFAULT_POLICY = Object.freeze({
   // Reuse natural-food farmsteads as permanent farm districts before buying another
   // farm hub. Dedicated hubs still prefer near-touching fields; exhausted natural
   // dropsites may use a modestly wider ring if that is what the terrain allows.
-  // IT14.68 hard visual/economic invariant: every permanent field must touch its
-  // Farmstead. Terrain pressure is solved by another Farmstead, never by remote fields.
-  existingFarmsteadReuseMaxBorderGap: 0.8,
-  existingFarmsteadFillInMaxBorderGap: 0.8,
+  // IT14.74 compact-block geometry: search up to a ~2m border gap so a Farmstead can
+  // reliably fit 3-4 nearby Fields before another hub is considered.
+  existingFarmsteadReuseMaxBorderGap: 2.0,
+  existingFarmsteadFillInMaxBorderGap: 2.0,
   farmWorkerHomeRadius: 55,
   storehouseMinimumCCDistance: 18,
   // IT14.52 generic resource-district service.  Wood already had sophisticated
@@ -914,6 +918,15 @@ const DEFAULT_POLICY = Object.freeze({
   // still raises the desired total to expertFinishingSiegeTarget.
   expertP3SiegePrepArmy: 40,
   expertP3SiegePrepTarget: 1,
+  // IT14.74 P3 Boom: reach City economically, fill the 180-ish operating cap,
+  // finish relevant military techs, field Iphicrates (Athens), prepare two siege, then commit.
+  expertP3BoomAllInPopulationSlack: 5,
+  expertP3BoomAllInMinimumArmy: 90,
+  expertP3BoomAllInAssignmentTarget: 100,
+  expertP3BoomAllInHomeReserve: 6,
+  expertP3BoomSiegePrepPopulationSlack: 25,
+  expertP3BoomSiegeTarget: 2,
+  expertP3BoomHardLaunchTime: 1200,
   // IT14.47: if the opponent is already strategically broken in Town Phase, begin
   // the siege-finisher pipeline as soon as the civ's own tech tree actually permits
   // an arsenal/ram. Availability checks remain authoritative, so this cannot invent
@@ -975,6 +988,36 @@ const DEFAULT_POLICY = Object.freeze({
   expertEmergencyFoodBarterWoodFloor: 700,
   expertEmergencyFoodBarterStoneFloor: 500,
   expertEmergencyFoodBarterMetalFloor: 400,
+  // IT14.76 recovery layer.  Emergency barter is no longer only an absolute <250F
+  // panic button.  In Town/City, a food-limited military economy with huge disposable
+  // stockpiles converts surplus into a usable food reserve before production/idles stall.
+  expertAdaptiveFoodBarterStartTime: 420,
+  expertAdaptiveFoodBarterTarget: 1400,
+  expertAdaptiveFoodBarterFinishingTarget: 1800,
+  expertAdaptiveFoodBarterSurplusTrigger: 1800,
+  expertAdaptiveFoodBarterIdleWorkers: 10,
+  expertAdaptiveFoodBarterStoneFloor: 900,
+  expertAdaptiveFoodBarterMetalFloor: 1000,
+  expertAdaptiveFoodBarterWoodFloor: 1200,
+  // A broken opponent is a kill obligation.  Normal casualty/reboom heuristics are
+  // suppressed while the finishing army remains viable; only catastrophic collapse
+  // may restore the ordinary retreat path.
+  expertFinishingPersistMinimumArmy: 14,
+  expertFinishingCatastrophicOutnumberRatio: 2.20,
+  expertFinishingCatastrophicOutnumberMargin: 10,
+  expertFinishingRecoveryOverrideMinimumReserve: 24,
+  expertFinishingPersistenceLogSeconds: 12,
+  // If local resources are exhausted and many workers are nonproductive, scarcity
+  // expansion/Market construction is allowed even during a nominal finishing state.
+  expertRecoveryExpansionIdleWorkers: 18,
+  expertRecoveryExpansionBankThreshold: 2500,
+  expertRecoveryMarketFoodTrigger: 1000,
+  expertRecoveryMarketSurplusTrigger: 2200,
+  expertRecoveryMarketPriority: 112,
+  // Worker-order escalation: a gather command that remains idle is a failed solution.
+  // Blacklist that immediate target for the worker and rotate to another resource.
+  expertFallbackOrderVerifySeconds: 2.5,
+  expertFallbackEscalateAfterFailures: 2,
   // Attack-plan champions are specialists, not a substitute for siege and citizen
   // infantry. These caps apply to Petra's normal AttackPlan production path too.
   expertAttackPlanChampionGlobalCap: 6,

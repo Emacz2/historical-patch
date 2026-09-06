@@ -255,49 +255,95 @@ TradeManager.prototype.performExpertEmergencyFoodBarter = function(gameState)
 	    now < (Number(this.expertLastEmergencyFoodBarter) || -99999) + (Number(policy.expertEmergencyFoodBarterCooldownSeconds) || 4))
 		return false;
 	const bank = gameState.getResources();
-	if (!bank || Number(bank.food) >= (Number(policy.expertEmergencyFoodBarterTrigger) || 250))
+	if (!bank)
 		return false;
 	const barterers = gameState.getOwnEntitiesByClass("Barter", true).filter(filters.isBuilt()).toEntityArray();
 	const codes = Resources.GetBarterableCodes();
 	if (!barterers.length || !codes.includes("food"))
 		return false;
 
-	const floors = {
+	const HQ = gameState.ai.HQ;
+	const controller = HQ && HQ.expertDecisionController;
+	const phase = gameState.currentPhase ? gameState.currentPhase() : 1;
+	const population = Math.max(0, Number(gameState.getPopulation()) || 0);
+	const finishing = controller && controller.finishingState ? controller.finishingState(gameState) : { active: false };
+	let idlePressure = 0;
+	if (controller && controller.actualWorkerOrders)
+	{
+		const actual = controller.actualWorkerOrders(gameState);
+		idlePressure = Math.max(0, Number(actual && actual.idle) || 0) + Math.max(0, Number(actual && actual.unproductive) || 0);
+	}
+	let foodNeed = 0;
+	if (gameState.ai.queueManager && gameState.ai.queueManager.currentNeeds)
+	{
+		const needs = gameState.ai.queueManager.currentNeeds(gameState) || {};
+		foodNeed = Math.max(0, Number(needs.food) || 0);
+	}
+
+	const emergencyTrigger = Number(policy.expertEmergencyFoodBarterTrigger) || 250;
+	const emergency = Number(bank.food) < emergencyTrigger;
+	const adaptiveStart = Number(policy.expertAdaptiveFoodBarterStartTime) || 420;
+	const adaptiveTarget = finishing && finishing.active ?
+		(Number(policy.expertAdaptiveFoodBarterFinishingTarget) || 1800) :
+		(Number(policy.expertAdaptiveFoodBarterTarget) || 1400);
+	const adaptiveIdle = idlePressure >= (Number(policy.expertAdaptiveFoodBarterIdleWorkers) || 10);
+	const lateMilitaryPressure = phase >= 2 && population >= 120 && Number(bank.food) < 1000;
+
+	const floors = emergency ? {
 		wood: Number(policy.expertEmergencyFoodBarterWoodFloor) || 700,
 		stone: Number(policy.expertEmergencyFoodBarterStoneFloor) || 500,
 		metal: Number(policy.expertEmergencyFoodBarterMetalFloor) || 400
+	} : {
+		wood: Number(policy.expertAdaptiveFoodBarterWoodFloor) || 1200,
+		stone: Number(policy.expertAdaptiveFoodBarterStoneFloor) || 900,
+		metal: Number(policy.expertAdaptiveFoodBarterMetalFloor) || 1000
 	};
-	const woodTrigger = Number(policy.expertEmergencyFoodBarterWoodTrigger) || 1000;
-	let sell, disposable = 0;
-	for (const resource of ["wood", "stone", "metal"])
+	let bestSell;
+	let bestSpare = 0;
+	let bestScore = -Infinity;
+	for (const resource of ["stone", "metal", "wood"])
 	{
 		if (!codes.includes(resource))
 			continue;
-		const raw = Number(bank[resource]) || 0;
-		if (resource === "wood" && raw < woodTrigger)
+		const raw = Math.max(0, Number(bank[resource]) || 0);
+		if (resource === "wood" && emergency && raw < (Number(policy.expertEmergencyFoodBarterWoodTrigger) || 1000))
 			continue;
 		const spare = Math.max(0, raw - floors[resource]);
-		// Bias toward converting surplus wood before consuming finite minerals.
-		const score = spare + (resource === "wood" ? 250 : 0);
-		if (spare >= 100 && score > disposable)
+		if (spare < 100)
+			continue;
+		// Stone is deliberately the first deep-surplus outlet. Wood remains strategically
+		// useful for houses/arsenal/rams/expansion and is penalized while lumber is stalled.
+		let score = spare;
+		if (resource === "stone" && raw >= 3000) score += 900;
+		if (resource === "metal" && raw >= 3000) score += 350;
+		if (resource === "wood") score -= controller && controller.woodIncomeStalled ? 1200 : 300;
+		if (score > bestScore)
 		{
-			disposable = score;
-			sell = resource;
+			bestScore = score;
+			bestSpare = spare;
+			bestSell = resource;
 		}
 	}
-	if (!sell)
+	const hugeSurplus = bestSpare >= (Number(policy.expertAdaptiveFoodBarterSurplusTrigger) || 1800);
+	const adaptive = now >= adaptiveStart && phase >= 2 && Number(bank.food) < adaptiveTarget && hugeSurplus &&
+		(!!(finishing && finishing.active) || adaptiveIdle || foodNeed >= 100 || lateMilitaryPressure);
+	if (!emergency && !adaptive)
 		return false;
-	const actualSpare = Math.max(0, (Number(bank[sell]) || 0) - floors[sell]);
+	if (!bestSell)
+		return false;
+
+	const target = emergency ? (Number(policy.expertEmergencyFoodBarterTarget) || 650) : adaptiveTarget;
 	const critical = Number(bank.food) <= (Number(policy.expertEmergencyFoodBarterCritical) || 120);
-	const target = Number(policy.expertEmergencyFoodBarterTarget) || 650;
 	const batchMax = Number(policy.expertEmergencyFoodBarterBatch) || 500;
-	const desired = critical || target - Number(bank.food) > 300 ? batchMax : 300;
-	const amount = Math.max(100, Math.min(Math.floor(actualSpare / 100) * 100, desired));
+	const desired = emergency && !critical && target - Number(bank.food) <= 300 ? 300 : batchMax;
+	const amount = Math.max(100, Math.min(Math.floor(bestSpare / 100) * 100, desired));
 	if (amount < 100)
 		return false;
-	barterers[0].barter("food", sell, amount);
+	barterers[0].barter("food", bestSell, amount);
 	this.expertLastEmergencyFoodBarter = now;
-	aiWarn("[EXPERT-BANK] barter buy=food sell=" + sell + ":" + amount +
+	const reason = emergency ? "low-food" : finishing && finishing.active ? "finish" : adaptiveIdle ? "idle-crisis" : foodNeed >= 100 ? "queue-need" : "military-pressure";
+	aiWarn("[EXPERT-RECOVERY] barter buy=food sell=" + bestSell + ":" + amount +
+		" reason=" + reason + " target=" + Math.round(target) + " idle=" + idlePressure +
 		" bank=" + Math.round(bank.food) + "/" + Math.round(bank.wood) + "/" + Math.round(bank.stone) + "/" + Math.round(bank.metal));
 	return true;
 };

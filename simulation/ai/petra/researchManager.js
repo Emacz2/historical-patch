@@ -25,7 +25,8 @@ ResearchManager.prototype.checkPhase = function(gameState, queues)
 	// the kill window on City Phase.  The dedicated Town-siege path can finish with
 	// legal P2 rams; City remains available if the opponent recovers above finishing range.
 	if (currentPhaseIndex === 2 && gameState.ai.HQ.expertDecisionController &&
-	    gameState.ai.HQ.expertDecisionController.isActive(gameState))
+	    gameState.ai.HQ.expertDecisionController.isActive(gameState) &&
+	    !(gameState.ai.HQ.expertDoctrine && gameState.ai.HQ.expertDoctrine.id === "p3_boom_all_in"))
 	{
 		const controller = gameState.ai.HQ.expertDecisionController;
 		// IT14.68: a decisive Town lead is itself a phase-suppression condition. Do not

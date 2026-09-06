@@ -122,15 +122,11 @@ function fieldDemand(state, policy) {
   const totalNatural = Math.max(0, Number(state.food.totalNaturalRemaining) || 0);
   const runway = Math.max(0, Number(state.food.naturalRunwaySeconds) || 0);
   const territoryRatio = Number.isFinite(state.food.territoryNaturalRatio) ? state.food.territoryNaturalRatio : 1;
-  // IT14.42: a full berry patch is not a reason to buy farms while the combined
-  // natural-food network is still healthy. Extra civilians can work wood temporarily;
-  // that wood is more valuable as barracks/tech/infrastructure. Only a genuine food
-  // emergency may override the natural-food hold above the normal transition ratio.
-  const naturalFoodEmergency = state.resources.food < policy.naturalFoodEmergencyFieldFoodBank &&
-    runway <= policy.naturalFoodEmergencyFieldRunwaySeconds;
-  const naturalFirstHold = totalNatural > 0 &&
-    (mode === "natural_expand" || territoryRatio > policy.territoryNaturalFarmTransitionRatio) &&
-    !naturalFoodEmergency;
+  // IT14.74 hard natural-food contract: permanent fields do not begin until the
+  // COMBINED usable in-territory natural-food pool has fallen to 40% or less. A
+  // temporary low bank/full berry patch is handled with productive wood overflow, not
+  // by bypassing this threshold with early fields.
+  const naturalFirstHold = totalNatural > 0 && territoryRatio > policy.territoryNaturalFarmTransitionRatio;
   const margin = Math.max(1, Number(policy.foodRateSafetyMargin) || 1.12);
   const farmerRate = state.food.averageFarmerRate > 0 ? state.food.averageFarmerRate : 0.7;
   const farmersPerField = preferredFieldCrew(state, policy);
@@ -219,26 +215,12 @@ function fieldDemand(state, policy) {
   // no-idle capacity invariant. Surplus food simply suppresses extra burn-rate growth.
   desiredFields = Math.max(desiredFields, capacityFields, permanentFieldFloor);
 
-  // IT14.17: preserve IT14.15's natural-food-first opening, but never let it strand
-  // civilians behind a full eight-worker patch or bank 800+ wood while food capacity
-  // is the bottleneck. Those two conditions may start fields in parallel with natural food.
-  if (naturalFirstHold) {
-    // IT14.43 JIT farm staircase.  Keep exploiting natural food, but prepare enough
-    // permanent capacity that the last berries and the first farms overlap instead of
-    // leaving a 4k-wood / 0-food hole. Either runway OR depletion ratio may advance the
-    // staircase because replay-derived runway can become temporarily optimistic when
-    // military production pauses.
-    let stagedFloor = 0;
-    if (runway <= policy.naturalFoodStageTwoRunwaySeconds || territoryRatio <= policy.naturalFoodStageTwoRatio) stagedFloor = 2;
-    if (runway <= policy.naturalFoodStageFourRunwaySeconds || territoryRatio <= policy.naturalFoodStageFourRatio) stagedFloor = 4;
-    if (runway <= policy.naturalFoodStageSixRunwaySeconds || territoryRatio <= policy.naturalFoodStageSixRatio) stagedFloor = 6;
-    if (runway <= policy.naturalFoodStageEightRunwaySeconds || territoryRatio <= policy.naturalFoodStageEightRatio) stagedFloor = 8;
-    const sustainedDeliveredFoodDeficit = Number(state.food.foodInfrastructureDeficitSeconds || 0) >=
-      Number(policy.foodInfrastructureEmergencySustainSeconds || 15);
-    desiredFields = sustainedDeliveredFoodDeficit ?
-      Math.max(desiredFields, existingFields, Math.min(stagedFloor, policy.preferredPermanentFields)) :
-      Math.max(existingFields, Math.min(stagedFloor, policy.preferredPermanentFields));
-  }
+  // IT14.74: no permanent-field pipeline at all above the 40% combined-natural threshold.
+  // Completed/founded/queued fields are already represented by existingFields, so this
+  // also prevents a temporary zero-slot reading while a foundation is pending from
+  // manufacturing a new Farmstead.
+  if (naturalFirstHold)
+    desiredFields = existingFields;
 
   // IT14.32: ten permanent fields is the normal mature target. Fields 11-12 are
   // emergency reserve capacity only when the live food bank is actually short.
@@ -269,7 +251,9 @@ function fieldDemand(state, policy) {
      state.resources.food >= policy.foodBankBridgeForSecondBarracks);
 
   const naturalExpansion = mode === "natural_expand";
-  const desiredFarmsteads = naturalExpansion ? Math.max(1, currentFarmsteads + 1) : Math.max(1, currentFarmsteads);
+  const maximumFarmsteads = Math.max(1, Number(policy.maximumFarmsteads) || 3);
+  const desiredFarmsteads = Math.min(maximumFarmsteads,
+    naturalExpansion ? Math.max(1, currentFarmsteads + 1) : Math.max(1, currentFarmsteads));
   return {
     mode,
     prebuild: mode === "prepare" || mode === "transition",
@@ -433,13 +417,13 @@ function planEconomy(rawState, overrides = {}) {
   const woodsite = woodWorksiteDecision(state, policy);
   // IT14.55: detect the impossible food-layout state directly. Natural-food dropsites
   // are not proof that the permanent farm network has usable field geometry.
-  const foodCapacityDeadlock = farm.missingFields > 0 &&
+  const foodCapacityDeadlock = !farm.naturalFirstHold && farm.missingFields > 0 &&
     state.food.fieldCapacityKnown && state.food.openFieldSlots <= 0 &&
     state.foundations.field + state.queued.field === 0;
   // IT14.60: measured delivered food is the final authority. A sustained shortfall
   // while permanent fields are missing makes food infrastructure an emergency even
   // when the biome still reports natural food somewhere on the map.
-  const foodInfrastructureEmergency = farm.missingFields > 0 &&
+  const foodInfrastructureEmergency = !farm.naturalFirstHold && farm.missingFields > 0 &&
     Number(state.food.foodInfrastructureDeficitSeconds || 0) >= Number(policy.foodInfrastructureEmergencySustainSeconds || 15);
   const severeFoodCapacityDeadlock = foodCapacityDeadlock &&
     (state.workers.overflowWood >= policy.foodCapacityDeadlockPauseOverflow ||
@@ -513,8 +497,9 @@ function planEconomy(rawState, overrides = {}) {
   const secondHardWindow = state.time >= policy.secondBarracksHardDeadline;
   const naturalFoodRemaining = Math.max(0, Number(state.food.totalNaturalRemaining) || 0);
   const naturalFoodRunway = Math.max(0, Number(state.food.naturalRunwaySeconds) || 0);
-  const infrastructureNaturalReady = naturalFoodRemaining >= policy.naturalFoodInfrastructureRemaining &&
-    naturalFoodRunway >= policy.naturalFoodInfrastructureRunwaySeconds;
+  const infrastructureNaturalReady = farm.naturalFirstHold ||
+    (naturalFoodRemaining >= policy.naturalFoodInfrastructureRemaining &&
+     naturalFoodRunway >= policy.naturalFoodInfrastructureRunwaySeconds);
   const secondNaturalReady = naturalFoodRemaining >= policy.secondBarracksEarlyNaturalFood &&
     naturalFoodRunway >= policy.secondBarracksEarlyNaturalRunwaySeconds;
   const secondEarlyReady = secondNaturalReady ||
@@ -529,34 +514,16 @@ function planEconomy(rawState, overrides = {}) {
   const supportedSecondFields = state.food.fieldCapacityKnown ?
     Math.max(fieldPipeline, Number(state.food.supportedFieldSlots) || 0) :
     Math.max(fieldPipeline, Math.max(1, state.structures.farmstead + state.foundations.farmstead + state.queued.farmstead) * policy.fieldsPerFarmstead);
-  const secondLayoutReady = supportedSecondFields >= requiredSecondSupportedFields;
-  const secondCapacityReady = (farm.secondBarracksFoodReady || secondEarlyReady || secondHardReady) && secondLayoutReady;
+  const secondLayoutReady = farm.naturalFirstHold || supportedSecondFields >= requiredSecondSupportedFields;
+  const secondCapacityReady = farm.naturalFirstHold ||
+    ((farm.secondBarracksFoodReady || secondEarlyReady || secondHardReady) && secondLayoutReady);
 
-  // IT14.69: do not discover the six-field requirement after Barracks #2 is already
-  // occupying the base. If the current food network cannot physically host six
-  // touching fields, establish the next permanent farm block first. The farmstead
-  // itself then reserves its four canonical field faces from later housing/military
-  // placement before the second Barracks is allowed to exist.
-  const secondFoodBlockPending = state.foundations.farmstead + state.queued.farmstead > 0 ||
-    actions.some(action => action && action.kind === "farmstead" && (action.type === "BUILD" || action.type === "RESERVE"));
-  if (state.phase === 1 && completedBarracks === 1 && pendingBarracks === 0 && hasHouse &&
-      secondReserveWindow && !secondLayoutReady && !secondFoodBlockPending) {
-    const cost = costOf(state, policy, "farmstead");
-    const additionalFieldSlotsNeeded = Math.max(1, requiredSecondSupportedFields - supportedSecondFields);
-    const reason = `reserve six-field food block before barracks #2 (supported ${supportedSecondFields}/${requiredSecondSupportedFields}, need +${additionalFieldSlotsNeeded})`;
-    if (resourceEnough(state.resources, cost, reservations)) {
-      actions.push({ type: "BUILD", kind: "farmstead", role: "second_barracks_food_block",
-        priority: Number(policy.secondBarracksFoodBlockPriority) || 105, builderCount: 4,
-        minimumFieldSlotsNeeded: additionalFieldSlotsNeeded,
-        builderPool: ["food", "food_owned", "farm", "wood"], reason });
-      addReservation(reservations, cost);
-    } else {
-      actions.push({ type: "RESERVE", kind: "farmstead", role: "second_barracks_food_block",
-        priority: Number(policy.secondBarracksFoodBlockPriority) || 105, cost,
-        minimumFieldSlotsNeeded: additionalFieldSlotsNeeded, reason });
-      addReservation(reservations, cost);
-    }
-  }
+  // IT14.75: Barracks #2 is NOT allowed to manufacture farm topology.
+  // The shared permanent-food planner owns Farmstead expansion and must first fill
+  // the opening/existing hubs. If the six-field layout is not ready, Barracks #2
+  // simply waits while that planner adds Fields (and, only after saturation, a hub).
+  // This removes the legacy `second_barracks_food_block` bypass that could queue
+  // Farmstead #2/#3 before the existing hub had been used.
 
   if (completedBarracks === 1 && pendingBarracks === 0 && hasHouse && secondReserveWindow && secondCapacityReady) {
     const cost = costOf(state, policy, "barracks");
@@ -766,7 +733,9 @@ function planEconomy(rawState, overrides = {}) {
   // extra fields. Barracks reservations above still win, so military timing is protected.
   if (farm.mode === "natural_expand") {
     const currentFarmsteads = state.structures.farmstead + state.foundations.farmstead + state.queued.farmstead;
-    if (currentFarmsteads >= 1 && currentFarmsteads < farm.desiredFarmsteads && state.foundations.farmstead + state.queued.farmstead === 0) {
+    if (currentFarmsteads >= 1 && currentFarmsteads < farm.desiredFarmsteads &&
+        currentFarmsteads < Math.max(1, Number(policy.maximumFarmsteads) || 3) &&
+        state.foundations.farmstead + state.queued.farmstead === 0) {
       const cost = costOf(state, policy, "farmstead");
       if (resourceEnough(state.resources, cost, reservations)) {
         actions.push({ type: "BUILD", kind: "farmstead", role: "natural_expansion", priority: 96, builderPool: ["food", "food_owned", "farm"], reason: "cover worthwhile in-territory natural food before expanding farms" });
@@ -820,12 +789,21 @@ function planEconomy(rawState, overrides = {}) {
     // measured network has zero legal slots, build a dedicated farm hub regardless of
     // how the earlier natural-food farmsteads split their first 1-3 fields. Requiring
     // field #4 before allowing the Farmstead that makes field #4 possible is a deadlock.
-    const forcedCapacityHubReady = foodCapacityDeadlock;
+    // IT14.75: zero slots alone is not permission to chain Farmsteads. The opening
+    // hub must first prove/use at least two Fields; a second hub must then prove/use
+    // three more (five network Fields total) before hub #3 is even eligible. Pending
+    // Fields already count in `existingFields`.
+    const openingMinimum = Math.max(2, Number(policy.minimumFieldsBeforeConstrainedOpeningFarmHub) || 2);
+    const laterMinimum = Math.max(3, Number(policy.minimumFieldsBeforeNextFarmHub) || 3);
+    const forcedCapacityHubReady = foodCapacityDeadlock && (
+      currentFarmsteads === 1 && existingFields >= openingMinimum ||
+      currentFarmsteads === 2 && existingFields >= openingMinimum + laterMinimum
+    );
     const permanentHubNeeded = farm.missingFields > 0 && openFieldSlots <= 0 &&
       pendingFields === 0 && (saturatedHubReady || saturatedNetworkReady || constrainedOpeningHubReady || forcedCapacityHubReady);
     const farmsteadActionAlreadyPlanned = actions.some(action => action && action.kind === "farmstead" && (action.type === "BUILD" || action.type === "RESERVE"));
-    if (permanentHubNeeded && !farmsteadActionAlreadyPlanned &&
-        state.foundations.farmstead + state.queued.farmstead === 0) {
+    if (permanentHubNeeded && currentFarmsteads < Math.max(1, Number(policy.maximumFarmsteads) || 3) &&
+        !farmsteadActionAlreadyPlanned && state.foundations.farmstead + state.queued.farmstead === 0) {
       const cost = costOf(state, policy, "farmstead");
       const forcedRole = forcedCapacityHubReady;
       const constrainedRole = !forcedRole && constrainedOpeningHubReady && !saturatedHubReady && !saturatedNetworkReady;

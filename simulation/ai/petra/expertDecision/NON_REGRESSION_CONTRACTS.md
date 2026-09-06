@@ -485,3 +485,35 @@ Replay regressions locked by IT14:
 - Military TrainingPlans receive an explicit combat owner before training (`plan:<id>`, `reserve`, `premium-reserve`, `siege-reserve`, or `hunt`).
 - Citizen-soldiers owned by an assembling plan may continue productive gathering; reinforcements born for a launched plan are combat-owned immediately and receive no resource rally.
 - This pass intentionally does NOT restructure farm geometry, finish targeting, City-phase authority, or the existing retreat/screen algorithms.
+
+## IT14.74 — four-doctrine / P3-boom / natural-food farm-layout contract
+
+- IT14.74 is built directly from the known IT14.73 combat-authority baseline. The exclusive Expert combat-plan creation/launch/ownership contracts remain frozen.
+- Doctrine selection is now exactly four equal replay-deterministic rolls: Early P1 Rush 25%, Late P1 Timing Rush 25%, P2 Forge-Tech Push 25%, P3 Boom Max-Tech All-In 25%.
+- P2 Forge-Tech Push and P3 Boom keep the Civic Centre exclusively on permanent civilians until 70 civilians actually exist. Phase advancement does not lower this target: a Town click at 60 civilians still leaves ten civilian CC births before CC military production. Barracks remain the continuous citizen-soldier engine. Hunting cavalry from the CC obeys the same 70-civilian gate for these doctrines.
+- P3 Boom is an economy-to-City doctrine, not a delayed P2 attack. Village and early Town prioritize eco technology and safe phase progress. A normal primary attack may not form before City. City-transition commitment begins the military-tech conversion so Forge research overlaps the P2->P3 transition; a real defense emergency may buy military value earlier.
+- P3 Boom attempts City as soon as Petra's worker/entity requirements are safely satisfied. Its Town-support market thresholds are pulled earlier than the standard P2 doctrine so a missing Town-class requirement does not become an artificial 115-pop City delay.
+- In City, P3 Boom fills the operating population ceiling, finishes live relevant military attack/resistance/health/movement techs, prioritizes Iphicrates for Athens, and prepares two true building siege units. Siege preference is ram first, then a non-ram building siege if the live Arsenal exposes one, otherwise a second ram.
+- The standard P3 all-in launch requires City, near-max operating population, a coherent >=90-unit assigned army, two siege, Iphicrates for Athens, and no remaining live relevant military tech/research. The 20-minute anti-stall deadline may waive only a stubborn final technology; it does not waive population, army, hero or siege readiness.
+- Superseding IT14.68/72 farm-transition behavior: the opening berry Farmstead remains, but no NEW permanent Field may start while combined usable in-territory natural food is above 40%. Temporary low food bank, full berry worker slots, surplus wood, P2 safety floors and food-capacity emergency code may not bypass this threshold.
+- Completed, foundation and queued Fields all count as future permanent-food capacity. Temporary open-slot=0 while a Field is pending is not a reason to manufacture a Farmstead.
+- Permanent Farmsteads target four nearby Fields and may fall back only to three after real geometry failure. The old two-field permanent emergency hub is removed. Any non-opening natural-food Farmstead must also preserve at least three legal future Field slots, so one of the three total hubs cannot be wasted on a one/two-field dropsite. The opening berry Farmstead remains the sole geometry exception. Existing-hub placement may search to roughly a 2m border gap so 3-4 Fields can actually fit before another hub is justified.
+- Farmsteads are capped at three in this pass. The intended mature layout is roughly 2-3 Farmsteads supporting 8-12 Fields. Healthy >40% natural food substitutes for the old six-Field Barracks/Town insurance floor; once the <=40% transition opens, permanent field capacity becomes authoritative again.
+- Current runtime telemetry marker is `[EXPERT-IT14.74]`.
+
+## IT14.75 — field-first / no-idle / capture-commitment repair
+- Shared field-first planner is the only permanent Farmstead-expansion authority.
+- Opening Farmstead preserves at least two future Field slots and prefers four.
+- Third Farmstead requires at least five built+pending network Fields.
+- Storehouses preserve farm faces; normal Market/Temple placement does too.
+- Every economy-capable unit not committed to attack/defense receives productive work; surplus resources beat idling.
+- Expansion Storehouses rank actual worksite path quality.
+- Active enemy-CC capture can override bad-exchange retreat at local parity/no extra static defenses.
+- Runtime telemetry marker is `[EXPERT-IT14.75]`.
+
+## IT14.76 recovery/finish non-regression
+- A Market-enabled Expert does not wait for food <250 when Town/City production is food-limited and another resource has a multi-thousand surplus. Adaptive barter targets a practical food reserve and prefers deep stone/metal surplus before strategic wood.
+- `finish` is a kill obligation. Against an already-broken opponent, ordinary bad-exchange/screen/depleted reboom rules cannot repeatedly cancel a viable finishing army; only catastrophic local collapse restores retreat. A large reserve may cancel an existing reboom cooldown and relaunch immediately.
+- A gather order that remains idle is a failed solution. The worker blacklists that immediate target and rotates to another productive resource instead of repeating the same dead order indefinitely.
+- Severe late scarcity may build a recovery Market or resource expansion even during finishing; this is bounded to real shortage/nonproductive-worker conditions and does not change healthy-map doctrine timing.
+- Opening Farmstead normally proves at least 3 touching Field slots and strongly prefers 4; only repeated genuine placement failure may fall back to 2.

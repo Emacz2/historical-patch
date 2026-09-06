@@ -375,6 +375,30 @@ AttackManager.prototype.getExpertFinishingTarget = function(gameState)
 	return { targetPlayer, enemyPopulation, ownPopulation };
 };
 
+// IT14.76: when the opponent is already strategically broken, ordinary casualty-ratio
+// and reboom rules are no longer the primary objective. Keep the finishing army on task
+// unless it has actually collapsed or is catastrophically outnumbered locally.
+AttackManager.prototype.expertFinishingPersistenceDecision = function(gameState, attack, finishing)
+{
+	const out = { persist: false, catastrophic: false, balance: undefined };
+	if (this.Config.difficulty < difficulty.EXPERT || !attack || !attack.isStarted() || !finishing ||
+	    attack.targetPlayer !== finishing.targetPlayer)
+		return out;
+	const policy = mergePolicy();
+	const army = attack.unitCollection ? attack.unitCollection.length : 0;
+	const minArmy = Math.max(6, Number(policy.expertFinishingPersistMinimumArmy) || 14);
+	const balance = this.expertRushLocalBalance(gameState, attack);
+	out.balance = balance;
+	const own = Math.max(0, Number(balance.ownCombat) || 0);
+	const enemy = Math.max(0, Number(balance.enemyCombat) || 0);
+	const ratio = Math.max(1.2, Number(policy.expertFinishingCatastrophicOutnumberRatio) || 2.2);
+	const margin = Math.max(4, Number(policy.expertFinishingCatastrophicOutnumberMargin) || 10);
+	const localCollapse = own > 0 && enemy >= Math.ceil(own * ratio) && enemy >= own + margin;
+	out.catastrophic = army < minArmy || localCollapse;
+	out.persist = !out.catastrophic;
+	return out;
+};
+
 // Observe the dedicated Expert forge lanes while their plans are visible. Once a
 // plan leaves the queue we still retain its technology name and can ask gameState
 // whether research actually completed. This avoids hard-coding civ-specific techs.
@@ -1289,10 +1313,32 @@ AttackManager.prototype.expertBadExchangeDecision = function(gameState, attack)
 	const bad = enemyDamage < losses * (Number(policy.expertCombatBadExchangeEnemyDamageCredit) || 0.70);
 	const pressured = balance.defenses > 0 || balance.enemyCombat >= 4 ||
 		balance.enemyCombat >= Math.max(4, Math.ceil(Math.max(1, balance.ownCombat) * 0.8));
+
+	// IT14.75: active Civic Centre capture progress is strategic damage. Do not abandon
+	// the CC solely for a poor casualty exchange while we have meaningful capture share,
+	// local parity, and no additional static-defense trap.
+	let captureCommitment = false;
+	let captureShare = 0;
+	if (attack.target && attack.target.hasClass && attack.target.hasClass("CivCentre") && attack.target.capturePoints)
+	{
+		const points = attack.target.capturePoints();
+		if (Array.isArray(points) && points.length)
+		{
+			const total = points.reduce((sum, value) => sum + Math.max(0, Number(value) || 0), 0);
+			const ours = Math.max(0, Number(points[PlayerID]) || 0);
+			captureShare = total > 0 ? ours / total : 0;
+			captureCommitment = captureShare >= 0.10 && balance.defenses <= 0 &&
+				balance.ownCombat >= Math.max(1, Math.ceil(balance.enemyCombat * 0.90));
+		}
+	}
 	out.losses = losses;
 	out.enemyDamage = enemyDamage;
 	out.balance = balance;
-	out.abort = bad && pressured;
+	out.abort = bad && pressured && !captureCommitment;
+	if (bad && pressured && captureCommitment)
+		aiWarn("[EXPERT-CAPTURE] hold-cc plan=" + attack.name + " capture=" + Math.round(captureShare * 100) +
+			"% local=" + balance.ownCombat + "v" + balance.enemyCombat + " losses=" + losses +
+			" enemyDamage=" + enemyDamage);
 	return out;
 };
 
@@ -1864,6 +1910,16 @@ AttackManager.prototype.update = function(gameState, queues, events)
 			const attack = this.startedAttacks[attackType][i];
 			attack.checkEvents(gameState, events);
 			const now = Number(gameState.ai.elapsedTime) || 0;
+			const finishPersistence = this.expertFinishingPersistenceDecision(gameState, attack, expertFinishing);
+			if (finishPersistence.persist && now >= (Number(attack.expertLastFinishPersistLog) || -99999) +
+			    (Number(mergePolicy().expertFinishingPersistenceLogSeconds) || 12))
+			{
+				attack.expertLastFinishPersistLog = now;
+				const fb = finishPersistence.balance || {};
+				aiWarn("[EXPERT-FINISH] persist plan=" + attack.name + " army=" + attack.unitCollection.length +
+					" enemyPop=" + (expertFinishing && expertFinishing.enemyPopulation) + " local=" +
+					(fb.ownCombat || 0) + "v" + (fb.enemyCombat || 0) + " defenses=" + (fb.defenses || 0));
+			}
 			if (Number(attack.expertTacticalRegroupUntil) > 0)
 			{
 				if (now < attack.expertTacticalRegroupUntil)
@@ -1901,7 +1957,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 			const failedRush = this.expertFailedRushDecision(gameState, attack);
 			if (failedRush.regroup && this.startExpertTacticalRegroup(gameState, attack, failedRush))
 				continue;
-			if (failedRush.abort)
+			if (!finishPersistence.persist && failedRush.abort)
 			{
 				const policy = mergePolicy();
 				const now = Number(gameState.ai.elapsedTime) || 0;
@@ -1927,7 +1983,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 				continue;
 			}
 			const badExchange = this.expertBadExchangeDecision(gameState, attack);
-			if (badExchange.abort)
+			if (!finishPersistence.persist && badExchange.abort)
 			{
 				const policy = mergePolicy();
 				this.expertReboomUntil = Math.max(this.expertReboomUntil || -99999,
@@ -1946,7 +2002,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 				continue;
 			}
 			const brokenScreenRetreat = this.shouldExpertRetreatBrokenScreen(gameState, attack);
-			if (brokenScreenRetreat)
+			if (!finishPersistence.persist && brokenScreenRetreat)
 			{
 				const policy = mergePolicy();
 				const now = Number(gameState.ai.elapsedTime) || 0;
@@ -1973,7 +2029,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 				this.reinforceExpertPrimaryAttackWave(gameState, attack, expertFinishing);
 			// IT14.44/45: do not donate the last ~20 infantry to a defended enemy CC. Pull
 			// them home, reboom briefly, then return with a rebuilt army/siege.
-			if (this.shouldExpertRetreatDepletedAttack(gameState, attack))
+			if (!finishPersistence.persist && this.shouldExpertRetreatDepletedAttack(gameState, attack))
 			{
 				const policy = mergePolicy();
 				this.expertReboomUntil = Math.max(this.expertReboomUntil || -99999,
