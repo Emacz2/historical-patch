@@ -77,6 +77,11 @@ const DEFAULT_POLICY = Object.freeze({
   expertCivilianQueueDepthStartPopulation: 24,
   expertProductionVillagerPriority: 1000,
   expertProductionSoldierPriority: 950,
+  // IT14.78 CC contract: every doctrine keeps the Civic Centre civilian-only until
+  // at least 30 permanent civilians exist. Only an ACTIVE P1 rush may then borrow
+  // the CC for one-unit infantry pulses; boom doctrines remain civilian-only to 70.
+  expertP1CCInfantryMinimumCivilians: 30,
+  expertP1CCMilitaryPriority: 1010,
   expertP1ReserveAttackMinimumArmy: 45,
   expertP1ReserveAttackMinimumTime: 360,
   // IT14.69: once a primary attack is already favorable, a huge home reserve is
@@ -168,9 +173,12 @@ const DEFAULT_POLICY = Object.freeze({
   // permanent farm hub instead of deadlocking forever waiting for an impossible
   // third opening field. Dedicated later farm hubs still use the normal 3-field rule.
   minimumFieldsBeforeConstrainedOpeningFarmHub: 2,
-  // IT14.74: any non-opening natural-food Farmstead must also be a credible future
-  // farm hub. Do not spend one of the three total hubs on a site that cannot host 3 Fields.
-  minimumNaturalExpansionFieldSlots: 3,
+  // IT14.78: a genuine second natural-food district is a DROPSITE first. Do not
+  // reject 400-800 food because its best Farmstead cannot also prove three future
+  // Fields. Future Field capacity is strongly preferred in scoring, but only dedicated
+  // permanent farm hubs retain the hard 3-field minimum.
+  minimumNaturalExpansionFieldSlots: 0,
+  preferredNaturalExpansionFieldSlots: 3,
   maxFarmHubDistanceFromCC: 70,
   minimumPrebuildFields: 2,
   minimumMidPrebuildFields: 3,

@@ -530,3 +530,12 @@ Replay regressions locked by IT14:
 - Normal P3 all-in still targets near-max operating population, >=90 coherent army, two building siege units, Iphicrates for Athens and completion of relevant military tech. If Prytaneion placement has repeatedly failed, the hero may be waived after 18 minutes; at 20 minutes a healthy near-max army with two siege must launch rather than wait forever.
 - A strategically broken opponent overrides the P3 build order: a viable finishing army may launch before the full City package.
 - Runtime telemetry marker is `[EXPERT-IT14.77]`.
+
+## IT14.78 — natural-food service / CC-production contract
+- A genuinely approved secondary natural-food cluster is a dropsite problem first, not a permanent-farm geometry test. Natural-expansion Farmsteads strongly prefer future Field capacity but do not require three Field slots; dedicated permanent farm hubs still require 3-4.
+- Natural-expansion Farmstead placement broadens after failure instead of retrying the same candidate set forever.
+- When one/two-Barracks food throughput is already under pressure, servicing the approved natural-food district outranks adding more unsupported military throughput.
+- The Civic Centre is civilian-only below 30 permanent civilians for every doctrine. After 30, CC infantry is permitted only while an Early/Late P1 rush is actively arming; it uses one-unit pulses while Barracks remain the primary soldier engine. P2 Tech Push and P3 Boom remain civilian-only to 70.
+- Once the P1 rush launches or enters recovery, the CC returns to civilian growth until the applicable cap.
+- Runtime telemetry marker is `[EXPERT-IT14.78]`.
+

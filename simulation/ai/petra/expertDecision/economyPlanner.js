@@ -738,11 +738,18 @@ function planEconomy(rawState, overrides = {}) {
         currentFarmsteads < Math.max(1, Number(policy.maximumFarmsteads) || 3) &&
         state.foundations.farmstead + state.queued.farmstead === 0) {
       const cost = costOf(state, policy, "farmstead");
+      // IT14.78: if we are preparing/operating Barracks while the food bank/runway is
+      // already tight, servicing the discovered natural-food branch outranks adding
+      // more military throughput that the current food network cannot sustain.
+      const barracksPipeline = state.structures.barracks + state.foundations.barracks + state.queued.barracks;
+      const foodSupportPressure = barracksPipeline >= 1 &&
+        (state.resources.food < 350 || (Number(state.food.naturalRunwaySeconds) || 0) < 240);
+      const naturalExpansionPriority = foodSupportPressure ? 101 : 96;
       if (resourceEnough(state.resources, cost, reservations)) {
-        actions.push({ type: "BUILD", kind: "farmstead", role: "natural_expansion", priority: 96, builderPool: ["food", "food_owned", "farm"], reason: "cover worthwhile in-territory natural food before expanding farms" });
+        actions.push({ type: "BUILD", kind: "farmstead", role: "natural_expansion", priority: naturalExpansionPriority, builderPool: ["food", "food_owned", "farm"], reason: "cover worthwhile in-territory natural food before expanding farms" });
         addReservation(reservations, cost);
       } else {
-        actions.push({ type: "RESERVE", kind: "farmstead", role: "natural_expansion", priority: 96, cost, reason: "reserve wood for higher-throughput natural food" });
+        actions.push({ type: "RESERVE", kind: "farmstead", role: "natural_expansion", priority: naturalExpansionPriority, cost, reason: "reserve wood for higher-throughput natural food" });
         addReservation(reservations, cost);
       }
     }

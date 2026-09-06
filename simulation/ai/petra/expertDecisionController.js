@@ -199,6 +199,9 @@ export class ExpertDecisionController
 		this.farmsteadPlacementFailures = 0;
 		this.firstCCSoldierBatchQueued = false;
 		this.secondCCEmergencyBatchQueued = false;
+		// IT14.78: P1 may borrow the CC for infantry only after 30 civilians. A
+		// timestamp prevents the rush pulse from turning the CC into a permanent Barracks.
+		this.lastP1CCSoldierQueueAt = -99999;
 		this.firstBarracksSoldierBatchQueued = false;
 		this.foodIncomeSample = undefined;
 		this.foodIncomeEMA = 0;
@@ -6818,12 +6821,13 @@ export class ExpertDecisionController
 	{
 		const policy = mergePolicy(this.strategyPolicyOverrides(gameState));
 		const doctrine = this.ensureStrategicDoctrine(gameState);
-		if (doctrine && (doctrine.id === "p2_tech_push" || doctrine.id === "p3_boom_all_in"))
-		{
-			const workers = collectWorkerMetrics(gameState, { "playerId": PlayerID });
-			if (workers.civilians < 70)
-				return false;
-		}
+		const workers = collectWorkerMetrics(gameState, { "playerId": PlayerID });
+		// IT14.78: before 30 civilians the CC is civilian-only for EVERY doctrine.
+		// Boom doctrines preserve the stronger existing civilian-only-to-70 contract.
+		if (workers.civilians < (Number(policy.expertP1CCInfantryMinimumCivilians) || 30))
+			return false;
+		if (doctrine && (doctrine.id === "p2_tech_push" || doctrine.id === "p3_boom_all_in") && workers.civilians < 70)
+			return false;
 		if (!cc || gameState.getPopulation() < policy.huntingCavalryPopulation ||
 		    (Number(gameState.ai.elapsedTime) || 0) < (Number(policy.huntingCavalryCCMinimumTime) || 180))
 			return false;
@@ -7787,8 +7791,17 @@ export class ExpertDecisionController
 		if (workers.civilians >= cap)
 			return false;
 		const work = this.expertCivilianWorkCount(gameState, queues, cc);
-		const desiredDepth = gameState.getPopulation() >= (Number(policy.expertCivilianQueueDepthStartPopulation) || 24) ?
-			Math.max(1, Number(policy.expertProductionQueueDepth) || 2) : 1;
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const attacks = this.HQ.attackManager;
+		const p1RushArming = doctrine && (doctrine.id === "early_p1_rush" || doctrine.id === "late_p1_rush") &&
+			workers.civilians >= (Number(policy.expertP1CCInfantryMinimumCivilians) || 30) &&
+			!(attacks && (attacks.expertRushHasLaunched || attacks.expertRushRecoveryMode));
+		// IT14.78: keep civilian growth alive, but stop buffering two civilian batches
+		// ahead of a live P1 rush. One civilian batch plus one CC infantry pulse can
+		// interleave while the Barracks remain the primary soldier engine.
+		const desiredDepth = p1RushArming ? 1 :
+			(gameState.getPopulation() >= (Number(policy.expertCivilianQueueDepthStartPopulation) || 24) ?
+				Math.max(1, Number(policy.expertProductionQueueDepth) || 2) : 1);
 		if (work.batches >= desiredDepth)
 			return false;
 		const execution = this.trainingExecution(gameState, cc);
@@ -7930,8 +7943,14 @@ export class ExpertDecisionController
 		if (!plan)
 			return false;
 		queues.citizenSoldier.addPlan(plan);
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const attacks = this.HQ.attackManager;
+		const p1RushMilitaryPriority = doctrine && (doctrine.id === "early_p1_rush" || doctrine.id === "late_p1_rush") &&
+			workers.civilians >= (Number(policy.expertP1CCInfantryMinimumCivilians) || 30) &&
+			!(attacks && (attacks.expertRushHasLaunched || attacks.expertRushRecoveryMode));
 		gameState.ai.queueManager.changePriority("citizenSoldier", Math.max(this.HQ.Config.priorities.citizenSoldier || 1,
-			Number(policy.expertProductionSoldierPriority) || 950));
+			p1RushMilitaryPriority ? (Number(policy.expertP1CCMilitaryPriority) || 1010) :
+			(Number(policy.expertProductionSoldierPriority) || 950)));
 		aiWarn("[EXPERT-MIL] queued " + source + " soldiers=" + selected.type + " batch=" + batch + " trainer=" + trainer.id() +
 			" owner=" + combatOwner.expertCombatOwner + " depth=" + (this.expertSoldierWorkCount(queues, trainer)) + "/" + Math.max(1, Math.floor(Number(maxWorkDepth) || 1)) +
 			(protectWood && selected.slinger && selected.cost.wood <= 0 ? " mode=low-wood-slinger" : "") +
@@ -7948,11 +7967,27 @@ export class ExpertDecisionController
 		// current army is already large. Siege retains first claim on reserved population;
 		// infantry orders may wait behind the cap as immediate casualty replacements.
 		const workers = collectWorkerMetrics(gameState, { "playerId": PlayerID });
+		const doctrine = this.ensureStrategicDoctrine(gameState);
+		const attacks = this.HQ.attackManager;
 		const atCivilianCap = workers.civilians >= this.ccCivilianTrainingTarget(gameState);
+		const p1RushDoctrine = doctrine && (doctrine.id === "early_p1_rush" || doctrine.id === "late_p1_rush");
+		const p1RushArming = p1RushDoctrine &&
+			workers.civilians >= (Number(policy.expertP1CCInfantryMinimumCivilians) || 30) &&
+			!(attacks && (attacks.expertRushHasLaunched || attacks.expertRushRecoveryMode));
 
-		// Expert keeps the CC on civilians continuously until 70. Barracks carry all
-		// early military production; only at the civilian cap does the CC join them.
-		if (cc && atCivilianCap)
+		// IT14.78 CC contract:
+		//   * <30 civilians: ZERO CC infantry for every doctrine.
+		//   * P1 rush only: after 30, the CC may add one-unit infantry pulses while
+		//     Barracks remain the continuous soldier engine and civilian growth continues.
+		//   * P2/P3/non-rush: the CC remains civilian-only to the 70-civilian target.
+		let ccQueued = false;
+		if (cc && p1RushArming && (Number(gameState.ai.elapsedTime) || 0) - this.lastP1CCSoldierQueueAt >= 20)
+		{
+			ccQueued = this.queueExpertSoldierBatch(gameState, queues, cc, "cc-rush", 1, 1, false);
+			if (ccQueued)
+				this.lastP1CCSoldierQueueAt = Number(gameState.ai.elapsedTime) || 0;
+		}
+		if (cc && !ccQueued && atCivilianCap)
 			this.queueExpertSoldierBatch(gameState, queues, cc, "cc-cap", 1,
 				Math.max(1, Number(policy.expertProductionQueueDepth) || 2), true);
 
@@ -8449,30 +8484,39 @@ export class ExpertDecisionController
 				this.pendingFoodSelectionByTask[taskId] = alternative;
 				const foodSources = sourceIds.map(id => gameState.getEntityById(Number(id))).filter(ent => ent && entityPosition(ent));
 				const candidates = [];
-				const branchRecovery = action.role === "wicker_branch" ? placementFailures : 0;
-				const distances = branchRecovery >= 2 ?
-					[Math.max(3, geometry.radius + 0.5), geometry.radius + 2.5, geometry.radius + 4.5, geometry.radius + 6.5, geometry.radius + 9.5, geometry.radius + 13.5] :
+				// IT14.78: natural expansion had been retrying the SAME 384 candidates forever.
+				// Every failed attempt now broadens around both the individual food supplies and
+				// the cluster center. The source is already strategically approved; placement
+				// must find a practical dropsite rather than demand perfect future farm geometry.
+				const branchRecovery = placementFailures;
+				const distances = branchRecovery >= 3 ?
+					[Math.max(3, geometry.radius + 0.5), geometry.radius + 2.5, geometry.radius + 4.5, geometry.radius + 6.5, geometry.radius + 9.5, geometry.radius + 13.5, geometry.radius + 18.5, geometry.radius + 24.5] :
+					branchRecovery >= 1 ?
+					[Math.max(3, geometry.radius + 0.5), geometry.radius + 1.5, geometry.radius + 2.5, geometry.radius + 3.5, geometry.radius + 6.5, geometry.radius + 10.5] :
 					[Math.max(3, geometry.radius + 0.5), geometry.radius + 1.5, geometry.radius + 2.5, geometry.radius + 3.5];
 				for (const source of foodSources)
 					candidates.push(...generatePlacementCandidates({
 						"kind": "farmstead", "anchor": source.position(), "toward": cc.position(),
-						distances, "angleCount": branchRecovery >= 2 ? 48 : 24, "templateRadius": geometry.radius
+						distances, "angleCount": branchRecovery >= 3 ? 64 : branchRecovery >= 1 ? 48 : 24, "templateRadius": geometry.radius
 					}));
-				if (action.role === "wicker_branch" && branchRecovery >= 2 && Array.isArray(anchor))
+				if (branchRecovery >= 1 && Array.isArray(anchor))
 					candidates.push(...generatePlacementCandidates({
 						"kind": "farmstead", "anchor": anchor, "toward": cc.position(),
-						"distances": [10, 14, 18, 22, 26, 30], "angleCount": 48, "templateRadius": geometry.radius
+						"distances": branchRecovery >= 3 ? [6, 10, 14, 18, 22, 26, 30, 34, 38, 44] : [8, 12, 16, 20, 24, 28, 32],
+						"angleCount": branchRecovery >= 3 ? 72 : 48, "templateRadius": geometry.radius
 					}));
-				const naturalExpansionFieldSlots = Math.max(3, Number(mergePolicy().minimumNaturalExpansionFieldSlots) || 3);
+				const naturalPolicy = mergePolicy();
+				const naturalExpansionFieldSlots = Math.max(0, Number(naturalPolicy.minimumNaturalExpansionFieldSlots) || 0);
 				request = {
 					kind, "candidates": candidates, "templateRadius": geometry.radius,
 					"pathSources": this.foodPathSources(gameState, sourceIds),
 					"naturalExpansionFood": true,
 					"resourceServiceFood": action.role === "resource_service_food",
-					// IT14.74: after the opening berry dropsite, every natural-food Farmstead
-					// must also preserve a useful 3-4 Field future block. This prevents the
-					// three-hub cap from being consumed by one/two-field dropsites.
-					"minimumFieldSlots": naturalExpansionFieldSlots, "preferredFieldSlots": 4
+					// Genuine natural-food Farmsteads are dropsites first. Prefer useful future
+					// Field geometry, but NEVER reject a good 400+ food district solely because
+					// three hard-touch Field slots cannot be proven at the dropsite.
+					"minimumFieldSlots": naturalExpansionFieldSlots,
+					"preferredFieldSlots": Math.max(1, Number(naturalPolicy.preferredNaturalExpansionFieldSlots) || 3)
 				};
 			}
 			else if (this.builtByClass(gameState, "Farmstead").length === 0)
@@ -11881,7 +11925,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.77] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.78] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -11943,7 +11987,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.77] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.78] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()
@@ -12009,6 +12053,7 @@ export class ExpertDecisionController
 			"postWickerBranchFarmsteadPending": this.postWickerBranchFarmsteadPending,
 			"postWickerBranchFarmsteadStartedAt": this.postWickerBranchFarmsteadStartedAt,
 			"lastHuntingCavalryDiag": this.lastHuntingCavalryDiag,
+			"lastP1CCSoldierQueueAt": this.lastP1CCSoldierQueueAt,
 			"lastCleruchyDiag": this.lastCleruchyDiag,
 			"lastScarcityExpansionAttempt": this.lastScarcityExpansionAttempt,
 			"secondaryNaturalDepletionFieldPending": this.secondaryNaturalDepletionFieldPending,
@@ -12101,6 +12146,7 @@ export class ExpertDecisionController
 		this.postWickerBranchFarmsteadPending = !!data.postWickerBranchFarmsteadPending;
 		this.postWickerBranchFarmsteadStartedAt = Number.isFinite(data.postWickerBranchFarmsteadStartedAt) ? data.postWickerBranchFarmsteadStartedAt : -99999;
 		this.lastHuntingCavalryDiag = Number.isFinite(data.lastHuntingCavalryDiag) ? data.lastHuntingCavalryDiag : -99999;
+		this.lastP1CCSoldierQueueAt = Number.isFinite(data.lastP1CCSoldierQueueAt) ? data.lastP1CCSoldierQueueAt : -99999;
 		this.lastCleruchyDiag = Number.isFinite(data.lastCleruchyDiag) ? data.lastCleruchyDiag : -99999;
 		this.lastScarcityExpansionAttempt = Number.isFinite(data.lastScarcityExpansionAttempt) ? data.lastScarcityExpansionAttempt : -99999;
 		this.expertStrategicPopulationReserve = 0;
