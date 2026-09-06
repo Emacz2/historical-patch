@@ -350,6 +350,14 @@ const DEFAULT_POLICY = Object.freeze({
   phase2SecondMarketSpacing: 70,
   phase2SecondMarketPreferredDistance: 120,
   phase2SecondMarketMaximumCCDistance: 210,
+  // IT14.77 P3 Boom: the second Market is a City-phase prerequisite first.
+  // Keep ordinary doctrines on the long-route trade geometry above.
+  p3TownSupportMarketMinimumCCDistance: 14,
+  p3TownSupportMarketFallbackMinimumCCDistance: 10,
+  p3TownSupportMarketSpacing: 34,
+  p3TownSupportMarketPreferredDistance: 68,
+  p3TownSupportMarketMaximumCCDistance: 190,
+  phase3TownSupportPriority: 91,
   phase2FirstMarketPreferredCCDistance: 78,
   phase2FirstMarketMaximumCCDistance: 180,
   // IT14.35: the worker-efficiency temple is a Village-phase economic structure.
@@ -608,6 +616,11 @@ const DEFAULT_POLICY = Object.freeze({
   // anchors. A legal safe site in the developed home district is good enough.
   athensSpecialMinimumCCDistance: 20,
   athensSpecialPreferredCCDistance: 42,
+  // IT14.77 P3 Boom Prytaneion is mandatory command infrastructure, not decoration.
+  athensP3PrytaneionMinimumCCDistance: 12,
+  athensP3PrytaneionFallbackMinimumCCDistance: 8,
+  athensP3PrytaneionFallbackPreferredCCDistance: 42,
+  athensP3PrytaneionFallbackMaximumCCDistance: 230,
   athensSpecialFallbackMaximumCCDistance: 230,
   // IT14.62: Athens may replace endless frontier dropsites with one real neutral-territory
   // expansion when the visible resource district is rich enough to repay the colony.
@@ -926,7 +939,16 @@ const DEFAULT_POLICY = Object.freeze({
   expertP3BoomAllInHomeReserve: 6,
   expertP3BoomSiegePrepPopulationSlack: 25,
   expertP3BoomSiegeTarget: 2,
-  expertP3BoomHardLaunchTime: 1200,
+  // Hold two population slots for Iphicrates. Normal launch still wants the full
+  // package; the deadlines only prevent an impossible hero/tech prerequisite from
+  // turning a dominant P3 army into permanent base decoration.
+  expertP3BoomHeroPopulationReserve: 2,
+  expertP3BoomHeroFoodReserve: 100,
+  expertP3BoomHeroWoodReserve: 100,
+  expertP3BoomHeroMetalReserve: 25,
+  expertP3BoomHeroPlacementFailureWaive: 3,
+  expertP3BoomHardLaunchTime: 1080,
+  expertP3BoomAbsoluteLaunchTime: 1200,
   // IT14.47: if the opponent is already strategically broken in Town Phase, begin
   // the siege-finisher pipeline as soon as the civ's own tech tree actually permits
   // an arsenal/ram. Availability checks remain authoritative, so this cannot invent

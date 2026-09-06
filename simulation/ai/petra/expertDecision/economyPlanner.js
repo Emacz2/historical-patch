@@ -665,16 +665,17 @@ function planEconomy(rawState, overrides = {}) {
       state.foundations.market + state.queued.market === 0 &&
       state.structures.barracks >= 2 &&
       state.population.used >= policy.phase2SecondMarketPopulation) {
+    const phaseSupportPriority = Number(policy.phase3TownSupportPriority) || 91;
     const cost = costOf(state, policy, "market");
     const canBuildSecondMarket = state.resources.wood >= (cost.wood || 0) + policy.phase2SecondMarketWoodReserve &&
       state.resources.food >= (cost.food || 0) && state.resources.stone >= (cost.stone || 0) && state.resources.metal >= (cost.metal || 0) &&
       resourceEnough(state.resources, cost, reservations);
     addReservation(reservations, cost);
     if (canBuildSecondMarket)
-      actions.push({ type: "BUILD", kind: "market", role: "phase3_town_support", priority: 91,
+      actions.push({ type: "BUILD", kind: "market", role: "phase3_town_support", priority: phaseSupportPriority,
         builderPool: strategicBuilderPool, reason: `satisfy Town requirement ${state.flags.phase3TownCount}/${state.flags.phase3TownRequired} for P3` });
     else
-      actions.push({ type: "RESERVE", kind: "market", role: "phase3_town_support", priority: 91, cost,
+      actions.push({ type: "RESERVE", kind: "market", role: "phase3_town_support", priority: phaseSupportPriority, cost,
         reason: `reserve second Town building for P3 (${state.flags.phase3TownCount}/${state.flags.phase3TownRequired})` });
   }
 

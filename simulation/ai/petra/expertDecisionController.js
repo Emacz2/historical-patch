@@ -1864,6 +1864,17 @@ export class ExpertDecisionController
 		if (this.primaryEcoTechBusy(gameState))
 			return 0;
 
+		// IT14.77: the pressure-ranked P1 sweep may never leapfrog the opening Iron Axe
+		// contract for Athens/Thebes. Once the opening Storehouse exists, optional P1 eco
+		// research waits for Axe; phase reservation is independent and remains free to run.
+		const openingAxe = "gather_lumbering_ironaxes";
+		const openingStorehouseSecured = this.builtByClass(gameState, "Storehouse").length > 0 ||
+			this.foundationsByClass(gameState, "Storehouse").length > 0 ||
+			(gameState.ai.queues.dropsites && gameState.ai.queues.dropsites.plans &&
+			 gameState.ai.queues.dropsites.plans.some(plan => plan.metadata && plan.metadata.expertDecisionKind === "storehouse"));
+		if (EARLY_AXE_CIVS.has(gameState.getPlayerCiv()) && openingStorehouseSecured && !gameState.isResearched(openingAxe))
+			return 0;
+
 		const queueManager = gameState.ai.queueManager;
 		const laneCount = 1;
 		const lanes = [];
@@ -2538,12 +2549,39 @@ export class ExpertDecisionController
 		}
 
 		const finishing = this.finishingState(gameState);
+		const reserve = manager.expertReserveCombatCount ? manager.expertReserveCombatCount(gameState) : 0;
 		// P3 Boom normally refuses a P2 timing attack, but a genuinely broken opponent is
 		// an opportunity override: finish the game instead of role-playing the build order.
 		if (doctrine.id === "p3_boom_all_in" && phase < 3 && !finishing.active)
 			return undefined;
 
-		const reserve = manager.expertReserveCombatCount ? manager.expertReserveCombatCount(gameState) : 0;
+		// IT14.77: an UNEXECUTED AttackPlan owns its assigned CitizenSoldiers. Creating the
+		// P3 plan as soon as City was reached made 70-90 useful soldiers stand in an
+		// assembly plan for minutes while waiting for tech/hero/siege. Keep them economically
+		// productive until the package is actually close enough to launch this same update.
+		if (doctrine.id === "p3_boom_all_in" && phase >= 3 && !finishing.active)
+		{
+			const operating = this.effectiveOperatingPopulationCap(gameState);
+			const pop = gameState.getPopulation();
+			const siege = this.expertBuildingSiegeStatus(gameState);
+			const tech = this.expertRelevantMilitaryTechStatus(gameState);
+			const heroReady = this.p3BoomIphicratesReady(gameState);
+			const minimumArmy = Math.max(70, Number(policy.expertP3BoomAllInMinimumArmy) || 90);
+			const homeReserve = Math.max(4, Number(policy.expertP3BoomAllInHomeReserve) || 6);
+			const reserveReady = reserve >= minimumArmy + homeReserve;
+			const siegeReady = siege.total >= Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
+			const popReady = pop >= operating - Math.max(0, Number(policy.expertP3BoomAllInPopulationSlack) || 5);
+			const heroFailures = Number(this.placementFailureCounts["prytaneion:athens_p3_heroes"] || 0);
+			const hardDeadline = now >= (Number(policy.expertP3BoomHardLaunchTime) || 1080);
+			const absoluteDeadline = now >= (Number(policy.expertP3BoomAbsoluteLaunchTime) || 1200);
+			const heroFailureWaive = heroFailures >= (Number(policy.expertP3BoomHeroPlacementFailureWaive) || 3);
+			const normalReady = reserveReady && siegeReady && heroReady && popReady && tech.complete;
+			const hardReady = reserveReady && siegeReady && hardDeadline && pop >= operating - 15 &&
+				(heroReady || heroFailureWaive || absoluteDeadline);
+			const absoluteReady = reserveReady && siegeReady && absoluteDeadline && pop >= operating - 20;
+			if (!normalReady && !hardReady && !absoluteReady)
+				return undefined;
+		}
 		const phase2Researching = phase === 1 && gameState.getPhaseName && gameState.isResearching && gameState.isResearching(gameState.getPhaseName(2));
 		const p1ReserveReady = phase === 1 && now >= (Number(policy.expertP1ReserveAttackMinimumTime) || 360) &&
 			reserve >= (Number(policy.expertP1ReserveAttackMinimumArmy) || 45);
@@ -2745,6 +2783,13 @@ export class ExpertDecisionController
 		const doctrine = this.ensureStrategicDoctrine(gameState);
 		if (doctrine.id === "p3_boom_all_in")
 		{
+			// Opportunity override: if the opponent is already strategically broken, the
+			// boom doctrine does not wait for City/Iphicrates/max-tech theater. End the game.
+			if (finishing.active && army >= Math.max(8, Number(policy.expertFinishingMinimumArmy) || 36))
+			{
+				this.expertAuthorizeCombatLaunch(gameState, plan, "p3-opportunity-finish");
+				return;
+			}
 			if (phase < 3)
 				return;
 			const operating = this.effectiveOperatingPopulationCap(gameState);
@@ -2755,13 +2800,23 @@ export class ExpertDecisionController
 			const heroReady = this.p3BoomIphicratesReady(gameState);
 			const armyReady = army >= Math.max(70, Number(policy.expertP3BoomAllInMinimumArmy) || 90);
 			const siegeReady = siege.total >= Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
-			const hardLaunch = (Number(gameState.ai.elapsedTime) || 0) >= (Number(policy.expertP3BoomHardLaunchTime) || 1200) &&
-				pop >= operating - 15 && armyReady && siegeReady && heroReady;
-			if (armyReady && siegeReady && heroReady && ((popReady && tech.complete) || hardLaunch))
+			const elapsed = Number(gameState.ai.elapsedTime) || 0;
+			const heroFailures = Number(this.placementFailureCounts["prytaneion:athens_p3_heroes"] || 0);
+			const hardDeadline = elapsed >= (Number(policy.expertP3BoomHardLaunchTime) || 1080);
+			const absoluteDeadline = elapsed >= (Number(policy.expertP3BoomAbsoluteLaunchTime) || 1200);
+			const heroFailureWaive = heroFailures >= (Number(policy.expertP3BoomHeroPlacementFailureWaive) || 3);
+			const hardHeroGate = heroReady || (hardDeadline && heroFailureWaive) || absoluteDeadline;
+			const hardLaunch = hardDeadline && pop >= operating - 15 && armyReady && siegeReady && hardHeroGate;
+			const absoluteLaunch = absoluteDeadline && pop >= operating - 20 && armyReady && siegeReady;
+			const normalLaunch = heroReady && popReady && tech.complete;
+			if (armyReady && siegeReady && (normalLaunch || hardLaunch || absoluteLaunch))
 			{
+				const heroWaived = !heroReady && (hardLaunch || absoluteLaunch);
 				aiWarn("[EXPERT-P3-ALL-IN] ready pop=" + pop + "/" + operating + " army=" + army +
 					" siege=" + siege.total + " techAvail=" + tech.available + " techBusy=" + tech.researching +
-					" iphicrates=" + heroReady + (hardLaunch && !tech.complete ? " hard-deadline=1" : ""));
+					" iphicrates=" + heroReady + (heroWaived ? " hero-waived=1 failures=" + heroFailures : "") +
+					((hardLaunch || absoluteLaunch) && !tech.complete ? " hard-deadline=1" : "") +
+					(absoluteLaunch ? " absolute-deadline=1" : ""));
 				this.expertAuthorizeCombatLaunch(gameState, plan, "p3-max-tech-all-in");
 			}
 			return;
@@ -2869,7 +2924,11 @@ export class ExpertDecisionController
 		const policy = mergePolicy();
 		const militaryProgress = this.expertObservedTechCount(gameState, this.expertObservedP2MilitaryTechs);
 		const ecoProgress = this.expertObservedTechCount(gameState, this.expertObservedCoreEcoTechs);
-		const p3AllIn = this.isP3BoomDoctrine(gameState) && gameState.currentPhase() >= 3;
+		const phase3Name = gameState.getPhaseName && gameState.getPhaseName(3);
+		const p3Transition = this.isP3BoomDoctrine(gameState) && (gameState.currentPhase() >= 3 || this.HQ.phasing === 3 ||
+			(phase3Name && gameState.isResearching && gameState.isResearching(phase3Name)) ||
+			(phase3Name && queues.majorTech && Array.isArray(queues.majorTech.plans) && queues.majorTech.plans.some(plan => plan && plan.type === phase3Name)));
+		const p3AllIn = p3Transition;
 		const p2Push = this.expertP2PushInPreparation();
 		const bank = gameState.getResources();
 		// IT14.47: the first food+wood Town eco pair remains mandatory after the opening
@@ -7220,20 +7279,22 @@ export class ExpertDecisionController
 
 		const pryType = gameState.applyCiv("structures/{civ}/prytaneion");
 		const pryTemplate = gameState.getTemplate(pryType);
+		const p3PrytaneionRequired = doctrine.id === "p3_boom_all_in";
+		const pryReserve = p3PrytaneionRequired ? { food: 75, wood: 75, metal: 25 } : {
+			food: policy.athensPrytaneionFoodReserve,
+			wood: policy.athensPrytaneionWoodReserve,
+			metal: policy.athensPrytaneionMetalReserve
+		};
 		if (phase >= 3 && pop >= 120 && pryTemplate && !hasAction("prytaneion") &&
 		    this.specialStructurePipeline(gameState, "prytaneion") === 0 &&
 		    this.HQ.canBuild && this.HQ.canBuild(gameState, pryType) &&
-		    this.specialBuildingAffordable(gameState, pryType, {
-			    food: policy.athensPrytaneionFoodReserve,
-			    wood: policy.athensPrytaneionWoodReserve,
-			    metal: policy.athensPrytaneionMetalReserve
-		    }))
+		    this.specialBuildingAffordable(gameState, pryType, pryReserve))
 		{
 			actions.push({
-				type: "BUILD", kind: "prytaneion", role: "athens_p3_heroes", priority: 96,
-				builderCount: 4,
+				type: "BUILD", kind: "prytaneion", role: "athens_p3_heroes", priority: p3PrytaneionRequired ? 114 : 96,
+				builderCount: p3PrytaneionRequired ? 6 : 4,
 				builderPool: ["citizenSoldierWood", "wood", "food_overflow_wood", "farm", "food_owned", "food", "stone", "metal"],
-				reason: "Athens City-phase hero/command infrastructure"
+				reason: p3PrytaneionRequired ? "P3 Boom mandatory Iphicrates command infrastructure" : "Athens City-phase hero/command infrastructure"
 			});
 			if (now - this.lastAthenianSpecialBuildDiag >= 15)
 			{
@@ -7364,7 +7425,10 @@ export class ExpertDecisionController
 			if ((Number(bank[resource]) || 0) < (Number(selected.cost[resource]) || 0) + (Number(reserve[resource]) || 0))
 				return false;
 		const unitPop = this.unitPopulationCost(gameState, selected.type);
-		if (this.operatingPopulationHeadroom(gameState) < unitPop)
+		// IT14.77: P3 reserves population specifically for Iphicrates. Ordinary military
+		// respects that reserve; the named hero is allowed to consume it.
+		const heroReserveConsumer = label === "p3-hero-iphicrates";
+		if (this.operatingPopulationHeadroom(gameState, heroReserveConsumer) < unitPop)
 			return false;
 		const combatOwner = this.expertCombatOwnershipMetadata(gameState, "premium-reserve");
 		const plan = new TrainingPlan(gameState, selected.type, {
@@ -7412,7 +7476,9 @@ export class ExpertDecisionController
 					continue;
 				heroes.sort((a, b) => a.type.localeCompare(b.type));
 				if (this.queueAthenianSpecialUnit(gameState, queues, pry, heroes[0], "p3-hero-iphicrates",
-					{ food: 300, wood: 300, metal: 150 }))
+					{ food: Number(policy.expertP3BoomHeroFoodReserve) || 100,
+					  wood: Number(policy.expertP3BoomHeroWoodReserve) || 100,
+					  metal: Number(policy.expertP3BoomHeroMetalReserve) || 25 }))
 					return;
 			}
 		}
@@ -7541,8 +7607,11 @@ export class ExpertDecisionController
 				if (!heroes.length)
 					continue;
 				heroes.sort((a, b) => a.type.localeCompare(b.type));
-				if (this.queueAthenianSpecialUnit(gameState, queues, pry, heroes[0], "p3-hero-iphicrates",
-					{ food: 300, wood: 300, metal: 150 }))
+				const p3HeroReserve = this.isP3BoomDoctrine(gameState) ?
+					{ food: Number(policy.expertP3BoomHeroFoodReserve) || 100, wood: Number(policy.expertP3BoomHeroWoodReserve) || 100,
+					  metal: Number(policy.expertP3BoomHeroMetalReserve) || 25 } :
+					{ food: 300, wood: 300, metal: 150 };
+				if (this.queueAthenianSpecialUnit(gameState, queues, pry, heroes[0], "p3-hero-iphicrates", p3HeroReserve))
 					return;
 			}
 		}
@@ -8200,6 +8269,8 @@ export class ExpertDecisionController
 		const kind = action.kind;
 		const placementFailureKey = kind + ":" + (action.role || "primary");
 		const placementFailures = Number(this.placementFailureCounts[placementFailureKey] || 0);
+		const placementDoctrine = this.ensureStrategicDoctrine(gameState);
+		const p3BoomPlacement = placementDoctrine && placementDoctrine.id === "p3_boom_all_in";
 		const urgentFinishingPlacement = kind === "arsenal" &&
 			(action.role === "finishing_siege" || action.role === "broken_p2_siege");
 		const strategicFallback = (urgentFinishingPlacement ||
@@ -8846,21 +8917,38 @@ export class ExpertDecisionController
 				request.minimumCCDistance = 12;
 			if (action.role === "phase3_town_support")
 			{
-				// IT14.62: Market #2 is a trade endpoint, not merely the second Town-class
-				// structure. Prefer a long, safe route from Market #1 and, when a Cleruchy
-				// exists, deliberately search its new frontier as the natural second endpoint.
 				const cleruchyType = gameState.applyCiv(BUILDING_SPECS.cleruchy.template);
 				const cleruchies = this.structuresByTemplate(gameState, cleruchyType).filter(ent => ent && entityPosition(ent));
 				for (const colony of cleruchies)
 					candidates.unshift(...generatePlacementCandidates({ "kind": "market", "anchor": colony.position(),
 						"toward": ccPos, "distances": [16, 22, 28, 34, 40, 48], "angleCount": 64, "templateRadius": geometry.radius }));
-				candidates.push(...generatePlacementCandidates({ "kind": "market", "anchor": ccPos,
-					"toward": woodPos || [ccPos[0] + 1, ccPos[1]],
-					"distances": [96, 108, 120, 132, 144, 156, 168, 180, 192, 204],
-					"angleCount": 128, "templateRadius": geometry.radius }));
-				request.minimumMarketSpacing = policy.phase2SecondMarketSpacing;
-				request.preferredMarketDistance = policy.phase2SecondMarketPreferredDistance;
-				request.maximumCCDistance = policy.phase2SecondMarketMaximumCCDistance;
+
+				if (p3BoomPlacement)
+				{
+					// IT14.77 P3 Boom: Market #2 is first a City-phase prerequisite and only
+					// second a trade endpoint. Search the safe developed district densely and
+					// accept a modest route instead of holding P3 for ideal 70m/120m geometry.
+					candidates.unshift(...generatePlacementCandidates({ "kind": "market", "anchor": ccPos,
+						"toward": woodPos || [ccPos[0] + 1, ccPos[1]],
+						"distances": [24, 30, 36, 42, 48, 54, 60, 68, 76, 84, 92, 104, 116, 132],
+						"angleCount": 128, "templateRadius": geometry.radius }));
+					request.minimumCCDistance = Number(policy.p3TownSupportMarketMinimumCCDistance) || 14;
+					request.minimumMarketSpacing = Number(policy.p3TownSupportMarketSpacing) || 34;
+					request.preferredMarketDistance = Number(policy.p3TownSupportMarketPreferredDistance) || 68;
+					request.maximumCCDistance = Number(policy.p3TownSupportMarketMaximumCCDistance) || 190;
+					request.phaseUtilityPlacement = true;
+				}
+				else
+				{
+					// Other doctrines retain the IT14.62 long-route trade preference.
+					candidates.push(...generatePlacementCandidates({ "kind": "market", "anchor": ccPos,
+						"toward": woodPos || [ccPos[0] + 1, ccPos[1]],
+						"distances": [96, 108, 120, 132, 144, 156, 168, 180, 192, 204],
+						"angleCount": 128, "templateRadius": geometry.radius }));
+					request.minimumMarketSpacing = policy.phase2SecondMarketSpacing;
+					request.preferredMarketDistance = policy.phase2SecondMarketPreferredDistance;
+					request.maximumCCDistance = policy.phase2SecondMarketMaximumCCDistance;
+				}
 			}
 		}
 
@@ -8944,13 +9032,17 @@ export class ExpertDecisionController
 			const policy = mergePolicy();
 			const ccPos = cc.position();
 			const specialAthens = kind === "gymnasium" || kind === "prytaneion";
+			const p3RequiredPrytaneion = kind === "prytaneion" && action.role === "athens_p3_heroes" && p3BoomPlacement;
 			const candidates = [];
 			for (const anchor of this.frontierResourceAnchors(gameState, ccPos, accessIndex).slice(0, 6))
 				candidates.push(...generatePlacementCandidates({ "kind": "barracks", "anchor": anchor.position, "toward": ccPos,
 					"distances": [18, 22, 26, 30, 34, 38], "angleCount": 40, "templateRadius": geometry.radius }));
 			const developed = [
 				...this.builtByClass(gameState, "Barracks"), ...this.builtByClass(gameState, "Forge"),
-				...this.builtByClass(gameState, "Market"), ...this.builtByClass(gameState, "Storehouse")
+				...this.builtByClass(gameState, "Market"), ...this.builtByClass(gameState, "Storehouse"),
+				...(p3RequiredPrytaneion ? this.builtByClass(gameState, "House") : []),
+				...(p3RequiredPrytaneion ? this.builtByClass(gameState, "Temple") : []),
+				...(p3RequiredPrytaneion ? this.builtByClass(gameState, "Farmstead") : [])
 			].filter(ent => ent && entityPosition(ent));
 			developed.sort((a, b) => SquareVectorDistance(b.position(), ccPos) - SquareVectorDistance(a.position(), ccPos) || a.id() - b.id());
 			for (const ent of developed.slice(0, 8))
@@ -8962,12 +9054,19 @@ export class ExpertDecisionController
 				candidates.push(...generatePlacementCandidates({ "kind": "barracks", "anchor": pos, "toward": outward,
 					"distances": [12, 16, 20, 24, 28, 32, 36], "angleCount": 32, "templateRadius": geometry.radius }));
 			}
+			if (p3RequiredPrytaneion)
+				candidates.unshift(...generatePlacementCandidates({ "kind": "barracks", "anchor": ccPos,
+					"toward": developed.length ? developed[0].position() : [ccPos[0] + 1, ccPos[1]],
+					"distances": [12, 16, 20, 24, 28, 32, 36, 42, 48, 56, 64, 72, 84, 96, 112, 132, 156],
+					"angleCount": 160, "templateRadius": geometry.radius }));
 			candidates.push(...generatePlacementCandidates({ "kind": "barracks", "anchor": ccPos,
 				"toward": developed.length ? developed[0].position() : [ccPos[0] + 1, ccPos[1]],
 				"distances": specialAthens ? [22, 28, 34, 40, 46, 52, 60, 68, 76, 88, 100, 112] : [52, 60, 68, 76, 84, 92, 104, 116, 128],
 				"angleCount": specialAthens ? 96 : 64, "templateRadius": geometry.radius }));
 			request = { kind, candidates, "templateRadius": geometry.radius,
-				"minimumCCDistance": specialAthens ? policy.athensSpecialMinimumCCDistance : policy.independentBuildingMinimumCCDistance };
+				"minimumCCDistance": p3RequiredPrytaneion ? (Number(policy.athensP3PrytaneionMinimumCCDistance) || 12) :
+					specialAthens ? policy.athensSpecialMinimumCCDistance : policy.independentBuildingMinimumCCDistance,
+				"p3RequiredPrytaneion": p3RequiredPrytaneion };
 		}
 
 		else if (kind === "cleruchy")
@@ -9029,11 +9128,26 @@ export class ExpertDecisionController
 				const territory = this.HQ.territoryMap;
 				const firstMarket = this.builtByClass(gameState, "Market").find(ent => ent && entityPosition(ent));
 				const firstPos = firstMarket && firstMarket.position();
-				const spacing = Number(mergePolicy().phase2SecondMarketSpacing) || 30;
+				const marketPolicy = mergePolicy();
+				const p3Utility = p3BoomPlacement;
+				const spacing = p3Utility ?
+					(Number(marketPolicy.p3TownSupportMarketSpacing) || 34) :
+					(Number(marketPolicy.phase2SecondMarketSpacing) || 70);
+				const minimumCC = p3Utility ?
+					(Number(marketPolicy.p3TownSupportMarketFallbackMinimumCCDistance) || 10) :
+					(Number(marketPolicy.independentBuildingMinimumCCDistance) || 50);
+				const preferredMarket = p3Utility ?
+					(Number(marketPolicy.p3TownSupportMarketPreferredDistance) || 68) :
+					(Number(marketPolicy.phase2SecondMarketPreferredDistance) || 120);
+				const maxCC = p3Utility ?
+					(Number(marketPolicy.p3TownSupportMarketMaximumCCDistance) || 190) :
+					(Number(marketPolicy.phase2SecondMarketMaximumCCDistance) || 210);
 				const grid = [];
 				if (territory && Number.isFinite(territory.width) && Number.isFinite(territory.cellSize) && territory.getOwnerIndex)
 				{
-					const step = 2;
+					// P3 utility placement samples every owned territory cell. A second Market that
+					// unlocks City is worth more than a prettier future trade line.
+					const step = p3Utility ? 1 : 2;
 					for (let z = 0; z < territory.width; z += step)
 						for (let x = 0; x < territory.width; x += step)
 						{
@@ -9042,19 +9156,15 @@ export class ExpertDecisionController
 								continue;
 							const pos = [(x + 0.5) * territory.cellSize, (z + 0.5) * territory.cellSize];
 							const ccDist = Math.sqrt(SquareVectorDistance(pos, ccPos));
-							if (ccDist < mergePolicy().independentBuildingMinimumCCDistance)
+							if (ccDist < minimumCC || ccDist > maxCC)
 								continue;
 							const marketDist = firstPos ? Math.sqrt(SquareVectorDistance(pos, firstPos)) : 999;
 							if (firstPos && marketDist < spacing)
 								continue;
-							const preferredMarket = Number(mergePolicy().phase2SecondMarketPreferredDistance) || 120;
-							const maxCC = Number(mergePolicy().phase2SecondMarketMaximumCCDistance) || 210;
-							if (ccDist > maxCC)
-								continue;
 							grid.push({ pos, score: Math.abs(marketDist - preferredMarket) + 0.15 * Math.abs(ccDist - preferredMarket) });
 						}
 					grid.sort((a, b) => a.score - b.score);
-					emergency.push(...grid.slice(0, 512).map(item => item.pos));
+					emergency.push(...grid.slice(0, p3Utility ? 2048 : 512).map(item => item.pos));
 				}
 			}
 
@@ -9118,14 +9228,23 @@ export class ExpertDecisionController
 			if (kind === "gymnasium" || kind === "prytaneion")
 			{
 				const territory = this.HQ.territoryMap;
-				const minimum = Number(mergePolicy().athensSpecialMinimumCCDistance) || 20;
-				const preferred = Number(mergePolicy().athensSpecialPreferredCCDistance) || 42;
-				const maximum = Number(mergePolicy().athensSpecialFallbackMaximumCCDistance) || 120;
+				const specialPolicy = mergePolicy();
+				const requiredP3Prytaneion = p3BoomPlacement && kind === "prytaneion" && action.role === "athens_p3_heroes";
+				const minimum = requiredP3Prytaneion ?
+					(Number(specialPolicy.athensP3PrytaneionFallbackMinimumCCDistance) || 8) :
+					(Number(specialPolicy.athensSpecialMinimumCCDistance) || 20);
+				const preferred = requiredP3Prytaneion ?
+					(Number(specialPolicy.athensP3PrytaneionFallbackPreferredCCDistance) || 42) :
+					(Number(specialPolicy.athensSpecialPreferredCCDistance) || 42);
+				const maximum = requiredP3Prytaneion ?
+					(Number(specialPolicy.athensP3PrytaneionFallbackMaximumCCDistance) || 230) :
+					(Number(specialPolicy.athensSpecialFallbackMaximumCCDistance) || 120);
 				const grid = [];
 				if (territory && Number.isFinite(territory.width) && Number.isFinite(territory.cellSize) && territory.getOwnerIndex)
 				{
-					for (let z = 0; z < territory.width; z += 2)
-						for (let x = 0; x < territory.width; x += 2)
+					const step = requiredP3Prytaneion ? 1 : 2;
+					for (let z = 0; z < territory.width; z += step)
+						for (let x = 0; x < territory.width; x += step)
 						{
 							const j = x + z * territory.width;
 							if (territory.getOwnerIndex(j) !== PlayerID)
@@ -9137,13 +9256,22 @@ export class ExpertDecisionController
 							grid.push({ pos: point, score: Math.abs(d - preferred) });
 						}
 					grid.sort((a,b) => a.score - b.score);
-					emergency.push(...grid.slice(0, 768).map(item => item.pos));
+					emergency.push(...grid.slice(0, requiredP3Prytaneion ? 3072 : 768).map(item => item.pos));
 				}
 			}
 
 			request.candidates = [...(request.candidates || []), ...emergency];
 			if (kind === "market" && action.role === "phase3_town_support")
-				request.minimumMarketSpacing = Math.min(Number(request.minimumMarketSpacing) || 999, mergePolicy().phase2SecondMarketSpacing);
+			{
+				const marketPolicy = mergePolicy();
+				const fallbackSpacing = p3BoomPlacement ?
+					(Number(marketPolicy.p3TownSupportMarketSpacing) || 34) :
+					(Number(marketPolicy.phase2SecondMarketSpacing) || 70);
+				request.minimumMarketSpacing = Math.min(Number(request.minimumMarketSpacing) || 999, fallbackSpacing);
+				if (p3BoomPlacement)
+					request.minimumCCDistance = Math.min(Number(request.minimumCCDistance) || 999,
+						Number(marketPolicy.p3TownSupportMarketFallbackMinimumCCDistance) || 10);
+			}
 			request.preserveFarmDistrict = false;
 		}
 
@@ -9412,7 +9540,10 @@ export class ExpertDecisionController
 					if (coreCC && entityPosition(coreCC) && SquareVectorDistance(position, coreCC.position()) > maxCC * maxCC)
 						return false;
 					const first = markets[0];
-					if (first && isLineInsideEnemyTerritory(gameState, first.position(), position, 35))
+					// P3 Boom's second Market is phase utility. Both endpoints still need legal
+					// own-territory/access placement, but a future trade-line aesthetic must not
+					// veto the building that unlocks City.
+					if (!request.phaseUtilityPlacement && first && isLineInsideEnemyTerritory(gameState, first.position(), position, 35))
 						return false;
 				}
 			}
@@ -11480,6 +11611,14 @@ export class ExpertDecisionController
 		// IT14.74: the Town safety helper may add Fields only after combined usable natural
 		// food reaches the <=40% transition. It cannot bypass the hard natural-food hold.
 		frame = this.applyPhase2SafetyField(gameState, frame, farmCapacity);
+		// IT14.77: restore the opening eco-tech contract before any optional Village
+		// military/phase sweep. The Wicker -> Iron Axe routine existed, but the main
+		// update path stopped CALLING it in P1; that is how Athens reached 13+ minutes
+		// without its first wood-cutting upgrade. Its own dropsite/housing/availability
+		// guards still decide exactly when the tech can be queued.
+		if (gameState.currentPhase && gameState.currentPhase() === 1)
+			this.researchExpertEcoTech(gameState, queues, allFoodClusters, cc);
+
 		// IT14.66 Greek rush doctrines first get a chance to choose Hoplite Tradition as
 		// their Village production package. If that branch commits, Athens suppresses the
 		// competing Forge + Melee-I package and spends the 60s CC lock on cheaper/faster
@@ -11610,8 +11749,16 @@ export class ExpertDecisionController
 		const siegeStatus = this.expertBuildingSiegeStatus(gameState);
 		const desiredSiegeForReserve = siegeContext && siegeContext.active ?
 			Math.max(1, Number(siegeContext.desiredSiege) || Number(mergePolicy().expertFinishingSiegeTarget) || 2) : 0;
-		this.expertStrategicPopulationReserve = desiredSiegeForReserve > siegeStatus.total ?
+		let strategicPopulationReserve = desiredSiegeForReserve > siegeStatus.total ?
 			Math.max(0, Number(mergePolicy().expertSiegePopulationReserve) || 4) : 0;
+		// IT14.77: do not let ordinary infantry fill the last slots that P3 Boom needs
+		// for Iphicrates. The hero queue explicitly consumes this reserve.
+		if (this.isP3BoomDoctrine(gameState) && gameState.getPlayerCiv() === "athen" &&
+		    gameState.currentPhase && gameState.currentPhase() >= 3 &&
+		    !this.p3BoomIphicratesReady(gameState) && !this.hasQueuedHero(gameState))
+			strategicPopulationReserve = Math.max(strategicPopulationReserve,
+				Math.max(1, Number(mergePolicy().expertP3BoomHeroPopulationReserve) || 2));
+		this.expertStrategicPopulationReserve = strategicPopulationReserve;
 		if (siegeContext.blockedTownSiege && gameState.ai.elapsedTime - this.lastFinishingDiag >= 15)
 		{
 			this.lastFinishingDiag = gameState.ai.elapsedTime;
@@ -11734,7 +11881,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.76] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.77] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -11796,7 +11943,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.76] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.77] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()

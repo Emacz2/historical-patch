@@ -1,26 +1,26 @@
-EXPERT BENCHMARKS — IT14.76
+EXPERT BENCHMARKS — IT14.77
 
 RECENT 3 TESTS
-1) IT14.74 — Late P1 Timing Rush — Athens mirror — 23:22 engine win.
-   PASS, not benchmark-clean: attack could convert, but Farmstead/Field placement and idle/logistics problems remained obvious.
+1) IT14.74 — P2 Forge-Tech Push — Athens mirror — stopped early.
+   FAIL: Farmstead/Field placement still wasted hubs and basic settlement efficiency.
 
-2) IT14.74 — P2 Forge-Tech Push — Athens mirror — user stopped ~14:13.
-   FAIL: 2 Farmsteads for essentially 1-2 useful Fields; settlement placement still made obviously poor choices.
+2) IT14.75 — Late P1 Timing Rush — Athens mirror — ~45:37.
+   FAIL: enemy was nearly finished, but repeated recovery/retreat behavior plus idles turned a winning bank into a stall.
 
-3) IT14.75 — Late P1 Timing Rush — Athens mirror — user stopped ~45:37 with Expert ~176 pop vs enemy ~17.
-   FAIL: enemy was broken and 2 Rams existed, but repeated reboom retreats + resource/worker stall prevented the kill. Late bank reached massive wood/stone/metal surplus while food was comparatively low and no adaptive barter solved it.
+3) IT14.76 — P3 Boom Max-Tech All-In — Athens Expert vs Gaul Very Hard — stopped 26:26.
+   FAIL: resource balance improved, but Iron Axe was never called in P1, the second Market delayed City, and the P3 army could be parked behind an impossible Prytaneion/Iphicrates gate.
 
 MAJOR TRENDS
-- Strong opening/army production can still create dominant positions, but the floor is inconsistent: bad placement or logistics can erase the advantage.
-- Farmstead geometry remains the most visible settlement-planning weakness; first hub must support 3-4 Fields before another hub is acceptable.
-- Idle/unproductive workers are now a late-game strategic failure, not just an assignment bug; failed orders need escalation and expansion.
-- Finishing logic is too cautious: a broken opponent with siege must be killed, not repeatedly reboomed.
-- Resource imbalance needs a global response: barter surplus into the limiting resource and expand when local resources are exhausted.
+- Resource balancing is improving; strategic progression and escape paths are now the larger limiter.
+- Mandatory opening eco techs cannot depend on a broad scorer or an accidentally missing caller.
+- Phase-enabling infrastructure must outrank trade/layout aesthetics in P3 Boom.
+- Required hero/siege packages need both placement/population reservations and a bounded escape path.
+- Healthy CitizenSoldiers should keep gathering until an all-in is actually ready to launch.
 
-IT14.76 CHANGES
-- Adaptive surplus->food barter in Town/City, including finishing/idle crises.
-- FINISH persistence + reboom override unless the army catastrophically collapses.
-- Failed gather-order verification, target blacklist and cross-resource escalation.
-- Recovery Market / scarcity expansion allowed under real late-game crisis conditions.
-- Opening Farmstead requires 3 touching Field slots normally, strongly prefers 4; wider search before 2-slot fallback.
-- Four doctrine roll remains 25% each; P2/P3 CC civilian-to-70 contract unchanged.
+IT14.77 CHANGES
+- Restore the Village Wicker -> Iron Axe path; broad P1 eco sweep cannot leapfrog Iron Axe.
+- P3 Market #2 is high-priority City-phase utility with compact/dense own-territory fallback.
+- P3 Prytaneion is mandatory utility infrastructure with dense fallback; reserve population and spending room for Iphicrates.
+- P3 military research becomes war-priority during the P2->P3 transition.
+- P3 attack plan is not created early: reserve soldiers keep working until the package can launch.
+- Normal all-in still wants near-max pop + max relevant military tech + Iphicrates + 2 siege; 18m failed-hero and 20m absolute escape prevent permanent stalls.

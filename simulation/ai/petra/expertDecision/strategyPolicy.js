@@ -84,8 +84,9 @@ const DOCTRINES = Object.freeze({
       phase2LateTime: 510,
       // P3 Boom should satisfy the Town-structure path to City promptly rather than
       // waiting for the ordinary P2 market population thresholds.
-      phase2MarketPopulation: 80,
-      phase2SecondMarketPopulation: 95
+      phase2MarketPopulation: 72,
+      phase2SecondMarketPopulation: 82,
+      phase3TownSupportPriority: 110
     })
   })
 });

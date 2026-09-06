@@ -517,3 +517,16 @@ Replay regressions locked by IT14:
 - A gather order that remains idle is a failed solution. The worker blacklists that immediate target and rotates to another productive resource instead of repeating the same dead order indefinitely.
 - Severe late scarcity may build a recovery Market or resource expansion even during finishing; this is bounded to real shortage/nonproductive-worker conditions and does not change healthy-map doctrine timing.
 - Opening Farmstead normally proves at least 3 touching Field slots and strongly prefers 4; only repeated genuine placement failure may fall back to 2.
+
+## IT14.77 — mandatory eco / P3 progression / productive staging repair
+- Village-phase Expert MUST actively invoke the existing Wicker -> Iron Axe opening routine. For Athens/Thebes, once the opening Storehouse is secured, the optional P1 eco sweep may not leapfrog `gather_lumbering_ironaxes`.
+- Doctrine weights remain exactly 25/25/25/25. P2 Tech Push and P3 Boom retain the Civic-Centre civilian-only contract until 70 civilians exist.
+- IT14.76 resource balancing, adaptive barter, failed-order retargeting and finishing overrides remain frozen unless a direct contradiction is found.
+- The <=40% natural-food Field transition, three-Farmstead maximum and current shared farm topology are not rewritten in this pass.
+- P3 Boom Market #2 is a City-phase utility prerequisite first and a future trade endpoint second. It receives earlier thresholds/high priority and dense legal own-territory fallback; ideal long-route geometry cannot permanently block City.
+- P3 Boom Prytaneion is mandatory command infrastructure. Dense own-territory fallback, lower decorative spacing, reserved population and protected spending prevent Iphicrates from being starved by ordinary production.
+- P3 Boom begins its military-tech conversion during the committed P2->P3 transition, not only after City has fully completed.
+- An unlaunched P3 AttackPlan may not warehouse a large CitizenSoldier economy for minutes. Reserve soldiers remain economically productive until population/army/siege/hero/tech conditions are close enough to launch in the same update.
+- Normal P3 all-in still targets near-max operating population, >=90 coherent army, two building siege units, Iphicrates for Athens and completion of relevant military tech. If Prytaneion placement has repeatedly failed, the hero may be waived after 18 minutes; at 20 minutes a healthy near-max army with two siege must launch rather than wait forever.
+- A strategically broken opponent overrides the P3 build order: a viable finishing army may launch before the full City package.
+- Runtime telemetry marker is `[EXPERT-IT14.77]`.
