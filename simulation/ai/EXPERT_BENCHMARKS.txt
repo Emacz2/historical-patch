@@ -1,16 +1,15 @@
-EXPERT BENCHMARKS — IT14.83
+EXPERT BENCHMARKS — IT14.84
 
 RECENT 3
-1) IT14.82 Athens Expert vs Rome Very Hard — WIN 20:46. 2 Farmsteads / 7 Fields; Town-phase finish.
-2) IT14.82 Athens Expert vs Carthage Very Hard — WIN 26:09. 3 Farmsteads / 8 Fields; finishing attack correctly attached 2 rams.
-3) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE at 37:56. Economy strong (3 Farmsteads / 10 Fields, 180 pop), but repeated ~60-man P2 waves failed to convert the advantage; siege replacement also disappeared after reaching pop cap.
+1) IT14.82 Athens Expert vs Carthage Very Hard — WIN 26:09. 3 Farmsteads / 8 Fields; finishing attack attached 2 rams.
+2) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE 37:56. Economy strong at 3 Farmsteads / 10 Fields and 180 pop; repeated ~60-man P2 waves failed to convert.
+3) IT14.83 Athens Expert vs Seleucids Very Hard — INCOMPLETE 13:11. Opening Farmstead had 0 live Field slots; only 1 Field ever fit, Farmstead #2 stayed locked, and Expert remained Village.
 
 MAJOR TRENDS
-- IT14.82 farming is finally usable; freeze it.
-- Economy can now reach max operating pop with large resource banks.
-- Main remaining bottleneck is military conversion: wave sizing must learn from failed attacks.
-- Siege works when it exists, but replacement needs protected population headroom.
-- Storehouse count/idles remain a later cleanup target, not part of 14.83.
+- 14.82 farm placement can produce good 3-4 Field hubs when the opening site is sound.
+- One bad opening Farmstead can still poison the whole food network; 14.84 targets only that failure.
+- 14.83 military escalation/siege work remains frozen for a clean retest after food is stable.
+- Storehouse/idles remain later cleanup work.
 
-IT14.83 TARGET
-Adaptive P2 wave escalation + reliable siege replacement, with no farm/food changes.
+IT14.84 TARGET
+Reject zero-live-slot opening Farmsteads when alternatives exist, prefer 2+ live slots, and guarantee Farmstead #2 recovery if a constrained opening still ends with 0-1 Fields.

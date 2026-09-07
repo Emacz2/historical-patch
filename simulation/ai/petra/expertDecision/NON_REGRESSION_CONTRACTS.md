@@ -579,3 +579,9 @@ Replay regressions locked by IT14:
 - Each non-rush strategic retreat escalates the next P2 commitment: ~75, then ~90, then nearly all available offensive citizen-soldiers while preserving 70 civilians, a 12-soldier home screen, and siege headroom.
 - An escalated P2/P3-normal follow-up prepares siege, reaching two engines after repeated failed waves.
 - While an active siege push has its requested engine(s), retain a small population replacement pocket so a lost ram/catapult can be rebuilt instead of ordinary infantry instantly consuming 180/180.
+
+## IT14.84 — opening Farmstead must not poison the permanent food network
+- The opening natural-food Farmstead may use future geometric Field space only as a secondary signal. A normal opening candidate must expose at least one genuinely legal live Field slot at placement time and should strongly prefer two or more; a raw geometric `g4` may not by itself outrank a site with real buildable Field capacity.
+- Repeated genuine opening-placement failures may relax the live-slot floor so pathological maps do not deadlock minute 0.
+- After local natural food clears, if exactly one Farmstead exists, desired permanent Fields are still missing, no Field is pending and the exhaustive live scan reports zero open slots, Farmstead #2 must be authorized even if the opening hub managed only zero or one completed Field. The first hub may not be required to produce a Field that physically cannot exist in order to unlock its own recovery hub.
+- Dedicated follow-up Farmsteads retain the compact 3-4 Field requirement. IT14.83 military escalation/siege behavior and IT14.82 Field placement/materialization behavior remain frozen.

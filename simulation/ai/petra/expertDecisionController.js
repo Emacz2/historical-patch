@@ -8793,19 +8793,27 @@ export class ExpertDecisionController
 			else if (this.builtByClass(gameState, "Farmstead").length === 0)
 			{
 				const openingMinimum = placementFailures >= 3 ? 2 : 3;
+				// IT14.84: the geometric four-slot diagnostic deliberately ignores live
+				// obstructions so berries can later become Field ground. That makes it a bad
+				// hard gate by itself: a rock/metal/forest-choked site can also report g4.
+				// Require at least one Field that is legal RIGHT NOW and strongly prefer two.
+				// Only after repeated genuine placement failures may the opening fall back to
+				// zero live slots; the permanent-hub deadlock escape below then guarantees
+				// that such a constrained opening cannot poison the rest of the game.
+				const openingLiveMinimum = placementFailures >= 4 ? 0 : 1;
+				const openingLivePreferred = placementFailures >= 3 ? 1 : 2;
 				request = {
 					kind,
 					anchor,
 					"toward": cc.position(),
-					// IT14.76: the opening berry dropsite is also the first permanent farm hub.
-					// Prove three live touching Field slots before accepting it; four is strongly
-					// preferred. Only after repeated genuine placement failure may it fall back to two.
 					"distances": [0, 2, 4, 6, 8, 10, 12, 15, 18, 21, 24, 28, 32],
 					"angleCount": 64,
 					"templateRadius": geometry.radius,
 					"pathSources": this.foodPathSources(gameState, sourceIds),
 					"openingNaturalFood": true,
 					"minimumFieldSlots": openingMinimum,
+					"minimumLiveFieldSlots": openingLiveMinimum,
+					"preferredLiveFieldSlots": openingLivePreferred,
 					"preferredFieldSlots": 4
 				};
 			}
@@ -9870,9 +9878,15 @@ export class ExpertDecisionController
 					if (entityPosition(ent) && SquareVectorDistance(position, ent.position()) < farmsteadSpacing * farmsteadSpacing)
 						return false;
 				const minimumFieldSlots = Number(request && request.minimumFieldSlots) || 0;
-				if (minimumFieldSlots > 0 && farmCapacityAt)
+				if ((minimumFieldSlots > 0 || Number(request && request.minimumLiveFieldSlots) > 0) && farmCapacityAt)
 				{
 					const live = farmCapacityAt(position);
+					const minimumLive = Math.max(0, Number(request && request.minimumLiveFieldSlots) || 0);
+					// IT14.84: live capacity is the proof that this opening location is not
+					// permanently boxed in. Future geometric capacity may forgive berries/fruit,
+					// but it may never substitute for the opening's live-slot floor.
+					if (minimumLive > 0 && live < minimumLive)
+						return false;
 					const future = farmFutureCapacityAt ? farmFutureCapacityAt(position) : live;
 					const capacity = request && (request.openingNaturalFood || request.naturalExpansionFood) ? Math.max(live, future) : live;
 					if (capacity < minimumFieldSlots)
@@ -10049,6 +10063,18 @@ export class ExpertDecisionController
 				const preferredCapacity = Number(request && request.preferredFieldSlots) || 0;
 				if (preferredCapacity > 0 && capacity < preferredCapacity)
 					score += (request && request.openingNaturalFood ? 900 : 300) * (preferredCapacity - capacity);
+				if (request && request.openingNaturalFood)
+				{
+					// IT14.84: g4 was dominating the old score even when live=0, so the nearest
+					// berry bush could win despite surrounding permanent obstructions. Make real
+					// buildable Field space the primary opening tie-breaker; future/depleted
+					// geometry remains useful, but secondary.
+					const preferredLive = Math.max(0, Number(request.preferredLiveFieldSlots) || 0);
+					if (liveCapacity < preferredLive)
+						score += 7000 * (preferredLive - liveCapacity);
+					score -= 1800 * liveCapacity;
+					score -= 100 * futureCapacity;
+				}
 				for (let i = 0; i < 16; ++i)
 				{
 					const a = 2 * Math.PI * i / 16;
@@ -12263,7 +12289,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.83] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.84] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -12327,7 +12353,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.83] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.84] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()

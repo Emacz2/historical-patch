@@ -798,14 +798,17 @@ function planEconomy(rawState, overrides = {}) {
       state.food.maxSaturatedHubFields >= policy.minimumFieldsBeforeConstrainedOpeningFarmHub &&
       openFieldSlots <= 0 &&
       Math.max(0, Number(state.food.totalNaturalRemaining) || 0) <= policy.naturalExpansionDepletionThreshold;
-    // IT14.80 hard escape: zero slots is authoritative only AFTER natural ground clears and the controller's
+    // Zero slots is authoritative only AFTER natural ground clears and the controller's
     // exhaustive existing-hub scan. Once natural food is depleted and fields are still
     // missing, never require a Field that cannot exist in order to unlock the Farmstead
-    // that would make it possible. One hub must still use two Fields; with two hubs, two
-    // completed/pending Fields across the network are enough if both hubs are truly full.
-    const openingMinimum = Math.max(2, Number(policy.minimumFieldsBeforeConstrainedOpeningFarmHub) || 2);
+    // that would make it possible.
+    // IT14.84: never require two Fields from an opening Farmstead that the live scanner
+    // has already proven cannot fit them. If natural food is gone, fields are still
+    // missing, no Field is pending and the opening hub has zero legal slots, hub #2 is
+    // the recovery mechanism even when hub #1 managed only one (or zero) Fields. This
+    // removes the circular 1-field-opening -> no-second-hub -> permanent starvation lock.
     const forcedCapacityHubReady = foodCapacityDeadlock && naturalGroundClearedForPermanentHub && (
-      currentFarmsteads === 1 && existingFields >= openingMinimum ||
+      currentFarmsteads === 1 ||
       currentFarmsteads === 2 && existingFields >= 2
     );
     // A permanent hub is a LAST resort after existing natural-food ground has cleared.
