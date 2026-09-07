@@ -145,9 +145,9 @@ const DEFAULT_POLICY = Object.freeze({
   // Runtime code clamps this preferred crew to the field template's real MaxGatherers.
   farmersPerField: 4,
   fieldDiminishingReturns: 0.90,
-  // IT14.27: compact human-like farm blocks target the four farmstead sides.
-  // Do not plan six speculative perimeter slots; four reliable N/E/S/W positions
-  // are the capacity contract, with small tangential fallback only if one side is blocked.
+  // IT14.80: compact human-like farm blocks use four footprint-derived pinwheel
+  // positions around the Farmstead. Simple N/E/S/W side-centres overlap when Fields
+  // are larger than the Farmstead, so the four-slot contract uses exact rectangle math.
   fieldsPerFarmstead: 4,
   // IT14.74: normal mature food layout is two/three compact farmsteads supporting
   // roughly 8-12 fields. Natural-food dropsites and permanent hubs share this cap.

@@ -643,31 +643,41 @@ DefenseManager.prototype.checkEvents = function(gameState, events)
 
 		if (target.getMetadata(PlayerID, "PartOfArmy") !== undefined)
 		{
-			const army = this.getArmy(target.getMetadata(PlayerID, "PartOfArmy"));
-			if (army.getType() == "capturing")
+			const armyId = target.getMetadata(PlayerID, "PartOfArmy");
+			const army = this.getArmy(armyId);
+			// IT14.79: army metadata can outlive the DefenseArmy object after an abort,
+			// merge or destruction event. 14.78 dereferenced that stale id 270 times in
+			// one replay. Clear the stale membership and let normal attacked-unit logic
+			// continue instead of throwing every AI update.
+			if (!army)
+				target.setMetadata(PlayerID, "PartOfArmy", undefined);
+			else
 			{
-				let abort = false;
-				// If one of the units trying to capture a structure is attacked,
-				// abort the army so that the unit can defend itself
-				if (army.ownEntities.indexOf(target.id()) != -1)
-					abort = true;
-				else if (army.foeEntities[0] == target.id() && target.owner() == PlayerID)
+				if (army.getType() == "capturing")
 				{
-					// else we may be trying to regain some capture point from one of our structure.
-					abort = true;
-					const capture = target.capturePoints();
-					for (let j = 0; j < capture.length; ++j)
+					let abort = false;
+					// If one of the units trying to capture a structure is attacked,
+					// abort the army so that the unit can defend itself
+					if (army.ownEntities.indexOf(target.id()) != -1)
+						abort = true;
+					else if (army.foeEntities[0] == target.id() && target.owner() == PlayerID)
 					{
-						if (!gameState.isPlayerEnemy(j) || capture[j] == 0)
-							continue;
-						abort = false;
-						break;
+						// else we may be trying to regain some capture point from one of our structure.
+						abort = true;
+						const capture = target.capturePoints();
+						for (let j = 0; j < capture.length; ++j)
+						{
+							if (!gameState.isPlayerEnemy(j) || capture[j] == 0)
+								continue;
+							abort = false;
+							break;
+						}
 					}
+					if (abort)
+						this.abortArmy(gameState, army);
 				}
-				if (abort)
-					this.abortArmy(gameState, army);
+				continue;
 			}
-			continue;
 		}
 
 		// Try to garrison any attacked support unit if low health.

@@ -539,3 +539,29 @@ Replay regressions locked by IT14:
 - Once the P1 rush launches or enters recovery, the CC returns to civilian growth until the applicable cap.
 - Runtime telemetry marker is `[EXPERT-IT14.78]`.
 
+
+## IT14.79 — existing-Farmstead capacity / stale-defense-army contract
+- Before an existing Farmstead is considered exhausted, Expert performs a dense local Field perimeter scan inside the same <=2m border-gap contract; compact N/E/S/W slots remain preferred, but legal human-like fill-in positions count.
+- Engine-obstructed legality is authoritative for already-built Fields/foundations; the controller must not reject a snapped legal Field solely because of the former extra center-distance rule.
+- Two existing Farmsteads with zero exhaustive open slots may unlock Farmstead #3 once the existing network has actually been used; no impossible 5-Field prerequisite may deadlock the third hub.
+- If `PartOfArmy` metadata references a DefenseArmy that no longer exists, clear the stale metadata and continue normal defense handling. Never dereference an undefined army.
+- Runtime telemetry marker is `[EXPERT-IT14.79]`.
+
+## IT14.80 — exact compact farm packing contract
+
+- Do not widen permanent Field distance to solve packing failures. Canonical Fields remain edge-adjacent to their Farmstead and the accepted live border gap remains <=2m.
+- The canonical 4-Field layout is footprint-derived pinwheel packing, not four side-centres. If Field half-extents exceed Farmstead half-extents, tangential shift equals the footprint difference so adjacent Field rectangles meet without overlap.
+- Farmstead and Field construction use the same axis-aligned orientation so the geometry being calculated matches the constructed footprint. Their placement checks the exact rectangle against Petra's obstruction grid rather than substituting the generic enclosing-radius snap.
+- A hypothetical Farmstead may not count a Field slot that geometrically overlaps the Farmstead; pending Fields use rectangle-overlap tests rather than radial centre-distance guesses.
+- Existing natural-food footprints are future compact Field ground. A dedicated Farmstead #3 may not be created while meaningful local natural food remains; after depletion, existing Farmsteads are re-tested before another hub is authorized.
+- Runtime telemetry marker is `[EXPERT-IT14.80]`; hub capacity reports live ideal/exhaustive plus raw geometric compact capacity (`i/x/g`).
+
+## IT14.81 — rotated Static-obstruction farm packing contract
+
+- IT14.81 supersedes IT14.80's axis-aligned orientation assumption. Farmsteads use the normal 135-degree fixed-construction orientation, and every Field inherits the ACTUAL angle of its Farmstead.
+- Compact packing is calculated in the Farmstead's rotated local coordinate system, then transformed back to world coordinates. The perpendicular Farmstead-to-Field border gap remains <=2m; only tangential face alignment may slide.
+- Packing/collision dimensions use `Obstruction/Static` width/depth when available, not the larger `Footprint/Square` visual footprint. Fall back to Footprint only when no Static obstruction exists.
+- Exact Field/Farmstead legality scans the rotated Static rectangle against Petra's obstruction grid. Pending Field conflicts and Farmstead adjacency are also checked in the same rotated local frame.
+- Opening/natural-food Farmstead scoring may use raw future compact geometry so berries/fruit that will disappear do not force a poor permanent orientation; dedicated permanent hubs still require live legal Field capacity.
+- P3 Boom retains the normal fast-safe Town criteria, but if farm geometry still leaves it at 2 Barracks + 4 Fields with natural food nearly exhausted, 80+ pop at 7:30 is an explicit Town-phase escape rather than an indefinite Village deadlock.
+- Runtime telemetry marker is `[EXPERT-IT14.81]`; hub capacity continues to report `i/x/g`.

@@ -775,13 +775,18 @@ function planEconomy(rawState, overrides = {}) {
     //    at least 3 completed fields around that saturated hub and no legal touching slot.
     // High field demand by itself is NEVER permission to spam another farmstead.
     const saturatedHubReady = state.food.maxSaturatedHubFields >= policy.minimumFieldsBeforeNextFarmHub;
-    // FARM NON-REGRESSION LOCK (IT14.26): never deadlock merely because the first
-    // permanent fields were split across two natural-food districts. If the *entire*
-    // existing farm network is measured full and we already paid for four permanent
-    // fields, that is enough evidence that the current farmsteads have been used before
-    // buying another hub. This preserves the normal 3-fields-on-one-hub rule while
-    // escaping the 2+2 saturation pattern seen in IT14.25.
-    const saturatedNetworkReady = currentFarmsteads >= 2 && existingFields >= 4 && openFieldSlots <= 0;
+    // IT14.80: network saturation uses the compact/exhaustive live Field probe, but
+    // an arbitrary four/five-Field prerequisite. If two Farmsteads have both been used
+    // and the exhaustive scanner proves ZERO remaining local slots, a third compact hub
+    // is allowed. This escapes 2+1 (or 1+1) geometry without permitting Farmstead spam.
+    const naturalGroundClearedForPermanentHub =
+      Math.max(0, Number(state.food.totalNaturalRemaining) || 0) <= policy.naturalExpansionDepletionThreshold;
+    // IT14.80: temporary berry/fruit footprints are future Field space, not proof that
+    // an existing Farmstead is permanently saturated. Never buy a dedicated third hub
+    // while meaningful safe/local natural food still occupies those districts. Finish
+    // the food, let the obstruction disappear, then re-run the compact pinwheel search.
+    const saturatedNetworkReady = currentFarmsteads >= 2 && existingFields >= 2 && openFieldSlots <= 0 &&
+      naturalGroundClearedForPermanentHub;
     // IT14.40: the opening berry/fruit farmstead is deliberately placed as a dropsite,
     // not a perfect farm hub. On some maps it has exactly two legal field slots. Waiting
     // for three completed fields before permitting hub #2 creates a hard food deadlock:
@@ -793,22 +798,22 @@ function planEconomy(rawState, overrides = {}) {
       state.food.maxSaturatedHubFields >= policy.minimumFieldsBeforeConstrainedOpeningFarmHub &&
       openFieldSlots <= 0 &&
       Math.max(0, Number(state.food.totalNaturalRemaining) || 0) <= policy.naturalExpansionDepletionThreshold;
-    // IT14.55 hard escape: if natural food is gone, fields are still missing, and the
-    // measured network has zero legal slots, build a dedicated farm hub regardless of
-    // how the earlier natural-food farmsteads split their first 1-3 fields. Requiring
-    // field #4 before allowing the Farmstead that makes field #4 possible is a deadlock.
-    // IT14.75: zero slots alone is not permission to chain Farmsteads. The opening
-    // hub must first prove/use at least two Fields; a second hub must then prove/use
-    // three more (five network Fields total) before hub #3 is even eligible. Pending
-    // Fields already count in `existingFields`.
+    // IT14.80 hard escape: zero slots is authoritative only AFTER natural ground clears and the controller's
+    // exhaustive existing-hub scan. Once natural food is depleted and fields are still
+    // missing, never require a Field that cannot exist in order to unlock the Farmstead
+    // that would make it possible. One hub must still use two Fields; with two hubs, two
+    // completed/pending Fields across the network are enough if both hubs are truly full.
     const openingMinimum = Math.max(2, Number(policy.minimumFieldsBeforeConstrainedOpeningFarmHub) || 2);
-    const laterMinimum = Math.max(3, Number(policy.minimumFieldsBeforeNextFarmHub) || 3);
-    const forcedCapacityHubReady = foodCapacityDeadlock && (
+    const forcedCapacityHubReady = foodCapacityDeadlock && naturalGroundClearedForPermanentHub && (
       currentFarmsteads === 1 && existingFields >= openingMinimum ||
-      currentFarmsteads === 2 && existingFields >= openingMinimum + laterMinimum
+      currentFarmsteads === 2 && existingFields >= 2
     );
+    // A permanent hub is a LAST resort after existing natural-food ground has cleared.
+    // Natural-expansion Farmsteads above remain allowed because they are paying for an
+    // actual new food district; this guard applies only to extra permanent farm hubs.
     const permanentHubNeeded = farm.missingFields > 0 && openFieldSlots <= 0 &&
-      pendingFields === 0 && (saturatedHubReady || saturatedNetworkReady || constrainedOpeningHubReady || forcedCapacityHubReady);
+      pendingFields === 0 && naturalGroundClearedForPermanentHub &&
+      (saturatedHubReady || saturatedNetworkReady || constrainedOpeningHubReady || forcedCapacityHubReady);
     const farmsteadActionAlreadyPlanned = actions.some(action => action && action.kind === "farmstead" && (action.type === "BUILD" || action.type === "RESERVE"));
     if (permanentHubNeeded && currentFarmsteads < Math.max(1, Number(policy.maximumFarmsteads) || 3) &&
         !farmsteadActionAlreadyPlanned && state.foundations.farmstead + state.queued.farmstead === 0) {

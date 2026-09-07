@@ -20,14 +20,29 @@ function readTemplateGeometry(gameState, kind) {
   if (!Number.isFinite(radius) || radius <= 0)
     throw new Error(`template ${type} has invalid obstruction radius`);
 
-  let halfExtents;
-  if (typeof template.get === "function" && template.get("Footprint/Square")) {
-    const width = Number(template.get("Footprint/Square/@width"));
-    const depth = Number(template.get("Footprint/Square/@depth"));
-    if (Number.isFinite(width) && Number.isFinite(depth) && width > 0 && depth > 0)
-      halfExtents = { width: width / 2, depth: depth / 2 };
+  let footprintHalfExtents;
+  let obstructionHalfExtents;
+  if (typeof template.get === "function") {
+    if (template.get("Footprint/Square")) {
+      const width = Number(template.get("Footprint/Square/@width"));
+      const depth = Number(template.get("Footprint/Square/@depth"));
+      if (Number.isFinite(width) && Number.isFinite(depth) && width > 0 && depth > 0)
+        footprintHalfExtents = { width: width / 2, depth: depth / 2 };
+    }
+    // IT14.81: construction collision is governed by Obstruction/Static, not the
+    // larger visual/selection Footprint square.  For the current CWA templates this
+    // distinction is material (e.g. Fields have a substantially larger Footprint than
+    // their Static obstruction).  Using Footprint dimensions made Expert believe legal
+    // human-tight Field packing was impossible.
+    if (template.get("Obstruction/Static")) {
+      const width = Number(template.get("Obstruction/Static/@width"));
+      const depth = Number(template.get("Obstruction/Static/@depth"));
+      if (Number.isFinite(width) && Number.isFinite(depth) && width > 0 && depth > 0)
+        obstructionHalfExtents = { width: width / 2, depth: depth / 2 };
+    }
   }
-  return { type, template, radius, halfExtents };
+  const halfExtents = obstructionHalfExtents || footprintHalfExtents;
+  return { type, template, radius, halfExtents, footprintHalfExtents, obstructionHalfExtents };
 }
 
 function createPetraCollectorPorts(dependencies = {}) {
@@ -53,12 +68,66 @@ function createPetraPlacementPorts(gameState, kind, options = {}) {
   if (typeof territoryMap.gamePosToMapPos !== "function" || typeof territoryMap.getNonObstructedTile !== "function")
     throw new Error("territoryMap.gamePosToMapPos/getNonObstructedTile are required by the Petra placement port");
   const radiusCells = Math.ceil(geometry.radius / obstructions.cellSize);
+  const exactOrientedFootprint = !!(options.exactOrientedFootprint || options.exactAxisAlignedFootprint) && !!geometry.halfExtents;
+
+  // IT14.81: Fields/Farmsteads are packed as ROTATED rectangles in the same local
+  // coordinate system.  Testing an axis-aligned bounding box for a 135-degree Field
+  // is both wrong and overly conservative.  Sample the actual rotated Static
+  // obstruction rectangle against Petra's live obstruction grid.  The simulation
+  // remains the final authority when the construct command is issued.
+  const exactRectangleIsFree = (candidate, request = {}) => {
+    if (!exactOrientedFootprint || !Array.isArray(candidate) || candidate.length < 2)
+      return false;
+    const x = Number(candidate[0]);
+    const z = Number(candidate[1]);
+    const angle = Number.isFinite(Number(request.angle)) ? Number(request.angle) : 0;
+    if (!Number.isFinite(x) || !Number.isFinite(z))
+      return false;
+    const data = obstructions.map || obstructions.data;
+    const width = Number(obstructions.width);
+    const cellSize = Number(obstructions.cellSize);
+    if (!data || !Number.isFinite(width) || !Number.isFinite(cellSize) || cellSize <= 0)
+      return false;
+
+    const epsilon = Math.min(0.15, cellSize * 0.04);
+    const halfW = Math.max(0.05, Number(geometry.halfExtents.width) - epsilon);
+    const halfD = Math.max(0.05, Number(geometry.halfExtents.depth) - epsilon);
+    const cosa = Math.cos(angle);
+    const sina = Math.sin(angle);
+    // Bounding AABB of the rotated rectangle, used only to bound the cell scan.
+    const boundX = Math.abs(cosa) * halfW + Math.abs(sina) * halfD;
+    const boundZ = Math.abs(sina) * halfW + Math.abs(cosa) * halfD;
+    const minX = Math.floor((x - boundX) / cellSize);
+    const maxX = Math.floor((x + boundX) / cellSize);
+    const minZ = Math.floor((z - boundZ) / cellSize);
+    const maxZ = Math.floor((z + boundZ) / cellSize);
+    if (minX < 0 || minZ < 0 || maxX >= width || maxZ >= width)
+      return false;
+
+    for (let mz = minZ; mz <= maxZ; ++mz)
+      for (let mx = minX; mx <= maxX; ++mx) {
+        const cellX = (mx + 0.5) * cellSize;
+        const cellZ = (mz + 0.5) * cellSize;
+        const dx = cellX - x;
+        const dz = cellZ - z;
+        // Match 0 A.D.'s local obstruction transform (see attackPlan.js).
+        const u = dx * cosa - dz * sina;
+        const v = dx * sina + dz * cosa;
+        if (Math.abs(u) > halfW || Math.abs(v) > halfD)
+          continue;
+        if (Number(data[mx + mz * width]) < 255)
+          return false;
+      }
+    return true;
+  };
 
   return {
     geometry,
     obstructionMap: obstructions,
     radiusCells,
-    snapToLegalPosition(candidate) {
+    snapToLegalPosition(candidate, request = {}) {
+      if (exactOrientedFootprint)
+        return exactRectangleIsFree(candidate, request) ? [Number(candidate[0]), Number(candidate[1])] : undefined;
       const mapPos = territoryMap.gamePosToMapPos(candidate);
       if (!Array.isArray(mapPos) || mapPos.length < 2)
         return undefined;

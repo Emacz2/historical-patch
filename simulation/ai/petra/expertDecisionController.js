@@ -78,6 +78,26 @@ const CONTROL_UNTIL = -1; // save-compatibility only: Expert no longer auto-hand
 const CITY_STATE_CIVS = new Set(["athen", "spart", "theb"]);
 const EARLY_AXE_CIVS = new Set(["athen", "theb"]);
 const P1_MINING_TECHS = new Set(["gather_mining_servants", "gather_mining_wedgemallet"]);
+// IT14.81: mirror the compact human farm layout used in the reference placement.
+// 0 A.D.'s normal fixed construction orientation is 135 degrees; Fields inherit the
+// actual Farmstead angle rather than silently falling back to their own default.
+const EXPERT_FARM_ANGLE = 3 * Math.PI / 4;
+
+function expertWorldToLocal(origin, point, angle)
+{
+	const dx = Number(point[0]) - Number(origin[0]);
+	const dz = Number(point[1]) - Number(origin[1]);
+	const cosa = Math.cos(angle);
+	const sina = Math.sin(angle);
+	return [dx * cosa - dz * sina, dx * sina + dz * cosa];
+}
+
+function expertLocalToWorld(origin, u, v, angle)
+{
+	const cosa = Math.cos(angle);
+	const sina = Math.sin(angle);
+	return [Number(origin[0]) + u * cosa + v * sina, Number(origin[1]) - u * sina + v * cosa];
+}
 
 function hasClass(ent, name)
 {
@@ -3840,6 +3860,15 @@ export class ExpertDecisionController
 			fiveFieldDeadlockAge >= (Number(policy.phase2FiveFieldLayoutEscapeSeconds) || 30) &&
 			(Number(this.farmsteadPlacementFailures) || 0) >= (Number(policy.phase2FiveFieldLayoutEscapeMinimumFailures) || 3);
 		const productionReady = barracks >= 2;
+		const phaseDoctrine = this.ensureStrategicDoctrine(gameState);
+		// IT14.81 P3 hard safety: farm geometry is allowed to affect HOW cleanly the
+		// boom transitions, but it may never trap the P3 doctrine in Village forever.
+		// Normal P3 still targets the ordinary 6-8 Field Town timing.  If by 7:30 we
+		// already have two Barracks, 80+ pop and four permanent Fields with natural food
+		// essentially exhausted, queue Town and let the existing barter/recovery layer
+		// fund the phase instead of waiting for an impossible fifth/sixth placement.
+		const p3GeometryPhaseEscape = phaseDoctrine && phaseDoctrine.id === "p3_boom_all_in" && productionReady &&
+			fieldPipeline >= 4 && now >= 450 && pop >= 80 && naturalRemaining <= 200;
 		// IT14.71 alternate build: preserve the normal 2-Barracks => 6-field rule.
 		// If terrain repeatedly defeats the dedicated six-field food-block search,
 		// a ONE-Barracks economy with four actual fields may take a controlled fast P2
@@ -3885,6 +3914,8 @@ export class ExpertDecisionController
 		else if (productionReady && twoBarracksFieldFloor && absoluteFoodFloor &&
 		         now >= policy.phase2AbsoluteTime && pop >= policy.phase2AbsolutePopulation)
 			ready = true, lane = "absolute-7m";
+		else if (p3GeometryPhaseEscape)
+			ready = true, lane = "p3-geometry-failsafe";
 		else if (productionReady && fiveFieldLayoutEscape && pop >= policy.phase2AbsolutePopulation)
 			ready = true, lane = "five-field-layout-failsafe";
 		else if (twoBarracksFourFieldEscape)
@@ -8062,8 +8093,15 @@ export class ExpertDecisionController
 	{
 		const geometry = readTemplateGeometry(gameState, "field");
 		const farmGeom = readTemplateGeometry(gameState, hubKind);
+		const farm = Number.isFinite(Number(farmsteadId)) && Number(farmsteadId) >= 0 ?
+			gameState.getEntityById(Number(farmsteadId)) : undefined;
+		const farmAngle = farm && farm.angle && Number.isFinite(Number(farm.angle())) ? Number(farm.angle()) : EXPERT_FARM_ANGLE;
 		return {
 			"kind": "field",
+			// IT14.81: Fields inherit their Farmstead's real rotation and all candidate
+			// packing is calculated in that rotated local coordinate system.
+			"angle": farmAngle,
+			"anchorAngle": farmAngle,
 			"anchor": farmPosition,
 			"farmsteadId": farmsteadId,
 			"foodHubId": farmsteadId,
@@ -8078,7 +8116,81 @@ export class ExpertDecisionController
 		};
 	}
 
-	fieldSlotsAt(gameState, farmPosition, farmsteadId, accessIndex, shared = undefined, slotLimit = undefined, maxBorderGapOverride = undefined, hubKind = "farmstead")
+	exhaustiveFieldCandidates(request)
+	{
+		if (!request || !Array.isArray(request.anchor))
+			return [];
+		const anchor = request.anchor;
+		const farm = request.anchorHalfExtents || { "width": 5, "depth": 5 };
+		const field = request.templateHalfExtents || { "width": 14, "depth": 14 };
+		const angle = Number.isFinite(Number(request.angle)) ? Number(request.angle) : EXPERT_FARM_ANGLE;
+		const spanU = Math.max(1, Number(farm.width) + Number(field.width));
+		const spanV = Math.max(1, Number(farm.depth) + Number(field.depth));
+		const maxGap = Math.max(0, Number.isFinite(Number(request.maxBorderGap)) ? Number(request.maxBorderGap) : 2.0);
+		const out = [];
+		const seen = new Set();
+		const pushLocal = (u, v) =>
+		{
+			if (!Number.isFinite(u) || !Number.isFinite(v))
+				return;
+			const world = expertLocalToWorld(anchor, u, v, angle);
+			const key = world[0].toFixed(3) + ":" + world[1].toFixed(3);
+			if (seen.has(key))
+				return;
+			seen.add(key);
+			out.push(world);
+		};
+
+		// IT14.81: dense fallback scans the four LOCAL faces of the rotated Farmstead.
+		// The perpendicular edge gap never exceeds the same 2m contract; only tangential
+		// alignment changes, exactly like a human sliding a Field along a Farmstead wall.
+		const tangentStep = Math.max(0.75, Math.min(1.5, Math.min(Number(field.width) || 2, Number(field.depth) || 2) / 5));
+		const gapStep = maxGap <= 1.0 ? 0.25 : 0.5;
+		const gaps = [];
+		for (let gap = 0; gap <= maxGap + 0.001; gap += gapStep)
+			gaps.push(Number(gap.toFixed(2)));
+		if (!gaps.length || Math.abs(gaps[gaps.length - 1] - maxGap) > 0.001)
+			gaps.push(maxGap);
+
+		const tangentValues = span =>
+		{
+			const values = [0];
+			for (let d = tangentStep; d <= span + 0.001; d += tangentStep)
+			{
+				values.push(d);
+				values.push(-d);
+			}
+			return values;
+		};
+		const alongV = tangentValues(spanV);
+		const alongU = tangentValues(spanU);
+		for (const gap of gaps)
+		{
+			for (const v of alongV)
+			{
+				pushLocal(+spanU + gap, v);
+				pushLocal(-spanU - gap, v);
+			}
+			for (const u of alongU)
+			{
+				pushLocal(u, +spanV + gap);
+				pushLocal(u, -spanV - gap);
+			}
+		}
+
+		// Small compact corner probes, still within maxBorderGap in local edge space.
+		for (let gu = 0; gu <= maxGap + 0.001; gu += 0.5)
+			for (let gv = 0; gv <= maxGap + 0.001; gv += 0.5)
+			{
+				if (Math.hypot(gu, gv) > maxGap + 0.001)
+					continue;
+				for (const su of [-1, 1])
+					for (const sv of [-1, 1])
+						pushLocal(su * (spanU + gu), sv * (spanV + gv));
+			}
+		return out;
+	}
+	fieldSlotsAt(gameState, farmPosition, farmsteadId, accessIndex, shared = undefined, slotLimit = undefined, maxBorderGapOverride = undefined, hubKind = "farmstead", exhaustiveSearch = false)
 	{
 		if (!Array.isArray(farmPosition))
 			return [];
@@ -8101,23 +8213,34 @@ export class ExpertDecisionController
 		const ports = shared && shared.ports || createPetraPlacementPorts(gameState, "field", {
 			"HQ": this.HQ,
 			"createObstructionMap": createObstructionMap,
-			"accessIndex": accessIndex
+			"accessIndex": accessIndex,
+			"exactOrientedFootprint": true
 		});
-		const candidates = generatePlacementCandidates(request);
+		let candidates = generatePlacementCandidates(request);
+		if (exhaustiveSearch)
+			candidates = candidates.concat(this.exhaustiveFieldCandidates(request));
 		const fieldHalf = request.templateHalfExtents;
 		const farmHalf = request.anchorHalfExtents;
-		const nominal = Math.max(
-			Number(farmHalf.width) + Number(fieldHalf.width),
-			Number(farmHalf.depth) + Number(fieldHalf.depth)
-		);
-		const minCenterDistance = Math.max(8, nominal - 3);
-		const maxCenterDistance = nominal + Math.max(7, request.allowWideTangents ? Number(request.maxBorderGap || 0) + 8 : 7);
-		const minSeparation = Math.max(16, 1.8 * Math.max(Number(fieldHalf.width), Number(fieldHalf.depth)));
-		const blockedPositions = [
-			...this.builtByClass(gameState, "Field").map(ent => ent.position()),
-			...this.foundationsByClass(gameState, "Field").map(ent => ent.position()),
-			...Object.values(this.pendingFieldPositions).filter(Array.isArray)
-		];
+		const spanU = Number(farmHalf.width) + Number(fieldHalf.width);
+		const spanV = Number(farmHalf.depth) + Number(fieldHalf.depth);
+		const farmAngle = Number.isFinite(Number(request.angle)) ? Number(request.angle) : EXPERT_FARM_ANGLE;
+		const maxBorderGapForEnvelope = Number.isFinite(Number(request.maxBorderGap)) ? Number(request.maxBorderGap) : 2.0;
+		const maxCenterDistance = Math.hypot(spanU + maxBorderGapForEnvelope, spanV + maxBorderGapForEnvelope) + 2;
+		// IT14.81: all compact Fields in a district share the Farmstead angle.  Compare
+		// them in that LOCAL frame, not world X/Z.  With Static-obstruction dimensions
+		// this matches the same tight packing a human construction command accepts.
+		const footprintOverlap = (a, b) =>
+		{
+			if (!Array.isArray(a) || !Array.isArray(b))
+				return false;
+			const local = expertWorldToLocal(b, a, farmAngle);
+			const epsilon = 0.20;
+			return Math.abs(local[0]) < 2 * Number(fieldHalf.width) - epsilon &&
+				Math.abs(local[1]) < 2 * Number(fieldHalf.depth) - epsilon;
+		};
+		// Built Fields and real foundations are already represented in Petra's live
+		// obstruction map. Only unmaterialized pending slots need a manual conflict guard.
+		const blockedPositions = Object.values(this.pendingFieldPositions).filter(Array.isArray);
 		const selected = [];
 		const maximumSlots = Math.max(1, Math.floor(Number(slotLimit) || policy.fieldsPerFarmstead));
 		for (const candidate of candidates)
@@ -8134,27 +8257,49 @@ export class ExpertDecisionController
 			if (ports.isDangerous && ports.isDangerous(position, fieldGeom.radius, request))
 				continue;
 			const centerDistance = Math.sqrt(SquareVectorDistance(position, farmPosition));
-			if (centerDistance < minCenterDistance || centerDistance > maxCenterDistance)
+			if (centerDistance > maxCenterDistance)
 				continue;
-			// Live capacity must use the SAME border-gap limit as real placement after
-			// obstruction-map snapping. Otherwise the planner sees phantom field slots
-			// that the actual resolver immediately rejects.
-			const dx = Math.abs(position[0] - farmPosition[0]);
-			const dz = Math.abs(position[1] - farmPosition[1]);
-			const gapX = Math.max(0, dx - (Number(farmHalf.width) + Number(fieldHalf.width)));
-			const gapZ = Math.max(0, dz - (Number(farmHalf.depth) + Number(fieldHalf.depth)));
+			// A legal Field must be OUTSIDE the Farmstead rectangle on at least one axis,
+			// while remaining within the requested edge gap. This exact test is essential
+			// when scoring a not-yet-built Farmstead: its obstruction is not on Petra's map
+			// yet, so the engine cannot reject an overlapping phantom Field for us.
+			const local = expertWorldToLocal(farmPosition, position, farmAngle);
+			const du = Math.abs(local[0]);
+			const dv = Math.abs(local[1]);
+			const farmOverlapTolerance = 0.20;
+			if (du < spanU - farmOverlapTolerance && dv < spanV - farmOverlapTolerance)
+				continue;
+			const gapU = Math.max(0, du - spanU);
+			const gapV = Math.max(0, dv - spanV);
 			const maxBorderGap = Number.isFinite(Number(request.maxBorderGap)) ? Number(request.maxBorderGap) : 0.80;
-			if (Math.hypot(gapX, gapZ) > maxBorderGap)
+			if (Math.hypot(gapU, gapV) > maxBorderGap)
 				continue;
-			if (blockedPositions.some(pos => Array.isArray(pos) && SquareVectorDistance(position, pos) < minSeparation * minSeparation))
+			if (blockedPositions.some(pos => footprintOverlap(position, pos)))
 				continue;
-			if (selected.some(pos => SquareVectorDistance(position, pos) < minSeparation * minSeparation))
+			if (selected.some(pos => footprintOverlap(position, pos)))
 				continue;
 			selected.push(position);
 			if (selected.length >= maximumSlots)
 				break;
 		}
 		return selected;
+	}
+
+	geometricFieldPackingSlotsAt(gameState, farmPosition, farmsteadId, accessIndex, hubKind = "farmstead")
+	{
+		if (!Array.isArray(farmPosition))
+			return [];
+		const request = this.fieldRequestAt(gameState, farmPosition, farmsteadId, hubKind);
+		request.gaps = [0.0];
+		request.maxBorderGap = 0.0;
+		// generateFieldCandidates starts with one complete clockwise pinwheel. These are
+		// the exact four compact positions we want to preserve for future use even when
+		// berries/fruit currently occupy one of them. Do NOT run the obstruction snap: this
+		// is a geometric/territory diagnostic, not a claim that the Field is buildable now.
+		return generatePlacementCandidates(request).slice(0, 4).filter(position =>
+			Array.isArray(position) && position.length >= 2 && position.every(Number.isFinite) &&
+			this.HQ.territoryMap.getOwner(position) === PlayerID &&
+			gameState.ai.accessibility.getAccessValue(position) === accessIndex);
 	}
 
 	farmCapacitySnapshot(gameState, accessIndex)
@@ -8175,7 +8320,8 @@ export class ExpertDecisionController
 				"ports": createPetraPlacementPorts(gameState, "field", {
 					"HQ": this.HQ,
 					"createObstructionMap": createObstructionMap,
-					"accessIndex": accessIndex
+					"accessIndex": accessIndex,
+					"exactOrientedFootprint": true
 				}),
 				"fieldGeom": readTemplateGeometry(gameState, "field"),
 				"hubGeomByKind": hubGeomByKind
@@ -8220,19 +8366,23 @@ export class ExpertDecisionController
 			const farm = descriptor.entity;
 			const hubKind = descriptor.kind;
 			const builtFieldCount = builtFields.filter(field => fieldHome.get(field.id()) === farm.id()).length;
-			let slots = this.fieldSlotsAt(gameState, farm.position(), farm.id(), accessIndex, shared, undefined, undefined, hubKind);
-			let fieldGapLimit = this.fieldRequestAt(gameState, farm.position(), farm.id(), hubKind).maxBorderGap;
-			// IT14.68: permanent fields always touch their Farmstead. Do not widen the
-			// field ring to solve terrain. If this hub is full/blocked, the food-capacity
-			// planner must buy another Farmstead instead.
-			if (!slots.length && builtFieldCount < policy.fieldsPerFarmstead)
+			const remainingTarget = Math.max(0, Number(policy.fieldsPerFarmstead) - builtFieldCount);
+			const touchGap = Math.max(0, Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0));
+			let idealSlots = remainingTarget > 0 ? this.fieldSlotsAt(gameState, farm.position(), farm.id(), accessIndex, shared,
+				remainingTarget, touchGap, hubKind, false) : [];
+			let slots = idealSlots;
+			// IT14.79: before declaring an EXISTING Farmstead full, run the dense local
+			// perimeter probe. This is deliberately separate from new-hub scoring: a built
+			// dropsite may have a non-pretty but perfectly legal fourth Field that a human
+			// would use, and we should use it before buying another Farmstead.
+			if (remainingTarget > idealSlots.length)
 			{
-				const touchGap = Math.max(0, Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0));
-				slots = this.fieldSlotsAt(gameState, farm.position(), farm.id(), accessIndex, shared,
-					Math.max(1, policy.fieldsPerFarmstead - builtFieldCount), touchGap, hubKind);
-				if (slots.length)
-					fieldGapLimit = touchGap;
+				const exhaustiveSlots = this.fieldSlotsAt(gameState, farm.position(), farm.id(), accessIndex, shared,
+					remainingTarget, touchGap, hubKind, true);
+				if (exhaustiveSlots.length > slots.length)
+					slots = exhaustiveSlots;
 			}
+			const fieldGapLimit = touchGap;
 			let homeDemand = 0;
 			if (hubKind === "farmstead")
 				for (const worker of gameState.getOwnUnits().values())
@@ -8245,7 +8395,10 @@ export class ExpertDecisionController
 					if (!Number.isFinite(lock))
 						++homeDemand;
 				}
-			hubs.push({ "farm": farm, "hubKind": hubKind, "slots": slots, "builtFieldCount": builtFieldCount, fieldGapLimit, homeDemand });
+			const geometricPackingSlots = this.geometricFieldPackingSlotsAt(gameState, farm.position(), farm.id(), accessIndex, hubKind);
+			hubs.push({ "farm": farm, "hubKind": hubKind, "slots": slots, "builtFieldCount": builtFieldCount, fieldGapLimit, homeDemand,
+				"idealSlotCount": idealSlots.length, "exhaustiveSlotCount": slots.length,
+				"geometricPackingSlotCount": geometricPackingSlots.length });
 			openFieldSlots += slots.length;
 			if (!slots.length)
 				maxSaturatedHubFields = Math.max(maxSaturatedHubFields, builtFieldCount);
@@ -8596,6 +8749,10 @@ export class ExpertDecisionController
 					"compactFallback": fallbackHub
 				};
 			}
+			// IT14.81: use the same 135-degree construction orientation as the compact
+			// human reference layout.  Fields later inherit the ACTUAL Farmstead angle.
+			if (request)
+				request.angle = EXPERT_FARM_ANGLE;
 		}
 		else if (kind === "house")
 		{
@@ -8768,6 +8925,10 @@ export class ExpertDecisionController
 				"farmsteadId": hub.farm.id(),
 				"foodHubId": hub.farm.id(),
 				"foodHubKind": hubKind,
+				// Critical IT14.81 fix: do not let the fixed-construction adapter fall back
+				// to a different Field angle.  The field uses the Farmstead's exact angle.
+				"angle": fieldIntent.angle,
+				"anchorAngle": fieldIntent.anchorAngle,
 				"templateRadius": geometry.radius,
 				"maxBorderGap": Number.isFinite(Number(hub.fieldGapLimit)) ? Number(hub.fieldGapLimit) : fieldIntent.maxBorderGap
 			};
@@ -9350,7 +9511,8 @@ export class ExpertDecisionController
 		const ports = createPetraPlacementPorts(gameState, kind, {
 			"HQ": this.HQ,
 			"createObstructionMap": createObstructionMap,
-			"accessIndex": accessIndex
+			"accessIndex": accessIndex,
+			"exactOrientedFootprint": kind === "field" || kind === "farmstead"
 		});
 		if (kind === "tower")
 		{
@@ -9360,6 +9522,7 @@ export class ExpertDecisionController
 			ports.isDangerous = position => !!(threatPosition && SquareVectorDistance(position, threatPosition) < 32 * 32);
 		}
 		let farmCapacityAt;
+		let farmFutureCapacityAt;
 		let farmDistrictReservation;
 		const resourceCorridors = this.activeResourceCorridors(gameState, accessIndex);
 		if (kind === "house" || kind === "storehouse" || kind === "barracks" || kind === "stable" || kind === "market" || kind === "forge" || kind === "temple" || kind === "arsenal" || kind === "gymnasium" || kind === "prytaneion")
@@ -9371,7 +9534,8 @@ export class ExpertDecisionController
 			const fieldPorts = createPetraPlacementPorts(gameState, "field", {
 				"HQ": this.HQ,
 				"createObstructionMap": createObstructionMap,
-				"accessIndex": accessIndex
+				"accessIndex": accessIndex,
+				"exactOrientedFootprint": true
 			});
 			const shared = { "ports": fieldPorts, "fieldGeom": fieldGeom, "farmGeom": farmGeom };
 			const farmsteads = [
@@ -9403,7 +9567,7 @@ export class ExpertDecisionController
 
 				// Also reserve any currently legal fallback slot proved by the live scanner.
 				const slots = this.fieldSlotsAt(gameState, farm.position(), farm.id(), accessIndex, shared,
-					policy.fieldsPerFarmstead, Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0));
+					policy.fieldsPerFarmstead, Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0), "farmstead", true);
 				for (const slot of slots)
 					reserveSlot(slot, farm.id());
 			}
@@ -9426,7 +9590,8 @@ export class ExpertDecisionController
 			const fieldPorts = createPetraPlacementPorts(gameState, "field", {
 				"HQ": this.HQ,
 				"createObstructionMap": createObstructionMap,
-				"accessIndex": accessIndex
+				"accessIndex": accessIndex,
+				"exactOrientedFootprint": true
 			});
 			const shared = {
 				"ports": fieldPorts,
@@ -9434,12 +9599,24 @@ export class ExpertDecisionController
 				"hubGeomByKind": { "farmstead": readTemplateGeometry(gameState, "farmstead") }
 			};
 			const cache = new Map();
+			const futureCache = new Map();
 			farmCapacityAt = position =>
 			{
 				const key = position[0].toFixed(2) + ":" + position[1].toFixed(2);
 				if (!cache.has(key))
 					cache.set(key, this.fieldSlotsAt(gameState, position, -1, accessIndex, shared, mergePolicy().fieldsPerFarmstead).length);
 				return cache.get(key);
+			};
+			// Opening/natural-food Farmsteads are chosen while berries/fruit may physically
+			// occupy the exact Field ground.  Score the compact four-slot FUTURE geometry
+			// separately so temporary food does not force the dropsite into a bad long-term
+			// orientation.  Permanent hubs still use live legal capacity as the hard gate.
+			farmFutureCapacityAt = position =>
+			{
+				const key = position[0].toFixed(2) + ":" + position[1].toFixed(2);
+				if (!futureCache.has(key))
+					futureCache.set(key, this.geometricFieldPackingSlotsAt(gameState, position, -1, accessIndex, "farmstead").length);
+				return futureCache.get(key);
 			};
 		}
 		ports.extraValidation = (position, request) =>
@@ -9532,17 +9709,33 @@ export class ExpertDecisionController
 				const fieldGeom = readTemplateGeometry(gameState, "field");
 				const farmHalf = farmGeom.halfExtents || { "width": farmGeom.radius, "depth": farmGeom.radius };
 				const fieldHalf = fieldGeom.halfExtents || { "width": fieldGeom.radius, "depth": fieldGeom.radius };
-				const dx = Math.abs(position[0] - farmstead.position()[0]);
-				const dz = Math.abs(position[1] - farmstead.position()[1]);
-				const gapX = Math.max(0, dx - (Number(farmHalf.width) + Number(fieldHalf.width)));
-				const gapZ = Math.max(0, dz - (Number(farmHalf.depth) + Number(fieldHalf.depth)));
-				const borderGap = Math.hypot(gapX, gapZ);
+				const farmAngle = farmstead.angle && Number.isFinite(Number(farmstead.angle())) ? Number(farmstead.angle()) :
+					(Number.isFinite(Number(request && request.angle)) ? Number(request.angle) : EXPERT_FARM_ANGLE);
+				const local = expertWorldToLocal(farmstead.position(), position, farmAngle);
+				const du = Math.abs(local[0]);
+				const dv = Math.abs(local[1]);
+				const spanU = Number(farmHalf.width) + Number(fieldHalf.width);
+				const spanV = Number(farmHalf.depth) + Number(fieldHalf.depth);
+				// Exact rotated-rectangle adjacency in the Farmstead local frame.
+				if (du < spanU - 0.20 && dv < spanV - 0.20)
+					return false;
+				const gapU = Math.max(0, du - spanU);
+				const gapV = Math.max(0, dv - spanV);
+				const borderGap = Math.hypot(gapU, gapV);
 				const maxBorderGap = Number.isFinite(Number(request && request.maxBorderGap)) ? Number(request.maxBorderGap) : 0.80;
 				if (borderGap > maxBorderGap)
 					return false;
+				// Pending Expert Fields in IT14.81 share this same district orientation.
+				// Check rectangle overlap instead of the old 22m centre-radius shortcut.
 				for (const pending of Object.values(this.pendingFieldPositions))
-					if (Array.isArray(pending) && SquareVectorDistance(position, pending) < 22*22)
+				{
+					if (!Array.isArray(pending))
+						continue;
+					const rel = expertWorldToLocal(pending, position, farmAngle);
+					if (Math.abs(rel[0]) < 2 * Number(fieldHalf.width) - 0.20 &&
+					    Math.abs(rel[1]) < 2 * Number(fieldHalf.depth) - 0.20)
 						return false;
+				}
 			}
 			if (kind === "house")
 			{
@@ -9559,8 +9752,14 @@ export class ExpertDecisionController
 					if (entityPosition(ent) && SquareVectorDistance(position, ent.position()) < farmsteadSpacing * farmsteadSpacing)
 						return false;
 				const minimumFieldSlots = Number(request && request.minimumFieldSlots) || 0;
-				if (minimumFieldSlots > 0 && farmCapacityAt && farmCapacityAt(position) < minimumFieldSlots)
-					return false;
+				if (minimumFieldSlots > 0 && farmCapacityAt)
+				{
+					const live = farmCapacityAt(position);
+					const future = farmFutureCapacityAt ? farmFutureCapacityAt(position) : live;
+					const capacity = request && (request.openingNaturalFood || request.naturalExpansionFood) ? Math.max(live, future) : live;
+					if (capacity < minimumFieldSlots)
+						return false;
+				}
 			}
 			if (kind === "storehouse" && this.builtByClass(gameState, "Storehouse").length)
 			{
@@ -9715,7 +9914,10 @@ export class ExpertDecisionController
 					score += 140 * nearestSource;
 				// Live field capacity is the strongest score for permanent farm hubs.
 				// This prevents IT7's "three farmsteads, three fields" starvation pattern.
-				const capacity = farmCapacityAt ? farmCapacityAt(position) : 0;
+				const liveCapacity = farmCapacityAt ? farmCapacityAt(position) : 0;
+				const futureCapacity = farmFutureCapacityAt ? farmFutureCapacityAt(position) : liveCapacity;
+				const capacity = request && (request.openingNaturalFood || request.naturalExpansionFood) ?
+					Math.max(liveCapacity, futureCapacity) : liveCapacity;
 				const preferredSpacing = Math.max(0, Number(request && request.preferredFarmsteadSpacing) || 0);
 				if (preferredSpacing > 0)
 					for (const existing of [...this.builtByClass(gameState, "Farmstead"), ...this.foundationsByClass(gameState, "Farmstead")])
@@ -9835,6 +10037,15 @@ export class ExpertDecisionController
 						this.fieldPlacementFailures[request.farmsteadId] = 0;
 					this.activeFieldTasks.push(exec.taskId);
 					this.pendingFieldPositions[exec.taskId] = [...exec.position];
+					const farm = Number.isFinite(Number(request.farmsteadId)) ? gameState.getEntityById(Number(request.farmsteadId)) : undefined;
+					if (farm && entityPosition(farm))
+					{
+						const angle = farm.angle && Number.isFinite(Number(farm.angle())) ? Number(farm.angle()) : Number(request.angle) || EXPERT_FARM_ANGLE;
+						const local = expertWorldToLocal(farm.position(), exec.position, angle);
+						aiWarn("[EXPERT-FARM-PACK] hub=" + farm.id() + " angle=" + Math.round(angle * 180 / Math.PI) +
+							" local=" + local[0].toFixed(1) + "," + local[1].toFixed(1) +
+							" world=" + exec.position[0].toFixed(1) + "," + exec.position[1].toFixed(1));
+					}
 				}
 				else
 					this.activeTaskByKind[action.kind] = exec.taskId;
@@ -9998,7 +10209,7 @@ export class ExpertDecisionController
 				const localPendingFields = this.foundationsByClass(gameState, "Field").filter(field =>
 					entityPosition(field) && SquareVectorDistance(field.position(), home.position()) <= 42 * 42).length;
 				const localSlots = this.fieldSlotsAt(gameState, home.position(), home.id(), accessIndex, undefined,
-					Math.max(1, policy.fieldsPerFarmstead - localFields - localPendingFields), Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0));
+					Math.max(1, policy.fieldsPerFarmstead - localFields - localPendingFields), Math.min(2.0, Number(policy.existingFarmsteadReuseMaxBorderGap) || 2.0), "farmstead", true);
 				const normalSaturatedHome = localFields >= policy.minimumFieldsBeforeNextFarmHub;
 				const constrainedOpeningHome = this.builtByClass(gameState, "Farmstead").length === 1 &&
 					localFields >= policy.minimumFieldsBeforeConstrainedOpeningFarmHub;
@@ -11925,7 +12136,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.78] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.81] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -11964,7 +12175,9 @@ export class ExpertDecisionController
 			" farmCrew=" + frame.state.food.preferredFarmersPerField + "@" + frame.state.food.fieldDiminishingReturns.toFixed(2) +
 			" foodDef=" + Math.round(frame.state.food.foodInfrastructureDeficitSeconds) + "s" +
 			" hubCap=" + (this.lastFarmCapacitySnapshot && this.lastFarmCapacitySnapshot.hubs ?
-				this.lastFarmCapacitySnapshot.hubs.map(hub => hub.builtFieldCount + "+" + hub.slots.length).join(",") : "-"));
+				this.lastFarmCapacitySnapshot.hubs.map(hub => hub.builtFieldCount + "+" + hub.slots.length +
+					"(i" + (Number(hub.idealSlotCount) || 0) + "/x" + (Number(hub.exhaustiveSlotCount) || 0) +
+					"/g" + (Number(hub.geometricPackingSlotCount) || 0) + ")").join(",") : "-"));
 	}
 
 	releaseAll(gameState, reason)
@@ -11987,7 +12200,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.78] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.81] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()

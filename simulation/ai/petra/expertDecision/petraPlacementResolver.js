@@ -60,65 +60,101 @@ function generateFarmsteadCandidates(request) {
   return out;
 }
 
+function fieldLocalToWorld(anchor, u, v, angle) {
+  const cosa = Math.cos(angle);
+  const sina = Math.sin(angle);
+  // Inverse of 0 A.D.'s local obstruction transform:
+  // u = dx*c - dz*s, v = dx*s + dz*c.
+  return [anchor[0] + u * cosa + v * sina, anchor[1] - u * sina + v * cosa];
+}
+
 function generateFieldCandidates(request) {
   const anchor = requirePosition(request.anchor, "field farmstead anchor");
   const farm = request.anchorHalfExtents || { width: 5, depth: 5 };
   const field = request.templateHalfExtents || { width: 14, depth: 14 };
+  const angle = Number.isFinite(Number(request.angle)) ? Number(request.angle) : 3 * Math.PI / 4;
   const baseGap = Number.isFinite(request.gap) ? request.gap : 0.5;
   const gaps = Array.isArray(request.gaps) && request.gaps.length ? request.gaps : [baseGap, 0.25, 0.5, 0.75];
   const out = [];
   const seen = new Set();
-  const push = (x, z) => {
-    const key = `${x.toFixed(3)},${z.toFixed(3)}`;
+  const pushLocal = (u, v) => {
+    const world = fieldLocalToWorld(anchor, u, v, angle);
+    const key = `${world[0].toFixed(3)},${world[1].toFixed(3)}`;
     if (seen.has(key)) return;
     seen.add(key);
-    out.push([x, z]);
+    out.push(world);
   };
 
-  // IT14.27 FARM PACKING CONTRACT:
-  // Human players naturally put the first four fields on the middle of the four
-  // farmstead sides. The previous perimeter sweep began at the corners, so field #1
-  // could consume the geometry needed by two later fields and falsely make a roomy
-  // farmstead look "full". Always test the four canonical side-centres first.
+  // IT14.81 FARM PACKING CONTRACT:
+  // Work entirely in the Farmstead's LOCAL rotated coordinates.  Farmstead and Fields
+  // share one angle, so a tight four-Field block is ordinary rectangle packing even when
+  // the whole district is rotated 135 degrees in world space.
   //
-  // If a side-centre is obstructed, search a little left/right along THAT side before
-  // giving up. These offsets stay inside the farmstead/field overlap span, preserving
-  // direct adjacency instead of drifting into a loose ring.
+  // Use Static-obstruction half-extents (supplied by readTemplateGeometry), not the
+  // larger visual Footprint dimensions.  The latter was the main reason IT14.80 thought
+  // human-legal compact Fields did not fit.
+  const farmW = Math.max(0.1, Number(farm.width) || 0.1);
+  const farmD = Math.max(0.1, Number(farm.depth) || 0.1);
+  const fieldW = Math.max(0.1, Number(field.width) || 0.1);
+  const fieldD = Math.max(0.1, Number(field.depth) || 0.1);
+  const shiftU = Math.max(0, fieldW - farmW);
+  const shiftV = Math.max(0, fieldD - farmD);
+
+  for (const gapValue of gaps) {
+    const gap = Math.max(0, Number(gapValue) || 0);
+    const normalU = farmW + fieldW + gap;
+    const normalV = farmD + fieldD + gap;
+
+    // Clockwise pinwheel: four edge-touching positions around the rotated Farmstead.
+    pushLocal(-shiftU, -normalV); // north/local -v
+    pushLocal(+normalU, -shiftV); // east/local +u
+    pushLocal(+shiftU, +normalV); // south/local +v
+    pushLocal(-normalU, +shiftV); // west/local -u
+
+    // Counter-clockwise mirror. A resource/rock may block one tangential side while the
+    // mirrored arrangement still gives the same compact 3-4 Field district.
+    pushLocal(+shiftU, -normalV);
+    pushLocal(+normalU, +shiftV);
+    pushLocal(-shiftU, +normalV);
+    pushLocal(-normalU, -shiftV);
+  }
+
+  // Side centres are useful when only one/two Fields are needed or a square obstruction
+  // happens to make the pinwheel shift unnecessary.
+  for (const gapValue of gaps) {
+    const gap = Math.max(0, Number(gapValue) || 0);
+    const normalU = farmW + fieldW + gap;
+    const normalV = farmD + fieldD + gap;
+    pushLocal(0, -normalV);
+    pushLocal(+normalU, 0);
+    pushLocal(0, +normalV);
+    pushLocal(-normalU, 0);
+  }
+
+  // Human-like face sliding.  This never increases the perpendicular Farmstead->Field
+  // gap; it only moves the Field ALONG a face so it can line up beside an existing Field
+  // or dodge a tree/mineral/resource that temporarily blocks the ideal slot.
   const tangentFractions = [0.18, -0.18, 0.36, -0.36, 0.54, -0.54, 0.70, -0.70];
-  // IT14.30: a blocked side can still have a perfectly usable corner/fill-in slot.
-  // These wider tangential probes are enabled ONLY by the controller's last-chance
-  // existing-hub packing pass; normal fields remain in the tight side-centre layout.
   if (request.allowWideTangents)
     tangentFractions.push(0.88, -0.88, 1.06, -1.06, 1.22, -1.22);
 
-  // First exhaust the true side-centres at every permitted border gap.
-  for (const gap of gaps) {
-    const x = Number(farm.width) + Number(field.width) + gap;
-    const z = Number(farm.depth) + Number(field.depth) + gap;
-    push(anchor[0], anchor[1] - z);  // north
-    push(anchor[0] + x, anchor[1]);  // east
-    push(anchor[0], anchor[1] + z);  // south
-    push(anchor[0] - x, anchor[1]);  // west
-  }
-
-  // Only then slide along an obstructed side.
-  for (const gap of gaps) {
-    const x = Number(farm.width) + Number(field.width) + gap;
-    const z = Number(farm.depth) + Number(field.depth) + gap;
-    const spanZ = Number(farm.depth) + Number(field.depth);
-    const spanX = Number(farm.width) + Number(field.width);
+  for (const gapValue of gaps) {
+    const gap = Math.max(0, Number(gapValue) || 0);
+    const normalU = farmW + fieldW + gap;
+    const normalV = farmD + fieldD + gap;
+    const spanU = farmW + fieldW;
+    const spanV = farmD + fieldD;
     for (const fraction of tangentFractions) {
-      const dz = fraction * spanZ;
-      const dx = fraction * spanX;
-      push(anchor[0] + dx, anchor[1] - z);  // north
-      push(anchor[0] + x, anchor[1] + dz);  // east
-      push(anchor[0] + dx, anchor[1] + z);  // south
-      push(anchor[0] - x, anchor[1] + dz);  // west
+      const tangentU = fraction * spanU;
+      const tangentV = fraction * spanV;
+      pushLocal(tangentU, -normalV);
+      pushLocal(+normalU, tangentV);
+      pushLocal(tangentU, +normalV);
+      pushLocal(-normalU, tangentV);
     }
   }
   return out;
 }
-
 
 function generateRingCandidates(request, defaults = [18, 22, 26, 30]) {
   const anchor = requirePosition(request.anchor, `${request.kind} anchor`);

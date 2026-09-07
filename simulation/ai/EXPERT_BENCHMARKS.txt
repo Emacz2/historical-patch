@@ -1,18 +1,18 @@
-EXPERT BENCHMARKS — IT14.78
+EXPERT BENCHMARKS — IT14.81
 
 RECENT 3 TESTS
-1) IT14.75 — Late P1 Timing Rush — FAIL (~45:37): winning position stalled on retreat/recovery + idles.
-2) IT14.76 — P3 Boom All-In — FAIL (stopped 26:26): resource balance improved, progression/hero gates stalled.
-3) IT14.77 — Early P1 Rush vs Britons — FAIL (stopped 4:02): second natural-food district recognized/annexed but Farmstead placement retried the same illegal geometry; P1 CC-production contract was not explicit.
+1) IT14.78 — Late P1 Rush vs Thebes — FAIL / stopped 11:23: farm topology deadlocked at 2 Farmsteads / 3 Fields; stale DefenseArmy error also repeated.
+2) IT14.79 — Late P1 Rush vs Iberia — FAIL / stopped 12:42: scanner still undercounted obvious Field space and bought Farmstead #3 too early.
+3) IT14.80 — P3 Boom vs Sparta — WIN 17:22, diagnostic FAIL: Sparta was beaten, but Expert never left P1; farm network reached only 3 Farmsteads / 5 Fields while the human reference fit 3 / 10.
 
 MAJOR TRENDS
-- Resource balance is improving; execution/placement escape paths remain the limiter.
-- Approved natural food must get a practical dropsite; future farm geometry is a preference, not a veto.
-- Food infrastructure must support CC + Barracks production before more military throughput is added.
-- CC military production needs one simple doctrine rule: <30 civilians never; after 30 only an active P1 rush; boom doctrines stay civilians to 70.
+- Farm failure is still placement math, not a need for farther Fields or more Farmsteads.
+- IT14.80 mixed Farmstead/Field rotation and used visual Footprint dimensions instead of the smaller Static obstruction used for real collision space.
+- Preserve the gains that are working: natural-food recognition, Wicker -> Iron Axe, CC civilian rules, resource balance/barter, FINISH persistence, stale-army defense repair.
 
-IT14.78 CHANGES
-- Natural-expansion Farmstead becomes dropsite-first, with progressively broader placement retries.
-- Under food pressure, the approved second natural-food Farmstead outranks unsupported second-Barracks throughput.
-- P1 CC infantry is allowed only after 30 civilians while the P1 rush is being prepared; one-unit pulses interleave with civilians. P2/P3 stay civilian-only to 70.
-- P2/P3 CC civilian-only-to-70 contract is unchanged.
+IT14.81 CHANGES
+- Farmsteads use 135 degrees; every Field inherits its Farmstead's actual angle.
+- Field packing is solved in the Farmstead's rotated local coordinates using Obstruction/Static dimensions, with <=2m border gap unchanged.
+- Opening/natural-food Farmsteads score future compact Field geometry so temporary berries/fruit do not force a bad long-term hub position.
+- Rotated exact-obstruction validation replaces the IT14.80 axis-aligned Field/Farmstead test.
+- P3 has a 7:30 geometry escape to Town if it has 2 Barracks + 4 Fields + 80 pop and natural food is nearly exhausted, so bad farm geometry cannot trap it in P1 forever.
