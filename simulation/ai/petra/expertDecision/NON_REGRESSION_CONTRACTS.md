@@ -565,3 +565,17 @@ Replay regressions locked by IT14:
 - Opening/natural-food Farmstead scoring may use raw future compact geometry so berries/fruit that will disappear do not force a poor permanent orientation; dedicated permanent hubs still require live legal Field capacity.
 - P3 Boom retains the normal fast-safe Town criteria, but if farm geometry still leaves it at 2 Barracks + 4 Fields with natural food nearly exhausted, 80+ pop at 7:30 is an explicit Town-phase escape rather than an indefinite Village deadlock.
 - Runtime telemetry marker is `[EXPERT-IT14.81]`; hub capacity continues to report `i/x/g`.
+
+
+## IT14.82 — field materialization recovery contract
+- Farmstead/Field centre spacing uses the full construction Footprint envelope; Static obstruction dimensions are diagnostic only.
+- Farmstead and Field still share the Farmstead's actual rotation; no widening beyond the existing compact border-gap contract.
+- A queued Field is not permanent-food capacity until a real Field foundation exists.
+- Any Field task still `awaiting-foundation` after 8 seconds is cancelled, its exact coordinate is temporarily blacklisted, and the next compact slot is tried. A rejected construct command therefore cannot consume a Field task slot forever.
+
+## IT14.83 — military conversion without farm regression
+- The IT14.82 Farmstead/Field placement, 40% natural-food transition, field materialization watchdog, and failed-position recovery are frozen for this pass.
+- Normal P2 attacks use 60 only as a floor. Healthy 120+ enemy populations require larger initial waves; 150+ requires ~80.
+- Each non-rush strategic retreat escalates the next P2 commitment: ~75, then ~90, then nearly all available offensive citizen-soldiers while preserving 70 civilians, a 12-soldier home screen, and siege headroom.
+- An escalated P2/P3-normal follow-up prepares siege, reaching two engines after repeated failed waves.
+- While an active siege push has its requested engine(s), retain a small population replacement pocket so a lost ram/catapult can be rebuilt instead of ordinary infantry instantly consuming 180/180.

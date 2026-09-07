@@ -79,6 +79,10 @@ export function AttackManager(config)
 	this.expertReboomNeedsRelaunch = false;
 	this.expertReboomTargetPlayer = undefined;
 	this.expertLastReboomRelaunchLog = -99999;
+	// IT14.83: strategic P2 retreats must teach the next attack something. A failed
+	// 60-man wave now escalates the next commitment instead of recreating 60 forever.
+	this.expertP2EscalationLevel = 0;
+	this.expertP2EscalationTargetPlayer = undefined;
 	// IT14.47: concise doctrine telemetry so a replay immediately shows whether a
 	// selected P1 rush is merely arming, has launched, or has rolled into its P2 follow-up.
 	this.expertLastStrategyStatusLog = -99999;
@@ -1635,6 +1639,27 @@ AttackManager.prototype.expertReserveCombatCount = function(gameState)
 	return count;
 };
 
+// IT14.83: remember strategic P2/P3-normal attack failures. Rushes use their own
+// recovery doctrine and finishing mode deliberately ignores this escalation layer.
+AttackManager.prototype.bumpExpertP2Escalation = function(gameState, attack, reason)
+{
+	if (this.Config.difficulty < difficulty.EXPERT || !attack || attack.type === AttackPlan.TYPE_RUSH ||
+	    !gameState.currentPhase || gameState.currentPhase() < 2)
+		return 0;
+	const target = attack.targetPlayer;
+	if (target === undefined)
+		return Math.max(0, Number(this.expertP2EscalationLevel) || 0);
+	if (this.expertP2EscalationTargetPlayer !== target)
+	{
+		this.expertP2EscalationTargetPlayer = target;
+		this.expertP2EscalationLevel = 0;
+	}
+	this.expertP2EscalationLevel = Math.min(3, Math.max(0, Number(this.expertP2EscalationLevel) || 0) + 1);
+	aiWarn("[EXPERT-P2-ESCALATE] level=" + this.expertP2EscalationLevel + " targetPlayer=" + target +
+		" reason=" + reason + " failedArmy=" + (attack.unitCollection ? attack.unitCollection.length : 0));
+	return this.expertP2EscalationLevel;
+};
+
 AttackManager.prototype.forceExpertReboomRelaunch = function(gameState)
 {
 	if (this.Config.difficulty < difficulty.EXPERT || !this.expertReboomNeedsRelaunch ||
@@ -1944,6 +1969,8 @@ AttackManager.prototype.update = function(gameState, queues, events)
 				}
 				this.expertReboomNeedsRelaunch = true;
 				this.expertReboomTargetPlayer = attack.targetPlayer;
+				if (attack.type !== AttackPlan.TYPE_RUSH)
+					this.bumpExpertP2Escalation(gameState, attack, "clearly_outnumbered");
 				this.markExpertCombatRetreat(gameState, attack, "clearly_outnumbered");
 				const cancelled = this.cancelExpertFollowupPreparations(gameState);
 				aiWarn("[EXPERT-SMART-ATTACK] avoid-outnumbered plan=" + attack.name +
@@ -1990,6 +2017,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 					now + (Number(policy.expertCombatBadExchangeReboomSeconds) || 55));
 				this.expertReboomNeedsRelaunch = true;
 				this.expertReboomTargetPlayer = attack.targetPlayer;
+				this.bumpExpertP2Escalation(gameState, attack, "bad_exchange");
 				this.markExpertCombatRetreat(gameState, attack, "bad_exchange");
 				const cancelled = this.cancelExpertFollowupPreparations(gameState);
 				const b = badExchange.balance || {};
@@ -2010,6 +2038,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 					now + (Number(policy.expertCombatScreenReboomSeconds) || 45));
 				this.expertReboomNeedsRelaunch = true;
 				this.expertReboomTargetPlayer = attack.targetPlayer;
+				this.bumpExpertP2Escalation(gameState, attack, "melee_screen_under_pressure");
 				this.markExpertCombatRetreat(gameState, attack, "melee_screen_under_pressure");
 				const cancelled = this.cancelExpertFollowupPreparations(gameState);
 				const b = brokenScreenRetreat.balance || {};
@@ -2036,6 +2065,7 @@ AttackManager.prototype.update = function(gameState, queues, events)
 					(Number(gameState.ai.elapsedTime) || 0) + policy.expertDepletedAttackReboomSeconds);
 				this.expertReboomNeedsRelaunch = true;
 				this.expertReboomTargetPlayer = attack.targetPlayer;
+				this.bumpExpertP2Escalation(gameState, attack, "depleted_push");
 				this.markExpertCombatRetreat(gameState, attack, "depleted_push");
 				aiWarn("[EXPERT-REBOOM] retreat plan=" + attack.name + " army=" + attack.unitCollection.length +
 					" targetPlayer=" + attack.targetPlayer + " until=" + Math.round(this.expertReboomUntil));
@@ -2628,6 +2658,8 @@ AttackManager.prototype.Serialize = function()
 		"expertReboomNeedsRelaunch": this.expertReboomNeedsRelaunch,
 		"expertReboomTargetPlayer": this.expertReboomTargetPlayer,
 		"expertLastReboomRelaunchLog": this.expertLastReboomRelaunchLog,
+		"expertP2EscalationLevel": this.expertP2EscalationLevel,
+		"expertP2EscalationTargetPlayer": this.expertP2EscalationTargetPlayer,
 		"expertLastStrategyStatusLog": this.expertLastStrategyStatusLog,
 		"expertRushRecoveryMode": this.expertRushRecoveryMode,
 		"expertRushRecoveryUntil": this.expertRushRecoveryUntil,

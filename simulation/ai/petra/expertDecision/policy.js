@@ -690,6 +690,7 @@ const DEFAULT_POLICY = Object.freeze({
   // IT14.64 housing is production-critical: an unfounded House cannot monopolize the
   // one-house task slot indefinitely.
   houseAwaitingFoundationRetrySeconds: 10,
+  fieldAwaitingFoundationRetrySeconds: 8,
   houseEmergencyTechFreePopulation: 6,
   houseEmergencyTechMinimumHouses: 6,
   houseEmergencyTechPlacementFailures: 2,
@@ -853,6 +854,16 @@ const DEFAULT_POLICY = Object.freeze({
   // IT14.68: a clearly superior 60+ Town army does not wait for the first upgrade
   // merely to satisfy a doctrine label. The same battlefield-strength gate still applies.
   expertP2OpportunityNoTechArmy: 60,
+  // IT14.83: 60 is the floor for an ordinary P2 timing, not a forever-wave size.
+  // Healthy near-max opponents require a larger first commitment, and each strategic
+  // P2 retreat raises the next army target instead of replaying the same failed push.
+  expertP2HealthyEnemyPopulation: 120,
+  expertP2StrongEnemyPopulation: 150,
+  expertP2HealthyEnemyArmyTarget: 70,
+  expertP2StrongEnemyArmyTarget: 80,
+  expertP2EscalationFirstArmyTarget: 75,
+  expertP2EscalationSecondArmyTarget: 90,
+  expertP2EscalationMaximumArmyTarget: 94,
   expertEarlyP1RushOpportunityDeadline: 450,
   expertLateP1RushOpportunityDeadline: 480,
   expertP1RushGateLogSeconds: 12,
@@ -886,6 +897,12 @@ const DEFAULT_POLICY = Object.freeze({
   expertCombatBadExchangeMinimumFightSeconds: 28,
   expertCombatBadExchangeReboomSeconds: 55,
   expertCombatBadExchangeCooldownSeconds: 35,
+  // Keep enough population headroom to replace a ram/catapult that dies during an
+  // active siege push. Without this, ordinary infantry instantly refilled 180/180
+  // and the Arsenal could no longer replace the lost engine.
+  expertSiegeReplacementPopulationReserve: 4,
+  expertP2EscalationFirstSiegeTarget: 1,
+  expertP2EscalationSecondSiegeTarget: 2,
   // IT14.63: a strategic retreat carries an explicit relaunch obligation.  Once the
   // short reboom window ends and enough healthy reserve soldiers exist, create the
   // follow-up plan directly instead of waiting for generic Petra plan creation.

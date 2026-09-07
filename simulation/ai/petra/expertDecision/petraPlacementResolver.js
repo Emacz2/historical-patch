@@ -85,7 +85,7 @@ function generateFieldCandidates(request) {
     out.push(world);
   };
 
-  // IT14.81 FARM PACKING CONTRACT:
+  // IT14.82 FARM PACKING CONTRACT:
   // Work entirely in the Farmstead's LOCAL rotated coordinates.  Farmstead and Fields
   // share one angle, so a tight four-Field block is ordinary rectangle packing even when
   // the whole district is rotated 135 degrees in world space.

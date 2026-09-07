@@ -1,18 +1,16 @@
-EXPERT BENCHMARKS — IT14.81
+EXPERT BENCHMARKS — IT14.83
 
-RECENT 3 TESTS
-1) IT14.78 — Late P1 Rush vs Thebes — FAIL / stopped 11:23: farm topology deadlocked at 2 Farmsteads / 3 Fields; stale DefenseArmy error also repeated.
-2) IT14.79 — Late P1 Rush vs Iberia — FAIL / stopped 12:42: scanner still undercounted obvious Field space and bought Farmstead #3 too early.
-3) IT14.80 — P3 Boom vs Sparta — WIN 17:22, diagnostic FAIL: Sparta was beaten, but Expert never left P1; farm network reached only 3 Farmsteads / 5 Fields while the human reference fit 3 / 10.
+RECENT 3
+1) IT14.82 Athens Expert vs Rome Very Hard — WIN 20:46. 2 Farmsteads / 7 Fields; Town-phase finish.
+2) IT14.82 Athens Expert vs Carthage Very Hard — WIN 26:09. 3 Farmsteads / 8 Fields; finishing attack correctly attached 2 rams.
+3) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE at 37:56. Economy strong (3 Farmsteads / 10 Fields, 180 pop), but repeated ~60-man P2 waves failed to convert the advantage; siege replacement also disappeared after reaching pop cap.
 
 MAJOR TRENDS
-- Farm failure is still placement math, not a need for farther Fields or more Farmsteads.
-- IT14.80 mixed Farmstead/Field rotation and used visual Footprint dimensions instead of the smaller Static obstruction used for real collision space.
-- Preserve the gains that are working: natural-food recognition, Wicker -> Iron Axe, CC civilian rules, resource balance/barter, FINISH persistence, stale-army defense repair.
+- IT14.82 farming is finally usable; freeze it.
+- Economy can now reach max operating pop with large resource banks.
+- Main remaining bottleneck is military conversion: wave sizing must learn from failed attacks.
+- Siege works when it exists, but replacement needs protected population headroom.
+- Storehouse count/idles remain a later cleanup target, not part of 14.83.
 
-IT14.81 CHANGES
-- Farmsteads use 135 degrees; every Field inherits its Farmstead's actual angle.
-- Field packing is solved in the Farmstead's rotated local coordinates using Obstruction/Static dimensions, with <=2m border gap unchanged.
-- Opening/natural-food Farmsteads score future compact Field geometry so temporary berries/fruit do not force a bad long-term hub position.
-- Rotated exact-obstruction validation replaces the IT14.80 axis-aligned Field/Farmstead test.
-- P3 has a 7:30 geometry escape to Town if it has 2 Barracks + 4 Fields + 80 pop and natural food is nearly exhausted, so bad farm geometry cannot trap it in P1 forever.
+IT14.83 TARGET
+Adaptive P2 wave escalation + reliable siege replacement, with no farm/food changes.

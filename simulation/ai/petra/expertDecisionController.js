@@ -201,6 +201,9 @@ export class ExpertDecisionController
 		this.placementFailureCounts = {};
 		this.activeFieldTasks = [];
 		this.pendingFieldPositions = {};
+		// IT14.82: rejected/unmaterialized field coordinates are short-lived blacklisted
+		// so a retry advances to a different compact slot instead of repeating forever.
+		this.failedFieldPositions = [];
 		this.taskCounters = {};
 		this.taskStartedAt = {};
 		this.pendingWoodSelectionByTask = {};
@@ -2659,6 +2662,41 @@ export class ExpertDecisionController
 		return true;
 	}
 
+	expertP2AttackArmyTarget(gameState, targetPlayer = undefined)
+	{
+		const policy = mergePolicy();
+		const manager = this.HQ && this.HQ.attackManager;
+		const level = manager && (targetPlayer === undefined || manager.expertP2EscalationTargetPlayer === targetPlayer) ?
+			Math.max(0, Math.min(3, Number(manager.expertP2EscalationLevel) || 0)) : 0;
+		let target = Math.max(60, Number(policy.expertP2OpportunityNoTechArmy) || 60);
+		if (level >= 1)
+			target = Math.max(target, Number(policy.expertP2EscalationFirstArmyTarget) || 75);
+		if (level >= 2)
+			target = Math.max(target, Number(policy.expertP2EscalationSecondArmyTarget) || 90);
+		if (level >= 3)
+			target = Math.max(target, Number(policy.expertP2EscalationMaximumArmyTarget) || 94);
+
+		let enemyPop = this.lowestEnemyPopulation(gameState);
+		if (targetPlayer !== undefined && gameState.sharedScript && gameState.sharedScript.playersData)
+		{
+			const pdata = gameState.sharedScript.playersData[targetPlayer];
+			if (pdata && pdata.state !== "defeated")
+				enemyPop = Math.max(0, Number(pdata.popCount) || 0);
+		}
+		if (Number.isFinite(enemyPop) && enemyPop >= (Number(policy.expertP2StrongEnemyPopulation) || 150))
+			target = Math.max(target, Number(policy.expertP2StrongEnemyArmyTarget) || 80);
+		else if (Number.isFinite(enemyPop) && enemyPop >= (Number(policy.expertP2HealthyEnemyPopulation) || 120))
+			target = Math.max(target, Number(policy.expertP2HealthyEnemyArmyTarget) || 70);
+
+		// Preserve 70 civilians, a 12-soldier home screen, and room for siege inside
+		// the 180 operating cap. Escalation may use nearly everything else, never more.
+		const operating = this.effectiveOperatingPopulationCap(gameState);
+		const civilianCap = Math.max(0, this.currentCivilianCap(gameState));
+		const maximum = Math.max(60, operating - civilianCap - 12 -
+			Math.max(0, Number(policy.expertSiegeReplacementPopulationReserve) || 4));
+		return Math.max(60, Math.min(target, maximum));
+	}
+
 	expertAssignReserveToPlan(gameState, plan)
 	{
 		if (!plan || !plan.expertAuthorityOwned || plan.state !== AttackPlan.STATE_UNEXECUTED)
@@ -2670,7 +2708,7 @@ export class ExpertDecisionController
 			doctrine.id === "p3_boom_all_in" ? Math.max(80, Math.min(
 				Number(policy.expertP3BoomAllInAssignmentTarget) || 100, this.effectiveOperatingPopulationCap(gameState) - 75)) :
 			phase === 1 ? Math.max(45, Number(policy.expertP1ReserveAttackMinimumArmy) || 45) :
-			Math.max(60, Number(policy.expertP2OpportunityNoTechArmy) || 60);
+			this.expertP2AttackArmyTarget(gameState, plan.targetPlayer);
 		if (plan.unitCollection && plan.unitCollection.length >= target)
 			return 0;
 		const homeReserve = plan.type === AttackPlan.TYPE_RUSH ? 8 :
@@ -2849,8 +2887,24 @@ export class ExpertDecisionController
 			this.expertAuthorizeCombatLaunch(gameState, plan, "finish");
 			return;
 		}
+		const adaptiveTarget = this.expertP2AttackArmyTarget(gameState, plan.targetPlayer);
+		if (army < adaptiveTarget)
+			return;
+		const escalation = manager.expertP2EscalationTargetPlayer === plan.targetPlayer ?
+			Math.max(0, Number(manager.expertP2EscalationLevel) || 0) : 0;
+		// An escalated City-phase follow-up with a real Arsenal waits for its real
+		// engine(s), not merely a queued TrainingPlan. If Arsenal placement is impossible
+		// the larger army remains free to launch; this gate cannot create a placement deadlock.
+		if (phase >= 3 && escalation > 0 && this.builtByClass(gameState, "Arsenal").length)
+		{
+			const desiredSiege = escalation >= 2 ? Math.max(2, Number(policy.expertP2EscalationSecondSiegeTarget) || 2) :
+				Math.max(1, Number(policy.expertP2EscalationFirstSiegeTarget) || 1);
+			const siege = this.expertBuildingSiegeStatus(gameState);
+			if (siege.existing < desiredSiege)
+				return;
+		}
 		const tech = manager.getExpertP2AttackTechGate ? manager.getExpertP2AttackTechGate(gameState) : { ready: true, active: 0, completed: 0 };
-		const minimum = Math.max(1, Number(policy.expertP2OpportunityMinimumArmy) || 45);
+		const minimum = Math.max(adaptiveTarget, Number(policy.expertP2OpportunityMinimumArmy) || 45);
 		const noTechMinimum = Math.max(minimum, Number(policy.expertP2OpportunityNoTechArmy) || 60);
 		const activeEnough = (Number(tech.active) || Number(tech.completed) || 0) >= (Number(policy.expertP2OpportunityMinimumActiveTechs) || 1);
 		const packageReady = !!tech.ready && army >= minimum;
@@ -5852,6 +5906,46 @@ export class ExpertDecisionController
 		return true;
 	}
 
+
+	retryStalledFieldTask(gameState, taskId, observed)
+	{
+		if (!taskId || !observed || observed.state !== "awaiting-foundation")
+			return false;
+		const started = Number(this.taskStartedAt[taskId]);
+		const timeout = Number(mergePolicy().fieldAwaitingFoundationRetrySeconds) || 8;
+		if (!Number.isFinite(started) || gameState.ai.elapsedTime - started < timeout)
+			return false;
+		if (this.adoptOrphanFoundation(gameState, taskId, "field"))
+			return false;
+
+		const task = this.foundationTracker && this.foundationTracker.get && this.foundationTracker.get(taskId);
+		const failedPosition = task && Array.isArray(task.position) ? [...task.position] :
+			(Array.isArray(this.pendingFieldPositions[taskId]) ? [...this.pendingFieldPositions[taskId]] : undefined);
+		const intent = this.activeTaskBuildIntent[taskId] || {};
+		const farmsteadId = Number(intent.farmsteadId);
+		const removed = this.cancelQueuedConstructionTask(gameState, taskId);
+		this.releaseConstructionTeam(gameState, taskId);
+		this.activeFieldTasks = this.activeFieldTasks.filter(id => id !== taskId);
+		delete this.pendingFieldPositions[taskId];
+		delete this.activeTaskBuildIntent[taskId];
+		delete this.taskStartedAt[taskId];
+		delete this.taskDiagnostics[taskId];
+		if (this.foundationTracker && this.foundationTracker.remove)
+			this.foundationTracker.remove(taskId);
+		if (failedPosition)
+		{
+			this.failedFieldPositions.push({ "position": failedPosition, "until": Number(gameState.ai.elapsedTime) + 45,
+				"farmsteadId": Number.isFinite(farmsteadId) ? farmsteadId : undefined });
+			if (this.failedFieldPositions.length > 24)
+				this.failedFieldPositions.splice(0, this.failedFieldPositions.length - 24);
+		}
+		if (Number.isFinite(farmsteadId))
+			this.fieldPlacementFailures[farmsteadId] = Number(this.fieldPlacementFailures[farmsteadId] || 0) + 1;
+		aiWarn("[EXPERT-FARM] rejected field task=" + taskId + " waited=" + Math.round(gameState.ai.elapsedTime - started) +
+			"s removedPlans=" + removed + " hub=" + (Number.isFinite(farmsteadId) ? farmsteadId : "-") + " action=retry-next-slot");
+		return true;
+	}
+
 	maintainFieldConstructionCrew(gameState, taskId, observed)
 	{
 		if (!taskId || !observed || observed.state !== "foundation" || !Number.isFinite(Number(observed.foundationId)))
@@ -5934,6 +6028,8 @@ export class ExpertDecisionController
 			if (!isField && (kind === "storehouse" || kind === "farmstead") && this.retryStalledEconomicTask(gameState, taskId, observed, kind))
 				return;
 			if (!isField && (kind === "barracks" || kind === "stable" || kind === "market" || kind === "forge" || kind === "temple" || kind === "arsenal" || kind === "gymnasium" || kind === "prytaneion" || kind === "cleruchy") && this.retryStalledBarracksTask(gameState, taskId, observed, kind))
+				return;
+			if (isField && this.retryStalledFieldTask(gameState, taskId, observed))
 				return;
 
 			// IT14.25 storehouse handoff contract: as soon as storehouse #2 has a real
@@ -6474,6 +6570,16 @@ export class ExpertDecisionController
 				    plan.unitCollection.length >= Math.min(policy.expertP3SiegePrepArmy, policy.expertBrokenEnemySiegeArmy) &&
 				    (!best || plan.unitCollection.length > best.unitCollection.length))
 					best = plan;
+		// IT14.83: after a failed P2 wave, begin the next siege package while the
+		// escalated follow-up is still assembling. Waiting until launch meant the ram
+		// was always minutes behind the army. First-wave behavior remains unchanged.
+		if (!best && Math.max(0, Number(manager.expertP2EscalationLevel) || 0) > 0)
+			for (const type of [AttackPlan.TYPE_DEFAULT, AttackPlan.TYPE_HUGE_ATTACK])
+				for (const plan of manager.upcomingAttacks[type] || [])
+					if (plan && plan.targetPlayer !== undefined && plan.unitCollection &&
+					    plan.unitCollection.length >= Math.min(policy.expertP3SiegePrepArmy, policy.expertBrokenEnemySiegeArmy) &&
+					    (!best || plan.unitCollection.length > best.unitCollection.length))
+						best = plan;
 		if (!best)
 			return { active: false };
 		let enemyPopulation = 999;
@@ -6493,8 +6599,13 @@ export class ExpertDecisionController
 				enemyCombat: safety.enemyCombat, escortArmy: best.unitCollection.length,
 				ownPopulation: gameState.getPopulation(), desiredSiege: policy.expertFinishingTownSiegeTarget };
 		}
+		const escalation = manager && manager.expertP2EscalationTargetPlayer === best.targetPlayer ?
+			Math.max(0, Number(manager.expertP2EscalationLevel) || 0) : 0;
+		const escalatedSiege = escalation >= 2 ? Math.max(2, Number(policy.expertP2EscalationSecondSiegeTarget) || 2) :
+			escalation >= 1 ? Math.max(1, Number(policy.expertP2EscalationFirstSiegeTarget) || 1) :
+			Math.max(1, Number(policy.expertP3SiegePrepTarget) || 1);
 		return { active: true, finishing: false, targetPlayer: best.targetPlayer, enemyPopulation,
-			ownPopulation: gameState.getPopulation(), desiredSiege: policy.expertP3SiegePrepTarget };
+			ownPopulation: gameState.getPopulation(), desiredSiege: escalatedSiege, p2EscalationLevel: escalation };
 	}
 
 	frontierResourceAnchors(gameState, ccPos, accessIndex)
@@ -8241,6 +8352,9 @@ export class ExpertDecisionController
 		// Built Fields and real foundations are already represented in Petra's live
 		// obstruction map. Only unmaterialized pending slots need a manual conflict guard.
 		const blockedPositions = Object.values(this.pendingFieldPositions).filter(Array.isArray);
+		const now = Number(gameState.ai.elapsedTime) || 0;
+		this.failedFieldPositions = (this.failedFieldPositions || []).filter(item => item && Array.isArray(item.position) && Number(item.until) > now);
+		const failedPositions = this.failedFieldPositions.filter(item => !Number.isFinite(Number(item.farmsteadId)) || Number(item.farmsteadId) === Number(farmsteadId)).map(item => item.position);
 		const selected = [];
 		const maximumSlots = Math.max(1, Math.floor(Number(slotLimit) || policy.fieldsPerFarmstead));
 		for (const candidate of candidates)
@@ -8276,6 +8390,8 @@ export class ExpertDecisionController
 				continue;
 			if (blockedPositions.some(pos => footprintOverlap(position, pos)))
 				continue;
+			if (failedPositions.some(pos => SquareVectorDistance(position, pos) < 3*3))
+				continue;
 			if (selected.some(pos => footprintOverlap(position, pos)))
 				continue;
 			selected.push(position);
@@ -8309,7 +8425,9 @@ export class ExpertDecisionController
 		// IT14.46: fields belong to farmsteads. Markets may accept food, but treating them
 		// as farm hubs created isolated fields with no coherent permanent-food district.
 		const foodHubs = farms.map(farm => ({ "entity": farm, "kind": "farmstead" }));
-		const committedFields = this.builtByClass(gameState, "Field").length + this.activeFieldTasks.length;
+		// IT14.82: only an actual foundation is pending capacity. An issued plan that the
+		// simulation has not materialized must never make the farm network look healthier.
+		const committedFields = this.builtByClass(gameState, "Field").length + this.foundationsByClass(gameState, "Field").length;
 		if (!foodHubs.length)
 			return { "known": true, "supportedFieldSlots": committedFields, "openFieldSlots": 0, "hubs": [] };
 		let shared;
@@ -10029,7 +10147,8 @@ export class ExpertDecisionController
 					"builderCount": Number(action.builderCount) || undefined,
 					"builderJobPriority": action.builderJobPriority ? { ...action.builderJobPriority } : undefined,
 					"priority": Number(action.priority) || undefined,
-					"role": action.role || "primary"
+					"role": action.role || "primary",
+					"farmsteadId": action.kind === "field" && Number.isFinite(Number(request.farmsteadId)) ? Number(request.farmsteadId) : undefined
 				};
 				if (action.kind === "field")
 				{
@@ -12006,6 +12125,14 @@ export class ExpertDecisionController
 			Math.max(1, Number(siegeContext.desiredSiege) || Number(mergePolicy().expertFinishingSiegeTarget) || 2) : 0;
 		let strategicPopulationReserve = desiredSiegeForReserve > siegeStatus.total ?
 			Math.max(0, Number(mergePolicy().expertSiegePopulationReserve) || 4) : 0;
+		// IT14.83: once the requested engine exists, keep a small replacement pocket
+		// while the siege push is active. In 14.82 a ram died at 180/180 and ordinary
+		// infantry immediately consumed the freed population, leaving the Arsenal unable
+		// to replace it. The pocket disappears as soon as siege context is no longer active.
+		if (siegeContext && siegeContext.active && desiredSiegeForReserve > 0 && siegeStatus.existing > 0 &&
+		    siegeStatus.total >= desiredSiegeForReserve)
+			strategicPopulationReserve = Math.max(strategicPopulationReserve,
+				Math.max(0, Number(mergePolicy().expertSiegeReplacementPopulationReserve) || 4));
 		// IT14.77: do not let ordinary infantry fill the last slots that P3 Boom needs
 		// for Iphicrates. The hero queue explicitly consumes this reserve.
 		if (this.isP3BoomDoctrine(gameState) && gameState.getPlayerCiv() === "athen" &&
@@ -12136,7 +12263,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.81] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.83] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -12200,7 +12327,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.81] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.83] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()
@@ -12221,6 +12348,7 @@ export class ExpertDecisionController
 			"placementFailureCounts": { ...this.placementFailureCounts },
 			"activeFieldTasks": [...this.activeFieldTasks],
 			"pendingFieldPositions": { ...this.pendingFieldPositions },
+			"failedFieldPositions": (this.failedFieldPositions || []).map(item => ({ ...item, position: Array.isArray(item.position) ? [...item.position] : item.position })),
 			"taskCounters": { ...this.taskCounters },
 			"taskStartedAt": { ...this.taskStartedAt },
 			"pendingWoodSelectionByTask": { ...this.pendingWoodSelectionByTask },
@@ -12312,6 +12440,7 @@ export class ExpertDecisionController
 		this.placementFailureCounts = { ...(data.placementFailureCounts || {}) };
 		this.activeFieldTasks = Array.isArray(data.activeFieldTasks) ? [...data.activeFieldTasks] : [];
 		this.pendingFieldPositions = { ...(data.pendingFieldPositions || {}) };
+		this.failedFieldPositions = Array.isArray(data.failedFieldPositions) ? data.failedFieldPositions.map(item => ({ ...item, position: Array.isArray(item.position) ? [...item.position] : item.position })) : [];
 		this.taskCounters = { ...(data.taskCounters || {}) };
 		this.taskStartedAt = { ...(data.taskStartedAt || {}) };
 		this.pendingWoodSelectionByTask = { ...(data.pendingWoodSelectionByTask || {}) };

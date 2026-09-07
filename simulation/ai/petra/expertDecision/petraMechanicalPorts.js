@@ -41,7 +41,11 @@ function readTemplateGeometry(gameState, kind) {
         obstructionHalfExtents = { width: width / 2, depth: depth / 2 };
     }
   }
-  const halfExtents = obstructionHalfExtents || footprintHalfExtents;
+  // IT14.82: use the full construction Footprint for Farmstead/Field packing.
+  // IT14.81 used the smaller Static obstruction as if it were the engine's legal
+  // centre-spacing contract; that produced positions the AI accepted but the simulation
+  // refused to materialize. Keep Static extents for diagnostics only.
+  const halfExtents = footprintHalfExtents || obstructionHalfExtents;
   return { type, template, radius, halfExtents, footprintHalfExtents, obstructionHalfExtents };
 }
 
@@ -70,11 +74,11 @@ function createPetraPlacementPorts(gameState, kind, options = {}) {
   const radiusCells = Math.ceil(geometry.radius / obstructions.cellSize);
   const exactOrientedFootprint = !!(options.exactOrientedFootprint || options.exactAxisAlignedFootprint) && !!geometry.halfExtents;
 
-  // IT14.81: Fields/Farmsteads are packed as ROTATED rectangles in the same local
-  // coordinate system.  Testing an axis-aligned bounding box for a 135-degree Field
-  // is both wrong and overly conservative.  Sample the actual rotated Static
-  // obstruction rectangle against Petra's live obstruction grid.  The simulation
-  // remains the final authority when the construct command is issued.
+  // IT14.82: Fields/Farmsteads remain packed as rotated rectangles in one local
+  // coordinate system, but the rectangle is the full Footprint, not the smaller Static
+  // obstruction. This deliberately errs on the safe side: a candidate must clear the
+  // same footprint envelope used to calculate centre spacing. The simulation remains
+  // the final authority when the construct command is issued.
   const exactRectangleIsFree = (candidate, request = {}) => {
     if (!exactOrientedFootprint || !Array.isArray(candidate) || candidate.length < 2)
       return false;
