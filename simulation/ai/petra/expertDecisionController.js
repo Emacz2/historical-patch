@@ -10750,6 +10750,13 @@ export class ExpertDecisionController
 	assignFarmWorker(gameState, ent, accessIndex)
 	{
 		const policy = mergePolicy();
+		// IT14.85 hotfix: garrisoned/transitioning workers can temporarily have no
+		// world position. Never feed an undefined vector into distance math or issue
+		// a farm assignment until the worker is back on the map.
+		const workerPos = entityPosition(ent);
+		if (!workerPos)
+			return false;
+
 		const fields = this.builtByClass(gameState, "Field").filter(field =>
 			entityPosition(field) && field.resourceSupplyAmount && field.resourceSupplyAmount() > 0);
 		if (!fields.length)
@@ -10810,13 +10817,19 @@ export class ExpertDecisionController
 			});
 			overflow = available.length > 0;
 		}
+		// Revalidate positions immediately before every distance comparison. Entities
+		// can disappear or transition state during the same AI update.
+		available = available.filter(field => entityPosition(field));
 		const homeFarmsteadId = Number(ent.getMetadata(PlayerID, FOOD_HOME_FARMSTEAD));
 		const homeFarmstead = Number.isFinite(homeFarmsteadId) ? gameState.getEntityById(homeFarmsteadId) : undefined;
-		if (homeFarmstead && entityPosition(homeFarmstead))
+		const homePos = homeFarmstead && entityPosition(homeFarmstead);
+		if (homePos)
 		{
 			const radius = Math.max(30, Number(policy.farmWorkerHomeRadius) || 55);
-			const local = available.filter(field =>
-				SquareVectorDistance(field.position(), homeFarmstead.position()) <= radius * radius);
+			const local = available.filter(field => {
+				const fieldPos = entityPosition(field);
+				return fieldPos && SquareVectorDistance(fieldPos, homePos) <= radius * radius;
+			});
 			if (!local.length)
 				return false;
 			available = local;
@@ -10829,7 +10842,11 @@ export class ExpertDecisionController
 			const loadDiff = (loads.get(a.id()) || 0) - (loads.get(b.id()) || 0);
 			if (loadDiff)
 				return loadDiff;
-			return SquareVectorDistance(ent.position(), a.position()) - SquareVectorDistance(ent.position(), b.position()) || a.id() - b.id();
+			const aPos = entityPosition(a);
+			const bPos = entityPosition(b);
+			if (!aPos || !bPos)
+				return !aPos ? (!bPos ? a.id() - b.id() : 1) : -1;
+			return SquareVectorDistance(workerPos, aPos) - SquareVectorDistance(workerPos, bPos) || a.id() - b.id();
 		});
 		const target = available[0];
 		if (overflow)
