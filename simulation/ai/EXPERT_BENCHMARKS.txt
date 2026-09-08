@@ -1,16 +1,14 @@
-EXPERT BENCHMARKS — IT14.85
+EXPERT BENCHMARKS — IT14.86
 
 RECENT 3
-1) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE 37:56. Strong 3 Farmsteads / 10 Fields / 180-pop economy, but repeated P2 waves failed to convert.
-2) IT14.83 Athens Expert vs Seleucids Very Hard — INCOMPLETE 13:11. Bad opening Farmstead produced only one usable Field and poisoned the food transition.
-3) IT14.84 Athens Expert vs Thebes Very Hard — INCOMPLETE ~18:12. Farming recovered to 3 Farmsteads / 8 Fields and Expert reached 180/180, but P3 deadlocked at realSiege=1/2 despite a much weaker enemy; Temple/Farmstead placement conflicted and Market #2 was redundant/too close.
+1) IT14.85 Athens Expert vs Han Very Hard — WIN ~23:10. Athens finished Town Phase at 176 pop; Han was defeated in Town.
+2) IT14.85 Athens Expert vs Macedon Very Hard — WIN ~23:02. Athens finished City Phase at 176 pop; Macedon was defeated in City.
+3) IT14.85 Athens Expert vs Germans Very Hard — WIN ~26:16. Athens finished City Phase at 180 pop; Germans were defeated in City.
 
 MAJOR TRENDS
-- Preserve the 14.82+ farm materialization/packing gains and 14.84 opening-Farmstead safeguards.
-- P3 must convert max population into an attack instead of waiting forever for perfect package completion.
-- Military research gets priority, but unused research capacity should become eco techs.
-- New farm hubs must reserve their field space before other same-frame buildings place.
-- Housing should compact into 2-3-house blocks and stay out of current/future wood dropsite pads.
+- Preserve the current farm/field materialization, compact-field geometry, housing, research, siege and attack behavior; the latest run set is winning consistently.
+- Opening Farmstead scoring can still hug one berry bush even when a small slide would service two or three bushes at nearly zero walk.
+- Wood rollover can open a fresh forest district too early. A serviced woodline should be worked down and, when useful, receive one additional same-patch Storehouse before Expert pays for a new remote woodline.
 
-IT14.85 TARGET
-Fix P3 max-pop conversion, use idle research capacity, prevent Farmstead/Temple and redundant Market conflicts, and compact Houses without blocking economic infrastructure.
+IT14.86 TARGET
+Improve only opening Farmstead berry-cluster efficiency and Storehouse rollover discipline. No Field-packing, phase, military, housing, tech, worker-recovery or strategy changes.

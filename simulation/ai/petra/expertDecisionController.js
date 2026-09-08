@@ -8697,11 +8697,21 @@ export class ExpertDecisionController
 			const servingStores = Math.max(1, this.storehousesServingWoodCluster(gameState, currentCluster));
 			const requiredWorkers = policy.woodDeepenMinimumWorkers + Math.max(0, servingStores - 1) * policy.woodDeepenExtraWorkersPerStorehouse;
 			const requiredWood = policy.woodDeepenMinimumRemaining + Math.max(0, servingStores - 1) * policy.woodDeepenExtraRemainingPerStorehouse;
+			// IT14.86: an expansion request near the end of a healthy first forest should
+			// improve THAT forest before opening an unrelated second district. The older
+			// 1200-wood deepen floor did the opposite of the human pattern: once the line
+			// was whittled below the floor, Expert immediately jumped to another forest.
+			// Allow one late same-patch helper Storehouse while useful wood remains, then
+			// hold that two-dropsite district until it is genuinely close to exhausted.
+			const continuityEmergency = Number(action.priority || 0) >= (Number(policy.phaseWoodRecoveryDropsiteActionPriority) || 125);
+			const lateReuseWorkers = Math.max(1, Number(policy.woodSamePatchReuseMinimumWorkers) || 8);
+			const lateReuseWood = Math.max(1, Number(policy.woodSamePatchReuseMinimumRemaining) || 450);
+			const lateSamePatchReuse = servingStores === 1 && localWorkers.length >= lateReuseWorkers && samePatchAmount >= lateReuseWood;
 			let ranked = [];
 			let mode = "new_patch";
 			let improvement = 0;
 
-			if (currentCluster.length && localWorkers.length >= requiredWorkers && samePatchAmount >= requiredWood)
+			if (currentCluster.length && ((localWorkers.length >= requiredWorkers && samePatchAmount >= requiredWood) || lateSamePatchReuse))
 			{
 				const selection = selectInitialWoodWorksite(currentCluster, workerAnchor, { "radius": 30, "approachWeight": 5 });
 				if (selection && selection.position)
@@ -8720,6 +8730,19 @@ export class ExpertDecisionController
 
 			if (!ranked.length)
 			{
+				// IT14.86: do not buy a new remote wood district merely because the current
+				// patch has fallen below the old deepen threshold. Keep working the serviced
+				// forest until it is genuinely low; if geometry offers a worthwhile second
+				// pad, the block above uses it. Only a real wood-continuity emergency bypasses
+				// this hold. This prevents Storehouse #3 from appearing on a fresh forest while
+				// Storehouses #1/#2 still have a useful line in front of them.
+				const releaseRemaining = Math.max(1, Number(policy.woodNewDistrictReleaseRemaining) || 450);
+				if (!continuityEmergency && currentCluster.length && samePatchAmount >= releaseRemaining)
+				{
+					aiWarn("[EXPERT-WOOD] hold serviced patch before new district connectedWood=" + Math.round(samePatchAmount) +
+						" workers=" + localWorkers.length + " stores=" + servingStores + " release=" + Math.round(releaseRemaining));
+					return undefined;
+				}
 				const all = collectInitialWoodCandidates(gameState, {
 					"getLandAccess": getLandAccess, "isSupplyFull": isSupplyFull,
 					"territoryMap": this.HQ.territoryMap, "anchorPosition": workerAnchor,
@@ -10159,17 +10182,33 @@ export class ExpertDecisionController
 				const sources = request && Array.isArray(request.pathSources) ? request.pathSources : [];
 				let score = 0;
 				let nearestSource = Infinity;
+				const sourceDistances = [];
 				for (const source of sources)
 				{
 					const distance = Math.sqrt(SquareVectorDistance(source, position));
+					sourceDistances.push(distance);
 					nearestSource = Math.min(nearestSource, distance);
 					score += distance;
 					score += 25 * this.lineObstructionPenalty(ports.obstructionMap, source, position);
 				}
-				// Opening berries are special: at least one bush should be effectively on the
-				// doorstep. Field geometry is only a tiebreaker for this first dropsite.
-				if (request && request.openingNaturalFood && Number.isFinite(nearestSource))
-					score += 55 * nearestSource;
+				// IT14.86 opening berries: score the CLUSTER, not one lucky bush. The former
+				// 55x nearest-bush term could prefer a Farmstead touching one berry while two
+				// neighbours sat several metres farther away. A human normally slides the
+				// dropsite between the bushes so two/three of them are almost touching it.
+				// Preserve the live-Field-capacity gates below; this only ranks otherwise-legal
+				// opening sites more efficiently.
+				if (request && request.openingNaturalFood && sourceDistances.length)
+				{
+					sourceDistances.sort((a, b) => a - b);
+					const serviced = sourceDistances.slice(0, Math.min(3, sourceDistances.length));
+					const servicedSum = serviced.reduce((sum, distance) => sum + distance, 0);
+					const thirdDistance = serviced[serviced.length - 1];
+					const closeRadius = Math.max(12, (Number(request.templateRadius) || 0) +
+						(Number(mergePolicy().openingFarmsteadMultiBushExtraRadius) || 6));
+					const closeCount = Math.min(3, sourceDistances.filter(distance => distance <= closeRadius).length);
+					score += 45 * servicedSum + 90 * thirdDistance + 5 * nearestSource;
+					score -= (Number(mergePolicy().openingFarmsteadMultiBushReward) || 900) * closeCount;
+				}
 				if (request && request.naturalExpansionFood && Number.isFinite(nearestSource))
 					score += 140 * nearestSource;
 				// Live field capacity is the strongest score for permanent farm hubs.
@@ -12506,7 +12545,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.85] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.86] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -12570,7 +12609,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.85] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.86] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()

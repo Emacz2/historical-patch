@@ -574,6 +574,10 @@ const DEFAULT_POLICY = Object.freeze({
   houseProspectiveWoodSiteExclusionRadius: 20,
   houseProspectiveWoodSiteMinimumAmount: 600,
   houseProspectiveWoodSiteCount: 4,
+  // IT14.86: opening Farmstead candidate ranking rewards servicing up to three berry
+  // bushes at once. Hard Field-capacity legality remains unchanged.
+  openingFarmsteadMultiBushExtraRadius: 6,
+  openingFarmsteadMultiBushReward: 900,
   expertCleanupEnemyPopulation: 8,
   // IT14.53: when the enemy is down to a literal handful of population and still
   // owns a Civic Centre, siege and the finishing army stop cleaning side buildings
@@ -1160,6 +1164,12 @@ const DEFAULT_POLICY = Object.freeze({
   woodEmergencyLevel2ReassignBatch: 12,
   woodDeepenMinimumDistanceImprovement: 3.5,
   woodStorehouseMinimumSpacing: 20,
+  // IT14.86: prefer one additional Storehouse on the CURRENT serviced forest as it
+  // recedes, then keep working that district before opening a fresh woodline. These
+  // gates are intentionally modest and are bypassed by a measured wood-income crisis.
+  woodSamePatchReuseMinimumWorkers: 8,
+  woodSamePatchReuseMinimumRemaining: 450,
+  woodNewDistrictReleaseRemaining: 450,
   // IT14.54: these are SOFT caps on LIVE WOOD-SERVICE DISTRICTS, not global
   // Storehouse counts. Mineral-service Storehouses and exhausted old wood dropsites do
   // not consume the wood cap. A phase/wood-income continuity emergency may bypass it.
