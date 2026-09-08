@@ -201,6 +201,11 @@ export class ExpertDecisionController
 		this.placementFailureCounts = {};
 		this.activeFieldTasks = [];
 		this.pendingFieldPositions = {};
+		// IT14.85: a Farmstead selected this frame immediately reserves its future Field
+		// district, even before the simulation materializes the Farmstead foundation.
+		// This prevents a Temple/Market/Storehouse queued in the same update from stealing
+		// the exact 3-4 compact Field faces that made the Farmstead site desirable.
+		this.pendingFarmsteadPositions = {};
 		// IT14.82: rejected/unmaterialized field coordinates are short-lived blacklisted
 		// so a retry advances to a different compact slot instead of repeating forever.
 		this.failedFieldPositions = [];
@@ -1631,6 +1636,7 @@ export class ExpertDecisionController
 		delete this.activeTaskBuildIntent[taskId];
 		delete this.taskStartedAt[taskId];
 		delete this.pendingFoodSelectionByTask[taskId];
+		delete this.pendingFarmsteadPositions[taskId];
 		delete this.taskDiagnostics[taskId];
 		if (this.foundationTracker && this.foundationTracker.remove)
 			this.foundationTracker.remove(taskId);
@@ -2595,8 +2601,15 @@ export class ExpertDecisionController
 			const minimumArmy = Math.max(70, Number(policy.expertP3BoomAllInMinimumArmy) || 90);
 			const homeReserve = Math.max(4, Number(policy.expertP3BoomAllInHomeReserve) || 6);
 			const reserveReady = reserve >= minimumArmy + homeReserve;
-			const siegeReady = siege.total >= Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
+			const siegeTarget = Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
+			const siegeReady = siege.total >= siegeTarget;
+			const oneSiegeReady = siege.total >= Math.max(1, Number(policy.expertP3BoomMinimumLaunchSiege) || 1);
 			const popReady = pop >= operating - Math.max(0, Number(policy.expertP3BoomAllInPopulationSlack) || 5);
+			const enemyPop = this.lowestEnemyPopulation(gameState);
+			const maxPopOvermatch = pop >= operating && oneSiegeReady && reserveReady &&
+				Number.isFinite(enemyPop) && enemyPop <= Math.max(Number(policy.expertP3BoomMaxPopOvermatchEnemyPopulation) || 60,
+					pop * (Number(policy.expertP3BoomMaxPopOvermatchRatio) || 0.65));
+			const maxPopPackageReady = pop >= operating && oneSiegeReady && reserveReady && heroReady && tech.complete;
 			const heroFailures = Number(this.placementFailureCounts["prytaneion:athens_p3_heroes"] || 0);
 			const hardDeadline = now >= (Number(policy.expertP3BoomHardLaunchTime) || 1080);
 			const absoluteDeadline = now >= (Number(policy.expertP3BoomAbsoluteLaunchTime) || 1200);
@@ -2604,8 +2617,12 @@ export class ExpertDecisionController
 			const normalReady = reserveReady && siegeReady && heroReady && popReady && tech.complete;
 			const hardReady = reserveReady && siegeReady && hardDeadline && pop >= operating - 15 &&
 				(heroReady || heroFailureWaive || absoluteDeadline);
-			const absoluteReady = reserveReady && siegeReady && absoluteDeadline && pop >= operating - 20;
-			if (!normalReady && !hardReady && !absoluteReady)
+			const absoluteReady = reserveReady && oneSiegeReady && absoluteDeadline && pop >= operating - 20;
+			// IT14.85: two engines remain the preferred package, but the second ram may never
+			// become a circular veto at 180/180. If the opponent is already badly outmatched,
+			// or the full hero+tech package is otherwise ready, one real siege engine is enough
+			// to create the finishing plan and free population through combat.
+			if (!normalReady && !hardReady && !absoluteReady && !maxPopOvermatch && !maxPopPackageReady)
 				return undefined;
 		}
 		const phase2Researching = phase === 1 && gameState.getPhaseName && gameState.isResearching && gameState.isResearching(gameState.getPhaseName(2));
@@ -2860,25 +2877,35 @@ export class ExpertDecisionController
 			const tech = this.expertRelevantMilitaryTechStatus(gameState);
 			const heroReady = this.p3BoomIphicratesReady(gameState);
 			const armyReady = army >= Math.max(70, Number(policy.expertP3BoomAllInMinimumArmy) || 90);
-			const siegeReady = siege.total >= Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
+			const siegeTarget = Math.max(2, Number(policy.expertP3BoomSiegeTarget) || 2);
+			const siegeReady = siege.total >= siegeTarget;
+			const oneSiegeReady = siege.total >= Math.max(1, Number(policy.expertP3BoomMinimumLaunchSiege) || 1);
 			const elapsed = Number(gameState.ai.elapsedTime) || 0;
+			const enemyPop = this.lowestEnemyPopulation(gameState);
+			const maxPopOvermatch = pop >= operating && oneSiegeReady && armyReady && Number.isFinite(enemyPop) &&
+				enemyPop <= Math.max(Number(policy.expertP3BoomMaxPopOvermatchEnemyPopulation) || 60,
+					pop * (Number(policy.expertP3BoomMaxPopOvermatchRatio) || 0.65));
+			const maxPopPackageReady = pop >= operating && oneSiegeReady && armyReady && heroReady && tech.complete;
 			const heroFailures = Number(this.placementFailureCounts["prytaneion:athens_p3_heroes"] || 0);
 			const hardDeadline = elapsed >= (Number(policy.expertP3BoomHardLaunchTime) || 1080);
 			const absoluteDeadline = elapsed >= (Number(policy.expertP3BoomAbsoluteLaunchTime) || 1200);
 			const heroFailureWaive = heroFailures >= (Number(policy.expertP3BoomHeroPlacementFailureWaive) || 3);
 			const hardHeroGate = heroReady || (hardDeadline && heroFailureWaive) || absoluteDeadline;
 			const hardLaunch = hardDeadline && pop >= operating - 15 && armyReady && siegeReady && hardHeroGate;
-			const absoluteLaunch = absoluteDeadline && pop >= operating - 20 && armyReady && siegeReady;
+			const absoluteLaunch = absoluteDeadline && pop >= operating - 20 && armyReady && oneSiegeReady;
 			const normalLaunch = heroReady && popReady && tech.complete;
-			if (armyReady && siegeReady && (normalLaunch || hardLaunch || absoluteLaunch))
+			const maxPopEscape = maxPopOvermatch || maxPopPackageReady;
+			if (armyReady && ((siegeReady && (normalLaunch || hardLaunch)) || absoluteLaunch || maxPopEscape))
 			{
-				const heroWaived = !heroReady && (hardLaunch || absoluteLaunch);
+				const heroWaived = !heroReady && (hardLaunch || absoluteLaunch || maxPopOvermatch);
 				aiWarn("[EXPERT-P3-ALL-IN] ready pop=" + pop + "/" + operating + " army=" + army +
-					" siege=" + siege.total + " techAvail=" + tech.available + " techBusy=" + tech.researching +
+					" siege=" + siege.total + "/" + siegeTarget + " techAvail=" + tech.available + " techBusy=" + tech.researching +
 					" iphicrates=" + heroReady + (heroWaived ? " hero-waived=1 failures=" + heroFailures : "") +
+					(maxPopEscape && !siegeReady ? " maxpop-one-siege=1 enemyPop=" + enemyPop : "") +
 					((hardLaunch || absoluteLaunch) && !tech.complete ? " hard-deadline=1" : "") +
 					(absoluteLaunch ? " absolute-deadline=1" : ""));
-				this.expertAuthorizeCombatLaunch(gameState, plan, "p3-max-tech-all-in");
+				this.expertAuthorizeCombatLaunch(gameState, plan,
+					maxPopEscape && !siegeReady ? "p3-maxpop-one-siege" : "p3-max-tech-all-in");
 			}
 			return;
 		}
@@ -5834,6 +5861,8 @@ export class ExpertDecisionController
 		delete this.taskStartedAt[taskId];
 		delete this.pendingWoodSelectionByTask[taskId];
 		delete this.pendingFoodSelectionByTask[taskId];
+		if (kind === "farmstead")
+			delete this.pendingFarmsteadPositions[taskId];
 		delete this.taskDiagnostics[taskId];
 		if (this.foundationTracker && this.foundationTracker.remove)
 			this.foundationTracker.remove(taskId);
@@ -6050,6 +6079,11 @@ export class ExpertDecisionController
 				}
 			}
 
+			// Once a Farmstead foundation exists, the real entity is included in the normal
+			// farm-district reservation scan; drop the pre-foundation synthetic reservation.
+			if (!isField && kind === "farmstead" && observed.state === "foundation")
+				delete this.pendingFarmsteadPositions[taskId];
+
 			// IT14.71 field crew contract: every live field foundation is topped up to
 			// four food civilians immediately. Those exact workers remain task-owned until
 			// completion, when lockCompletedFieldBuilders binds them to the new field.
@@ -6087,6 +6121,8 @@ export class ExpertDecisionController
 				else
 				{
 					delete this.activeTaskByKind[kind];
+					if (kind === "farmstead")
+						delete this.pendingFarmsteadPositions[taskId];
 					if (observed.state === "completed" && kind === "house")
 					{
 						for (const key of Object.keys(this.placementFailureCounts || {}))
@@ -8909,6 +8945,48 @@ export class ExpertDecisionController
 				const firstPos = first && entityPosition(first) ? first.position() : cc.position();
 				const woodPos = this.getPrimaryWoodPosition(gameState) || [cc.position()[0] + 1, cc.position()[1]];
 
+				// IT14.85 compact housing: make small 2-3-house blocks instead of scattering
+				// every House independently. Components with three members are considered full;
+				// the next House starts a new block through the normal fallback geometry.
+				const houseHalf = geometry.halfExtents || { "width": geometry.radius, "depth": geometry.radius };
+				const snapGap = Math.max(0.25, Number(policy.houseSnapGap) || 0.75);
+				const snapU = 2 * Math.max(0.5, Number(houseHalf.width) || Number(geometry.radius) || 4) + snapGap;
+				const snapV = 2 * Math.max(0.5, Number(houseHalf.depth) || Number(geometry.radius) || 4) + snapGap;
+				const clusterLink = Math.max(snapU, snapV) * 1.35;
+				const clusterLink2 = clusterLink * clusterLink;
+				const unseen = new Set(houses.map(ent => ent.id()));
+				const components = [];
+				while (unseen.size)
+				{
+					const seedId = unseen.values().next().value;
+					unseen.delete(seedId);
+					const seed = houses.find(ent => ent.id() === seedId);
+					if (!seed || !entityPosition(seed))
+						continue;
+					const component = [seed];
+					for (let i = 0; i < component.length; ++i)
+						for (const other of houses)
+							if (unseen.has(other.id()) && entityPosition(other) &&
+							    SquareVectorDistance(component[i].position(), other.position()) <= clusterLink2)
+							{
+								unseen.delete(other.id());
+								component.push(other);
+							}
+					components.push(component);
+				}
+				const compactHouseCandidates = [];
+				for (const component of components.filter(group => group.length < Math.max(2, Number(policy.houseClusterMaximumMembers) || 3))
+					.sort((a, b) => b.length - a.length || b[b.length - 1].id() - a[a.length - 1].id()))
+					for (const anchorHouse of component)
+					{
+						const pos = anchorHouse.position();
+						const angle = anchorHouse.angle && Number.isFinite(Number(anchorHouse.angle())) ? Number(anchorHouse.angle()) : 0;
+						compactHouseCandidates.push(expertLocalToWorld(pos, +snapU, 0, angle));
+						compactHouseCandidates.push(expertLocalToWorld(pos, -snapU, 0, angle));
+						compactHouseCandidates.push(expertLocalToWorld(pos, 0, +snapV, angle));
+						compactHouseCandidates.push(expertLocalToWorld(pos, 0, -snapV, angle));
+					}
+
 				// IT14.43: when farmers are the efficient temporary crew, put the house on the
 				// outside of an existing farm district first. They can build it with almost no
 				// travel and immediately return to their fields.
@@ -8938,7 +9016,7 @@ export class ExpertDecisionController
 						...this.builtByClass(gameState, "Storehouse")
 					].filter(ent => ent && entityPosition(ent));
 					developed.sort((a, b) => SquareVectorDistance(b.position(), ccPos) - SquareVectorDistance(a.position(), ccPos) || a.id() - b.id());
-					const candidates = [...farmHouseCandidates];
+					const candidates = [...compactHouseCandidates, ...farmHouseCandidates];
 					for (const anchorEnt of developed.slice(0, 8))
 					{
 						const pos = anchorEnt.position();
@@ -8984,7 +9062,7 @@ export class ExpertDecisionController
 					dx /= len; dz /= len;
 					const tangent = [-dz, dx];
 					const spacing = Math.max(10, 2 * Number(geometry.radius || 4) + 2);
-					const lineCandidates = [...farmHouseCandidates];
+					const lineCandidates = [...compactHouseCandidates, ...farmHouseCandidates];
 					const annex = this.neutralFoodAnnexCandidate(gameState, cc.position(), accessIndex);
 					if (annex)
 						lineCandidates.unshift(...generatePlacementCandidates({ "kind": "barracks", "anchor": annex.position, "toward": cc.position(),
@@ -9651,6 +9729,31 @@ export class ExpertDecisionController
 		let farmFutureCapacityAt;
 		let farmDistrictReservation;
 		const resourceCorridors = this.activeResourceCorridors(gameState, accessIndex);
+		let prospectiveHouseWoodPads = [];
+		if (kind === "house")
+		{
+			const coreCC = this.findCC(gameState);
+			const anchor = this.dominantWoodBuilderCenter(gameState) || (coreCC && entityPosition(coreCC) ? coreCC.position() : undefined);
+			if (anchor)
+			{
+				const trees = collectInitialWoodCandidates(gameState, {
+					"getLandAccess": getLandAccess, "isSupplyFull": isSupplyFull,
+					"territoryMap": this.HQ.territoryMap, "anchorPosition": anchor,
+					"accessIndex": accessIndex, "playerId": PlayerID, "searchRadius": 200
+				});
+				const stores = [...this.builtByClass(gameState, "Storehouse"), ...this.foundationsByClass(gameState, "Storehouse")]
+					.filter(ent => ent && entityPosition(ent));
+				const servedRadius = Number(mergePolicy().fallbackWoodDropsiteRadius) || 36;
+				const unservedTrees = trees.filter(tree => !stores.some(store =>
+					SquareVectorDistance(tree.position, store.position()) <= servedRadius * servedRadius));
+				const selection = selectInitialWoodWorksite(unservedTrees.length ? unservedTrees : trees, anchor);
+				const minWood = Number(mergePolicy().houseProspectiveWoodSiteMinimumAmount) || 600;
+				const limit = Math.max(1, Number(mergePolicy().houseProspectiveWoodSiteCount) || 4);
+				prospectiveHouseWoodPads = (selection && selection.ranked && selection.ranked.length ? selection.ranked : selection ? [selection] : [])
+					.filter(site => site && Array.isArray(site.position) && (Number(site.localWoodAmount) || 0) >= minWood)
+					.slice(0, limit).map(site => site.position);
+			}
+		}
 		if (kind === "house" || kind === "storehouse" || kind === "barracks" || kind === "stable" || kind === "market" || kind === "forge" || kind === "temple" || kind === "arsenal" || kind === "gymnasium" || kind === "prytaneion")
 		{
 			const policy = mergePolicy();
@@ -9668,6 +9771,24 @@ export class ExpertDecisionController
 				...this.builtByClass(gameState, "Farmstead"),
 				...this.foundationsByClass(gameState, "Farmstead")
 			].filter(ent => ent && entityPosition(ent));
+			// IT14.85: same-frame Farmstead plans are not simulation entities yet. Represent
+			// them as tiny synthetic anchors so every later independent building in this same
+			// decision frame sees and preserves the future compact Field district.
+			let pendingFarmOrdinal = 0;
+			for (const [taskId, pending] of Object.entries(this.pendingFarmsteadPositions || {}))
+			{
+				if (!pending || !Array.isArray(pending.position) || pending.position.length < 2)
+					continue;
+				const syntheticId = -100000 - (++pendingFarmOrdinal);
+				const position = [...pending.position];
+				const angle = Number.isFinite(Number(pending.angle)) ? Number(pending.angle) : EXPERT_FARM_ANGLE;
+				farmsteads.push({
+					"id": () => syntheticId,
+					"position": () => position,
+					"angle": () => angle,
+					"expertPendingFarmsteadTask": taskId
+				});
+			}
 			const reservedSlots = [];
 			const reservedKeys = new Set();
 			const reserveSlot = (slot, farmsteadId) =>
@@ -9865,10 +9986,17 @@ export class ExpertDecisionController
 			}
 			if (kind === "house")
 			{
-				// IT14.46: never spend a prime wood-dropsite/workflow position on housing.
+				// IT14.85: Houses may compact against other Houses, but never consume the pad
+				// where a current or likely next wood dropsite belongs. Existing Storehouses
+				// protect their work ring; dense unserved forests protect several prospective
+				// Storehouse centres before the wood planner has formally requested one.
 				const radius = Number(mergePolicy().houseWoodWorksiteExclusionRadius) || 24;
 				for (const store of [...this.builtByClass(gameState, "Storehouse"), ...this.foundationsByClass(gameState, "Storehouse")])
 					if (entityPosition(store) && SquareVectorDistance(position, store.position()) < radius * radius)
+						return false;
+				const futureRadius = Number(mergePolicy().houseProspectiveWoodSiteExclusionRadius) || 20;
+				for (const pad of prospectiveHouseWoodPads)
+					if (SquareVectorDistance(position, pad) < futureRadius * futureRadius)
 						return false;
 			}
 			if (kind === "farmstead")
@@ -10114,7 +10242,17 @@ export class ExpertDecisionController
 		const wood = Number(gameState.getResources().wood) || 0;
 		const fieldTaskCap = (phase >= 2 || wood >= policy.fieldParallelExpansionWoodBank) && missingFields >= 4 ?
 			policy.maxConcurrentFieldTasksSurplus : policy.maxConcurrentFieldTasks;
-		for (const action of frame.actions)
+		// IT14.85: a dedicated permanent Farmstead must select/reserve its field district
+		// before same-frame Temple/Market/Storehouse/etc. placement is evaluated. Preserve
+		// every other action's original relative order.
+		const permanentFarmRoles = new Set(["farm_hub", "farm_hub_constrained", "farm_hub_deadlock", "second_barracks_food_block"]);
+		const orderedActions = [...frame.actions].sort((a, b) =>
+		{
+			const af = a && a.type === "BUILD" && a.kind === "farmstead" && permanentFarmRoles.has(a.role || "") ? 0 : 1;
+			const bf = b && b.type === "BUILD" && b.kind === "farmstead" && permanentFarmRoles.has(b.role || "") ? 0 : 1;
+			return af - bf;
+		});
+		for (const action of orderedActions)
 		{
 			if (action.type === "BUILD")
 			{
@@ -10176,6 +10314,33 @@ export class ExpertDecisionController
 					"role": action.role || "primary",
 					"farmsteadId": action.kind === "field" && Number.isFinite(Number(request.farmsteadId)) ? Number(request.farmsteadId) : undefined
 				};
+				if (action.kind === "house")
+				{
+					const houseGeom = readTemplateGeometry(gameState, "house");
+					const half = houseGeom.halfExtents || { "width": houseGeom.radius, "depth": houseGeom.radius };
+					const expected = 2 * Math.max(Number(half.width) || houseGeom.radius, Number(half.depth) || houseGeom.radius) +
+						(Math.max(0.25, Number(mergePolicy().houseSnapGap) || 0.75));
+					let nearest = Infinity, nearestId = -1;
+					for (const house of this.builtByClass(gameState, "House"))
+						if (house && entityPosition(house))
+						{
+							const distance = Math.sqrt(SquareVectorDistance(exec.position, house.position()));
+							if (distance < nearest) { nearest = distance; nearestId = house.id(); }
+						}
+					if (nearestId >= 0 && nearest <= expected * 1.35)
+						aiWarn("[EXPERT-HOUSE-SNAP] task=" + exec.taskId + " beside=" + nearestId +
+							" gap=" + nearest.toFixed(1));
+				}
+				if (action.kind === "farmstead")
+				{
+					this.pendingFarmsteadPositions[exec.taskId] = {
+						"position": [...exec.position],
+						"angle": Number.isFinite(Number(request.angle)) ? Number(request.angle) : EXPERT_FARM_ANGLE,
+						"role": action.role || "primary"
+					};
+					aiWarn("[EXPERT-FARM-RESERVE] pending hub=" + exec.taskId + " role=" + (action.role || "primary") +
+						" at=" + exec.position[0].toFixed(1) + "," + exec.position[1].toFixed(1));
+				}
 				if (action.kind === "field")
 				{
 					if (Number.isFinite(Number(request.farmsteadId)))
@@ -11945,7 +12110,25 @@ export class ExpertDecisionController
 				if (requirement && requirement.class === "Town")
 					phase3TownRequired = Math.max(phase3TownRequired, Number(requirement.count) || 0);
 		}
-		const phase3TownCount = this.builtByClass(gameState, "Town").length;
+		// IT14.85: a real Town-class foundation OR a live Expert construction task already
+		// belongs to the projected City prerequisite pipeline. Counting only completed
+		// structures caused Temple + Market #2 to be queued together even though the Temple
+		// was already being built. max(foundations, activeTasks) avoids double-counting the
+		// same foundation while still seeing awaiting-foundation tasks.
+		const builtTownCount = this.builtByClass(gameState, "Town").length;
+		const foundationTownCount = this.foundationsByClass(gameState, "Town").length;
+		let activeTownTasks = 0;
+		for (const [kind, taskId] of Object.entries(this.activeTaskByKind || {}))
+		{
+			if (!taskId || !BUILDING_SPECS[kind])
+				continue;
+			let template;
+			try { template = gameState.getTemplate(gameState.applyCiv(BUILDING_SPECS[kind].template)); }
+			catch (e) { template = undefined; }
+			if (template && template.hasClasses && template.hasClasses(["Town"]))
+				++activeTownTasks;
+		}
+		const phase3TownCount = builtTownCount + Math.max(foundationTownCount, activeTownTasks);
 		const observation = observePetra(gameState, {
 			"HQ": this.HQ,
 			"filters": filters,
@@ -12065,7 +12248,20 @@ export class ExpertDecisionController
 						this.researchExpertEcoTech(gameState, queues, allFoodClusters, cc);
 				}
 				if (cityTransition || (defenseState && defenseState.active))
+				{
+					// IT14.85: military research has first claim during the P3 package, not an
+					// exclusive monopoly on the research queue. If no relevant military tech can
+					// be queued right now (already researching, building-gated, unavailable, etc.),
+					// immediately spend otherwise-idle research capacity on useful eco upgrades.
 					this.researchExpertP2MilitaryTech(gameState, queues);
+					if (queues.minorTech && !queues.minorTech.hasQueuedUnits())
+					{
+						coreP2Eco = this.researchExpertP2CoreEcoTech(gameState, queues);
+						this.researchExpertMiningEcoTech(gameState, queues, frame);
+						if (!coreP2Eco)
+							this.researchExpertEcoTech(gameState, queues, allFoodClusters, cc);
+					}
+				}
 			}
 			else if (!(defenseState && defenseState.active))
 			{
@@ -12149,8 +12345,12 @@ export class ExpertDecisionController
 		const siegeStatus = this.expertBuildingSiegeStatus(gameState);
 		const desiredSiegeForReserve = siegeContext && siegeContext.active ?
 			Math.max(1, Number(siegeContext.desiredSiege) || Number(mergePolicy().expertFinishingSiegeTarget) || 2) : 0;
-		let strategicPopulationReserve = desiredSiegeForReserve > siegeStatus.total ?
-			Math.max(0, Number(mergePolicy().expertSiegePopulationReserve) || 4) : 0;
+		const missingSiegeForReserve = Math.max(0, desiredSiegeForReserve - siegeStatus.total);
+		// IT14.85: reserve population for EVERY missing requested engine, not one generic
+		// 4-pop pocket. With a 2-ram target the old code reserved four slots, trained ram #1,
+		// then ordinary infantry could fill the cap before ram #2 existed.
+		let strategicPopulationReserve = missingSiegeForReserve > 0 ?
+			missingSiegeForReserve * Math.max(1, Number(mergePolicy().expertSiegePopulationReserve) || 4) : 0;
 		// IT14.83: once the requested engine exists, keep a small replacement pocket
 		// while the siege push is active. In 14.82 a ram died at 180/180 and ordinary
 		// infantry immediately consumed the freed population, leaving the Arsenal unable
@@ -12289,7 +12489,7 @@ export class ExpertDecisionController
 		const reserve = this.expertMilitaryReserveMetrics(gameState);
 		const actual = this.actualWorkerOrders(gameState);
 		const res = gameState.getResources();
-		aiWarn("[EXPERT-IT14.84] t=" + Math.round(gameState.ai.elapsedTime) +
+		aiWarn("[EXPERT-IT14.85] t=" + Math.round(gameState.ai.elapsedTime) +
 			" strat=" + (this.strategyDoctrine && this.strategyDoctrine.id || "-") +
 			" stage=" + frame.stage.stage + " pop=" + gameState.getPopulation() + "/" + gameState.getPopulationLimit() +
 			" opCap=" + Math.min(gameState.getPopulationMax(), Number(mergePolicy().expertOperatingPopulationCap) || 200) + "/" + gameState.getPopulationMax() +
@@ -12353,7 +12553,7 @@ export class ExpertDecisionController
 				gameState.ai.queueManager.changePriority(name, this.HQ.Config.priorities[name]);
 		if (!this.HQ.firstBaseConfig && this.HQ.hasPotentialBase())
 			this.HQ.configFirstBase(gameState);
-		aiWarn("[EXPERT-IT14.84] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
+		aiWarn("[EXPERT-IT14.85] manual Expert release at t=" + Math.round(gameState.ai.elapsedTime) + " reason=" + reason);
 	}
 
 	Serialize()
@@ -12374,6 +12574,7 @@ export class ExpertDecisionController
 			"placementFailureCounts": { ...this.placementFailureCounts },
 			"activeFieldTasks": [...this.activeFieldTasks],
 			"pendingFieldPositions": { ...this.pendingFieldPositions },
+			"pendingFarmsteadPositions": { ...this.pendingFarmsteadPositions },
 			"failedFieldPositions": (this.failedFieldPositions || []).map(item => ({ ...item, position: Array.isArray(item.position) ? [...item.position] : item.position })),
 			"taskCounters": { ...this.taskCounters },
 			"taskStartedAt": { ...this.taskStartedAt },
@@ -12466,6 +12667,7 @@ export class ExpertDecisionController
 		this.placementFailureCounts = { ...(data.placementFailureCounts || {}) };
 		this.activeFieldTasks = Array.isArray(data.activeFieldTasks) ? [...data.activeFieldTasks] : [];
 		this.pendingFieldPositions = { ...(data.pendingFieldPositions || {}) };
+		this.pendingFarmsteadPositions = { ...(data.pendingFarmsteadPositions || {}) };
 		this.failedFieldPositions = Array.isArray(data.failedFieldPositions) ? data.failedFieldPositions.map(item => ({ ...item, position: Array.isArray(item.position) ? [...item.position] : item.position })) : [];
 		this.taskCounters = { ...(data.taskCounters || {}) };
 		this.taskStartedAt = { ...(data.taskStartedAt || {}) };

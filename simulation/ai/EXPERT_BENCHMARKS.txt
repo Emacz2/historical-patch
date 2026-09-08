@@ -1,15 +1,16 @@
-EXPERT BENCHMARKS — IT14.84
+EXPERT BENCHMARKS — IT14.85
 
 RECENT 3
-1) IT14.82 Athens Expert vs Carthage Very Hard — WIN 26:09. 3 Farmsteads / 8 Fields; finishing attack attached 2 rams.
-2) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE 37:56. Economy strong at 3 Farmsteads / 10 Fields and 180 pop; repeated ~60-man P2 waves failed to convert.
-3) IT14.83 Athens Expert vs Seleucids Very Hard — INCOMPLETE 13:11. Opening Farmstead had 0 live Field slots; only 1 Field ever fit, Farmstead #2 stayed locked, and Expert remained Village.
+1) IT14.82 Athens Expert vs Thebes Very Hard — INCOMPLETE 37:56. Strong 3 Farmsteads / 10 Fields / 180-pop economy, but repeated P2 waves failed to convert.
+2) IT14.83 Athens Expert vs Seleucids Very Hard — INCOMPLETE 13:11. Bad opening Farmstead produced only one usable Field and poisoned the food transition.
+3) IT14.84 Athens Expert vs Thebes Very Hard — INCOMPLETE ~18:12. Farming recovered to 3 Farmsteads / 8 Fields and Expert reached 180/180, but P3 deadlocked at realSiege=1/2 despite a much weaker enemy; Temple/Farmstead placement conflicted and Market #2 was redundant/too close.
 
 MAJOR TRENDS
-- 14.82 farm placement can produce good 3-4 Field hubs when the opening site is sound.
-- One bad opening Farmstead can still poison the whole food network; 14.84 targets only that failure.
-- 14.83 military escalation/siege work remains frozen for a clean retest after food is stable.
-- Storehouse/idles remain later cleanup work.
+- Preserve the 14.82+ farm materialization/packing gains and 14.84 opening-Farmstead safeguards.
+- P3 must convert max population into an attack instead of waiting forever for perfect package completion.
+- Military research gets priority, but unused research capacity should become eco techs.
+- New farm hubs must reserve their field space before other same-frame buildings place.
+- Housing should compact into 2-3-house blocks and stay out of current/future wood dropsite pads.
 
-IT14.84 TARGET
-Reject zero-live-slot opening Farmsteads when alternatives exist, prefer 2+ live slots, and guarantee Farmstead #2 recovery if a constrained opening still ends with 0-1 Fields.
+IT14.85 TARGET
+Fix P3 max-pop conversion, use idle research capacity, prevent Farmstead/Temple and redundant Market conflicts, and compact Houses without blocking economic infrastructure.

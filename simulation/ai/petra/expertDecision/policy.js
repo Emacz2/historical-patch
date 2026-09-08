@@ -362,9 +362,11 @@ const DEFAULT_POLICY = Object.freeze({
   // Keep ordinary doctrines on the long-route trade geometry above.
   p3TownSupportMarketMinimumCCDistance: 14,
   p3TownSupportMarketFallbackMinimumCCDistance: 10,
-  p3TownSupportMarketSpacing: 34,
-  p3TownSupportMarketPreferredDistance: 68,
-  p3TownSupportMarketMaximumCCDistance: 190,
+  // IT14.85: even a phase-utility Market must not sit on top of Market #1. If a
+  // second Market is genuinely required, preserve a real trade/logistics separation.
+  p3TownSupportMarketSpacing: 70,
+  p3TownSupportMarketPreferredDistance: 110,
+  p3TownSupportMarketMaximumCCDistance: 210,
   phase3TownSupportPriority: 91,
   phase2FirstMarketPreferredCCDistance: 78,
   phase2FirstMarketMaximumCCDistance: 180,
@@ -565,6 +567,13 @@ const DEFAULT_POLICY = Object.freeze({
   templeAuraPlanningRadius: 72,
   templeMinimumWorkerCoverage: 8,
   houseWoodWorksiteExclusionRadius: 24,
+  // IT14.85: compact houses should form small blocks, but never occupy a likely next
+  // Storehouse pad in a healthy forest district.
+  houseSnapGap: 0.75,
+  houseClusterMaximumMembers: 3,
+  houseProspectiveWoodSiteExclusionRadius: 20,
+  houseProspectiveWoodSiteMinimumAmount: 600,
+  houseProspectiveWoodSiteCount: 4,
   expertCleanupEnemyPopulation: 8,
   // IT14.53: when the enemy is down to a literal handful of population and still
   // owns a Civic Centre, siege and the finishing army stop cleaning side buildings
@@ -964,6 +973,12 @@ const DEFAULT_POLICY = Object.freeze({
   expertP3BoomAllInHomeReserve: 6,
   expertP3BoomSiegePrepPopulationSlack: 25,
   expertP3BoomSiegeTarget: 2,
+  // IT14.85: two siege remain the preferred package. One real engine may break a
+  // max-pop circular wait when the opponent is already substantially weaker or the
+  // rest of the package is complete.
+  expertP3BoomMinimumLaunchSiege: 1,
+  expertP3BoomMaxPopOvermatchEnemyPopulation: 60,
+  expertP3BoomMaxPopOvermatchRatio: 0.65,
   // Hold two population slots for Iphicrates. Normal launch still wants the full
   // package; the deadlines only prevent an impossible hero/tech prerequisite from
   // turning a dominant P3 army into permanent base decoration.
